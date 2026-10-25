@@ -1,0 +1,590 @@
+[
+  {
+    "id": "wso-triad-venn",
+    "concept": "wso_triad",
+    "domain": "action",
+    "type": "venn",
+    "hook": "Think of one goal you keep not doing. Which part is missing?",
+    "title": "Will, Skill, Opportunity",
+    "game": {
+      "axes": [
+        {
+          "key": "W",
+          "label": "Will",
+          "color": "#F97316"
+        },
+        {
+          "key": "S",
+          "label": "Skill",
+          "color": "#0EA5E9"
+        },
+        {
+          "key": "O",
+          "label": "Opportunity",
+          "color": "#10B981"
+        }
+      ],
+      "questions": [
+        {
+          "q": "I genuinely want this, even when nobody is watching.",
+          "axis": "W"
+        },
+        {
+          "q": "If it got hard or boring, I'd happily drop it.",
+          "axis": "W",
+          "invert": true
+        },
+        {
+          "q": "I could do a rough first version of this today.",
+          "axis": "S"
+        },
+        {
+          "q": "I'd need someone to show me where to even start.",
+          "axis": "S",
+          "invert": true
+        },
+        {
+          "q": "I have the time, access and permission to begin.",
+          "axis": "O"
+        },
+        {
+          "q": "Something outside me (money, rules, a gatekeeper) blocks the way.",
+          "axis": "O",
+          "invert": true
+        }
+      ],
+      "threshold": 0.55,
+      "results": {
+        "W": {
+          "name": "The Dreamer",
+          "text": "The fire is real, but there's no skill or door yet. Don't wait for both: pick the one that's cheaper to build first, usually a small skill."
+        },
+        "S": {
+          "name": "The Idle Expert",
+          "text": "You can do it, but you don't want it and nothing invites you in. Ask whether this goal is truly yours, or borrowed from someone else."
+        },
+        "O": {
+          "name": "The Open Door",
+          "text": "The way is open, but there's no want and no know-how yet. An open door is a gift; check if anything behind it sparks curiosity."
+        },
+        "SW": {
+          "name": "The Competent Prisoner",
+          "text": "You want it and you can do it, but the door is locked. That's structural, not a flaw in you. Find another door, or build one with others."
+        },
+        "OW": {
+          "name": "The Dreaming Sprinter",
+          "text": "Desire plus an open door: the best place to learn anything. Your job now is practice, in small, honest reps with feedback."
+        },
+        "OS": {
+          "name": "The Capable Bystander",
+          "text": "Everything is in place except the fire. No productivity trick fixes a missing why. Find the reason that would make this matter to you."
+        },
+        "OSW": {
+          "name": "Full Agency",
+          "text": "All three pillars are lit. The only thing left is to start. Put the first 10 minutes on your calendar."
+        },
+        "": {
+          "name": "The Seed",
+          "text": "Nothing is lit yet, and that's fine: every agent starts here. Pick the easiest pillar to grow this week. Two of three is enough to move."
+        }
+      }
+    },
+    "insight": "Action needs a want, an ability and an open door. Most stuck goals are missing one, and pushing harder on the ones you have rarely helps. Naming the gap tells you where to aim.",
+    "model": "Stuck? Don't push everywhere. Find the missing pillar: Will, Skill or Opportunity.",
+    "try_today": "Write your goal at the top of a page, then one line each for W, S and O. Circle the weakest and take one step on it.",
+    "source": {
+      "thinkers": [
+        "QUMNI",
+        "Deci & Ryan",
+        "Albert Bandura",
+        "Anthony Giddens"
+      ],
+      "work": "QUMNI WSO Framework; builds on Self-Determination Theory and self-efficacy research"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "self_efficacy",
+      "goal_directed_perception",
+      "start_with_why"
+    ]
+  },
+  {
+    "id": "wso-triad-reveal",
+    "concept": "wso_triad",
+    "domain": "action",
+    "type": "reveal",
+    "hook": "A gifted kid grows up with no instruments. What happens to the gift?",
+    "title": "Talent needs a door",
+    "game": {
+      "prompt": "Picture a child with a gift for music and a hunger to play, born in a place with no instruments, no teachers and no time off work. Does her talent show up anyway?",
+      "choices": [
+        "Yes, real talent always finds a way",
+        "Probably not, or only in pieces"
+      ],
+      "reveal": "Usually it never shows, or only in pieces. Will and early skill are there, but the door is shut. Many gifted people never got to do their work because they lacked access, time or permission. Gifts are spread widely; open doors are not."
+    },
+    "insight": "We love stories where grit beats everything, but they hide the many who had grit and no door. Seeing the missing pillar is kinder and more accurate than blaming people for not trying.",
+    "model": "Talent and drive are necessary, not sufficient. Someone has to open, or build, the door.",
+    "try_today": "Think of one person whose skill you admire but who lacks a door. Send them one lead, intro or resource today.",
+    "source": {
+      "thinkers": [
+        "QUMNI",
+        "Anthony Giddens"
+      ],
+      "work": "QUMNI WSO Framework; Giddens, The Constitution of Society (1984)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "opportunity_gap",
+      "circle_influence",
+      "self_efficacy"
+    ]
+  },
+  {
+    "id": "two-thirds-rule-choice",
+    "concept": "two_thirds_rule",
+    "domain": "action",
+    "type": "choice",
+    "hook": "You have one hour to help a stuck friend. Where do you spend it?",
+    "title": "Push the missing pillar",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Ana loves cooking and is great at it. She wants to start a supper club but has no space to host it. You help by…",
+          "options": [
+            {
+              "text": "Sending her a cooking masterclass",
+              "feedback": "Kind, but her skill is already strong. More of what she has won't unlock the door."
+            },
+            {
+              "text": "Giving her a pep talk about following her dream",
+              "feedback": "Her will is already on fire. Encouragement is nice but it isn't the bottleneck."
+            },
+            {
+              "text": "Asking a café owner you know if she can use their space on Mondays",
+              "best": true,
+              "feedback": "Yes. Will and Skill are lit; Opportunity is missing. One door does more than ten pep talks."
+            }
+          ]
+        },
+        {
+          "scenario": "Leo has free time, a laptop and a coding course already paid for. He keeps saying he 'should' learn to code but never opens it. You…",
+          "options": [
+            {
+              "text": "Ask what he'd actually build if he could code, and why it matters to him",
+              "best": true,
+              "feedback": "Yes. Skill can be learned and the door is open; the gap is Will. A real reason does more than a schedule."
+            },
+            {
+              "text": "Make him a strict study timetable",
+              "feedback": "Structure helps once he wants it. Right now it would be a plan for something he doesn't care about yet."
+            },
+            {
+              "text": "Buy him a second, better course",
+              "feedback": "He already has the door. A bigger door won't make him walk through it."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Two pillars out of three is usually enough to move; the third is where your effort pays off most. People often push the pillar they already have because it feels comfortable.",
+    "model": "Push the one weak pillar, not all three. Small help in the right spot beats big help elsewhere.",
+    "try_today": "Ask someone stuck: 'Is it wanting, knowing how, or access?' Then offer help only on the answer they give.",
+    "source": {
+      "thinkers": [
+        "QUMNI"
+      ],
+      "work": "QUMNI WSO Framework: Will, Skill, Opportunity"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "wso_triad",
+      "leverage_points",
+      "will_gap"
+    ]
+  },
+  {
+    "id": "two-thirds-rule-swipe",
+    "concept": "two_thirds_rule",
+    "domain": "action",
+    "type": "swipe",
+    "hook": "Two of three is enough to move. Can you spot who's about to?",
+    "title": "Spot the 2 out of 3",
+    "game": {
+      "prompt": "Does this person have at least two pillars lit?",
+      "left": "Not yet",
+      "right": "Two or more",
+      "items": [
+        {
+          "text": "Mia wants to run a 5K, has never run, and there's a park next door.",
+          "side": "right",
+          "why": "Will + Opportunity. Skill can be built on the way: start with walk-run intervals."
+        },
+        {
+          "text": "Sam is a trained nurse, burned out, with job offers he doesn't want.",
+          "side": "right",
+          "why": "Skill + Opportunity. Burnout is real: rest and a renewed why come before more offers."
+        },
+        {
+          "text": "Jo dreams of acting, has never tried, and no theatre is nearby.",
+          "side": "left",
+          "why": "Only Will. Build one more pillar first, like an online class or a local reading group."
+        },
+        {
+          "text": "Raj can fix bikes, loves it, and a neighbour just asked for help.",
+          "side": "right",
+          "why": "All three. Full agency: he only needs to say yes."
+        },
+        {
+          "text": "Lee has a free gym pass but no interest and no idea how to train.",
+          "side": "left",
+          "why": "Only Opportunity. An open door alone doesn't move anyone."
+        }
+      ]
+    },
+    "insight": "When two pillars are lit, action becomes possible and the third can often be grown on the way. When only one is lit, it usually helps more to add a second pillar than to push harder on the one you have.",
+    "model": "Two pillars make motion possible. One pillar alone usually stalls.",
+    "try_today": "List three goals. Count the lit pillars for each. Start the one with the most lit today.",
+    "source": {
+      "thinkers": [
+        "QUMNI"
+      ],
+      "work": "QUMNI WSO Framework: Will, Skill, Opportunity"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "wso_triad",
+      "skill_gap",
+      "small_wins"
+    ]
+  },
+  {
+    "id": "will-gap-spectrum",
+    "concept": "will_gap",
+    "domain": "action",
+    "type": "spectrum",
+    "hook": "Is it really laziness, or do you just not care about this goal?",
+    "title": "The Capable Bystander",
+    "game": {
+      "left": "Running on 'should'",
+      "right": "Running on 'want'",
+      "questions": [
+        {
+          "q": "When I picture finishing this goal, I feel…",
+          "options": [
+            {
+              "label": "Relief it's over",
+              "value": -2
+            },
+            {
+              "label": "Not much",
+              "value": 0
+            },
+            {
+              "label": "Proud or excited",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "If nobody would ever know I quit, I would…",
+          "options": [
+            {
+              "label": "Quit right away",
+              "value": -2
+            },
+            {
+              "label": "Think about it",
+              "value": 0
+            },
+            {
+              "label": "Keep going anyway",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "The reason for this goal mostly came from…",
+          "options": [
+            {
+              "label": "Others' expectations",
+              "value": -2
+            },
+            {
+              "label": "A mix",
+              "value": 0
+            },
+            {
+              "label": "Something I care about",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When I describe it to a friend, I say…",
+          "options": [
+            {
+              "label": "'I have to…'",
+              "value": -2
+            },
+            {
+              "label": "'I'm trying to…'",
+              "value": 0
+            },
+            {
+              "label": "'I get to…'",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Borrowed goal",
+          "text": "This goal may belong to someone else. That isn't a character flaw. Either find your own reason inside it, or consider letting it go."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Flickering fire",
+          "text": "Some want, some 'should'. Connect the goal to one person or value you truly care about and see if it grows."
+        },
+        {
+          "upTo": 1,
+          "label": "Real fire",
+          "text": "Your will is real. If you're still stuck, look at Skill or Opportunity instead of blaming motivation."
+        }
+      ]
+    },
+    "insight": "When skill and access are there but nothing happens, the missing piece is usually a reason that is truly yours. Goals driven by your own values tend to last longer than goals driven by pressure. If nothing has felt worth wanting for weeks, talk to someone you trust.",
+    "model": "No productivity hack fixes a missing why. Find your reason, or free yourself from the goal.",
+    "try_today": "Finish this sentence in writing: 'This matters to me because…' If you can't, cross the goal off or hand it back.",
+    "source": {
+      "thinkers": [
+        "QUMNI",
+        "Edward Deci",
+        "Richard Ryan"
+      ],
+      "work": "Deci & Ryan, Self-Determination Theory (1985); Ryan & Deci, American Psychologist (2000)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "sensitive": true,
+    "related": [
+      "start_with_why",
+      "wso_triad",
+      "procrastination_emotion"
+    ]
+  },
+  {
+    "id": "skill-gap-order",
+    "concept": "skill_gap",
+    "domain": "action",
+    "type": "order",
+    "hook": "You want it and the door is open. So why aren't you better yet?",
+    "title": "The Dreaming Sprinter",
+    "game": {
+      "prompt": "Put a good practice session in order",
+      "items": [
+        "Pick one small sub-skill",
+        "Practice just beyond your comfort zone",
+        "Get fast, honest feedback",
+        "Adjust and try again"
+      ],
+      "explain": "This is the core loop of deliberate practice: narrow focus, a stretch, feedback, then correction. Repeating what you can already do feels good but teaches little."
+    },
+    "insight": "Desire plus an open door is a great place to learn, but hours alone don't build skill; focused practice with feedback helps more. The '10,000-hour rule' is a myth Ericsson himself rejected, and practice explains only part of skill differences.",
+    "model": "Skill grows at the edge: one sub-skill, a stretch, feedback, adjust, repeat.",
+    "try_today": "Choose one tiny part of a skill you want. Do 5 focused minutes on only that, then ask someone for one piece of feedback.",
+    "source": {
+      "thinkers": [
+        "K. Anders Ericsson",
+        "Brooke Macnamara",
+        "QUMNI"
+      ],
+      "work": "Ericsson & Pool, Peak (2016); Macnamara et al., Psychological Science (2014)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deliberate_practice",
+      "growth_mindset",
+      "wso_triad"
+    ]
+  },
+  {
+    "id": "opportunity-gap-swipe",
+    "concept": "opportunity_gap",
+    "domain": "action",
+    "type": "swipe",
+    "hook": "You're trying harder and harder. What if the wall isn't you?",
+    "title": "The Competent Prisoner",
+    "game": {
+      "prompt": "Where's the blocker?",
+      "left": "Inside me",
+      "right": "In the setup",
+      "items": [
+        {
+          "text": "The job you want requires a licence your country won't recognise.",
+          "side": "right",
+          "why": "A rule, not a flaw. Look for bridging programmes or roles that don't need the licence."
+        },
+        {
+          "text": "You keep phoning it in on a project you no longer care about.",
+          "side": "left",
+          "why": "That's Will. Reconnect with a reason or renegotiate the project."
+        },
+        {
+          "text": "You can only study after 11pm because of two shifts.",
+          "side": "right",
+          "why": "Time is Opportunity. Shrink the task or trade for a better slot, not more willpower."
+        },
+        {
+          "text": "You don't know how to write a cover letter yet.",
+          "side": "left",
+          "why": "That's Skill, and it's learnable fast with templates and feedback."
+        },
+        {
+          "text": "Nobody in your field hires people without a referral.",
+          "side": "right",
+          "why": "A gate. Build doors: meet people, join communities, ask for intros."
+        }
+      ]
+    },
+    "insight": "When will and skill are full, more effort on yourself can backfire into self-blame. Some walls are rules, money, time or gatekeepers. Seeing that is not an excuse; it tells you to change the setup or find another door.",
+    "model": "If you want it and can do it but still can't, the fight is structural. Change the setup, not yourself.",
+    "try_today": "Name one outside blocker on a goal. Write two other doors around it: another route, person, or place.",
+    "source": {
+      "thinkers": [
+        "QUMNI",
+        "Anthony Giddens",
+        "Pierre Bourdieu"
+      ],
+      "work": "Giddens, The Constitution of Society (1984); Bourdieu, The Forms of Capital (1986)"
+    },
+    "evidence": "philosophy",
+    "level": 2,
+    "related": [
+      "environment_design",
+      "circle_influence",
+      "wso_triad"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "self-efficacy-choice",
+    "concept": "self_efficacy",
+    "domain": "action",
+    "type": "choice",
+    "hook": "A friend says 'I'm just not a speaker.' What actually helps?",
+    "title": "Belief built by doing",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your friend dreads speaking up in meetings and says 'I'm just not that kind of person.' You…",
+          "options": [
+            {
+              "text": "Tell them they're amazing and will be fine",
+              "feedback": "Warm, and encouragement does help a bit. But words fade fast when the moment comes."
+            },
+            {
+              "text": "Suggest they share one prepared sentence in the next meeting",
+              "best": true,
+              "feedback": "Yes. A small success they create themselves is the strongest source of 'I can'. Then make the next step a bit bigger."
+            },
+            {
+              "text": "Send them a video of a famous speaker",
+              "feedback": "Watching others helps most when the model is similar to them. A star can feel out of reach."
+            },
+            {
+              "text": "Say some people just aren't speakers",
+              "feedback": "Meant kindly, but it locks the belief in place. Belief in what you can do changes with experience."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Bandura found that whether you even try depends on believing you can, not only on your real skill. The strongest builder of that belief is a small success of your own. Encouragement, role models and a calm body help too.",
+    "model": "Believed skill decides if you try. Build belief with small wins you earn, not with pep talks alone.",
+    "try_today": "Pick something you think you're 'bad at'. Do the smallest possible version of it once today and notice that you did it.",
+    "source": {
+      "thinkers": [
+        "Albert Bandura"
+      ],
+      "work": "Self-efficacy: Toward a unifying theory of behavioral change (1977)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "small_wins",
+      "growth_mindset",
+      "wso_triad"
+    ]
+  },
+  {
+    "id": "self-efficacy-radar",
+    "concept": "self_efficacy",
+    "domain": "action",
+    "type": "radar",
+    "hook": "Where does your 'I can do this' actually come from?",
+    "title": "Your four sources of belief",
+    "game": {
+      "axes": [
+        "Own wins",
+        "Role models",
+        "Encouragement",
+        "Calm body"
+      ],
+      "questions": [
+        {
+          "q": "I can remember recent times I did something hard and it worked.",
+          "axis": 0
+        },
+        {
+          "q": "I often finish small things I start.",
+          "axis": 0
+        },
+        {
+          "q": "I know someone like me who has done what I want to do.",
+          "axis": 1
+        },
+        {
+          "q": "People I trust tell me they think I can do it.",
+          "axis": 2
+        },
+        {
+          "q": "When I'm nervous, I read it as my body getting ready, not as a sign I'll fail.",
+          "axis": 3
+        }
+      ],
+      "advice": {
+        "0": "Lowest on own wins? Set a goal so small you can't fail, finish it, and write it down. Stack a few this week.",
+        "1": "Lowest on role models? Find one person a step or two ahead of you, not a superstar, and learn how they started.",
+        "2": "Lowest on encouragement? Tell one supportive person your goal and ask them to check in with you in a week.",
+        "3": "Lowest on calm body? Before a hard task, take three slow breaths and say 'my body is getting ready.'"
+      }
+    },
+    "insight": "Bandura described four sources of self-efficacy: your own successes, seeing similar people succeed, encouragement, and how you read your body's signals. Your own wins usually count most, but the others can fill a gap.",
+    "model": "Belief in yourself is built from four sources. Find your weakest and feed it.",
+    "try_today": "Write down three things you did well in the past month. Read the list right before your next hard task.",
+    "source": {
+      "thinkers": [
+        "Albert Bandura",
+        "Jeremy Jamieson"
+      ],
+      "work": "Bandura, Self-Efficacy: The Exercise of Control (1997); Jamieson et al., arousal reappraisal studies (2010)"
+    },
+    "evidence": "strong",
+    "level": 2,
+    "sensitive": true,
+    "related": [
+      "small_wins",
+      "stress_mindset",
+      "growth_mindset"
+    ]
+  }
+]

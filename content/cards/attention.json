@@ -1,0 +1,379 @@
+[
+  {
+    "id": "deep-work-spectrum",
+    "concept": "deep_work",
+    "domain": "attention",
+    "type": "spectrum",
+    "hook": "When did you last think about one hard thing for 60 minutes straight?",
+    "title": "Deep Work",
+    "game": {
+      "left": "Shallow mode",
+      "right": "Deep mode",
+      "questions": [
+        {
+          "q": "When a hard task gets uncomfortable, I usually…",
+          "options": [
+            {
+              "label": "Check my phone or inbox",
+              "value": -2
+            },
+            {
+              "label": "Stretch, then go back in",
+              "value": 1
+            },
+            {
+              "label": "Stay with it until it gives a little",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "My notifications while I work are…",
+          "options": [
+            {
+              "label": "All on, I like being reachable",
+              "value": -2
+            },
+            {
+              "label": "Some on, some off",
+              "value": 0
+            },
+            {
+              "label": "Off until I choose to look",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "My most important work happens…",
+          "options": [
+            {
+              "label": "In the gaps between other things",
+              "value": -2
+            },
+            {
+              "label": "Whenever I find a quiet moment",
+              "value": 0
+            },
+            {
+              "label": "In a block I protect on purpose",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "At the end of a busy day I often feel…",
+          "options": [
+            {
+              "label": "Exhausted, but unsure what I made",
+              "value": -2
+            },
+            {
+              "label": "It depends on the day",
+              "value": 0
+            },
+            {
+              "label": "Tired, and I can point to progress",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Mostly shallow",
+          "text": "Your days are full of reacting. That's normal in a ping-everywhere world, not a flaw. One protected block a day would change your output more than any app."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Mixed",
+          "text": "You go deep sometimes, but it's luck more than design. Pick the time, the place and the one task in advance and it gets far more reliable."
+        },
+        {
+          "upTo": 1,
+          "label": "Deep-leaning",
+          "text": "You already guard your focus. Next level: make the block longer by 10 minutes, or tackle a harder problem inside it."
+        }
+      ]
+    },
+    "insight": "Newport argues that focus on hard things without distraction is getting rarer, so it's getting more valuable. It's a skill, not a personality type. You train it by scheduling it and by sitting through the first few uncomfortable minutes.",
+    "model": "Busy is not the same as productive. Protect one block for the work that actually moves things.",
+    "try_today": "Pick one task, set a 25-minute timer, put your phone in another room, and work until it rings.",
+    "source": {
+      "thinkers": [
+        "Cal Newport"
+      ],
+      "work": "Deep Work (2016)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "flow",
+      "attention_residue",
+      "environment_design"
+    ]
+  },
+  {
+    "id": "deep-work-sort",
+    "concept": "deep_work",
+    "domain": "attention",
+    "type": "swipe",
+    "hook": "Half your to-do list could be done half-asleep. Which half?",
+    "title": "Deep vs. Shallow Tasks",
+    "game": {
+      "prompt": "Does this need your full brain?",
+      "left": "Shallow",
+      "right": "Deep",
+      "items": [
+        {
+          "text": "Replying 'sounds good!' to an email",
+          "side": "left",
+          "why": "Easy to do while distracted, and easy for anyone to do."
+        },
+        {
+          "text": "Writing the first draft of a tough essay",
+          "side": "right",
+          "why": "Needs you to hold many ideas at once. Interruptions wreck it."
+        },
+        {
+          "text": "Learning a new chord on the guitar",
+          "side": "right",
+          "why": "New skills need focused attention on the exact part you get wrong."
+        },
+        {
+          "text": "Booking a dentist appointment",
+          "side": "left",
+          "why": "Necessary, but low-thought. Batch it with other small chores."
+        },
+        {
+          "text": "Planning how to fix a money problem",
+          "side": "right",
+          "why": "Hard trade-offs need quiet thinking, not 30-second bursts."
+        },
+        {
+          "text": "Tidying your desktop files",
+          "side": "left",
+          "why": "Feels productive, uses little brain. A classic stand-in for hard work."
+        }
+      ]
+    },
+    "insight": "Shallow tasks are real and need doing, but they are easy to copy and easy to do tired. Deep tasks create new value and need your fresh hours. Most people spend their best energy on the shallow pile first.",
+    "model": "Give your freshest hour to the deep pile. Batch the shallow pile for when you're tired.",
+    "try_today": "Write tomorrow's list in two columns, deep and shallow, and schedule one deep item before you open email.",
+    "source": {
+      "thinkers": [
+        "Cal Newport"
+      ],
+      "work": "Deep Work (2016)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "flow",
+      "opportunity_cost"
+    ]
+  },
+  {
+    "id": "attention-residue-estimate",
+    "concept": "attention_residue",
+    "domain": "attention",
+    "type": "estimate",
+    "hook": "How long do you stay on one screen before switching? Guess.",
+    "title": "Attention Residue",
+    "game": {
+      "question": "In Gloria Mark's recent workplace studies, how many seconds did people stay on one screen, on average, before switching?",
+      "min": 5,
+      "max": 300,
+      "step": 1,
+      "unit": " sec",
+      "answer": 47,
+      "explain": "About 47 seconds on average in her studies from 2016 onward, down from about 2.5 minutes in 2004 (Mark, Attention Span, 2023). Sophie Leroy separately found that after a switch, part of your mind stays stuck on the task you just left."
+    },
+    "insight": "Leroy called it attention residue: after a switch, part of your mind is still on the last task, so you think less sharply on the new one. Quick 'just checking' glances look free, but they leave a trail. Finishing, or writing a note on where you stopped, helps you let go.",
+    "model": "Every switch leaves a bit of you behind. Fewer switches means more of you shows up.",
+    "try_today": "Before you switch tasks, write one line: where you stopped and the next step. Then switch.",
+    "source": {
+      "thinkers": [
+        "Sophie Leroy",
+        "Gloria Mark"
+      ],
+      "work": "Leroy, Why is it so hard to do my work? (2009); Mark, Attention Span (2023)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deep_work",
+      "environment_design"
+    ]
+  },
+  {
+    "id": "sleep-memory-choice",
+    "concept": "sleep_memory",
+    "domain": "attention",
+    "type": "choice",
+    "hook": "It's 1 a.m. before a big exam. Do you cram or close the book?",
+    "title": "Sleep Saves Your Learning",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Exam at 9 a.m. You've studied all evening. It's 1 a.m. and you feel you've only half got it. You…",
+          "options": [
+            {
+              "text": "Do one quick review of the key points, then sleep",
+              "best": true,
+              "feedback": "Smart. A short review before sleep, then real sleep, gives your brain both the material and the time to store it."
+            },
+            {
+              "text": "Pull an all-nighter to cover everything",
+              "feedback": "Understandable panic. But without sleep, recall and focus usually drop, so extra hours can cost more than they add."
+            },
+            {
+              "text": "Sleep, then cram at 6 a.m.",
+              "feedback": "Better than no sleep. But cutting the last hours of the night trims REM-rich sleep, which research links to memory too."
+            }
+          ]
+        },
+        {
+          "scenario": "You're learning a new skill this month: a language, a sport, an instrument. The best plan is…",
+          "options": [
+            {
+              "text": "Practice once a week for three hours",
+              "feedback": "Better than nothing, but one long session gets only one night of sleep to lock it in."
+            },
+            {
+              "text": "Practice 20 minutes most days, sleeping well between",
+              "best": true,
+              "feedback": "Yes. Spaced practice plus nights of sleep lets the brain replay and file what you learned."
+            },
+            {
+              "text": "Practice late at night to save time",
+              "feedback": "Fine sometimes, but if it eats into sleep, you may lose the gains you just made."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Lots of research shows sleep helps the brain strengthen and file what you learned that day. Learning is the study plus the nights after. Walker's book made this famous, though critics say some of its wider claims go beyond the evidence.",
+    "model": "Learning = practice + sleep. Cutting sleep to study more often means remembering less.",
+    "try_today": "Set an alarm 30 minutes before your bedtime tonight that means: screens down, lights low.",
+    "source": {
+      "thinkers": [
+        "Robert Stickgold",
+        "Matthew Walker"
+      ],
+      "work": "Stickgold, Sleep-dependent memory consolidation, Nature (2005); Walker, Why We Sleep (2017)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "deliberate_practice",
+      "deep_work"
+    ]
+  },
+  {
+    "id": "doomscroll-loop-order",
+    "concept": "doomscroll_loop",
+    "domain": "attention",
+    "type": "order",
+    "hook": "You opened the app for 'one second.' Can you trace what happened?",
+    "title": "The Scroll Loop",
+    "game": {
+      "prompt": "Put the scroll loop in order",
+      "items": [
+        "A small itch: boredom, worry, an awkward pause",
+        "Thumb reaches for the phone, almost on its own",
+        "Unpredictable feed: dull, dull, then something great",
+        "A short hit of relief or novelty",
+        "The itch is still there, so you keep going"
+      ],
+      "explain": "The feed works like a slot machine: you never know when the next good post comes, so you keep pulling. The relief is real but brief, and it doesn't fix the itch that started it."
+    },
+    "insight": "Scrolling is a habit loop driven by unpredictable rewards, which are the hardest kind to stop chasing. You're not weak; the design is strong. Haidt argues heavy phone use harms young people, but researchers still debate how big that effect is.",
+    "model": "If the reward is random, the habit is sticky. Break the loop at the itch, not the thumb.",
+    "try_today": "Next time you reach for your phone, pause and name the itch in one word (bored, tense, lonely). Then decide.",
+    "source": {
+      "thinkers": [
+        "B.F. Skinner",
+        "Jonathan Haidt"
+      ],
+      "work": "Ferster & Skinner, Schedules of Reinforcement (1957); Haidt, The Anxious Generation (2024)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "sensitive": true,
+    "related": [
+      "habit_loop",
+      "fixes_that_fail",
+      "impulse_pause"
+    ]
+  },
+  {
+    "id": "doomscroll-loop-pigeons",
+    "concept": "doomscroll_loop",
+    "domain": "attention",
+    "type": "reveal",
+    "hook": "Two pigeons. One gets food every peck, one at random. Who quits last?",
+    "title": "Why Random Rewards Hook Us",
+    "game": {
+      "prompt": "Two pigeons learn to peck a button for food. Pigeon A gets food every single peck. Pigeon B gets food at random, unpredictable pecks. Then the food stops completely. Which pigeon keeps pecking longer?",
+      "choices": [
+        "Pigeon A (always fed)",
+        "Pigeon B (randomly fed)",
+        "About the same"
+      ],
+      "reveal": "Pigeon B, by a lot. Behaviour rewarded on an unpredictable schedule is much harder to extinguish (Ferster & Skinner). Feeds, inboxes and slot machines all pay out unpredictably."
+    },
+    "insight": "When rewards are predictable, you notice fast when they stop. When they're random, every empty pull feels like 'maybe next time.' That's why apps with refresh-for-something-new are so hard to put down.",
+    "model": "Random rewards build the stickiest habits. Make the good stuff predictable and the feed boring.",
+    "try_today": "Turn off notifications for one app that pings you at random, and check it at two set times instead.",
+    "source": {
+      "thinkers": [
+        "B.F. Skinner",
+        "Charles Ferster"
+      ],
+      "work": "Schedules of Reinforcement (1957)"
+    },
+    "evidence": "strong",
+    "level": 2,
+    "related": [
+      "habit_loop",
+      "environment_design"
+    ]
+  },
+  {
+    "id": "boredom-signal-estimate",
+    "concept": "boredom_signal",
+    "domain": "attention",
+    "type": "estimate",
+    "hook": "Alone with your thoughts for 15 minutes, or a mild shock? Guess.",
+    "title": "Boredom Is a Signal",
+    "game": {
+      "question": "In a 2014 study, people sat alone with nothing to do for 15 minutes, with a button that gave a mild electric shock. What % of men shocked themselves at least once?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 67,
+      "explain": "12 of 18 men (67%) and 6 of 24 women (25%) pressed it at least once, and all of them had earlier said they'd pay money to avoid that shock (Wilson et al., Science, 2014). Small samples, so treat the exact numbers loosely."
+    },
+    "insight": "Many of us would rather feel something unpleasant than feel nothing. Researchers like Danckert and Eastwood describe boredom as a signal that what you're doing doesn't engage you. Listened to, it can point you toward a better goal instead of a quick escape.",
+    "model": "Boredom is a question, not a void: 'What would actually be worth my attention right now?'",
+    "try_today": "Next time you feel bored, wait two minutes before grabbing your phone and ask: what would I like to be doing?",
+    "source": {
+      "thinkers": [
+        "James Danckert",
+        "John Eastwood",
+        "Timothy Wilson"
+      ],
+      "work": "Out of My Skull (2020); Wilson et al., Science (2014)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "doomscroll_loop",
+      "flow",
+      "procrastination_emotion"
+    ]
+  }
+]

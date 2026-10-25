@@ -1,0 +1,10 @@
+{
+  "name": "Qlip — models for living",
+  "short_name": "Qlip",
+  "description": "Practical philosophy and psychology in 30-second games.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0D0E18",
+  "theme_color": "#0D0E18",
+  "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

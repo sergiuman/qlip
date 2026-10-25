@@ -1,0 +1,820 @@
+{
+ "generated_at": "2026-10-25T22:00:28+00:00",
+ "sources": [
+  {
+   "id": "qumni_wso",
+   "kind": "framework",
+   "title": "WSO — Will, Skill, Opportunity",
+   "layer": "action",
+   "path": "/Users/sergiuman/Desktop/Gemini/Qumni Framework/wso.html",
+   "text_dump": "/Users/sergiuman/Desktop/Gemini/Qumni Framework/qlip/sources/qumni_wso.txt",
+   "words": 6147
+  },
+  {
+   "id": "qumni_pcf",
+   "kind": "framework",
+   "title": "PCF — Perceptual Control Framework",
+   "layer": "perception",
+   "path": "/Users/sergiuman/Desktop/Gemini/Qumni Framework/pcf.html",
+   "text_dump": "/Users/sergiuman/Desktop/Gemini/Qumni Framework/qlip/sources/qumni_pcf.txt",
+   "words": 4244
+  },
+  {
+   "id": "book_01",
+   "kind": "book_adaptation",
+   "source_book": "The Fifth Discipline: The Art & Practice of The Learning Organization",
+   "author": "Peter M. Senge",
+   "domain": "Systems & Metacognition",
+   "subdomain": "Systems Thinking, Causal Loops & Mental Models",
+   "titles": {
+    "11yo_en": "The Whispering Forest",
+    "11yo_ro": "Lumea prin ochii lui Radu",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "Radu and the Magic Glasses",
+    "5yo_junior_ro": "Radu și ochelarii fermecați"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/1_systems_thinking/source/the_whispering_forest_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/1_systems_thinking/source/lumea_prin_ochii_lui_radu_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/1_systems_thinking/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/1_systems_thinking/source/manuscript_ro.md"
+   ],
+   "words": 43931,
+   "values": [
+    "Systems Sight",
+    "Mental Lens Swapping",
+    "Shared Stories & Meaning",
+    "Looping Deep Listening"
+   ]
+  },
+  {
+   "id": "book_02",
+   "kind": "book_adaptation",
+   "source_book": "The 7 Habits of Highly Effective People",
+   "author": "Stephen R. Covey",
+   "domain": "Agency, Purpose & Habits",
+   "subdomain": "Proactive Self-Leadership, Prioritization & Win-Win Synergy",
+   "titles": {
+    "11yo_en": "Seven Paths of Eldoria",
+    "11yo_ro": "Ileana și cele șapte turnuri",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "Ileana's Seven Magic Keys",
+    "5yo_junior_ro": "Ileana și cele șapte chei magice"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/2_seven_habits/source/seven_paths_of_eldoria_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/2_seven_habits/source/ileana_si_cele_sapte_turnuri_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/2_seven_habits/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/2_seven_habits/source/manuscript_ro.md"
+   ],
+   "words": 49227,
+   "values": [
+    "Proactive Agency",
+    "Win-Win Synergy",
+    "Purpose ('Start With Why')",
+    "Nightly Brain Reset"
+   ]
+  },
+  {
+   "id": "book_03",
+   "kind": "book_adaptation",
+   "source_book": "Sapiens: A Brief History of Humankind",
+   "author": "Yuval Noah Harari",
+   "domain": "Social & Communicative Intelligence",
+   "subdomain": "Shared Fictions, Intersubjective Meaning & Large-Scale Cooperation",
+   "titles": {
+    "11yo_en": "Chronicles of the Forest",
+    "11yo_ro": "NOI: Povestea oamenilor",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "The Magic Campfire",
+    "5yo_junior_ro": "Focul fermecat și poveștile noastre"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/3_sapiens/source/chronicles_of_the_forest_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/3_sapiens/source/noi_povestea_oamenilor_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/3_sapiens/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/3_sapiens/source/manuscript_ro.md"
+   ],
+   "words": 48033,
+   "values": [
+    "Shared Stories & Meaning",
+    "Cooperative Trust"
+   ]
+  },
+  {
+   "id": "book_04",
+   "kind": "book_adaptation",
+   "source_book": "Supercommunicators: How to Unlock the Secret Language of Connection",
+   "author": "Charles Duhigg",
+   "domain": "Social & Communicative Intelligence",
+   "subdomain": "Conversation Matching, Active Looping & Relational Repair",
+   "titles": {
+    "11yo_en": "The Whisperers of Eldoria",
+    "11yo_ro": "Doar un pic mai aproape",
+    "11yo_ro_eldoria": "Șoptitorii din Eldoria",
+    "5yo_junior_en": "The Whispering Hares",
+    "5yo_junior_ro": "Urechile lungi și secretele pădurii"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/4_supercommunicators/source/whisperers_of_eldoria_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/4_supercommunicators/source/doar_un_pic_mai_aproape_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/4_supercommunicators/source/soptitorii_din_eldoria_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/4_supercommunicators/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/4_supercommunicators/source/manuscript_ro.md"
+   ],
+   "words": 91006,
+   "values": [
+    "Looping Deep Listening",
+    "Empathy Wavelength Matching"
+   ]
+  },
+  {
+   "id": "book_05",
+   "kind": "book_adaptation",
+   "source_book": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+   "author": "James Clear",
+   "domain": "Agency, Purpose & Habits",
+   "subdomain": "Behavioral Design, Marginal Compounding & Identity-Based Habits",
+   "titles": {
+    "11yo_en": "Sparks of Eldoria",
+    "11yo_ro": "Doar un pic mai mult",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "Tiny Steps of the Little Bear",
+    "5yo_junior_ro": "Pașii mărunți ai ursulețului"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/5_atomic_habits/source/sparks_of_eldoria_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/5_atomic_habits/source/doar_un_pic_mai_mult_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/5_atomic_habits/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/5_atomic_habits/source/manuscript_ro.md"
+   ],
+   "words": 70884,
+   "values": [
+    "Tiny 1% Compounding",
+    "Identity Habits"
+   ]
+  },
+  {
+   "id": "book_06",
+   "kind": "book_adaptation",
+   "source_book": "Emotional Intelligence: Why It Can Matter More Than IQ",
+   "author": "Daniel Goleman",
+   "domain": "Emotional & Existential Balance",
+   "subdomain": "Affect Labeling, Amygdala Regulation & Empathetic Attunement",
+   "titles": {
+    "11yo_en": "Heart Keepers of Eldoria",
+    "11yo_ro": "Doar un pic mai adânc",
+    "11yo_ro_eldoria": "Păstrătorii Inimii din Eldoria",
+    "5yo_junior_en": "The Heart Keepers",
+    "5yo_junior_ro": "Spiridușii din inima noastră"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/6_emotional_intelligence/source/heart_keepers_of_eldoria_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/6_emotional_intelligence/source/doar_un_pic_mai_adanc_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/6_emotional_intelligence/source/pastratorii_inimii_din_eldoria_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/6_emotional_intelligence/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/6_emotional_intelligence/source/manuscript_ro.md"
+   ],
+   "words": 91588,
+   "values": [
+    "Emotional Naming",
+    "The Impulse Pause"
+   ]
+  },
+  {
+   "id": "book_07",
+   "kind": "book_adaptation",
+   "source_book": "Beyond Order: 12 More Rules for Life",
+   "author": "Jordan B. Peterson",
+   "domain": "Emotional & Existential Balance",
+   "subdomain": "Order-Chaos Equilibrium, Truthfulness & Existential Responsibility",
+   "titles": {
+    "11yo_en": "Beyond the Whispering Valley",
+    "11yo_ro": "Doar un pic mai puțin haos",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "The Cozy Nest and the Wild Woods",
+    "5yo_junior_ro": "Cuibul călduros și pădurea cea mare"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/7_beyond_order/source/beyond_the_whispering_valley_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/7_beyond_order/source/doar_un_pic_mai_putin_haos_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/7_beyond_order/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/7_beyond_order/source/manuscript_ro.md"
+   ],
+   "words": 24438,
+   "values": [
+    "Order-Chaos Balance",
+    "Creative & Truthful Courage",
+    "Looping Deep Listening"
+   ]
+  },
+  {
+   "id": "book_08",
+   "kind": "book_adaptation",
+   "source_book": "Mindset: The New Psychology of Success",
+   "author": "Carol S. Dweck",
+   "domain": "Growth, Grit & Resilience",
+   "subdomain": "Growth vs. Fixed Mindset & Error-Driven Learning",
+   "titles": {
+    "11yo_en": "The Garden of Growth",
+    "11yo_ro": "Grădina Dezvoltării",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "The Little Seed that Loved to Try",
+    "5yo_junior_ro": "Sămânța care iubea să încerce"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/8_mindset/source/8_mindset_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/8_mindset/source/8_mindset_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/8_mindset/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/8_mindset/source/manuscript_ro.md"
+   ],
+   "words": 7926,
+   "values": [
+    "The Power of 'Yet'",
+    "Mistake Alchemy"
+   ]
+  },
+  {
+   "id": "book_09",
+   "kind": "book_adaptation",
+   "source_book": "Grit: The Power of Passion and Perseverance",
+   "author": "Angela Duckworth",
+   "domain": "Growth, Grit & Resilience",
+   "subdomain": "Long-Term Perseverance, Stamina & Deliberate Pacing",
+   "titles": {
+    "11yo_en": "The Mountain of the Slow Climber",
+    "11yo_ro": "Muntele Urcușului Răbdător",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "Leo's Little Wings",
+    "5yo_junior_ro": "Aripile micului Leo"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/9_grit/source/9_grit_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/9_grit/source/9_grit_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/9_grit/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/9_grit/source/manuscript_ro.md"
+   ],
+   "words": 6960,
+   "values": [
+    "Patient Grit",
+    "Deliberate Pacing"
+   ]
+  },
+  {
+   "id": "book_10",
+   "kind": "book_adaptation",
+   "source_book": "Deep Work: Rules for Focused Success in a Distracted World",
+   "author": "Cal Newport",
+   "domain": "Focus, Rest & Embodied Play",
+   "subdomain": "Selective Attention, Distraction Shielding & Flow Immersion",
+   "titles": {
+    "11yo_en": "The Island of the Quiet Forge",
+    "11yo_ro": "Insula Faurului Liniștit",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "The Quiet Forest",
+    "5yo_junior_ro": "Pădurea Liniștită"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/10_deep_work/source/10_deep_work_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/10_deep_work/source/10_deep_work_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/10_deep_work/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/10_deep_work/source/manuscript_ro.md"
+   ],
+   "words": 7165,
+   "values": [
+    "Deep Forge Focus",
+    "Attention Shield"
+   ]
+  },
+  {
+   "id": "book_11",
+   "kind": "book_adaptation",
+   "source_book": "Thinking, Fast and Slow",
+   "author": "Daniel Kahneman",
+   "domain": "Systems & Metacognition",
+   "subdomain": "Dual-Process Theory (System 1 vs. System 2) & Cognitive Debiasing",
+   "titles": {
+    "11yo_en": "The Hare and the Owl of the Mind",
+    "11yo_ro": "Iepurele și Bufnița Minții",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "Quick-Hop and Slow-Hoot",
+    "5yo_junior_ro": "Iepurașul cel Rapid și Bufnița cea Înțeleaptă"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/11_thinking_fast_slow/source/11_thinking_fast_slow_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/11_thinking_fast_slow/source/11_thinking_fast_slow_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/11_thinking_fast_slow/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/11_thinking_fast_slow/source/manuscript_ro.md"
+   ],
+   "words": 6375,
+   "values": [
+    "Slow-Owl Logic",
+    "Bias & Illusion Detective"
+   ]
+  },
+  {
+   "id": "book_12",
+   "kind": "book_adaptation",
+   "source_book": "Quiet: The Power of Introverts in a World That Can't Stop Talking",
+   "author": "Susan Cain",
+   "domain": "Social & Communicative Intelligence",
+   "subdomain": "Introverted Temperament, Deep Observation & Calm Leadership",
+   "titles": {
+    "11yo_en": "The Whispering Stream",
+    "11yo_ro": "Pârâul Șoptitor",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "Oliver's Quiet Power",
+    "5yo_junior_ro": "Puterea liniștită a lui Oliver"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/12_quiet/source/12_quiet_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/12_quiet/source/12_quiet_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/12_quiet/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/12_quiet/source/manuscript_ro.md"
+   ],
+   "words": 6632,
+   "values": [
+    "Quiet Observation",
+    "Systems Sight"
+   ]
+  },
+  {
+   "id": "book_13",
+   "kind": "book_adaptation",
+   "source_book": "The Boy, the Mole, the Fox and the Horse",
+   "author": "Charlie Mackesy",
+   "domain": "Social & Communicative Intelligence",
+   "subdomain": "Self-Compassion, Vulnerable Help-Seeking & Unconditional Kindness",
+   "titles": {
+    "11yo_en": "The Path in the Snow",
+    "11yo_ro": "Drumul prin zăpadă",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "Kindness in the Forest",
+    "5yo_junior_ro": "Bunătatea din pădure"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/13_boy_mole_fox_horse/source/13_boy_mole_fox_horse_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/13_boy_mole_fox_horse/source/13_boy_mole_fox_horse_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/13_boy_mole_fox_horse/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/13_boy_mole_fox_horse/source/manuscript_ro.md"
+   ],
+   "words": 8049,
+   "values": [
+    "Courageous Kindness",
+    "Cooperative Trust"
+   ]
+  },
+  {
+   "id": "book_14",
+   "kind": "book_adaptation",
+   "source_book": "Start with Why: How Great Leaders Inspire Everyone to Take Action",
+   "author": "Simon Sinek",
+   "domain": "Agency, Purpose & Habits",
+   "subdomain": "Intrinsic Purpose, Teleological Motivation & Inspired Leadership",
+   "titles": {
+    "11yo_en": "The Secret of the Lighthouse",
+    "11yo_ro": "Secretul Farului din Poiană",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "Maya's Golden Compass",
+    "5yo_junior_ro": "Busola aurie a Mayei"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/14_start_with_why/source/14_start_with_why_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/14_start_with_why/source/14_start_with_why_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/14_start_with_why/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/14_start_with_why/source/manuscript_ro.md"
+   ],
+   "words": 7773,
+   "values": [
+    "Purpose ('Start With Why')",
+    "Proactive Agency"
+   ]
+  },
+  {
+   "id": "book_15",
+   "kind": "book_adaptation",
+   "source_book": "Why We Sleep: Unlocking the Power of Sleep and Dreams",
+   "author": "Matthew Walker",
+   "domain": "Focus, Rest & Embodied Play",
+   "subdomain": "Sleep Architecture, Memory Consolidation & Emotional Restoration",
+   "titles": {
+    "11yo_en": "The Night-Garden of Dreams",
+    "11yo_ro": "Grădina de Noapte a Viselor",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "The Sleep Elves",
+    "5yo_junior_ro": "Spiridușii Somnului"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/15_why_we_sleep/source/15_why_we_sleep_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/15_why_we_sleep/source/15_why_we_sleep_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/15_why_we_sleep/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/15_why_we_sleep/source/manuscript_ro.md"
+   ],
+   "words": 6984,
+   "values": [
+    "Nightly Brain Reset",
+    "The Impulse Pause"
+   ]
+  },
+  {
+   "id": "book_16",
+   "kind": "book_adaptation",
+   "source_book": "Can't Hurt Me: Master Your Mind and Defy the Odds",
+   "author": "David Goggins",
+   "domain": "Growth, Grit & Resilience",
+   "subdomain": "Voluntary Discomfort, Governor Override & Resilient Self-Talk",
+   "titles": {
+    "11yo_en": "The Iron Pebble",
+    "11yo_ro": "Pietricica de Fier",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "Victor's Strong Shield",
+    "5yo_junior_ro": "Scutul puternic al lui Victor"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/16_cant_hurt_me/source/16_cant_hurt_me_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/16_cant_hurt_me/source/16_cant_hurt_me_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/16_cant_hurt_me/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/16_cant_hurt_me/source/manuscript_ro.md"
+   ],
+   "words": 7385,
+   "values": [
+    "Resilient Self-Talk",
+    "Patient Grit"
+   ]
+  },
+  {
+   "id": "book_17",
+   "kind": "book_adaptation",
+   "source_book": "The Anxious Generation: How the Great Rewiring of Childhood Is Causing an Epidemic of Mental Illness",
+   "author": "Jonathan Haidt",
+   "domain": "Focus, Rest & Embodied Play",
+   "subdomain": "Screen Hygiene, Embodied Free Play & Peer Co-Presence",
+   "titles": {
+    "11yo_en": "The Glass Mirror and the Muddy Trail",
+    "11yo_ro": "Oglinda de Sticlă și Cărarea cu Noroi",
+    "11yo_ro_eldoria": null,
+    "5yo_junior_en": "The Play Forest",
+    "5yo_junior_ro": "Pădurea de Joacă"
+   },
+   "manuscripts": [
+    "/Users/sergiuman/Desktop/Gemini/Books/17_anxious_generation/source/17_anxious_generation_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/17_anxious_generation/source/17_anxious_generation_ro.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/17_anxious_generation/source/manuscript_en.md",
+    "/Users/sergiuman/Desktop/Gemini/Books/junior_editions/17_anxious_generation/source/manuscript_ro.md"
+   ],
+   "words": 7262,
+   "values": [
+    "Real-World Muddy Play",
+    "Attention Shield",
+    "Cooperative Trust"
+   ]
+  }
+ ],
+ "values": [
+  {
+   "id": "val_systems_sight",
+   "label": "Systems Sight",
+   "description": "Spotting the invisible circles of cause-and-effect and hidden time delays, so you heal the whole pattern instead of blaming neighbors or grabbing quick fixes that backfire."
+  },
+  {
+   "id": "val_mental_models",
+   "label": "Mental Lens Swapping",
+   "description": "Remembering that your first opinion is just one colored lens—and peeking through a friend's lens before deciding they acted out of selfishness."
+  },
+  {
+   "id": "val_proactive_agency",
+   "label": "Proactive Agency",
+   "description": "Choosing your next move like iron shaped at the forge instead of dissolving like wet clay whenever plans change or someone acts unfairly."
+  },
+  {
+   "id": "val_synergy",
+   "label": "Win-Win Synergy",
+   "description": "Weaving different friends' ideas together—badger tunnels plus squirrel towers—into a third design far cooler than dull compromise."
+  },
+  {
+   "id": "val_shared_stories",
+   "label": "Shared Stories & Meaning",
+   "description": "Seeing how team mottos, game rules, and classroom promises are human-made stories—giving you the power to co-author kinder, fairer ones."
+  },
+  {
+   "id": "val_cooperative_trust",
+   "label": "Cooperative Trust",
+   "description": "Keeping small promises and sharing credit fairly so classmates feel safe building big projects beside you without fear of betrayal."
+  },
+  {
+   "id": "val_deep_listening",
+   "label": "Looping Deep Listening",
+   "description": "Playing the quiet spaces between a friend's words—summarizing what they truly meant in your own voice and asking 'Did I get that right?'"
+  },
+  {
+   "id": "val_empathy_matching",
+   "label": "Empathy Wavelength Matching",
+   "description": "Checking whether someone needs a Practical plan, an Emotional 'that sounds really hard', or Social belonging before blurting out unasked-for fixes."
+  },
+  {
+   "id": "val_tiny_compounding",
+   "label": "Tiny 1% Compounding",
+   "description": "Shrinking a giant goal into a Two-Minute Seed you can plant every afternoon, trusting quiet daily sparks to grow into unstoppable skill."
+  },
+  {
+   "id": "val_identity_habits",
+   "label": "Identity Habits",
+   "description": "Casting a tiny daily vote for who you are ('I'm a builder', 'I'm a musician') and using 'Never Miss Twice' to bounce right back after an off day."
+  },
+  {
+   "id": "val_emotional_naming",
+   "label": "Emotional Naming",
+   "description": "Replacing 'everything sucks!' with the exact weather report of your heart—'embarrassed', 'anxious', 'jealous'—which instantly calms your brain's alarm."
+  },
+  {
+   "id": "val_impulse_pause",
+   "label": "The Impulse Pause",
+   "description": "Inserting three slow belly-breaths between a hot trigger and your mouth or thumbs, stopping the Fire-Beast from burning bridges you care about."
+  },
+  {
+   "id": "val_order_chaos_balance",
+   "label": "Order-Chaos Balance",
+   "description": "Building a calm home base—one tidy desk corner, one honest schedule—so you feel steady enough to explore scary, exciting new territory."
+  },
+  {
+   "id": "val_creative_courage",
+   "label": "Creative & Truthful Courage",
+   "description": "Standing with tall posture, telling the plain truth instead of protective fibs, and measuring progress against yesterday's you rather than someone else's trophy."
+  },
+  {
+   "id": "val_yet_growth",
+   "label": "The Power of 'Yet'",
+   "description": "Adding one magic word—'I don't get fractions YET'—to step out of the frozen Marble Garden into the living Green Valley where brains rewire."
+  },
+  {
+   "id": "val_mistake_alchemy",
+   "label": "Mistake Alchemy",
+   "description": "Inspecting split wood and wrong answers with curiosity instead of shame, mining every mistake for exact clues on where to drill pilot holes next time."
+  },
+  {
+   "id": "val_patient_grit",
+   "label": "Patient Grit",
+   "description": "Keeping your wings pointed toward the summit long after beginner's excitement wears off, proving stamina beats impatient talent."
+  },
+  {
+   "id": "val_deliberate_pacing",
+   "label": "Deliberate Pacing",
+   "description": "Breaking steep cliffs into reachable ledges and taking smart shelter during wind gusts so your muscles don't cramp halfway up."
+  },
+  {
+   "id": "val_deep_focus",
+   "label": "Deep Forge Focus",
+   "description": "Staying gently anchored on a single craft past the twenty-minute itch until boredom melts into warm, high-powered creative flow."
+  },
+  {
+   "id": "val_attention_shield",
+   "label": "Attention Shield",
+   "description": "Closing the heavy wooden door on buzzing notifications and extra tabs BEFORE starting homework so Sparkflies can't hijack your forge."
+  },
+  {
+   "id": "val_slow_owl_logic",
+   "label": "Slow-Owl Logic",
+   "description": "Waking up your spectacles-wearing inner Owl to test bridge beams, count evidence, and think step-by-step on tricky riddles and big choices."
+  },
+  {
+   "id": "val_bias_detective",
+   "label": "Bias & Illusion Detective",
+   "description": "Catching your fast Hare when it mistakes an oak shadow for a monster or assumes one Whisper in the hallway means everyone dislikes you."
+  },
+  {
+   "id": "val_quiet_observation",
+   "label": "Quiet Observation",
+   "description": "Honoring your need for calm, solo sketching time—using observant eyes to notice subtle details and speak with steady weight when it counts."
+  },
+  {
+   "id": "val_courageous_kindness",
+   "label": "Courageous Kindness",
+   "description": "Speaking to yourself like a warm friend when you stumble, sitting patiently beside hurt classmates, and daring to ask for help in a storm."
+  },
+  {
+   "id": "val_purpose_why",
+   "label": "Purpose ('Start With Why')",
+   "description": "Connecting mundane practice or schoolwork to your inner lighthouse flame—who you want to help and what unseen islands you want to explore."
+  },
+  {
+   "id": "val_nightly_brain_reset",
+   "label": "Nightly Brain Reset",
+   "description": "Blowing out the candle on time so your Night-Garden elves can lock new skills into memory drawers and wash cranky mud from your heart."
+  },
+  {
+   "id": "val_resilient_self_talk",
+   "label": "Resilient Self-Talk",
+   "description": "Answering the panicky 'I'm too weak!' voice with steady Iron-Pebble words and locking eyes onto just the very next stone on the muddy climb."
+  },
+  {
+   "id": "val_real_world_play",
+   "label": "Real-World Muddy Play",
+   "description": "Leaving the hypnotic glass screen on the desk to climb trees, invent messy backyard games, navigate real scrapes, and laugh outdoors with friends."
+  }
+ ],
+ "dilemmas": [
+  {
+   "id": "dil_01",
+   "label": "Group Project Blame Spiral",
+   "description": "Your four-person science poster is half-finished the day before it's due; everyone starts pointing fingers ('You didn't send the pictures!'), making teammates hide mistakes and stop cooperating."
+  },
+  {
+   "id": "dil_02",
+   "label": "The 'Nothing Is Fair!' Mood Ruiner",
+   "description": "Rain cancels your Saturday soccer match and a strict substitute teacher assigns extra homework—and you spend the whole day sulking and snapping at your family as if your mood belongs to the weather."
+  },
+  {
+   "id": "dil_03",
+   "label": "Playground Clique Turf War",
+   "description": "Two fifth-grade friend groups claim the courtyard basketball hoop with made-up 'seniority rules', turning every twenty-minute recess into shouting instead of playing."
+  },
+  {
+   "id": "dil_04",
+   "label": "Group Chat Drama & Unwanted Fixing",
+   "description": "A close friend texts that nobody sat with them at lunch; you immediately reply 'Well, just sit somewhere else tomorrow!'—and suddenly they leave you on read and pull away."
+  },
+  {
+   "id": "dil_05",
+   "label": "The Three-Day Motivation Crash",
+   "description": "On Sunday night you swear you'll practice guitar 60 minutes daily and read 40 pages; by Thursday you miss once because of homework and abandon the whole plan for a month."
+  },
+  {
+   "id": "dil_06",
+   "label": "The Slamming-Door Anger Hijack",
+   "description": "Your younger sibling messes up your LEGO build or someone jokes about your drawing, heat rushes to your ears, and you yell something mean or fire off a cruel message before thinking."
+  },
+  {
+   "id": "dil_07",
+   "label": "Perfectionist Freeze Before New Challenges",
+   "description": "You get invited to try robotics club or the school talent show, but because you can't guarantee you won't look clumsy next to experienced kids, you make up an excuse not to go."
+  },
+  {
+   "id": "dil_08",
+   "label": "Quitting After Failing Once",
+   "description": "You get a low grade on your first geometry test or split the wood on a craft project and immediately conclude 'I just don't have a math/maker brain—there's no point trying.'"
+  },
+  {
+   "id": "dil_09",
+   "label": "Bailing When Practice Turns Un-Glamorous",
+   "description": "Three weeks into swimming or coding, the fun beginner wins stop and tough, repetitive drills begin—and you beg to switch to a shiny new hobby while faster kids race ahead."
+  },
+  {
+   "id": "dil_10",
+   "label": "Losing Focus Every Four Minutes Studying",
+   "description": "You sit at your desk for two hours to write a one-page story, but every buzz from your phone or open browser tab pulls you away, leaving you drained with three messy sentences."
+  },
+  {
+   "id": "dil_11",
+   "label": "Jumping to Conclusions About a Friend",
+   "description": "You see two friends whispering by the lockers and glancing your way; within two seconds your gut screams 'They're mocking me!'—though they're actually planning your birthday card."
+  },
+  {
+   "id": "dil_12",
+   "label": "Feeling Drowned Out as an Introvert",
+   "description": "During noisy classroom brainstorming, three loud kids dominate the table with flashy flawed ideas while your careful, workable solution stays locked in your notebook."
+  },
+  {
+   "id": "dil_13",
+   "label": "Hiding Behind 'I'm Fine' When Overwhelmed",
+   "description": "You feel lost in a hard school week and lonely after an argument, yet you tell parents and friends 'I'm fine!' and beat yourself up silently because asking for help feels weak."
+  },
+  {
+   "id": "dil_14",
+   "label": "Going Through Homework Like an Empty Robot",
+   "description": "Every afternoon feels like a gray checklist of worksheets and lessons you only do to chase grades or avoid lectures, because you've lost touch with any personal 'Why'."
+  },
+  {
+   "id": "dil_15",
+   "label": "Scrolling Late at Night & Waking Up Foggy",
+   "description": "You stay awake until midnight under the covers playing one more round because sleep feels like 'missing out', then forget studied facts on the morning quiz and snap at everyone."
+  },
+  {
+   "id": "dil_16",
+   "label": "Folding at the First Wave of Discomfort",
+   "description": "Halfway through an endurance run in gym or a tough multi-step word problem, your lungs or brain feel uncomfortable and you immediately stop, believing 'I've hit my limit.'"
+  },
+  {
+   "id": "dil_17",
+   "label": "Afternoon Screen Trance & Lonely Restlessness",
+   "description": "You spend three sunny hours swiping short videos in your room, ignoring a friend's knock—only to feel a hollow, jittery ache in your chest the second the battery dies."
+  }
+ ],
+ "bridges": [
+  {
+   "bridge_id": "bridge_01",
+   "value_a": "val_impulse_pause",
+   "value_b": "val_slow_owl_logic",
+   "book_a": "book_06",
+   "book_b": "book_11",
+   "emergent_principle_en": "The Five-Second Eyeglass Bridge: Emotional self-regulation creates the biological doorway through which analytical thinking enters.",
+   "emergent_principle_ro": "Puntea Ochelarilor de Cinci Secunde: Reglarea emoțională deschide ușa biologică prin care gândirea logică poate intra în scenă.",
+   "story_seed_en": "When Alex Marin sees two classmates whispering near his locker, Quick-Hop screams 'Betrayal!' and his Fire-Beast flares hot; by using his three-breath Sacred Pause first, Slow-Hoot finally has time to land on his shoulder and notice the birthday ribbon in their hands.",
+   "story_seed_ro": "Când Alex Marin vede doi colegi șoptind lângă dulapul lui, Iepurele strigă „Trădare!”, iar Fiara de Foc se aprinde; folosind însă mai întâi Pauza de trei respirații, Bufnița Înțeleaptă are timp să coboare pe umărul lui și să observe panglica de cadou din mâinile lor."
+  },
+  {
+   "bridge_id": "bridge_02",
+   "value_a": "val_purpose_why",
+   "value_b": "val_tiny_compounding",
+   "book_a": "book_14",
+   "book_b": "book_05",
+   "emergent_principle_en": "Compass-Guided Micro-Sparks: Big purpose without tiny habits stays a daydream; tiny habits without purpose turn robotic—together they create unstoppable momentum.",
+   "emergent_principle_ro": "Scântei Ghidate de Busolă: Scopul mare fără obiceiuri mici rămâne visare, iar obiceiurile mici fără scop devin mecanică — împreună creează un avânt de neoprit.",
+   "story_seed_en": "Maya knows WHY she wants to sail to unseen islands, while Milo Chen knows HOW to drop one paperclip a day into a jar; teaming up at the harbor workshop, they build an expedition ship two plank-rivets every afternoon without ever burning out.",
+   "story_seed_ro": "Maya știe DE CE vrea să navigheze spre insule necunoscute, iar Milo Chen știe CUM să adune câte o agrafă pe zi în borcan; lucrând împreună în atelierul din port, ei construiesc corabia de expediție câte două nituri în fiecare după-amiază, fără să abandoneze."
+  },
+  {
+   "bridge_id": "bridge_03",
+   "value_a": "val_yet_growth",
+   "value_b": "val_courageous_kindness",
+   "book_a": "book_08",
+   "book_b": "book_13",
+   "emergent_principle_en": "Warm Soil Neuroplasticity: Brains grow fastest not under harsh shame, but when 'Not Yet' is watered with self-compassion and safe help-seeking.",
+   "emergent_principle_ro": "Solul Cald al Creșterii: Creierul nu crește sub biciul rușinii, ci atunci când „Încă Nu” este udat cu blândețe față de sine și curajul de a cere ajutor.",
+   "story_seed_en": "Clara breaks her third birdhouse roof in winter sleet and starts calling herself clumsy—until Ben's gentle Horse kneels beside Master Garen's greenhouse, showing her that asking a master how to angle the saw is how living roots survive frost.",
+   "story_seed_ro": "Clara rupe al treilea acoperiș de căsuță pe lapoviță și începe să se certe singură — până când Calul blând al lui Ben îngenunchează lângă sera Meșterului Garen, arătându-i că a cere sfatul unui meșter este modul în care rădăcinile vii trec peste îngheț."
+  },
+  {
+   "bridge_id": "bridge_04",
+   "value_a": "val_quiet_observation",
+   "value_b": "val_systems_sight",
+   "book_a": "book_12",
+   "book_b": "book_01",
+   "emergent_principle_en": "Still-Water Systems Vision: Introverted quietness is a natural ecological radar for detecting subtle feedback loops and delayed consequences that loud assemblies overlook.",
+   "emergent_principle_ro": "Viziunea Sistemică a Apei Liniștite: Liniștea introvertită este un radar natural pentru observarea buclelor fine și a efectelor întârziate pe care grupurile gălăgioase le ratează.",
+   "story_seed_en": "While Pip and Buster shout rival orders during the spring flood, quiet beaver Oliver sits beneath Sola the willow with Kiri, sketching how upstream mud-gates and two-day water delays connect—saving both lodges with one silent lever.",
+   "story_seed_ro": "În timp ce Pip și Buster strigă ordine contradictorii în timpul viiturii de primăvară, tăcutul castor Oliver stă sub salcia Sola alături de Kiri, schițând legătura dintre barajele din amonte și întârzierea apei — salvând ambele maluri printr-o singură măsură calmă."
+  },
+  {
+   "bridge_id": "bridge_05",
+   "value_a": "val_nightly_brain_reset",
+   "value_b": "val_deep_focus",
+   "book_a": "book_15",
+   "book_b": "book_10",
+   "emergent_principle_en": "The Two-Half Craft Cycle: Daytime deep concentration and nighttime sleep restoration are two halves of one learning flywheel.",
+   "emergent_principle_ro": "Cercul Complet al Măiestriei: Concentrarea profundă de peste zi și somnul reparator de peste noapte sunt cele două jumătăți ale aceluiași motor de învățare.",
+   "story_seed_en": "Apprentice Thomas stays up till midnight trying to force a cracked Light-Crystal and ruins three rods; Nyx visits the Quiet Forge to show him how Dream-Elves anneal glass-making skills in his oak memory drawers while he sleeps.",
+   "story_seed_ro": "Ucenicul Thomas stă treaz până la miezul nopții forțând Cristalul-Lumină și strică trei piese; Nyx vizitează Faurul Liniștit pentru a-i arăta cum Spiridușii Viselor îi fixează mișcările fine în sertarele memoriei tocmai în timp ce doarme."
+  },
+  {
+   "bridge_id": "bridge_06",
+   "value_a": "val_resilient_self_talk",
+   "value_b": "val_deliberate_pacing",
+   "book_a": "book_16",
+   "book_b": "book_09",
+   "emergent_principle_en": "Smart Iron Endurance: Mental toughness pushes past false quit-alarms, while deliberate pacing prevents heroic burnout—uniting courage with wisdom.",
+   "emergent_principle_ro": "Rezistența de Fier Înțeleaptă: Dialogul interior ferm învinge alarmele false de abandon, iar dozarea ritmului previne epuizarea oarbă — unind curajul cu înțelepciunea.",
+   "story_seed_en": "Victor the hedgehog tries to charge straight up Whispering Peak in freezing sleet while swallow Leo flies steady ledges overhead; Shell-Top and Grizz team up to teach them the difference between lazy excuses and wise ridge-by-ridge pacing.",
+   "story_seed_ro": "Ariciul Victor încearcă să urce în goană Vârful Șoptitor prin lapoviță, în timp ce rândunica Leo zboară constant din prag în prag; Țestoasa și Grizz îi învață împreună diferența dintre scuzele fricii și dozarea inteligentă a efortului."
+  },
+  {
+   "bridge_id": "bridge_07",
+   "value_a": "val_real_world_play",
+   "value_b": "val_empathy_matching",
+   "book_a": "book_17",
+   "book_b": "book_04",
+   "emergent_principle_en": "Full-Spectrum Human Presence: Stepping off screens onto muddy trails restores tone of voice, eye contact, and laughter—the sensory cues Supercommunicators need to match wavelengths.",
+   "emergent_principle_ro": "Prezența Umană Deplină: Desprinderea de ecrane și ieșirea la joacă redau tonul vocii, privirea și râsul — semnalele vii prin care ne putem acorda cu adevărat la sufletul prietenilor.",
+   "story_seed_en": "After weeks of cold misunderstandings in their glowing-mirror chat, Sonia, Lara, and Dan ditch their screens on Master Eldon's muddy trail, discovering how easy it is to hear emotion in a real voice when climbing the Big Rock together.",
+   "story_seed_ro": "După săptămâni de neînțelegeri reci prin mesaje pe ecran, Sonia, Lara și Dan lasă oglinzile de sticlă acasă și pornesc pe cărarea cu noroi, descoperind cât de ușor se simte emoția dintr-o voce vie când urcă împreună Stânca Mare."
+  },
+  {
+   "bridge_id": "bridge_08",
+   "value_a": "val_shared_stories",
+   "value_b": "val_order_chaos_balance",
+   "book_a": "book_03",
+   "book_b": "book_07",
+   "emergent_principle_en": "Living Rules Renewal: Healthy communities honor shared rules that keep safe Order, yet bravely update rigid rules when they turn into an unfair Stone Cage.",
+   "emergent_principle_ro": "Înnoirea Regulilor Vii: Comunitățile sănătoase respectă regulile care păstrează Ordinea, dar au și curajul să le înnoiască atunci când devin o colivie nedreaptă.",
+   "story_seed_en": "Ana and Lara Chen examine their school's strict courtyard traditions—keeping the fair rules that protect younger kids (Order) while proposing bold creative changes so everyone gets a turn to play (healthy Chaos).",
+   "story_seed_ro": "Ana și Lara Chen privesc cu atenție regulile vechi din curtea școlii — păstrându-le pe cele care îi protejează pe cei mici (Ordinea), dar propunând curajos schimbări noi ca toți copiii să aibă loc la joc."
+  },
+  {
+   "bridge_id": "bridge_09",
+   "value_a": "val_mental_models",
+   "value_b": "val_bias_detective",
+   "book_a": "book_01",
+   "book_b": "book_11",
+   "emergent_principle_en": "Double-Lens Debiasing: Combining Senge's swappable perspective glasses with Kahneman's Slow-Owl fact-checking builds immunity against rumors, stereotypes, and panic.",
+   "emergent_principle_ro": "Claritatea Dublei Lentile: Îmbinarea ochelarilor de perspectivă ai lui Radu cu verificarea logică a Bufniței creează un scut împotriva zvonurilor, etichetelor și panicii.",
+   "story_seed_en": "When a rumor sweeps fifth grade that a quiet new student 'stole' art supplies, Radu lends Dan his colored spectacles while Slow-Hoot checks the supply-closet timeline—uncovering an innocent mix-up before the class ostracizes a friend.",
+   "story_seed_ro": "Când prin clasa a cincea circulă zvonul că un coleg nou ar fi „ascuns” acuarelele, Radu îi împrumută lui Dan ochelarii săi de perspectivă, iar Bufnița verifică firul evenimentelor — descoperind o simplă încurcătură înainte ca grupul să nedreptățească un prieten."
+  },
+  {
+   "bridge_id": "bridge_10",
+   "value_a": "val_proactive_agency",
+   "value_b": "val_attention_shield",
+   "book_a": "book_02",
+   "book_b": "book_10",
+   "emergent_principle_en": "Sovereign Architect of Time: True proactivity in a digital childhood means putting 'First Things First' by guarding your Quiet Forge before algorithms choose your day for you.",
+   "emergent_principle_ro": "Arhitectul Propriului Timp: Adevărata proactivitate în era digitală înseamnă să pui lucrurile importante pe primul loc, protejându-ți Faurul Liniștit înainte ca ecranele să aleagă ziua în locul tău.",
+   "story_seed_en": "Ileana brings the Key of First-Things-First to Lumina Island, helping Thomas design a morning ritual where he forges his Light-Crystal first while Sparkflies are still asleep outside the stone door.",
+   "story_seed_ro": "Ileana aduce Cheia Priorităților pe Insula Lumina, ajutându-l pe Thomas să își creeze un ritual de dimineață în care făurește Cristalul-Lumină înainte ca licuricii gălăgioși să îi bată în ușă."
+  }
+ ],
+ "totals": {
+  "sources": 19,
+  "words": 502009,
+  "values": 28,
+  "dilemmas": 17
+ }
+}

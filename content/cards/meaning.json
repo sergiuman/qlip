@@ -1,0 +1,462 @@
+[
+  {
+    "id": "start-with-why-pitch",
+    "concept": "start_with_why",
+    "domain": "meaning",
+    "type": "choice",
+    "hook": "You get 10 seconds to recruit a stranger. What do you say first?",
+    "title": "Lead With the Why",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You're starting a Saturday park clean-up and need volunteers. A neighbour stops to listen. Your first sentence is…",
+          "options": [
+            {
+              "text": "\"We meet at 9, bring gloves, it takes two hours.\"",
+              "feedback": "Useful details, but they answer a question nobody has asked yet. Logistics land better once people care."
+            },
+            {
+              "text": "\"Kids can't play in that park because of broken glass. I want to fix that.\"",
+              "best": true,
+              "feedback": "You gave a reason they can feel. Now the time and the gloves sound like a way to help, not a chore."
+            },
+            {
+              "text": "\"We're the biggest clean-up group in the area.\"",
+              "feedback": "Size can impress, but it's about you. People join for what it means to them."
+            }
+          ]
+        },
+        {
+          "scenario": "They say: \"Sounds good, but I'm busy.\" You reply…",
+          "options": [
+            {
+              "text": "\"Even 30 minutes helps. The playground corner is the worst bit.\"",
+              "best": true,
+              "feedback": "You kept the why alive and made the ask smaller. Easy yes, no pressure."
+            },
+            {
+              "text": "\"Everyone's busy. It's only two hours.\"",
+              "feedback": "Understandable, but it brushes off their reason. People dig in when they feel unheard."
+            },
+            {
+              "text": "\"No worries.\" and walk off.",
+              "feedback": "Kind and respectful. You could also leave a door open with a smaller, clear option."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "When you opened with the reason, the details started to sound like an invitation. Sinek's 'Golden Circle' says lead with why, then how, then what. The habit is useful, but his brain-biology explanation is contested and not backed by neuroscience.",
+    "model": "Say why it matters before what it is. Purpose first, logistics second.",
+    "try_today": "Before your next request or pitch, write one sentence that starts with \"This matters because…\" and say that first.",
+    "source": {
+      "thinkers": [
+        "Simon Sinek"
+      ],
+      "work": "Start With Why (2009)"
+    },
+    "evidence": "contested",
+    "level": 1,
+    "related": [
+      "will_gap",
+      "responsibility_meaning",
+      "three_conversations"
+    ]
+  },
+  {
+    "id": "responsibility-meaning-happy-vs-meaningful",
+    "concept": "responsibility_meaning",
+    "domain": "meaning",
+    "type": "reveal",
+    "hook": "Which week would you call more meaningful: easy or heavy?",
+    "title": "Meaning Lives in the Load",
+    "game": {
+      "prompt": "Week A: lie-ins, good food, nothing asked of you. Week B: tiring, but you helped a friend move and finished something people rely on. Which one would you call more meaningful?",
+      "choices": [
+        "Week A, the easy one",
+        "Week B, the heavy one",
+        "Honestly, both"
+      ],
+      "reveal": "Many people pick Week B as more meaningful, even if Week A felt happier. A 2013 survey study by Baumeister and colleagues found happiness linked more to getting what you want, and meaning linked more to giving, caring for others and facing hard things. Frankl argued something similar from his own life."
+    },
+    "insight": "Happiness and meaning overlap, but they aren't the same. Meaning tends to grow where you carry something for someone. That doesn't mean piling on until you break. It means choosing a load that is truly yours and worth carrying.",
+    "model": "Happiness is often about receiving; meaning is often about carrying something worth it.",
+    "try_today": "Pick one small thing someone relies on you for and do it a little better than needed today, on purpose.",
+    "source": {
+      "thinkers": [
+        "Viktor Frankl",
+        "Roy Baumeister",
+        "Jordan Peterson"
+      ],
+      "work": "Man's Search for Meaning (1946); Baumeister et al., Journal of Positive Psychology (2013)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "amor_fati",
+      "start_with_why",
+      "small_wins"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "responsibility-meaning-pick-your-load",
+    "concept": "responsibility_meaning",
+    "domain": "meaning",
+    "type": "swipe",
+    "hook": "Not every weight is yours. Can you tell which ones are?",
+    "title": "Pick Up the Right Load",
+    "game": {
+      "prompt": "Is this a load you can pick up today?",
+      "left": "Not mine to carry",
+      "right": "Mine to pick up",
+      "items": [
+        {
+          "text": "How you show up for the people who count on you",
+          "side": "right",
+          "why": "Your reliability is fully yours. It's where meaning starts."
+        },
+        {
+          "text": "Making everyone at work like you",
+          "side": "left",
+          "why": "Their feelings aren't yours to control. Your fairness and effort are."
+        },
+        {
+          "text": "The mess in your room that's been bugging you",
+          "side": "right",
+          "why": "Small, concrete, yours. Sorting it is a quick win that steadies you."
+        },
+        {
+          "text": "Fixing a friend's life for them",
+          "side": "left",
+          "why": "You can support them. Taking over their choices is a weight that crushes both of you."
+        },
+        {
+          "text": "Learning the skill your goal actually needs",
+          "side": "right",
+          "why": "Closing your own skill gap is a load that pays you back."
+        },
+        {
+          "text": "Every bad thing in the news today",
+          "side": "left",
+          "why": "Caring is good. Carrying it all is not. Pick one thing you can act on instead."
+        }
+      ]
+    },
+    "insight": "Meaning comes from responsibility, but only the kind you can actually act on. Loads that are truly yours make you stronger. Loads that belong to others, or to the whole world, mostly bring worry. Sorting them is the first step.",
+    "model": "Carry what's yours, fully. Put down what isn't, kindly.",
+    "try_today": "Write down three things weighing on you. Circle the one you can act on, and take one 5-minute step on it.",
+    "source": {
+      "thinkers": [
+        "Jordan Peterson",
+        "Viktor Frankl",
+        "Epictetus"
+      ],
+      "work": "12 Rules for Life (2018); Enchiridion (c. 125 AD)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "dichotomy_of_control",
+      "circle_influence",
+      "skill_gap"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "order-chaos-border",
+    "concept": "order_chaos",
+    "domain": "meaning",
+    "type": "spectrum",
+    "hook": "Is your life a cage or a flood right now? Find your spot.",
+    "title": "The Border of Order & Chaos",
+    "game": {
+      "left": "Order",
+      "right": "Chaos",
+      "questions": [
+        {
+          "q": "My typical week is…",
+          "options": [
+            {
+              "label": "Exactly the same every week",
+              "value": -2
+            },
+            {
+              "label": "Mostly routine, a few surprises",
+              "value": 0
+            },
+            {
+              "label": "Different every day, hard to plan",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When did you last learn something genuinely new?",
+          "options": [
+            {
+              "label": "Can't remember",
+              "value": -2
+            },
+            {
+              "label": "This month",
+              "value": 0
+            },
+            {
+              "label": "I'm drowning in new things",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When a plan changes last minute, I feel…",
+          "options": [
+            {
+              "label": "Annoyed, I like it how it was",
+              "value": -1
+            },
+            {
+              "label": "Curious, then I adapt",
+              "value": 0
+            },
+            {
+              "label": "Relieved, plans were never real anyway",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "q": "My sleep, meals and money are…",
+          "options": [
+            {
+              "label": "Rigidly controlled",
+              "value": -2
+            },
+            {
+              "label": "Fairly steady",
+              "value": 0
+            },
+            {
+              "label": "All over the place",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Leaning Order",
+          "text": "Safe and predictable, but it may be getting a bit tight. Add one small unknown: a new route, a new skill, a new person."
+        },
+        {
+          "upTo": 0.34,
+          "label": "On the Border",
+          "text": "You've got enough structure to stand on and enough novelty to grow. That's the sweet spot. Keep it."
+        },
+        {
+          "upTo": 1,
+          "label": "Leaning Chaos",
+          "text": "Lots is moving. One fixed anchor helps: same wake time, one daily walk, or a weekly money check."
+        }
+      ]
+    },
+    "insight": "Too much order and life goes stale. Too much chaos and you can't find your footing. Taoist thought pictures opposites like these as partners, and Peterson says meaning is found on the border between them. It's a lens, not a law: the right mix shifts over your life.",
+    "model": "Stand on order, step into chaos. Growth happens at the edge between them.",
+    "try_today": "If you lean Order, try one new thing today. If you lean Chaos, fix one anchor: same bedtime tonight.",
+    "source": {
+      "thinkers": [
+        "Laozi",
+        "Jordan Peterson"
+      ],
+      "work": "Tao Te Ching (c. 4th century BC); Maps of Meaning (1999); 12 Rules for Life (2018)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "golden_mean",
+      "flow",
+      "impermanence"
+    ]
+  },
+  {
+    "id": "aim-high-gorilla",
+    "concept": "aim_high",
+    "domain": "meaning",
+    "type": "reveal",
+    "hook": "A gorilla walks through a video. Would you even notice it?",
+    "title": "Your Aim Decides What You See",
+    "game": {
+      "prompt": "You watch a short clip and count how many times players in white pass a basketball. Halfway through, a person in a gorilla suit walks across the screen. Would you notice?",
+      "choices": [
+        "Of course I would",
+        "Maybe not"
+      ],
+      "reveal": "In Simons and Chabris's 1999 study, about half of viewers missed the gorilla. Their aim (count the passes) filtered out everything else. Your goals act like a spotlight: you see what serves them and miss the rest."
+    },
+    "insight": "In the study, the counting task filtered out the gorilla. That part is solid science. The life lesson is a lens, not a proven law: your aims shape what you notice, so a clear, worthy aim can help you spot chances, people and tools you'd otherwise miss.",
+    "model": "What you aim at shapes what you see. Choose the aim on purpose.",
+    "try_today": "Write one aim for this week in a single line. Tonight, list three things you noticed today that could help it.",
+    "source": {
+      "thinkers": [
+        "Daniel Simons",
+        "Christopher Chabris",
+        "Aristotle",
+        "Jordan Peterson"
+      ],
+      "work": "Gorillas in our midst, Perception (1999); Nicomachean Ethics; 12 Rules for Life (2018)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "goal_directed_perception",
+      "begin_with_end",
+      "map_territory"
+    ]
+  },
+  {
+    "id": "flow-challenge-skill-venn",
+    "concept": "flow",
+    "domain": "meaning",
+    "type": "venn",
+    "hook": "Bored, stressed, or lost in it? Watch your dot find the zone.",
+    "title": "Find Your Flow Channel",
+    "game": {
+      "axes": [
+        {
+          "key": "C",
+          "label": "Challenge",
+          "color": "#F97316"
+        },
+        {
+          "key": "S",
+          "label": "Skill",
+          "color": "#3B82F6"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Think of your main task this week. It stretches me.",
+          "axis": "C"
+        },
+        {
+          "q": "I could do it half-asleep.",
+          "axis": "C",
+          "invert": true
+        },
+        {
+          "q": "There's a real chance I'll fall short.",
+          "axis": "C"
+        },
+        {
+          "q": "I know how to do most of it well.",
+          "axis": "S"
+        },
+        {
+          "q": "I often feel lost about where to start.",
+          "axis": "S",
+          "invert": true
+        },
+        {
+          "q": "I've done tasks like this well before.",
+          "axis": "S"
+        }
+      ],
+      "threshold": 0.55,
+      "results": {
+        "": {
+          "name": "Apathy Zone",
+          "text": "Low challenge, low skill: easy to drift and scroll. Pick one tiny goal that stretches you just a bit, and start there."
+        },
+        "C": {
+          "name": "Anxiety Zone",
+          "text": "The task is bigger than your current skill. Shrink it: break it into one piece you can do, or get a quick lesson first."
+        },
+        "S": {
+          "name": "Boredom Zone",
+          "text": "You're better than the task. Raise the bar: add a time limit, a quality goal, or a harder version."
+        },
+        "CS": {
+          "name": "Flow Channel",
+          "text": "High challenge meets high skill. This is where time disappears. Protect it: phone away, one clear goal."
+        }
+      }
+    },
+    "insight": "Csikszentmihalyi found that people feel most absorbed when a high challenge meets matching skill and the goal is clear. Too easy feels dull; too hard feels stressful. Later studies back the link but find it weaker than the classic picture suggests.",
+    "model": "Flow = challenge slightly above skill + clear goal + quick feedback.",
+    "try_today": "Pick one task and tweak it: a bit harder if bored, smaller if stressed. Then do 10 minutes with your phone away.",
+    "source": {
+      "thinkers": [
+        "Mihaly Csikszentmihalyi"
+      ],
+      "work": "Flow: The Psychology of Optimal Experience (1990)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deep_work",
+      "wso_triad",
+      "skill_gap"
+    ]
+  },
+  {
+    "id": "flow-conditions-radar",
+    "concept": "flow",
+    "domain": "meaning",
+    "type": "radar",
+    "hook": "Your last focus session flopped. Which flow ingredient was missing?",
+    "title": "The Four Flow Ingredients",
+    "game": {
+      "axes": [
+        "Clear goal",
+        "Quick feedback",
+        "Right difficulty",
+        "No interruptions"
+      ],
+      "questions": [
+        {
+          "q": "When I sit down to work, I know exactly what 'done' looks like.",
+          "axis": 0
+        },
+        {
+          "q": "I can tell within minutes if I'm on the right track.",
+          "axis": 1
+        },
+        {
+          "q": "My usual tasks feel neither too easy nor too hard.",
+          "axis": 2
+        },
+        {
+          "q": "I can work 25 minutes without checking my phone or messages.",
+          "axis": 3
+        },
+        {
+          "q": "People or alerts rarely break my focus.",
+          "axis": 3
+        }
+      ],
+      "advice": {
+        "0": "Lowest on clear goal? Before starting, write one line: 'Done means…'. Vague goals are a top flow-killer.",
+        "1": "Lowest on feedback? Build a check: a test, a word count, a friend's quick look. Flow needs to see progress.",
+        "2": "Lowest on difficulty fit? Adjust the task: add a constraint if it's dull, split it if it's overwhelming.",
+        "3": "Lowest on interruptions? Put your phone in another room for one 25-minute block. Switching tasks leaves your mind half elsewhere."
+      }
+    },
+    "insight": "Flow isn't luck. Csikszentmihalyi's research points to a few conditions that make it likely: a clear goal, fast feedback, a challenge that fits your skill, and deep focus. Your weakest ingredient is usually the quickest fix.",
+    "model": "Don't chase flow. Set up its conditions and let it arrive.",
+    "try_today": "Fix your weakest ingredient, then work for 10 focused minutes and notice how it felt.",
+    "source": {
+      "thinkers": [
+        "Mihaly Csikszentmihalyi"
+      ],
+      "work": "Flow: The Psychology of Optimal Experience (1990)"
+    },
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "attention_residue",
+      "deep_work",
+      "deliberate_practice"
+    ]
+  }
+]

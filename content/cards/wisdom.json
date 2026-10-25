@@ -1,0 +1,560 @@
+[
+  {
+    "id": "dichotomy-of-control-swipe",
+    "concept": "dichotomy_of_control",
+    "domain": "wisdom",
+    "type": "swipe",
+    "hook": "Half of what you worried about today was never yours to fix.",
+    "title": "Up to Me, or Not?",
+    "game": {
+      "prompt": "Is it up to you?",
+      "left": "Not up to me",
+      "right": "Up to me",
+      "items": [
+        {
+          "text": "Whether your train is late",
+          "side": "left",
+          "why": "Timetables, weather, signals. Real, but not in your hands."
+        },
+        {
+          "text": "Leaving 10 minutes earlier next time",
+          "side": "right",
+          "why": "Your choice, fully. This is where the energy should go."
+        },
+        {
+          "text": "What your boss thinks of your idea",
+          "side": "left",
+          "why": "You can shape it, but their mind is theirs. Aim at the pitch, not the verdict."
+        },
+        {
+          "text": "How clearly you explain your idea",
+          "side": "right",
+          "why": "Preparation and clarity are yours. That's the part worth practising."
+        },
+        {
+          "text": "Whether you win the match",
+          "side": "left",
+          "why": "Opponents, luck and refs get a vote. The Stoics called outcomes 'not up to us'."
+        },
+        {
+          "text": "How hard you train this week",
+          "side": "right",
+          "why": "Effort and attitude belong to you. Epictetus put judgments and actions here."
+        },
+        {
+          "text": "Your first emotional jolt when insulted",
+          "side": "left",
+          "why": "The flash is fast and automatic. What you do in the next minute is yours."
+        }
+      ]
+    },
+    "insight": "You just split life into two piles. Epictetus argued that most suffering comes from pouring effort into the left pile. Notice the trick: almost every 'not up to me' outcome has an 'up to me' action hiding next to it.",
+    "model": "Care about outcomes, but aim your effort at your own choices, judgments and actions.",
+    "try_today": "Write your biggest worry. Under it, list two actions that are fully up to you. Do one before tonight.",
+    "source": {
+      "thinkers": [
+        "Epictetus",
+        "Marcus Aurelius"
+      ],
+      "work": "Enchiridion (c. 125 CE)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "circle_influence",
+      "opportunity_gap",
+      "impulse_pause"
+    ]
+  },
+  {
+    "id": "dichotomy-of-control-delayed-flight",
+    "concept": "dichotomy_of_control",
+    "domain": "wisdom",
+    "type": "choice",
+    "hook": "Your flight is cancelled. 200 angry people. What's your first move?",
+    "title": "The Stoic at the Gate",
+    "game": {
+      "steps": [
+        {
+          "scenario": "The board flips to CANCELLED. A crowd forms at the desk. You…",
+          "options": [
+            {
+              "text": "Join the queue and tell everyone how unacceptable this is.",
+              "feedback": "Totally human. But the anger costs you energy and changes nothing about the plane."
+            },
+            {
+              "text": "Open the airline app and rebook while you stand in line.",
+              "best": true,
+              "feedback": "You spotted the part that's yours: options, timing, your next move. The queue stays a backup."
+            },
+            {
+              "text": "Sit down and wait for someone to announce a plan.",
+              "feedback": "Calm is good. Pair it with one small action and you'll often get a better seat sooner."
+            }
+          ]
+        },
+        {
+          "scenario": "The agent says the next flight is tomorrow. You feel heat in your chest. You…",
+          "options": [
+            {
+              "text": "Breathe, then ask: 'What are my options for tonight?'",
+              "best": true,
+              "feedback": "Same disappointment, better question. Calm, specific asks usually get more help than blame."
+            },
+            {
+              "text": "Tell the agent this is their fault.",
+              "feedback": "Understandable, but they didn't cancel the plane. Blame aimed at the wrong target rarely pays."
+            },
+            {
+              "text": "Say nothing and walk off fuming.",
+              "feedback": "You protected the agent, which is kind. Try naming one thing you can still do tonight."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "You didn't stop caring about getting home. You moved your effort from the cancelled plane to the phone in your hand and the question you asked. That shift is the Stoic dichotomy of control, in real time.",
+    "model": "When something goes wrong, ask: what's the next move that is fully mine?",
+    "try_today": "Next time something annoys you, say out loud \"What's mine here?\" and do that one thing first.",
+    "source": {
+      "thinkers": [
+        "Epictetus"
+      ],
+      "work": "Enchiridion (c. 125 CE)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "reframing",
+      "impulse_pause",
+      "circle_influence"
+    ]
+  },
+  {
+    "id": "circle-influence-spectrum",
+    "concept": "circle_influence",
+    "domain": "wisdom",
+    "type": "spectrum",
+    "hook": "Do you spend your week on what you can change, or what you can't?",
+    "title": "Your Circle of Influence",
+    "game": {
+      "left": "Circle of Concern",
+      "right": "Circle of Influence",
+      "questions": [
+        {
+          "q": "When the economy news is bad, I mostly…",
+          "options": [
+            {
+              "label": "Read more about it and feel worse",
+              "value": -2
+            },
+            {
+              "label": "Check my own budget and skills",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When a teammate keeps missing deadlines, I…",
+          "options": [
+            {
+              "label": "Complain about them to others",
+              "value": -2
+            },
+            {
+              "label": "Wait and hope it improves",
+              "value": 0
+            },
+            {
+              "label": "Ask them what's getting in the way",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "My most common sentence starts with…",
+          "options": [
+            {
+              "label": "\"If only they would…\"",
+              "value": -2
+            },
+            {
+              "label": "\"I can…\" or \"I'll try…\"",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When I'm stuck, I first look for…",
+          "options": [
+            {
+              "label": "Who or what is to blame",
+              "value": -2
+            },
+            {
+              "label": "The smallest thing I could change",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Concern-heavy",
+          "text": "A lot of your energy goes to things you can't move. That's tiring, not a flaw. Pick one worry and find the piece of it that is yours."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Split",
+          "text": "You switch between worrying and acting. Notice which topics pull you outward and give those a small action."
+        },
+        {
+          "upTo": 1,
+          "label": "Influence-focused",
+          "text": "You aim at what you can move. Covey's claim is that this circle grows as you use it: trust and skill pile up."
+        }
+      ]
+    },
+    "insight": "Stephen Covey drew two circles: everything you care about, and the smaller part you can affect. Energy spent inside the smaller circle tends to grow it, because acting builds skill and trust. It's the Stoic idea with a practical twist.",
+    "model": "Work inside what you can influence, and that circle slowly gets bigger.",
+    "try_today": "Swap one \"If only they…\" sentence today for \"I can…\" and finish it with a real action.",
+    "source": {
+      "thinkers": [
+        "Stephen Covey"
+      ],
+      "work": "The 7 Habits of Highly Effective People (1989)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "dichotomy_of_control",
+      "self_efficacy",
+      "opportunity_gap"
+    ]
+  },
+  {
+    "id": "golden-mean-courage-spectrum",
+    "concept": "golden_mean",
+    "domain": "wisdom",
+    "type": "spectrum",
+    "hook": "Too timid or too reckless? Four answers will place your courage.",
+    "title": "The Golden Mean",
+    "game": {
+      "left": "Too cautious",
+      "right": "Too reckless",
+      "questions": [
+        {
+          "q": "Someone in a meeting says something you think is wrong. You…",
+          "options": [
+            {
+              "label": "Stay quiet, it's not worth it",
+              "value": -2
+            },
+            {
+              "label": "Ask a calm question about it",
+              "value": 0
+            },
+            {
+              "label": "Call it out bluntly on the spot",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "A friend invites you on a hard hike you've never done. You…",
+          "options": [
+            {
+              "label": "Decline, too risky",
+              "value": -2
+            },
+            {
+              "label": "Say yes and check the route and weather",
+              "value": 0
+            },
+            {
+              "label": "Go in trainers, no water, figure it out",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "You have a business idea. You…",
+          "options": [
+            {
+              "label": "Keep it in a notebook for 'someday'",
+              "value": -2
+            },
+            {
+              "label": "Test it small on weekends",
+              "value": 0
+            },
+            {
+              "label": "Quit your job tomorrow to do it",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Someone is being mocked in a group chat. You…",
+          "options": [
+            {
+              "label": "Say nothing",
+              "value": -2
+            },
+            {
+              "label": "Message them privately, then say 'not cool' in the chat",
+              "value": 0
+            },
+            {
+              "label": "Post a long public rant at the mocker",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Leaning cautious",
+          "text": "Caution protects you, and sometimes it costs you. Try one small, safe step past your comfort line this week."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Near the mean",
+          "text": "You aim for the middle path Aristotle called courage: brave enough to act, wise enough to prepare."
+        },
+        {
+          "upTo": 1,
+          "label": "Leaning bold",
+          "text": "Your energy is a gift. Adding one check before you leap turns boldness into courage."
+        }
+      ]
+    },
+    "insight": "Aristotle said a virtue sits between two vices: too little and too much. Courage lives between cowardice and recklessness. The middle isn't the average or lukewarm; it's the right amount for this situation.",
+    "model": "Virtue is calibration: the right action, in the right amount, at the right time.",
+    "try_today": "Pick one choice today and ask: what would 'too little' and 'too much' look like here? Then do the in-between.",
+    "source": {
+      "thinkers": [
+        "Aristotle"
+      ],
+      "work": "Nicomachean Ethics (c. 340 BCE)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "order_chaos",
+      "courage_kindness",
+      "impulse_pause"
+    ]
+  },
+  {
+    "id": "socratic-ignorance-drivers",
+    "concept": "socratic_ignorance",
+    "domain": "wisdom",
+    "type": "estimate",
+    "hook": "Are you an above-average driver? Guess how many people say yes.",
+    "title": "Knowing You Don't Know",
+    "game": {
+      "question": "In a classic study, what % of US drivers rated themselves more skilful than the median driver?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 93,
+      "explain": "Svenson (1981) found about 93% of a small US student sample rated themselves more skilful than the median driver. At most 50% can be.",
+      "anchor": null
+    },
+    "insight": "Most of us rate ourselves above average, which can't all be true. Socrates thought wisdom began with admitting what you don't know. The famous Dunning-Kruger curve is debated, but over-confidence itself is well documented.",
+    "model": "Treat your confidence as a guess, not a fact. 'I might be wrong' opens the door to learning.",
+    "try_today": "Pick one opinion you hold strongly. Write the best reason someone could disagree with it, in their words, not yours.",
+    "source": {
+      "thinkers": [
+        "Socrates",
+        "Ola Svenson"
+      ],
+      "work": "Plato, Apology (c. 399 BCE); Svenson, Acta Psychologica (1981)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "confirmation_bias",
+      "steelmanning",
+      "circle_competence"
+    ]
+  },
+  {
+    "id": "amor-fati-setback-reveal",
+    "concept": "amor_fati",
+    "domain": "wisdom",
+    "type": "reveal",
+    "hook": "A setback you got through: would you delete it from your story?",
+    "title": "Amor Fati: Love Your Fate",
+    "game": {
+      "prompt": "Pick a real setback from your past: a rejection, a failure, a loss you've recovered from. If a button could erase it, and everything it led to, would you press it?",
+      "choices": [
+        "Yes, erase it",
+        "No, keep it",
+        "I'm not sure"
+      ],
+      "reveal": "There's no wrong answer, and some pain is never 'worth it'. But many people find a setback also taught them a skill, a friend, or a direction. Nietzsche called embracing your whole story, hard parts included, amor fati."
+    },
+    "insight": "Amor fati isn't pretending bad things were good. Nietzsche went far: he wanted nothing to be different. You can start smaller, by asking what a hard chapter gave you. Marcus Aurelius pictured a fire that turns whatever falls in into flame.",
+    "model": "You can't change what happened. You can choose what it becomes part of.",
+    "try_today": "Write one setback and finish this line: \"Because of it, I can now…\". Keep it to one sentence.",
+    "source": {
+      "thinkers": [
+        "Friedrich Nietzsche",
+        "Marcus Aurelius"
+      ],
+      "work": "The Gay Science (1882); Meditations (c. 170 CE)"
+    },
+    "evidence": "philosophy",
+    "level": 2,
+    "related": [
+      "reframing",
+      "mistake_alchemy",
+      "responsibility_meaning"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "impermanence-worry-reveal",
+    "concept": "impermanence",
+    "domain": "wisdom",
+    "type": "reveal",
+    "hook": "What were you worried about on this date three years ago?",
+    "title": "This Too Shall Pass",
+    "game": {
+      "prompt": "Try it now: what was keeping you up at night roughly three years ago? Can you name it clearly?",
+      "choices": [
+        "Yes, clearly",
+        "Vaguely",
+        "No idea"
+      ],
+      "reveal": "Many people can't. Research on 'affective forecasting' shows we tend to overestimate how long bad events will hurt. Feelings are weather: real, sometimes heavy, but they move. If a heavy mood isn't lifting for weeks, talk to someone you trust."
+    },
+    "insight": "Gilbert and Wilson found people often predict setbacks will sting longer and harder than they do. The Buddha and Heraclitus both taught that everything changes. That doesn't shrink today's pain; it reminds you it isn't permanent.",
+    "model": "Feelings and fortunes are weather, not climate. Ask how much this will matter in a year.",
+    "try_today": "When something stings today, write it down with the date. Set a reminder to reread it in 3 months.",
+    "source": {
+      "thinkers": [
+        "The Buddha",
+        "Heraclitus",
+        "Daniel Gilbert",
+        "Timothy Wilson"
+      ],
+      "work": "Wilson & Gilbert, 'Affective Forecasting' (2005)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "emotion_naming",
+      "self_compassion",
+      "reframing"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "begin-with-end-eulogy-radar",
+    "concept": "begin_with_end",
+    "domain": "wisdom",
+    "type": "radar",
+    "hook": "Would your weekly calendar match the speech at your 80th birthday?",
+    "title": "Begin With the End in Mind",
+    "game": {
+      "axes": [
+        "Relationships",
+        "Health",
+        "Craft",
+        "Contribution",
+        "Growth"
+      ],
+      "questions": [
+        {
+          "q": "This week I gave real, undistracted time to people I love.",
+          "axis": 0
+        },
+        {
+          "q": "The people closest to me would say I show up for them.",
+          "axis": 0
+        },
+        {
+          "q": "This week I moved, slept and ate like someone I'd want to be at 80.",
+          "axis": 1
+        },
+        {
+          "q": "I spent time on work I'm proud of, not just busy with.",
+          "axis": 2
+        },
+        {
+          "q": "I did something this week that helped someone beyond my circle.",
+          "axis": 3
+        },
+        {
+          "q": "I learned or practised something that's stretching me.",
+          "axis": 4
+        }
+      ],
+      "advice": {
+        "0": "Relationships lowest? Book 20 phone-free minutes with one person this week.",
+        "1": "Health lowest? Pick one: a 15-minute walk, or lights out 30 minutes earlier tonight.",
+        "2": "Craft lowest? Block one focused hour on the work you'd want to be remembered for.",
+        "3": "Contribution lowest? Do one small useful thing for someone who can't repay you.",
+        "4": "Growth lowest? Choose one skill and practise it for 10 minutes today."
+      }
+    },
+    "insight": "Covey suggested imagining your own funeral: what would you want people to say? Seneca made a similar point: we act as if time is endless. Your shape shows where today's choices match that picture and where they drift.",
+    "model": "Decide what you want said about you at the end, then plan this week backwards from it.",
+    "try_today": "Write three words you'd want people to use about you at 80. Put one action for each in this week's calendar.",
+    "source": {
+      "thinkers": [
+        "Stephen Covey",
+        "Seneca"
+      ],
+      "work": "The 7 Habits of Highly Effective People (1989); On the Shortness of Life (c. 49 CE)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "regret_minimization",
+      "aim_high",
+      "responsibility_meaning"
+    ]
+  },
+  {
+    "id": "begin-with-end-four-thousand-weeks",
+    "concept": "begin_with_end",
+    "domain": "wisdom",
+    "type": "estimate",
+    "hook": "How many weeks are in an 80-year life? Guess before you scroll.",
+    "title": "Your Life in Weeks",
+    "game": {
+      "question": "How many weeks are there in an 80-year life?",
+      "min": 500,
+      "max": 50000,
+      "step": 2,
+      "unit": " weeks",
+      "answer": 4174,
+      "explain": "80 years × about 52.18 weeks ≈ 4,174. Oliver Burkeman built a whole book around this small number.",
+      "anchor": null
+    },
+    "insight": "Many people guess far higher. About four thousand weeks feels short, and that's the point: it isn't meant to scare you, it's meant to sharpen you. Seneca argued life is long enough if you use it well.",
+    "model": "Time is finite and countable. Spend weeks the way you'd spend something precious.",
+    "try_today": "Pick this week's one most important thing, the one you'd regret skipping, and schedule it before anything else.",
+    "source": {
+      "thinkers": [
+        "Oliver Burkeman",
+        "Seneca"
+      ],
+      "work": "Four Thousand Weeks (2021); On the Shortness of Life (c. 49 CE)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "regret_minimization",
+      "opportunity_cost",
+      "deep_work"
+    ]
+  }
+]

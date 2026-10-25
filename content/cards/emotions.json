@@ -1,0 +1,389 @@
+[
+  {
+    "id": "emotion-naming-swipe",
+    "concept": "emotion_naming",
+    "domain": "emotions",
+    "type": "swipe",
+    "hook": "You say you feel 'bad'. Can you do anything with that word?",
+    "title": "Name It to Tame It",
+    "game": {
+      "prompt": "Could you act on this feeling-word?",
+      "left": "Too vague",
+      "right": "Workable",
+      "items": [
+        {
+          "text": "\"I feel bad.\"",
+          "side": "left",
+          "why": "Bad how? Sad, guilty, tired, scared? Each one needs a different fix."
+        },
+        {
+          "text": "\"I'm embarrassed about the meeting and also just tired.\"",
+          "side": "right",
+          "why": "Two clear parts: one needs a quick repair, the other needs sleep."
+        },
+        {
+          "text": "\"Ugh. Everything.\"",
+          "side": "left",
+          "why": "'Everything' is too big to touch. Shrink it to one feeling, one cause."
+        },
+        {
+          "text": "\"I'm anxious because I haven't opened the bill yet.\"",
+          "side": "right",
+          "why": "Now the next step is obvious: open the bill."
+        },
+        {
+          "text": "\"I'm stressed.\"",
+          "side": "left",
+          "why": "Stressed could be overloaded, unsure, or lonely. Dig one layer down."
+        },
+        {
+          "text": "\"I feel left out because nobody replied in the group chat.\"",
+          "side": "right",
+          "why": "Specific feeling plus cause. You can check the story or reach out."
+        }
+      ]
+    },
+    "insight": "Precise feelings come with handles; vague ones don't. People who tell their emotions apart in finer detail tend to cope better with stress. Lisa Feldman Barrett calls this emotional granularity.",
+    "model": "A vague feeling is a fog. A named feeling is a map with a next step on it.",
+    "try_today": "Next time you think 'I feel bad', swap it for two exact words, like 'disappointed and hungry'. Then act on the easier one.",
+    "source": {
+      "thinkers": [
+        "Lisa Feldman Barrett",
+        "Todd Kashdan",
+        "Daniel Siegel"
+      ],
+      "work": "How Emotions Are Made (2017); Kashdan, Barrett & McKnight, 'Unpacking Emotion Differentiation' (2015)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "impulse_pause",
+      "procrastination_emotion",
+      "system1_system2"
+    ]
+  },
+  {
+    "id": "emotion-naming-label-reveal",
+    "concept": "emotion_naming",
+    "domain": "emotions",
+    "type": "reveal",
+    "hook": "Saying 'I'm angry' out loud: does it fuel the anger or cool it?",
+    "title": "The Label Effect",
+    "game": {
+      "prompt": "In a brain-scan study, people looked at angry and scared faces. Some just matched the faces. Others picked a word for the emotion, like 'angry'. What happened in the alarm center of their brain?",
+      "choices": [
+        "Naming it made the alarm louder",
+        "Naming it calmed the alarm",
+        "No difference"
+      ],
+      "reveal": "Naming it calmed it. Choosing the emotion word reduced activity in the amygdala, the brain's alarm, compared with just matching faces (Lieberman et al., 2007). Putting feelings into words seems to turn the volume down a little."
+    },
+    "insight": "Naming a feeling doesn't feed it; it gives your thinking brain a job. It won't erase the feeling, but it can take the edge off enough for you to choose what to do next.",
+    "model": "Words are a dimmer switch for feelings: name it and the alarm quiets down.",
+    "try_today": "When something stings today, finish this sentence in your head or in a note: 'Right now I feel ___ because ___.'",
+    "source": {
+      "thinkers": [
+        "Matthew Lieberman",
+        "Daniel Siegel"
+      ],
+      "work": "Lieberman et al., 'Putting Feelings Into Words', Psychological Science (2007)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "impulse_pause",
+      "system1_system2"
+    ]
+  },
+  {
+    "id": "impulse-pause-order",
+    "concept": "impulse_pause",
+    "domain": "emotions",
+    "type": "order",
+    "hook": "You fired off that reply in 4 seconds. Where did your choice go?",
+    "title": "The Pause",
+    "game": {
+      "prompt": "Put the pause back in order, from trigger to response",
+      "items": [
+        "Trigger: the message lands",
+        "Notice the body: hot face, tight chest",
+        "Name it: 'I feel disrespected'",
+        "Breathe: three slow breaths, long exhales",
+        "Choose: reply now, later, or not at all"
+      ],
+      "explain": "Most regretted reactions skip straight from step 1 to step 5. Each middle step adds a few seconds, and those seconds are where your options appear."
+    },
+    "insight": "A reaction is fast and automatic. A response is a reaction with a few seconds of thinking added. You can't stop the first jolt, but you can stretch the gap before you act. (The famous 'space between stimulus and response' quote is often credited to Viktor Frankl, but it isn't found in his books.)",
+    "model": "Feel it fast, act on it slow. The pause is where your choice lives.",
+    "try_today": "Before your next heated reply, take three slow breaths with longer exhales than inhales, then decide: now, later, or never.",
+    "source": {
+      "thinkers": [
+        "Daniel Goleman"
+      ],
+      "work": "Emotional Intelligence (1995)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "system1_system2",
+      "emotion_naming",
+      "dichotomy_of_control"
+    ]
+  },
+  {
+    "id": "impulse-pause-choice",
+    "concept": "impulse_pause",
+    "domain": "emotions",
+    "type": "choice",
+    "hook": "Your boss emails 'We need to talk.' at 9pm. Your move?",
+    "title": "Pause Before Send",
+    "game": {
+      "steps": [
+        {
+          "scenario": "9:04pm. An email from your manager: 'We need to talk tomorrow.' Your stomach drops. You…",
+          "options": [
+            {
+              "text": "Reply right away: 'Is something wrong?? I can explain whatever it is.'",
+              "feedback": "Totally human: the worry wants an answer now. But replying from panic often adds stress for both of you."
+            },
+            {
+              "text": "Notice the dread, name it ('I'm scared I messed up'), and breathe before doing anything.",
+              "best": true,
+              "feedback": "Yes. You felt the jolt and didn't let it drive. Naming the fear already shrinks it a little."
+            },
+            {
+              "text": "Spend two hours imagining every way you might be fired.",
+              "feedback": "Your brain is trying to protect you by rehearsing threats. It rarely helps, and it costs sleep."
+            }
+          ]
+        },
+        {
+          "scenario": "You've paused. The worry is still there. What now?",
+          "options": [
+            {
+              "text": "Send a short, calm reply ('Sure, what time works?') or decide to answer in the morning. Then close the laptop.",
+              "best": true,
+              "feedback": "Calm, clear, done. Either way you made a choice, and you're responding to the email, not the worst story about it."
+            },
+            {
+              "text": "Write a long defensive message listing everything you did well this month.",
+              "feedback": "Understandable, but you're answering an accusation nobody made yet. Save it for the actual talk if needed."
+            },
+            {
+              "text": "Keep rereading the email in bed, trying to decode a hidden meaning.",
+              "feedback": "Very common. But the email holds no more information than before, so rereading mostly feeds the worry and costs sleep."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "A vague message plus a tired brain at night is a recipe for worst-case stories. The pause doesn't remove the worry; it keeps the worry from writing your reply. Most 'we need to talk' messages turn out more ordinary than the story you built.",
+    "model": "Respond to what was said, not to the scariest story your brain wrote about it.",
+    "try_today": "Pick one message you're tempted to answer instantly today. Wait 10 minutes, reread it, then reply.",
+    "source": {
+      "thinkers": [
+        "Daniel Goleman",
+        "Daniel Kahneman"
+      ],
+      "work": "Emotional Intelligence (1995); Thinking, Fast and Slow (2011)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "system1_system2",
+      "emotion_naming",
+      "map_territory"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "self-compassion-spectrum",
+    "concept": "self_compassion",
+    "domain": "emotions",
+    "type": "spectrum",
+    "hook": "Would you talk to a friend the way you talked to yourself today?",
+    "title": "Inner Critic or Inner Coach?",
+    "game": {
+      "left": "Harsh critic",
+      "right": "Kind coach",
+      "questions": [
+        {
+          "q": "You make a dumb mistake at work. Your first inner words are…",
+          "options": [
+            {
+              "label": "'You idiot, you always do this.'",
+              "value": -2
+            },
+            {
+              "label": "'Ugh. Annoying.'",
+              "value": 0
+            },
+            {
+              "label": "'Oops. Anyone could do that. What's the fix?'",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "You're struggling and others seem fine. You think…",
+          "options": [
+            {
+              "label": "'Something is wrong with me.'",
+              "value": -2
+            },
+            {
+              "label": "'Maybe I'm just behind.'",
+              "value": 0
+            },
+            {
+              "label": "'Lots of people struggle with this, even if they don't show it.'",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When you feel low, you tend to…",
+          "options": [
+            {
+              "label": "Replay everything you did wrong",
+              "value": -2
+            },
+            {
+              "label": "Distract yourself and push on",
+              "value": 0
+            },
+            {
+              "label": "Notice it and ask what you need right now",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Being kind to yourself after failing feels like…",
+          "options": [
+            {
+              "label": "Letting yourself off the hook",
+              "value": -2
+            },
+            {
+              "label": "Fine, in small doses",
+              "value": 0
+            },
+            {
+              "label": "What helps you try again",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Critic-leaning",
+          "text": "Your inner voice is tough on you, often because it wants to keep you safe or improving. You can keep the high standards and drop the insults. Try speaking to yourself like a good coach would."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Mixed",
+          "text": "You swing between harsh and fair. Notice which situations flip the critic on, so you can catch it sooner."
+        },
+        {
+          "upTo": 1,
+          "label": "Coach-leaning",
+          "text": "You tend to meet setbacks with kindness and a plan. That's a skill, not softness. Keep it, especially on bad days."
+        }
+      ]
+    },
+    "insight": "Kristin Neff describes self-compassion as kindness to yourself, remembering everyone struggles, and seeing pain clearly without drowning in it. It isn't letting yourself off: in one study, people prompted to be self-compassionate after failing a test chose to study longer for the retest.",
+    "model": "High standards, kind voice. Coaches correct mistakes without insulting the player.",
+    "try_today": "Write one sentence to yourself about a recent mistake, exactly as you'd write it to a friend who made the same one.",
+    "source": {
+      "thinkers": [
+        "Kristin Neff",
+        "Juliana Breines",
+        "Serena Chen"
+      ],
+      "work": "Neff, 'Self-Compassion' (2003); Breines & Chen, Personality and Social Psychology Bulletin (2012)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "growth_mindset",
+      "mistake_alchemy",
+      "procrastination_emotion"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "procrastination-emotion-reveal",
+    "concept": "procrastination_emotion",
+    "domain": "emotions",
+    "type": "reveal",
+    "hook": "You put it off again. Guilt or forgiveness: which gets it done?",
+    "title": "Procrastination Is a Feeling Problem",
+    "game": {
+      "prompt": "Students who procrastinated studying for a first exam were later asked how much they had forgiven themselves for it. Before the next exam, who procrastinated less?",
+      "choices": [
+        "Those who stayed hard on themselves",
+        "Those who forgave themselves",
+        "No difference"
+      ],
+      "reveal": "The ones who forgave themselves procrastinated less the next time (Wohl, Pychyl & Bennett, 2010). It was one correlational study, not proof, but it fits the idea: guilt keeps the task linked to a bad feeling, and we avoid bad feelings."
+    },
+    "insight": "We rarely avoid the task itself. We avoid the feeling it gives us: boredom, confusion, fear of doing it badly. Delay is a quick mood fix that costs you later. Beating yourself up adds more bad feeling to the same task, so it often backfires.",
+    "model": "You're not avoiding the task. You're avoiding a feeling. Shrink the feeling and the task gets easier to start.",
+    "try_today": "Name the feeling the task gives you, forgive yesterday's delay in one sentence, then work on it for just 5 minutes.",
+    "source": {
+      "thinkers": [
+        "Tim Pychyl",
+        "Fuschia Sirois",
+        "Michael Wohl"
+      ],
+      "work": "Wohl, Pychyl & Bennett, Personality and Individual Differences (2010); Sirois & Pychyl (2013)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "emotion_naming",
+      "self_compassion",
+      "two_minute_rule"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "emotional-contagion-estimate",
+    "concept": "emotional_contagion",
+    "domain": "emotions",
+    "type": "estimate",
+    "hook": "Can a news feed change your mood? Guess how many got tested.",
+    "title": "Moods Are Contagious",
+    "game": {
+      "question": "In 2012, Facebook quietly showed fewer happy or fewer sad posts to some users to see if moods spread. How many people were in the study?",
+      "min": 0,
+      "max": 2000000,
+      "step": 1000,
+      "unit": " people",
+      "answer": 689003,
+      "explain": "689,003 users, for one week (Kramer, Guillory & Hancock, 2014). People who saw fewer positive posts wrote slightly fewer positive words themselves, and the reverse held too. It measured words, not felt mood, the effect was tiny, and users never agreed to take part.",
+      "anchor": null
+    },
+    "insight": "Moods spread between people through faces, voices and even text. The online effect in this study was very small per person, but small nudges add up across a whole day of scrolling and a whole room of people. You catch moods, and you also give them off.",
+    "model": "Moods are weather. Notice what front you walked into, and what front you bring with you.",
+    "try_today": "Before your next meeting, call, or group chat, take one breath and pick the mood you want to bring into it.",
+    "source": {
+      "thinkers": [
+        "Elaine Hatfield",
+        "Adam Kramer",
+        "Jeffrey Hancock"
+      ],
+      "work": "Hatfield, Cacioppo & Rapson, Emotional Contagion (1994); Kramer et al., PNAS (2014)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "three_conversations",
+      "doomscroll_loop",
+      "environment_design"
+    ]
+  }
+]

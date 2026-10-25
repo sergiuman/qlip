@@ -1,0 +1,439 @@
+[
+  {
+    "id": "habit-loop-order",
+    "concept": "habit_loop",
+    "domain": "habits",
+    "type": "order",
+    "hook": "Your phone buzzes and your hand moves first. What just happened?",
+    "title": "The Habit Loop",
+    "game": {
+      "prompt": "You check your phone without deciding to. Put the loop in order.",
+      "items": [
+        "Cue: the buzz",
+        "Craving: what's new?",
+        "Response: you unlock it",
+        "Reward: a small hit of novelty"
+      ],
+      "explain": "This is James Clear's four-step version; Duhigg's original had three (cue, routine, reward). The cue triggers a craving, the craving drives a response, and the reward teaches your brain to repeat it next time."
+    },
+    "insight": "Habits are not character flaws. They are shortcuts your brain automated to save effort. You don't have to beat the whole loop. Change one link (hide the cue, swap the response) and the loop starts to change.",
+    "model": "Cue, craving, response, reward. Break or rebuild any single link to change the habit.",
+    "try_today": "Pick one habit you want to change and write its cue on paper. Just noticing the trigger is step one.",
+    "source": {
+      "thinkers": [
+        "Charles Duhigg",
+        "James Clear"
+      ],
+      "work": "The Power of Habit (2012); Atomic Habits (2018)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "feedback_loops",
+      "environment_design",
+      "doomscroll_loop"
+    ]
+  },
+  {
+    "id": "habit-loop-66-days",
+    "concept": "habit_loop",
+    "domain": "habits",
+    "type": "estimate",
+    "hook": "How long until a new habit runs on autopilot? Not 21 days.",
+    "title": "How Long a Habit Really Takes",
+    "game": {
+      "question": "In a UK study, people built one new daily habit. How many days did it take, on median, to feel automatic?",
+      "min": 7,
+      "max": 120,
+      "step": 1,
+      "unit": " days",
+      "answer": 66,
+      "anchor": 21,
+      "explain": "Lally and colleagues (2010) followed 96 people and found a median of 66 days, with a huge estimated range: 18 to 254 days. The popular '21 days' figure has no solid research behind it."
+    },
+    "insight": "If a habit still feels effortful after three weeks, you're not failing. You're normal. Simple habits (a glass of water) automate faster than hard ones (50 sit-ups). Patience is part of the method.",
+    "model": "Habits take about two months on average, and the range is wide. Plan for the long middle.",
+    "try_today": "Pick one tiny habit and mark a date 66 days from today in your calendar as its check-in day.",
+    "source": {
+      "thinkers": [
+        "Phillippa Lally",
+        "Jane Wardle"
+      ],
+      "work": "How are habits formed (European Journal of Social Psychology, 2010)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "delays",
+      "never_miss_twice",
+      "grit"
+    ]
+  },
+  {
+    "id": "identity-habits-spectrum",
+    "concept": "identity_habits",
+    "domain": "habits",
+    "type": "spectrum",
+    "hook": "Are you chasing a goal, or becoming someone? Your words reveal it.",
+    "title": "Outcome vs Identity Habits",
+    "game": {
+      "left": "Outcome-based",
+      "right": "Identity-based",
+      "questions": [
+        {
+          "q": "Someone offers you something you're cutting back on (a cigarette, a sugary snack). You say...",
+          "options": [
+            {
+              "label": "No thanks, I'm trying to quit.",
+              "value": -2
+            },
+            {
+              "label": "No thanks, that's not really me anymore.",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Your fitness aim sounds most like...",
+          "options": [
+            {
+              "label": "Lose 5 kilos by summer.",
+              "value": -2
+            },
+            {
+              "label": "Be someone who moves every day.",
+              "value": 2
+            },
+            {
+              "label": "A bit of both.",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "q": "After a good workout you think...",
+          "options": [
+            {
+              "label": "One step closer to the target.",
+              "value": -1
+            },
+            {
+              "label": "That's the kind of person I am.",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When you skip a day you think...",
+          "options": [
+            {
+              "label": "I'm off track.",
+              "value": -1
+            },
+            {
+              "label": "Back at it tomorrow, it's who I am.",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Outcome-leaning",
+          "text": "You aim at results. Useful for direction, but results take time and you may feel stuck before they show. Try adding a 'who am I becoming' line."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Mixed",
+          "text": "You use both. Goals set the direction; identity keeps you going when results are slow."
+        },
+        {
+          "upTo": 1,
+          "label": "Identity-leaning",
+          "text": "You tie actions to who you are. That makes habits sticky. Just keep the identity flexible so one slip doesn't feel like a verdict."
+        }
+      ]
+    },
+    "insight": "Goals tell you where to go; identity decides whether you keep going. Each small action is a vote for a type of person. You don't need a unanimous vote, just a majority over time.",
+    "model": "Every action is a vote for the person you're becoming. Win the majority, not every vote.",
+    "try_today": "Finish this sentence on paper: 'I am the kind of person who...' Then do one 2-minute action that proves it.",
+    "source": {
+      "thinkers": [
+        "James Clear"
+      ],
+      "work": "Atomic Habits (2018)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "self_efficacy",
+      "habit_loop",
+      "small_wins"
+    ]
+  },
+  {
+    "id": "identity-habits-voter",
+    "concept": "identity_habits",
+    "domain": "habits",
+    "type": "reveal",
+    "hook": "One word seemed to get more people voting. Can you guess which?",
+    "title": "Be a Voter, Not Just Vote",
+    "game": {
+      "prompt": "Before an election, researchers asked people one of two questions. Which version got more people to actually vote?",
+      "choices": [
+        "How important is it to you to vote?",
+        "How important is it to you to be a voter?"
+      ],
+      "reveal": "In Bryan and colleagues' 2011 study, the 'be a voter' wording raised turnout. Later, larger studies (Gerber et al., 2016) did not find the same effect, so treat this as a promising idea, not a law."
+    },
+    "insight": "Framing an action as part of who you are ('a voter', 'a reader') may make it feel more meaningful. The evidence is mixed: the original finding did not reliably replicate. Still, it costs nothing to describe yourself kindly and specifically.",
+    "model": "Nouns can pull harder than verbs: 'I'm a reader' may stick better than 'I should read'. Evidence is mixed.",
+    "try_today": "Rename one goal as a noun: change 'I should run' to 'I'm a runner', then do the smallest version of it today.",
+    "source": {
+      "thinkers": [
+        "Christopher Bryan",
+        "Gregory Walton",
+        "Todd Rogers",
+        "Carol Dweck"
+      ],
+      "work": "Motivating voter turnout by invoking the self (PNAS, 2011)"
+    },
+    "evidence": "contested",
+    "level": 2,
+    "related": [
+      "self_efficacy",
+      "shared_fictions"
+    ]
+  },
+  {
+    "id": "one-percent-estimate",
+    "concept": "one_percent",
+    "domain": "habits",
+    "type": "estimate",
+    "hook": "Get 1% better every day for a year. Guess how much better you are.",
+    "title": "1% Compounding",
+    "game": {
+      "question": "If you improve 1% every day for 365 days, how many times better are you at the end?",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "x",
+      "answer": 37.8,
+      "explain": "1.01 to the power of 365 is about 37.8. The flip side: getting 1% worse daily (0.99^365) leaves you at about 0.03, nearly zero. Growth like this feels slow at first because we tend to think in straight lines."
+    },
+    "insight": "Our brains expect straight-line progress, so small daily gains feel pointless at first. Real life isn't this tidy (skills plateau, days vary), so take this as an illustration, not a forecast. The point stands: small, repeated choices add up in both directions.",
+    "model": "Tiny gains compound. Judge your habits by their direction, not by today's result.",
+    "try_today": "Pick one thing you do daily and make it 1% better today: one more page, one less scroll, one extra glass of water.",
+    "source": {
+      "thinkers": [
+        "James Clear"
+      ],
+      "work": "Atomic Habits (2018)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "feedback_loops",
+      "delays",
+      "small_wins"
+    ]
+  },
+  {
+    "id": "two-minute-rule-swipe",
+    "concept": "two_minute_rule",
+    "domain": "habits",
+    "type": "swipe",
+    "hook": "Your habit is too big to start. Can you shrink it to two minutes?",
+    "title": "The Two-Minute Rule",
+    "game": {
+      "prompt": "Is this a good two-minute starting version?",
+      "left": "Still too big",
+      "right": "Two-minute start",
+      "items": [
+        {
+          "text": "Read one page of a book",
+          "side": "right",
+          "why": "Tiny, clear, and it often turns into more pages."
+        },
+        {
+          "text": "Read 30 pages every night",
+          "side": "left",
+          "why": "Great goal, hard start. Shrink it to one page first."
+        },
+        {
+          "text": "Put on your running shoes",
+          "side": "right",
+          "why": "Starting is the hard part. Shoes on makes the run likely."
+        },
+        {
+          "text": "Run 5 km before work",
+          "side": "left",
+          "why": "Make the first step the shoes, not the whole run."
+        },
+        {
+          "text": "Write one sentence in a journal",
+          "side": "right",
+          "why": "One sentence is easy to say yes to, even on bad days."
+        },
+        {
+          "text": "Clean the whole flat",
+          "side": "left",
+          "why": "Try 'put away one thing' instead. Momentum does the rest."
+        }
+      ]
+    },
+    "insight": "For many people, starting is the hardest part. Shrink the habit until it's almost silly, and the start stops being a battle. This is a practical rule of thumb, not a lab finding. Clear adapted it from David Allen's rule: if a task takes under two minutes, do it now.",
+    "model": "Make the start so small you can't say no. Master showing up before you improve.",
+    "try_today": "Take one habit you keep postponing and do only its two-minute version right now. Stopping after is allowed.",
+    "source": {
+      "thinkers": [
+        "James Clear",
+        "David Allen",
+        "BJ Fogg"
+      ],
+      "work": "Atomic Habits (2018); Getting Things Done (2001); Tiny Habits (2019)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "small_wins",
+      "procrastination_emotion"
+    ]
+  },
+  {
+    "id": "environment-design-radar",
+    "concept": "environment_design",
+    "domain": "habits",
+    "type": "radar",
+    "hook": "People with 'great willpower' may just face fewer temptations. You?",
+    "title": "Design the Room, Not the Will",
+    "game": {
+      "axes": [
+        "Visible cues",
+        "Low friction",
+        "Phone distance",
+        "Good defaults",
+        "People around you"
+      ],
+      "questions": [
+        {
+          "q": "The things I want to do more (book, water, guitar) are in plain sight.",
+          "axis": 0
+        },
+        {
+          "q": "Starting a good habit takes me under 20 seconds of setup.",
+          "axis": 1
+        },
+        {
+          "q": "Temptations (snacks, games) take effort to reach.",
+          "axis": 1
+        },
+        {
+          "q": "My phone is out of reach when I need to focus or sleep.",
+          "axis": 2
+        },
+        {
+          "q": "My default options (what's on my plate, my home screen) are good ones.",
+          "axis": 3
+        },
+        {
+          "q": "The people I spend time with do the habits I want.",
+          "axis": 4
+        }
+      ],
+      "advice": {
+        "0": "Make good cues visible: put the book on your pillow or the water bottle on your desk.",
+        "1": "Add friction to temptations and remove it from good habits: lay out tomorrow's gym clothes tonight.",
+        "2": "Charge your phone outside the bedroom tonight, or in another room while you work.",
+        "3": "Change one default: move social apps off your home screen, or put fruit at eye level.",
+        "4": "Find one person or group who already does the habit you want, and spend a little time there."
+      }
+    },
+    "insight": "In one study, people who rated their self-control highly reported meeting fewer temptations, not resisting more (Hofmann et al., 2012). In-the-moment willpower is hard work to rely on. Your surroundings work every day for free.",
+    "model": "Make good habits obvious and easy; make bad ones invisible and hard.",
+    "try_today": "Move one temptation out of sight and put one good cue in plain view. It takes two minutes.",
+    "source": {
+      "thinkers": [
+        "James Clear",
+        "BJ Fogg",
+        "Wilhelm Hofmann",
+        "Wendy Wood"
+      ],
+      "work": "Atomic Habits (2018); Everyday temptations (J. Personality & Social Psychology, 2012); Good Habits, Bad Habits (2019)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "attention_residue",
+      "habit_loop",
+      "deep_work"
+    ]
+  },
+  {
+    "id": "never-miss-twice-choice",
+    "concept": "never_miss_twice",
+    "domain": "habits",
+    "type": "choice",
+    "hook": "You broke your streak yesterday. What you do next matters more.",
+    "title": "Never Miss Twice",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You've walked every evening for 12 days. Yesterday you were exhausted and skipped. Tonight you...",
+          "options": [
+            {
+              "text": "Do a 5-minute walk, even if it's short.",
+              "best": true,
+              "feedback": "Yes. A small rep tonight keeps the habit alive. Getting back quickly matters more than the perfect streak."
+            },
+            {
+              "text": "Wait until Monday to restart properly.",
+              "feedback": "Understandable, but waiting turns one miss into a new pattern. A small walk tonight works better."
+            },
+            {
+              "text": "Decide you're just not a walking person.",
+              "feedback": "That's a big verdict from one tired day. One miss says nothing about who you are."
+            }
+          ]
+        },
+        {
+          "scenario": "A friend says: 'I missed my workout, so the week is ruined.' You reply...",
+          "options": [
+            {
+              "text": "Missing once barely matters. What's the smallest workout you could do today?",
+              "best": true,
+              "feedback": "Kind and practical. You lowered the shame and the bar at the same time."
+            },
+            {
+              "text": "You need more discipline.",
+              "feedback": "Well meant, but shame tends to make restarting harder, not easier."
+            },
+            {
+              "text": "Yeah, just start fresh next week.",
+              "feedback": "Supportive, but it delays the comeback. Today is a fine day to restart."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "In Lally's 2010 habit study, missing a single day did not meaningfully slow habit formation. What hurts is the slide: 'I've already blown it' becomes a week off. Treat a miss as an accident, not a verdict, and come back small.",
+    "model": "Missing once is an accident. Missing twice risks starting a new pattern. Return small and fast.",
+    "try_today": "If you missed something this week, do a tiny version of it today and tell yourself: 'One miss doesn't define me.'",
+    "source": {
+      "thinkers": [
+        "James Clear",
+        "Phillippa Lally"
+      ],
+      "work": "Atomic Habits (2018); How are habits formed (2010)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "sensitive": true,
+    "related": [
+      "self_compassion",
+      "identity_habits",
+      "mistake_alchemy"
+    ]
+  }
+]

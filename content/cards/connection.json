@@ -1,0 +1,467 @@
+[
+  {
+    "id": "three-conversations-choice",
+    "concept": "three_conversations",
+    "domain": "connection",
+    "type": "choice",
+    "hook": "Your advice was good. So why did they get more upset?",
+    "title": "Three Kinds of Conversation",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your friend says: 'My boss rewrote my whole report in front of everyone.' You reply…",
+          "options": [
+            {
+              "text": "Next time, send him a draft a day early.",
+              "feedback": "Solid advice — for a practical talk. But this one sounds like it's about feelings first. Solutions land better after they feel heard."
+            },
+            {
+              "text": "In front of everyone? That sounds humiliating.",
+              "best": true,
+              "feedback": "Yes. This is an emotional conversation. Naming the feeling tells them you're on the same channel."
+            },
+            {
+              "text": "My boss does that too, it's so annoying.",
+              "feedback": "Friendly instinct, but it moves the spotlight to you. Stay on their story a bit longer."
+            }
+          ]
+        },
+        {
+          "scenario": "Later they say: 'OK, I'm calmer. What should I actually do on Monday?' Now you…",
+          "options": [
+            {
+              "text": "Keep validating: 'That must have felt awful.'",
+              "feedback": "Kind, but they just switched channels. They're asking for a plan now."
+            },
+            {
+              "text": "Offer two concrete options and ask which fits.",
+              "best": true,
+              "feedback": "Right. The talk turned practical, so you turned with it. Matching is a moving target."
+            },
+            {
+              "text": "Ask what this says about who they are at work.",
+              "feedback": "That's a social/identity question. Could matter later — but they asked for a next step."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Most talks are one of three kinds: practical (what should we do?), emotional (how do we feel?), or social (who are we?). Advice given in an emotional talk often misses. Notice which kind you're in — and when it switches.",
+    "model": "Ask: is this about solving, feeling, or identity? Then answer in that same channel.",
+    "try_today": "In your next real conversation, silently label it practical, emotional, or social before you reply.",
+    "source": {
+      "thinkers": [
+        "Charles Duhigg"
+      ],
+      "work": "Supercommunicators (2024)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "looping",
+      "emotion_naming",
+      "emotional_contagion"
+    ]
+  },
+  {
+    "id": "looping-choice",
+    "concept": "looping",
+    "domain": "connection",
+    "type": "choice",
+    "hook": "Want someone to calm down? Stop trying to convince them.",
+    "title": "Looping for Understanding",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your partner snaps: 'You never help with the dishes!' You actually did them twice this week. You say…",
+          "options": [
+            {
+              "text": "That's not true, I did them Tuesday and Thursday.",
+              "feedback": "Accurate — and it will probably start a fact fight. They don't feel heard yet, so facts sound like defense."
+            },
+            {
+              "text": "It sounds like you feel you're carrying most of the housework. Is that right?",
+              "best": true,
+              "feedback": "That's a loop: repeat the heart of it, then check. You can share your facts after they say 'yes, exactly.'"
+            },
+            {
+              "text": "Let's not do this right now.",
+              "feedback": "Taking a break can be wise. But without a loop first, it can feel like a door closing."
+            }
+          ]
+        },
+        {
+          "scenario": "They answer: 'Not exactly — it's that I always have to ask.' You…",
+          "options": [
+            {
+              "text": "Ah, so it's less the dishes and more having to be the one who notices. Right?",
+              "best": true,
+              "feedback": "Perfect. A loop that gets corrected isn't a failure — it's the loop working. Now you know the real issue."
+            },
+            {
+              "text": "Well, you could just ask nicely.",
+              "feedback": "Understandable reflex, but it skips past what they just told you. Loop once more."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Looping means: ask, repeat back what you heard in your own words, then check if you got it right. People soften when they're proven heard — not just told 'I hear you.' Getting corrected is part of the method.",
+    "model": "Ask → say it back in your words → 'Did I get that right?' → repeat until they say yes.",
+    "try_today": "In one conversation today, say back what you heard and ask 'Did I get that right?' before giving your view.",
+    "source": {
+      "thinkers": [
+        "Charles Duhigg",
+        "Carl Rogers"
+      ],
+      "work": "Supercommunicators (2024); Rogers & Farson, Active Listening (1957)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "steelmanning",
+      "three_conversations",
+      "emotion_naming"
+    ]
+  },
+  {
+    "id": "looping-order",
+    "concept": "looping",
+    "domain": "connection",
+    "type": "order",
+    "hook": "'I hear you' is not proof. Can you build the real thing?",
+    "title": "The Loop, Step by Step",
+    "game": {
+      "prompt": "Put the steps of looping for understanding in order",
+      "items": [
+        "Ask a real question",
+        "Listen without planning your reply",
+        "Say back the core of it in your own words",
+        "Ask: 'Did I get that right?'",
+        "Adjust if they correct you"
+      ],
+      "explain": "The key is the check at the end. Summarizing without asking is still a guess. Asking turns your guess into shared understanding."
+    },
+    "insight": "Listening is invisible; looping makes it visible. The person hears their idea in your words and gets a chance to fix it. That moment of 'yes, that's it' is often when tension drops.",
+    "model": "Understanding isn't what you feel — it's what the other person confirms.",
+    "try_today": "Pick one person today and do one full loop, ending with 'Did I get that right?'",
+    "source": {
+      "thinkers": [
+        "Charles Duhigg",
+        "Carl Rogers"
+      ],
+      "work": "Supercommunicators (2024); Rogers & Farson, Active Listening (1957)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "steelmanning",
+      "socratic_ignorance"
+    ]
+  },
+  {
+    "id": "introvert-energy-spectrum",
+    "concept": "introvert_energy",
+    "domain": "connection",
+    "type": "spectrum",
+    "hook": "After a great party, do you feel charged up or drained?",
+    "title": "Where You Recharge",
+    "game": {
+      "left": "Recharge alone",
+      "right": "Recharge with people",
+      "questions": [
+        {
+          "q": "After a long day of meetings, I want…",
+          "options": [
+            {
+              "label": "A quiet room and no talking",
+              "value": -2
+            },
+            {
+              "label": "Depends on the day",
+              "value": 0
+            },
+            {
+              "label": "Drinks with friends",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When I have a hard problem, I…",
+          "options": [
+            {
+              "label": "Think it through alone first",
+              "value": -2
+            },
+            {
+              "label": "A bit of both",
+              "value": 0
+            },
+            {
+              "label": "Talk it out to figure it out",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "A free Saturday with no plans feels…",
+          "options": [
+            {
+              "label": "Like a gift",
+              "value": -2
+            },
+            {
+              "label": "Fine either way",
+              "value": 0
+            },
+            {
+              "label": "A bit restless",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "In a loud, busy room I…",
+          "options": [
+            {
+              "label": "Get tired fast",
+              "value": -2
+            },
+            {
+              "label": "Manage for a while",
+              "value": 0
+            },
+            {
+              "label": "Feel more awake",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Introvert-leaning",
+          "text": "You probably recharge best in quiet. That's not shyness — you can be warm and bold and still need solitude to refuel."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Ambivert zone",
+          "text": "Like many people, you sit near the middle. Your need for people vs. quiet may shift with sleep, stress, and who's around."
+        },
+        {
+          "upTo": 1,
+          "label": "Extrovert-leaning",
+          "text": "You likely get energy from people and stimulation. Quiet focus may need a bit more structure for you to enjoy."
+        }
+      ]
+    },
+    "insight": "Introversion isn't shyness; it's mostly about how much stimulation feels good. Most people land near the middle, not at the poles. 'Recharge' is a handy lens, but researchers still debate what extraversion really measures.",
+    "model": "Not shy vs. loud — notice what drains you and what refuels you, then plan around it.",
+    "try_today": "Look at tomorrow's schedule and add one 10-minute recharge block that fits your end of the spectrum.",
+    "source": {
+      "thinkers": [
+        "Susan Cain",
+        "Carl Jung"
+      ],
+      "work": "Quiet (2012); Psychological Types (1921)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deep_work",
+      "flow"
+    ]
+  },
+  {
+    "id": "shared-fictions-swipe",
+    "concept": "shared_fictions",
+    "domain": "connection",
+    "type": "swipe",
+    "hook": "If every human vanished tonight, would your cash be worth a cent?",
+    "title": "Shared Stories",
+    "game": {
+      "prompt": "Would it still exist if no human believed in it?",
+      "left": "Shared story",
+      "right": "Exists anyway",
+      "items": [
+        {
+          "text": "The value of a 100-dollar bill",
+          "side": "left",
+          "why": "The paper stays. Its value lives in what millions of people agree to accept."
+        },
+        {
+          "text": "A mountain",
+          "side": "right",
+          "why": "Rock doesn't need anyone's belief. The name 'Everest' does, though."
+        },
+        {
+          "text": "A country's border",
+          "side": "left",
+          "why": "Rivers are real; the line on the map is an agreement people keep."
+        },
+        {
+          "text": "A company like Google",
+          "side": "left",
+          "why": "Harari's example: a company exists in law and shared belief, not in its buildings."
+        },
+        {
+          "text": "Gravity",
+          "side": "right",
+          "why": "It pulls whether anyone believes or not."
+        },
+        {
+          "text": "Your birthday being 'your day'",
+          "side": "left",
+          "why": "The Earth's orbit is real; the meaning of the date is a story we share."
+        }
+      ]
+    },
+    "insight": "Harari argues humans cooperate in huge numbers because we believe the same stories — money, laws, nations. 'Fiction' doesn't mean fake or bad: these stories are tools. The trick is remembering they can be rewritten.",
+    "model": "Some things are rocks, some are agreements. Agreements can be questioned — and changed.",
+    "try_today": "Name one 'rule' you follow today and ask: is this a rock or an agreement? Who could change it?",
+    "source": {
+      "thinkers": [
+        "Yuval Noah Harari"
+      ],
+      "work": "Sapiens: A Brief History of Humankind (2011)"
+    },
+    "evidence": "philosophy",
+    "level": 2,
+    "related": [
+      "map_territory",
+      "reframing"
+    ]
+  },
+  {
+    "id": "steelmanning-choice",
+    "concept": "steelmanning",
+    "domain": "connection",
+    "type": "choice",
+    "hook": "Can you argue the other side so well they'd thank you?",
+    "title": "Steelmanning",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your friend thinks phones should be banned in schools. You disagree. Which reply is a steelman?",
+          "options": [
+            {
+              "text": "So you think teens are too dumb to handle a phone?",
+              "feedback": "That's a strawman — a weaker version that's easy to knock down. They'd likely just get annoyed."
+            },
+            {
+              "text": "You're worried phones pull kids' attention away from learning and from each other, and a clear rule is easier than constant fights. Fair?",
+              "best": true,
+              "feedback": "Steelman. It's their best version, in words they'd agree with. Now your disagreement will actually be heard."
+            },
+            {
+              "text": "Whatever, people said the same about TV.",
+              "feedback": "Might be a real point later, but it skips their argument instead of meeting it."
+            }
+          ]
+        },
+        {
+          "scenario": "They say: 'Yes, exactly.' Now you…",
+          "options": [
+            {
+              "text": "Say where you agree, then share your concern about emergencies and teaching phone skills.",
+              "best": true,
+              "feedback": "Great. Agreement first, then disagreement. This is close to Rapoport's rules as Dennett describes them."
+            },
+            {
+              "text": "Say 'Great, but you're wrong because…'",
+              "feedback": "You earned the floor, so don't spend it on 'you're wrong.' Start with what you share."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "A strawman attacks the weakest version of a view. A steelman restates the strongest one first. It makes you fairer, makes others listen, and sometimes shows you that you were the one missing something.",
+    "model": "Before you disagree, state their view so well they say 'yes, exactly.'",
+    "try_today": "Pick a view you disagree with and write its strongest case in 3 sentences — as if you believed it.",
+    "source": {
+      "thinkers": [
+        "Daniel Dennett",
+        "Anatol Rapoport"
+      ],
+      "work": "Intuition Pumps and Other Tools for Thinking (2013)"
+    },
+    "evidence": "philosophy",
+    "level": 2,
+    "related": [
+      "confirmation_bias",
+      "looping",
+      "socratic_ignorance"
+    ]
+  },
+  {
+    "id": "steelmanning-order",
+    "concept": "steelmanning",
+    "domain": "connection",
+    "type": "order",
+    "hook": "Fair criticism has 4 steps. Most of us jump straight to step 4.",
+    "title": "Rapoport's Rules",
+    "game": {
+      "prompt": "Order the steps for criticizing someone's view fairly",
+      "items": [
+        "Restate their view so clearly they wish they'd said it that way",
+        "List the points where you agree",
+        "Mention anything you learned from them",
+        "Only then, offer your criticism"
+      ],
+      "explain": "Daniel Dennett popularized these as 'Rapoport's Rules,' crediting the game theorist Anatol Rapoport. By step 4, the other person is far more ready to listen."
+    },
+    "insight": "Criticism lands better after the other person feels understood and respected. These rules slow you down just enough to check you're arguing with their real view — not one you invented.",
+    "model": "Restate → agree → learn → then critique. Earn the right to disagree.",
+    "try_today": "Next time you disagree in a chat or meeting, do steps 1 and 2 out loud before your point.",
+    "source": {
+      "thinkers": [
+        "Daniel Dennett",
+        "Anatol Rapoport"
+      ],
+      "work": "Intuition Pumps and Other Tools for Thinking (2013)"
+    },
+    "evidence": "philosophy",
+    "level": 2,
+    "related": [
+      "looping",
+      "confirmation_bias"
+    ]
+  },
+  {
+    "id": "courage-kindness-reveal",
+    "concept": "courage_kindness",
+    "domain": "connection",
+    "type": "reveal",
+    "hook": "You think people will say no if you ask for help. Want the real odds?",
+    "title": "Asking for Help Is Brave",
+    "game": {
+      "prompt": "In a study, people had to ask strangers to fill out a short form. To get 5 yeses, how many did they guess they'd need to ask?",
+      "choices": [
+        "About as many as it took",
+        "About twice as many as it took",
+        "Fewer than it took"
+      ],
+      "reveal": "They guessed about twice as many as it took. Strangers were far more willing to help than askers expected (Flynn & Lake, 2008); later studies by Vanessa Bohns found the same."
+    },
+    "insight": "We tend to underestimate how often others will say yes — partly because we focus on the cost of helping, while they feel the awkwardness of saying no. Asking isn't weakness; it's often what lets connection start.",
+    "model": "Others say yes more than you predict. 'Help' is a short, brave word.",
+    "try_today": "Ask one person for a small, specific bit of help today — and notice how they actually respond.",
+    "source": {
+      "thinkers": [
+        "Francis Flynn",
+        "Vanessa Lake",
+        "Charlie Mackesy"
+      ],
+      "work": "Flynn & Lake, 'If You Need Help, Just Ask' (2008); The Boy, the Mole, the Fox and the Horse (2019)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "self_compassion",
+      "self_efficacy"
+    ],
+    "sensitive": true
+  }
+]

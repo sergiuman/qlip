@@ -1,0 +1,596 @@
+[
+  {
+    "id": "system1-system2-bat-ball",
+    "concept": "system1_system2",
+    "domain": "thinking",
+    "type": "estimate",
+    "hook": "A bat and ball cost $1.10. Your gut already has an answer. Check it.",
+    "title": "Fast & Slow Thinking",
+    "game": {
+      "question": "Bat + ball = $1.10. The bat costs $1.00 more than the ball. How many cents is the ball?",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "¢",
+      "answer": 5,
+      "explain": "If the ball were 10¢, the bat would be $1.10 and the total $1.20. Ball 5¢ + bat $1.05 = $1.10. Most people's first answer is 10¢, including many students at top universities.",
+      "anchor": null
+    },
+    "insight": "The 10¢ answer arrives instantly and feels right. That's your fast mind: quick, effortless, usually helpful. The slow mind only steps in when you make it check. Being smart doesn't switch it on; pausing does.",
+    "model": "Fast thinking proposes, slow thinking checks. When it feels obvious and matters, check once.",
+    "try_today": "Say your gut answer out loud before your next decision that matters, then ask: 'How would I check this?'",
+    "source": {
+      "thinkers": [
+        "Shane Frederick",
+        "Daniel Kahneman"
+      ],
+      "work": "Cognitive Reflection and Decision Making (2005); Thinking, Fast and Slow (2011)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "impulse_pause",
+      "anchoring",
+      "base_rates"
+    ]
+  },
+  {
+    "id": "system1-system2-who-drives",
+    "concept": "system1_system2",
+    "domain": "thinking",
+    "type": "spectrum",
+    "hook": "Hare or owl: who's actually making your decisions this week?",
+    "title": "Who's Driving: Hare or Owl?",
+    "game": {
+      "left": "Hare (fast)",
+      "right": "Owl (slow)",
+      "questions": [
+        {
+          "q": "A message annoys you. You usually…",
+          "options": [
+            {
+              "label": "Reply right away",
+              "value": -2
+            },
+            {
+              "label": "Draft it, send later",
+              "value": 1
+            },
+            {
+              "label": "Wait, reread it calmly",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Buying something over $100, you…",
+          "options": [
+            {
+              "label": "Go with what feels right",
+              "value": -2
+            },
+            {
+              "label": "Compare two options",
+              "value": 1
+            },
+            {
+              "label": "Sleep on it",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When a headline makes you angry, you…",
+          "options": [
+            {
+              "label": "Share it",
+              "value": -2
+            },
+            {
+              "label": "Read the article first",
+              "value": 1
+            },
+            {
+              "label": "Check another source",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Someone asks: 'Quick, what's 17 × 24?' You…",
+          "options": [
+            {
+              "label": "Blurt out a guess",
+              "value": -2
+            },
+            {
+              "label": "Estimate roughly",
+              "value": 1
+            },
+            {
+              "label": "Work it out step by step",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Hare-led",
+          "text": "Your fast mind drives a lot. That's efficient for routine stuff. For the few decisions that matter, add one deliberate pause."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Shared driving",
+          "text": "You switch between speeds. The skill now is noticing which moments deserve the owl."
+        },
+        {
+          "upTo": 1,
+          "label": "Owl-led",
+          "text": "You slow down a lot. Great for big calls. Watch for overthinking small, reversible ones; your hare is good at those."
+        }
+      ]
+    },
+    "insight": "Neither speed is 'better'. The fast mind handles most of life well; it slips on numbers, anger, and novelty. 'System 1 and 2' are a metaphor, not two brain parts. Kahneman said so himself.",
+    "model": "Let the hare handle the routine; call the owl for anything costly, emotional, or new.",
+    "try_today": "Pick one trigger (an angry message, a purchase over a set amount) and make it your rule to wait 10 minutes first.",
+    "source": {
+      "thinkers": [
+        "Daniel Kahneman",
+        "Keith Stanovich"
+      ],
+      "work": "Thinking, Fast and Slow (2011)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "impulse_pause",
+      "reversible_doors"
+    ]
+  },
+  {
+    "id": "anchoring-africa-un",
+    "concept": "anchoring",
+    "domain": "thinking",
+    "type": "estimate",
+    "hook": "We'll show you a random number first. Watch it bend your guess.",
+    "title": "Anchoring",
+    "game": {
+      "question": "What percentage of UN member countries are in Africa?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 28,
+      "explain": "54 of the 193 UN members are African: about 28%. In a famous 1974 study, people who first saw a wheel land on 65 guessed a median of 45%; those who saw 10 guessed 25%. The random number pulled their answers.",
+      "anchor": 65
+    },
+    "insight": "A number you know is irrelevant still drags your estimate toward it. Salespeople, salary talks, and 'was $199, now $99' tags all use this. Knowing about it helps a little; preparing your own number helps more.",
+    "model": "The first number sets the field. Bring your own number before you hear theirs.",
+    "try_today": "Write your own number down before your next price, salary, or deadline talk, with one reason it's fair.",
+    "source": {
+      "thinkers": [
+        "Amos Tversky",
+        "Daniel Kahneman"
+      ],
+      "work": "Judgment under Uncertainty: Heuristics and Biases (1974)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "system1_system2",
+      "base_rates"
+    ]
+  },
+  {
+    "id": "availability-feels-common",
+    "concept": "availability",
+    "domain": "thinking",
+    "type": "swipe",
+    "hook": "Your brain ranks dangers by how easily they come to mind. Test it.",
+    "title": "Availability Bias",
+    "game": {
+      "prompt": "Compared to how often it feels like it happens…",
+      "left": "Rarer than it feels",
+      "right": "More common than it feels",
+      "items": [
+        {
+          "text": "Dying in a plane crash",
+          "side": "left",
+          "why": "Crashes get huge coverage. Per mile, commercial flying is far safer than driving."
+        },
+        {
+          "text": "Being killed by a shark",
+          "side": "left",
+          "why": "Worldwide, unprovoked shark deaths are usually in single digits per year."
+        },
+        {
+          "text": "Older adults dying after a fall",
+          "side": "right",
+          "why": "Falls are a leading cause of injury death for people over 65. Quiet, rarely in the news."
+        },
+        {
+          "text": "A child taken by a total stranger",
+          "side": "left",
+          "why": "Stranger abductions are very rare; most missing children are runaways or family cases."
+        },
+        {
+          "text": "Heart disease as a cause of death",
+          "side": "right",
+          "why": "It's the top cause of death worldwide (WHO), yet rarely makes headlines."
+        },
+        {
+          "text": "Car crashes",
+          "side": "right",
+          "why": "About 1.2 million road deaths a year worldwide (WHO). So routine they're barely news."
+        }
+      ]
+    },
+    "insight": "Vivid, recent, or dramatic events are easy to recall, so they feel frequent. Slow, ordinary risks hide. Your news feed is a highlight reel of rare events, not a map of real risk.",
+    "model": "Easy to imagine is not the same as likely. Ask for the count, not the story.",
+    "try_today": "Look up one number the next time a scary story grabs you: how many times a year does this actually happen?",
+    "source": {
+      "thinkers": [
+        "Amos Tversky",
+        "Daniel Kahneman"
+      ],
+      "work": "Availability: A Heuristic for Judging Frequency and Probability (1973)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "base_rates",
+      "doomscroll_loop",
+      "system1_system2"
+    ]
+  },
+  {
+    "id": "confirmation-bias-2-4-6",
+    "concept": "confirmation_bias",
+    "domain": "thinking",
+    "type": "choice",
+    "hook": "2, 4, 6 follows a secret rule. Most people's first guess is wrong.",
+    "title": "Confirmation Bias",
+    "game": {
+      "steps": [
+        {
+          "scenario": "The numbers 2-4-6 follow a hidden rule. You can test any three numbers and learn if they fit. Your hunch: 'even numbers going up by 2.' Which test teaches you the most?",
+          "options": [
+            {
+              "text": "8-10-12",
+              "feedback": "It fits, but it would fit your hunch either way. You'd learn nothing new. This is what most people try."
+            },
+            {
+              "text": "20-22-24",
+              "feedback": "Another yes, but again only a test your hunch already predicts. Confirming feels productive; it rarely is."
+            },
+            {
+              "text": "1-2-3",
+              "best": true,
+              "feedback": "Yes! Your hunch says 'no'. If it fits, your hunch is wrong. That's a real test. Spoiler: it fits."
+            },
+            {
+              "text": "Just guess the rule now",
+              "feedback": "Bold! But without a test that could prove you wrong, you'd be guessing blind."
+            }
+          ]
+        },
+        {
+          "scenario": "1-2-3 fits. So does 3-17-90. 6-4-2 does not. What's the rule?",
+          "options": [
+            {
+              "text": "Any three numbers going up",
+              "best": true,
+              "feedback": "Correct. In Wason's 1960 study, only about 1 in 5 people named it on their first try, mostly because they only tested examples they expected to fit."
+            },
+            {
+              "text": "Numbers with a pattern",
+              "feedback": "Close in spirit, but 3-17-90 has no neat pattern. Simpler: they just go up."
+            },
+            {
+              "text": "Even numbers only",
+              "feedback": "1-2-3 fit, so odd numbers are allowed. The rule is broader: any rising sequence."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "We tend to test ideas in ways that can only say 'yes'. That feels like evidence but often isn't. Researchers still debate how irrational this is, but the fix is clear: look for the result that would prove you wrong.",
+    "model": "Don't ask 'what fits my idea?' Ask 'what would I see if I were wrong?'",
+    "try_today": "Pick one belief you hold firmly. Write down one thing that, if you saw it, would change your mind. Go look for it.",
+    "source": {
+      "thinkers": [
+        "Peter Wason"
+      ],
+      "work": "On the failure to eliminate hypotheses in a conceptual task (1960)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "steelmanning",
+      "socratic_ignorance",
+      "map_territory"
+    ]
+  },
+  {
+    "id": "confirmation-bias-scout-soldier",
+    "concept": "confirmation_bias",
+    "domain": "thinking",
+    "type": "spectrum",
+    "hook": "In an argument, are you defending a fort or drawing a map?",
+    "title": "Soldier or Scout?",
+    "game": {
+      "left": "Soldier (defend)",
+      "right": "Scout (explore)",
+      "questions": [
+        {
+          "q": "Someone shares a study that disagrees with you. First thought:",
+          "options": [
+            {
+              "label": "What's wrong with it?",
+              "value": -2
+            },
+            {
+              "label": "Huh, what did they find?",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When did you last change your mind on something you cared about?",
+          "options": [
+            {
+              "label": "Can't remember",
+              "value": -2
+            },
+            {
+              "label": "This year",
+              "value": 1
+            },
+            {
+              "label": "This month",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Your feed mostly shows people who…",
+          "options": [
+            {
+              "label": "Agree with me",
+              "value": -1
+            },
+            {
+              "label": "Mix of views",
+              "value": 1
+            },
+            {
+              "label": "I follow some smart critics on purpose",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Being proven wrong feels like…",
+          "options": [
+            {
+              "label": "Losing",
+              "value": -2
+            },
+            {
+              "label": "Annoying, but useful",
+              "value": 1
+            },
+            {
+              "label": "An upgrade",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Soldier mode",
+          "text": "You guard your views well, which is very human. Try treating one belief as a draft, not a fort."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Switching",
+          "text": "You scout on some topics and defend on others. Notice which ones make you defensive; that's where your map is least checked."
+        },
+        {
+          "upTo": 1,
+          "label": "Scout mode",
+          "text": "You're curious about being wrong. Keep it kind: scouts share maps, they don't sneer at others' wrong turns."
+        }
+      ]
+    },
+    "insight": "Everyone slips into defending. The scout mindset isn't about being less passionate. It's about wanting your map to be accurate more than you want to be right. Your answers here are a snapshot, not a verdict.",
+    "model": "A soldier asks 'Can I believe this?' or 'Must I believe this?' A scout asks 'Is it true?'",
+    "try_today": "In your next disagreement, ask one honest question: 'What would change your mind?' Then answer it yourself too.",
+    "source": {
+      "thinkers": [
+        "Julia Galef"
+      ],
+      "work": "The Scout Mindset (2021)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "steelmanning",
+      "socratic_ignorance"
+    ]
+  },
+  {
+    "id": "loss-aversion-coin-flip",
+    "concept": "loss_aversion",
+    "domain": "thinking",
+    "type": "reveal",
+    "hook": "Heads you win $150, tails you lose $100. Do you flip?",
+    "title": "Loss Aversion",
+    "game": {
+      "prompt": "One fair coin flip. Heads: you win $150. Tails: you lose $100. On average this bet pays you $25. Do you take it?",
+      "choices": [
+        "Flip it",
+        "No thanks"
+      ],
+      "reveal": "Most people say no. In Kahneman's studies, people typically want a win of about $200 before risking $100. Losses tend to feel roughly 1.5–2.5× as strong as equal gains."
+    },
+    "insight": "Turning down a good bet isn't wrong when the loss would truly hurt you. But we often avoid small, smart risks just because losing stings. Some researchers argue the effect is smaller than claimed, especially for small amounts.",
+    "model": "Losses shout, gains whisper. For small, repeatable bets, judge the average, not the sting.",
+    "try_today": "Name one small risk you've avoided (asking, applying, trying). Write the realistic worst case. Is it really that bad?",
+    "source": {
+      "thinkers": [
+        "Daniel Kahneman",
+        "Amos Tversky"
+      ],
+      "work": "Prospect Theory: An Analysis of Decision under Risk (1979)"
+    },
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "expected_value",
+      "regret_minimization",
+      "reversible_doors"
+    ]
+  },
+  {
+    "id": "inversion-guarantee-failure",
+    "concept": "inversion",
+    "domain": "thinking",
+    "type": "order",
+    "hook": "Stuck on how to succeed? Plan how to fail instead.",
+    "title": "Inversion",
+    "game": {
+      "prompt": "Put the inversion moves in order",
+      "items": [
+        "Name what you want (e.g. a good friendship)",
+        "Ask: how could I guarantee it fails?",
+        "List the answers (cancel often, only talk about me…)",
+        "Circle the ones you already do a little",
+        "Stop one of them this week"
+      ],
+      "explain": "Thinking backward makes hidden mistakes obvious. It's often easier to list ways to ruin something than ways to perfect it, and avoiding stupidity is a solid path to doing well."
+    },
+    "insight": "Mathematician Carl Jacobi is credited with 'invert, always invert'. Investor Charlie Munger made it a life habit. Your brain finds failure modes faster than success recipes; use that.",
+    "model": "Ask what would guarantee failure, then don't do that.",
+    "try_today": "Pick one goal. Write 3 ways to guarantee it fails. Circle the one you're closest to doing, and drop it today.",
+    "source": {
+      "thinkers": [
+        "Carl Jacobi",
+        "Charlie Munger"
+      ],
+      "work": "Poor Charlie's Almanack (2005)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "premortem",
+      "second_order"
+    ]
+  },
+  {
+    "id": "second-order-hanoi-rats",
+    "concept": "second_order",
+    "domain": "thinking",
+    "type": "choice",
+    "hook": "A city paid people per rat tail. Guess what they got more of.",
+    "title": "Second-Order Thinking",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Hanoi, 1902. Rats are spreading. Officials pay a small reward for every rat tail handed in. What happens next?",
+          "options": [
+            {
+              "text": "The rat problem shrinks",
+              "feedback": "That's the first-order guess, and it's what officials expected. Reality had a twist."
+            },
+            {
+              "text": "People cut off tails and let rats go to breed",
+              "best": true,
+              "feedback": "Yes. Tailless rats were seen in the streets, and some people reportedly bred rats for the bounty."
+            },
+            {
+              "text": "Nobody bothers to collect tails",
+              "feedback": "The opposite. People collected lots of tails, just not in the way that helped."
+            }
+          ]
+        },
+        {
+          "scenario": "You want your team to fix bugs faster, so you plan to reward 'bugs fixed per week'. Ask 'and then what?' twice. Best tweak?",
+          "options": [
+            {
+              "text": "Reward bugs fixed, bigger bonus",
+              "feedback": "More pressure on the same number. People may ship sloppy code and fix their own bugs later."
+            },
+            {
+              "text": "Track fewer bugs reaching users, and talk about it",
+              "best": true,
+              "feedback": "Good. You reward the real goal and keep a human check, so gaming it is harder."
+            },
+            {
+              "text": "Don't measure anything",
+              "feedback": "Understandable after the rats! But you can measure well; just ask what the number will make people do."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "First-order thinking asks 'what happens now?' Second-order asks 'and then what?' Rewards change behavior, often in ways no one planned. Historian Michael Vann documented the Hanoi rat hunt.",
+    "model": "Every fix creates new incentives. Ask 'and then what?' at least twice.",
+    "try_today": "Write 'and then what?' before your next rule, rule-change, or reward, and answer it two times.",
+    "source": {
+      "thinkers": [
+        "Howard Marks",
+        "Michael G. Vann"
+      ],
+      "work": "The Most Important Thing (2011); Of Rats, Rice, and Race (2003)"
+    },
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "fixes_that_fail",
+      "feedback_loops",
+      "inversion"
+    ]
+  },
+  {
+    "id": "base-rates-positive-test",
+    "concept": "base_rates",
+    "domain": "thinking",
+    "type": "estimate",
+    "hook": "A test says you have a rare condition. How worried should you be?",
+    "title": "Base Rates",
+    "game": {
+      "question": "A condition affects 1 in 1,000 people. A test catches every real case but gives a false positive to 5% of healthy people. You test positive. Chance you have it?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 2,
+      "explain": "Of 1,000 people: 1 truly has it. About 50 healthy people also test positive. So 1 of ~51 positives is real: about 2%. In a 1978 study, many doctors and students at Harvard hospitals guessed 95%.",
+      "anchor": null
+    },
+    "insight": "The test result is vivid; the rarity is quiet. When something is rare, most positives are false alarms, which is why doctors confirm with a second test. Real results need a real doctor; this is just the math.",
+    "model": "Start with how common it is, then adjust for the new evidence. Rare things stay fairly rare.",
+    "try_today": "Ask 'Out of 1,000 similar cases, how many usually turn out this way?' the next time a story or alarm surprises you.",
+    "source": {
+      "thinkers": [
+        "Ward Casscells",
+        "Thomas Bayes",
+        "Daniel Kahneman"
+      ],
+      "work": "Interpretation by Physicians of Clinical Laboratory Results (1978)"
+    },
+    "evidence": "strong",
+    "level": 2,
+    "related": [
+      "availability",
+      "expected_value",
+      "system1_system2"
+    ],
+    "sensitive": true
+  }
+]

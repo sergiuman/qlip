@@ -1,0 +1,407 @@
+[
+  {
+    "id": "feedback-loops-swipe",
+    "concept": "feedback_loops",
+    "domain": "systems",
+    "type": "swipe",
+    "hook": "Is your week snowballing, or quietly snapping back to normal?",
+    "title": "Snowball or Thermostat?",
+    "game": {
+      "prompt": "Does this loop grow itself, or pull back to a set point?",
+      "left": "Thermostat (balancing)",
+      "right": "Snowball (reinforcing)",
+      "items": [
+        {
+          "text": "Money in savings earns interest, which earns more interest",
+          "side": "right",
+          "why": "Growth feeds more growth. Classic reinforcing loop."
+        },
+        {
+          "text": "You feel hungry, eat, and the hunger goes away",
+          "side": "left",
+          "why": "Your body pulls you back toward a set point. That's balancing."
+        },
+        {
+          "text": "A rumor spreads: the more people know, the more people tell",
+          "side": "right",
+          "why": "Each new teller makes more tellers, whether the rumor is true or false."
+        },
+        {
+          "text": "You speed up when late, slow down once you're on time",
+          "side": "left",
+          "why": "The gap to a goal drives the action, and the action closes the gap."
+        },
+        {
+          "text": "Short on sleep, you scroll late to unwind, then sleep even less",
+          "side": "right",
+          "why": "Tired leads to scrolling leads to more tired. Vicious circles are reinforcing too."
+        },
+        {
+          "text": "Practicing makes it easier, so you practice more",
+          "side": "right",
+          "why": "Virtuous circle: skill makes practice pleasant, practice builds skill."
+        }
+      ]
+    },
+    "insight": "Almost everything that changes over time runs on two loops. Reinforcing loops amplify whatever is happening, good or bad. Balancing loops resist change and hold things near a target. Knowing which one you're in tells you whether to feed it or break it.",
+    "model": "Reinforcing loops snowball; balancing loops hold a set point. Ask which one is running.",
+    "try_today": "Write one habit you want as a loop: 'A makes B, B makes more A.' Find the arrow you can strengthen today.",
+    "source": {
+      "thinkers": [
+        "Donella Meadows",
+        "Peter Senge"
+      ],
+      "work": "Thinking in Systems: A Primer (2008)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "one_percent",
+      "habit_loop",
+      "delays"
+    ]
+  },
+  {
+    "id": "feedback-loops-order",
+    "concept": "feedback_loops",
+    "domain": "systems",
+    "type": "order",
+    "hook": "One skipped walk can turn into a lost month. Can you trace how?",
+    "title": "Trace the Vicious Circle",
+    "game": {
+      "prompt": "Put this downward spiral in order, then spot where to cut it",
+      "items": [
+        "You skip your walk because you feel low on energy",
+        "You move less, so you sleep a bit worse",
+        "Worse sleep leaves you with even less energy",
+        "Low energy makes skipping the next walk feel reasonable",
+        "The loop repeats, a little stronger each lap"
+      ],
+      "explain": "Each step makes the next one more likely, so the circle feeds itself. The same structure can run in reverse: a short, easy walk can be the step that starts the upward version."
+    },
+    "insight": "Spirals can feel like bad luck or a flaw in you, but they're often just a loop. Once you draw the circle, you can see each link where a small change helps. You don't need to fix it all, just one arrow.",
+    "model": "If it keeps getting worse (or better) on its own, look for the circle, then cut or feed one link.",
+    "try_today": "Sketch one loop in your life as 4 boxes and arrows. Circle the easiest link and change just that one today.",
+    "source": {
+      "thinkers": [
+        "Peter Senge"
+      ],
+      "work": "The Fifth Discipline (1990)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "habit_loop",
+      "small_wins",
+      "doomscroll_loop"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "delays-shower",
+    "concept": "delays",
+    "domain": "systems",
+    "type": "choice",
+    "hook": "Why do you always end up scalding, then freezing, in a new shower?",
+    "title": "The Shower Problem",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Hotel shower. Water is cold. You turn the knob toward hot. Five seconds later it's still cold. You…",
+          "options": [
+            {
+              "text": "Crank it much hotter. It clearly isn't working.",
+              "feedback": "Very human, and exactly how you get scalded. The hot water was already in the pipe, on its way."
+            },
+            {
+              "text": "Wait a few more seconds before touching it again",
+              "best": true,
+              "feedback": "Yes. The pipe adds a delay. Give your last action time to show its result."
+            },
+            {
+              "text": "Give up and take a cold shower",
+              "feedback": "Brave, but the system was working. It was just slow to report back."
+            }
+          ]
+        },
+        {
+          "scenario": "Three weeks into a new workout plan, you don't feel much different yet. You…",
+          "options": [
+            {
+              "text": "Double the intensity to force results",
+              "feedback": "That's the shower move again. Overcorrecting raises the risk of injury or burnout."
+            },
+            {
+              "text": "Keep the plan and judge it again after 8 weeks",
+              "best": true,
+              "feedback": "Bodies, skills, and relationships all respond with a lag. Set a fair review date."
+            },
+            {
+              "text": "Switch to a totally different plan",
+              "feedback": "Switching resets the clock before the first plan could show anything."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "When results lag behind actions, it's easy to think nothing is happening and push harder. Then the delayed results land and we overshoot. Many problems in health, money, and teams are delay problems, not effort problems.",
+    "model": "Slow feedback plus impatience equals overshoot. Act, wait for the lag, then adjust.",
+    "try_today": "Pick one thing you're trying to improve. Write down how long it fairly takes to show results, and put a review date in your calendar.",
+    "source": {
+      "thinkers": [
+        "Peter Senge",
+        "John Sterman"
+      ],
+      "work": "The Fifth Discipline (1990); Sterman, Business Dynamics (2000)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "feedback_loops",
+      "grit",
+      "impulse_pause"
+    ]
+  },
+  {
+    "id": "leverage-points-order",
+    "concept": "leverage_points",
+    "domain": "systems",
+    "type": "order",
+    "hook": "Most people push where change is hardest. Can you find the lever?",
+    "title": "Where to Push",
+    "game": {
+      "prompt": "Rank these places to change a system, from weakest to strongest lever",
+      "items": [
+        "Numbers (budgets, targets, quantities)",
+        "Feedback loops (how strongly the system self-corrects)",
+        "Information (who sees what, when)",
+        "Rules (incentives, permissions, punishments)",
+        "Goals (what the system is actually trying to do)",
+        "Mindset (the shared beliefs the whole system grows from)"
+      ],
+      "explain": "Donella Meadows ranked 12 places to intervene. Tweaking numbers is the easiest and usually the weakest. Changing goals and mindsets is harder, but it changes everything downstream."
+    },
+    "insight": "Adjusting numbers (more hours, bigger targets) rarely changes how a system behaves. Changing who sees what, the rules, or the goal often moves far more with less force. Meadows called her list a work in progress, not a law.",
+    "model": "Numbers are easy and weak. Information, rules, and goals are harder and strong.",
+    "try_today": "Pick one stuck problem. Instead of 'more' or 'less' of something, write one change to its rules, information, or goal.",
+    "source": {
+      "thinkers": [
+        "Donella Meadows"
+      ],
+      "work": "Leverage Points: Places to Intervene in a System (1999)"
+    },
+    "evidence": "philosophy",
+    "level": 2,
+    "related": [
+      "feedback_loops",
+      "environment_design",
+      "begin_with_end"
+    ]
+  },
+  {
+    "id": "leverage-points-spectrum",
+    "concept": "leverage_points",
+    "domain": "systems",
+    "type": "spectrum",
+    "hook": "When stuck, do you try harder or change the game? Find out.",
+    "title": "Tweaker or Redesigner?",
+    "game": {
+      "left": "Tweaker",
+      "right": "Redesigner",
+      "questions": [
+        {
+          "q": "You keep spending too much. Your first move is…",
+          "options": [
+            {
+              "label": "Promise to be stricter with myself",
+              "value": -2
+            },
+            {
+              "label": "Lower my spending target a bit",
+              "value": -1
+            },
+            {
+              "label": "Make savings move automatically on payday",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Your team keeps missing deadlines. You…",
+          "options": [
+            {
+              "label": "Ask everyone to work harder",
+              "value": -2
+            },
+            {
+              "label": "Make progress visible to everyone each week",
+              "value": 1
+            },
+            {
+              "label": "Ask what the team is really rewarded for",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "You want to read more. You…",
+          "options": [
+            {
+              "label": "Set a bigger reading goal",
+              "value": -1
+            },
+            {
+              "label": "Put a book where your phone usually sits",
+              "value": 2
+            },
+            {
+              "label": "Just try to remember to read",
+              "value": -2
+            }
+          ]
+        },
+        {
+          "q": "An argument with a partner keeps repeating. You…",
+          "options": [
+            {
+              "label": "Try to win it more clearly next time",
+              "value": -2
+            },
+            {
+              "label": "Ask what each of you is actually trying to protect",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Tweaker",
+          "text": "You reach for effort and numbers first. That's honest work, but it can be exhausting. Next time, ask: what rule, information, or goal is producing this?"
+        },
+        {
+          "upTo": 0.34,
+          "label": "Mixed",
+          "text": "You switch between pushing harder and redesigning. Notice which one you pick under stress, and try the redesign first once this week."
+        },
+        {
+          "upTo": 1,
+          "label": "Redesigner",
+          "text": "You look for the structure behind the problem. Keep going, and remember that redesigns also need patience while the results catch up."
+        }
+      ]
+    },
+    "insight": "Willpower and bigger targets are often weak levers, yet they're the first we grab. Changing what you see, what's rewarded, or what you aim at tends to work with less strain. Knowing your default lets you choose on purpose.",
+    "model": "Before pushing harder, ask what structure is producing the result.",
+    "try_today": "Take one 'I should try harder' and rewrite it as a change to your surroundings, rules, or reminders. Do that change now.",
+    "source": {
+      "thinkers": [
+        "Donella Meadows"
+      ],
+      "work": "Thinking in Systems: A Primer (2008)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "environment_design",
+      "begin_with_end",
+      "circle_influence"
+    ]
+  },
+  {
+    "id": "fixes-that-fail-rats",
+    "concept": "fixes_that_fail",
+    "domain": "systems",
+    "type": "reveal",
+    "hook": "A city paid people per rat tail. Guess what it got more of.",
+    "title": "The Rat Tail Bounty",
+    "game": {
+      "prompt": "Hanoi, 1902. Rats are spreading through the new sewers, so officials pay a small bounty for every rat tail handed in. What happens next?",
+      "choices": [
+        "Rats disappear within months",
+        "Nothing much changes",
+        "The plan backfires"
+      ],
+      "reveal": "It backfired. People were seen with tailless rats still alive, so rats could keep breeding, and there were reports of rats being farmed for tails. Historian Michael Vann documented the episode. The fix rewarded tails, not fewer rats."
+    },
+    "insight": "A quick fix relieves the symptom today, then its side effects quietly feed the original problem tomorrow. Because the side effect is delayed, the fix looks like it works, so we do it again. The pattern shows up in diets, deadlines, and arguments.",
+    "model": "Ask of every fix: what does this reward, and what will it feed in three months?",
+    "try_today": "Name one quick fix you use often (snacking, cramming, avoiding). Write what it might be feeding in the long run.",
+    "source": {
+      "thinkers": [
+        "Peter Senge",
+        "Michael G. Vann"
+      ],
+      "work": "The Fifth Discipline (1990); Vann, 'Of Rats, Rice, and Race' (2003)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "second_order",
+      "delays",
+      "doomscroll_loop"
+    ]
+  },
+  {
+    "id": "shifting-burden-swipe",
+    "concept": "shifting_burden",
+    "domain": "systems",
+    "type": "swipe",
+    "hook": "What's your crutch quietly doing to the muscle underneath?",
+    "title": "Crutch or Muscle?",
+    "game": {
+      "prompt": "Does this treat the symptom, or build the real capacity?",
+      "left": "Crutch (symptom fix)",
+      "right": "Muscle (root fix)",
+      "items": [
+        {
+          "text": "A third coffee every afternoon to get through the slump",
+          "side": "left",
+          "why": "It works today, but it can hurt tonight's sleep, which deepens tomorrow's slump."
+        },
+        {
+          "text": "Moving bedtime 20 minutes earlier",
+          "side": "right",
+          "why": "If short sleep is behind the slump, this goes after the cause, not the feeling."
+        },
+        {
+          "text": "Letting a coworker always handle your hard emails",
+          "side": "left",
+          "why": "Relief now, but your own skill and confidence never get the reps."
+        },
+        {
+          "text": "Drafting the hard email yourself and asking for feedback",
+          "side": "right",
+          "why": "Uncomfortable, but each try builds the skill you were avoiding."
+        },
+        {
+          "text": "Using autocorrect for a word you never learn to spell",
+          "side": "left",
+          "why": "Harmless here. Not every crutch is bad; just know which muscle you're skipping."
+        },
+        {
+          "text": "Asking a teacher to explain the step you keep getting wrong",
+          "side": "right",
+          "why": "Help that teaches is the opposite of a crutch: it shrinks your need for help."
+        }
+      ]
+    },
+    "insight": "When a quick fix keeps solving a problem for you, the ability to solve it yourself can weaken, so you need the fix even more. Help isn't the problem; help that replaces learning is. Often the best move is to use the crutch and train the muscle at the same time.",
+    "model": "Use help that teaches. Watch for fixes you need more each month.",
+    "try_today": "Pick one thing you always outsource or avoid. Do one small piece of it yourself today, with support nearby if you need it.",
+    "source": {
+      "thinkers": [
+        "Peter Senge"
+      ],
+      "work": "The Fifth Discipline (1990)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "fixes_that_fail",
+      "self_efficacy",
+      "deliberate_practice"
+    ]
+  }
+]

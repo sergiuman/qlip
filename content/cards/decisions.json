@@ -1,0 +1,452 @@
+[
+  {
+    "id": "reversible-doors-swipe",
+    "concept": "reversible_doors",
+    "domain": "decisions",
+    "type": "swipe",
+    "hook": "You spent 40 minutes picking a lunch spot. Was that door locked?",
+    "title": "One-Way vs Two-Way Doors",
+    "game": {
+      "prompt": "If this goes wrong, can you walk back through the door?",
+      "left": "One-way door",
+      "right": "Two-way door",
+      "items": [
+        {
+          "text": "Trying a new gym class this week",
+          "side": "right",
+          "why": "Hate it? Don't go next week. Cheap to undo, so decide fast."
+        },
+        {
+          "text": "Getting a face tattoo",
+          "side": "left",
+          "why": "Hard and painful to reverse. This one deserves slow thinking."
+        },
+        {
+          "text": "Picking a paint color for your room",
+          "side": "right",
+          "why": "Paint is cheap. A weekend fixes a bad call."
+        },
+        {
+          "text": "Quitting a stable job with no savings",
+          "side": "left",
+          "why": "Hard to walk back. Slow down, gather info, maybe build a buffer first."
+        },
+        {
+          "text": "Testing a new morning routine for a week",
+          "side": "right",
+          "why": "A one-week experiment is the definition of reversible."
+        },
+        {
+          "text": "Saying something cruel in an argument",
+          "side": "left",
+          "why": "Words can be forgiven, but rarely unsaid. Pause before this door."
+        }
+      ]
+    },
+    "insight": "Most choices are two-way doors: if they go wrong, you can step back. Treating them like life-or-death costs time and energy. Save your careful thinking for the few doors that lock behind you.",
+    "model": "Ask 'Can I undo this?' Reversible: decide fast and learn. Irreversible: slow down.",
+    "try_today": "Pick one choice you've been stalling on. If it's reversible, decide it in the next 5 minutes and treat it as a test.",
+    "source": {
+      "thinkers": [
+        "Jeff Bezos"
+      ],
+      "work": "Amazon shareholder letter (2015)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "regret_minimization",
+      "premortem",
+      "impulse_pause"
+    ]
+  },
+  {
+    "id": "reversible-doors-spectrum",
+    "concept": "reversible_doors",
+    "domain": "decisions",
+    "type": "spectrum",
+    "hook": "Do you treat a menu like a marriage? Let's see where you land.",
+    "title": "How You Weigh Small Choices",
+    "game": {
+      "left": "Every door feels locked",
+      "right": "Fast on small, slow on big",
+      "questions": [
+        {
+          "q": "Choosing a show to watch tonight, I usually…",
+          "options": [
+            {
+              "label": "Scroll for 20+ minutes and feel unsure",
+              "value": -2
+            },
+            {
+              "label": "Pick one in a couple of minutes; I can switch",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Before a big move (new city, new career), I…",
+          "options": [
+            {
+              "label": "Jump in on a gut feeling",
+              "value": -1
+            },
+            {
+              "label": "Take time, talk to people who've done it",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When a small choice turns out wrong, I…",
+          "options": [
+            {
+              "label": "Replay it for days",
+              "value": -2
+            },
+            {
+              "label": "Shrug, adjust, move on",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When buying something with free returns, I…",
+          "options": [
+            {
+              "label": "Compare every review anyway",
+              "value": -1
+            },
+            {
+              "label": "Buy the good-enough one and test it",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Over-deliberator",
+          "text": "You give small choices big-choice energy. That's tiring. Try deadlines for reversible decisions and save your care for the big ones."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Mixed",
+          "text": "Sometimes you sort well, sometimes small things eat your time. The quick test 'Can I undo this?' will tip you the right way."
+        },
+        {
+          "upTo": 1,
+          "label": "Door-sorter",
+          "text": "You move fast where it's safe and slow where it matters. Keep checking that 'fast' never sneaks onto a one-way door."
+        }
+      ]
+    },
+    "insight": "Good deciders aren't always slow or fast. They match speed to stakes. Barry Schwartz's research found people who always hunt for the best option (maximizers) tend, on average, to feel less satisfied than 'good enough' pickers, though later studies show mixed results.",
+    "model": "Match your decision speed to how reversible the choice is, not how anxious it makes you.",
+    "try_today": "Set a 2-minute timer for your next small choice (food, show, outfit). When it rings, pick and don't look back.",
+    "source": {
+      "thinkers": [
+        "Jeff Bezos",
+        "Barry Schwartz",
+        "Herbert Simon"
+      ],
+      "work": "Amazon shareholder letter (2015); The Paradox of Choice (2004)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "regret_minimization",
+      "opportunity_cost"
+    ]
+  },
+  {
+    "id": "regret-minimization-80",
+    "concept": "regret_minimization",
+    "domain": "decisions",
+    "type": "reveal",
+    "hook": "You're 80, in a rocking chair. Which choice still stings?",
+    "title": "The 80-Year-Old Test",
+    "game": {
+      "prompt": "Look back from age 80. Which hurts more over the years: the risks you took that failed, or the chances you never took?",
+      "choices": [
+        "The risks that failed",
+        "The chances I never took"
+      ],
+      "reveal": "In the short run, people regret mistakes they made. Over a lifetime, the regrets that last are mostly about what they didn't do (Gilovich & Medvec, 1995). Daniel Pink's World Regret Survey found 'boldness regrets' among the most common."
+    },
+    "insight": "Failed attempts hurt, then fade: you learn, you explain them, you move on. Untaken chances stay open in your mind as 'what if'. Jeff Bezos used this test in 1994 to leave a secure job and start Amazon. Of course, it's a lens, not a license for reckless bets.",
+    "model": "From age 80, inaction usually hurts longer than a failed try. Let that tip close calls toward action.",
+    "try_today": "Write down one thing you'd regret never trying. Then write the smallest first step you could take this week.",
+    "source": {
+      "thinkers": [
+        "Jeff Bezos",
+        "Thomas Gilovich",
+        "Victoria Husted Medvec",
+        "Daniel Pink"
+      ],
+      "work": "The experience of regret (Psychological Review, 1995); The Power of Regret (2022)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "loss_aversion",
+      "reversible_doors",
+      "begin_with_end"
+    ]
+  },
+  {
+    "id": "premortem-order",
+    "concept": "premortem",
+    "domain": "decisions",
+    "type": "order",
+    "hook": "Your plan already failed. It's a year from now. Why did it?",
+    "title": "The Pre-Mortem",
+    "game": {
+      "prompt": "Put the pre-mortem steps in order.",
+      "items": [
+        "Describe the plan in one sentence",
+        "Imagine it's a year later and it failed badly",
+        "Write every reason it failed, alone and fast",
+        "Share the reasons and spot the biggest risks",
+        "Change the plan to block the top risks"
+      ],
+      "explain": "Assuming failure has already happened frees you to name problems you'd normally avoid saying out loud. Writing alone first stops the loudest voice from setting the list."
+    },
+    "insight": "A post-mortem explains a failure after it's too late. A pre-mortem does it while you can still act. Research on 'prospective hindsight' found that imagining an event has already happened helps people come up with more reasons for it (Mitchell, Russo & Pennington, 1989).",
+    "model": "Pretend it already failed, then ask why. Fix those reasons before you start.",
+    "try_today": "Take one plan for this week. Spend 3 minutes writing 'It failed because…' five times. Fix the easiest one now.",
+    "source": {
+      "thinkers": [
+        "Gary Klein",
+        "Deborah Mitchell",
+        "J. Edward Russo",
+        "Nancy Pennington"
+      ],
+      "work": "Back to the Future: Temporal Perspective in the Explanation of Events (1989); Performing a Project Premortem (Harvard Business Review, 2007)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "inversion",
+      "second_order",
+      "reversible_doors"
+    ]
+  },
+  {
+    "id": "expected-value-coin",
+    "concept": "expected_value",
+    "domain": "decisions",
+    "type": "estimate",
+    "hook": "Coin flip: win $100 or lose $40. On average, what's a flip worth?",
+    "title": "Expected Value",
+    "game": {
+      "question": "Heads you win $100, tails you lose $40. On average, how much is one flip worth?",
+      "min": -50,
+      "max": 100,
+      "step": 5,
+      "unit": "$",
+      "answer": 30,
+      "anchor": null,
+      "explain": "Expected value = chance × payoff, added up. 0.5 × $100 + 0.5 × (−$40) = $50 − $20 = $30. Over many flips, you'd average about $30 a flip."
+    },
+    "insight": "Losses tend to feel about twice as strong as equal gains (loss aversion), so some people still hesitate here. Expected value shows the math under the feeling. One flip can still lose, so only bet what you can afford to lose.",
+    "model": "Odds × payoff, added up. Take bets with positive value that you can afford to lose.",
+    "try_today": "Write two outcomes for one choice today, each with a rough chance and payoff. Multiply each pair and compare.",
+    "source": {
+      "thinkers": [
+        "Blaise Pascal",
+        "Pierre de Fermat",
+        "Annie Duke",
+        "Daniel Kahneman"
+      ],
+      "work": "Pascal–Fermat letters (1654); Prospect Theory (Kahneman & Tversky, 1979); Thinking in Bets (2018)"
+    },
+    "evidence": "strong",
+    "level": 2,
+    "related": [
+      "loss_aversion",
+      "base_rates"
+    ]
+  },
+  {
+    "id": "expected-value-resulting",
+    "concept": "expected_value",
+    "domain": "decisions",
+    "type": "choice",
+    "hook": "Bad outcome = bad decision? That one rule can quietly wreck you.",
+    "title": "Judge the Decision, Not the Dice",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your friend researched a job offer for weeks, talked to staff, checked the company's finances. Six months later, the company shuts down. They say: 'I'm so stupid for taking it.' You reply…",
+          "options": [
+            {
+              "text": "\"You decided well with what you knew. The outcome was bad luck.\"",
+              "best": true,
+              "feedback": "Yes. Separating decision quality from outcome is the whole skill. It keeps them learning instead of blaming."
+            },
+            {
+              "text": "\"Yeah, you should have seen it coming.\"",
+              "feedback": "Hindsight makes the future look obvious. If no info pointed to it, the decision wasn't the problem."
+            },
+            {
+              "text": "\"Never trust a job offer again.\"",
+              "feedback": "Understandable instinct, but it learns the wrong lesson from one roll of the dice."
+            }
+          ]
+        },
+        {
+          "scenario": "Now flip it. Someone drives home after drinking and arrives safely. Good decision?",
+          "options": [
+            {
+              "text": "No. A good outcome doesn't fix a bad bet.",
+              "best": true,
+              "feedback": "Right. The risk was real; they just got lucky. Luck doesn't make the decision wise."
+            },
+            {
+              "text": "Yes, nothing bad happened.",
+              "feedback": "That's 'resulting': grading a choice by how it turned out. It teaches people to repeat lucky mistakes."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Poker player Annie Duke calls it 'resulting': judging a decision only by its outcome. Life has luck in it. Good choices sometimes lose and bad ones sometimes win. Judge yourself on the process, and you'll learn the right lessons.",
+    "model": "Decision quality = what you knew and how you weighed it. Outcome = decision + luck.",
+    "try_today": "Pick one past choice you regret. Ask: given what I knew then, was it reasonable? Write one sentence answering.",
+    "source": {
+      "thinkers": [
+        "Annie Duke"
+      ],
+      "work": "Thinking in Bets (2018)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "self_compassion",
+      "base_rates",
+      "mistake_alchemy"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "opportunity-cost-dvd",
+    "concept": "opportunity_cost",
+    "domain": "decisions",
+    "type": "reveal",
+    "hook": "Saying 'yes' to this costs more than its price tag. Want to see?",
+    "title": "Opportunity Cost",
+    "game": {
+      "prompt": "A movie you like costs $14.99. Option A: buy it. Option B: keep the $14.99 for other things you want. Which do you pick?",
+      "choices": [
+        "Buy it",
+        "Keep the $14.99 for other things"
+      ],
+      "reveal": "In one study, 75% bought when the options were 'buy' or 'don't buy'. Adding 'keep the $14.99 for other purchases' dropped buyers to 55% (Frederick et al., 2009). Later replications found the effect, but often smaller."
+    },
+    "insight": "Every yes is a no to something else: money, time, attention. Our minds rarely show us the thing we're giving up unless someone says it out loud. Economist Frédéric Bastiat called it 'what is not seen'.",
+    "model": "The real price of a yes is the best thing it pushes out. Name it before you agree.",
+    "try_today": "Name what you're giving up before your next yes (a purchase, a meeting, an hour online). Then decide.",
+    "source": {
+      "thinkers": [
+        "Frédéric Bastiat",
+        "Friedrich von Wieser",
+        "Shane Frederick"
+      ],
+      "work": "What Is Seen and What Is Not Seen (1850); Opportunity Cost Neglect (Journal of Consumer Research, 2009)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deep_work",
+      "attention_residue",
+      "reversible_doors"
+    ]
+  },
+  {
+    "id": "circle-competence-venn",
+    "concept": "circle_competence",
+    "domain": "decisions",
+    "type": "venn",
+    "hook": "Pick one topic you give advice on. Are you inside your circle?",
+    "title": "Circle of Competence",
+    "game": {
+      "axes": [
+        {
+          "key": "K",
+          "label": "Proven knowledge",
+          "color": "#0EA5E9"
+        },
+        {
+          "key": "C",
+          "label": "Confidence",
+          "color": "#F97316"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Think of one topic you give advice on. I've had real results in it, not just opinions.",
+          "axis": "K"
+        },
+        {
+          "q": "I can explain where my knowledge on it stops.",
+          "axis": "K"
+        },
+        {
+          "q": "People who know more than me would mostly agree with my advice.",
+          "axis": "K"
+        },
+        {
+          "q": "I feel sure when I talk about it.",
+          "axis": "C"
+        },
+        {
+          "q": "I'd make a big decision on it without asking anyone.",
+          "axis": "C"
+        },
+        {
+          "q": "I often say 'I'm not sure' on this topic.",
+          "axis": "C",
+          "invert": true
+        }
+      ],
+      "threshold": 0.55,
+      "results": {
+        "": {
+          "name": "The Explorer",
+          "text": "You're early on this topic and you know it. That's honest. Learn by asking people inside their circle, and keep decisions small and reversible for now."
+        },
+        "C": {
+          "name": "Edge Walker",
+          "text": "Your confidence is ahead of your track record. That's where mistakes live. Before big calls, ask someone with results to check you."
+        },
+        "K": {
+          "name": "Quiet Expert",
+          "text": "You know more than you claim. Humility is good, but your knowledge could help others. Share it, and note where it ends."
+        },
+        "CK": {
+          "name": "Inside the Circle",
+          "text": "Confidence and proof line up. Great. Your job now is guarding the border: notice when a question drifts outside what you've tested."
+        }
+      }
+    },
+    "insight": "Warren Buffett's rule: the size of your circle matters less than knowing where its edge is. Socrates made the same point 2,400 years ago: wisdom starts with knowing what you don't know. Trouble comes when confidence spreads wider than real knowledge.",
+    "model": "Know the edge of what you know. Act boldly inside it; ask, test, or pass outside it.",
+    "try_today": "Write one topic where you're truly competent and one where you only feel confident. Ask an expert one question on the second.",
+    "source": {
+      "thinkers": [
+        "Warren Buffett",
+        "Socrates"
+      ],
+      "work": "Berkshire Hathaway shareholder letter (1996); Plato, Apology"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "socratic_ignorance",
+      "confirmation_bias",
+      "deliberate_practice"
+    ]
+  }
+]
