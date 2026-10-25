@@ -1,0 +1,40 @@
+[
+ {
+  "session": 1,
+  "at": "2026-10-25T22:23:44+00:00",
+  "automated": 49.2,
+  "panel": null,
+  "composite": 49.2,
+  "delta": null,
+  "passed": true,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 10.0,
+   "console": 5,
+   "overflow": 3,
+   "a11y": 7.0,
+   "readability": 5,
+   "actionable": 3.3,
+   "sourced": 2.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.91,
+   "domain_balance": 1.99
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 97,
+   "played_ok": 97,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 0,
+   "flesch_avg": 74.2,
+   "try_today_verb_rate": 0.825,
+   "sensitive_cards": 20,
+   "first_card_ms": 345,
+   "edges": 241
+  },
+  "panel_detail": {},
+  "note": "baseline: 97 cards from 12 author+reviewer agents"
+ }
+]

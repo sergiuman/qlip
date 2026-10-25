@@ -101,12 +101,19 @@ def main():
     ap.add_argument("--session", type=int, required=True)
     ap.add_argument("--panel")
     ap.add_argument("--note", default="")
+    ap.add_argument("--keep-auto", action="store_true", help="reuse this session's earlier automated snapshot (taken before fixes)")
     a = ap.parse_args()
-    auto, detail = automated()
+    hist = json.loads(HIST.read_text()) if HIST.exists() else []
+    old = next((h for h in hist if h["session"] == a.session), None)
+    if a.keep_auto and old:
+        auto, detail = old["breakdown"], old["detail"]
+        a.note = a.note or old.get("note", "")
+    else:
+        auto, detail = automated()
     auto_total = round(sum(auto.values()), 2)
     pscore, pdetail = panel_score(a.panel)
-    hist = json.loads(HIST.read_text()) if HIST.exists() else []
-    prev = hist[-1]["composite"] if hist else None
+    hist_before = [h for h in hist if h["session"] < a.session]
+    prev = hist_before[-1]["composite"] if hist_before else None
     composite = round(auto_total + (pscore if pscore is not None else 0), 2)
     row = {"session": a.session, "at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "automated": auto_total,
            "panel": pscore, "composite": composite, "delta": None if prev is None else round(composite - prev, 2),

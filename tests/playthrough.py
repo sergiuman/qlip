@@ -42,6 +42,7 @@ def main():
     shots = None
     if "--shots" in sys.argv:
         shots = Path(sys.argv[sys.argv.index("--shots") + 1]); shots.mkdir(parents=True, exist_ok=True)
+    shoot = set(sys.argv[sys.argv.index("--shoot") + 1].split(",")) if "--shoot" in sys.argv else set()
     cards = json.loads((ROOT / "data" / "qlip.json").read_text())["cards"]
     server = subprocess.Popen(["node", str(ROOT / "tests" / "serve.mjs"), str(PORT)], stdout=subprocess.DEVNULL)
     time.sleep(0.8)
@@ -74,8 +75,11 @@ def main():
                     report["failed"].append(c["id"])
                 if page.evaluate("document.documentElement.scrollWidth > innerWidth + 1"):
                     report["overflow"].append(c["id"])
-                if shots and i < 12:
-                    page.locator(f'section.qlip[data-id="{c["id"]}"]').screenshot(path=str(shots / f"{i+1:02d}-{c['id']}.png"))
+                if shots and (c["id"] in shoot if shoot else i < 12):
+                    sec = page.locator(f'section.qlip[data-id="{c["id"]}"]')
+                    sec.screenshot(path=str(shots / f"{c['id']}-a.png"))
+                    sec.locator(".qlip-body").evaluate("el => el.scrollTop = el.scrollHeight")
+                    sec.screenshot(path=str(shots / f"{c['id']}-b.png"))
             # accessibility: axe-core on the played feed card, tracks and map, in both colour schemes
             axe = (ROOT / "tests" / "node_modules" / "axe-core" / "axe.min.js").read_text()
             report["a11y"] = []
