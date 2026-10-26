@@ -265,7 +265,7 @@
     "try_team": "For one week, when anyone in your family, class or team says 'I can't', the others add a friendly '…yet?' and ask for the next step.",
     "from_source": {
       "quote": "Men become builders by building and lyre-players by playing the lyre.",
-      "cite": "Aristotle, Nicomachean Ethics II.1, trans. W. D. Ross (1908)",
+      "cite": "Aristotle, Nicomachean Ethics II.1, trans. W. D. Ross (1925)",
       "next_read": "Nicomachean Ethics, Book II, chapters 1-4 (on how virtues are acquired by practice)"
     }
   },
@@ -934,10 +934,11 @@
     "try_today": "Tonight, write two lines about today: one thing that worked, and one small thing you'll do differently tomorrow.",
     "source": {
       "thinkers": [
-        "Richard Boyatzis",
-        "Annie McKee"
+        "David Kolb",
+        "Donald Schön",
+        "Seneca"
       ],
-      "work": "Resonant Leadership (2005)"
+      "work": "Kolb, Experiential Learning (1984); Schön, The Reflective Practitioner (1983); Seneca, On Anger III.36"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -946,6 +947,11 @@
       "deliberate_practice",
       "self_efficacy"
     ],
-    "try_team": "End your next team, class or family task with 5 minutes: what worked, what didn't, one change to try next time. No blame."
+    "try_team": "End your next team, class or family task with 5 minutes: what worked, what didn't, one change to try next time. No blame.",
+    "from_source": {
+      "quote": "What bad habit have you put right today? What fault have you resisted? In what respect are you better?",
+      "cite": "Seneca, On Anger III.36, quoting Sextius (paraphrased from the Basore translation, 1928)",
+      "next_read": "Seneca, On Anger, Book III, ch. 36 (one page)"
+    }
   }
 ]

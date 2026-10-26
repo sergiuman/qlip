@@ -1,0 +1,621 @@
+{
+ "session": 7,
+ "personas": [
+  {
+   "persona": "Maya, 16, Manchester sixth-former. Lives on TikTok, bins anything that smells like a lesson. Stays only if it's quick, surprising and about her life.",
+   "scores": {
+    "hook": 6,
+    "clarity": 7,
+    "usefulness": 6,
+    "safety": 9,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "stockdale-paradox-dream-vs-obstacle-choice",
+     "severity": "high",
+     "problem": "Step 1 (exam) is about me, then it turns into a boss asking for a project update and then someone getting over a knee op with 'At my age, why bother?'. Two out of three steps are a middle-aged person's life, so I'm gone by step 2. The card was about me and then it wasn't.",
+     "fix": "Replace step 2 with: scenario \"You've got team trials in four weeks and you're the slowest in the group. What do you tell yourself?\" options: \"I'll smash it, I just need to believe.\" (feedback: \"Feels good, but belief on its own can let you relax before the work is done.\") / BEST \"I'm slower right now. If it's Tuesday or Thursday, I do sprints after school. I'll get there.\" (feedback: \"Best. Honest fact, a plan, and faith in the ending.\") / \"I'm just slow, no point.\" (feedback: \"Honest about today, but it turns a fact into a verdict.\"). Replace step 3 with a sprained ankle before the season: \"I'll be back for Saturday's match\" / BEST \"It'll be slow and some days it'll ache. I'll do my physio daily, and I'll get back.\" / \"My season's ruined, why bother?\" Move the boss and knee-op versions to adult-only variants."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "When you score 0 on a multi-step card, the biggest text on screen is \"0/3. The trick is below.\" (seen on fixes-that-fail-backfire, and on view-feed-dark for the friendship card). It reads like a test mark in huge font, which is exactly the school feeling that makes me close the app. The Stockdale card's \"3/3. You'd coach this.\" is fine, but a big zero feels like being told off.",
+     "fix": "In app.js, for multi-step choice and swipe results where score === 0, don't show the number in the headline. Show \"Sneaky one. Here's the trick.\" or \"These fool almost everyone. Here's why.\" Keep 'N/M' only when N >= 1, and put it in the small mono label above the headline instead of in the H2."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Venn cards (wso-triad-venn, mpc-loop-pcf-venn): when every axis is 5/10, the 'you' dot sits outside all three circles in the bottom-left corner, so it looks like I scored zero and I'm nowhere. The two cards also handle the same all-middle answers differently: wso shows 'The Half-Lit Path' and mpc shows an app-made 'Right on the fence'. Six agree/disagree lines also take well over 30 seconds.",
+     "fix": "In app.js, when all axes are within ±1 of the threshold, put the dot at the centre of the triple overlap and use the card's 'mid' result. Add a 'mid' result to mpc-loop-pcf-venn: name \"Half-switched on\", text \"All three are half-on today. Pick one: notice three new things on the way home (Perceive), or ask 'what else could this mean?' once (Appraise).\" Cut both cards to 3 questions, one per axis (wso: 'I actually want this.' / 'I know the first step.' / 'I have the time and stuff to start this week.')."
+    },
+    {
+     "card_id": "useful-truth-people-person",
+     "severity": "medium",
+     "problem": "The hook is great, then I get a dense prompt with William James and Peirce in it, two options where the right one obviously includes the wrong one ('Reflecting' vs 'Reflecting, then…'), and a 60-word reveal. It feels like an RE essay question. The 'Not quite. The green one.' headline also makes me feel thick for an answer that was a trick.",
+     "fix": "Prompt: \"You reckon you're 'not a people person'. What's the best way to actually find out?\" Choices: [\"Think back over every awkward convo you've had\", \"Try one tiny thing for a week: say hi to one new person a day\"], answer 1. Reveal (max 2 sentences): \"Thinking only replays old evidence, and beliefs like this steer you away from new evidence. William James's test: act as if it might be false, then see what happens.\" Move the Peirce/Russell detail to 'Why?'."
+    },
+    {
+     "card_id": "fixes-that-fail-backfire",
+     "severity": "medium",
+     "problem": "The hook is good, but step 1 opens with 'Mexico City, 1989' and number-plate laws. That's a history lesson and I scroll. Step 3 is about minimum card repayments, which isn't my life. The Sunday lie-in step is the one that hits, and it's buried in the middle.",
+     "fix": "Reorder so the Sunday lie-in is step 1. Replace step 3 with: scenario \"Homework's due in an hour, so you copy a mate's answers. What grows?\" options: \"Nothing, it's handed in\" (feedback: \"Real relief tonight. But the gap in what you get keeps growing underneath.\") / BEST \"The bit you don't understand, which shows up in the test\" (feedback: \"Yes. The fix ends tonight's panic and feeds next month's.\"). Move Mexico City to step 3 and start it with \"Plot twist from real life:\"."
+    },
+    {
+     "card_id": "hedonic-adaptation-fade-swipe",
+     "severity": "medium",
+     "problem": "The items are a pay rise or promotion, retiring somewhere sunny, and a long daily commute. None of that is my life, so I can't feel the 'fades or sticks' bit, which is the whole point of the game. The new phone is the only one that lands.",
+     "fix": "Replace the items: \"Your pay rise or promotion\" -> \"The money from your first Saturday job\" (left, \"Soon it's just normal money and your wants rise to match.\"); \"Retiring to a sunnier place\" -> \"Getting the bigger bedroom\" (left, \"A week later it's just your room.\"); \"Long daily commute\" -> \"A 50-minute bus to college every day\" (right, \"People don't seem to fully get used to long daily journeys (Stutzer & Frey, 2008).\"). Keep the phone and 'time with people you like'."
+    },
+    {
+     "card_id": "never-miss-twice-reveal-reframing",
+     "severity": "low",
+     "problem": "Try today ('Pause and reframe it: A chance to learn and improve.') sounds like a classroom poster, and it doesn't match the card's actual trick, which is doing a tiny version the very next day. The two choices also make the answer obvious, so there's nothing to guess.",
+     "fix": "try_today: \"Skipped something yesterday? Before bed, do its 2-minute version: one page, ten push-ups or one scale. That's it.\" Add a third, tempting choice: \"\\\"I'll do double tomorrow to make up for it.\\\"\", and add to the reveal: \"Doubling up sounds keen, but it makes tomorrow feel heavier. Tiny today wins.\""
+    },
+    {
+     "card_id": "reframing-late-text",
+     "severity": "low",
+     "problem": "Amazing hook (that 11pm text is literally my nightmare), but the scenario opens with 'Your manager', so for a second it feels like it's not for me.",
+     "fix": "Change step 1 scenario to: \"11pm. Your best mate (or your partner, or your boss) texts: 'We need to talk. Tomorrow?' No context. Your heart speeds up. What do you tell yourself?\""
+    }
+   ],
+   "best_cards": [
+    "spotlight-effect-tshirt-estimate",
+    "goal-directed-perception-gorilla",
+    "reframing-late-text"
+   ],
+   "verdict": "The guess-the-number cards are the real deal. The cringe T-shirt one and the 83% of doctors who missed a gorilla made me go \"wait, what\", and I'd send both to the group chat. The reframing card's 11pm text hook is literally me. The tone is kind everywhere, and nothing made me feel bad except the big \"0/3\" headline. It loses me in two ways: (1) too many cards slide into adult life (bosses, knee ops, retiring, loan repayments, commutes) or into a history or philosophy lesson (Mexico City 1989, William James and Peirce); (2) the Venn and quiz cards make me rate six statements before anything fun happens, and then my dot lands outside all the circles. Make every scenario something a 16-year-old does this week, and get the surprise in before the 10-second mark. Then I'd keep swiping. Right now I'd play about 4 of these and drift off."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj, non-native English, tired and somewhat burned out. Wants tools he can use tomorrow with his team and on himself, and has no patience for fluff.",
+   "scores": {
+    "hook": 6,
+    "clarity": 7,
+    "usefulness": 6,
+    "safety": 7,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "fixes-that-fail-backfire",
+     "severity": "high",
+     "problem": "Step 3 says the debt total grows when you pay only the minimum. On most cards and loans the minimum covers the interest plus a small part of the principal, so the balance goes down slowly. It does not grow. A manager who knows finance stops trusting the whole app here, and someone with real money stress gets a wrong and scary message.",
+     "fix": "Rewrite step 3. Scenario: 'Money is tight, so you pay only the minimum on a card each month. What's the hidden side effect?' Option A (not best): 'None, the minimum keeps it under control' / feedback: 'It keeps the letters away, which is real relief. But most of each payment goes to interest, so the debt barely moves.' Option B (best): 'The debt lasts years longer and costs far more in interest' / feedback: 'Yes. Today's relief stretches the problem out. Even a small amount above the minimum shortens it a lot. If it feels stuck, free debt advice services can help.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Venn results are shown wrongly. With Will/Skill/Opportunity at 5/10 each (and the same for Perceive/Appraise/Recalibrate), the black dot sits outside all three circles in the bottom-left corner. Visually that says 'you have nothing', but the text says 'half-lit'. I trusted the dot more than the text and felt judged.",
+     "fix": "In the venn renderer, place the dot by the scores: when all three axes are at or near the threshold, put it at the centre of the three-way overlap with reduced opacity, or hide it. Only draw it outside the circles when every axis is below 0.3."
+    },
+    {
+     "card_id": "mpc-loop-pcf-venn",
+     "severity": "high",
+     "problem": "The card has no 'mid' result, so all-middle answers fall back to the generic app text 'Right on the fence... Pick one specific goal (\"run 5 km\", \"learn 3 guitar chords\") and play again'. These questions are about how I perceive situations, not about a goal, so the advice makes no sense here. The headline 'Your lens might be fogged' then delivers nothing usable.",
+     "fix": "Add to results: \"mid\": {\"name\": \"Half-tuned loop\", \"text\": \"Today every step scores in the middle. That's normal when you're busy. Take one situation from this week that annoyed you and ask the Appraise question: 'what else could this mean?' Write two answers.\"}. Also change the app.js fallback (line 340) so it no longer mentions goals: 'Every answer landed in the middle, so no step stands out yet. Play again thinking of one specific recent situation.'"
+    },
+    {
+     "card_id": "stockdale-paradox-christmas-reveal",
+     "severity": "medium",
+     "problem": "The model 'Never doubt the ending' is absolute. For someone with a serious illness, a dying parent or a failing company, 'never doubt' can be false and can produce guilt ('I doubted, so I failed'). The card is marked sensitive, but this line still reads like an order. 'Brutal fact' language is also heavy for a burned-out reader at night.",
+     "fix": "Model: 'Keep faith you can get through it. Face the facts honestly. Drop deadlines you don't control.' try_today: 'Pick one hard thing you're waiting out. Write one honest fact about it, then one line about what will help you get through. Cross out any date you can't control.' In insight, change 'Keep faith in the ending' to 'Keep faith that you can endure'."
+    },
+    {
+     "card_id": "never-miss-twice-reveal-reframing",
+     "severity": "medium",
+     "problem": "try_today is a generic poster slogan ('Pause and reframe it: A chance to learn and improve.') that has nothing to do with the never-miss-twice model. It gives me no action for tonight. The id also says 'reframing', which is confusing.",
+     "fix": "Replace try_today with: 'Name the habit you last skipped. Write its 2-minute version (one page, ten push-ups, open the file) and do it before you sleep tonight.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "After a choice game the big headline says '0/3. The trick is below.' In large type, a zero score after I tried in good faith feels like a school test. That is the opposite of 'always leaves the player better off', especially on sensitive cards like stress or reframing.",
+     "fix": "In app.js choice() (around line 454), drop the number when best < total. Use '{best}/{total}' only when best >= total-1. Otherwise use the headline 'Here's the move that works' (best 0) or 'Close. One more trick below.' (best = 1). Keep 'You'd coach this.' for a perfect score."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Too many scenarios are for students or teenagers ('In class you answer...', 'Your big exam in three weeks', 'mess in your room', 'revise for a test'). As a 44-year-old manager, by the 5th school example I feel this app is not for me, even though the models are good for work.",
+     "fix": "Add an adult or work option wherever only school appears. spotlight-effect-slip-choice step 1: 'In a meeting (or in class) you answer confidently, and it's wrong. A couple of people smile. Next time, you...'. stockdale-paradox-dream-vs-obstacle-choice step 1: 'A big exam or certification is in three weeks and you're behind...'. wso-triad-venn prompt: 'Pick your thing: a work project, a certification, a side project, an instrument, getting fitter, or something else.' responsibility-meaning-pick-your-load item 3: 'The mess on your desk, inbox or room that's been bugging you'."
+    },
+    {
+     "card_id": "system1-system2-who-drives",
+     "severity": "low",
+     "problem": "Scoring is uneven and partly wrong. 'Draft it, send later' is a classic slow (owl) behaviour but scores 0. On the maths question, 'Estimate roughly' scores -1 while the other questions use only -2/0/2. That pushes people towards 'Shared' or 'Hare' without good reason.",
+     "fix": "Q1 options: 'Reply right away' -2, 'Reply after a quick reread' 0, 'Draft it, send later' 2. Q4: change 'Estimate roughly in my head' to value 0, so every question uses -2/0/2."
+    }
+   ],
+   "best_cards": [
+    "reframing-late-text",
+    "delays-shower",
+    "wso-triad-venn"
+   ],
+   "verdict": "Some cards here I can really use tomorrow. The \"We need to talk\" reframe and its team rule (add one line of context before sending \"Can we talk?\"), the shower-delay card with its \"agree a review date, don't touch the knob\" rule, and the Will/Skill/Opportunity pairing exercise are practical and short, and I will try them with my team. Sources are honest and the tone is mostly kind. But too much of the feed is written for students, so I feel like a guest. Some details break my trust: the wrong statement that debt grows on minimum payments, a Venn dot telling me I'm outside every circle when I scored 5/10, a fallback result about \"run 5 km\" on a perception quiz, and a big \"0/3\" headline when I'm already tired. Fix those and add work scenarios, and this goes from \"nice\" to something I recommend to other managers. Today it is a solid 6, not yet a 7."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and has little patience for pop-psych slogans.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 6,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "never-miss-twice-reveal-reframing",
+     "severity": "high",
+     "problem": "The Try Today line ('Small setback? Pause and reframe it: A chance to learn and improve.') is a greeting-card platitude. It also contradicts the card's own model, which is 'come back the next day with a tiny version'. It is the one part I am meant to act on, and it tells me nothing to do.",
+     "fix": "Replace try_today with: \"Missed something this week? Write its two-minute version (one page, ten push-ups, one scale) and do it before bed tonight. That's the whole task.\""
+    },
+    {
+     "card_id": "self-reflection-loop-example",
+     "severity": "high",
+     "problem": "The source is wrong for the idea. Boyatzis & McKee's Resonant Leadership is about leaders renewing themselves, not the do-review-change-retry cycle. That cycle is Kolb's experiential learning cycle and Schön's reflective practice. The card also skips the best classical source: Seneca's nightly self-examination.",
+     "fix": "Set source.thinkers to [\"David Kolb\", \"Donald Schön\", \"Seneca\"] and source.work to \"Kolb, Experiential Learning (1984); Schön, The Reflective Practitioner (1983); Seneca, On Anger III.36\". Add from_source: {quote: \"What bad habit have you cured today? What failing have you resisted? In what respect are you better?\", cite: \"Seneca, On Anger III.36 (paraphrasing Sextius)\", next_read: \"Seneca, On Anger, Book III, ch. 36 (one page)\"}. Check the wording against a named translation before shipping."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "In the screenshot, the reveal header for a 'wrong' pick says 'Not quite. The green one.' The body underneath says 'Picked happier? You're partly right' (hedonic-adaptation-lottery-reveal). The header calls my answer wrong and the text then calls it partly right. On cards where the honest answer is nuanced this feels like a gotcha, and the header is curt.",
+     "fix": "Add an optional per-card field game.miss_header and render it in place of the generic header when it is set. For hedonic-adaptation-lottery-reveal set it to \"Partly right. Here's the twist.\" For useful-truth-people-person set it to \"Reflection is a start. Here's what it misses.\" Change the generic fallback from \"Not quite. The green one.\" to \"Close. The green one fits the study best.\""
+    },
+    {
+     "card_id": "useful-truth-people-person",
+     "severity": "medium",
+     "problem": "The choice is rigged: 'Reflecting carefully' against 'Reflecting, then living a week as if it might be false'. The second contains the first plus more, so there is nothing to think about. The card also blurs Peirce, who wrote about meaning, with James, who wrote about truth. And it carries the sensitive flag, so a card about pragmatism ends with a helpline footer, which reads as patronising.",
+     "fix": "Change choices to [\"Think harder about past evidence\", \"Ask three friends if it's true\", \"Act for one week as if it might be false, and watch what happens\"] with answer 2. Rewrite the reveal's second sentence to: \"Peirce said an idea's meaning lies in its practical effects; James went further and said its truth is worked out in experience.\" Remove \"sensitive\": true."
+    },
+    {
+     "card_id": "responsibility-meaning-pick-your-load",
+     "severity": "medium",
+     "problem": "The Peterson attribution is loose. Rule 6 of 12 Rules for Life is 'Set your house in perfect order before you criticize the world'; 'clean your room' comes from his lectures. Frankl is listed as a thinker but never used. 'Your reliability is fully yours' overstates Epictetus, for whom only our judgements and choices are fully ours; illness and circumstance can break reliability.",
+     "fix": "Change the room item's why to: \"Peterson's Rule 6: 'Set your house in perfect order before you criticize the world.' Start with what's in reach, then take on more.\" Change the first item's why to: \"Your effort and honesty with them are yours to choose. That's where meaning starts.\" Either drop Viktor Frankl from source.thinkers, or add to the insight: \"Frankl saw people endure almost anything when they had a 'why'.\""
+    },
+    {
+     "card_id": "goal-directed-perception-gorilla",
+     "severity": "medium",
+     "problem": "Jordan Peterson and Maps of Meaning appear in source.thinkers and source.work, but nothing on the card uses him. That is name-dropping. The model line 'Change what you're looking for and the world rearranges' also overreaches: the study shows what you notice changes, not the world.",
+     "fix": "Remove \"Jordan Peterson\" and \"; Peterson, Maps of Meaning (1999)\" from source, or add a sentence to the insight that actually uses his argument that we perceive through our aims. Rewrite model to: \"Your aim is a filter. Change what you're looking for and you'll notice a different world.\""
+    },
+    {
+     "card_id": "stockdale-paradox-dream-vs-obstacle-choice",
+     "severity": "medium",
+     "problem": "The card mixes two ideas under the stockdale_paradox concept. Step 1 is Oettingen's mental contrasting (WOOP), which is a separate, experimental idea. The insight is then about Oettingen alone, so a reader leaves thinking Stockdale's paradox is a laboratory finding.",
+     "fix": "Change the title to \"Hope Plus the Wall\" and the insight to: \"Stockdale's lesson (one man's account) and Oettingen's studies point the same way: in her experiments, people who paired a wish with its obstacle tried harder than pure daydreamers. Modest but replicated effects.\" Consider moving the card's concept to mental_contrasting with stockdale_paradox listed in related."
+    },
+    {
+     "card_id": "system1-system2-who-drives",
+     "severity": "low",
+     "problem": "Every 'slow' answer is also the morally approved one (check another source, sleep on it, reread calmly), so the quiz measures how virtuous I want to look rather than my style. That undercuts the card's own line that 'neither speed is better'.",
+     "fix": "Replace the 17×24 question with one where fast is right: q: \"A friend asks which of two near-identical coffees you'd like.\" options: [{label: \"Pick one instantly\", value: -2}, {label: \"Pick after a glance\", value: 0}, {label: \"Weigh price, size and taste\", value: 2}]. In the Owl-led zone text, change 'Great for big calls.' to 'Useful for big calls, costly for small ones.'"
+    }
+   ],
+   "best_cards": [
+    "fixes-that-fail-backfire",
+    "reframing-late-text",
+    "habit-loop-66-days"
+   ],
+   "verdict": "Better than I expected. Most cards name their sources honestly and admit when something is 'one man's account' or 'not a validated scale', and the primary-source quotes (Seneca's Letter 13, Senge's laws, William James on attention) are what earn my respect. The games are fair and clear, and the systems cards (Mexico City, the shower) teach something real that I can use. Where it falls short is depth and precision. A few cards drop famous names they never use (Peterson on the gorilla card, Frankl on the load card), one cites the wrong source for its central idea (reflection loop), and the 'never miss twice' card ends on a platitude where an action should be. The interface sometimes calls a nuanced answer simply wrong, and the helpline footer on philosophy cards talks down to the reader. It's a solid start toward a playful Peterson Academy. To earn a 9 from me it needs one more pass for scholarly accuracy and fewer slogans."
+  },
+  {
+   "persona": "Sam, 24, a graduate dealing with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures. Needs the app to feel safe and genuinely helpful.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Multi-step choice cards end with a big underlined score headline. When I miss every best answer I get '0/2. The trick is below.' in the largest text on the screen (screenshot reframing-late-text-a). This happened on the reframing card, which is about anxious 11pm thoughts, and those first answers were honest descriptions of how I actually react. Seeing a zero in huge type right after admitting that feels like being graded and failed. It undoes the gentle feedback lines above it.",
+     "fix": "In app.js lines 452-454, stop showing the count when best < total. Replace `{ name: `${best}/${total}. The trick is below.` }` with `{ name: best === 0 ? \"Here's the move that helps most\" : `${best} of ${total} spotted. Here's the rest` }`, and use `{ name: \"You spotted every one\" }` for full marks in place of \"You'd coach this.\" For cards with sensitive:true, never show a number and use only \"Here's the move that helps most\"."
+    },
+    {
+     "card_id": "mpc-loop-pcf-venn",
+     "severity": "high",
+     "problem": "When every answer lands at 5/10, the card has no 'mid' result, so the app shows its generic fallback: 'Right on the fence ... Pick one specific goal (\"run 5 km\", \"learn 3 guitar chords\") and play again'. This card is about perception, not a goal, so the advice makes no sense. It reads like 'you did it wrong, do it again', which is exactly what an unsure person does not need (screenshot mpc-loop-pcf-venn-a/b).",
+     "fix": "Add game.results.mid: {\"name\": \"Balanced today\", \"text\": \"Today all three steps sit in the middle, which is common when you're unsure how to rate yourself. That's fine. Pick the one that felt hardest to answer and try it this week: one minute noticing (Perceive), one second explanation (Appraise), or one small change (Recalibrate).\"}"
+    },
+    {
+     "card_id": "never-miss-twice-reveal-reframing",
+     "severity": "medium",
+     "problem": "The Try Today text ('Small setback? Pause and reframe it: \"A chance to learn and improve.\"') doesn't match the card's lesson, which is to restart with a tiny version tomorrow. It also sounds like a poster slogan. When I'm low, being told to call a miss 'a chance to improve' feels like forced positivity and does nothing.",
+     "fix": "Replace try_today with: \"Missed something this week? Do its tiniest version today (one page, five push-ups, one minute) and tick this box. That counts.\""
+    },
+    {
+     "card_id": "responsibility-meaning-pick-your-load",
+     "severity": "medium",
+     "problem": "The model ('pick up as much of what is yours as you can bear') and the insight ('pick up the heaviest load you can actually carry') push hard for someone already overwhelmed. The 'mess in your room' item, with its Peterson framing, can read as a quiet 'sort your life out' jab. The card risks adding weight instead of sorting it.",
+     "fix": "Change model to: \"Put down what isn't yours, then pick up one piece of what is, sized for the energy you have today.\" Change the insight's middle sentence to: \"Peterson argues meaning grows from responsibility you choose, starting small and adding more as you get stronger.\" Change the room item's why to: \"A small, visible win that's fully yours. Peterson's advice: start with what's in front of you, then build.\""
+    },
+    {
+     "card_id": "stockdale-paradox-christmas-reveal",
+     "severity": "medium",
+     "problem": "Try Today asks me to write 'one line of brutal fact' about a hard thing I'm waiting out. For an anxious person, 'brutal fact' invites a spiral of worst cases rather than an honest, bounded statement. The try_team text repeats 'brutal facts'.",
+     "fix": "Change try_today to: \"Pick one hard thing you're waiting out. Write one honest, plain fact about where it stands today, then one line of faith about the ending. Cross out any date you can't control.\" In try_team, replace \"three brutal facts\" with \"three honest facts\"."
+    },
+    {
+     "card_id": "useful-truth-people-person",
+     "severity": "medium",
+     "problem": "The question ('Which test adds something reflection alone can't?') is abstract and the answer is obvious, so it feels like a trick rather than a game. The reveal runs to four sentences of philosophy. The 'not a people person' belief is close to home, and the card never offers a concrete small test I could actually try.",
+     "fix": "Change the prompt to: \"You believe 'I'm not a people person.' How could you actually find out?\" Set choices to [\"Think back over every awkward moment\", \"Try one tiny, low-stakes chat this week and see what happens\"]. Cut the reveal to: \"The second. William James said an idea shows its meaning in what happens when you act on it. Beliefs like this can keep themselves alive by steering us away from the moments that would test them. One small test, like asking a barista how their day is, tells you more than an evening of replaying.\""
+    },
+    {
+     "card_id": "spotlight-effect-tshirt-estimate",
+     "severity": "low",
+     "problem": "Try Today ('ask one person if they noticed') is a real exposure step. For a socially anxious player it may be too big a first move, with no gentler option, and the card has no sensitive flag or helpline footer.",
+     "fix": "Change try_today to: \"Next time you feel everyone saw your slip, write your guess of how many noticed. If it feels OK, ask one person you trust if they did; if not, just check tomorrow whether anyone mentioned it.\" Add \"sensitive\": true."
+    },
+    {
+     "card_id": "fixes-that-fail-backfire",
+     "severity": "low",
+     "problem": "The minimum-payment debt step can hit hard for a graduate who is struggling with money. The card explains why the debt grows but offers nothing useful for someone in that situation, so it may just leave me with more dread.",
+     "fix": "Change the best option's feedback to: \"Yes. The minimum fixes this month and feeds the debt. If this is you, you're not alone: a free debt advice service can help you plan a way out without judgement.\" Add \"sensitive\": true so the support footer shows."
+    }
+   ],
+   "best_cards": [
+    "reframing-late-text",
+    "spotlight-effect-slip-choice",
+    "wso-triad-venn"
+   ],
+   "verdict": "Mostly feels safe and kind. The feedback lines start with 'understandable' and 'very common', the results say 'today' and 'not a verdict', and the helpline footer on the heavy cards made me feel looked after. Reframing, the spotlight slip card and the Half-Lit Path result gave me things I can actually use tonight. Three things break that trust. The big '0/2' score headline lands right after I've admitted my anxious first reactions. The perception Venn falls back to a 'pick a goal and play again' message that doesn't fit the card. A few cards push 'brutal facts' or 'the heaviest load you can bear' at someone already worn out. Fix the score headline and those texts, and I would keep scrolling and probably share the reframing card with a friend."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist. I check attributions, effect sizes and whether a self-report game's results actually follow from its items.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "fixes-that-fail-backfire",
+     "severity": "high",
+     "problem": "Step 3 is factually wrong for most borrowers. Minimum payments in the UK, and on most US cards, cover the interest plus about 1% of the balance, so the balance falls, just very slowly. The 'best' answer says 'The total you owe' grows and the feedback says interest 'keeps adding to the balance'. That is inaccurate financial content, and it may frighten people who are already in debt.",
+     "fix": "Change the best option to: \"The total you'll pay over time, because most of each payment goes on interest and the balance barely shrinks.\" Change its feedback to: \"Yes. The minimum eases this month, but it can take years to clear and costs far more in interest. Paying even a little over the minimum shortens that a lot.\" Change the other option's feedback to: \"It keeps the letters away, which is real relief. But most of the payment goes on interest, so the debt lingers for years.\""
+    },
+    {
+     "card_id": "mpc-loop-pcf-venn",
+     "severity": "high",
+     "problem": "The card has no 'mid' result, so a middling player gets app.js's generic fallback: 'Pick one specific goal (\"run 5 km\", \"learn 3 guitar chords\") and play again'. The screenshot shows this. These items ask about perception habits, not a goal, so the result does not follow from the answers. The hook also promises to find where your 'lens' is fogged in 30 seconds. Six self-report items about an unvalidated house model cannot do that.",
+     "fix": "Add results.mid = {\"name\": \"Evenly balanced today\", \"text\": \"Every step scored near the middle, so no single weak spot stands out. Pick one recent surprise and ask: did I miss it (Perceive), misread it (Appraise), or fail to adjust (Recalibrate)?\"}. Change the hook to: \"Perceive, appraise, adjust: which step do you lean on least? A quick self-check.\""
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "medium",
+     "problem": "The scoring makes a neutral answer count as a strong pillar. The threshold is 0.5 and the test is >=, so answering 'neither' (2/4 = 0.5) on Will puts the player in a region whose text says 'the want is strong' or 'you want it and can do it'. For example, Will 0.5, Skill 0.5, Opportunity 0.375 returns 'Ready, Door Closed'. The result names claim more than the answers support. The same threshold appears in mpc-loop-pcf-venn.",
+     "fix": "Set \"threshold\": 0.6 in both wso-triad-venn and mpc-loop-pcf-venn, so a pillar needs at least one 'agree' to count as lit. Also, in app.js regionOf, consider changing sc[k] >= th to sc[k] > th."
+    },
+    {
+     "card_id": "never-miss-twice-reveal-reframing",
+     "severity": "medium",
+     "problem": "The try_today ('Small setback? Pause and reframe it: A chance to learn and improve.') is a generic positive-thinking line that has nothing to do with the model, which is to do a tiny version the next day. The reveal's 'Most people find the second one gets them moving' is an unsupported claim. There is real evidence for the point: Lally et al. (2010) found that missing one opportunity did not materially affect habit formation. The card also contradicts habit-loop-66-days, since 'missing twice starts a new habit' is presented with more authority than the data give it.",
+     "fix": "try_today: \"Missed something yesterday? Do a 2-minute version of it today, before 8pm.\" Reveal: \"The second one. In Lally's 2010 habit study, missing a single day didn't measurably set people back; the long gap after is the real risk. 'Monday' turns one miss into four. Ten push-ups or one page tonight keeps the thread.\" Set evidence to \"moderate\" and add Lally & Wardle to the sources."
+    },
+    {
+     "card_id": "system1-system2-who-drives",
+     "severity": "medium",
+     "problem": "The spectrum items are badly built. (1) Q4 uses the values -2/-1/+2, not -2/0/+2. Q4 is weighted differently from the other three items, and estimating in your head, which is effortful, is scored as hare. (2) In Q3, 'Read the article first' is a deliberate act but scores 0, and in Q1 'Draft it, send later' is barely different from 'Wait, reread'. (3) Every owl option is plainly the socially desirable one, so almost everyone lands on 'Owl-led', as the screenshot shows. The result then tells them to watch for overthinking, which their answers do not show.",
+     "fix": "Q4 options: \"Blurt out a guess\" -2, \"Round it: about 400\" 0, \"Work it out exactly\" 2. Q3 options: \"Share it\" -2, \"Read past the headline first\" 0, \"Check who else reports it before sharing\" 2. Q1 options: \"Reply right away\" -2, \"Reply within the hour\" 0, \"Wait until I've cooled down\" 2. Add one item where the fast answer is clearly right, e.g. \"Ordering your usual coffee, you…\" options \"Order on autopilot\" 0, \"Glance at the menu\" 0, \"Read every option\" 2, so that a high owl score can actually mean overthinking."
+    },
+    {
+     "card_id": "hedonic-adaptation-fade-swipe",
+     "severity": "medium",
+     "problem": "The source is misattributed. Schkade & Kahneman (1998) is a focusing-illusion study: Midwesterners and Californians reported similar life satisfaction despite the climate difference. It did not study people retiring to a sunnier place, and it did not measure adaptation over time. The card's model, 'Spend on variety and less friction', is also stated more firmly than the evidence supports.",
+     "fix": "Item text: \"Living somewhere sunnier for the weather\". Why: \"Californians weren't more satisfied with life than Midwesterners; climate matters less day to day than we imagine (Schkade & Kahneman, 1998).\" Model: \"Expect stable gains to fade. Reducing daily hassles and keeping good things varied tends to last longer.\""
+    },
+    {
+     "card_id": "evening-reset-wind-down-swipe",
+     "severity": "low",
+     "problem": "Matthew Walker's Why We Sleep is cited for 'Sleep helps lock in what you learned (strong evidence)'. The book has well-documented factual errors (Guzey, 2019), and a careful reader will lose trust in the whole card. The '2019 review' line should also say the bath or shower was warm (about 40-42.5 C).",
+     "fix": "Change thinkers to [\"Shahab Haghayegh\", \"Susanne Diekelmann\", \"Jan Born\"] and the work to \"Haghayegh et al., Sleep Medicine Reviews (2019); Diekelmann & Born, The memory function of sleep, Nature Reviews Neuroscience (2010)\". Shower why: \"A 2019 review found a warm (about 40 C) bath or shower 1-2 hours before bed helped people fall asleep about 10 minutes sooner.\""
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "When a venn result is undecided ('Right on the fence', 'The Half-Lit Path'), the dot jumps to the anchor outside all circles, bottom-left. The screenshots for wso-triad-venn and mpc-loop-pcf-venn both show this. Visually it says 'none of the three', while the text says 'all three are half-lit', so the picture and the result disagree.",
+     "fix": "In app.js venn done-handler, when undecided is true, set the dot to geo.g (the centroid where the three circles overlap) at reduced opacity (e.g. opacity 0.5), not geo.anchors[\"\"]."
+    }
+   ],
+   "best_cards": [
+    "hedonic-adaptation-lottery-reveal",
+    "habit-loop-66-days",
+    "spotlight-effect-tshirt-estimate"
+   ],
+   "verdict": "This is a careful batch overall. The reveal and estimate cards do what I want from popular psychology: they give sample sizes (Lally's 39 modelled participants, Brickman's 22 winners), set a contrary study beside the classic one (Lindqvist 2020), call Stockdale 'one man's account', and label house models as house models. The weak points are the ones you find in most quiz-style self-report. The venn threshold counts a neutral answer as a strong pillar. The spectrum game's owl answers are the obviously socially desirable ones and its value spacing is uneven. One card is missing its 'mid' result, so the app shows a fallback that does not fit the questions. There is one real factual error, in a finance item where accuracy matters most: the minimum-payment step says the balance grows. Fix those, swap the Walker and Schkade & Kahneman citations, and this would be a strong 8 on safety. As it stands I would trust the estimate and reveal cards more than the 'where are you' games."
+  },
+  {
+   "persona": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how clear it is what to tap, reward moments, and whether people would share it.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "On the venn cards, when every axis scores in the middle (Will 5/10, Skill 5/10, Opportunity 5/10 on wso-triad-venn; the same on mpc-loop-pcf-venn), app.js moves the dot to the empty-region anchor, outside all three circles. The text then says 'All three are half-lit today' while the picture says 'none of these'. The diagram is the payoff of a venn game, so a reward that contradicts its own caption reads as broken.",
+     "fix": "In the venn() done handler in app.js, when `undecided` is true, place the dot at the triple-overlap anchor at reduced opacity (e.g. geo.anchors[keys.slice().sort().join('')] with opacity 0.5), not at geo.anchors[\"\"]. Alternatively, draw a dashed ring at the centre of the diagram and put the dot on it. Never show the dot outside every circle when the text says 'half-lit'."
+    },
+    {
+     "card_id": "mpc-loop-pcf-venn",
+     "severity": "high",
+     "problem": "This card has no results.mid, so an all-middle player gets the app's generic fallback, 'Right on the fence ... Pick one specific goal (\"run 5 km\", \"learn 3 guitar chords\") and play again'. That text was written for the goal-based WSO card. This card asks about general perception habits, not a goal, so the advice doesn't fit and makes the game look generic.",
+     "fix": "Add results.mid: {\"name\":\"Evenly lit, for now\",\"text\":\"Today all three steps sit in the middle, so no single gap stands out. Think of one real moment from this week (a row, a missed deadline) and answer again with only that moment in mind. A specific moment shows the gap more clearly.\"}. In app.js, also change the generic fallback text so it doesn't mention goals: \"Every answer landed in the middle. Play again with one specific situation in mind.\""
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The Share button sends only the card hook and a link (`${card.hook} — a 30-second game on Qlip`). The things people actually screenshot and send are left out: 'I guessed 40%, real answer 83%', 'Owl-led', 'The Half-Lit Path', '6/6 Clean sweep'. Without the player's result there's no bragging or comparing, so the cards almost never travel.",
+     "fix": "Store the last result per card (name plus the guess/answer for estimate cards) and include it in share(): estimate cards → \"I guessed 40%. The real answer was 83%. What's your guess? \" + url; profile cards (venn/spectrum/radar) → \"I got 'Owl-led' on Who's Driving: Hare or Owl? Which are you? \" + url; choice/swipe → \"I scored 2/3 on Spot the Backfire. Beat me: \" + url. Before the player has played, keep the current hook-only text."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "On multi-step choice cards the result headline is a giant score: a player who misses everything on fixes-that-fail-backfire sees '0/3. The trick is below.' in the largest type on the screen. It sits right under a question about minimum debt payments when money is tight. For a learning app that promises to leave people better off, a huge zero is a punishing reward moment, and an ironic one after a card about failing well.",
+     "fix": "In choice() in app.js: if best === total, keep \"You'd coach this.\"; if best >= 1, use `${best}/${total}. Here's the pattern.`; if best === 0, use \"Tricky set. Here's the pattern most people miss.\" and leave the number out. On cards marked sensitive:true, never show a 0 score."
+    },
+    {
+     "card_id": "stockdale-paradox-christmas-reveal",
+     "severity": "medium",
+     "problem": "The right answer gets a celebratory pink 'Spot on.' headline, but the answer is about prisoners of war who lost hope and suffered. The cheerful game verdict jars with the subject, and this card is marked sensitive.",
+     "fix": "For reveal cards with sensitive:true, replace the correct/incorrect verdict with neutral headlines: correct → \"That's what he said.\", incorrect → \"His answer surprised most people.\" Alternatively, add a per-card field such as \"verdict_right\": \"That's what he said.\" and have the app use it here."
+    },
+    {
+     "card_id": "useful-truth-people-person",
+     "severity": "medium",
+     "problem": "The choice gives away its answer: option 2 is option 1 plus extra ('Reflecting, then living one week as if it might be false'). Anyone gets it right without thinking, so there's no tension and the right answer earns no reward.",
+     "fix": "Make the choices three equally plausible tests: [\"Think back over every party you've been to\", \"Ask three friends whether they agree\", \"For one week, start one short chat a day and note how each went\"], answer: 2. Change the reveal's first sentence to: \"Memories and friends' opinions are filtered through the belief itself. James would say the test is what happens when you act: a small, low-stakes week of chats.\""
+    },
+    {
+     "card_id": "never-miss-twice-reveal-reframing",
+     "severity": "medium",
+     "problem": "The try_today ('Small setback? Pause and reframe it: \"A chance to learn and improve.\"') is generic poster wording and doesn't apply the card's own model (come back the next day with a tiny version). It's the weakest action in the sample and gives nothing concrete to tick off.",
+     "fix": "Replace try_today with: \"Name one habit you skipped this week. Do its 2-minute version before bed tonight (one page, ten push-ups, one scale), then tick this box.\""
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "My map shows 'You've explored all 88 ideas' above an 88-node hairball with no labels and dozens of crossing lines, and the header counter reads '◆ 1' with no explanation. After 88 games, the main progress reward has no 'I did that' moment. You can't tell which node is which, and the diamond count feels like a bug.",
+     "fix": "Label the 10-12 most-connected nodes with their short title, and dim edges to 30% opacity unless a node is tapped (then highlight only that node's edges). Give the diamond a tap tooltip (e.g. \"Day streak: 1. Play one game a day to grow it\") or rename it. On a fully explored map, swap the copy for a reward line such as \"All 88 lit. Your most-connected idea: Feedback Loops.\""
+    }
+   ],
+   "best_cards": [
+    "delays-shower",
+    "goal-directed-perception-gorilla",
+    "reframing-late-text"
+   ],
+   "verdict": "The writing in this sample is strong. Hooks like '11pm. A text: We need to talk', the radiologists who missed a gorilla, and the hotel shower would stop my thumb, and every card ends on one concrete action. The weak spots are in game feel and the reward screens. The venn dot contradicts its own result when scores sit in the middle, and the perception venn falls back to advice meant for a goal card. Multi-step cards greet a miss with a giant '0/3', and a cheerful 'Spot on.' sits on a POW story. Sharing passes on none of the player's result, which is the one thing people actually want to post. Fix the reward moments and the share text and this goes from good to habit-forming. For now it's solid and a little too worthy to spread on its own."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "When you score 0 on a multi-step card, the biggest text on screen is \"0/3. The trick is below.\" (seen on fixes-that-fail-backfire, and on view-feed-dark for the friendship card). It reads like a test mark in huge font, which is exactly the school feeling that makes me close the app. The Stockdale card's \"3/3. You'd coach this.\" is fine, but a big zero feels like being told off.",
+   "fix": "In app.js, for multi-step choice and swipe results where score === 0, don't show the number in the headline. Show \"Sneaky one. Here's the trick.\" or \"These fool almost everyone. Here's why.\" Keep 'N/M' only when N >= 1, and put it in the small mono label above the headline instead of in the H2.",
+   "from": "Maya, 16, Manchester sixth-former. Lives on TikTok, bins anything that smells like a lesson. Stays only if it's quick, surprising and about her life."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Venn cards (wso-triad-venn, mpc-loop-pcf-venn): when every axis is 5/10, the 'you' dot sits outside all three circles in the bottom-left corner, so it looks like I scored zero and I'm nowhere. The two cards also handle the same all-middle answers differently: wso shows 'The Half-Lit Path' and mpc shows an app-made 'Right on the fence'. Six agree/disagree lines also take well over 30 seconds.",
+   "fix": "In app.js, when all axes are within ±1 of the threshold, put the dot at the centre of the triple overlap and use the card's 'mid' result. Add a 'mid' result to mpc-loop-pcf-venn: name \"Half-switched on\", text \"All three are half-on today. Pick one: notice three new things on the way home (Perceive), or ask 'what else could this mean?' once (Appraise).\" Cut both cards to 3 questions, one per axis (wso: 'I actually want this.' / 'I know the first step.' / 'I have the time and stuff to start this week.').",
+   "from": "Maya, 16, Manchester sixth-former. Lives on TikTok, bins anything that smells like a lesson. Stays only if it's quick, surprising and about her life."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Venn results are shown wrongly. With Will/Skill/Opportunity at 5/10 each (and the same for Perceive/Appraise/Recalibrate), the black dot sits outside all three circles in the bottom-left corner. Visually that says 'you have nothing', but the text says 'half-lit'. I trusted the dot more than the text and felt judged.",
+   "fix": "In the venn renderer, place the dot by the scores: when all three axes are at or near the threshold, put it at the centre of the three-way overlap with reduced opacity, or hide it. Only draw it outside the circles when every axis is below 0.3.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and somewhat burned out. Wants tools he can use tomorrow with his team and on himself, and has no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "After a choice game the big headline says '0/3. The trick is below.' In large type, a zero score after I tried in good faith feels like a school test. That is the opposite of 'always leaves the player better off', especially on sensitive cards like stress or reframing.",
+   "fix": "In app.js choice() (around line 454), drop the number when best < total. Use '{best}/{total}' only when best >= total-1. Otherwise use the headline 'Here's the move that works' (best 0) or 'Close. One more trick below.' (best = 1). Keep 'You'd coach this.' for a perfect score.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and somewhat burned out. Wants tools he can use tomorrow with his team and on himself, and has no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Too many scenarios are for students or teenagers ('In class you answer...', 'Your big exam in three weeks', 'mess in your room', 'revise for a test'). As a 44-year-old manager, by the 5th school example I feel this app is not for me, even though the models are good for work.",
+   "fix": "Add an adult or work option wherever only school appears. spotlight-effect-slip-choice step 1: 'In a meeting (or in class) you answer confidently, and it's wrong. A couple of people smile. Next time, you...'. stockdale-paradox-dream-vs-obstacle-choice step 1: 'A big exam or certification is in three weeks and you're behind...'. wso-triad-venn prompt: 'Pick your thing: a work project, a certification, a side project, an instrument, getting fitter, or something else.' responsibility-meaning-pick-your-load item 3: 'The mess on your desk, inbox or room that's been bugging you'.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and somewhat burned out. Wants tools he can use tomorrow with his team and on himself, and has no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "In the screenshot, the reveal header for a 'wrong' pick says 'Not quite. The green one.' The body underneath says 'Picked happier? You're partly right' (hedonic-adaptation-lottery-reveal). The header calls my answer wrong and the text then calls it partly right. On cards where the honest answer is nuanced this feels like a gotcha, and the header is curt.",
+   "fix": "Add an optional per-card field game.miss_header and render it in place of the generic header when it is set. For hedonic-adaptation-lottery-reveal set it to \"Partly right. Here's the twist.\" For useful-truth-people-person set it to \"Reflection is a start. Here's what it misses.\" Change the generic fallback from \"Not quite. The green one.\" to \"Close. The green one fits the study best.\"",
+   "from": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and has little patience for pop-psych slogans."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Multi-step choice cards end with a big underlined score headline. When I miss every best answer I get '0/2. The trick is below.' in the largest text on the screen (screenshot reframing-late-text-a). This happened on the reframing card, which is about anxious 11pm thoughts, and those first answers were honest descriptions of how I actually react. Seeing a zero in huge type right after admitting that feels like being graded and failed. It undoes the gentle feedback lines above it.",
+   "fix": "In app.js lines 452-454, stop showing the count when best < total. Replace `{ name: `${best}/${total}. The trick is below.` }` with `{ name: best === 0 ? \"Here's the move that helps most\" : `${best} of ${total} spotted. Here's the rest` }`, and use `{ name: \"You spotted every one\" }` for full marks in place of \"You'd coach this.\" For cards with sensitive:true, never show a number and use only \"Here's the move that helps most\".",
+   "from": "Sam, 24, a graduate dealing with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures. Needs the app to feel safe and genuinely helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "When a venn result is undecided ('Right on the fence', 'The Half-Lit Path'), the dot jumps to the anchor outside all circles, bottom-left. The screenshots for wso-triad-venn and mpc-loop-pcf-venn both show this. Visually it says 'none of the three', while the text says 'all three are half-lit', so the picture and the result disagree.",
+   "fix": "In app.js venn done-handler, when undecided is true, set the dot to geo.g (the centroid where the three circles overlap) at reduced opacity (e.g. opacity 0.5), not geo.anchors[\"\"].",
+   "from": "Dr. Okafor, 51, research psychologist. I check attributions, effect sizes and whether a self-report game's results actually follow from its items."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "On the venn cards, when every axis scores in the middle (Will 5/10, Skill 5/10, Opportunity 5/10 on wso-triad-venn; the same on mpc-loop-pcf-venn), app.js moves the dot to the empty-region anchor, outside all three circles. The text then says 'All three are half-lit today' while the picture says 'none of these'. The diagram is the payoff of a venn game, so a reward that contradicts its own caption reads as broken.",
+   "fix": "In the venn() done handler in app.js, when `undecided` is true, place the dot at the triple-overlap anchor at reduced opacity (e.g. geo.anchors[keys.slice().sort().join('')] with opacity 0.5), not at geo.anchors[\"\"]. Alternatively, draw a dashed ring at the centre of the diagram and put the dot on it. Never show the dot outside every circle when the text says 'half-lit'.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how clear it is what to tap, reward moments, and whether people would share it."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The Share button sends only the card hook and a link (`${card.hook} — a 30-second game on Qlip`). The things people actually screenshot and send are left out: 'I guessed 40%, real answer 83%', 'Owl-led', 'The Half-Lit Path', '6/6 Clean sweep'. Without the player's result there's no bragging or comparing, so the cards almost never travel.",
+   "fix": "Store the last result per card (name plus the guess/answer for estimate cards) and include it in share(): estimate cards → \"I guessed 40%. The real answer was 83%. What's your guess? \" + url; profile cards (venn/spectrum/radar) → \"I got 'Owl-led' on Who's Driving: Hare or Owl? Which are you? \" + url; choice/swipe → \"I scored 2/3 on Spot the Backfire. Beat me: \" + url. Before the player has played, keep the current hook-only text.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how clear it is what to tap, reward moments, and whether people would share it."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "On multi-step choice cards the result headline is a giant score: a player who misses everything on fixes-that-fail-backfire sees '0/3. The trick is below.' in the largest type on the screen. It sits right under a question about minimum debt payments when money is tight. For a learning app that promises to leave people better off, a huge zero is a punishing reward moment, and an ironic one after a card about failing well.",
+   "fix": "In choice() in app.js: if best === total, keep \"You'd coach this.\"; if best >= 1, use `${best}/${total}. Here's the pattern.`; if best === 0, use \"Tricky set. Here's the pattern most people miss.\" and leave the number out. On cards marked sensitive:true, never show a 0 score.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how clear it is what to tap, reward moments, and whether people would share it."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "My map shows 'You've explored all 88 ideas' above an 88-node hairball with no labels and dozens of crossing lines, and the header counter reads '◆ 1' with no explanation. After 88 games, the main progress reward has no 'I did that' moment. You can't tell which node is which, and the diamond count feels like a bug.",
+   "fix": "Label the 10-12 most-connected nodes with their short title, and dim edges to 30% opacity unless a node is tapped (then highlight only that node's edges). Give the diamond a tap tooltip (e.g. \"Day streak: 1. Play one game a day to grow it\") or rename it. On a fully explored map, swap the copy for a reward line such as \"All 88 lit. Your most-connected idea: Feedback Loops.\"",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how clear it is what to tap, reward moments, and whether people would share it."
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 3,
+   "skipped": [
+    "mpc-loop-pcf-venn threshold 0.6 and app.js regionOf change: not in action.json (edit scope is action.json only)",
+    "All other issues target cards not in action.json",
+    "Insight shortening: none over 200 chars",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 15,
+   "skipped": [
+    "mpc-loop-pcf-venn: app.js generic fallback text change (line 340) and regionOf >= to > change, both outside perception.json",
+    "useful-truth-people-person: Maya's 2-choice version superseded by Elena/Lina's 3 equally plausible choices (answer 2); Peirce/Russell kept in insight rather than a separate 'Why?' field (no such schema field)",
+    "spotlight-effect-tshirt-estimate: Sam's try_today shortened to fit the 140-char limit, keeping the gentler opt-out",
+    "hedonic-adaptation-fade-swipe: kept a corrected sunnier-place item (Okafor) alongside Maya's teen items; bus item worded 'to college or work' so it fits all ages",
+    "needs_review.json is empty and every insight is already 200 chars or less, so neither needed changes"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 6,
+   "skipped": [
+    "All issues for cards not in thinking.json (stockdale, useful-truth, fixes-that-fail, hedonic-adaptation, never-miss-twice, reframing-late-text, mpc-loop, wso-triad, self-reflection-loop, responsibility-meaning, goal-directed-perception, spotlight-effect, evening-reset, power-of-yet, identity-habits, aim-high-*, golden-mean)",
+    "system1-system2-who-drives: Okafor's suggestion to ADD a fifth coffee item with 0/0/2 values; instead replaced the 17x24 item with Elena's coffee item using -2/0/2 so all items share one scale (resolves Radu's Q4 issue too)",
+    "app.js fallback/regionOf changes (outside my file)",
+    "Insight shortening: none needed, all insights already <=200 chars",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 4,
+   "skipped": [
+    "fixes-that-fail-backfire (Radu/Okafor): rewrite of minimum-payment debt step not needed - Maya's fix replaced that step with the homework step, removing the factual error entirely",
+    "fixes-that-fail-backfire (Sam): sensitive flag and debt-advice feedback not needed - the debt step is gone",
+    "All other card issues: cards not in systems.json",
+    "Insight shortening: all insights already <=200 chars",
+    "needs_review.json: no cards listed"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 11,
+   "skipped": [
+    "All issues for cards not in habits.json (stockdale-*, useful-truth-*, fixes-that-fail-*, hedonic-adaptation-*, reframing-late-text, mpc-loop-pcf-venn, system1-system2-*, self-reflection-loop-example, responsibility-meaning-*, goal-directed-perception-gorilla, spotlight-effect-*, wso-triad-venn, power-of-yet-reveal, aim-high-*, golden-mean-*, loss-aversion-*)",
+    "app.js fallback text change (outside my file)",
+    "needs_review.json lists no cards; all insights already <=200 chars"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 0,
+   "skipped": [
+    "All 41 issues: none of the cited card_ids are in emotions.json (its 11 cards are emotion-naming-swipe, emotion-naming-label-reveal, impulse-pause-swipe, impulse-pause-choice, self-compassion-spectrum, self-compassion-lookalike-swipe, procrastination-emotion-reveal, procrastination-emotion-future-self-choice, emotional-contagion-estimate, gratitude-practice-letter-reveal, gratitude-practice-three-good-things-choice)",
+    "Sibling-pattern check: no Ross 1908 citations; the Gummere 1917 citations are Letters 1 and 6, which really are in vol. I (1917); no manager/boss-first scenarios; no platitude try_today lines; no debt or 'brutal fact' wording; no Venn threshold settings",
+    "Insight length: all insights are already 200 characters or fewer (longest is 186)",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 19,
+   "skipped": [
+    "stockdale-paradox-christmas-reveal: neutral verdict headline ('That's what he said.') needs an app/schema field (verdict_right) that CARD_SCHEMA does not define; left for app.js owner",
+    "stockdale-paradox-dream-vs-obstacle-choice: 'move boss and knee-op versions to adult-only variants' not supported by schema; instead replaced steps 2-3 with teen+adult-fitting scenarios (trials/audition/work assessment; sprained ankle)",
+    "stockdale-paradox-dream-vs-obstacle-choice: concept move to mental_contrasting skipped because that concept does not exist in concepts.json",
+    "needs_review.json lists no cards; no insight exceeded 200 chars",
+    "Issues for cards not in meaning.json ignored"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 4,
+   "skipped": [
+    "All other issue card_ids are not in growth.json (only power-of-yet-reveal and self-reflection-loop-example matched)",
+    "self-reflection-loop-example from_source quote: validator bans the word 'cured', so the Seneca line is given as a marked paraphrase ('put right') from the Basore translation; wording not checked against a printed copy",
+    "No insights over 200 chars; needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 2,
+   "skipped": [
+    "No panel issue card_ids are in connection.json (all target cards live in other domain files)",
+    "needs_review.json lists no cards",
+    "All insights already <=200 chars",
+    "Applied pattern fix only: psychological-safety-choice steps 2 and 3 broadened from adult-only (parent of teen, meeting leader) to fit teens and adults, with matching feedback wording"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 0,
+   "skipped": [
+    "All persona/fact-check issues target cards not in attention.json (file holds deep-work, attention-residue, sleep-memory, doomscroll-loop, boredom-signal, zeigarnik-effect cards)",
+    "No insight exceeds 200 chars (max 193)",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 0,
+   "skipped": [
+    "All 42 issues target cards not in decisions.json (file holds: reversible-doors-swipe, reversible-doors-spectrum, regret-minimization-80, regret-minimization-hacked, premortem-order, expected-value-coin, expected-value-resulting, opportunity-cost-unseen, opportunity-cost-free-ticket, circle-competence-venn, sunk-cost-two-trips, sunk-cost-three-lives)",
+    "Pattern check: no Ross 1908 / Gummere 1917 citations, no Walker cite, no debt-minimum claims, no platitude try_today, no 'brutal' wording; circle-competence-venn threshold already 0.55 (> neutral 0.5), so no change",
+    "All insights already <=200 chars (max 189)",
+    "needs_review.json cards list is empty; nothing to review"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 1,
+   "skipped": [
+    "All other issues target cards not in wisdom.json (only golden-mean-courage-spectrum matched; its Ross cite date was changed from 1908 to 1925)",
+    "No insights over 200 chars in file",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  }
+ ]
+}

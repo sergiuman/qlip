@@ -713,21 +713,21 @@
      ]
     },
     {
-     "scenario": "Your teenager tells you they scraped the car pulling out of the driveway. You say…",
+     "scenario": "Your little brother (or your flatmate, or your teen) admits they cracked the TV screen. You say…",
      "options": [
       {
        "text": "\"How many times have I told you to be careful?\"",
-       "feedback": "Understandable. But the message heard is 'telling me costs you'. The next scrape may stay secret."
+       "feedback": "Understandable. But the message heard is 'telling me costs you'. The next accident may stay secret."
       },
       {
        "text": "\"I'm glad you told me. Are you OK? Let's look at it together.\"",
        "best": true,
-       "feedback": "Yes. Safety isn't zero standards: you can still agree how they help pay for it. You're rewarding honesty, not the scrape."
+       "feedback": "Yes. Safety isn't zero standards: you can still agree how they help put it right. You're rewarding honesty, not the crack."
       }
      ]
     },
     {
-     "scenario": "You lead a meeting and want honest input on your plan. You close with…",
+     "scenario": "You're running a club, a group project or a meeting, and want honest input on your plan. You close with…",
      "options": [
       {
        "text": "\"Any questions? No? Great.\"",

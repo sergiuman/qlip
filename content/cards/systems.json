@@ -451,24 +451,6 @@
   "game": {
    "steps": [
     {
-     "scenario": "Mexico City, 1989. To cut smog, each car is banned from driving one weekday, based on its number plate. What did many families do?",
-     "options": [
-      {
-       "text": "Took the bus on their banned day",
-       "feedback": "That was the plan. But a cheaper way round it was sitting in the used-car market."
-      },
-      {
-       "text": "Bought a second car, often an older one",
-       "best": true,
-       "feedback": "Yes. Car numbers rose, many extra cars were old and dirtier, and economist Lucas Davis found no clear drop in air pollution."
-      },
-      {
-       "text": "Drove less on every day of the week",
-       "feedback": "A hopeful guess. The rule only touched one day, so it changed which car, not how much driving."
-      }
-     ]
-    },
-    {
      "scenario": "You sleep until noon on Sunday to catch up after a late Saturday. What's the hidden side effect?",
      "options": [
       {
@@ -483,16 +465,34 @@
      ]
     },
     {
-     "scenario": "Money is tight, so you pay only the minimum on a card or loan each month. What grows?",
+     "scenario": "Homework's due in an hour (or a work task you don't really get), so you copy a mate's answers. What grows?",
      "options": [
       {
-       "text": "Nothing, the minimum keeps it under control",
-       "feedback": "It keeps the letters away, which is real relief. Underneath, interest keeps adding to the balance."
+       "text": "Nothing, it's handed in",
+       "feedback": "Real relief tonight. But the gap in what you understand keeps growing underneath."
       },
       {
-       "text": "The total you owe, because interest keeps piling up",
+       "text": "The bit you don't understand, which shows up in the test",
        "best": true,
-       "feedback": "Yes. The minimum fixes this month and feeds the debt, so next month needs the same fix again."
+       "feedback": "Yes. The fix ends tonight's panic and feeds next month's."
+      }
+     ]
+    },
+    {
+     "scenario": "Plot twist from real life: Mexico City, 1989. To cut smog, each car is banned from driving one weekday, based on its number plate. What did many families do?",
+     "options": [
+      {
+       "text": "Took the bus on their banned day",
+       "feedback": "That was the plan. But a cheaper way round it was sitting in the used-car market."
+      },
+      {
+       "text": "Bought a second car, often an older one",
+       "best": true,
+       "feedback": "Yes. Car numbers rose, many extra cars were old and dirtier, and economist Lucas Davis found no clear drop in air pollution."
+      },
+      {
+       "text": "Drove less on every day of the week",
+       "feedback": "A hopeful guess. The rule only touched one day, so it changed which car, not how much driving."
       }
      ]
     }

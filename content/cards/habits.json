@@ -212,7 +212,7 @@
     "try_team": "Each person finishes 'We're the kind of team (or family) that...' Pick the line you like most and one 2-minute action that proves it this week.",
     "from_source": {
       "quote": "We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.",
-      "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (W. D. Ross trans., 1908)",
+      "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (W. D. Ross trans., 1925)",
       "next_read": "Nicomachean Ethics, Book II, chapters 1-4 (how character is built by repeated action)"
     },
     "source": {
@@ -572,7 +572,7 @@
     },
     "insight": "William James warned: 'Never suffer an exception to occur' till a habit is rooted. Lally's 2010 data was gentler: one missed day barely slowed habit forming. A miss is an accident.",
     "model": "Missing once is an accident. Clear's rule of thumb: come back soon and small, even after two misses or ten.",
-    "try_today": "If you missed something this week, do a tiny version of it today and tell yourself: 'One miss doesn't define me.'",
+    "try_today": "Missed something this week? Do its tiniest version today (one page, five push-ups, one minute) and tick it off. That counts.",
     "try_team": "Agree on a 'come back small' version of your shared habit (a one-line update instead of the full check-in) for days that fall apart.",
     "from_source": {
       "quote": "Seize the very first possible opportunity to act on every resolution you make.",
@@ -693,7 +693,7 @@
         {
           "text": "A warm shower or bath an hour or two before bed",
           "side": "right",
-          "why": "A 2019 review found it helped people fall asleep about 10 minutes sooner."
+          "why": "A 2019 review found a warm (about 40 C) bath or shower 1-2 hours before bed helped people fall asleep about 10 minutes sooner."
         },
         {
           "text": "Binge-watching a gripping finale until late",
@@ -713,10 +713,11 @@
     "try_team": "As a family or team, swap ideas: each person shares one thing that winds them down and one that secretly revs them up.",
     "source": {
       "thinkers": [
-        "Matthew Walker",
-        "Shahab Haghayegh"
+        "Shahab Haghayegh",
+        "Susanne Diekelmann",
+        "Jan Born"
       ],
-      "work": "Haghayegh et al., Sleep Medicine Reviews (2019); Walker, Why We Sleep (2017)"
+      "work": "Haghayegh et al., Sleep Medicine Reviews (2019); Diekelmann & Born, The memory function of sleep, Nature Reviews Neuroscience (2010)"
     },
     "evidence": "moderate",
     "level": 1,
@@ -737,20 +738,24 @@
       "prompt": "You planned to practise (a sport, an instrument, revision, a run) and skipped it yesterday. Which thought gets you moving again today?",
       "choices": [
         "\"I've blown it. I'll start properly on Monday.\"",
-        "\"Missing once is an accident. A tiny version today.\""
+        "\"Missing once is an accident. A tiny version today.\"",
+        "\"I'll do double tomorrow to make up for it.\""
       ],
-      "reveal": "Most people find the second one gets them moving. 'Monday' turns one miss into four. Clear's rule of thumb: missing once is an accident, missing twice starts a new habit. Ten push-ups or one page tonight keeps the thread."
+      "reveal": "The second. In Lally's 2010 habit study, missing a single day didn't measurably set people back; the long gap after is the real risk. 'Monday' turns one miss into four. Doubling up sounds keen, but it makes tomorrow feel heavier. Tiny today wins.",
+      "answer": 1
     },
-    "insight": "A miss is an event, not a verdict about you. The risk is the long gap that follows. Clear's 'never miss twice' is a rule of thumb from experience, not a tested law.",
+    "insight": "A miss is an event, not a verdict about you. Lally's 2010 study found one missed day barely slowed habit forming; the long gap after is the risk. 'Never miss twice' is Clear's rule of thumb.",
     "model": "Missing once is an accident. Come back the next day, even if it's tiny.",
-    "try_today": "Small setback? Pause and reframe it: 'A chance to learn and improve.'",
+    "try_today": "Missed something yesterday? Before bed tonight, do its 2-minute version: one page, ten push-ups or one scale. That's the whole task.",
     "source": {
       "thinkers": [
-        "James Clear"
+        "James Clear",
+        "Phillippa Lally",
+        "Jane Wardle"
       ],
-      "work": "Atomic Habits (2018)"
+      "work": "Atomic Habits (2018); Lally, van Jaarsveld, Potts & Wardle, How are habits formed (2010)"
     },
-    "evidence": "philosophy",
+    "evidence": "moderate",
     "level": 1,
     "related": [
       "self_compassion",

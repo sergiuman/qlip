@@ -154,7 +154,7 @@
         {
           "text": "How you show up for the people who count on you",
           "side": "right",
-          "why": "Your reliability is fully yours. It's where meaning starts."
+          "why": "Your effort and honesty with them are yours to choose. That's where meaning starts."
         },
         {
           "text": "Making everyone like you",
@@ -164,7 +164,7 @@
         {
           "text": "The mess in your room that's been bugging you",
           "side": "right",
-          "why": "Peterson's famous starting point: put your own house in order before you try to fix the world. Start small, then take on more."
+          "why": "A small, visible win that's fully yours. Peterson's Rule 6: set your own house in order before you criticize the world. Start in reach, then build."
         },
         {
           "text": "Fixing a friend's life for them",
@@ -183,16 +183,15 @@
         }
       ]
     },
-    "insight": "Peterson argues meaning lies in the responsibility you choose: pick up the heaviest load you can actually carry. Epictetus adds the filter: carry only what is in your power. Sort first, then lift.",
-    "model": "Put down what isn't yours, then pick up as much of what is yours as you can bear.",
+    "insight": "Peterson argues meaning grows from responsibility you choose, starting small and adding more as you get stronger. Epictetus adds the filter: carry only what's in your power. Sort first, then lift.",
+    "model": "Put down what isn't yours, then pick up one piece of what is, sized for the energy you have today.",
     "try_today": "Write down three things weighing on you. Circle the one you can act on, and take one 5-minute step on it.",
     "source": {
       "thinkers": [
         "Jordan Peterson",
-        "Viktor Frankl",
         "Epictetus"
       ],
-      "work": "12 Rules for Life (2018); Enchiridion (c. 125 AD)"
+      "work": "Peterson, 12 Rules for Life (2018), Rule 6; Epictetus, Enchiridion (c. 125 AD)"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -360,16 +359,15 @@
       "reveal": "Probably not. In Hyman and colleagues' 2010 study, only about 25% of people on a phone call said they saw the clown, even when asked directly. About half of people walking alone without a phone (51%) did. Their aim, the call, decided what got through."
     },
     "insight": "The missed clown is solid science. The life lesson is a lens, not a law: your aims steer what you notice. Aristotle's mark was the good life itself; small targets serve it, they don't replace it.",
-    "model": "What you aim at shapes what you see. Choose the aim on purpose.",
+    "model": "Your aim is a filter. Change what you're looking for and you'll notice a different world.",
     "try_today": "Write one aim for this week in a single line. Tonight, list three things you noticed today that could help it.",
     "source": {
       "thinkers": [
         "Ira Hyman",
         "Daniel Simons",
-        "Aristotle",
-        "Jordan Peterson"
+        "Aristotle"
       ],
-      "work": "Hyman et al., Did you see the unicycling clown?, Applied Cognitive Psychology (2010); Nicomachean Ethics; 12 Rules for Life (2018)"
+      "work": "Hyman et al., Did you see the unicycling clown?, Applied Cognitive Psychology (2010); Aristotle, Nicomachean Ethics, Book I"
     },
     "evidence": "moderate",
     "level": 1,
@@ -381,7 +379,7 @@
     "try_team": "Everyone writes this week's one aim and swaps papers. For a day, watch out for one thing that could help your partner's aim, then share it.",
     "from_source": {
       "quote": "Shall we not, like archers who have a mark to aim at, be more likely to hit upon what is right?",
-      "cite": "Aristotle, Nicomachean Ethics, Book I, ch. 2 (trans. W. D. Ross, 1908)",
+      "cite": "Aristotle, Nicomachean Ethics, Book I, ch. 2 (trans. W. D. Ross, 1925)",
       "next_read": "Nicomachean Ethics, Book I, chapters 1-2: the chief good as the target of a life"
     }
   },
@@ -438,7 +436,7 @@
     "try_team": "Swap 'let's do our best' for one shared target: your team, class or family picks a clear, stretching goal, a date, and how you'll check progress.",
     "from_source": {
       "quote": "When a man does not know what harbour he is making for, no wind is the right wind.",
-      "cite": "Seneca, Moral Letters to Lucilius, Letter 71 (trans. R. M. Gummere, 1917)",
+      "cite": "Seneca, Moral Letters to Lucilius, Letter 71 (trans. R. M. Gummere, 1920)",
       "next_read": "Seneca, Letter 71, opening paragraphs"
     },
     "source": {
@@ -623,9 +621,9 @@
       "answer": 1,
       "reveal": "The optimists. In his telling, they kept picking dates: 'out by Christmas', then Easter. Each missed date hit them harder. Stockdale held two things at once: total faith he'd get home, and zero denial about how bad it was."
     },
-    "insight": "This is one man's account to Jim Collins, not a study. Its lesson: hope tied to a date you don't control can break you. Keep faith in the ending; face today's facts.",
-    "model": "Never doubt the ending. Never deny the facts. Drop the deadline you don't control.",
-    "try_today": "Pick one hard thing you're waiting out. Write one line of brutal fact, then one line of faith. Cross out any date you can't control.",
+    "insight": "This is one man's account to Jim Collins, not a study. Its lesson: hope tied to a date you don't control can break you. Keep faith that you can endure; face today's facts.",
+    "model": "Keep faith you can get through it. Face the facts honestly. Drop deadlines you don't control.",
+    "try_today": "Pick a hard thing you're waiting out. Write one honest fact, then one line on what helps you through. Cross out dates you can't control.",
     "source": {
       "thinkers": [
         "James Stockdale",
@@ -641,7 +639,7 @@
       "grit"
     ],
     "sensitive": true,
-    "try_team": "Facing a long slog together? List three brutal facts on one side and one shared belief about the ending on the other. No promised dates."
+    "try_team": "Facing a long slog together? List three honest facts on one side and one shared belief about getting through on the other. No promised dates."
   },
   {
     "id": "stockdale-paradox-dream-vs-obstacle-choice",
@@ -649,7 +647,7 @@
     "domain": "meaning",
     "type": "choice",
     "hook": "Picturing success feels great. That might be the problem.",
-    "title": "Dream It, Then Find the Wall",
+    "title": "Hope Plus the Wall",
     "game": {
       "steps": [
         {
@@ -666,45 +664,49 @@
             },
             {
               "text": "\"I'm too far behind. It's hopeless.\"",
-              "feedback": "Honest about the facts, but it drops the faith. Without it, there's no reason to start."
+              "feedback": "Honest about today, but it drops the faith. Without it, there's no reason to start."
             }
           ]
         },
         {
-          "scenario": "You lead a project that's slipping. Your boss asks for an update. What do you say?",
+          "scenario": "You've got trials (team, audition or a work assessment) in four weeks and you're behind the rest. What do you tell yourself?",
           "options": [
             {
-              "text": "\"We'll catch up, the team is great.\"",
-              "feedback": "Upbeat, but it hides the facts. Collins found strong leaders faced bad news head-on."
+              "text": "\"I'll smash it, I just need to believe.\"",
+              "feedback": "Feels good, but belief on its own can let you relax before the work is done."
             },
             {
-              "text": "\"We're two weeks behind because of X. Here's the plan to recover, and I'm confident we'll deliver.\"",
+              "text": "\"I'm behind right now. Every Tuesday and Thursday after school or work, I put in an extra session. I'll get there.\"",
               "best": true,
-              "feedback": "Best. Brutal fact first, then a plan, then confidence: the Stockdale mix."
+              "feedback": "Best. Honest fact, a plan, and faith in the ending."
+            },
+            {
+              "text": "\"I'm just not good enough, no point.\"",
+              "feedback": "Honest about today, but it turns a fact into a verdict."
             }
           ]
         },
         {
-          "scenario": "You're relearning to walk well after a knee operation. Progress is slow. Which thought helps most?",
+          "scenario": "You sprain your ankle just before something you'd been training for. Recovery is slow. Which thought helps most?",
           "options": [
             {
-              "text": "\"I'll be hiking by next month.\"",
+              "text": "\"I'll be back for Saturday.\"",
               "feedback": "A hopeful date, but if it slips, the letdown can sap your effort. Hope for the ending, not the date."
             },
             {
-              "text": "\"This will be slow and some days will hurt. I'll do my exercises daily, and I will get there.\"",
+              "text": "\"It'll be slow and some days it'll ache. I'll do my physio daily, and I'll get back.\"",
               "best": true,
-              "feedback": "Best. You name the hard part and still expect to get there. That keeps you doing the exercises."
+              "feedback": "Best. You name the hard part and still expect to get there. That keeps you doing the physio."
             },
             {
-              "text": "\"At my age, why bother?\"",
+              "text": "\"It's all ruined, why bother?\"",
               "feedback": "Understandable on a bad day, but it turns a slow fact into a final verdict."
             }
           ]
         }
       ]
     },
-    "insight": "In Gabriele Oettingen's studies, people who only daydreamed about success often tried less than those who also pictured the obstacle. Pairing wish and wall helps, with modest but replicated effects.",
+    "insight": "Stockdale's lesson (one man's account) and Oettingen's studies point the same way: people who paired a wish with its obstacle tried harder than pure daydreamers. Modest but replicated effects.",
     "model": "Wish, then obstacle, then if-then plan. Hope gives the why; facts give the how.",
     "try_today": "Name one goal, the biggest inner obstacle, and write one plan: 'If [obstacle], then I will [action].'",
     "source": {
@@ -713,7 +715,7 @@
         "James Stockdale",
         "Jim Collins"
       ],
-      "work": "Rethinking Positive Thinking (2014), Gabriele Oettingen"
+      "work": "Oettingen, Rethinking Positive Thinking (2014); Collins, Good to Great (2001), ch. 4"
     },
     "evidence": "moderate",
     "level": 1,

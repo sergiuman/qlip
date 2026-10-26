@@ -54,11 +54,11 @@
        "value": -2
       },
       {
-       "label": "Draft it, send later",
+       "label": "Reply after a quick reread",
        "value": 0
       },
       {
-       "label": "Wait, reread it calmly",
+       "label": "Wait until I've cooled down",
        "value": 2
       }
      ]
@@ -88,28 +88,28 @@
        "value": -2
       },
       {
-       "label": "Read the article first",
+       "label": "Read past the headline first",
        "value": 0
       },
       {
-       "label": "Check another source",
+       "label": "Check who else reports it before sharing",
        "value": 2
       }
      ]
     },
     {
-     "q": "Someone asks: 'Quick, what's 17 × 24?' You…",
+     "q": "A friend asks which of two near-identical coffees you'd like. You…",
      "options": [
       {
-       "label": "Blurt out a guess",
+       "label": "Pick one instantly",
        "value": -2
       },
       {
-       "label": "Estimate roughly in my head",
-       "value": -1
+       "label": "Pick after a glance",
+       "value": 0
       },
       {
-       "label": "Work it out step by step",
+       "label": "Weigh price, size and taste",
        "value": 2
       }
      ]
@@ -129,7 +129,7 @@
     {
      "upTo": 1,
      "label": "Owl-led",
-     "text": "Today your answers lean slow. Great for big calls. Watch for overthinking small, reversible ones; the hare handles those well."
+     "text": "Today your answers lean slow. Useful for big calls, costly for small ones. Watch for overthinking small, reversible choices; the hare handles those well."
     }
    ]
   },
@@ -483,7 +483,7 @@
   "concept": "loss_aversion",
   "domain": "thinking",
   "type": "estimate",
-  "hook": "Same mug, same room. Owning it for 5 minutes changes its price.",
+  "hook": "Same mug, same room. Just being handed it changes its price.",
   "title": "The Endowment Effect",
   "game": {
    "question": "Students got a free mug. Those who got one named a selling price; those who didn't named a buying price. How many times more did owners want?",
@@ -492,7 +492,7 @@
    "step": 0.5,
    "unit": "×",
    "answer": 2.5,
-   "explain": "About 2.5×. In Kahneman, Knetsch & Thaler's 1990 study, owners asked a median of about $7.12 and buyers offered about $2.87. Same mug. Owning it for 5 minutes made giving it up feel like a loss.",
+   "explain": "About 2.5×. In Kahneman, Knetsch & Thaler's 1990 study, owners asked a median of about $7.12 and buyers offered about $2.87. Same mug. Just being handed it made giving it up feel like a loss.",
    "anchor": null
   },
   "insight": "Owning something makes letting go feel like losing, so we overprice our stuff. The effect is real but its size depends on the setup; some studies find it much smaller.",

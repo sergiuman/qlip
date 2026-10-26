@@ -124,16 +124,15 @@
       "anchor": null
     },
     "insight": "Attention follows aims. Even experts hunting for one thing filter out much of the rest, a gorilla included. That's how focus works, but it means your goals quietly shape what you see.",
-    "model": "Your aim is a filter. Change what you're looking for and the world rearranges.",
+    "model": "Your aim is a filter. Change what you're looking for and you'll notice a different world.",
     "try_today": "Before your next walk or meeting, set a new aim: 'notice three things that are going well.' Then count them.",
     "source": {
       "thinkers": [
         "Trafton Drew",
         "Melissa Vo",
-        "Jeremy Wolfe",
-        "Jordan Peterson"
+        "Jeremy Wolfe"
       ],
-      "work": "Drew, Vo & Wolfe, The invisible gorilla strikes again, Psychological Science (2013); Peterson, Maps of Meaning (1999)"
+      "work": "Drew, Vo & Wolfe, The invisible gorilla strikes again, Psychological Science (2013)"
     },
     "evidence": "strong",
     "level": 1,
@@ -194,7 +193,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "11pm. Your manager (or a close friend, or your partner) texts: 'We need to talk. Tomorrow?' No context. Your heart speeds up. What do you tell yourself?",
+          "scenario": "11pm. Your best mate (or your partner, or your boss) texts: 'We need to talk. Tomorrow?' No context. Your heart speeds up. What do you tell yourself?",
           "options": [
             {
               "text": "'I've done something wrong. I should prepare for the worst.'",
@@ -453,13 +452,14 @@
     "hook": "'I'm just not a people person.' How would you prove that?",
     "title": "Pragmatic Truth",
     "game": {
-      "prompt": "You believe 'I'm not a people person.' William James would ask: what difference does this belief make in practice? Which test adds something reflection alone can't?",
+      "prompt": "You reckon you're 'not a people person'. What's the best way to actually find out?",
       "choices": [
-        "Reflecting carefully on past evidence",
-        "Reflecting, then living one week as if it might be false"
+        "Think back over every awkward chat you've had",
+        "Ask three friends whether they agree",
+        "For one week, start one short chat a day and see how each goes"
       ],
-      "reveal": "Reflection matters; it is where the question starts. But James and Peirce held that an idea's meaning shows in its practical consequences, so the test has to leave the armchair too. Beliefs like this can quietly keep themselves alive, because they steer us away from the very moments that could test them. A small, low-stakes test is kinder and more informative than reflection alone.",
-      "answer": 1
+      "reveal": "Memories and friends' views are filtered through the belief itself, and beliefs like this steer you away from the moments that would test them. Peirce said an idea's meaning lies in its practical effects; James went further: its truth is worked out in experience. So act as if it might be false, and watch.",
+      "answer": 2
     },
     "insight": "Pragmatism asks: what happens when you act on this idea? A lens, not a lab finding, and facts still matter. James's view of truth was hotly disputed (Russell among others); use it as a method.",
     "model": "Judge a belief by its consequences: run the experiment, then decide.",
@@ -484,15 +484,14 @@
       "quote": "The truth of an idea is not a stagnant property inherent in it. Truth happens to an idea.",
       "cite": "William James, Pragmatism (1907), Lecture VI 'Pragmatism's Conception of Truth'",
       "next_read": "James, Pragmatism, Lecture II 'What Pragmatism Means', then Lecture VI (free online)"
-    },
-    "sensitive": true
+    }
   },
   {
     "id": "mpc-loop-pcf-venn",
     "concept": "mpc_loop",
     "domain": "perception",
     "type": "venn",
-    "hook": "Your lens might be fogged in one spot. Find which in 30 seconds.",
+    "hook": "Perceive, appraise, adjust: which step do you lean on least?",
     "title": "Your Perception Loop",
     "game": {
       "axes": [
@@ -541,7 +540,7 @@
           "invert": true
         }
       ],
-      "threshold": 0.5,
+      "threshold": 0.6,
       "results": {
         "": {
           "name": "All three dimmed today",
@@ -574,6 +573,10 @@
         "APR": {
           "name": "All three switched on",
           "text": "Today all three steps are at least switched on. Keep it honest by checking results, not just feelings. Pick the step you scored lowest and sharpen it."
+        },
+        "mid": {
+          "name": "Evenly balanced today",
+          "text": "Every step scored near the middle today, which is common when you're busy or unsure how to rate yourself. That's fine. Pick one recent surprise and ask: did I miss it, misread it, or fail to adjust?"
         }
       }
     },
@@ -680,7 +683,7 @@
     },
     "insight": "We sit at the centre of our own story, so we guess others are watching us about twice as closely as they are. Small studies, but the pattern has held up.",
     "model": "You're the star of your show, an extra in everyone else's. Halve your guess of who noticed.",
-    "try_today": "Next time you feel everyone saw your slip, ask one person if they noticed. Write down the guess first, then the answer.",
+    "try_today": "Felt everyone saw a slip? Write your guess of who noticed. Then ask one person you trust, or just see if anyone mentions it tomorrow.",
     "source": {
       "thinkers": [
         "Thomas Gilovich",
@@ -696,7 +699,8 @@
       "availability",
       "procrastination_emotion"
     ],
-    "try_team": "Everyone writes one moment this week they felt watched (a wrong answer, a typo, a stumble). Others say if they even noticed. Usually: barely."
+    "try_team": "Everyone writes one moment this week they felt watched (a wrong answer, a typo, a stumble). Others say if they even noticed. Usually: barely.",
+    "sensitive": true
   },
   {
     "id": "spotlight-effect-slip-choice",
@@ -839,19 +843,24 @@
           "why": "Within weeks it's just your phone. Same features, far less thrill."
         },
         {
-          "text": "The lift from a pay rise or promotion",
+          "text": "The money from your first Saturday job",
           "side": "left",
-          "why": "It helps, but soon it's the new baseline and your wants rise to match."
+          "why": "Soon it's just normal money and your wants rise to match."
         },
         {
-          "text": "Retiring to a sunnier place for the weather",
+          "text": "Getting the bigger bedroom",
           "side": "left",
-          "why": "Sun matters less day to day than we expect (Schkade & Kahneman, 1998)."
+          "why": "A week later it's just your room."
         },
         {
-          "text": "The stress of a long daily commute",
+          "text": "Living somewhere sunnier for the weather",
+          "side": "left",
+          "why": "Californians weren't more satisfied with life than Midwesterners (Schkade & Kahneman, 1998)."
+        },
+        {
+          "text": "A 50-minute bus to college or work every day",
           "side": "right",
-          "why": "People don't seem to fully get used to it (Stutzer & Frey, 2008)."
+          "why": "People don't seem to fully get used to long daily journeys (Stutzer & Frey, 2008)."
         },
         {
           "text": "Varied, regular time with people you like",
@@ -861,7 +870,7 @@
       ]
     },
     "insight": "We adapt fast to stable gains, slowly to daily hassles and changing joys. So cutting daily friction and keeping good things varied tends to pay off longer than more stuff.",
-    "model": "Spend on variety and less friction. Sameness is what fades fastest.",
+    "model": "Expect stable gains to fade. Cutting daily hassles and keeping good things varied tends to last longer.",
     "try_today": "Name one daily hassle you've 'accepted'. Spend 10 minutes finding one way to shrink it this week.",
     "source": {
       "thinkers": [

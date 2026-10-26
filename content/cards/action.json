@@ -51,7 +51,7 @@
      "axis": "O"
     }
    ],
-   "threshold": 0.5,
+   "threshold": 0.6,
    "results": {
     "W": {
      "name": "Fired Up, Building Up",
@@ -429,7 +429,7 @@
   "try_team": "Everyone picks one tiny sub-skill (a chord, a serve, five new words). Practise 3 minutes, then swap and give each other one piece of feedback.",
   "from_source": {
    "quote": "…it is from playing the lyre that both good and bad lyre-players are produced.",
-   "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (trans. W. D. Ross)",
+   "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (trans. W. D. Ross, 1925)",
    "next_read": "Nicomachean Ethics, Book II, chapters 1-2: how skills and virtues are built by practice"
   }
  },
@@ -650,7 +650,7 @@
   "try_team": "Each person names one thing they're 'not a ___ person' about and commits to its tiniest version this week. Next time, everyone reports back.",
   "from_source": {
    "quote": "…we become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.",
-   "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (trans. W. D. Ross)",
+   "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (trans. W. D. Ross, 1925)",
    "next_read": "Nicomachean Ethics, Book II, chapter 1"
   }
  },

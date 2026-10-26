@@ -160,6 +160,7 @@
     function finish(result = {}) {
       S.done[card.id] = Date.now();
       S.trail = S.trail.concat(card.concept).slice(-20);
+      lastResult[card.id] = result.name;
       if (result.profile) S.profile[card.id] = { label: result.name, title: card.title, concept: card.concept, at: Date.now() };
       bumpStreak(); save();
       game.append(renderReveal(card, result, start));
@@ -251,9 +252,11 @@
     el.scrollIntoView({ behavior: "smooth" });
   }
 
+  const lastResult = {};
   async function share(card) {
     const url = `${location.origin}${location.pathname}#${card.id}`;
-    const text = `${card.hook} — a 30-second game on Qlip`;
+    const r = lastResult[card.id];
+    const text = r ? `I got “${r}” on “${card.title}”. ${card.hook}` : `${card.hook} — a 30-second game on Qlip`;
     try { if (navigator.share) { await navigator.share({ title: card.title, text, url }); return; } } catch { /* user cancelled */ }
     try { await navigator.clipboard.writeText(url); toast("Link copied"); } catch { toast(url); }
   }
@@ -308,11 +311,12 @@
     venn(card, done) {
       const g = card.game, keys = g.axes.map((a) => a.key), th = g.threshold ?? 0.55;
       const geo = vennGeometry(keys);
-      const sums = {}, counts = {};
+      const sums = {}, counts = {}, circles = {};
       const view = svg("svg", { viewBox: "0 0 320 290", class: "viz", role: "img", "aria-label": "Venn diagram of your position" });
       g.axes.forEach((a) => {
         const [cx, cy] = geo.centers[a.key];
-        view.append(svg("circle", { cx, cy, r: geo.r, fill: a.color || "currentColor", "fill-opacity": 0.16, stroke: a.color || "currentColor", "stroke-width": 2.5 }));
+        const circ = svg("circle", { cx, cy, r: geo.r, fill: a.color || "currentColor", "fill-opacity": 0.12, stroke: a.color || "currentColor", "stroke-width": 2.5, style: "transition: fill-opacity .6s, stroke-opacity .6s" });
+        circles[a.key] = circ; view.append(circ);
         const dx = cx - geo.g[0], dy = cy - geo.g[1], len = Math.hypot(dx, dy) || 1;
         const lx = cx + (dx / len) * (geo.r * 0.62), ly = cy + (dy / len) * (geo.r * 0.62) + 5;
         const t = svg("text", { x: lx, y: ly, "text-anchor": "middle", "font-size": 14 }); t.textContent = a.label.split(" (")[0]; view.append(t);
@@ -324,6 +328,7 @@
       const regionOf = (sc) => keys.filter((k) => sc[k] != null && sc[k] >= th).sort().join("");
       const move = () => {
         const sc = scores(), reg = regionOf(sc);
+        keys.forEach((k) => { if (sc[k] == null) return; circles[k].setAttribute("fill-opacity", (0.05 + 0.4 * sc[k]).toFixed(2)); circles[k].setAttribute("stroke-opacity", (0.35 + 0.65 * sc[k]).toFixed(2)); });
         let [x, y] = geo.anchors[reg] || geo.anchors[""];
         keys.forEach((k) => { if (sc[k] == null) return; const [cx, cy] = geo.centers[k]; x += (cx - geo.g[0]) * (sc[k] - 0.5) * 0.18; y += (cy - geo.g[1]) * (sc[k] - 0.5) * 0.18; });
         if (geo.regionAt(x, y) !== reg) [x, y] = geo.anchors[reg] || geo.anchors[""];
@@ -339,7 +344,7 @@
         const r = undecided
           ? g.results.mid || { name: "Right on the fence", text: "Every answer landed in the middle, so the map can't find your gap yet. Pick one specific goal (\"run 5 km\", \"learn 3 guitar chords\") and play again with that in mind." }
           : g.results[reg] || { name: "", text: "" };
-        if (undecided) { const [ax, ay] = geo.anchors[""]; dot.setAttribute("cx", ax); dot.setAttribute("cy", ay); }
+        if (undecided) { dot.setAttribute("cx", geo.g[0].toFixed(1)); dot.setAttribute("cy", geo.g[1].toFixed(1)); }
         const bars = keys.map((k) => `${g.axes.find((a) => a.key === k).label} ${Math.round((sc[k] ?? 0) * 10)}/10`).join(" · ");
         live.textContent = bars;
         done({ name: r.name, text: r.text, profile: !undecided });
@@ -450,8 +455,9 @@
         const fb = h("p", { class: "feedback", hidden: true });
         const next = h("button", { class: "btn next-q", hidden: true, onclick: () => { i++; if (i < g.steps.length) step(); else { next.remove(); const total = g.steps.length;
             done(total < 2 ? { name: "" }
-              : best === total ? { name: `${total}/${total}. You'd coach this.` }
-              : { name: `${best}/${total}. The trick is below.` });
+              : best === total ? { name: "You'd coach this one.", tally: `${best}/${total} best calls` }
+              : best === 0 ? { name: "Sneaky one. Here's the trick." }
+              : { name: "Good instincts. One more trick below.", tally: `${best}/${total} best calls` });
           } } },
           i + 1 < g.steps.length ? "Next" : "See the model");
         const opts = h("div", { class: "opts" }, s.options.map((o) => h("button", { class: "opt", onclick: (e) => {
@@ -530,7 +536,7 @@
       const opts = h("div", { class: "opts" }, g.choices.map((c, k) => h("button", { class: "opt", onclick: (e) => {
         opts.querySelectorAll("button").forEach((b, j) => { b.disabled = true; if (has && j === g.answer) b.classList.add("best"); });
         e.currentTarget.classList.add("picked");
-        done({ name: !has ? "" : k === g.answer ? "Spot on." : "Not quite. The green one.", text: g.reveal });
+        done({ name: !has ? "" : k === g.answer ? "Spot on." : "Here's what the research found.", text: g.reveal });
       } }, c)));
       return h("div", { style: "display:flex;flex-direction:column;gap:12px" }, h("p", { class: "q-text" }, g.prompt), opts);
     },
