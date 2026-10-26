@@ -73,11 +73,11 @@
           "text": "Today you want it and can do it, but the door scores shut. That's structural, not a flaw in you. Find another door, or build one with others."
         },
         "OW": {
-          "name": "The Eager Apprentice",
+          "name": "Eager, Door Open",
           "text": "Want plus an open door today: a great place to learn anything. Your next move is practice, in small, honest reps with feedback."
         },
         "OS": {
-          "name": "The Capable Bystander",
+          "name": "Ready, Waiting for a Why",
           "text": "Everything scores high today except the fire. No productivity trick fixes a missing why. Look for the reason that would make this matter to you."
         },
         "OSW": {
@@ -90,7 +90,7 @@
         },
         "mid": {
           "name": "The Half-Lit Path",
-          "text": "Today all three pillars sit in the middle: nothing blocks you, nothing pulls you. Pick the pillar that would be cheapest to raise by one notch this week, usually a 10-minute skill rep, and play again in 7 days."
+          "text": "Today all three pillars sit in the middle. That's why the dot is in the centre: all medium, not all strong. Pick the pillar cheapest to raise by one notch this week (often a 10-minute skill rep) and play again in 7 days."
         }
       }
     },

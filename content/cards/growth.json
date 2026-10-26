@@ -14,7 +14,7 @@
           "q": "Your first try at something new (a tool, a skill, a subject) goes badly. Your first thought is…",
           "options": [
             {
-              "label": "I'm just not a numbers person.",
+              "label": "I'm just bad at this kind of thing.",
               "value": -2
             },
             {
@@ -43,11 +43,11 @@
               "value": -2
             },
             {
-              "label": "It stings, but I'm curious how they got there.",
+              "label": "Some of it is talent, some is practice.",
               "value": 0
             },
             {
-              "label": "Some of it is talent, some is practice.",
+              "label": "It stings, but I'm curious how they got there.",
               "value": 1
             },
             {
@@ -77,8 +77,8 @@
           "q": "Picking between an easy task and a stretch task (a game level, a recipe, a project), you usually…",
           "options": [
             {
-              "label": "Usually the easy one.",
-              "value": -1
+              "label": "The easy one.",
+              "value": -2
             },
             {
               "label": "Depends on who's watching.",
@@ -104,7 +104,7 @@
         {
           "upTo": 0.34,
           "label": "Mixed today (like most people)",
-          "text": "Your answers mix both mindsets, as most people's do. Notice which topics flip you to 'fixed': that's where the work is."
+          "text": "Your answers mix both mindsets, as most people's do. Notice which topics flip you to 'fixed': that's where the work is. Fun fact: you can be growth for football and fixed for maths on the same day."
         },
         {
           "upTo": 1,
@@ -137,7 +137,7 @@
     "concept": "growth_mindset",
     "domain": "growth",
     "type": "choice",
-    "hook": "One kind of compliment may nudge kids to dodge hard problems. Which?",
+    "hook": "\"You're so smart\" or \"How did you do it?\" Which helps more?",
     "title": "Praise the Process",
     "game": {
       "steps": [
@@ -179,42 +179,75 @@
         }
       ]
     },
-    "insight": "In a 1998 study, kids praised for being smart later picked easier tasks than kids praised for effort. Replications are mixed and effects small, but praising strategy is low-risk.",
+    "insight": "A famous 1998 study found kids praised for being smart later picked easier tasks. A large 2019 replication (Li & Bates) didn't find that effect. Praising what someone did is still low-risk and gives them something to repeat.",
     "model": "Praise what someone did (strategy, effort, choices), not what they are.",
     "try_today": "Give one person a compliment today that names a specific thing they did, not a trait they have.",
     "source": {
       "thinkers": [
         "Claudia Mueller",
-        "Carol Dweck"
+        "Carol Dweck",
+        "Yue Li",
+        "Timothy Bates"
       ],
-      "work": "Praise for intelligence can undermine children's motivation and performance (1998)"
+      "work": "Praise for intelligence can undermine children's motivation and performance (1998); Li & Bates, JEP: General (2019)"
     },
-    "evidence": "moderate",
+    "evidence": "contested",
     "level": 1,
     "related": [
       "power_of_yet",
       "mistake_alchemy",
       "emotional_contagion"
     ],
-    "try_team": "At dinner, in class or at work, go round once: each person names one specific thing someone else did well this week, and how they did it."
+    "try_team": "At dinner, in class or at work (say, in a code review), go round once: each person names one specific thing someone else did well this week, and how."
   },
   {
     "id": "power-of-yet-reveal",
     "concept": "power_of_yet",
     "domain": "growth",
-    "type": "reveal",
-    "hook": "What if your report card said 'Not Yet' instead of 'Fail'?",
+    "type": "choice",
+    "hook": "\"I can't do this.\" One small word changes the whole sentence.",
     "title": "The Power of 'Yet'",
     "game": {
-      "prompt": "You get a result back. Box A says 'FAIL'. Box B says 'NOT YET'. Same score. Which one makes you more likely to try again?",
-      "choices": [
-        "FAIL",
-        "NOT YET",
-        "Honestly, no difference"
-      ],
-      "reveal": "Any pick is fair here: there's no study behind this one. Carol Dweck tells of a Chicago school that graded unfinished courses 'Not Yet'. 'Fail' sounds like an ending; 'Not yet' sounds like a road."
+      "steps": [
+        {
+          "scenario": "Your friend sighs, \"I can't code.\" Which reply helps most?",
+          "options": [
+            {
+              "text": "\"Yeah, it's hard.\"",
+              "feedback": "Honest and kind, but it agrees with the stop sign and leaves no next step."
+            },
+            {
+              "text": "\"You can't code yet. What's the first tiny thing you'd learn?\"",
+              "best": true,
+              "feedback": "Same facts, new story: 'yet' puts them on a path, and the question gives them a first step."
+            },
+            {
+              "text": "\"Sure you can!\"",
+              "feedback": "Warm, but it argues with how they feel and gives them nothing to do next."
+            }
+          ]
+        },
+        {
+          "scenario": "You catch yourself thinking, \"I'm bad at public speaking.\" Rewrite it:",
+          "options": [
+            {
+              "text": "\"I'm bad at it, full stop.\"",
+              "feedback": "Very common, and it turns one rough moment into a permanent label. Try adding a time word."
+            },
+            {
+              "text": "\"I'm not good at it yet. Next step: a 2-minute talk to a friend.\"",
+              "best": true,
+              "feedback": "Honest about today, open about tomorrow, and it ends in something you can actually do."
+            },
+            {
+              "text": "\"Speaking doesn't matter anyway.\"",
+              "feedback": "Understandable armour, but it shuts the door instead of finding a first step."
+            }
+          ]
+        }
+      ]
     },
-    "insight": "'Yet' doesn't change your skill; it changes the story about time. 'I can't' sounds permanent. 'I can't yet' puts you on a path, so the next try feels worth making.",
+    "insight": "No lab study here, just a story: Carol Dweck describes a Chicago school that graded unfinished courses 'Not Yet' instead of 'Fail'. 'Yet' doesn't change your skill; it changes the story about time, so the next try feels worth making.",
     "model": "Add 'yet': it turns a verdict into a stage on a path.",
     "try_today": "Catch one 'I can't…' you say today and finish it out loud with '…yet, and my next step is ___'.",
     "source": {
@@ -229,7 +262,12 @@
       "reframing",
       "growth_mindset"
     ],
-    "try_team": "For one week, when anyone in your family, class or team says 'I can't', the others add a friendly '…yet?' and ask for the next step."
+    "try_team": "For one week, when anyone in your family, class or team says 'I can't', the others add a friendly '…yet?' and ask for the next step.",
+    "from_source": {
+      "quote": "Men become builders by building and lyre-players by playing the lyre.",
+      "cite": "Aristotle, Nicomachean Ethics II.1, trans. W. D. Ross (1908)",
+      "next_read": "Nicomachean Ethics, Book II, chapters 1-4 (on how virtues are acquired by practice)"
+    }
   },
   {
     "id": "grit-west-point-reveal",
@@ -365,15 +403,13 @@
     "hook": "Played guitar for 10 years? Why might you be no better than year 2?",
     "title": "Deliberate Practice",
     "game": {
-      "prompt": "Put the deliberate practice loop in order",
+      "prompt": "You've got 10 minutes with your guitar. What order levels you up?",
       "items": [
-        "Pick one specific weakness",
-        "Set a goal just past your current ability",
-        "Practise with full focus",
-        "Get immediate feedback",
-        "Adjust and repeat"
+        "Pick the bit you always mess up",
+        "Do just that bit, slightly too hard",
+        "Check what went wrong, then go again"
       ],
-      "explain": "Comfortable repetition keeps you where you are. Improvement comes from aiming at one weak spot, just beyond your reach, with fast feedback telling you what to change."
+      "explain": "Playing songs you know = staying still. Drilling the bit you fumble = getting better."
     },
     "insight": "Hours alone don't make experts; focused work on weak spots helps far more. The '10,000-hour rule' oversimplifies Ericsson, and a 2014 meta-analysis found practice explains only part of skill gaps.",
     "model": "Not more practice: harder, narrower practice with feedback.",
@@ -626,14 +662,14 @@
     "hook": "Is this the dip you push through, or the sign to walk away?",
     "title": "Quitting Wisely",
     "game": {
-      "prompt": "Quit signal or push through?",
+      "prompt": "Is this a real quit signal, or not (yet)?",
       "left": "Quit signal",
-      "right": "Push through",
+      "right": "Not a quit signal",
       "items": [
         {
           "text": "It's hard, but you're measurably better than a month ago.",
           "side": "right",
-          "why": "Hard plus progress is the classic dip. That's where the reward usually lies beyond."
+          "why": "Hard plus progress is the classic dip. The reward usually lies on the other side."
         },
         {
           "text": "You keep going mainly because of what you've already spent.",
@@ -648,7 +684,7 @@
         {
           "text": "You had a terrible week and feel like giving up tonight.",
           "side": "right",
-          "why": "Don't decide on your worst day. Rest, then set a calm review date and decide then."
+          "why": "A bad night is a feeling, not data. Rest, set a calm review date, and decide then."
         },
         {
           "text": "Your goal changed and this no longer leads anywhere you want.",
@@ -663,13 +699,13 @@
         {
           "text": "You're stuck, but you haven't tried a new method yet.",
           "side": "right",
-          "why": "Change the approach before you change the goal. Stuck is often a method problem."
+          "why": "Not a quit signal yet: change the approach before the goal. Stuck is often a method problem."
         }
       ]
     },
     "insight": "Quitting isn't failure; it frees time for better bets. Seth Godin separates a dip worth pushing through from a dead end. Annie Duke adds: we usually quit too late, held by sunk costs.",
-    "model": "Quit what you wouldn't start today. Push through dips that still show progress.",
-    "try_today": "Write one commitment you're unsure about and set a 'kill criteria': the signal that would tell you to stop.",
+    "model": "Quit what you wouldn't start today. Dips that still show progress aren't quit signals.",
+    "try_today": "Write one commitment you're unsure about and set a 'kill criterion': the one signal that would tell you to stop.",
     "source": {
       "thinkers": [
         "Annie Duke",
@@ -684,6 +720,7 @@
       "loss_aversion",
       "grit"
     ],
-    "try_team": "Pick one shared project, club or family plan and agree its kill criteria together: 'If ___ hasn't happened by ___, we stop or change course.'"
+    "try_team": "Pick one shared project, club or family plan and agree its kill criteria together: 'If ___ hasn't happened by ___, we stop or change course.'",
+    "sensitive": true
   }
 ]

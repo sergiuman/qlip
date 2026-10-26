@@ -253,7 +253,7 @@
     "hook": "Would you talk to a friend the way you talked to yourself today?",
     "title": "Inner Critic or Inner Coach?",
     "game": {
-      "left": "Harsh critic",
+      "left": "Tough inner voice",
       "right": "Kind coach",
       "questions": [
         {
@@ -298,11 +298,11 @@
               "value": -2
             },
             {
-              "label": "Distract yourself and push on",
+              "label": "Get busy so I don't dwell",
               "value": 0
             },
             {
-              "label": "Notice it and ask what you need right now",
+              "label": "Notice it, then do one small thing I need",
               "value": 2
             }
           ]
@@ -311,7 +311,7 @@
           "q": "Being kind to yourself after failing feels like…",
           "options": [
             {
-              "label": "Letting yourself off the hook",
+              "label": "Going soft on myself",
               "value": -2
             },
             {
@@ -319,7 +319,7 @@
               "value": 0
             },
             {
-              "label": "What helps you try again",
+              "label": "Fuel to try again",
               "value": 2
             }
           ]
@@ -328,8 +328,8 @@
       "zones": [
         {
           "upTo": -0.34,
-          "label": "Critic-leaning",
-          "text": "Today your inner voice leaned tough, often because it wants to keep you safe or improving. You can keep the high standards and drop the insults: try how a good coach would say it."
+          "label": "Your critic was loud today",
+          "text": "Today your inner voice leaned tough, often because it wants to keep you safe or improving. You can keep the high standards and drop the insults: try how a good coach would say it. That voice learned to be harsh for a reason. You can retrain it one sentence at a time."
         },
         {
           "upTo": 0.34,
@@ -448,11 +448,12 @@
         "Those who forgave themselves",
         "No difference"
       ],
-      "reveal": "The forgivers procrastinated less next time (Wohl, Pychyl & Bennett, 2010). Picked 'hard on themselves'? Most people do: guilt feels like it should push us. It's one correlational study, but it fits: guilt keeps the task tied to a bad feeling.",
-      "answer": 1
+      "reveal": "The forgivers procrastinated less before the next exam (Wohl, Pychyl & Bennett, 2010). Picked 'hard on themselves'? Guilt feels like it should push us. It's one correlational study of 119 students, but it fits a wider pattern: guilt keeps the task tied to a bad feeling.",
+      "answer": 1,
+      "reveal_title": "Forgiveness won."
     },
     "insight": "We rarely avoid the task itself; we avoid the feeling it gives us. Delay is a quick mood fix that costs later. Beating yourself up adds more bad feeling, so it often backfires.",
-    "model": "You're not avoiding the task. You're avoiding a feeling. Shrink the feeling and the task gets easier to start.",
+    "model": "Often you're avoiding a feeling, not the task. Shrink the feeling and the task gets easier to start.",
     "try_today": "Name the feeling the task gives you, forgive yesterday's delay in one sentence, then work on it for just 5 minutes.",
     "source": {
       "thinkers": [

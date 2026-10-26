@@ -20,8 +20,8 @@
  },
  "cards_by_type": {
   "venn": 5,
-  "reveal": 26,
-  "choice": 30,
+  "reveal": 25,
+  "choice": 31,
   "swipe": 20,
   "spectrum": 14,
   "order": 5,

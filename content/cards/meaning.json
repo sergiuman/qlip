@@ -204,7 +204,7 @@
     "sensitive": true,
     "try_team": "Everyone writes three worries on sticky notes. Sort them together: 'ours to act on' vs 'not ours'. Pick one 'ours' and agree a first step.",
     "from_source": {
-      "quote": "Some things are in our power, and others are not.",
+      "quote": "Some things are in our control and others not.",
       "cite": "Epictetus, Enchiridion, ch. 1 (trans. Elizabeth Carter, 1758)",
       "next_read": "Enchiridion, chapters 1-5 (short; about 10 minutes)"
     }
@@ -238,44 +238,44 @@
           ]
         },
         {
-          "q": "When did you last learn something genuinely new?",
+          "q": "How much of my week is new to me (new tasks, places, people)?",
           "options": [
             {
-              "label": "Can't remember",
+              "label": "Almost nothing",
               "value": -2
             },
             {
-              "label": "This month",
+              "label": "Some",
               "value": 0
             },
             {
-              "label": "So much is new I can't keep up",
+              "label": "Lots is new, and it's exciting but a lot",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "q": "This week, how many surprises did you have to absorb?",
+          "options": [
+            {
+              "label": "None at all",
+              "value": -2
+            },
+            {
+              "label": "A few I could handle",
+              "value": 0
+            },
+            {
+              "label": "More than I can keep up with",
               "value": 2
             }
           ]
         },
         {
-          "q": "When a plan changes last minute, I feel…",
+          "q": "My daily routines (sleep, work or homework, phone time) are…",
           "options": [
             {
-              "label": "Annoyed, I like it how it was",
-              "value": -2
-            },
-            {
-              "label": "Curious, then I adapt",
-              "value": 0
-            },
-            {
-              "label": "Relieved, I like things loose",
-              "value": 2
-            }
-          ]
-        },
-        {
-          "q": "My daily routines (sleep, schedule, money) are…",
-          "options": [
-            {
-              "label": "Rigidly controlled",
+              "label": "Rigidly fixed",
               "value": -2
             },
             {
@@ -289,18 +289,18 @@
           ]
         },
         {
-          "q": "When something unknown and difficult appears in my life, I usually…",
+          "q": "The big things in my life right now (home, work or school, people) feel…",
           "options": [
             {
-              "label": "Avoid it until it goes away",
+              "label": "Settled, nothing is moving",
               "value": -2
             },
             {
-              "label": "Face it once I've prepared",
+              "label": "Mostly steady, one thing shifting",
               "value": 0
             },
             {
-              "label": "Charge in without a plan",
+              "label": "Several things up in the air at once",
               "value": 2
             }
           ]
@@ -310,21 +310,21 @@
         {
           "upTo": -0.34,
           "label": "Leaning Order",
-          "text": "Today your answers lean toward order: steady, maybe a bit tight. Add one small unknown: a new route, a new skill, a new person."
+          "text": "Today your answers lean toward order: steady, maybe a bit tight. Add one small unknown: a new route, a new skill, a new person. (Keeping away from the unknown can feel safe without being stable.)"
         },
         {
           "upTo": 0.34,
           "label": "On the Border",
-          "text": "Today your answers sit on the border: enough structure to stand on, enough new to grow. Worth protecting."
+          "text": "Today your answers sit on the border: enough structure to stand on, enough new to grow. If some answers sat at opposite ends, pick the one area that feels most out of balance."
         },
         {
           "upTo": 1,
           "label": "Leaning Chaos",
-          "text": "Today your answers lean toward chaos: lots is moving. One fixed anchor helps: same wake time, a daily walk, or a weekly money check."
+          "text": "Today your answers lean toward chaos: lots is moving. One fixed anchor helps: same wake time, a daily walk, or a fixed time your phone goes on charge."
         }
       ]
     },
-    "insight": "Too much order goes stale; too much chaos knocks you over. Peterson, borrowing Taoism's yin-yang image, says grow by facing the unknown voluntarily. Chaos you choose builds you.",
+    "insight": "Peterson (Maps of Meaning) pictures life on a border between order, the known, and chaos, the unknown, an idea he links to the Taoist yin and yang. Too much order goes stale; too much chaos overwhelms. Grow by facing the unknown voluntarily.",
     "model": "Stand on order, step willingly into chaos. Growth happens at the edge you choose to face.",
     "try_today": "If you lean Order, try one new thing today. If you lean Chaos, fix one anchor: same bedtime tonight.",
     "source": {
@@ -332,7 +332,7 @@
         "Laozi",
         "Jordan Peterson"
       ],
-      "work": "Tao Te Ching (c. 4th century BC); Maps of Meaning (1999); 12 Rules for Life (2018)"
+      "work": "Tao Te Ching, ch. 42; Peterson, Maps of Meaning (1999); 12 Rules for Life (2018), Rule 2"
     },
     "evidence": "philosophy",
     "level": 1,

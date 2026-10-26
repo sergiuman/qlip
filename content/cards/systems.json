@@ -4,12 +4,12 @@
     "concept": "feedback_loops",
     "domain": "systems",
     "type": "swipe",
-    "hook": "Snowball or thermostat? Sort 6 everyday loops in 30 seconds.",
+    "hook": "Snowball or thermostat? Sort 6 everyday loops.",
     "title": "Snowball or Thermostat?",
     "game": {
-      "prompt": "Does this loop grow itself (reinforcing) or pull back to a set point (balancing)?",
-      "left": "Thermostat",
-      "right": "Snowball",
+      "prompt": "Does this settle back like a thermostat (←) or keep growing like a snowball (→)?",
+      "left": "Thermostat (settles)",
+      "right": "Snowball (grows)",
       "items": [
         {
           "text": "Short on sleep, you scroll late to unwind, then sleep even less",
@@ -43,7 +43,7 @@
         }
       ]
     },
-    "insight": "Most things that change over time run on two loops. Reinforcing loops amplify, good or bad. Balancing loops pull back to a target. Know which one you're in before you push.",
+    "insight": "Most things that change over time run on two loops. Reinforcing loops (snowballs) amplify, good or bad. Balancing loops (thermostats) pull back to a target. It's a thinking tool from systems science, not a lab finding. Know which loop you're in before you push.",
     "model": "Reinforcing loops snowball; balancing loops hold a set point. Ask which one is running.",
     "try_today": "Write one habit you want as a loop: 'A makes B, B makes more A.' Find the arrow you can strengthen today.",
     "source": {
@@ -53,7 +53,7 @@
       ],
       "work": "Thinking in Systems: A Primer (2008)"
     },
-    "evidence": "strong",
+    "evidence": "philosophy",
     "level": 1,
     "related": [
       "one_percent",
@@ -298,8 +298,8 @@
               "value": -2
             },
             {
-              "label": "Lower my spending target a bit",
-              "value": -1
+              "label": "Track every purchase for a month",
+              "value": 1
             },
             {
               "label": "Make savings move automatically on payday",
@@ -345,8 +345,12 @@
           "q": "The same argument with a friend, sibling or partner keeps coming back. You…",
           "options": [
             {
-              "label": "Try to win it more clearly next time",
+              "label": "Prepare my points better for next time",
               "value": -2
+            },
+            {
+              "label": "Agree a pause rule when it starts",
+              "value": 0
             },
             {
               "label": "Ask what each of you is actually trying to protect",
@@ -358,22 +362,22 @@
       "zones": [
         {
           "upTo": -0.34,
-          "label": "Tweaker today",
+          "label": "Tweaker",
           "text": "Today's answers reach for effort and numbers first. Honest work, but tiring. Next time, ask: what rule, information, or goal is producing this?"
         },
         {
           "upTo": 0.34,
-          "label": "Mixed today",
+          "label": "Switch-hitter",
           "text": "Today's answers switch between pushing harder and redesigning. Notice which one you grab under stress, and try the redesign first once this week."
         },
         {
           "upTo": 1,
-          "label": "Redesigner today",
+          "label": "Redesigner",
           "text": "Today's answers look for the structure behind the problem. Keep going, and give redesigns time: their results also arrive late."
         }
       ]
     },
-    "insight": "Willpower and bigger targets are weak levers, yet we grab them first. Changing what you see, what's rewarded, or what you aim at works with less strain.",
+    "insight": "Meadows ranked 'numbers' (targets, budgets) among the weakest levers; we add willpower to that list. Changing what people see, what's rewarded, or the goal tends to work with less strain.",
     "model": "Before pushing harder, ask what structure is producing the result.",
     "try_today": "Take one 'I should try harder' and rewrite it as a change to your surroundings, rules, or reminders. Do that change now.",
     "source": {

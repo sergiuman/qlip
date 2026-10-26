@@ -46,7 +46,7 @@
         }
       ]
     },
-    "insight": "Habits are shortcuts, not flaws. Clear's loop has four links (Duhigg's had three). You don't have to beat the whole loop: remove the cue or swap the response.",
+    "insight": "Most people pick willpower first. The trick is the cue. Best move: charge your phone across the room, so there's no cue and no fight. Clear's loop has four links (Duhigg's had three): remove the cue or swap the response.",
     "model": "Cue, craving, response, reward. Change one link and the habit starts to change.",
     "try_today": "Pick one habit you want to change and write down its cue. Then move that cue out of sight or out of reach.",
     "try_team": "Each person names one group habit (late starts, phones at dinner). Together, name its cue and pick one link to change for a week.",
@@ -87,10 +87,10 @@
       "unit": " days",
       "answer": 66,
       "anchor": 21,
-      "explain": "Lally and colleagues (2010) followed 96 people and found a median of 66 days, with a huge estimated range: 18 to 254 days. The popular '21 days' figure has no solid research behind it."
+      "explain": "Lally and colleagues (2010) followed 96 people for 12 weeks. For the 39 whose data were clear enough to model, the median was 66 days, and the projected range ran from 18 to 254 days. The popular '21 days' has no solid research behind it."
     },
     "insight": "Still effortful after three weeks? That's normal, not failure. Simple habits (a glass of water) automate faster than hard ones (50 sit-ups). Small study, wide range: patience is part of the method.",
-    "model": "Habits take about two months on average, and the range is wide. Plan for the long middle.",
+    "model": "A typical habit took around two months in one small study, and the range is huge. Plan for the long middle.",
     "try_today": "Pick one tiny habit and mark a date 66 days from today in your calendar as its check-in day.",
     "try_team": "Choose one shared habit (a 5pm tidy-up, a 1-minute check-in). Put a review date 66 days out on the shared calendar and judge it then, not before.",
     "source": {
@@ -271,16 +271,16 @@
     "concept": "one_percent",
     "domain": "habits",
     "type": "estimate",
-    "hook": "Get 1% better every day for a year. Guess how much better you are.",
+    "hook": "1% a day sounds like nothing. Guess what it compounds to in a year.",
     "title": "1% Compounding",
     "game": {
-      "question": "If you improve 1% every day for 365 days, how many times better are you at the end?",
+      "question": "Something grows 1% a day, compounding, for 365 days. How many times bigger is it at the end?",
       "min": 1,
       "max": 100,
       "step": 0.1,
       "unit": "x",
       "answer": 37.8,
-      "explain": "1.01 to the power of 365 is about 37.8. The flip side: getting 1% worse daily (0.99^365) leaves you at about 0.03, nearly zero. Growth like this feels slow at first because we tend to think in straight lines."
+      "explain": "1.01 to the power of 365 is about 37.8; 1% worse daily (0.99^365) leaves about 0.03. People aren't bank accounts: skills plateau and rest days are part of it. The point is direction, not 37x."
     },
     "insight": "We expect straight-line progress, so small daily gains feel pointless. Real skills plateau and days vary, so this is an illustration, not a forecast. Small choices still add up, both ways.",
     "model": "Tiny gains compound. Judge your habits by their direction, not by today's result.",
@@ -569,21 +569,22 @@
         }
       ]
     },
-    "insight": "In Lally's 2010 study, missing one day didn't meaningfully slow habit formation. 'Never miss twice' is Clear's rule of thumb, not something Lally tested. Treat a miss as an accident.",
+    "insight": "William James warned: 'Never suffer an exception to occur' till a habit is rooted. Lally's 2010 data was gentler: one missed day barely slowed habit formation. Treat a miss as an accident, not a collapse.",
     "model": "Missing once is an accident. Clear's rule of thumb: come back soon and small, even after two misses or ten.",
     "try_today": "If you missed something this week, do a tiny version of it today and tell yourself: 'One miss doesn't define me.'",
     "try_team": "Agree on a 'come back small' version of your shared habit (a one-line update instead of the full check-in) for days that fall apart.",
     "from_source": {
       "quote": "Seize the very first possible opportunity to act on every resolution you make.",
       "cite": "William James, The Principles of Psychology (1890), vol. 1, ch. IV 'Habit' (third maxim)",
-      "next_read": "The Principles of Psychology, ch. IV 'Habit' (his maxims on forming habits, near the end)"
+      "next_read": "The Principles of Psychology, ch. IV 'Habit': compare his first three maxims with Lally (2010)."
     },
     "source": {
       "thinkers": [
         "James Clear",
-        "Phillippa Lally"
+        "Phillippa Lally",
+        "William James"
       ],
-      "work": "Atomic Habits (2018); How are habits formed (2010)"
+      "work": "Atomic Habits (2018); How are habits formed (2010); The Principles of Psychology (1890)"
     },
     "evidence": "moderate",
     "level": 1,

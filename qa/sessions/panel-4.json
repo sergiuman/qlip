@@ -1,0 +1,600 @@
+{
+ "session": 4,
+ "personas": [
+  {
+   "persona": "Maya, 16, high-school student in Manchester. Lives on TikTok, hates anything that feels like school or a lecture, only stays if it's fast, surprising and about her.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 6,
+    "safety": 8,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "When a swipe game ends, the screen only shows feedback for the LAST card plus a flat score ('2 of 6 sorted', '3 of 6 sorted'). I never find out which ones I got wrong, so it feels like a test I failed and that's it. Seen on feedback-loops-swipe-a and emotion-naming-swipe-a. The 'Not quite —' line on the last item reads like a teacher's red pen.",
+     "fix": "On swipe results, under the score, show a compact recap of every item with a tick or cross and its one-line 'why' (misses first, collapsed after 3). Change the score line: if the score is under half, show '2 of 6. These ones are sneaky, see why below'; at half or above, show 'X of 6. Nice sorting'. Change the per-item wrong prefix from 'Not quite —' to 'Plot twist:'."
+    },
+    {
+     "card_id": "habit-loop-choice",
+     "severity": "high",
+     "problem": "Getting 0 of 2 shows a giant headline: 'Not this time. The feedback above is where the lesson is.' plus '0 of 2 best calls'. That's literally school. It also tells me to scroll back UP, which I won't do. The phone-on-pillow scenario was so relatable too, so this ending wastes it.",
+     "fix": "For low scores on choice cards, replace the headline with something that doesn't feel like failing: 'Most people pick willpower first. The trick is the cue.' Then repeat the best answer inline: 'Best move: charge your phone across the room, so there's no cue and no fight.' Hide the 'X of 2 best calls' counter when it is 0."
+    },
+    {
+     "card_id": "feedback-loops-swipe",
+     "severity": "medium",
+     "problem": "The swipe buttons say Thermostat/Snowball, but the prompt asks 'reinforcing or balancing?'. That's two pairs of jargon and I had to work out which goes with which. I scored 2/6 mostly because of the mapping, not the idea.",
+     "fix": "Change prompt to: 'Does this keep growing like a snowball, or settle back like a thermostat?' Change left label to 'Thermostat (settles)' and right to 'Snowball (grows)'. Move the words 'reinforcing/balancing' to the insight only."
+    },
+    {
+     "card_id": "deliberate-practice-order",
+     "severity": "medium",
+     "problem": "'Put the deliberate practice loop in order' is a memorise-the-textbook exercise. The great hook (guitar for 10 years) turns into a worksheet, and 'practise' vs 'feedback' order feels arbitrary, so being marked wrong feels unfair. The reveal is then a long paragraph repeating the list.",
+     "fix": "Cut to 3 items: 'Pick the bit you always mess up', 'Do just that bit, slightly too hard', 'Check what went wrong, then go again'. Change prompt to 'You've got 10 minutes with your guitar. What order levels you up?' Shorten explain to: 'Playing songs you know = staying still. Drilling the bit you fumble = getting better.'"
+    },
+    {
+     "card_id": "power-of-yet-reveal",
+     "severity": "medium",
+     "problem": "The reveal opens with 'Any pick is fair here: there's no study behind this one.' Honest, but it kills the whole point of a reveal, and I feel tricked into guessing for nothing. It then says 'You chose: Honestly, no difference' with nothing to react to.",
+     "fix": "Change the card type to choice (no right answer needed) or rewrite the reveal to: 'No lab test on this one, so here's a real-life one instead: a Chicago school swapped F grades for \"Not Yet\". Say it out loud: \"I can't do this\" vs \"I can't do this yet\". Feel the difference?' Then drop the 'You chose:' headline for cards that have no answer."
+    },
+    {
+     "card_id": "order-chaos-border",
+     "severity": "medium",
+     "problem": "Questions and results assume an adult life. 'My daily routines (sleep, schedule, money)' and the anchor 'a weekly money check' mean nothing to me. Also, with a 5-question slider I can easily land on 'Leaning Chaos' just because I'm 16 and everything is new. Picking 'So much is new I can't keep up' shouldn't push me the same way as 'Charge in without a plan'.",
+     "fix": "Change Q4 to 'My daily routines (sleep, homework, phone time) are…'. In the Chaos zone text, replace 'or a weekly money check' with 'or a fixed time your phone goes on charge'. Change Q2's '+2' option to 'Lots is new and it's exciting but a lot' with value 1 instead of 2."
+    },
+    {
+     "card_id": "growth-mindset-spectrum",
+     "severity": "low",
+     "problem": "Q1 asks about a first try at a new tool or skill, but the most fixed answer is 'I'm just not a numbers person', which doesn't match unless it's maths. It feels copy-pasted. Also the card is 4 questions plus a slider, with no surprise at the end.",
+     "fix": "Change Q1 option value -2 to: 'I'm just not good at this kind of thing.' Add a one-line surprise to the result zone texts, e.g. at the end of the Mixed zone: 'Fun fact: your mindset can be growth for football and fixed for maths on the same day.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "After every game there's the same long stack: model box, try-today checkbox, 'Doing this with others? (optional)', Next, 'Why? 15-second read', plus a helpline disclaimer on some. It's a wall of text after a 20-second game. The helpline line on a 'goals' card (wso-triad-venn) feels random and heavy.",
+     "fix": "Only show the model line and try_today by default. Collapse 'Doing this with others?' and 'Why?' into one 'More' chevron. Show the helpline footer only on cards whose result names a low mood or harsh self-talk (self-compassion-spectrum critic zone, procrastination, reframing), not on wso-triad-venn or growth-mindset-spectrum."
+    }
+   ],
+   "best_cards": [
+    "one-percent-estimate",
+    "impulse-pause-swipe",
+    "reframing-spin-or-reframe-swipe"
+   ],
+   "verdict": "The hooks actually got me. 'Alone with your thoughts or a mild shock?', 'Played guitar for 10 years?' and the 1% = 37.8x number made me stop scrolling, and the group-chat and phone-on-pillow situations felt like they were about me. Nothing felt mean, and the 'not a verdict on you' lines are nice. But too many endings turn into school. A bare '2 of 6 sorted' or 'Not this time' with no recap, an order-the-steps worksheet and a reveal that admits there's no answer all lose me. Then a long stack of boxes after a 20-second game. Fix the endings so I see what I missed and get one punchy takeaway, and I'd play the next one and maybe send the 1% one to my mates."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj, non-native English speaker, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself, and has no patience for fluff.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "After a swipe card I only see '3 of 7 sorted' and the 'why' for the last item. I don't know which 4 I got wrong, so the learning is lost. The wrong-answer line 'Not quite — <why>' also doesn't say which side was correct. On impulse-pause-swipe I can't tell from the screen whether 'Leaving the room' was hot or time-buying. The 'Not quite' text comes from app.js line 412, and done() at line 415 shows only the count.",
+     "fix": "In app.js line 412, change the wrong-answer text to `Not quite: this one is \"${it.side==='left'?g.left:g.right}\". ${it.why}`. In done() for swipe cards, add a compact list under the score: for every missed item, one line '<item text> → <correct label>: <why>'. Collapse it after the first 3 items with a 'Show all misses' toggle."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Wrong choices are styled like success. On growth-mindset-praise-choice I picked 'No you're not, you're brilliant!' (not best), yet the feedback bar is green. The result title 'Not this time. The feedback above is where the lesson is.' is a huge headline with a green underline, so it looks like a prize. power-of-yet-reveal does the same: 'You chose: Honestly, no difference' gets a big green underline. Mixed signals, and the big 'Not this time' headline also feels a little like a grade.",
+     "fix": "Use a neutral or amber colour (not green) for the feedback bar and the title underline when the pick is not 'best' or not the answer. Make the result title smaller (body-heading size) and rewrite it to '0 of 2 best calls. Read the tip above, it's the useful part.' Remove the separate small '0 of 2 best calls' line under it."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "For a manager, the team version is the most useful part, but it is always collapsed under 'Doing this with others? (optional)' in small grey text. I have to tap it on every card and I'll stop doing that after 3 cards.",
+     "fix": "Add a one-time question in the feed ('Do you lead a team, class or family? Yes / No'). Store it in localStorage. When Yes, render try_team expanded by default with the label 'With your team' instead of the collapsed 'Doing this with others? (optional)'."
+    },
+    {
+     "card_id": "growth-mindset-praise-choice",
+     "severity": "medium",
+     "problem": "Hook and scenarios are about kids and an 11-year-old cousin doing maths. The same lesson matters most for managers giving feedback to engineers, but nothing here is about adults or work, so I feel it is not for me.",
+     "fix": "Change the hook to 'One kind of compliment may nudge people to dodge hard problems. Which?' Step 1 scenario: 'A junior developer on your team fixes a nasty production bug and tells you, proud.' Options: '\"Wow, you're so smart!\"' / '\"Nice! How did you track it down?\"' (best) / '\"Cool, but was it an easy one?\"'. Step 2: 'Next sprint their PR gets torn apart in review and they say, \"I'm just not good at backend.\"' Keep the three reply patterns, replacing 'maths' with 'backend'."
+    },
+    {
+     "card_id": "quitting-wisely-swipe",
+     "severity": "medium",
+     "problem": "The right-hand label 'Push through' is wrong for 'You had a terrible week and feel like giving up tonight'. The why says rest and decide on a calm review date, which is not pushing through. For a burned-out person, 'push through' after a terrible week is risky advice. 'That's where the reward usually lies beyond' is also awkward English.",
+     "fix": "Change game.right from 'Push through' to 'Don't quit yet' and the prompt to 'Quit signal, or don't quit yet?'. Rewrite the first why to: 'Hard plus progress is the classic dip. The reward is usually on the other side.'"
+    },
+    {
+     "card_id": "power-of-yet-reveal",
+     "severity": "medium",
+     "problem": "The game has no answer: the reveal says 'Any pick is fair here: there's no study behind this one'. As a player I feel the 30 seconds were wasted: a quiz with no right answer, just an anecdote. The 'report card' hook is about school, not my life.",
+     "fix": "Turn it into a choice card about my own words: hook 'Your teammate says \"I can't do Kubernetes.\" One word changes the sentence.' Scenario: 'Which reply turns this into a next step?' Options: '\"Then leave it to Ana.\"' / '\"You can't do Kubernetes yet. What's the first piece to learn?\"' (best) / '\"Sure you can, you're great.\"'. Keep the Dweck anecdote in insight, with the honest note that it is an anecdote."
+    },
+    {
+     "card_id": "one-percent-estimate",
+     "severity": "medium",
+     "problem": "'How many times better are you at the end?' presents 37.8x as if it applies to a person. I know that is not how skills work. The insight hedges, but the headline number still feels like a self-help poster, and a burned-out reader can feel guilty for not compounding.",
+     "fix": "Change the question to 'A number grows 1% every day for 365 days. How many times bigger is it at the end?' Change the hook to 'A number grows 1% a day for a year. Guess how big it gets.' Add to explain: 'People aren't bank accounts: skills plateau and rest days are part of it. The point is direction, not 37x.'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "With a 'Half-Lit Path' result (5/10 on all three), the dot is drawn exactly in the centre of the Venn diagram, where all three circles overlap. Visually that reads as 'Full Agency', the opposite of the text. It's confusing at first look.",
+     "fix": "For the 'mid' and '' results, draw the dot hollow (outline only, 50% opacity) or hide it, and add a caption under the diagram: 'Dot in the middle = all three pillars medium, not all strong.' Better still, show three small bars (W/S/O out of 10) instead of a centre dot."
+    }
+   ],
+   "best_cards": [
+    "impulse-pause-swipe",
+    "leverage-points-spectrum",
+    "quitting-wisely-swipe"
+   ],
+   "verdict": "Good material. Many cards give me something concrete for tomorrow: the 10-minute rule for hot replies, 'ban try harder for 5 minutes, change the structure', kill criteria for projects, the W/S/O check for a stuck goal. The tone is kind, there is no shaming, and the evidence notes are honest, which I respect. But there are 3 problems. First, much of it is written for teenagers (cousin's maths quiz, report card, driving test, group project), so I often translate it to my own life myself. Second, the team versions, the best part for me, are hidden in a grey collapsed line. Third, after the swipe games I get a score but don't see what I got wrong, and wrong answers are shown in green, so the 'learning' moment is weak. Fix those and I would use this with my team in 1:1s and retros. Now it's 'nice, sometimes useful', not a daily habit."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher. Reads Seneca, Aristotle and Peterson. Values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification.",
+   "scores": {
+    "hook": 6,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "When a reveal card is answered wrongly, the result headline says 'Most people pick that. The real answer: ...' (app.js line 507). That is a made-up statistic. No card holds any data on what most players pick, and the sentence is printed for every wrong answer, including ones few people would choose. In the emotion-naming-label-reveal screenshot it fills four lines of large red underlined type, which reads like a teacher's red pen. On an app whose cards take care to cite studies, inventing a crowd statistic undercuts my trust.",
+     "fix": "In app.js line 507, replace the wrong-answer string with `Not quite. The answer: ${g.choices[g.answer]}`. Keep a 'most people' phrasing only when the card has an explicit field such as g.typical_miss: true, as the estimate verdict at line 480 already does. Also make the wrong-answer headline a neutral colour, not the domain red."
+    },
+    {
+     "card_id": "never-miss-twice-choice",
+     "severity": "high",
+     "problem": "The card quotes William James's third maxim from the Habit chapter, but James's second maxim says the opposite of this card ('Never suffer an exception to occur till the new habit is securely rooted in your life'). The card says 'Missing once barely matters'. A reader who follows the next_read will find James contradicting the lesson, and the card never mentions it. This is the best chance for real depth in the session, and it is missed.",
+     "fix": "Rewrite insight to: \"William James warned: 'Never suffer an exception to occur' till a habit is rooted. Lally's 2010 data was gentler: one missed day barely slowed habit formation. Treat a miss as an accident, not a collapse.\" Keep the from_source quote, and change next_read to: \"The Principles of Psychology, ch. IV 'Habit': compare his first three maxims with Lally (2010).\""
+    },
+    {
+     "card_id": "quitting-wisely-swipe",
+     "severity": "medium",
+     "problem": "'You had a terrible week and feel like giving up tonight' is marked 'Push through', but its why says 'Rest, then set a calm review date and decide then'. That is advice to defer the decision, not to push through, so a careful player who picks 'Quit signal'-adjacent reasoning is marked wrong. Other faults: 'kill criteria' is a plural used as a singular, the dip why ('That's where the reward usually lies beyond') is ungrammatical, and the screenshot shows a disheartening '3 of 7 sorted'.",
+     "fix": "Rename right label to 'Not a quit signal'. Change the prompt to 'Is this a real signal to quit?'. Change the dip why to: 'Hard plus progress is the classic dip. The reward usually lies on the other side.' Change try_today to: \"...and set a 'kill criterion': the one signal that would tell you to stop.\""
+    },
+    {
+     "card_id": "order-chaos-border",
+     "severity": "medium",
+     "problem": "The insight says Peterson borrows 'Taoism's yin-yang image' and cites the Tao Te Ching. The yin-yang circle (taijitu) is a much later Neo-Confucian emblem, and the Tao Te Ching names yin and yang only once (ch. 42). The questions also mix temperament with life situation, scoring 'Relieved, I like things loose' and 'Charge in without a plan' as Chaos. A person who simply likes spontaneity gets told their life is a flood. The hook ('cage or a flood') promises a reading of life circumstances, not of personality.",
+     "fix": "Rewrite insight to: \"Peterson (Maps of Meaning) pictures life on a border between order, the known, and chaos, the unknown, an idea he links to the Taoist yin and yang. Too much order goes stale; too much chaos overwhelms. Grow by facing the unknown voluntarily.\" Change source.work to \"Tao Te Ching, ch. 42; Peterson, Maps of Meaning (1999); 12 Rules for Life (2018), Rule 2\". Replace Q3 options with ones about circumstance: 'Nothing changes, it's the same old', -2 / 'A few surprises, manageable', 0 / 'Plans fall apart faster than I can make them', 2."
+    },
+    {
+     "card_id": "power-of-yet-reveal",
+     "severity": "medium",
+     "problem": "The card is honest that it has no study behind it, but that leaves a reveal game with no revelation. The player picks, the screen says 'Any pick is fair', and they are left with a single TED-talk anecdote. Intellectually it is the thinnest card in the sample, and it is the kind of slogan the classical tradition puts better.",
+     "fix": "Add from_source: {\"quote\": \"Men become builders by building and lyre-players by playing the lyre.\", \"cite\": \"Aristotle, Nicomachean Ethics II.1, trans. W. D. Ross (1908)\", \"next_read\": \"Nicomachean Ethics, Book II, chapters 1-4 (on how virtues are acquired by practice)\"}. Change the reveal to: \"No right answer: there's no study here, just Dweck's story of a Chicago school that graded unfinished courses 'Not Yet'. Aristotle made the deeper point: abilities are built by doing. 'Fail' names an ending; 'not yet' names the next rep.\""
+    },
+    {
+     "card_id": "growth-mindset-spectrum",
+     "severity": "medium",
+     "problem": "Q1 asks about something new ('a tool, a skill, a subject'), but its -2 option is 'I'm just not a numbers person', which is specific to maths and odd for someone learning, say, Italian. In Q2, 'It stings, but I'm curious how they got there' scores 0, below 'Some of it is talent, some is practice' (1). Curiosity about method is the growth stance the card itself teaches, so the scoring contradicts the lesson.",
+     "fix": "Change the Q1 -2 label to \"I'm just not built for this kind of thing.\" Change the Q2 option 'It stings, but I'm curious how they got there' to value 1, and 'Some of it is talent, some is practice' to value 0."
+    },
+    {
+     "card_id": "one-percent-estimate",
+     "severity": "low",
+     "problem": "'How many times better are you' treats a person as a quantity that compounds. The insight's caveat ('an illustration, not a forecast') comes only after the player has absorbed the 37.8x figure as if it said something about human beings. This is exactly the Atomic Habits arithmetic that pop-psych abuses.",
+     "fix": "Change the question to: \"Something grows 1% a day, compounding, for 365 days. How many times bigger is it at the end?\" Change the hook to: \"1% a day sounds like nothing. Guess what it compounds to in a year.\" Leave the insight unchanged."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "On My map (view-map-dark), with 72 nodes lit, the labels overlap so badly that they can't be read ('Will · Skill · Oppo...' runs across 'Start With Why', and 'The Pause' runs into 'Feedback Loops'). The map is meant to reward the reader with a view of how ideas connect, and at present it is a tangle.",
+     "fix": "Draw labels only for the last 8 played nodes plus whichever node is hovered or tapped, and draw nothing for the rest. Also run a simple collision pass: skip any label whose bounding box overlaps one already drawn."
+    }
+   ],
+   "best_cards": [
+    "impulse-pause-swipe",
+    "reframing-spin-or-reframe-swipe",
+    "self-compassion-lookalike-swipe"
+   ],
+   "verdict": "A respectful, unusually careful little feed. I had not expected one to cite Lieberman correctly, to point out that the Frankl 'gap' quote isn't actually Frankl's, and to give me Seneca's Letter 6 and Epictetus in the Long and Carter translations. The best cards (The Pause, Reframe Not Spin, Kind Not Soft) distinguish a real virtue from its counterfeit, and that is real moral education. Several things let it down. The interface tells me 'Most people pick that' with no data behind it. The James habit card hides the fact that James disagreed with it. The order/chaos card is loose with its Taoism. The 'Yet' and '1%' cards still read like slogans. Some sorting games mark a thoughtful answer wrong because the labels are badly worded. I would play the next one, but I would not yet call it a Peterson Academy."
+  },
+  {
+   "persona": "Sam, 24, graduate with anxiety and low self-worth after a rough year. Sensitive to shaming, labels and pressure; needs it to feel safe and actually helpful.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 8,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "When a reveal guess is wrong, the headline is always 'Most people pick that. The real answer: ...' (app.js line 507). That is a made-up claim. On procrastination-emotion-reveal I picked 'No difference', and the app said 'Most people pick that' while the reveal text right above it says most people pick 'hard on themselves'. It contradicts itself and feels like being managed. For me it also lands as 'you got it wrong' in huge underlined type.",
+     "fix": "In app.js line 507, replace the wrong-answer string with `Not this time. The answer: ${g.choices[g.answer]}`. Only say 'Most people pick that' when the card has an optional `common` index field and k === g.common."
+    },
+    {
+     "card_id": "quitting-wisely-swipe",
+     "severity": "high",
+     "problem": "The result shows '3 of 7 sorted' as the big headline, so a judgment exercise about whether to quit things in my life becomes a test I failed. The card also has no sensitive flag, so there is no helpline footer, even though it covers giving up, sleep, health and relationships.",
+     "fix": "Add \"sensitive\": true. In app.js line 415, for swipe cards marked sensitive, change the result name to `${g.items.length} sorted, ${right} matched the model`. Better still, add a per-card field result_label: \"You sorted all 7. Here's how the model sees them.\""
+    },
+    {
+     "card_id": "quitting-wisely-swipe",
+     "severity": "medium",
+     "problem": "The item 'You had a terrible week and feel like giving up tonight' is answered 'Push through', but its own explanation says to rest and decide later. Being told to 'push through' on my worst night feels like pressure, and the label doesn't match the advice.",
+     "fix": "Rename the right label from \"Push through\" to \"Not a quit signal (yet)\" and change the prompt to \"Quit signal, or not a quit signal yet?\". Keep the why text: \"Don't decide on your worst day. Rest, then set a calm review date and decide then.\""
+    },
+    {
+     "card_id": "growth-mindset-spectrum",
+     "severity": "medium",
+     "problem": "The scoring punishes the kindest answers. 'It stings, but I'm curious how they got there' scores 0 while 'Some of it is talent, some is practice' scores 1, so admitting a feeling and being curious counts as less growth. In Q1, the -2 option 'I'm just not a numbers person' doesn't fit the general scenario (a tool, a skill, a subject).",
+     "fix": "Q2: set \"It stings, but I'm curious how they got there\" to 1 and \"Some of it is talent, some is practice\" to 0. Q1: change the -2 label to \"I'm just bad at this kind of thing.\""
+    },
+    {
+     "card_id": "self-compassion-spectrum",
+     "severity": "medium",
+     "problem": "If you answer honestly as someone with a harsh inner voice, the dot sits at the far-left end labelled 'Harsh critic' in red, under a heading that asks whether I'd talk to a friend this way. It reads as a verdict on me before the kind zone text shows up. The option text 'You idiot, you always do this.' is accurate but stings.",
+     "fix": "Rename the left pole from \"Harsh critic\" to \"Tough inner voice\". Rename the zone label from \"Critic-leaning\" to \"Your critic was loud today\". Add to the zone text: \"That voice learned to be harsh for a reason. You can retrain it one sentence at a time.\""
+    },
+    {
+     "card_id": "order-chaos-border",
+     "severity": "medium",
+     "problem": "Q5 scores avoidance ('Avoid it until it goes away') as Order and preference ('Relieved, I like things loose') as Chaos. Anxious avoidance is not order, so I end up labelled 'Leaning Order' for avoiding, or 'Chaos' for liking flexibility. That is confusing and inaccurate.",
+     "fix": "Q5: rewrite the -2 option as \"Stick to what I know and leave it for later\" and add a note in the zone text that avoidance can feel safe without being stable. Q3: replace \"Relieved, I like things loose\" with \"Thrown off, my week was already unpredictable\" (value 2)."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "'Will 5/10 · Skill 5/10 · Opportunity 5/10' turns a reflection into a grade, and a score on my 'Will' feels like a score on my character. The result name 'The Capable Bystander' also labels me rather than the situation.",
+     "fix": "Replace the numeric line with words per pillar (\"Will: middling · Skill: middling · Opportunity: middling\") or hide it behind 'Why?'. Rename result OS from \"The Capable Bystander\" to \"Ready, Waiting for a Why\"."
+    },
+    {
+     "card_id": "procrastination-emotion-reveal",
+     "severity": "low",
+     "problem": "The reveal names the answer twice: once in the body, then again in a huge underlined 'The real answer: Those who forgave themselves'. The second one buries the kindest line ('forgive yesterday's delay') under a 'you were wrong' banner.",
+     "fix": "After the reveal fix in app.js, set this card's headline to \"Forgiveness won.\" (add an optional reveal_title field) so the result reads as good news, not a correction."
+    }
+   ],
+   "best_cards": [
+    "procrastination-emotion-reveal",
+    "self-compassion-lookalike-swipe",
+    "never-miss-twice-choice"
+   ],
+   "verdict": "Mostly a feed that feels safe. The 'snapshot, not a verdict' line, the helpline footer, 'Today...' zone wording and the kind feedback on wrong options (never-miss-twice, mistake-alchemy) all made me feel looked after, and I'd actually use the procrastination, self-compassion and reframing tips. What still knocks me is the scoreboard energy: 'Most people pick that. The real answer', '3 of 7 sorted', 'Will 5/10', and a red dot pinned to 'Harsh critic'. These turn reflection into a test, and the first one is simply untrue. Fix those headlines and the quitting card's 'push through on your worst night' mismatch, and this becomes something I'd recommend to a friend who's struggling."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist. I check every claim, attribution and effect size, and every self-report item for construct validity.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "growth-mindset-praise-choice",
+     "severity": "high",
+     "problem": "The evidence label is 'moderate', but the Mueller & Dweck (1998) praise effect has failed direct replication (Li & Bates, 2019, JEP: General, found no intelligence-praise effect on later task choice or performance). The sister card growth-mindset-spectrum is already labelled 'contested', so the two cards contradict each other. The hook ('may nudge kids to dodge hard problems') also still presents the 1998 finding as the hook fact.",
+     "fix": "Set evidence to \"contested\". Rewrite insight to: \"A famous 1998 study found kids praised for being smart later picked easier tasks. A large 2019 replication (Li & Bates) didn't find that effect. Praising what someone did is still low-risk and gives them something to repeat.\" Add \"Li & Bates, JEP: General (2019)\" to source.work and \"Yue Li, Timothy Bates\" to thinkers."
+    },
+    {
+     "card_id": "order-chaos-border",
+     "severity": "high",
+     "problem": "This is the worst survey design in the batch. (1) The items mix three constructs: life circumstances (Q1, Q4), trait openness or preference (Q3) and impulsivity versus avoidance (Q5). One axis cannot be read off them. (2) The desirable zone is the midpoint, and the scale averages bipolar scores. So someone with 'rigidly controlled' routines (-2) who also 'charges in without a plan' (+2) is told 'On the Border... Worth protecting'. Opposite extremes cancel out into a false healthy result. (3) In Q2, 'So much is new I can't keep up' measures overload, not chaos you chose, and that contradicts the card's own model ('chaos you choose builds you').",
+     "fix": "Measure circumstances only and keep the midpoint as a real middle. Replace Q3 with 'This week, how many surprises did you have to absorb?' (None at all = -2 / A few I could handle = 0 / More than I can keep up with = 2). Replace Q5 with 'How much of my week is new to me (new tasks, places, people)?' (Almost nothing = -2 / Some = 0 / Most of it = 2). In app.js spectrum, flag a profile when the answers span both extremes (any -2 and any +2). Then show the text \"Your answers pull hard both ways: very fixed in some areas, very unsettled in others. Pick the one area that feels most out of balance.\" instead of the 'On the Border' zone."
+    },
+    {
+     "card_id": "quitting-wisely-swipe",
+     "severity": "high",
+     "problem": "The binary forces wrong answers. 'You had a terrible week and feel like giving up tonight' is keyed 'Push through', but its own 'why' says 'don't decide... set a review date'. That is 'defer the decision', not 'push through'. Likewise 'stuck but haven't tried a new method' is really 'change method', not 'push through'. The QA screenshot shows 3 of 7 sorted, which suggests the items are ambiguous rather than that the player didn't understand. Players get told they were wrong for a sensible answer.",
+     "fix": "Relabel the right side 'Not a quit signal (yet)' and set prompt to \"Is this a real quit signal, or not one yet?\". Rewrite the terrible-week item why to \"A bad night isn't a quit signal. Rest, set a calm review date, and decide then.\""
+    },
+    {
+     "card_id": "growth-mindset-spectrum",
+     "severity": "medium",
+     "problem": "The response sets are asymmetric and the scoring is biased. Q2 has no -1, Q3 has no ±1 and Q4 has no -2, so the fixed pole is harder to reach than the growth pole. Q2 scores the most accurate statement, 'Some of it is talent, some is practice', below 'I wonder how they practise', which penalises a correct belief. 'It stings, but I'm curious how they got there' (clearly growth-leaning) is coded 0. In Q1, the -2 option 'I'm just not a numbers person' doesn't fit a stem about 'a tool, a skill, a subject'.",
+     "fix": "Use 3 symmetric options (-2/0/2) per item. Q1: \"I'm just not cut out for this.\" (-2) / \"Depends what it is.\" (0) / \"My method didn't work. Time for a new one.\" (2). Q2: \"They're a natural. I'll never catch up.\" (-2) / \"Some of it is talent, some is practice.\" (0) / \"It stings, but I'm curious how they practise.\" (2). Q4: \"Usually the easy one.\" (-2) / \"Easy when I'm drained, stretch when I have energy.\" (0) / \"Usually the stretch.\" (2)."
+    },
+    {
+     "card_id": "habit-loop-66-days",
+     "severity": "medium",
+     "problem": "The effect is overclaimed. The median of 66 days came from the 39 of 96 participants whose data fit the curve, not from all 96. The 18-254 range is a model extrapolation, since the study lasted only 84 days. The model text says 'about two months on average' when the figure is a median from a small subsample. The 21-day anchor is shown before the slider, which biases estimates, so the game demonstrates anchoring but never says so.",
+     "fix": "explain: \"Lally and colleagues (2010) followed 96 people for 12 weeks. For the 39 whose data were clear enough to model, the median was 66 days, and the projected range ran from 18 to 254 days. The popular '21 days' has no solid research behind it.\" model: \"A typical habit took around two months in one small study, and the range is huge. Plan for the long middle.\""
+    },
+    {
+     "card_id": "procrastination-emotion-reveal",
+     "severity": "medium",
+     "problem": "The reveal asserts 'Most people do' pick 'hard on themselves'. That is an unsupported empirical claim about how players answer, which is exactly the kind of invented statistic this app warns against. The design is also undersold: Wohl et al. (2010) is a single correlational study of 119 students with a small effect, but the model line ('You're not avoiding the task. You're avoiding a feeling') states the mood-repair account as universal fact.",
+     "fix": "Reveal: \"The forgivers procrastinated less before the next exam (Wohl, Pychyl & Bennett, 2010). Picked 'hard on themselves'? Guilt feels like it should push us. It's one correlational study of 119 students, but it fits a wider pattern: guilt keeps the task tied to a bad feeling.\" Model: \"Often you're not avoiding the task, you're avoiding a feeling. Shrink the feeling and the task gets easier to start.\""
+    },
+    {
+     "card_id": "feedback-loops-swipe",
+     "severity": "medium",
+     "problem": "The evidence label is 'strong' (defined as replicated science) for a conceptual systems-dynamics vocabulary. Reinforcing and balancing loops are a modelling lens, not an empirical psychological finding, so the label overstates the evidence. Leverage-points-spectrum, from the same source, is correctly labelled 'philosophy'.",
+     "fix": "Change evidence from \"strong\" to \"philosophy\". Optionally add to insight: \"It's a thinking tool from systems science, not a lab finding.\""
+    },
+    {
+     "card_id": "leverage-points-spectrum",
+     "severity": "low",
+     "problem": "The items invite socially desirable answers. In every item the 'redesign' option is obviously the smart one, and Q4 is a forced binary between 'try to win it more clearly' and a mature reflective option, so almost everyone scores Redesigner. The insight's claim that 'willpower and bigger targets are weak levers' is not Meadows (her list ranks parameters lowest, and willpower is not on it), but it is phrased as if it comes from her.",
+     "fix": "Make the tweak options as attractive as the redesign ones and add a middle to Q4. Q1 -2: \"Track every purchase for a month\". Q4 options: \"Prepare my points better for next time\" (-2) / \"Agree a pause rule when it starts\" (0) / \"Ask what each of us is actually trying to protect\" (2). Insight: \"Meadows ranked 'numbers' (targets, budgets) among the weakest levers; we add willpower to that list. Changing what people see, what's rewarded, or the goal tends to work with less strain.\""
+    }
+   ],
+   "best_cards": [
+    "self-compassion-lookalike-swipe",
+    "impulse-pause-swipe",
+    "power-of-yet-reveal"
+   ],
+   "verdict": "This is unusually honest pop-psychology. It corrects the Frankl misquote and the 21-day and 10,000-hour myths, admits when there is 'no study behind this one', labels growth mindset as contested, and keeps results kind and framed as 'today'. I would trust most of these cards with a student. The weak spots are the psychometrics and a few evidence labels. order-chaos-border mixes constructs, and averaging opposite extremes gives a false 'balanced' result. growth-mindset-spectrum has asymmetric response sets. quitting-wisely's forced binary marks sensible answers wrong. The praise card still treats a failed-replication finding as 'moderate'. The swipe and reveal games are the strongest. The spectrum self-reports need the most work before I would call their results meaningful."
+  },
+  {
+   "persona": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how clear it is what to tap, reward moments, and whether people would share it.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 5.5
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Swipe cards have a weak ending. After the last swipe, the card shows only the 'why' for the final item, then a big '2 of 6 sorted' or '3 of 7 sorted' heading straight away (feedback-loops-swipe-a, emotion-naming-swipe-a, quitting-wisely-swipe-a). The player never sees which items they got wrong, so a low score feels like losing with no lesson. That's the moment people quit instead of sharing.",
+     "fix": "On the swipe end state, add a compact recap list under the score heading. Show one row per item: a check or cross, the item text cut to about 40 characters, and the correct side label. Tapping a row expands its 'why'. Change the heading copy by score. 5 or more correct: 'Sharp eye: {n} of {total}'. 3 to 4: '{n} of {total}. The misses below are the lesson.' 0 to 2: 'Tricky one. Here's what each was.' Also remove the 'Not quite — ' prefix from the last item's feedback when the recap is shown, so the last miss doesn't get double emphasis."
+    },
+    {
+     "card_id": "feedback-loops-swipe",
+     "severity": "high",
+     "problem": "The prompt and the swipe sides are in opposite orders. The prompt names 'grow itself (reinforcing)' first, but LEFT is Thermostat and RIGHT is Snowball. The prompt also leans on jargon ('reinforcing', 'balancing') when the swipe labels use the metaphors. The test run scored 2 of 6, which points to a mapping problem, not a knowledge problem.",
+     "fix": "Set game.prompt to: \"Does this loop pull back to a set point (thermostat ←) or keep growing itself (snowball →)?\" Keep left = \"Thermostat\" and right = \"Snowball\". Change the hook to: \"Snowball or thermostat? Sort 6 everyday loops.\" (cut 'in 30 seconds', since nothing is timed)."
+    },
+    {
+     "card_id": "quitting-wisely-swipe",
+     "severity": "medium",
+     "problem": "The 'Push through' side is wrong for 'You had a terrible week and feel like giving up tonight'. The 'why' says rest and decide later, which is not pushing through. Players who swipe 'Quit signal' are marked wrong even though the card agrees that tonight is a bad time to decide. The label punishes careful thinking.",
+     "fix": "Change right label from \"Push through\" to \"Not a quit signal\" and left label from \"Quit signal\" to \"Quit signal\". Change game.prompt to \"Is this a real quit signal, or not (yet)?\" Keep all 'side' values. In that item's 'why', change the start to: \"Not a quit signal: a bad night is a feeling, not data. Rest, then set a calm review date.\""
+    },
+    {
+     "card_id": "self-compassion-spectrum",
+     "severity": "medium",
+     "problem": "On the spectrum track, the gradient is darkest and most saturated red at the 'Kind coach' end and pale at the 'Harsh critic' end (self-compassion-spectrum-a). In emotional terms, red reads as alarm, so the kind end looks like the danger zone. Also, all four questions have an obvious 'good' answer at +2. People will game it, and the result feels like a grade.",
+     "fix": "For spectrum cards in the Emotions domain, render the track as a neutral-to-accent gradient with no strong red at either end, e.g. neutral grey on the left to the domain accent at 60% on the right. In the data, make one option per question less obviously virtuous. Q3: change the 0 option to \"Get busy so I don't dwell\" and the +2 option to \"Notice it, then do one small thing I need\". Q4: change the -2 label to \"Going soft on myself\" and the +2 label to \"Fuel to try again\"."
+    },
+    {
+     "card_id": "power-of-yet-reveal",
+     "severity": "medium",
+     "problem": "This reveal has no answer and admits 'there's no study behind this one'. The payoff heading is just 'You chose: Honestly, no difference' (power-of-yet-reveal-a). There's no tension and no reward, and I'd swipe past without anything to share.",
+     "fix": "Turn it into a 2-step choice card on the wording itself. Step 1 scenario: \"Your friend says 'I can't code.' Which reply helps most?\" Options: \"'Yeah, it's hard.'\" / \"'You can't code YET. What's the first tiny thing you'd learn?'\" (best: true) / \"'Sure you can!'\". Step 2 scenario: \"You think 'I'm bad at public speaking.' Rewrite it:\" Options: \"'I'm bad at it, full stop.'\" / \"'I'm not good at it yet; next step: one 2-minute talk to a friend.'\" (best: true) / \"'Speaking doesn't matter anyway.'\". Keep the Dweck 'Not Yet' school anecdote in insight."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The choice-card failure heading is long and a bit scolding: 'Not this time. The feedback above is where the lesson is.' It's followed by '0 of 2 best calls' (habit-loop-choice-a). It takes up 3 lines of display type at the most deflating moment. For a 30-second card that should leave people better off, that's a punishing beat.",
+     "fix": "Replace the 0-best heading with \"Good guesses. Here's the move that works best:\" and show the best option's text under it, highlighted. For 1 of 2, use \"Halfway there: one sharp call.\" For 2 of 2, use \"Two for two. You'd coach this.\" Show the 'n of 2 best calls' line only when n > 0."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "My map with all 72 ideas lit is an unreadable hairball (view-map-light). Labels overlap ('Will · Skill · Oppo...' sits over other nodes, 'The Pause' collides with 'Feedback Loops'), and the grey 'Old Wisdom' nodes look disabled rather than lit. This is meant to be the progress reward screen, and right now it's the least satisfying screen.",
+     "fix": "Show labels only for the 8 most-played nodes plus the tapped node. Cluster nodes by domain, with each domain's colour as a soft background blob. Change the Old Wisdom colour from grey to a warm bronze (e.g. #B7791F) so it doesn't read as an inactive state. Add a one-line headline stat above the graph, e.g. 'Your strongest link: Emotions ↔ Habits (9 cards)'."
+    },
+    {
+     "card_id": "leverage-points-spectrum",
+     "severity": "low",
+     "problem": "Every 'Redesigner' option is clearly the smart answer, and the option counts are uneven (Q4 has only 2 options, with no middle), so the result feels like a quiz you can't lose. 'Mixed today' under 'RIGHT NOW YOU LEAN' also repeats 'today', which is already said elsewhere.",
+     "fix": "Add a third, middle option to Q4: {\"label\": \"Take a break from the topic for a while\", \"value\": 0}. Change Q1 option -1 to {\"label\": \"Track every purchase for a month\", \"value\": 1}, since information flow is a real lever, so not every non-automation answer is the 'bad' one. Rename zone labels to \"Tweaker\", \"Switch-hitter\", \"Redesigner\" (drop 'today', which the snapshot footnote already covers)."
+    }
+   ],
+   "best_cards": [
+    "one-percent-estimate",
+    "wso-triad-venn",
+    "reframing-spin-or-reframe-swipe"
+   ],
+   "verdict": "The content quality is strong: hooks are punchy, the evidence is caveated honestly, and the tone is kind throughout ('a snapshot, not a verdict' is exactly right). The estimate and Venn cards have a real reward moment, with a visual payoff, a number to brag about and a clear next step. The game feel falls apart at the end of swipe and choice cards. A bare 'n of 6 sorted', no review of misses, and scolding failure headings turn mistakes into dead ends instead of the 'aha' a learning game needs. One swipe card (feedback loops) has its sides mapped backwards to its own prompt, and one (quitting wisely) marks a thoughtful answer wrong. Fix the end-of-game recap and those two mappings and this goes from a nice deck to something I'd forward to friends. Right now I'd play two or three, then drift."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "When a swipe game ends, the screen only shows feedback for the LAST card plus a flat score ('2 of 6 sorted', '3 of 6 sorted'). I never find out which ones I got wrong, so it feels like a test I failed and that's it. Seen on feedback-loops-swipe-a and emotion-naming-swipe-a. The 'Not quite —' line on the last item reads like a teacher's red pen.",
+   "fix": "On swipe results, under the score, show a compact recap of every item with a tick or cross and its one-line 'why' (misses first, collapsed after 3). Change the score line: if the score is under half, show '2 of 6. These ones are sneaky, see why below'; at half or above, show 'X of 6. Nice sorting'. Change the per-item wrong prefix from 'Not quite —' to 'Plot twist:'.",
+   "from": "Maya, 16, high-school student in Manchester. Lives on TikTok, hates anything that feels like school or a lecture, only stays if it's fast, surprising and about her."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "After every game there's the same long stack: model box, try-today checkbox, 'Doing this with others? (optional)', Next, 'Why? 15-second read', plus a helpline disclaimer on some. It's a wall of text after a 20-second game. The helpline line on a 'goals' card (wso-triad-venn) feels random and heavy.",
+   "fix": "Only show the model line and try_today by default. Collapse 'Doing this with others?' and 'Why?' into one 'More' chevron. Show the helpline footer only on cards whose result names a low mood or harsh self-talk (self-compassion-spectrum critic zone, procrastination, reframing), not on wso-triad-venn or growth-mindset-spectrum.",
+   "from": "Maya, 16, high-school student in Manchester. Lives on TikTok, hates anything that feels like school or a lecture, only stays if it's fast, surprising and about her."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "After a swipe card I only see '3 of 7 sorted' and the 'why' for the last item. I don't know which 4 I got wrong, so the learning is lost. The wrong-answer line 'Not quite — <why>' also doesn't say which side was correct. On impulse-pause-swipe I can't tell from the screen whether 'Leaving the room' was hot or time-buying. The 'Not quite' text comes from app.js line 412, and done() at line 415 shows only the count.",
+   "fix": "In app.js line 412, change the wrong-answer text to `Not quite: this one is \"${it.side==='left'?g.left:g.right}\". ${it.why}`. In done() for swipe cards, add a compact list under the score: for every missed item, one line '<item text> → <correct label>: <why>'. Collapse it after the first 3 items with a 'Show all misses' toggle.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English speaker, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself, and has no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Wrong choices are styled like success. On growth-mindset-praise-choice I picked 'No you're not, you're brilliant!' (not best), yet the feedback bar is green. The result title 'Not this time. The feedback above is where the lesson is.' is a huge headline with a green underline, so it looks like a prize. power-of-yet-reveal does the same: 'You chose: Honestly, no difference' gets a big green underline. Mixed signals, and the big 'Not this time' headline also feels a little like a grade.",
+   "fix": "Use a neutral or amber colour (not green) for the feedback bar and the title underline when the pick is not 'best' or not the answer. Make the result title smaller (body-heading size) and rewrite it to '0 of 2 best calls. Read the tip above, it's the useful part.' Remove the separate small '0 of 2 best calls' line under it.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English speaker, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself, and has no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "For a manager, the team version is the most useful part, but it is always collapsed under 'Doing this with others? (optional)' in small grey text. I have to tap it on every card and I'll stop doing that after 3 cards.",
+   "fix": "Add a one-time question in the feed ('Do you lead a team, class or family? Yes / No'). Store it in localStorage. When Yes, render try_team expanded by default with the label 'With your team' instead of the collapsed 'Doing this with others? (optional)'.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English speaker, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself, and has no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "When a reveal card is answered wrongly, the result headline says 'Most people pick that. The real answer: ...' (app.js line 507). That is a made-up statistic. No card holds any data on what most players pick, and the sentence is printed for every wrong answer, including ones few people would choose. In the emotion-naming-label-reveal screenshot it fills four lines of large red underlined type, which reads like a teacher's red pen. On an app whose cards take care to cite studies, inventing a crowd statistic undercuts my trust.",
+   "fix": "In app.js line 507, replace the wrong-answer string with `Not quite. The answer: ${g.choices[g.answer]}`. Keep a 'most people' phrasing only when the card has an explicit field such as g.typical_miss: true, as the estimate verdict at line 480 already does. Also make the wrong-answer headline a neutral colour, not the domain red.",
+   "from": "Elena, 68, retired literature teacher. Reads Seneca, Aristotle and Peterson. Values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "On My map (view-map-dark), with 72 nodes lit, the labels overlap so badly that they can't be read ('Will · Skill · Oppo...' runs across 'Start With Why', and 'The Pause' runs into 'Feedback Loops'). The map is meant to reward the reader with a view of how ideas connect, and at present it is a tangle.",
+   "fix": "Draw labels only for the last 8 played nodes plus whichever node is hovered or tapped, and draw nothing for the rest. Also run a simple collision pass: skip any label whose bounding box overlaps one already drawn.",
+   "from": "Elena, 68, retired literature teacher. Reads Seneca, Aristotle and Peterson. Values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "When a reveal guess is wrong, the headline is always 'Most people pick that. The real answer: ...' (app.js line 507). That is a made-up claim. On procrastination-emotion-reveal I picked 'No difference', and the app said 'Most people pick that' while the reveal text right above it says most people pick 'hard on themselves'. It contradicts itself and feels like being managed. For me it also lands as 'you got it wrong' in huge underlined type.",
+   "fix": "In app.js line 507, replace the wrong-answer string with `Not this time. The answer: ${g.choices[g.answer]}`. Only say 'Most people pick that' when the card has an optional `common` index field and k === g.common.",
+   "from": "Sam, 24, graduate with anxiety and low self-worth after a rough year. Sensitive to shaming, labels and pressure; needs it to feel safe and actually helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Swipe cards have a weak ending. After the last swipe, the card shows only the 'why' for the final item, then a big '2 of 6 sorted' or '3 of 7 sorted' heading straight away (feedback-loops-swipe-a, emotion-naming-swipe-a, quitting-wisely-swipe-a). The player never sees which items they got wrong, so a low score feels like losing with no lesson. That's the moment people quit instead of sharing.",
+   "fix": "On the swipe end state, add a compact recap list under the score heading. Show one row per item: a check or cross, the item text cut to about 40 characters, and the correct side label. Tapping a row expands its 'why'. Change the heading copy by score. 5 or more correct: 'Sharp eye: {n} of {total}'. 3 to 4: '{n} of {total}. The misses below are the lesson.' 0 to 2: 'Tricky one. Here's what each was.' Also remove the 'Not quite — ' prefix from the last item's feedback when the recap is shown, so the last miss doesn't get double emphasis.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how clear it is what to tap, reward moments, and whether people would share it."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The choice-card failure heading is long and a bit scolding: 'Not this time. The feedback above is where the lesson is.' It's followed by '0 of 2 best calls' (habit-loop-choice-a). It takes up 3 lines of display type at the most deflating moment. For a 30-second card that should leave people better off, that's a punishing beat.",
+   "fix": "Replace the 0-best heading with \"Good guesses. Here's the move that works best:\" and show the best option's text under it, highlighted. For 1 of 2, use \"Halfway there: one sharp call.\" For 2 of 2, use \"Two for two. You'd coach this.\" Show the 'n of 2 best calls' line only when n > 0.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how clear it is what to tap, reward moments, and whether people would share it."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "My map with all 72 ideas lit is an unreadable hairball (view-map-light). Labels overlap ('Will · Skill · Oppo...' sits over other nodes, 'The Pause' collides with 'Feedback Loops'), and the grey 'Old Wisdom' nodes look disabled rather than lit. This is meant to be the progress reward screen, and right now it's the least satisfying screen.",
+   "fix": "Show labels only for the 8 most-played nodes plus the tapped node. Cluster nodes by domain, with each domain's colour as a soft background blob. Change the Old Wisdom colour from grey to a warm bronze (e.g. #B7791F) so it doesn't read as an inactive state. Add a one-line headline stat above the graph, e.g. 'Your strongest link: Emotions ↔ Habits (9 cards)'.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how clear it is what to tap, reward moments, and whether people would share it."
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 3,
+   "skipped": [
+    "wso-triad-venn: hollow/hidden dot and W/S/O bars (app.js rendering, outside action.json; added centre-dot caption to mid result text instead)",
+    "wso-triad-venn: replace numeric 'Will 5/10' line with words (app.js rendering, outside action.json)",
+    "All other issues: card_ids not in action.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 0,
+   "skipped": [
+    "All issues target cards not in perception.json (habit-loop-choice, feedback-loops-swipe, deliberate-practice-order, power-of-yet-reveal, order-chaos-border, growth-mindset-spectrum, growth-mindset-praise-choice, quitting-wisely-swipe, one-percent-estimate, wso-triad-venn, never-miss-twice-choice, self-compassion-spectrum, habit-loop-66-days, procrastination-emotion-reveal, leverage-points-spectrum, responsibility-meaning-pick-your-load, deep-work-spectrum); file left unchanged"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 0,
+   "skipped": [
+    "habit-loop-choice",
+    "feedback-loops-swipe",
+    "deliberate-practice-order",
+    "power-of-yet-reveal",
+    "order-chaos-border",
+    "growth-mindset-spectrum",
+    "growth-mindset-praise-choice",
+    "quitting-wisely-swipe",
+    "one-percent-estimate",
+    "wso-triad-venn",
+    "never-miss-twice-choice",
+    "self-compassion-spectrum",
+    "procrastination-emotion-reveal",
+    "habit-loop-66-days",
+    "leverage-points-spectrum",
+    "responsibility-meaning-pick-your-load",
+    "deep-work-spectrum"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 5,
+   "skipped": [
+    "leverage-points-spectrum (Okafor): Q1 'Track every purchase for a month' set to value 1 (Lina's version) rather than -2, because information flow is a real Meadows lever",
+    "leverage-points-spectrum (Lina): Q4 middle option 'Take a break from the topic' not used; used Okafor's 'Agree a pause rule when it starts' (0) with -2 'Prepare my points better for next time'",
+    "feedback-loops-swipe: Maya's and Lina's prompt wording merged into one prompt whose order matches the swipe sides (thermostat left, snowball right), with labels 'Thermostat (settles)' / 'Snowball (grows)'",
+    "All other issues concern cards not in systems.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 4,
+   "skipped": [
+    "habit-loop-choice: headline replacement and hiding the '0 of 2' tally need app.js changes, which are outside this file. Closest content fix applied instead: the insight now opens with 'Most people pick willpower first. The trick is the cue.' and repeats the best move inline.",
+    "one-percent-estimate: Radu's and Elena's fixes overlapped. Used Elena's hook and question wording, and added Radu's 'people aren't bank accounts' line to explain."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 4,
+   "skipped": [
+    "self-compassion-spectrum: track gradient rendering change is app.js/CSS, outside this file",
+    "procrastination-emotion-reveal: added game.reveal_title 'Forgiveness won.' but app.js must be updated to render it",
+    "procrastination-emotion-reveal: model shortened to 'Often you're avoiding a feeling, not the task...' to fit 110-char limit"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 2,
+   "skipped": [
+    "order-chaos-border: app.js flag for answers at both extremes is outside this file. Instead, the On the Border zone text now tells the reader what to do when answers sit at opposite ends.",
+    "order-chaos-border: Okafor's suggested replacement for Q5 (how much of the week is new) became Q2, because the old Q2 already asked about novelty. Q5 now asks how settled the big things in life feel, so all five questions measure circumstances.",
+    "Maya's Q2 '+1' value was kept on the new novelty question, so that option scores 1 instead of 2.",
+    "All other issues concern cards that are not in meaning.json."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 16,
+   "skipped": [
+    "quitting-wisely-swipe (Sam): app.js result-name change and a per-card result_label field were skipped because they are outside this file, and the schema and app don't support result_label. I did add sensitive: true.",
+    "growth-mindset-praise-choice (Radu): I kept the scenarios about the cousin and maths because CARD_SCHEMA voice prefers non-office situations. I moved the workplace angle into try_team (code review) and changed the hook from 'kids' to neutral wording.",
+    "growth-mindset-spectrum (Okafor): I did not do the full move to 3 symmetric options per question. Instead I fixed the asymmetry (Q4 now reaches -2) and the inverted Q2 scoring.",
+    "power-of-yet-reveal: I used Lina's 2-step choice version (a friend says they can't code, then your own public-speaking thought) instead of Radu's Kubernetes version, so it fits anyone. Elena's Aristotle from_source and the honest Dweck anecdote in the insight are kept."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 1,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  }
+ ]
+}

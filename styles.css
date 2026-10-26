@@ -242,3 +242,14 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* session 4: swipe recap, feedback tone, team prompt */
+.feedback.miss { border-left-color: var(--warn); }
+.recap { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.recap li { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; border-radius: 10px; background: var(--surface-2); min-width: 0; }
+.recap li span { font-weight: 700; color: var(--good); }
+.recap li.miss span { color: var(--warn); }
+.recap b { display: block; font-size: var(--step--1); }
+.recap small { color: var(--muted); }
+.leads-ask { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: var(--step--1); color: var(--muted); }
+.leads-ask button { border: 1px solid var(--line); background: var(--surface-2); border-radius: 999px; padding: 6px 14px; font-weight: 700; }

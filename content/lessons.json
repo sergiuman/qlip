@@ -11,5 +11,9 @@
  "Session 3: never claim 'most people' without a cited source. Estimate cards may set typical_miss: true only when explain cites how people usually guess.",
  "Session 3: swipe prompts must not create double negatives: the left/right labels should answer the prompt directly.",
  "Session 3: venn axis labels must be short (one or two words); put explanations in the question text.",
- "Session 3: use currency-neutral amounts or none at all; avoid platform names that date a card (prefer 'your feed' over 'Facebook' unless it's the study)."
+ "Session 3: use currency-neutral amounts or none at all; avoid platform names that date a card (prefer 'your feed' over 'Facebook' unless it's the study).",
+ "Session 4: every game must end by showing what the player missed and why, not just a score.",
+ "Session 4: swipe labels should be self-explaining ('Thermostat (settles)' / 'Snowball (grows)'); keep jargon for the insight.",
+ "Session 4: order games only for genuinely surprising sequences of 3-4 short items; otherwise use choice.",
+ "Session 4: reveal games without a factual answer need a punchline in the reveal text itself (a real-life example), not 'no study exists'."
 ]

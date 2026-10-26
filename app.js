@@ -191,7 +191,13 @@
       save();
     } });
     wrap.append(h("div", { class: "try" }, cb, h("label", { for: cbId }, h("b", {}, "Try today"), card.try_today)));
-    if (card.try_team) wrap.append(h("details", { class: "why team" }, h("summary", {}, "👥 Doing this with others? (optional)"), h("p", {}, card.try_team)));
+    if (card.try_team) wrap.append(h("details", { class: "why team", open: S.leads === true }, h("summary", {}, S.leads ? "👥 With your team" : "👥 Doing this with others? (optional)"), h("p", {}, card.try_team)));
+    if (card.try_team && S.leads == null && Object.keys(S.done).length >= 2) {
+      const ask = h("div", { class: "leads-ask" }, h("span", {}, "Do you lead a team, class or family?"),
+        h("button", { onclick: () => { S.leads = true; save(); ask.replaceWith(h("p", { class: "small muted" }, "Got it. Team versions will open by default.")); wrap.querySelector(".team")?.setAttribute("open", ""); } }, "Yes"),
+        h("button", { onclick: () => { S.leads = false; save(); ask.remove(); } }, "No"));
+      wrap.append(ask);
+    }
     const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || [])[0]]).filter(([cid, t]) => t && CONCEPT[cid]);
     if (targets.length) {
       const [cid, t] = targets[0];
@@ -388,7 +394,7 @@
     },
 
     swipe(card, done) {
-      const g = card.game; let i = 0, right = 0;
+      const g = card.game; let i = 0, right = 0; const log = [];
       const stage = h("div", { class: "swipe-stage" });
       const fb = h("p", { class: "feedback", hidden: true });
       const score = h("span", { class: "swipe-score" });
@@ -409,10 +415,22 @@
         const it = g.items[i], ok = it.side === side;
         if (ok) right++;
         const c = stage.firstChild; c.style.transform = `translateX(${side === "left" ? -120 : 120}%) rotate(${side === "left" ? -12 : 12}deg)`; c.style.opacity = 0;
-        fb.hidden = false; fb.textContent = `${ok ? "✓" : "Not quite —"} ${it.why}`;
+        const label = it.side === "left" ? g.left : g.right;
+        log.push({ it, ok, label });
+        fb.hidden = false; fb.classList.toggle("miss", !ok);
+        fb.textContent = ok ? `✓ ${it.why}` : `Plot twist: this one is “${label}”. ${it.why}`;
         setTimeout(() => {
           i++; locked = false;
-          if (i >= g.items.length) { btns.remove(); stage.remove(); done({ name: `${right} of ${g.items.length} sorted` }); }
+          if (i >= g.items.length) {
+            btns.remove(); stage.remove(); fb.remove();
+            const n = g.items.length, misses = log.filter((x) => !x.ok);
+            const recap = h("ul", { class: "recap" }, log.slice().sort((a, b) => a.ok - b.ok).map((x) =>
+              h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, x.ok ? "✓" : "↺"),
+                h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.label}${x.ok ? "" : " · " + x.it.why}`)))));
+            score.replaceWith(recap);
+            done({ name: right === n ? "Clean sweep." : right >= n / 2 ? `${right} of ${n}. Sharp sorting.` : `${right} of ${n}. These ones are sneaky.`,
+              tally: misses.length ? "The ↺ ones are worth a second look." : "" });
+          }
           else show();
         }, 1100);
       };
@@ -422,16 +440,22 @@
 
     choice(card, done) {
       const g = card.game, box = h("div", { style: "display:flex;flex-direction:column;gap:12px" });
-      let i = 0, best = 0;
+      let i = 0, best = 0; const bestMoves = [];
       const step = () => {
         const s = g.steps[i];
         const fb = h("p", { class: "feedback", hidden: true });
-        const next = h("button", { class: "btn next-q", hidden: true, onclick: () => { i++; if (i < g.steps.length) step(); else { next.remove(); done({ name: g.steps.length < 2 ? "" : best === g.steps.length ? "Every call landed." : best === 0 ? "Not this time. The feedback above is where the lesson is." : "You picked up a new move.", tally: g.steps.length > 1 && !card.sensitive ? `${best} of ${g.steps.length} best calls` : "" }); } } },
+        const next = h("button", { class: "btn next-q", hidden: true, onclick: () => { i++; if (i < g.steps.length) step(); else { next.remove(); const total = g.steps.length;
+            done(total < 2 ? { name: "" }
+              : best === total ? { name: `${total} for ${total}. You'd coach this.` }
+              : { name: best === 0 ? "Good guesses. Here's the move that works best:" : `${best} sharp call${best > 1 ? "s" : ""}. Here's the other move:`,
+                  text: bestMoves.join(" · ") });
+          } } },
           i + 1 < g.steps.length ? "Next" : "See the model");
         const opts = h("div", { class: "opts" }, s.options.map((o) => h("button", { class: "opt", onclick: (e) => {
           opts.querySelectorAll("button").forEach((b, k) => { b.disabled = true; if (s.options[k].best) b.classList.add("best"); });
           e.currentTarget.classList.add("picked"); if (o.best) best++;
-          fb.hidden = false; fb.textContent = o.feedback; next.hidden = false; next.focus();
+          fb.hidden = false; fb.classList.toggle("miss", !o.best); fb.textContent = o.feedback; next.hidden = false; next.focus();
+          if (!o.best) bestMoves.push(s.options.find((x) => x.best).text);
         } }, o.text)));
         box.replaceChildren(g.steps.length > 1 ? h("span", { class: "q-count" }, `${i + 1} / ${g.steps.length}`) : "", h("p", { class: "q-text" }, s.scenario), opts, fb, next);
       };
@@ -504,7 +528,7 @@
         opts.querySelectorAll("button").forEach((b, j) => { b.disabled = true; if (has && j === g.answer) b.classList.add("best"); });
         e.currentTarget.classList.add("picked");
         opts.after(h("p", { class: "feedback" }, g.reveal));
-        done({ name: !has ? `You chose: ${c}` : k === g.answer ? "Spot on." : `Most people pick that. The real answer: ${g.choices[g.answer]}` });
+        done({ name: !has ? "" : k === g.answer ? "Spot on." : `Not quite. The answer: ${g.choices[g.answer]}` });
       } }, c)));
       return h("div", { style: "display:flex;flex-direction:column;gap:12px" }, h("p", { class: "q-text" }, g.prompt), opts);
     },
@@ -589,11 +613,12 @@
       ctx.strokeStyle = col; ctx.lineWidth = p ? 0 : 1.5; if (!p) ctx.stroke();
       sim.hit.push({ x, y, r: Math.max(r, 12), id: n.id, p, label: c.name });
     }
+    sim.topPlayed = new Set(sim.hit.filter((n) => n.p).sort((a, b) => b.p - a.p).slice(0, 8).map((n) => n.id));
     // Labels last, skipping any that would collide with one already drawn.
     const boxes = [];
     ctx.textBaseline = "middle";
     for (const n of sim.hit.slice().sort((a, b) => b.p - a.p)) {
-      if (!n.p && !sim.labelled.has(n.id)) continue;
+      if (n.p ? !sim.topPlayed.has(n.id) : !sim.labelled.has(n.id)) continue;
       ctx.font = `${n.p ? 700 : 400} 11px ${css.getPropertyValue("--font-body")}`;
       const text = n.label.length > 20 ? n.label.slice(0, 19) + "…" : n.label, w = ctx.measureText(text).width;
       let lx = n.x + n.r * 0.6 + 4; if (lx + w > W - 4) lx = n.x - n.r * 0.6 - 4 - w;
