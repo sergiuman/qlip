@@ -73,7 +73,12 @@ def ingest_qumni() -> list:
 
 
 def main():
-    kg = json.loads((BOOKS / "data" / "knowledge_graph.json").read_text())
+    try:
+        kg = json.loads((BOOKS / "data" / "knowledge_graph.json").read_text())
+    except OSError as e:
+        # Background jobs can't read ~/Desktop on macOS; the committed index is still valid.
+        print(f"library not readable here ({e.__class__.__name__}); keeping existing sources/corpus.json")
+        return
     books = ingest_books(kg)
     qumni = ingest_qumni()
     values = [{"id": n["id"], "label": n.get("label_en"), "description": n.get("description_en")}

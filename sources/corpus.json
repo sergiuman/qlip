@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-25T22:00:28+00:00",
+ "generated_at": "2026-10-26T12:00:31+00:00",
  "sources": [
   {
    "id": "qumni_wso",
@@ -709,7 +709,11 @@
    "emergent_principle_en": "The Five-Second Eyeglass Bridge: Emotional self-regulation creates the biological doorway through which analytical thinking enters.",
    "emergent_principle_ro": "Puntea Ochelarilor de Cinci Secunde: Reglarea emoțională deschide ușa biologică prin care gândirea logică poate intra în scenă.",
    "story_seed_en": "When Alex Marin sees two classmates whispering near his locker, Quick-Hop screams 'Betrayal!' and his Fire-Beast flares hot; by using his three-breath Sacred Pause first, Slow-Hoot finally has time to land on his shoulder and notice the birthday ribbon in their hands.",
-   "story_seed_ro": "Când Alex Marin vede doi colegi șoptind lângă dulapul lui, Iepurele strigă „Trădare!”, iar Fiara de Foc se aprinde; folosind însă mai întâi Pauza de trei respirații, Bufnița Înțeleaptă are timp să coboare pe umărul lui și să observe panglica de cadou din mâinile lor."
+   "story_seed_ro": "Când Alex Marin vede doi colegi șoptind lângă dulapul lui, Iepurele strigă „Trădare!”, iar Fiara de Foc se aprinde; folosind însă mai întâi Pauza de trei respirații, Bufnița Înțeleaptă are timp să coboare pe umărul lui și să observe panglica de cadou din mâinile lor.",
+   "label_a_en": "The Impulse Pause",
+   "label_b_en": "Slow-Owl Logic",
+   "label_a_ro": "Pauza Înainte de Reacție",
+   "label_b_ro": "Logica Bufniței Înțelepte"
   },
   {
    "bridge_id": "bridge_02",
@@ -720,7 +724,11 @@
    "emergent_principle_en": "Compass-Guided Micro-Sparks: Big purpose without tiny habits stays a daydream; tiny habits without purpose turn robotic—together they create unstoppable momentum.",
    "emergent_principle_ro": "Scântei Ghidate de Busolă: Scopul mare fără obiceiuri mici rămâne visare, iar obiceiurile mici fără scop devin mecanică — împreună creează un avânt de neoprit.",
    "story_seed_en": "Maya knows WHY she wants to sail to unseen islands, while Milo Chen knows HOW to drop one paperclip a day into a jar; teaming up at the harbor workshop, they build an expedition ship two plank-rivets every afternoon without ever burning out.",
-   "story_seed_ro": "Maya știe DE CE vrea să navigheze spre insule necunoscute, iar Milo Chen știe CUM să adune câte o agrafă pe zi în borcan; lucrând împreună în atelierul din port, ei construiesc corabia de expediție câte două nituri în fiecare după-amiază, fără să abandoneze."
+   "story_seed_ro": "Maya știe DE CE vrea să navigheze spre insule necunoscute, iar Milo Chen știe CUM să adune câte o agrafă pe zi în borcan; lucrând împreună în atelierul din port, ei construiesc corabia de expediție câte două nituri în fiecare după-amiază, fără să abandoneze.",
+   "label_a_en": "Purpose ('Start With Why')",
+   "label_b_en": "Tiny 1% Compounding",
+   "label_a_ro": "Scopul Interior („Începe cu De Ce”)",
+   "label_b_ro": "Puterea Pașilor Mici de 1%"
   },
   {
    "bridge_id": "bridge_03",
