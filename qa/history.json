@@ -307,5 +307,49 @@
   },
   "panel_detail": {},
   "note": "graph growth: +14 concepts from library values (86 total), +28 cards; no team gate, quotes visible, unanchored slider, honest swipe praise, verdict-first reveals, no repeated stories"
+ },
+ {
+  "session": 1001,
+  "at": "2026-10-26T12:13:51+00:00",
+  "automated": 48.77,
+  "panel": null,
+  "composite": 48.77,
+  "delta": 0.03,
+  "passed": true,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 8.0,
+   "console": 4,
+   "overflow": 3,
+   "a11y": 6.0,
+   "readability": 5,
+   "actionable": 2.98,
+   "sourced": 1.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.72,
+   "domain_balance": 1.99,
+   "depth": 2.25,
+   "hook_distinct": 1.99,
+   "brief_reveal": 0.84
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 154,
+   "played_ok": 154,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 0,
+   "flesch_avg": 75.4,
+   "try_today_verb_rate": 0.994,
+   "sensitive_cards": 41,
+   "first_card_ms": 415,
+   "edges": 327,
+   "concept_depth": 0.75,
+   "hook_distinct_rate": 0.994,
+   "brief_reveal_rate": 0.838
+  },
+  "panel_detail": {},
+  "note": "daily loop day 1"
  }
 ]

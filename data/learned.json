@@ -1,5 +1,46 @@
 {
- "exemplars": [],
- "lessons": [],
- "recent_problems": []
+ "exemplars": [
+  "skill-gap-test-yourself-choice",
+  "quitting-wisely-swipe",
+  "impulse-pause-choice",
+  "wso-triad-venn",
+  "impulse-pause-swipe",
+  "map-territory-subway-reveal"
+ ],
+ "lessons": [
+  "Session 1: the reveal must be a punchline, not a page. Keep insight under 200 characters; the model line is the thing to remember.",
+  "Session 1: scenarios must fit anyone. Use school, friends, family, hobbies, phones and money before office situations. Avoid currency-specific amounts or use local-neutral ones.",
+  "Session 1: describe today's answers, never the person. 'You lean cautious today', not 'You are cautious'.",
+  "Session 1: give the player a win. Reveal games with a factual answer set `answer`; wrong picks get curious, kind feedback.",
+  "Session 1: a hook must add tension the game question doesn't repeat.",
+  "Session 1: order games feel like worksheets unless the order itself is surprising. Prefer choice/estimate for procedures.",
+  "Session 1: the research psychologist flagged overclaiming. Name effect sizes honestly and mark replication-hit findings 'contested'.",
+  "Session 1: deeper readers want a doorway to the primary text. Add from_source for classical ideas (public-domain translations).",
+  "Session 3: balance every scenario list across life stages: one school/young example, one work example, one home/family example. Too teen loses managers; too office loses teens.",
+  "Session 3: never claim 'most people' without a cited source. Estimate cards may set typical_miss: true only when explain cites how people usually guess.",
+  "Session 3: swipe prompts must not create double negatives: the left/right labels should answer the prompt directly.",
+  "Session 3: venn axis labels must be short (one or two words); put explanations in the question text.",
+  "Session 3: use currency-neutral amounts or none at all; avoid platform names that date a card (prefer 'your feed' over 'Facebook' unless it's the study).",
+  "Session 4: every game must end by showing what the player missed and why, not just a score.",
+  "Session 4: swipe labels should be self-explaining ('Thermostat (settles)' / 'Snowball (grows)'); keep jargon for the insight.",
+  "Session 4: order games only for genuinely surprising sequences of 3-4 short items; otherwise use choice.",
+  "Session 4: reveal games without a factual answer need a punchline in the reveal text itself (a real-life example), not 'no study exists'.",
+  "Session 5: never repeat a story (same study or anecdote) across two cards; each card owns its example.",
+  "Session 5: questionnaires (venn/radar) must earn their length: 3-4 questions and a personal frame (pick your goal first) beat 6 abstract items.",
+  "Session 5: put the verdict before the explanation on every game type."
+ ],
+ "recent_problems": [
+  "The reveal states a mechanism the study never tested: \"Their aim was 'explain the route', so the face barely got stored.\" Simons & Levin (1998) explained the misses as people storing a coarse category ('a stranger', 'a construction worker'), not as goal-driven filtering. Their follow-up found that students mostly missed the swap when the stranger looked like an out-group worker. The model line 'You remember what you were aiming at' then generalises from 15 people.",
+  "This card duplicates goal-directed-perception-gorilla, and the feed plays them back to back (the NEXT tile on aim-high-gorilla-b.png is the other gorilla card). The second card is therefore spoiled. The scoring is also statistically backwards: in Simons & Chabris about 54% DID notice, yet 'Of course I would' is marked wrong and 'Maybe not' gets 'Spot on.' Finally, evidence 'strong' sits on a card whose actual claim (a worthy aim helps you spot chances) is an untested lens.",
+  "The insight says \"Willpower is tiring.\" That is the ego-depletion claim, which failed large preregistered replications (Hagger et al. 2016 multi-lab RRR, Vohs et al. 2021). Elsewhere the app is careful about replication. Separately, Hofmann et al. 2012 is correlational experience sampling, so 'fewer temptations' is an association, not proof that environment explains self-control. Item 5 is also double-barrelled (plate AND home screen).",
+  "The scale design is inconsistent. Q3 is scored ±1 while the others are ±2, which quietly underweights an item. Q2 measures coping style (avoid / push through / treat as training), not stress mindset, and its 'bills' example brings in chronic financial stress, which reframing does not fix. Q4's poles ('I'm not coping' vs 'I care about this') are not opposites, since both can be true at once. 'Racing heart = body gearing up' comes from Jamieson's arousal-reappraisal work, not Crum, but only Crum is cited. 'Health' in the insight overstates self-reported symptoms.",
+  "The habit analogy runs against the habit data. Habit automaticity follows an ASYMPTOTIC curve: big gains early, then a plateau (Lally et al. 2010, median about 66 days). That is the opposite of exponential growth. 'Don't judge a habit in week one' is fine advice, but the compounding framing teaches a false model of habits. Separately, 'doubles for 30 days' is ambiguous (30 or 31 payments).",
+  "On flow-challenge-skill-venn-a.png, a 4/10 by 4/10 player's dot is drawn inside the Challenge-Skill overlap, which visually reads as the Flow Channel, while the text says 'Right on the fence'. The items also confound the two axes. 'There's a real chance I'll fall short' (Challenge) and 'I often feel lost about where to start' (inverted Skill) both tap the challenge-skill GAP, not each axis on its own. The first item buries the instruction inside the question text, and there is no game.prompt.",
+  "This card presents Ericsson's strong view without its main counter-evidence. Macnamara, Hambrick & Oswald (2014) found deliberate practice explained about 12% of performance variance on average, and under 1% in professions. The driving item ('mostly stops improving') is also shaky: crash risk keeps falling for years with experience.",
+  "The two gorilla cards point to each other. In the screenshots, aim-high-gorilla's NEXT button opens 'A person in a gorilla suit walks past. Would you...' and goal-directed-perception-gorilla's NEXT opens 'A gorilla walks through a video. Would you even...'. Both are in the same session. You play the same 1999 Simons & Chabris experiment twice in a row, so the second one has no surprise left and it feels like a bug. This is the worst hit to pacing in this session.",
+  "The estimate slider starts at the midpoint of its range (50% on 0-100 cards), so the slider's own starting value is an anchor. Players also seem to lock in without moving it much: four estimate screens in s5 show 'You: 40%'. On socratic-ignorance-drivers, the hidden 50 acts as an anchor while the lesson is about overconfidence. On anchoring-africa-un, the result never tells me how the shown 65 bent MY guess, even though the hook promises 'Watch it bend your guess.' That missing payoff is the moment I'd screenshot and share.",
+  "The swipe result praises a coin-flip score. In two-minute-rule-swipe I got 3 of 6 and the headline says '3 of 6. Sharp sorting.' On a two-sided sort, 50% is chance, so the reward feels fake and cheapens the real 'Clean sweep.'",
+  "The verdict sits in different places on different card types. On estimate cards it comes first ('Plot twist: it's smaller.'). On reveal cards ('Spot on.', one-percent-doubling-reveal and aim-high-gorilla) it appears under a 6-line explanation, so the reward moment is buried and fades in late. On reframing-boss-text the 3-line headline 'Good guesses. Here's the move that works best:' pushes THE MODEL below the fold.",
+  "Every reveal shows an inline 'Do you lead a team, class or family? Yes / No' prompt. At 390px the 'No' pill wraps onto its own line (seen on one-percent, aim-high-gorilla, goal-directed-perception-gorilla, stress-mindset). It's one more tap of noise between the reward and the NEXT button on every card."
+ ]
 }

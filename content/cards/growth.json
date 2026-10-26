@@ -845,5 +845,101 @@
       "mistake_alchemy",
       "growth_mindset"
     ]
+  },
+  {
+    "id": "mistake-alchemy-reveal",
+    "concept": "mistake_alchemy",
+    "domain": "growth",
+    "type": "reveal",
+    "hook": "New project, new mistakes. Clues or roadblocks?",
+    "title": "Mistakes are Data Points",
+    "game": {
+      "prompt": "Imagine your project is like baking a cake: What's more helpful – finding the recipe wrong OR having it burn in the oven?",
+      "choices": [
+        {
+          "text": "The recipe being wrong (I'd fix that first)",
+          "answer": 0
+        },
+        {
+          "text": "The cake burning (it tells me what NOT to do next time)",
+          "answer": 1
+        }
+      ],
+      "reveal": "Many people jump to fixing the 'recipe' - their plans. But a mistake, like burnt cake, is real-time feedback. It tells you *what actually happened* so you can adjust your process. Carol Dweck calls this 'growth mindset': seeing mistakes as data, not failures.",
+      "answer": 1
+    },
+    "insight": "Mistakes aren't the opposite of success, they're part of the journey. They highlight what works and what doesn't.",
+    "model": "Every mistake is a data point guiding you towards success. Learn from it, adjust, and keep going!",
+    "try_today": "Think of your last 'failed' attempt at something. What did you learn that you wouldn't have known otherwise?",
+    "source": {
+      "thinkers": [
+        "Carol Dweck"
+      ],
+      "work": "Mindset: The New Psychology of Success (2006)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "growth_mindset",
+      "deliberate_practice"
+    ],
+    "try_team": "Share a recent 'failed' project with your team. Focus on ONE thing you learned from it that helped you improve."
+  },
+  {
+    "id": "self-reflection-loop-example",
+    "concept": "self_reflection_loop",
+    "domain": "growth",
+    "type": "choice",
+    "hook": "Presentation ace? Bask or level up?",
+    "title": "The Loop of Growth",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You just delivered a successful presentation. How do you feel?",
+          "options": [
+            {
+              "text": "Relief! I nailed it, time to celebrate.",
+              "feedback": "Totally deserved! But the best learners keep going. Celebrating is great, but so is learning from the win."
+            },
+            {
+              "text": "Proud and excited, but also wanting to know what worked well and what could be even better next time.",
+              "best": true,
+              "feedback": "Yes! That's the loop: enjoy the success, then analyze it. Your future self will thank you."
+            }
+          ]
+        },
+        {
+          "scenario": "You want to learn from your presentation. What do you focus on?",
+          "options": [
+            {
+              "text": "My awesome slides and witty jokes! They were the stars, right?",
+              "feedback": "Humor is good, but remember what helped YOU deliver it: clear structure, confident voice? Those are the real wins."
+            },
+            {
+              "text": "How I managed my nerves, how the audience responded, and where I could have explained things more clearly.",
+              "best": true,
+              "feedback": "Spot on! Focus on your delivery, audience engagement, and content clarity. You're building a system for success, not just one-off wins."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "The self-reflection loop is powerful: learn from successes AND failures. Analyze what worked, what didn't, and use that to improve next time.",
+    "model": "Learn, adjust, repeat. The self-reflection loop fuels continuous growth.",
+    "try_today": "After a challenging task today, take 5 minutes to reflect: What went well? What could you do differently next time?",
+    "source": {
+      "thinkers": [
+        "Richard Boyatzis",
+        "Annie McKee"
+      ],
+      "work": "Resonant Leadership (2014)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "growth_mindset",
+      "deliberate_practice",
+      "self_efficacy"
+    ]
   }
 ]

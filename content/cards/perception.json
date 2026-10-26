@@ -877,5 +877,61 @@
     ],
     "try_team": "List the group's three biggest daily hassles and three recent 'upgrades'. Vote: which fix would still feel good in six months?",
     "sensitive": true
+  },
+  {
+    "id": "stress-mindset-choice-fuel",
+    "concept": "stress_mindset",
+    "domain": "perception",
+    "type": "choice",
+    "hook": "A big deadline looms. Do you brace for impact or gear up?",
+    "title": "Stress: A Choice, Not a Curse",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You're facing a tough project with a short deadline. How do you approach it?",
+          "options": [
+            {
+              "text": "Focus on avoiding mistakes and staying calm, hoping for the best.",
+              "feedback": "It's natural to want things to go smoothly, but this mindset can make stress feel heavier. You might miss opportunities to push yourself."
+            },
+            {
+              "text": "Embrace the challenge! See it as a chance to learn and grow, even if it gets intense.",
+              "best": true,
+              "feedback": "That's the power of a stress mindset! Viewing stress as fuel can actually help you perform better. You're more likely to be engaged and creative."
+            }
+          ]
+        },
+        {
+          "scenario": "Your project hits a snag. How do you react?",
+          "options": [
+            {
+              "text": "Panic sets in, and you feel overwhelmed. It's going to fail.",
+              "feedback": "This mindset can create a self-fulfilling prophecy. Remember, setbacks are part of the process."
+            },
+            {
+              "text": "You see this as a problem to solve. You brainstorm solutions and adjust your approach.",
+              "best": true,
+              "feedback": "That's resilience! Viewing challenges as opportunities for growth helps you stay focused and find creative solutions."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Changing how you view stress can change its effect on you. A 'stress mindset' sees it as fuel, not a foe, leading to greater engagement and resilience.",
+    "model": "See stress as growth fuel! Learn from setbacks and unleash your inner drive.",
+    "try_today": "Next time you feel stressed, pause and ask yourself: What can I learn from this? How can I use this energy to my advantage?",
+    "source": {
+      "thinkers": [
+        "Alia Crum",
+        "Kelly McGonigal"
+      ],
+      "work": "The Upside of Stress (2019)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "growth_mindset"
+    ],
+    "try_team": "Team challenges: 'What's the most stressful part of this project? How can we turn that into a growth opportunity?'"
   }
 ]

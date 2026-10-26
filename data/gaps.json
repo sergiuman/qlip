@@ -2,26 +2,8 @@
  "tasks": [
   {
    "kind": "depth",
-   "concept": "environment_design",
-   "domain": "habits",
-   "type": "venn",
-   "has": [
-    "radar"
-   ]
-  },
-  {
-   "kind": "depth",
-   "concept": "attention_residue",
-   "domain": "attention",
-   "type": "radar",
-   "has": [
-    "estimate"
-   ]
-  },
-  {
-   "kind": "depth",
-   "concept": "reframing",
-   "domain": "perception",
+   "concept": "mistake_alchemy",
+   "domain": "growth",
    "type": "radar",
    "has": [
     "choice"
@@ -29,21 +11,30 @@
   },
   {
    "kind": "depth",
-   "concept": "procrastination_emotion",
-   "domain": "emotions",
+   "concept": "premortem",
+   "domain": "decisions",
    "type": "venn",
    "has": [
-    "reveal"
+    "choice"
    ]
   },
   {
-   "kind": "expand",
-   "seed": {
-    "from": "value",
-    "label": "Real-World Muddy Play",
-    "text": "Leaving the hypnotic glass screen on the desk to climb trees, invent messy backyard games, navigate real scrapes, and laugh outdoors with friends.",
-    "novelty": 19
-   }
+   "kind": "depth",
+   "concept": "stress_mindset",
+   "domain": "perception",
+   "type": "radar",
+   "has": [
+    "spectrum"
+   ]
+  },
+  {
+   "kind": "depth",
+   "concept": "never_miss_twice",
+   "domain": "habits",
+   "type": "order",
+   "has": [
+    "choice"
+   ]
   },
   {
    "kind": "expand",
@@ -53,17 +44,26 @@
     "text": "Standing with tall posture, telling the plain truth instead of protective fibs, and measuring progress against yesterday's you rather than someone else's trophy.",
     "novelty": 17
    }
+  },
+  {
+   "kind": "expand",
+   "seed": {
+    "from": "value",
+    "label": "Deliberate Pacing",
+    "text": "Breaking steep cliffs into reachable ledges and taking smart shelter during wind gusts so your muscles don't cramp halfway up.",
+    "novelty": 16
+   }
   }
  ],
- "concepts_single_card": 47,
+ "concepts_single_card": 23,
  "type_use": {
-  "venn": 7,
-  "reveal": 18,
-  "choice": 17,
-  "swipe": 14,
+  "venn": 6,
+  "reveal": 36,
+  "choice": 42,
+  "swipe": 23,
   "spectrum": 14,
-  "order": 12,
-  "radar": 6,
-  "estimate": 13
+  "order": 6,
+  "estimate": 20,
+  "radar": 6
  }
 }

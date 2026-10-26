@@ -854,5 +854,53 @@
       "cite": "Seneca, Moral Letters to Lucilius, Letter 12 'On Old Age' (trans. R. M. Gummere, 1917)",
       "next_read": "Moral Letters, Letter 12 'On Old Age' and Letter 101 'On the Futility of Planning Ahead'"
     }
+  },
+  {
+    "id": "creative-truthful-courage-choice",
+    "concept": "snake_case",
+    "domain": "wisdom",
+    "type": "choice",
+    "hook": "You've been asked to give a presentation. Do you…",
+    "title": "Speak Your Truth, Create Impact",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You've been asked to give a presentation at work. You know your ideas are valuable but sharing them feels risky. Do you…",
+          "options": [
+            {
+              "text": "Stick to the safe, pre-approved slides. It's easier and less likely to ruffle feathers.",
+              "feedback": "Playing it safe might get you through this time, but it stifles your creativity and prevents real impact."
+            },
+            {
+              "text": "Inject your unique perspective into the presentation, even if it means stepping outside the script. Start with a personal story or a surprising statistic.",
+              "best": true,
+              "feedback": "Creative truthful courage! Sharing your authentic self builds trust and makes your ideas more memorable."
+            },
+            {
+              "text": "Practice the presentation until you know it word-for-word, then deliver it flawlessly but without any personal touch.",
+              "feedback": "While preparation is key, delivering a memorized speech lacks connection. Your truth can make the difference."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "True courage isn't just about bravery; it's about using your creativity to express your authentic self and create meaningful impact.",
+    "model": "Speak your truth with kindness, measure progress against yourself, not others.",
+    "try_today": "Share your unique view or story today! Small acts of courage build big confidence 💪",
+    "source": {
+      "thinkers": [
+        "Brené Brown",
+        "Parker J. Palmer"
+      ],
+      "work": "The Gifts of Imperfection (2010)",
+      "next_read": "Chapter 6: Cultivating Authenticity"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "courage_kindness",
+      "growth_mindset"
+    ],
+    "sensitive": true
   }
 ]

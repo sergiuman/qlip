@@ -1978,6 +1978,52 @@
      "type": "AMPLIFIES"
     }
    ]
+  },
+  {
+   "id": "snake_case",
+   "domain": "wisdom",
+   "name": "Creative & Truthful Courage",
+   "line": "Speak your truth with kindness, measure progress against yourself.",
+   "thinkers": [
+    "Brené Brown",
+    "Parker J. Palmer"
+   ],
+   "sources": [],
+   "links": [
+    {
+     "to": "courage_kindness",
+     "type": "BUILDS_ON"
+    },
+    {
+     "to": "growth_mindset",
+     "type": "AMPLIFIES"
+    }
+   ]
+  },
+  {
+   "id": "self_reflection_loop",
+   "domain": "growth",
+   "name": "The Self-Reflection Loop",
+   "line": "Learn from experience, adjust your course, and grow.",
+   "thinkers": [
+    "Richard Boyatzis",
+    "Annie McKee"
+   ],
+   "sources": [],
+   "links": [
+    {
+     "to": "deliberate_practice",
+     "type": "BUILDS_ON"
+    },
+    {
+     "to": "growth_mindset",
+     "type": "AMPLIFIES"
+    }
+   ]
   }
+ ],
+ "seeds_used": [
+  "Creative & Truthful Courage",
+  "Deliberate Pacing"
  ]
 }

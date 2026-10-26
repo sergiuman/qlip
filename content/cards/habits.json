@@ -725,5 +725,43 @@
       "habit_loop",
       "doomscroll_loop"
     ]
+  },
+  {
+    "id": "never-miss-twice-reveal-reframing",
+    "concept": "never_miss_twice",
+    "domain": "habits",
+    "type": "reveal",
+    "hook": "You missed your workout today. Is it a setback or a chance to reset?",
+    "title": "Turning Missed Chances into Power",
+    "game": {
+      "prompt": "You missed your planned workout today. Which thought feels truer?\n1. 'I'm falling behind, I'll never get back on track!'\n2. 'This is a chance to start fresh tomorrow, with even more energy.'",
+      "choices": [
+        {
+          "text": "1. 'I'm falling behind, I'll never get back on track!'",
+          "value": 0
+        },
+        {
+          "text": "2. 'This is a chance to start fresh tomorrow, with even more energy.'",
+          "value": 1
+        }
+      ],
+      "reveal": "Choice 2 unlocks the power of reframing. James Clear says missing once is an accident, but missing twice becomes a habit. Reframing your miss as a new start can break that cycle. It's about choosing intention over inertia.",
+      "answer": 1
+    },
+    "insight": "Missing something doesn't have to derail you. Reframing it as a chance to begin anew empowers you to get back on track.",
+    "model": "Reframing missed opportunities as fresh starts helps build resilience and avoid the trap of habitual setbacks.",
+    "try_today": "Small setbacks?  💪 Pause & reframe: 'Chance to learn & improve!'}",
+    "source": {
+      "thinkers": [
+        "James Clear"
+      ],
+      "work": "Atomic Habits (2018)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "self_compassion",
+      "identity_habits"
+    ]
   }
 ]
