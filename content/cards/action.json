@@ -57,15 +57,15 @@
    "results": {
     "W": {
      "name": "Fired Up, Building Up",
-     "text": "The want is strong today. Look at your lowest score below: if it's Skill, do one 5-minute practice rep; if it's the Open door, ask one person for the chance or the time this week."
+     "text": "The want is strong today. Look at your lowest score above: if it's Skill, do one 5-minute practice rep; if it's the Open door, ask one person for the chance or the time this week. If they tie, start with the Open door: one ask is the cheapest move."
     },
     "S": {
      "name": "Skilled, Looking for a Why",
-     "text": "Skill scores high today. Look at your lowest score below: if it's Will, ask what would make this matter to you; if it's the Open door, ask one person for the chance this week."
+     "text": "Skill scores high today. Look at your lowest score above: if it's Will, ask what would make this matter to you; if it's the Open door, ask one person for the chance this week. If they tie, start with the Open door: one ask is the cheapest move."
     },
     "O": {
      "name": "The Open Door",
-     "text": "The door looks open today. Look at your lowest score below: if it's Will, look for what sparks your curiosity; if it's Skill, do one 5-minute practice rep."
+     "text": "The door looks open today. Look at your lowest score above: if it's Will, look for what sparks your curiosity; if it's Skill, do one 5-minute practice rep. If they tie, start with the 5-minute rep."
     },
     "SW": {
      "name": "Ready, Door Closed (for now)",
@@ -200,16 +200,16 @@
     }
    ]
   },
-  "insight": "A QUMNI rule of thumb, not a research finding: two pillars are often enough for a first step, and help on the third pays off most. People tend to push the pillar that's already strong.",
+  "insight": "Our rule of thumb, not a research finding: two pillars are often enough for a first step, and help on the third pays off most. People tend to push the pillar that's already strong.",
   "model": "Push the one weak pillar, not all three. Small help in the right spot beats big help elsewhere.",
   "try_today": "Ask someone stuck: 'Is it wanting, knowing how, or access?' Then offer help only on the answer they give.",
   "source": {
    "thinkers": [
     "Melvin Blumberg & Charles Pringle"
    ],
-   "work": "QUMNI 2/3 rule: an untested rule of thumb inspired by Blumberg & Pringle (Academy of Management Review, 1982), whose own model says all three pillars interact"
+   "work": "The 2-of-3 rule: an untested rule of thumb inspired by Blumberg & Pringle (Academy of Management Review, 1982), whose own model says all three pillars interact"
   },
-  "evidence": "philosophy",
+  "evidence": "contested",
   "level": 1,
   "related": [
    "wso_triad",
@@ -223,7 +223,7 @@
   "concept": "two_thirds_rule",
   "domain": "action",
   "type": "swipe",
-  "hook": "Two of three pillars often get you moving. Can you spot who's close?",
+  "hook": "Two of three pillars lit often gets people moving. Can you count them?",
   "title": "Spot the 2 out of 3",
   "game": {
    "prompt": "Does this person have at least two pillars lit?",
@@ -236,9 +236,9 @@
      "why": "Will + Opportunity. Skill can be built on the way: start with walk-run intervals."
     },
     {
-     "text": "Sam plays piano well and has one at home, but stopped enjoying it after his exams.",
+     "text": "Theo plays piano well and has one at home, but stopped enjoying it after his exams.",
      "side": "right",
-     "why": "Skill + Opportunity, but Will is missing, the hardest to borrow. Rest, then find his own reason."
+     "why": "Skill + Opportunity lit. Will is resting, normal after a hard stretch. Try one just-for-fun session."
     },
     {
      "text": "Jo dreams of acting, has never tried, and no theatre is nearby.",
@@ -257,16 +257,16 @@
     }
    ]
   },
-  "insight": "A QUMNI rule of thumb, not a research finding: with two pillars lit, a first step is often possible. Will is the exception: without a reason that's yours, the others rarely carry you.",
+  "insight": "Our rule of thumb, not a research finding: with two pillars lit, a first step is often possible. Will is the exception: without a reason that's yours, the others rarely carry you.",
   "model": "Two pillars often make motion possible; if the missing one is Will, start there.",
   "try_today": "List three goals. Count the lit pillars for each. Start the one with the most lit today.",
   "source": {
    "thinkers": [
     "Melvin Blumberg & Charles Pringle"
    ],
-   "work": "QUMNI 2/3 rule: an untested rule of thumb inspired by Blumberg & Pringle (Academy of Management Review, 1982), whose own model says all three pillars interact"
+   "work": "The 2-of-3 rule: an untested rule of thumb inspired by Blumberg & Pringle (Academy of Management Review, 1982), whose own model says all three pillars interact"
   },
-  "evidence": "philosophy",
+  "evidence": "contested",
   "level": 1,
   "related": [
    "wso_triad",
@@ -381,7 +381,7 @@
     "Edward Deci",
     "Richard Ryan"
    ],
-   "work": "Deci & Ryan, Self-Determination Theory (1985); Ryan & Deci, American Psychologist (2000); applied in the QUMNI WSO framework"
+   "work": "Deci & Ryan, Self-Determination Theory (1985); Ryan & Deci, American Psychologist (2000); applied in the Will-Skill-Opportunity framework"
   },
   "evidence": "moderate",
   "level": 1,
@@ -419,7 +419,7 @@
     "Brooke Macnamara",
     "Aristotle"
    ],
-   "work": "Ericsson & Pool, Peak (2016); Macnamara et al., Psychological Science (2014); applied in the QUMNI WSO framework"
+   "work": "Ericsson & Pool, Peak (2016); Macnamara et al., Psychological Science (2014); applied in the Will-Skill-Opportunity framework"
   },
   "evidence": "moderate",
   "level": 1,
@@ -549,7 +549,7 @@
     "Anthony Giddens",
     "Pierre Bourdieu"
    ],
-   "work": "Giddens, The Constitution of Society (1984); Bourdieu, The Forms of Capital (1986); applied in the QUMNI WSO framework"
+   "work": "Giddens, The Constitution of Society (1984); Bourdieu, The Forms of Capital (1986); applied in the Will-Skill-Opportunity framework"
   },
   "evidence": "philosophy",
   "level": 2,
@@ -926,9 +926,9 @@
   "hook": "New to leading a team? Some confidence boosts last. Some evaporate.",
   "title": "Where real 'I can' comes from",
   "game": {
-   "prompt": "You've just been made team lead. How much 'I can do this' does each one build?",
+   "prompt": "You've just been made team lead. How much 'I can do this' does each one build? Hint: watching someone like you succeed counts.",
    "left": "Weaker on its own",
-   "right": "Strong source",
+   "right": "Builds real belief",
    "items": [
     {
      "text": "You run Monday's stand-up yourself and it goes fine",
@@ -941,9 +941,9 @@
      "why": "Praise helps, but words alone fade at the first hard moment. Pair it with a win."
     },
     {
-     "text": "A peer at your level handles a tough client well",
+     "text": "Another new lead, as nervous as you, handles a tough client well",
      "side": "right",
-     "why": "Strong, especially from someone like you, though it fades faster than your own win."
+     "why": "Builds belief, second only to your own win. Watch how they prepared, not just how it went."
     },
     {
      "text": "You watch a famous CEO's flawless keynote",
@@ -964,7 +964,7 @@
   },
   "insight": "Bandura ranked your own wins first, then seeing someone like you succeed. Praise and how you read your body help less on their own. Reviews mostly agree, though the order varies.",
   "model": "Belief follows wins you can point to. Design small ones on purpose.",
-  "try_today": "Pick the task you dread most this week. Do a 10-minute slice of it before lunch and mark it done somewhere you'll see it.",
+  "try_today": "Pick one task you've been putting off (not the biggest). Do a 10-minute slice before lunch and tick it off where you'll see it.",
   "source": {
    "thinkers": [
     "Albert Bandura"
@@ -989,22 +989,22 @@
   "hook": "Some confidence boosts last. Some vanish by Monday.",
   "title": "Where real 'I can' comes from",
   "game": {
-   "prompt": "You've just been made captain or group-project lead. How much 'I can do this' does each one build?",
+   "prompt": "You've just been put in charge of something new (a team, a project, a club). How much 'I can do this' does each one build? Hint: watching someone like you succeed counts.",
    "left": "Weaker on its own",
-   "right": "Strong source",
+   "right": "Builds real belief",
    "items": [
     {
-     "text": "A mate in your year nails a presentation",
+     "text": "Someone just like you, just as nervous, nails their first presentation",
      "side": "right",
-     "why": "Strong, especially from someone like you, though it fades faster than your own win."
+     "why": "Builds belief, second only to your own win. Watch how they prepared, not just how it went."
     },
     {
-     "text": "Your coach says 'You're a natural'",
+     "text": "Someone you look up to says 'You're a natural'",
      "side": "left",
      "why": "Praise helps, but words alone fade at the first hard moment. Pair it with a win."
     },
     {
-     "text": "You run the first warm-up yourself and it goes fine",
+     "text": "You run the first meeting yourself and it goes fine",
      "side": "right",
      "why": "Your own success is the strongest source of belief. You have proof, not just hope."
     },
@@ -1027,7 +1027,7 @@
   },
   "insight": "Bandura ranked your own wins first, then seeing someone like you succeed. Praise and watching stars help less on their own. Reviews mostly agree, though the order varies.",
   "model": "Belief follows wins you can point to. Design small ones on purpose.",
-  "try_today": "Pick the task you dread most this week. Do a 10-minute slice of it today and tick it off somewhere you'll see it.",
+  "try_today": "Pick one task you've been putting off (not the biggest). Do a 10-minute slice today and tick it off somewhere you'll see it.",
   "source": {
    "thinkers": [
     "Albert Bandura"
@@ -1052,14 +1052,14 @@
   "hook": "Someone starts paying you for the thing you'd do for free. Any catch?",
   "title": "When pay steals the fun",
   "game": {
-   "prompt": "You make video edits for fun. A mate's page pays you per edit for a month, then the money stops. In your free time after that, compared with a friend who did the same edits but was never paid, you'll probably make…",
+   "prompt": "You make video edits for fun. A mate's page pays you per edit for a month, then the money stops. On average, compared with people never paid, people in your position later make…",
    "choices": [
-    "More than them",
-    "About the same",
-    "Fewer than them"
+    "More edits in their free time",
+    "About as many",
+    "Fewer"
    ],
    "answer": 2,
-   "reveal": "Fewer than the unpaid group, on average. Across 128 experiments, expected rewards for an already-fun task lowered free-choice play after rewards ended, compared with people never rewarded. Surprise rewards didn't, and praise helped adults more than children."
+   "reveal": "Fewer than the unpaid group, on average. Across 128 experiments, expected rewards for an already-fun task lowered free-choice play after rewards ended, compared with people never rewarded. Surprise rewards didn't, and praise helped adults more than children. The average drop was modest (roughly a third of a standard deviation), and plenty of individuals kept going."
   },
   "insight": "Pay can quietly swap 'I want to' for 'I'm paid to'. When the pay stops, the want may not fully return. Some researchers say the effect is small outside the lab.",
   "model": "A reason that's yours outlasts any reward. Guard the stuff you do for love.",

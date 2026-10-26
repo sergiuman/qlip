@@ -85,7 +85,7 @@
         s -= (S.seen[c.id] || 0) * 1.5;
         const nb = near.get(c.concept);
         if (nb) s += 2.5 * nb.w;
-        s -= 1.4 * lastDomains.filter((d) => d === c.domain).length;
+        s -= 2.2 * lastDomains.filter((d) => d === c.domain).length;
         s -= Math.max(0, c.level - (1 + played / 6)) * 1.5;
         s += (CONCEPT[c.concept]?.rank || 0) * 25;
         s += hash(c.id + SESSION) * 1.6;
@@ -114,7 +114,10 @@
   const skipped = new Set();
 
   function appendCards(ids) {
-    for (const id of ids) { queue.push(id); feed.append(renderCard(CARD[id])); }
+    for (const id of ids) {
+      queue.push(id); feed.append(renderCard(CARD[id]));
+      if (queue.length % 8 === 0) feed.append(renderBreak());
+    }
   }
 
   const io = new IntersectionObserver((entries) => {
@@ -176,7 +179,6 @@
       bumpStreak(); save();
       game.append(renderReveal(card, result, start));
       playedThisVisit++;
-      if (playedThisVisit % 5 === 0) el.after(renderBreak());
       // refresh the not-yet-seen tail so the next cards follow the graph from here
       const idx = queue.indexOf(card.id);
       const tail = queue.slice(idx + 1).filter((id) => !feed.querySelector(`[data-id="${CSS.escape(id)}"]`)?.dataset.counted);
@@ -213,7 +215,7 @@
       save();
     } });
     wrap.append(h("div", { class: "try" }, cb, h("label", { for: cbId }, h("b", {}, "Try today"), card.try_today)));
-    if (card.try_team) wrap.append(h("p", { class: "team-line" }, h("b", {}, "👥 With others: "), card.try_team));
+    if (card.try_team && S.world !== "young") wrap.append(h("p", { class: "team-line" }, h("b", {}, "👥 With others: "), card.try_team));
     const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).filter((id) => !sameStory(card, CARD[id])).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || []).find((id) => !sameStory(card, CARD[id]))]).filter(([cid, t]) => t && CONCEPT[cid]);
     const ev = { strong: "Strong evidence", moderate: "Moderate evidence", contested: "Contested — read critically", philosophy: "Philosophical lens" }[card.evidence];
     const more = h("details", { class: "why", open: S.world === "work" || S.world === "life" }, h("summary", {}, "Why? · 15-second read"),
@@ -221,6 +223,7 @@
 
       h("div", { class: "meta-row" }, h("span", { class: `chip plain ev-${card.evidence}` }, ev),
         h("span", { class: "src" }, `${card.source.thinkers.join(", ")} · ${card.source.work}`)));
+    if (card.try_team && S.world === "young") more.append(h("p", { class: "team-line" }, h("b", {}, "👥 With mates: "), card.try_team));
     if (targets.length > 1) more.append(h("div", { class: "related" }, targets.slice(1).map(([cid, t]) =>
       h("button", { onclick: () => jumpTo(t) }, h("span", {}, DOMAIN[CONCEPT[cid].domain].name), CONCEPT[cid].name))));
     wrap.append(more);
@@ -241,7 +244,7 @@
     const commits = Object.values(S.commits).filter((c) => !c.done).slice(-3);
     const el = h("section", { class: "qlip break-card", style: "--c:var(--good)", "aria-label": "Break" },
       h("div", { class: "qlip-body" },
-        h("h2", { class: "hook" }, `Nice. ${playedThisVisit} ideas played.`),
+        h("h2", { class: "hook" }, playedThisVisit ? `Nice. ${playedThisVisit} ${playedThisVisit === 1 ? "idea" : "ideas"} played.` : "A good place to pause."),
         h("p", { class: "concept-line" }, "Stopping here is a win too. The ideas stick better when you use one than when you scroll ten more."),
         commits.length ? h("ul", { class: "commit-list" }, commits.map((c) => h("li", {}, c.text))) : h("p", { class: "muted" }, "Pick one thing you'd like to try before tomorrow."),
         h("div", { class: "swipe-btns" },
@@ -549,8 +552,8 @@
       const has = Number.isInteger(g.answer);
       const opts = h("div", { class: "opts" }, g.choices.map((c, k) => h("button", { class: "opt", onclick: (e) => {
         opts.querySelectorAll("button").forEach((b, j) => { b.disabled = true; if (has && j === g.answer) b.classList.add("best"); });
-        e.currentTarget.classList.add("picked");
-        done({ name: !has ? "" : k === g.answer ? "Spot on." : "Here's what the research found.", text: g.reveal });
+        e.currentTarget.classList.add(has ? "picked" : "chosen");
+        done({ name: !has ? "Your call." : k === g.answer ? "Spot on." : "Here's what the research found.", text: g.reveal });
       } }, c)));
       return h("div", { style: "display:flex;flex-direction:column;gap:12px" }, h("p", { class: "q-text" }, g.prompt), opts);
     },

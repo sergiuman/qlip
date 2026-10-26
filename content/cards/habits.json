@@ -834,22 +834,22 @@
     "concept": "evening_reset",
     "domain": "habits",
     "type": "reveal",
-    "sensitive": true,
-    "hook": "Nobody on your team emails after 7. Are they really off, though?",
+    "hook": "No emails after 7. Who's still affected?",
     "title": "The Invisible On-Call",
     "game": {
-      "prompt": "Your team rarely gets evening emails. But everyone knows one could arrive, and that they'd be expected to see it. Does that expectation alone affect them?",
+      "prompt": "Your team rarely gets evening emails, but everyone knows one could arrive and they'd be expected to see it. In one study, that expectation alone was linked to:",
       "choices": [
-        "Not really. No emails, no strain.",
-        "Yes. The 'might' alone weighs on them."
+        "No change in anxiety",
+        "More anxiety, but only for staff who actually check",
+        "More anxiety for staff, and lower relationship satisfaction for their partners"
       ],
-      "answer": 1,
-      "reveal": "Yes. In a 2021 study, simply expecting to monitor work email after hours was linked to more anxiety for staff, not just the time they spent on it, and to lower relationship satisfaction for their partners (Becker et al., Journal of Management)."
+      "answer": 2,
+      "reveal": "The last one. In a 2021 study, simply expecting to monitor work email after hours was linked to more anxiety for staff, beyond the time spent on it, and to lower relationship satisfaction for their partners (Becker et al., Journal of Management)."
     },
     "insight": "A quiet inbox isn't a closed day. If the rule is 'you might be needed', minds stay on call. Saying when 'off' starts is the team version of a nightly reset.",
     "model": "An evening only resets you if 'off' is official. 'Might be needed' keeps everyone on call.",
-    "try_today": "Tell your team in one line when you won't expect replies. Then shut your own laptop at that time tonight.",
-    "try_team": "Spend 5 minutes listing what truly can't wait until morning. Agree those get a phone call; everything else waits. Write the list down.",
+    "try_today": "Pick an 'off' time tonight. Mute work notifications then, and note the one thing that truly couldn't wait (usually nothing).",
+    "try_team": "Agree one line on when replies aren't expected. Then spend 5 minutes listing what truly can't wait until morning: those get a phone call, everything else waits.",
     "source": {
       "thinkers": [
         "William Becker",
@@ -872,19 +872,19 @@
     "concept": "one_percent",
     "domain": "habits",
     "type": "choice",
-    "hook": "The study plan that feels worse is often the one that works.",
+    "hook": "The learning plan that feels worse is often the one that works.",
     "title": "Small Sessions Stack Up",
     "game": {
       "steps": [
         {
-          "scenario": "Biology mock in three weeks. You can give it about six hours in total. Which plan leaves the most in your head on the day?",
+          "scenario": "A test in three weeks (a course exam, a driving theory test, a work certification). You can give it about six hours in total. Which plan leaves the most in your head on the day?",
           "options": [
             {
               "text": "One big six-hour session the weekend before.",
               "feedback": "Not the strongest. It feels solid that night, but a lot fades within days. The same hours spread out usually stick better."
             },
             {
-              "text": "Twenty-ish minutes every couple of days, starting now.",
+              "text": "About 35 minutes every couple of days, starting now.",
               "best": true,
               "feedback": "Yes. Spacing is one of the best-replicated findings in learning: each short session tops up what's fading, so it builds on the last."
             },
@@ -895,7 +895,7 @@
           ]
         },
         {
-          "scenario": "Night before the mock. You did the spread-out plan. Your mate crammed all evening and feels sure. You feel shakier. What's most likely?",
+          "scenario": "Night before the test. You did the spread-out plan. A friend or colleague crammed all evening and feels sure. You feel shakier. What's most likely?",
           "options": [
             {
               "text": "You know more than it feels like. Spacing feels harder but tends to last longer.",
@@ -903,7 +903,7 @@
               "feedback": "Right. In one study (learning painters' styles), most people judged cramming as good or better, even though spacing won in their own scores."
             },
             {
-              "text": "Your mate's way works better after all.",
+              "text": "Their way works better after all.",
               "feedback": "Easy to think, and cramming can get you through tomorrow. But the feeling of 'I know it' is a poor guide to what stays."
             },
             {
@@ -917,7 +917,7 @@
     "insight": "Same hours, more stays. Spread-out sessions beat one big push across hundreds of experiments. That's the honest part of '1% a day': each small rep builds on the last.",
     "model": "Little and often beats a lot at once. If it feels a bit rusty, it's probably working.",
     "try_today": "Pick one topic you'll be tested on. Spend 10 minutes on it now, then book two more 10-minute slots this week.",
-    "try_team": "Start a class or family evening with 5 minutes: everyone writes what they recall from last week's topic, then checks. No marks, just a top-up.",
+    "try_team": "Open a weekly meeting or class with 5 minutes: everyone writes what they recall from last week's topic, then checks. No marks, just a top-up.",
     "source": {
       "thinkers": [
         "Nicholas Cepeda",

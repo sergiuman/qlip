@@ -288,18 +288,18 @@
      ]
     },
     {
-     "q": "When I have a hard problem, I…",
+     "q": "After a few hours with people, I…",
      "options": [
       {
-       "label": "Think it through alone first",
+       "label": "Need time alone to reset",
        "value": -2
       },
       {
-       "label": "A bit of both",
+       "label": "Feel about the same",
        "value": 0
       },
       {
-       "label": "Talk it out to figure it out",
+       "label": "Feel more energised",
        "value": 2
       }
      ]
@@ -357,15 +357,18 @@
     }
    ]
   },
-  "insight": "Introversion isn't shyness; it's mostly how much stimulation feels good. Most people land near the middle. 'Recharge' is a handy lens, but researchers still debate what extraversion measures.",
+  "insight": "Introversion isn't shyness. One idea is that introverts prefer less stimulation; another links extraversion to how rewarding social buzz feels. Most people land near the middle.",
   "model": "Not shy vs. loud — notice what drains you and what refuels you, then plan around it.",
   "try_today": "Look at tomorrow's schedule and add one 10-minute recharge block that fits your end of the spectrum.",
   "source": {
    "thinkers": [
     "Susan Cain",
-    "Carl Jung"
+    "Carl Jung",
+    "Hans Eysenck",
+    "Richard Lucas",
+    "Ed Diener"
    ],
-   "work": "Quiet (2012); Psychological Types (1921)"
+   "work": "Quiet (2012); Psychological Types (1921); Eysenck, The Biological Basis of Personality (1967); Lucas & Diener, J. Personality and Social Psychology (2001)"
   },
   "evidence": "moderate",
   "level": 1,
@@ -655,7 +658,7 @@
   "concept": "psychological_safety",
   "domain": "connection",
   "type": "reveal",
-  "hook": "The teams you'd trust most looked worst on paper.",
+  "hook": "Better-led hospital teams. More mistakes or fewer? Guess.",
   "title": "Fear Hides Mistakes",
   "game": {
    "prompt": "A researcher tracked drug errors on hospital wards. Wards with better teamwork and leadership had…",

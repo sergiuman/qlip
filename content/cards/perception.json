@@ -153,15 +153,16 @@
     "concept": "goal_directed_perception",
     "domain": "perception",
     "type": "reveal",
-    "hook": "A stranger swaps into someone else mid-chat. Surely you'd notice?",
+    "hook": "A stranger swaps into someone else mid-chat. How many notice?",
     "title": "The Person Swap",
     "game": {
       "prompt": "A stranger with a map asks you for directions. As you explain, two workers carry a door between you. Behind it, the stranger is replaced by a different person with different clothes and voice. Would you notice?",
       "choices": [
         "Yes, instantly",
+        "Probably, once they spoke again",
         "Quite possibly not"
       ],
-      "answer": 1,
+      "answer": 2,
       "reveal": "If you said yes, you're in good company: almost everyone does. But in Simons and Levin's 1998 street study, about half of the people kept giving directions to the new person without noticing. One likely reason: people stored a rough label ('a stranger with a map'), not the face. In a follow-up, students noticed a swap more often when the stranger looked like a fellow student."
     },
     "insight": "We often store a rough label, not the details. A small study (15 people), but this 'change blindness' has been found many times.",
@@ -571,7 +572,7 @@
         },
         "APR": {
           "name": "All three switched on",
-          "text": "Today you rate all three steps as switched on. Keep it honest by checking results, not just feelings. Pick the step you scored lowest and practise it."
+          "text": "Today you rate all three steps as switched on. Keep it honest by checking results, not just feelings. Practise the step you scored lowest; if two tie, start with Adjust."
         },
         "mid": {
           "name": "Evenly balanced today",
@@ -586,7 +587,7 @@
       "thinkers": [
         "William T. Powers"
       ],
-      "work": "Original QUMNI Perceptual Control Framework (house model), drawing on Powers, Behavior: The Control of Perception (1973)"
+      "work": "Qlip's house model (a notice-interpret-adjust loop), drawing on Powers, Behavior: The Control of Perception (1973)"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -652,7 +653,7 @@
       "thinkers": [
         "William T. Powers"
       ],
-      "work": "Powers, Behavior: The Control of Perception (1973); adapted as the original QUMNI Perceptual Control Framework"
+      "work": "Powers, Behavior: The Control of Perception (1973); adapted as Qlip's notice-interpret-adjust loop (house model)"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -792,13 +793,14 @@
     "concept": "hedonic_adaptation",
     "domain": "perception",
     "type": "reveal",
-    "hook": "A huge win would change everything. For how long, though?",
+    "hook": "Lottery winners vs their neighbours. Who's happier a year on?",
     "title": "The Thrill Wears Off",
     "game": {
       "prompt": "Researchers asked big lottery winners, up to about 18 months after winning, how happy they felt day to day. Compared with their neighbours, they were…",
       "choices": [
         "Clearly happier",
-        "About the same"
+        "About the same",
+        "Less happy"
       ],
       "answer": 1,
       "reveal": "About the same, in a small 1978 study of 22 winners (Brickman et al.), and they enjoyed small things like a chat or a joke a bit less. Picked 'happier'? You're partly right: a large Swedish study found big winners stayed more satisfied with life for years, though not happier from moment to moment (Lindqvist et al., 2020)."
@@ -821,8 +823,7 @@
       "one_percent",
       "feedback_loops"
     ],
-    "try_team": "Each person names something they wanted badly that now feels ordinary. Then name one way to make it feel fresh again. Share the best idea.",
-    "sensitive": true
+    "try_team": "Each person names something they wanted badly that now feels ordinary. Then name one way to make it feel fresh again. Share the best idea."
   },
   {
     "id": "hedonic-adaptation-fade-swipe",
@@ -886,8 +887,7 @@
       "feedback_loops",
       "one_percent"
     ],
-    "try_team": "List the group's three biggest daily hassles and three recent 'upgrades'. Vote: which fix would still feel good in six months?",
-    "sensitive": true
+    "try_team": "List the group's three biggest daily hassles and three recent 'upgrades'. Vote: which fix would still feel good in six months?"
   },
   {
     "id": "stress-mindset-choice-fuel",
@@ -1028,7 +1028,7 @@
     "concept": "reframing",
     "domain": "perception",
     "type": "reveal",
-    "hook": "Angry client, live call. Your calm poker face may be costing you.",
+    "hook": "Angry client, live call. Mask it or reframe it: which costs more?",
     "title": "Reframe, Don't Just Mask",
     "game": {
       "prompt": "A client tears apart your team's work for ten minutes on a call. Option A: keep a straight face and push the anger down. Option B: tell yourself \"they're under launch pressure, this is fear talking\". Which one makes you forget more of what they asked for?",
@@ -1088,7 +1088,7 @@
           ]
         },
         {
-          "scenario": "Thursday night, biology test tomorrow. You've got 20 minutes and your notes. Which is the burglar move?",
+          "scenario": "The night before something you need to be ready for (a test, a driving theory exam, a briefing at work). You've got 20 minutes and your notes. Which is the burglar move?",
           "options": [
             {
               "text": "Read the notes twice and highlight the important bits.",
@@ -1109,7 +1109,7 @@
     },
     "insight": "Verdict: you never just read a page, you read it for something. Give your attention a job and it grabs the details that fit it, and skips the rest.",
     "model": "Your goal is a search filter: set it before you look, or something else will set it for you.",
-    "try_today": "Before your next reading or revision, write one question at the top of the page. Read only to answer it.",
+    "try_today": "Before your next reading (revision notes, a report, a contract), write one question at the top of the page. Read only to answer it.",
     "source": {
       "thinkers": [
         "James Pichert",
@@ -1125,6 +1125,6 @@
       "confirmation_bias",
       "implementation_intentions"
     ],
-    "try_team": "Study group, 5 min: everyone reads the same page in a different role (examiner, sceptic, younger sibling). Share what each role noticed."
+    "try_team": "Study group or team, 5 min: everyone reads the same page in a different role (examiner, sceptic, newcomer). Share what each role noticed."
   }
 ]

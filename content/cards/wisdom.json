@@ -490,19 +490,19 @@
     "concept": "socratic_ignorance",
     "domain": "wisdom",
     "type": "estimate",
-    "hook": "Are you funnier than most people your age? Most people think so.",
+    "hook": "Are you a better driver than most? Nearly everyone thinks so.",
     "title": "Knowing You Don't Know",
     "game": {
-      "question": "In a classic study, what % of US student drivers rated themselves more skilful than the median driver?",
+      "question": "In a classic study, what % of US university students who drive rated themselves more skilful than the typical driver in their group?",
       "min": 0,
       "max": 100,
       "step": 1,
       "unit": "%",
       "answer": 93,
-      "explain": "Svenson (1981) found about 93% of a small US student sample rated themselves more skilful than the median driver. At most 50% can be. The same bias shows up everywhere: most people rate themselves above average at being kind, funny and smart.",
+      "explain": "Svenson (1981) found about 93% of a small sample of about 80 US university students rated themselves more skilful than the median driver in their group. At most 50% can be. Similar above-average ratings appear for many traits people value, though the size varies by trait and culture, and people often rate themselves below average on hard skills like juggling.",
       "anchor": null
     },
-    "insight": "Most of us rate ourselves above average, which can't all be true. Socrates said wisdom starts with knowing what you don't know. Rating yourself low is a guess too, so check it.",
+    "insight": "Most of us rate ourselves above average, which can't all be true. Socrates thought himself wiser only in not claiming knowledge he lacked (Apology 21d). Rating yourself low is a guess too.",
     "model": "Treat your self-ratings, high or low, as guesses. 'I might be wrong' opens the door to learning.",
     "try_today": "Pick one opinion you hold strongly. Write the best reason someone could disagree with it, in their words, not yours.",
     "source": {
@@ -540,12 +540,12 @@
         "Kinda",
         "Nope, I'm an engineer"
       ],
-      "reveal": "In Rozenblit & Keil (2002), most people's ratings dropped after they tried to explain. Feeling familiar isn't understanding."
+      "reveal": "Engineers drop too: explaining is the test, not the job title. In Rozenblit & Keil (2002), most people's ratings dropped after they tried to explain. Feeling familiar isn't understanding."
     },
     "insight": "Familiar things feel understood until you try to explain them. Socrates found the same in Athens: people skilled at one craft assumed they knew far more. Explaining is the honesty test.",
     "model": "If you can't explain it step by step, you know less than it feels. Say it out loud to find out.",
-    "try_today": "Pick something you feel sure about (a news story, a gadget). Explain it out loud in 5 steps and notice where you get stuck.",
-    "try_team": "Each person picks a familiar thing (a lock, bike gears, wifi) and explains how it works in 2 minutes. Others may ask 'how exactly?' once.",
+    "try_today": "Explain something you rely on (a system at work, an app, a school topic) in 5 steps. Note where you said 'and then it just…'.",
+    "try_team": "In a retro or study group, each person explains one part of something they 'know' in 2 minutes. Others may ask 'how exactly?' once.",
     "source": {
       "thinkers": [
         "Socrates",
@@ -747,7 +747,7 @@
       "step": 2,
       "unit": " weeks",
       "answer": 4174,
-      "explain": "80 years × about 52.18 weeks ≈ 4,174. At 16 you've used about 835; at 40, about 2,090. Burkeman built a book on this number: the point isn't to rush, it's to choose a few things that matter.",
+      "explain": "80 years × about 52.18 weeks ≈ 4,174. Seneca's point holds at any age: a life is measured by how it is used, not how many weeks it holds. Burkeman's point isn't to rush or count losses, but to choose a few things that matter in the weeks you have.",
       "anchor": null
     },
     "insight": "About 4,000 weeks feels short, and if that feels heavy, that's normal. The point isn't to scare you but to sharpen you. Seneca said life is long enough if used well.",
@@ -769,8 +769,8 @@
     ],
     "try_team": "Each person names the one thing this week they'd regret skipping. Share them, then help each other protect the time for it.",
     "from_source": {
-      "quote": "It is not that we have a short space of time, but that we waste much of it.",
-      "cite": "Seneca, On the Shortness of Life, 1.3 (trans. John W. Basore, 1932)",
+      "quote": "Life is long if you know how to use it.",
+      "cite": "Seneca, On the Shortness of Life, 2.1 (trans. John W. Basore, 1932)",
       "next_read": "On the Shortness of Life, chapters 1-3"
     },
     "sensitive": true
@@ -785,19 +785,19 @@
     "game": {
       "steps": [
         {
-          "scenario": "You and your best friend argued. Then they posted a group photo you weren't in. They leave tomorrow for two weeks away. You…",
+          "scenario": "A teammate took a problem with your work straight to the boss without talking to you first. They're away from tomorrow for two weeks. You…",
           "options": [
             {
-              "text": "Leave their messages on read until they apologise.",
+              "text": "Ignore their messages until they apologise.",
               "feedback": "Fair to be hurt, but two weeks of silence usually makes the hurt grow, not shrink."
             },
             {
-              "text": "Text: 'Still a bit annoyed, but have a great trip. Talk when you're back?'",
+              "text": "Message: 'Still a bit annoyed about that, but have a good break. Can we talk when you're back?'",
               "best": true,
               "feedback": "You stayed honest and kept the door open. If this were your last message to them, you'd be glad it was this one."
             },
             {
-              "text": "Post a story about fake friends.",
+              "text": "Complain about them in the team group chat.",
               "feedback": "It feels good for a minute, then becomes one more thing to repair."
             }
           ]
@@ -869,14 +869,14 @@
     "concept": "memento_mori",
     "domain": "wisdom",
     "type": "reveal",
-    "hook": "Moving away next month. Who gets your last free half hour?",
+    "hook": "Moving next month. Guess who most people pick for one last half hour.",
     "title": "Short Time, Clear Choices",
     "game": {
       "prompt": "In a classic study, younger adults imagined moving far away in a few weeks, with one free half hour. Who did most of them pick to spend it with?",
       "choices": [
         "A close friend or family member",
-        "A new acquaintance you really clicked with",
-        "The author of a book you just loved"
+        "Someone new they'd really clicked with",
+        "The author of a book they loved"
       ],
       "answer": 0,
       "reveal": "The familiar face. Older adults in Fredrickson & Carstensen (1990) mostly chose a close partner; younger adults spread their picks until they imagined a move. There's no wrong personal choice here; this is about what most people did."

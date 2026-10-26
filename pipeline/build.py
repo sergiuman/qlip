@@ -22,15 +22,22 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
 
-YOUNG = r"\b(school|teacher|class(mate)?s?|revis\w*|exam|homework|mates?|best friend|parents?|mum|dad|group chat|snap\w*|tiktok|gcse|sixth form|college|uni|coursework|football|trainers|saturday job|bedroom)\b"
-WORK = r"\b(manager|boss|colleague|salary|raise|meeting|client|team ?lead|stand-?up|1:1|one-to-one|project|deadline|career|hiring|office|mortgage|retire\w*|grandkid\w*|commute|pull request|code review)\b"
+YOUNG = r"\b(school|teachers?|class(mate)?s?|revis\w*|exams?|mocks?|homework|mates?|best friend|parents?|mum|dad|group chat|snap\w*|tiktok|gcses?|sixth form|college|uni|coursework|football|trainers|saturday job|bedroom|captain|coach|tryouts?|trials|in your year|biology|chemistry|maths|essay|detention|youtuber|playground|age 1[3-8]|you're 1[3-8])\b"
+WORK = r"\b(manager|managers|boss|colleagues?|salary|pay ?rise|raise|day's pay|meetings?|clients?|team ?lead|your team|direct reports?|stand-?ups?|1:1s?|one-to-ones?|projects?|deadlines?|career|hiring|hire|interview\w*|candidates?|office|mortgage|retire\w*|grandkid\w*|commute|pull requests?|code review|engineers?|directors?|sprints?|dashboards?|kpis?|performance review|promotion|quarterly|stakeholders?|workplace|employees?|startup|on-call|email after)\b"
 
 
 def audience(card):
-    """Which life-world a card's scenarios live in, so the feed can learn what each player relates to."""
-    text = json.dumps(card["game"], ensure_ascii=False).lower() + " " + card["hook"].lower()
+    """Which life-world a card's scenarios live in. An explicit "audience" in the card wins; otherwise
+    count school and work markers across everything the player reads."""
+    if card.get("audience") in ("all", "young", "work"):
+        return card["audience"]
+    text = " ".join([json.dumps(card["game"], ensure_ascii=False), card["hook"], card["insight"], card["try_today"]]).lower()
     y, w = len(re.findall(YOUNG, text)), len(re.findall(WORK, text))
-    return "young" if y > w + 1 else "work" if w > y + 1 else "all"
+    if y >= 2 and y > w * 2:
+        return "young"
+    if w >= 2 and w > y * 2:
+        return "work"
+    return "all"
 
 
 def build_graph(concepts, cards):

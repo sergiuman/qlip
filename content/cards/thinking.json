@@ -47,7 +47,7 @@
    "right": "Owl (slow)",
    "questions": [
     {
-     "q": "A message annoys you. You usually…",
+     "q": "A message from your boss or teacher annoys you. You usually…",
      "options": [
       {
        "label": "Reply right away",
@@ -64,18 +64,18 @@
      ]
     },
     {
-     "q": "Buying something pricey (a phone, shoes, a gadget), you…",
+     "q": "Someone proposes a big change in a group chat (team, class, family). You…",
      "options": [
       {
-       "label": "Go with what feels right",
+       "label": "React within a minute",
        "value": -2
       },
       {
-       "label": "Compare two options",
+       "label": "Reply after rereading it",
        "value": 0
       },
       {
-       "label": "Sleep on it",
+       "label": "Ask for a quick call before deciding",
        "value": 2
       }
      ]
@@ -98,18 +98,18 @@
      ]
     },
     {
-     "q": "A friend asks which of two near-identical coffees you'd like. You…",
+     "q": "Someone asks how long a task will take you (a work job, a project). You…",
      "options": [
       {
-       "label": "Pick one instantly",
+       "label": "Say a number straight away",
        "value": -2
       },
       {
-       "label": "Pick after a glance",
+       "label": "Ask one clarifying question first",
        "value": 0
       },
       {
-       "label": "Weigh price, size and taste",
+       "label": "Say you'll reply after breaking it down",
        "value": 2
       }
      ]
@@ -135,7 +135,7 @@
   },
   "insight": "Neither speed is better. The fast mind slips on numbers, anger and new things. 'System 1 and 2' (Stanovich & West, 2000) is a metaphor, not two brain parts.",
   "model": "Let the hare handle the routine; call the owl for anything costly, emotional, or new.",
-  "try_today": "Pick one trigger (an angry message, a pricey purchase) and make it your rule to wait 10 minutes first.",
+  "try_today": "Pick one trigger (an annoying message, a snap estimate) and make it your rule to wait 10 minutes first.",
   "source": {
    "thinkers": [
     "Daniel Kahneman",
@@ -149,7 +149,7 @@
    "impulse_pause",
    "reversible_doors"
   ],
-  "try_team": "Agree on one shared 'owl rule', e.g. nobody replies to a heated group message for 10 minutes. Check in after a week: did it help?"
+  "try_team": "In your next planning or group chat, agree one 'owl rule': no estimate or reply to a heated message without one question first. Review in a week."
  },
  {
   "id": "anchoring-africa-un",
@@ -443,10 +443,10 @@
   "concept": "loss_aversion",
   "domain": "thinking",
   "type": "reveal",
-  "hook": "Heads: win a day and a half's pay. Tails: lose a day's pay. Flip?",
+  "hook": "Heads you win £15. Tails you lose £10. Flip?",
   "title": "Loss Aversion",
   "game": {
-   "prompt": "One fair coin flip, real money. Heads: you win a day and a half's pay. Tails: you lose a day's pay. On average it pays you a quarter of a day. Do you take it?",
+   "prompt": "One fair coin flip, real money. Heads: you win £15. Tails: you lose £10. On average you come out £2.50 up. Do you take it?",
    "choices": [
     "Flip it",
     "No thanks"
@@ -455,7 +455,7 @@
   },
   "insight": "Saying no is fine when the loss would really hurt. But we often skip small, smart risks just because losing stings. Some research finds the effect smaller than claimed for small amounts.",
   "model": "Losses shout, gains whisper. For small, repeatable bets, judge the average, not the sting.",
-  "try_today": "Name one small risk you've avoided (asking, applying, trying). Write the realistic worst case, then one thing you'd do if it happened.",
+  "try_today": "Name one small, reversible bet you've avoided (a new routine, asking for help, delegating a task). Write the worst case and your plan B.",
   "source": {
    "thinkers": [
     "Daniel Kahneman",

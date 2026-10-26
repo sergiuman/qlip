@@ -230,7 +230,7 @@
             {
               "text": "Send one line: 'Saw this and thought of you'",
               "best": true,
-              "feedback": "Yes. The awkward bit lasts a minute. In Daniel Pink's big regret survey, lost friendships were one of the four most common kinds of regret."
+              "feedback": "Yes. The awkward bit lasts a minute. In Daniel Pink's large online regret survey, lost connections were one of four core types of regret he described."
             },
             {
               "text": "Wait for them to message first",
@@ -256,7 +256,7 @@
             },
             {
               "text": "Never take risks, then there's nothing to regret",
-              "feedback": "Sounds safe, but from 80, a life with no tries is the regret people describe most. The skill is sizing the risk, not avoiding all of it."
+              "feedback": "Sounds safe, but over the long run people tend to regret chances they didn't take more than ones they did. The skill is sizing the risk, not avoiding all of it."
             }
           ]
         }
@@ -561,7 +561,7 @@
           "axis": "K"
         },
         {
-          "q": "People who know more than me would mostly agree with my advice.",
+          "q": "I've checked my advice on this against someone more experienced and it held up.",
           "axis": "K"
         },
         {
@@ -569,7 +569,7 @@
           "axis": "C"
         },
         {
-          "q": "I'd make a big decision on it without asking anyone.",
+          "q": "If someone challenged me on it, I'd expect to be right.",
           "axis": "C"
         },
         {
@@ -586,7 +586,7 @@
         },
         "C": {
           "name": "Confidence ahead of proof",
-          "text": "You rate your confidence ahead of your track record on this topic. That's a common gap, and it's where mistakes slip in. Before big calls, ask someone with results to check you."
+          "text": "Your confidence is running a little ahead of your track record on this topic. That's common and fixable: before a big call, ask someone with results to check you."
         },
         "K": {
           "name": "Proof ahead of confidence",
@@ -594,19 +594,19 @@
         },
         "CK": {
           "name": "Inside the circle",
-          "text": "You rate your confidence and your proof about level on this topic. Your job now is guarding the border: notice when a question drifts past what you've tested."
+          "text": "You rate both your track record and your confidence high on this topic. Your job now is guarding the border: notice when a question drifts past what you've actually tested."
         }
       }
     },
-    "insight": "Warren Buffett's rule: the size of your circle matters less than knowing where its edge is. Socrates said wisdom starts with knowing what you don't know.",
+    "insight": "Warren Buffett's rule: the size of your circle matters less than knowing where its edge is. Aristotle warned against claiming more precision than a subject allows.",
     "model": "Know the edge of what you know. Act boldly inside it; ask, test, or pass outside it.",
     "try_today": "Write one topic where you're truly competent and one where you only feel confident. Ask an expert one question on the second.",
     "source": {
       "thinkers": [
         "Warren Buffett",
-        "Socrates"
+        "Aristotle"
       ],
-      "work": "Berkshire Hathaway shareholder letter (1996); Plato, Apology"
+      "work": "Berkshire Hathaway shareholder letter (1996); Aristotle, Nicomachean Ethics I.3"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -617,9 +617,9 @@
     ],
     "try_team": "Each person names one topic they've truly tested and one they only feel sure about. Make a 'who to ask' list from it and use it next time you're stuck.",
     "from_source": {
-      "quote": "he knows nothing, and thinks that he knows; I neither know nor think that I know.",
-      "cite": "Plato, Apology 21d (trans. Benjamin Jowett, 1871)",
-      "next_read": "Plato, Apology 20e–23c: the oracle at Delphi and Socrates' search for a wiser man"
+      "quote": "it is the mark of an educated man to look for precision in each class of things just so far as the nature of the subject admits",
+      "cite": "Aristotle, Nicomachean Ethics I.3, 1094b (trans. W. D. Ross)",
+      "next_read": "Aristotle, Nicomachean Ethics I.3"
     }
   },
   {

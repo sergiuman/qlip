@@ -27,6 +27,7 @@ Cards live in `content/cards/<domain>.json` as a JSON array.
 | `related` | 1–3 other concept ids this card should lead to |
 | `try_team` | optional, ≤ 160 chars: the same idea as a 5-minute exercise for a team, class or family |
 | `from_source` | optional `{ "quote": "≤ 25 words, public-domain text or a short fair-use phrase", "cite": "Author, Work, chapter", "next_read": "exact chapter/pages" }` — a doorway to the primary text |
+| `audience` | optional `all` · `young` · `work`: the life-world the card's scenarios live in. The app's world picker hides cards from other worlds. If omitted, the build infers it from the text, so set it whenever a card is clearly school-only or work-only |
 | `sensitive` | optional `true` when the topic touches mood, anxiety, self-worth; the app shows a gentle support line |
 
 ## Game types

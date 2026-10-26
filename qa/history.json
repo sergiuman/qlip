@@ -531,12 +531,12 @@
  },
  {
   "session": 11,
-  "at": "2026-10-26T22:01:22+00:00",
+  "at": "2026-10-26T22:05:52+00:00",
   "automated": 49.0,
-  "panel": null,
-  "composite": 49.0,
-  "delta": -34.0,
-  "passed": false,
+  "panel": 34.67,
+  "composite": 83.67,
+  "delta": 0.67,
+  "passed": true,
   "breakdown": {
    "schema": 5,
    "playthrough": 8.0,
@@ -570,8 +570,61 @@
    "hook_distinct_rate": 0.995,
    "brief_reveal_rate": 1.0
   },
-  "panel_detail": {},
+  "panel_detail": {
+   "persona_avg_10": 6.93,
+   "by_dim": {
+    "hook": 6.67,
+    "clarity": 7.0,
+    "usefulness": 7.0,
+    "safety": 8.0,
+    "fun": 6.0
+   }
+  },
   "note": "one-tap world picker (School/Work/Everyday) filters the feed; Why? open for adults; swipe recap explains every item; session-10 content fixes. METHOD CHANGE: personas now review the feed their chosen world serves."
+ },
+ {
+  "session": 12,
+  "at": "2026-10-26T22:15:20+00:00",
+  "automated": 49.01,
+  "panel": null,
+  "composite": 49.01,
+  "delta": -34.66,
+  "passed": false,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 8.0,
+   "console": 4,
+   "overflow": 3,
+   "a11y": 6.0,
+   "readability": 5,
+   "actionable": 2.98,
+   "sourced": 1.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.68,
+   "domain_balance": 2.0,
+   "depth": 2.35,
+   "hook_distinct": 2.0,
+   "brief_reveal": 1.0
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 191,
+   "played_ok": 191,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 0,
+   "flesch_avg": 75.4,
+   "try_today_verb_rate": 0.995,
+   "sensitive_cards": 52,
+   "first_card_ms": 394,
+   "edges": 369,
+   "concept_depth": 0.784,
+   "hook_distinct_rate": 1.0,
+   "brief_reveal_rate": 1.0
+  },
+  "panel_detail": {},
+  "note": "sharper world tagging (+explicit audience field), opinion reveals neutral ('Your call.'), visible pause card every 8 in the feed, young-world reveals shorter, stronger domain variety, session-11 content fixes (99)"
  },
  {
   "session": 1001,

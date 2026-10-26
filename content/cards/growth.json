@@ -104,7 +104,7 @@
         {
           "upTo": 0.34,
           "label": "Mixed today (like most people)",
-          "text": "Your answers mix both mindsets, as most people's do. Notice which topics flip you to 'fixed': that's where the work is. Fun fact: you can be growth for football and fixed for maths on the same day."
+          "text": "Your answers mix both mindsets, as most people's do. Notice which topics flip you to 'fixed': that's where the work is. Fun fact: you can be growth for drawing and fixed for maths on the same day."
         },
         {
           "upTo": 1,
@@ -1112,20 +1112,20 @@
           ]
         },
         {
-          "scenario": "Football trials in a month. Your weak foot is your left. Using the spelling bee result, you…",
+          "scenario": "Spanish speaking exam in a month. You always freeze on the past tense. Using the spelling bee result, you…",
           "options": [
             {
-              "text": "Play matches with mates every evening",
-              "feedback": "Fun and keeps you fit, so keep it. But in matches you'll mostly use your strong foot."
+              "text": "Chat on Duolingo with mates every evening",
+              "feedback": "Fun, so keep it. But you'll mostly dodge the past tense without noticing."
             },
             {
-              "text": "Do 15 minutes alone on left-foot passes, then join the match",
+              "text": "Do 15 minutes alone saying past-tense sentences out loud, then do the fun stuff",
               "best": true,
-              "feedback": "That's it. Short, boring, aimed at the gap. The match is your reward and your test."
+              "feedback": "That's it. Short, boring, aimed at the gap. The fun stuff is your reward and your test."
             },
             {
-              "text": "Watch pro highlights for tricks",
-              "feedback": "Fun and inspiring, and you'll spot ideas. Your left foot still needs the reps, though."
+              "text": "Watch Spanish TikToks for slang",
+              "feedback": "Inspiring, and you'll pick up phrases. Your weak spot still needs the reps, though."
             }
           ]
         }
@@ -1133,7 +1133,7 @@
     },
     "insight": "Verdict: grit paid off through dull, focused solo practice. Grittier spellers did more of it, and that explained their edge. Grit's wider power is contested: effects are modest.",
     "model": "Grit works by getting you to do the boring practice on your weak spot, not by looking busy.",
-    "try_today": "Pick one weak spot (a topic, a skill, your weak foot) and give it 15 focused minutes alone today, phone in another room.",
+    "try_today": "Pick one weak spot (a topic, a skill, a tense you freeze on) and give it 15 focused minutes alone today, phone in another room.",
     "source": {
       "thinkers": [
         "Angela Duckworth",

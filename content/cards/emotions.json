@@ -720,7 +720,7 @@
      ]
     },
     {
-     "scenario": "In your 1:1, Sam says 'I'm fine, just a bit stressed.' Third week running. You…",
+     "scenario": "In your 1:1, Jonas says 'I'm fine, just a bit stressed.' Third week running. You…",
      "options": [
       {
        "text": "Say 'Everyone's stretched right now, hang in there.'",
@@ -728,7 +728,7 @@
       },
       {
        "text": "Jump to a fix: 'Let's move two of your tasks.'",
-       "feedback": "Kind instinct, and it might be right. Without a sharper word you're guessing which fix Sam needs."
+       "feedback": "Kind instinct, and it might be right. Without a sharper word you're guessing which fix Jonas needs."
       },
       {
        "text": "Ask: 'If stressed had a more exact name this week: overloaded, stuck, worried?'",
@@ -771,27 +771,27 @@
    "right": "Smart wait",
    "items": [
     {
-     "text": "You've reorganised your revision timetable three times instead of opening the chemistry paper.",
+     "text": "You've reorganised your to-do list three times instead of opening the hardest task on it.",
      "side": "left",
      "why": "Busy, but dread is steering. Planning feels useful and keeps the hard part away."
     },
     {
-     "text": "You wait to start the essay until your teacher answers your question about the title, due back tomorrow.",
+     "text": "You wait to start the essay or report until someone answers your question about the brief, due back tomorrow.",
      "side": "right",
      "why": "A reason and an end time. That's a plan, not avoidance."
     },
     {
-     "text": "Coursework is due Friday. It's Wednesday and the doc is still blank; you're just 'thinking about it'.",
+     "text": "It's due Friday. It's Wednesday and the doc is still blank; you're just 'thinking about it'.",
      "side": "left",
      "why": "Thinking with no output as the deadline nears usually means the blank page feels bad."
     },
     {
-     "text": "You've put off asking your mate why she's been off with you for weeks.",
+     "text": "You've put off asking a friend why they've been off with you for weeks.",
      "side": "left",
      "why": "Fear of the answer is the feeling. The delay protects you from it, for now."
     },
     {
-     "text": "You park your reading log because two assignments are due tomorrow.",
+     "text": "You park a side project because two deadlines land tomorrow.",
      "side": "right",
      "why": "Choosing an order you'd still back tomorrow is prioritising, not dodging."
     }
@@ -822,25 +822,25 @@
   "concept": "self_compassion",
   "domain": "emotions",
   "type": "choice",
-  "hook": "You missed the penalty. Will going easy on yourself make you lazy?",
+  "hook": "You blanked on stage. Will going easy on yourself make you lazy?",
   "title": "The Ride-Home Voice",
   "game": {
    "steps": [
     {
-     "scenario": "You miss the penalty. Cup run over. On the ride home, the voice in your head says…",
+     "scenario": "Your big moment goes wrong: you blank halfway through your solo at the concert. On the way home, the voice in your head says…",
      "options": [
       {
        "text": "'You choked. You always choke.'",
        "feedback": "That voice thinks it's helping. But 'always' turns one miss into who you are, and that makes practice feel pointless."
       },
       {
-       "text": "'That hurts. Pros miss these too. What would I say to a mate?'",
+       "text": "'That hurts. Pros blank too. What would I say to a mate?'",
        "best": true,
        "feedback": "That's self-compassion in three moves: notice the sting, remember everyone misses, talk like a friend. Honest, not brutal."
       },
       {
-       "text": "'Whatever, football's stupid anyway.'",
-       "feedback": "A fair shield: it stops the sting fast. It can also stop you caring enough to practise penalties."
+       "text": "'Whatever, music's stupid anyway.'",
+       "feedback": "A fair shield: it stops the sting fast. It can also stop you caring enough to practise."
       }
      ]
     },

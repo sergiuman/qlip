@@ -897,20 +897,20 @@
           ]
         },
         {
-          "scenario": "Football training. The passing drill is so easy you're half-asleep and start messing about. What now?",
+          "scenario": "Music practice. You've played the same easy piece so many times you're half-asleep and start noodling. What now?",
           "options": [
             {
-              "text": "Ask to do it weaker foot only, or one touch.",
+              "text": "Play it at a faster tempo, or try it from memory.",
               "best": true,
               "feedback": "Raising the challenge to meet your skill is how boredom turns into focus."
             },
             {
-              "text": "Keep messing about, it's only a drill.",
+              "text": "Keep noodling, it's only practice.",
               "feedback": "Understandable. You're just spending the session in the boredom zone, where nobody improves much."
             },
             {
-              "text": "Skip training next week.",
-              "feedback": "The drill isn't the problem forever; its level is. Change the difficulty before you drop it."
+              "text": "Skip practice next week.",
+              "feedback": "The piece isn't the problem forever; its level is. Change the difficulty before you drop it."
             }
           ]
         },

@@ -166,6 +166,8 @@ def validate_card(card, concepts):
     src = card["source"]
     if not isinstance(src, dict) or not src.get("thinkers") or not src.get("work"):
         errs.append("source needs thinkers[] and work")
+    if "audience" in card and card["audience"] not in ("all", "young", "work"):
+        errs.append("audience must be all, young or work")
     if "try_team" in card and (not isinstance(card["try_team"], str) or len(card["try_team"]) > 160):
         errs.append("try_team must be a string <= 160 chars")
     fs = card.get("from_source")

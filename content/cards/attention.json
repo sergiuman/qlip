@@ -552,19 +552,20 @@
       "step": 1,
       "unit": "min",
       "answer": 9,
-      "explain": "About 9 minutes sooner in one lab study of 57 young adults (Scullin et al., 2018); longer, more specific lists went with faster sleep. It needs replicating."
+      "explain": "One small study, so hold this loosely: about 9 minutes sooner among 57 young adults (Scullin et al., 2018), and more specific lists went with faster sleep. Treat it as a personal experiment, not a proven fix."
     },
-    "insight": "Promising, not proven: it was one small study. One earlier lab study suggested a written plan reduces intrusive thoughts. Writing down what's left seems to let the mind stop holding it.",
-    "model": "Your mind keeps holding open tasks until they're parked somewhere it trusts.",
+    "insight": "Bluma Zeigarnik (1927) found unfinished tasks stay on the mind; later replications are mixed. One small study linked a bedtime to-do list to faster sleep. Promising, not proven.",
+    "model": "Writing tomorrow down may help your mind let go of it. Cheap to test tonight.",
     "try_today": "Tonight, before bed, write tomorrow's to-do list on paper, as specific as you can. Then put the list and the screen away.",
     "try_team": "End the week or the school day with a 'parking lot': everyone writes their open tasks and next steps on one shared sheet before leaving.",
     "source": {
       "thinkers": [
+        "Bluma Zeigarnik",
         "Michael Scullin",
         "E.J. Masicampo",
         "Roy Baumeister"
       ],
-      "work": "Scullin et al., Journal of Experimental Psychology: General (2018); Masicampo & Baumeister, JPSP (2011)"
+      "work": "Zeigarnik, Psychologische Forschung (1927); Scullin et al., Journal of Experimental Psychology: General (2018); Masicampo & Baumeister, JPSP (2011)"
     },
     "evidence": "contested",
     "level": 1,
