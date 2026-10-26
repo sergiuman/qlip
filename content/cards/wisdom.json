@@ -22,7 +22,7 @@
           "why": "Your choice, fully. This is where the energy should go."
         },
         {
-          "text": "What your boss thinks of your idea",
+          "text": "What your teacher, boss or family thinks of your idea",
           "side": "left",
           "why": "You can shape it, but their mind is theirs. Aim at the pitch, not the verdict."
         },
@@ -48,7 +48,7 @@
         }
       ]
     },
-    "insight": "You just split life into two piles. Epictetus argued that most suffering comes from pouring effort into the left pile. Notice the trick: almost every 'not up to me' outcome has an 'up to me' action hiding next to it.",
+    "insight": "Epictetus taught that suffering grows when we pour effort into the 'not up to me' pile. The trick: almost every outcome you can't control has an action next to it that you can.",
     "model": "Care about outcomes, but aim your effort at your own choices, judgments and actions.",
     "try_today": "Write your biggest worry. Under it, list two actions that are fully up to you. Do one before tonight.",
     "source": {
@@ -64,7 +64,13 @@
       "circle_influence",
       "opportunity_gap",
       "impulse_pause"
-    ]
+    ],
+    "try_team": "Each person names one worry. Together sort it into 'up to us' and 'not up to us', then pick one 'up to us' action to do this week.",
+    "from_source": {
+      "quote": "Some things are in our control and others not.",
+      "cite": "Epictetus, Enchiridion, ch. 1 (trans. Elizabeth Carter, 1758)",
+      "next_read": "Enchiridion, chapters 1-5 (about two pages)"
+    }
   },
   {
     "id": "dichotomy-of-control-delayed-flight",
@@ -113,7 +119,7 @@
         }
       ]
     },
-    "insight": "You didn't stop caring about getting home. You moved your effort from the cancelled plane to the phone in your hand and the question you asked. That shift is the Stoic dichotomy of control, in real time.",
+    "insight": "You didn't stop caring about getting home. You moved your effort from the cancelled plane to your phone and your next question. That shift is the Stoic dichotomy of control.",
     "model": "When something goes wrong, ask: what's the next move that is fully mine?",
     "try_today": "Next time something annoys you, say out loud \"What's mine here?\" and do that one thing first.",
     "source": {
@@ -128,7 +134,13 @@
       "reframing",
       "impulse_pause",
       "circle_influence"
-    ]
+    ],
+    "try_team": "When a plan falls through (match rained off, trip delayed, deadline moved), go round: each person names one 'what's ours here?' move before anyone vents.",
+    "from_source": {
+      "quote": "Men are disturbed not by things, but by the principles and notions which they form concerning things.",
+      "cite": "Epictetus, Enchiridion, ch. 5 (trans. Elizabeth Carter, 1758)",
+      "next_read": "Enchiridion, chapters 5 and 8"
+    }
   },
   {
     "id": "circle-influence-spectrum",
@@ -142,20 +154,20 @@
       "right": "Circle of Influence",
       "questions": [
         {
-          "q": "When the economy news is bad, I mostly…",
+          "q": "When the news is bad (prices, jobs, the world), I mostly…",
           "options": [
             {
               "label": "Read more about it and feel worse",
               "value": -2
             },
             {
-              "label": "Check my own budget and skills",
+              "label": "Look for one thing I can do in my own life",
               "value": 2
             }
           ]
         },
         {
-          "q": "When a teammate keeps missing deadlines, I…",
+          "q": "When someone in my group project, team or family keeps letting things slide, I…",
           "options": [
             {
               "label": "Complain about them to others",
@@ -201,22 +213,22 @@
       "zones": [
         {
           "upTo": -0.34,
-          "label": "Concern-heavy",
-          "text": "A lot of your energy goes to things you can't move. That's tiring, not a flaw. Pick one worry and find the piece of it that is yours."
+          "label": "Concern-heavy today",
+          "text": "Today's answers put a lot of energy into things you can't move. That's tiring, not a flaw. Pick one worry and find the piece of it that is yours."
         },
         {
           "upTo": 0.34,
-          "label": "Split",
-          "text": "You switch between worrying and acting. Notice which topics pull you outward and give those a small action."
+          "label": "Split today",
+          "text": "Today's answers switch between worrying and acting. Notice which topics pull you outward and give those one small action."
         },
         {
           "upTo": 1,
-          "label": "Influence-focused",
-          "text": "You aim at what you can move. Covey's claim is that this circle grows as you use it: trust and skill pile up."
+          "label": "Influence-focused today",
+          "text": "Today's answers aim at what you can move. Covey's claim is that this circle grows as you use it: trust and skill pile up."
         }
       ]
     },
-    "insight": "Stephen Covey drew two circles: everything you care about, and the smaller part you can affect. Energy spent inside the smaller circle tends to grow it, because acting builds skill and trust. It's the Stoic idea with a practical twist.",
+    "insight": "Covey drew two circles: what you care about, and the smaller part you can affect. Acting inside the small one builds skill and trust, so it tends to grow. A lens, not a lab finding.",
     "model": "Work inside what you can influence, and that circle slowly gets bigger.",
     "try_today": "Swap one \"If only they…\" sentence today for \"I can…\" and finish it with a real action.",
     "source": {
@@ -226,6 +238,73 @@
       "work": "The 7 Habits of Highly Effective People (1989)"
     },
     "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "dichotomy_of_control",
+      "self_efficacy",
+      "opportunity_gap"
+    ],
+    "try_team": "Draw two circles on a board. List the group's frustrations, place each one, then pick one item inside 'influence' to act on this week."
+  },
+  {
+    "id": "circle-influence-library-choice",
+    "concept": "circle_influence",
+    "domain": "wisdom",
+    "type": "choice",
+    "hook": "Everyone's angry about it. Hardly anyone knows who decides.",
+    "title": "Find the Door You Can Push",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your town plans to close the library (or youth club, or park café) you love. Your group chat is furious. You…",
+          "options": [
+            {
+              "text": "Post an angry rant and share every petition you see.",
+              "feedback": "Caring is good, and petitions can help. But anger online rarely reaches the people who actually decide."
+            },
+            {
+              "text": "Find out who decides, and when, then go or write to them.",
+              "best": true,
+              "feedback": "You found the edge of your circle: the meeting, the inbox, the vote. That's where concern turns into influence."
+            },
+            {
+              "text": "Shrug: 'Nothing I can do about the council.'",
+              "feedback": "Understandable, and sometimes true. But you measured your circle before testing it. It's often bigger than it looks."
+            }
+          ]
+        },
+        {
+          "scenario": "You spoke up. They close it anyway. You still care. You…",
+          "options": [
+            {
+              "text": "Decide speaking up was pointless and stop bothering.",
+              "feedback": "It stings. But you met people and learned how decisions get made. That influence stays with you."
+            },
+            {
+              "text": "Keep arguing in the chat about whose fault it is.",
+              "feedback": "Very human. Blame keeps you in the concern circle, though, where nothing moves."
+            },
+            {
+              "text": "Start something in reach: a book swap, a reading group at a café.",
+              "best": true,
+              "feedback": "This is Covey's point. One door closed, so you pushed one you could open. Accepting a loss and acting can go together."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Covey's circles are a lens, not a study. Research on 'locus of control' links believing your actions matter with better coping, though it's mostly correlational.",
+    "model": "Before you give up or blow up, find who decides, and which part of it is yours.",
+    "try_today": "Pick one thing that frustrates you. Spend 5 minutes finding out who actually decides it and how to reach them.",
+    "try_team": "Pick a shared gripe (a rule, a schedule, a chore). Find out who decides it, then draft one short, specific request together.",
+    "source": {
+      "thinkers": [
+        "Stephen Covey",
+        "Julian Rotter"
+      ],
+      "work": "The 7 Habits of Highly Effective People (1989); Rotter, Psychological Monographs (1966)"
+    },
+    "evidence": "moderate",
     "level": 1,
     "related": [
       "dichotomy_of_control",
@@ -245,7 +324,7 @@
       "right": "Too reckless",
       "questions": [
         {
-          "q": "Someone in a meeting says something you think is wrong. You…",
+          "q": "Someone in your group (class, family, team) says something you think is wrong. You…",
           "options": [
             {
               "label": "Stay quiet, it's not worth it",
@@ -265,7 +344,7 @@
           "q": "A friend invites you on a hard hike you've never done. You…",
           "options": [
             {
-              "label": "Decline, too risky",
+              "label": "Decline without even looking at the route",
               "value": -2
             },
             {
@@ -279,18 +358,18 @@
           ]
         },
         {
-          "q": "You have a business idea. You…",
+          "q": "You want to start something of your own (a channel, a club, a small business). You…",
           "options": [
             {
               "label": "Keep it in a notebook for 'someday'",
               "value": -2
             },
             {
-              "label": "Test it small on weekends",
+              "label": "Try a small version on weekends",
               "value": 0
             },
             {
-              "label": "Quit your job tomorrow to do it",
+              "label": "Drop school, work or savings tomorrow to do it",
               "value": 2
             }
           ]
@@ -316,22 +395,22 @@
       "zones": [
         {
           "upTo": -0.34,
-          "label": "Leaning cautious",
-          "text": "Caution protects you, and sometimes it costs you. Try one small, safe step past your comfort line this week."
+          "label": "Leaning cautious today",
+          "text": "Today's answers lean cautious. Caution protects you, and sometimes it costs you. Try one small, safe step past your comfort line this week."
         },
         {
           "upTo": 0.34,
-          "label": "Near the mean",
-          "text": "You aim for the middle path Aristotle called courage: brave enough to act, wise enough to prepare."
+          "label": "Near the mean today",
+          "text": "Today's answers sit near the mean in these cases. Aristotle would add: the real test is doing it when fear is real and the situation is new."
         },
         {
           "upTo": 1,
-          "label": "Leaning bold",
-          "text": "Your energy is a gift. Adding one check before you leap turns boldness into courage."
+          "label": "Leaning bold today",
+          "text": "Today's answers lean bold. That energy is useful; adding one check before you leap turns boldness into courage."
         }
       ]
     },
-    "insight": "Aristotle said a virtue sits between two vices: too little and too much. Courage lives between cowardice and recklessness. The middle isn't the average or lukewarm; it's the right amount for this situation.",
+    "insight": "Aristotle put courage between cowardice and rashness. The mean is 'relative to us', not the midpoint: sometimes it's bold, sometimes a quiet no. Practical wisdom (phronesis) finds it.",
     "model": "Virtue is calibration: the right action, in the right amount, at the right time.",
     "try_today": "Pick one choice today and ask: what would 'too little' and 'too much' look like here? Then do the in-between.",
     "source": {
@@ -346,7 +425,13 @@
       "order_chaos",
       "courage_kindness",
       "impulse_pause"
-    ]
+    ],
+    "try_team": "Take a real decision your group faces. Write what 'too little' and 'too much' would look like, then agree on the right amount for this case.",
+    "from_source": {
+      "quote": "to feel them at the right times, with reference to the right objects, towards the right people... is what is both intermediate and best",
+      "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 6 (trans. W. D. Ross, 1908)",
+      "next_read": "Nicomachean Ethics, Book II, ch. 6-9; Book III, ch. 6-9 (on courage)"
+    }
   },
   {
     "id": "socratic-ignorance-drivers",
@@ -356,7 +441,7 @@
     "hook": "Are you an above-average driver? Guess how many people say yes.",
     "title": "Knowing You Don't Know",
     "game": {
-      "question": "In a classic study, what % of US drivers rated themselves more skilful than the median driver?",
+      "question": "In a classic study, what % of US student drivers rated themselves more skilful than the median driver?",
       "min": 0,
       "max": 100,
       "step": 1,
@@ -365,7 +450,7 @@
       "explain": "Svenson (1981) found about 93% of a small US student sample rated themselves more skilful than the median driver. At most 50% can be.",
       "anchor": null
     },
-    "insight": "Most of us rate ourselves above average, which can't all be true. Socrates thought wisdom began with admitting what you don't know. The famous Dunning-Kruger curve is debated, but over-confidence itself is well documented.",
+    "insight": "Most of us rate ourselves above average, which can't all be true. Socrates thought wisdom starts with knowing what you don't know. Overconfidence is well documented; Dunning-Kruger is debated.",
     "model": "Treat your confidence as a guess, not a fact. 'I might be wrong' opens the door to learning.",
     "try_today": "Pick one opinion you hold strongly. Write the best reason someone could disagree with it, in their words, not yours.",
     "source": {
@@ -381,7 +466,55 @@
       "confirmation_bias",
       "steelmanning",
       "circle_competence"
-    ]
+    ],
+    "try_team": "Each person writes one thing the group is sure of. Swap papers and write the best reason it might be wrong. Discuss the strongest one.",
+    "from_source": {
+      "quote": "he knows nothing, and thinks that he knows; I neither know nor think that I know.",
+      "cite": "Plato, Apology 21d (trans. Benjamin Jowett)",
+      "next_read": "Plato, Apology 20e-23c (the oracle story)"
+    }
+  },
+  {
+    "id": "socratic-ignorance-zip-reveal",
+    "concept": "socratic_ignorance",
+    "domain": "wisdom",
+    "type": "reveal",
+    "hook": "You use a zip every day. Could you explain how it works?",
+    "title": "The Zip Test",
+    "game": {
+      "prompt": "In your head, rate how well you understand how a zip works. Now explain, step by step, how the teeth lock and unlock. In studies like this, what happened to people's ratings after they tried to explain?",
+      "choices": [
+        "They went up",
+        "They stayed about the same",
+        "They dropped"
+      ],
+      "answer": 2,
+      "reveal": "They dropped. Rozenblit and Keil (2002) called it the illusion of explanatory depth: feeling familiar with something isn't the same as understanding it. If you guessed otherwise, you've just felt the illusion yourself."
+    },
+    "insight": "Familiar things feel understood until you try to explain them. Socrates found the same in Athens: people skilled at one craft assumed they knew far more. Explaining is the honesty test.",
+    "model": "If you can't explain it step by step, you know less than it feels. Say it out loud to find out.",
+    "try_today": "Pick something you feel sure about (a news story, a gadget). Explain it out loud in 5 steps and notice where you get stuck.",
+    "try_team": "Each person picks a familiar thing (a lock, bike gears, wifi) and explains how it works in 2 minutes. Others may ask 'how exactly?' once.",
+    "source": {
+      "thinkers": [
+        "Socrates",
+        "Leonid Rozenblit",
+        "Frank Keil"
+      ],
+      "work": "Plato, Apology (c. 399 BCE); Rozenblit & Keil, Cognitive Science (2002)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "steelmanning",
+      "confirmation_bias",
+      "circle_competence"
+    ],
+    "from_source": {
+      "quote": "because they were good workmen they thought that they also knew all sorts of high matters",
+      "cite": "Plato, Apology 22d (trans. Benjamin Jowett)",
+      "next_read": "Plato, Apology 21b-23b (Socrates questions politicians, poets and craftsmen)"
+    }
   },
   {
     "id": "amor-fati-setback-reveal",
@@ -399,7 +532,7 @@
       ],
       "reveal": "There's no wrong answer, and some pain is never 'worth it'. But many people find a setback also taught them a skill, a friend, or a direction. Nietzsche called embracing your whole story, hard parts included, amor fati."
     },
-    "insight": "Amor fati isn't pretending bad things were good. Nietzsche went far: he wanted nothing to be different. You can start smaller, by asking what a hard chapter gave you. Marcus Aurelius pictured a fire that turns whatever falls in into flame.",
+    "insight": "Amor fati isn't pretending bad things were good. Nietzsche wanted nothing to be different; you can start smaller, by asking what a hard chapter gave you.",
     "model": "You can't change what happened. You can choose what it becomes part of.",
     "try_today": "Write one setback and finish this line: \"Because of it, I can now…\". Keep it to one sentence.",
     "source": {
@@ -416,7 +549,13 @@
       "mistake_alchemy",
       "responsibility_meaning"
     ],
-    "sensitive": true
+    "sensitive": true,
+    "try_team": "Each person shares one past setback and one thing it led to, in a sentence each. Listeners only say thanks: no advice, no fixing.",
+    "from_source": {
+      "quote": "Amor fati: let that henceforth be my love!",
+      "cite": "Nietzsche, The Gay Science, §276 (trans. Thomas Common, 1910)",
+      "next_read": "The Gay Science §276; Marcus Aurelius, Meditations, Book 4.1 (the fire image)"
+    }
   },
   {
     "id": "impermanence-worry-reveal",
@@ -434,7 +573,7 @@
       ],
       "reveal": "Many people can't. Research on 'affective forecasting' shows we tend to overestimate how long bad events will hurt. Feelings are weather: real, sometimes heavy, but they move. If a heavy mood isn't lifting for weeks, talk to someone you trust."
     },
-    "insight": "Gilbert and Wilson found people often predict setbacks will sting longer and harder than they do. The Buddha and Heraclitus both taught that everything changes. That doesn't shrink today's pain; it reminds you it isn't permanent.",
+    "insight": "We tend to overestimate how long bad events will hurt (Wilson & Gilbert). The Buddha and Heraclitus taught that everything changes. Today's pain is real; it just isn't permanent.",
     "model": "Feelings and fortunes are weather, not climate. Ask how much this will matter in a year.",
     "try_today": "When something stings today, write it down with the date. Set a reminder to reread it in 3 months.",
     "source": {
@@ -453,7 +592,13 @@
       "self_compassion",
       "reframing"
     ],
-    "sensitive": true
+    "sensitive": true,
+    "try_team": "Each person recalls a worry from a year ago and rates, 0-10, how much it matters now. Compare the numbers out loud.",
+    "from_source": {
+      "quote": "You cannot step twice into the same rivers; for fresh waters are ever flowing in upon you.",
+      "cite": "Heraclitus, fragment 41, in John Burnet, Early Greek Philosophy (1920)",
+      "next_read": "Burnet, Early Greek Philosophy, ch. III (Heraclitus), fragments 41-50"
+    }
   },
   {
     "id": "begin-with-end-eulogy-radar",
@@ -484,7 +629,11 @@
           "axis": 1
         },
         {
-          "q": "I spent time on work I'm proud of, not just busy with.",
+          "q": "I spent time on work, study or a hobby I'm proud of, not just busy with.",
+          "axis": 2
+        },
+        {
+          "q": "People rely on the quality of what I make.",
           "axis": 2
         },
         {
@@ -492,19 +641,28 @@
           "axis": 3
         },
         {
+          "q": "This month I taught or unblocked someone without being asked.",
+          "axis": 3
+        },
+        {
           "q": "I learned or practised something that's stretching me.",
+          "axis": 4
+        },
+        {
+          "q": "I did something this week I was not good at yet.",
           "axis": 4
         }
       ],
       "advice": {
-        "0": "Relationships lowest? Book 20 phone-free minutes with one person this week.",
-        "1": "Health lowest? Pick one: a 15-minute walk, or lights out 30 minutes earlier tonight.",
-        "2": "Craft lowest? Block one focused hour on the work you'd want to be remembered for.",
-        "3": "Contribution lowest? Do one small useful thing for someone who can't repay you.",
-        "4": "Growth lowest? Choose one skill and practise it for 10 minutes today."
-      }
+        "0": "Want a small next step for Relationships? Book 20 phone-free minutes with one person this week.",
+        "1": "Want a small next step for Health? Pick one: a 15-minute walk, or lights out 30 minutes earlier tonight.",
+        "2": "Want a small next step for Craft? Block one focused hour on the work you'd want to be remembered for.",
+        "3": "Want a small next step for Contribution? Do one small useful thing for someone who can't repay you.",
+        "4": "Want a small next step for Growth? Choose one skill and practise it for 10 minutes today."
+      },
+      "advice_even": "Even shape. No single gap stands out. Ask which of the five you'd most regret neglecting at 80, and give it one 20-minute block this week."
     },
-    "insight": "Covey suggested imagining your own funeral: what would you want people to say? Seneca made a similar point: we act as if time is endless. Your shape shows where today's choices match that picture and where they drift.",
+    "insight": "Covey pictured the speeches at your funeral; here it's your 80th birthday. Your shape shows one week, not your life: where to put attention next, not what you've failed at.",
     "model": "Decide what you want said about you at the end, then plan this week backwards from it.",
     "try_today": "Write three words you'd want people to use about you at 80. Put one action for each in this week's calendar.",
     "source": {
@@ -520,7 +678,9 @@
       "regret_minimization",
       "aim_high",
       "responsibility_meaning"
-    ]
+    ],
+    "sensitive": true,
+    "try_team": "Each person writes three words they'd want said about the group in a year. Agree on the most neglected one and plan one step for it."
   },
   {
     "id": "begin-with-end-four-thousand-weeks",
@@ -539,7 +699,7 @@
       "explain": "80 years × about 52.18 weeks ≈ 4,174. Oliver Burkeman built a whole book around this small number.",
       "anchor": null
     },
-    "insight": "Many people guess far higher. About four thousand weeks feels short, and that's the point: it isn't meant to scare you, it's meant to sharpen you. Seneca argued life is long enough if you use it well.",
+    "insight": "Many people guess far higher. About 4,000 weeks feels short, and that's the point: not to scare you, but to sharpen you. Seneca said life is long enough if used well.",
     "model": "Time is finite and countable. Spend weeks the way you'd spend something precious.",
     "try_today": "Pick this week's one most important thing, the one you'd regret skipping, and schedule it before anything else.",
     "source": {
@@ -555,6 +715,12 @@
       "regret_minimization",
       "opportunity_cost",
       "deep_work"
-    ]
+    ],
+    "try_team": "Each person names the one thing this week they'd regret skipping. Share them, then help each other protect the time for it.",
+    "from_source": {
+      "quote": "It is not that we have a short space of time, but that we waste much of it.",
+      "cite": "Seneca, On the Shortness of Life, 1.3 (trans. John W. Basore, 1932)",
+      "next_read": "On the Shortness of Life, chapters 1-3"
+    }
   }
 ]

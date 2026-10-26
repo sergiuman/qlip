@@ -46,7 +46,7 @@
         }
       ]
     },
-    "insight": "When you opened with the reason, the details started to sound like an invitation. Sinek's 'Golden Circle' says lead with why, then how, then what. The habit is useful, but his brain-biology explanation is contested and not backed by neuroscience.",
+    "insight": "Opening with the reason made the details sound like an invitation. Sinek calls it the Golden Circle: why, then how, then what. A handy habit, but his brain-science story isn't backed by research.",
     "model": "Say why it matters before what it is. Purpose first, logistics second.",
     "try_today": "Before your next request or pitch, write one sentence that starts with \"This matters because…\" and say that first.",
     "source": {
@@ -61,6 +61,45 @@
       "will_gap",
       "responsibility_meaning",
       "three_conversations"
+    ],
+    "try_team": "Open your next meeting, class project or family plan with one line each: 'This matters to me because…'. Only then talk times and tasks."
+  },
+  {
+    "id": "start-with-why-because-estimate",
+    "concept": "start_with_why",
+    "domain": "meaning",
+    "type": "estimate",
+    "hook": "Can a reason that says nothing still get strangers to say yes?",
+    "title": "The Power of 'Because'",
+    "game": {
+      "question": "A 1978 experiment: someone asks people waiting at a library copier, \"May I go first, because I have to make copies?\" Everyone there had to make copies. What % let them go first?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 93,
+      "explain": "93% said yes, almost as many as for a real reason (\"I'm in a rush\": 94%). No reason at all: 60%. But for a bigger ask (20 pages, not 5), the empty 'because' did nothing (24%, same as no reason). Only the real reason helped (42%).",
+      "anchor": null
+    },
+    "insight": "We listen for a why. For small asks, almost any 'because' works on autopilot. For bigger asks, people check, and only a real reason helps. One classic study with small groups.",
+    "model": "Small asks need a why. Big asks need a real, good why.",
+    "try_today": "Next time you ask someone for something, add 'because…' with your honest reason. Notice how they respond.",
+    "try_team": "Each person rewrites one request they'll make this week as 'Could we…, because…' with a real reason. Read them aloud: which ones make you want to say yes?",
+    "source": {
+      "thinkers": [
+        "Ellen Langer",
+        "Arthur Blank",
+        "Benzion Chanowitz",
+        "Simon Sinek"
+      ],
+      "work": "Langer, Blank & Chanowitz, Journal of Personality and Social Psychology (1978); Start With Why (2009)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "will_gap",
+      "system1_system2",
+      "responsibility_meaning"
     ]
   },
   {
@@ -77,9 +116,9 @@
         "Week B, the heavy one",
         "Honestly, both"
       ],
-      "reveal": "Many people pick Week B as more meaningful, even if Week A felt happier. A 2013 survey study by Baumeister and colleagues found happiness linked more to getting what you want, and meaning linked more to giving, caring for others and facing hard things. Frankl argued something similar from his own life."
+      "reveal": "No wrong pick here. Many people call Week B more meaningful, even when Week A felt happier. In a 2013 survey of about 400 US adults, Baumeister and colleagues linked happiness more to getting what you want, and meaning more to giving and caring for others. Frankl argued something similar from his own life."
     },
-    "insight": "Happiness and meaning overlap, but they aren't the same. Meaning tends to grow where you carry something for someone. That doesn't mean piling on until you break. It means choosing a load that is truly yours and worth carrying.",
+    "insight": "Happiness and meaning overlap, but they differ. Meaning tends to grow where you carry something for someone. Not piling on until you break: choosing a load that's yours and worth it.",
     "model": "Happiness is often about receiving; meaning is often about carrying something worth it.",
     "try_today": "Pick one small thing someone relies on you for and do it a little better than needed today, on purpose.",
     "source": {
@@ -97,7 +136,8 @@
       "start_with_why",
       "small_wins"
     ],
-    "sensitive": true
+    "sensitive": true,
+    "try_team": "Go round the table: each person names one thing others rely on them for that felt heavy but worth it. Notice how often effort and meaning show up together."
   },
   {
     "id": "responsibility-meaning-pick-your-load",
@@ -117,7 +157,7 @@
           "why": "Your reliability is fully yours. It's where meaning starts."
         },
         {
-          "text": "Making everyone at work like you",
+          "text": "Making everyone at school, work or online like you",
           "side": "left",
           "why": "Their feelings aren't yours to control. Your fairness and effort are."
         },
@@ -143,7 +183,7 @@
         }
       ]
     },
-    "insight": "Meaning comes from responsibility, but only the kind you can actually act on. Loads that are truly yours make you stronger. Loads that belong to others, or to the whole world, mostly bring worry. Sorting them is the first step.",
+    "insight": "Meaning comes from responsibility you can act on. Loads that are yours make you stronger; loads that belong to others, or the whole world, mostly bring worry. Sorting them comes first.",
     "model": "Carry what's yours, fully. Put down what isn't, kindly.",
     "try_today": "Write down three things weighing on you. Circle the one you can act on, and take one 5-minute step on it.",
     "source": {
@@ -161,7 +201,13 @@
       "circle_influence",
       "skill_gap"
     ],
-    "sensitive": true
+    "sensitive": true,
+    "try_team": "Everyone writes three worries on sticky notes. Sort them together: 'ours to act on' vs 'not ours'. Pick one 'ours' and agree a first step.",
+    "from_source": {
+      "quote": "Some things are in our control and others not.",
+      "cite": "Epictetus, Enchiridion, ch. 1 (trans. Elizabeth Carter, 1758)",
+      "next_read": "Enchiridion, chapters 1-5 (short; about 10 minutes)"
+    }
   },
   {
     "id": "order-chaos-border",
@@ -203,7 +249,7 @@
               "value": 0
             },
             {
-              "label": "I'm drowning in new things",
+              "label": "So much is new I can't keep up",
               "value": 2
             }
           ]
@@ -213,20 +259,20 @@
           "options": [
             {
               "label": "Annoyed, I like it how it was",
-              "value": -1
+              "value": -2
             },
             {
               "label": "Curious, then I adapt",
               "value": 0
             },
             {
-              "label": "Relieved, plans were never real anyway",
-              "value": 1
+              "label": "Relieved, I like things loose",
+              "value": 2
             }
           ]
         },
         {
-          "q": "My sleep, meals and money are…",
+          "q": "My daily routines (sleep, schedule, money) are…",
           "options": [
             {
               "label": "Rigidly controlled",
@@ -241,28 +287,45 @@
               "value": 2
             }
           ]
+        },
+        {
+          "q": "When something unknown and difficult appears in my life, I usually…",
+          "options": [
+            {
+              "label": "Avoid it until it goes away",
+              "value": -2
+            },
+            {
+              "label": "Face it once I've prepared",
+              "value": 0
+            },
+            {
+              "label": "Charge in without a plan",
+              "value": 2
+            }
+          ]
         }
       ],
       "zones": [
         {
           "upTo": -0.34,
           "label": "Leaning Order",
-          "text": "Safe and predictable, but it may be getting a bit tight. Add one small unknown: a new route, a new skill, a new person."
+          "text": "Today your answers lean toward order: steady, maybe a bit tight. Add one small unknown: a new route, a new skill, a new person."
         },
         {
           "upTo": 0.34,
           "label": "On the Border",
-          "text": "You've got enough structure to stand on and enough novelty to grow. That's the sweet spot. Keep it."
+          "text": "Today your answers sit on the border: enough structure to stand on, enough new to grow. Worth protecting."
         },
         {
           "upTo": 1,
           "label": "Leaning Chaos",
-          "text": "Lots is moving. One fixed anchor helps: same wake time, one daily walk, or a weekly money check."
+          "text": "Today your answers lean toward chaos: lots is moving. One fixed anchor helps: same wake time, a daily walk, or a weekly money check."
         }
       ]
     },
-    "insight": "Too much order and life goes stale. Too much chaos and you can't find your footing. Taoist thought pictures opposites like these as partners, and Peterson says meaning is found on the border between them. It's a lens, not a law: the right mix shifts over your life.",
-    "model": "Stand on order, step into chaos. Growth happens at the edge between them.",
+    "insight": "Too much order goes stale; too much chaos knocks you over. Peterson, borrowing Taoism's yin-yang image, says grow by facing the unknown voluntarily. Chaos you choose builds you.",
+    "model": "Stand on order, step willingly into chaos. Growth happens at the edge you choose to face.",
     "try_today": "If you lean Order, try one new thing today. If you lean Chaos, fix one anchor: same bedtime tonight.",
     "source": {
       "thinkers": [
@@ -277,7 +340,8 @@
       "golden_mean",
       "flow",
       "impermanence"
-    ]
+    ],
+    "try_team": "Ask the group: which routine keeps us steady, and what one new thing could we try this month? Keep one of each and check back in a week."
   },
   {
     "id": "aim-high-gorilla",
@@ -292,9 +356,10 @@
         "Of course I would",
         "Maybe not"
       ],
-      "reveal": "In Simons and Chabris's 1999 study, about half of viewers missed the gorilla. Their aim (count the passes) filtered out everything else. Your goals act like a spotlight: you see what serves them and miss the rest."
+      "reveal": "'Maybe not' is the safer bet. In Simons and Chabris's 1999 study, about half of viewers missed the gorilla. If you said 'of course', you're in good company: most people expect to see it. Counting passes filtered out the rest.",
+      "answer": 1
     },
-    "insight": "In the study, the counting task filtered out the gorilla. That part is solid science. The life lesson is a lens, not a proven law: your aims shape what you notice, so a clear, worthy aim can help you spot chances, people and tools you'd otherwise miss.",
+    "insight": "The missed gorilla is solid science. The life lesson is a lens, not a law: your aims steer what you notice, so a clear, worthy aim helps you spot chances you'd otherwise miss.",
     "model": "What you aim at shapes what you see. Choose the aim on purpose.",
     "try_today": "Write one aim for this week in a single line. Tonight, list three things you noticed today that could help it.",
     "source": {
@@ -312,6 +377,85 @@
       "goal_directed_perception",
       "begin_with_end",
       "map_territory"
+    ],
+    "try_team": "Everyone writes this week's one aim and swaps papers. For a day, watch out for one thing that could help your partner's aim, then share it.",
+    "from_source": {
+      "quote": "Shall we not, like archers who have a mark to aim at, be more likely to hit upon what is right?",
+      "cite": "Aristotle, Nicomachean Ethics, Book I, ch. 2 (trans. W. D. Ross, 1908)",
+      "next_read": "Nicomachean Ethics, Book I, chapters 1-2: the chief good as the target of a life"
+    }
+  },
+  {
+    "id": "aim-high-clear-target-choice",
+    "concept": "aim_high",
+    "domain": "meaning",
+    "type": "choice",
+    "hook": "'Just do your best' sounds kind. Does it actually help you?",
+    "title": "Aim at a Clear Target",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You want to get fitter this month. Which aim do you write in your phone?",
+          "options": [
+            {
+              "text": "\"Do my best and see how it goes.\"",
+              "feedback": "Kind and low-pressure. But in many studies, 'do your best' led to less progress than a clear, stretching target. Vague aims are easy to quietly lower."
+            },
+            {
+              "text": "\"Run 5 km without stopping by the 30th.\"",
+              "best": true,
+              "feedback": "Specific, stretching, still reachable. That's the kind of aim goal research keeps backing: you know exactly what you're working toward."
+            },
+            {
+              "text": "\"Run a marathon by the 30th.\"",
+              "feedback": "Love the ambition! But goals far beyond reach tend to get dropped, or cause injuries. Stretch, don't snap."
+            }
+          ]
+        },
+        {
+          "scenario": "Plot twist: you've just started chess and know almost nothing. What's your aim for month one?",
+          "options": [
+            {
+              "text": "\"Win 20 online games.\"",
+              "feedback": "Clear, but on a new, complex skill, chasing results early can backfire: you rush instead of learning. Result targets work better once you know the basics."
+            },
+            {
+              "text": "\"Learn 3 opening ideas and try them every game.\"",
+              "best": true,
+              "feedback": "Smart. When a skill is new and complex, a learning goal (figure out how) tends to beat a result goal. The wins come later."
+            },
+            {
+              "text": "\"No aim, just play.\"",
+              "feedback": "Playing for joy is great. If you want to improve, though, one small learning aim gives your practice a direction."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Clear, stretching aims beat 'do your best' in hundreds of studies. Two catches: for new, complex skills, aim to learn first; and over-tight targets can push people to cut corners.",
+    "model": "Aim specific and a little scary. If the skill is new, aim to learn first.",
+    "try_today": "Rewrite one vague aim ('get better at X') as a clear target with a number and a date. Put it where you'll see it.",
+    "try_team": "Swap 'let's do our best' for one shared target: your team, class or family picks a clear, stretching goal, a date, and how you'll check progress.",
+    "from_source": {
+      "quote": "Shall we not, like archers who have a mark to aim at, be more likely to hit upon what is right?",
+      "cite": "Aristotle, Nicomachean Ethics, Book I, ch. 2 (trans. W. D. Ross, 1908)",
+      "next_read": "Nicomachean Ethics, Book I, chapters 1-2: the chief good as the target of a life"
+    },
+    "source": {
+      "thinkers": [
+        "Edwin Locke",
+        "Gary Latham",
+        "Gerard Seijts",
+        "Aristotle"
+      ],
+      "work": "Locke & Latham, American Psychologist (2002); Seijts & Latham, Academy of Management Executive (2005); Nicomachean Ethics"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "goal_directed_perception",
+      "deliberate_practice",
+      "begin_with_end"
     ]
   },
   {
@@ -336,7 +480,7 @@
       ],
       "questions": [
         {
-          "q": "Think of your main task this week. It stretches me.",
+          "q": "Think of your main task this week (school, work, a hobby). It stretches me.",
           "axis": "C"
         },
         {
@@ -366,23 +510,23 @@
       "results": {
         "": {
           "name": "Apathy Zone",
-          "text": "Low challenge, low skill: easy to drift and scroll. Pick one tiny goal that stretches you just a bit, and start there."
+          "text": "Today this task looks low on both challenge and skill: easy to drift and scroll. Pick one tiny goal that stretches you a bit, and start there."
         },
         "C": {
           "name": "Anxiety Zone",
-          "text": "The task is bigger than your current skill. Shrink it: break it into one piece you can do, or get a quick lesson first."
+          "text": "Today the task feels bigger than your skill. Shrink it: do one piece you can manage, or get a quick lesson first."
         },
         "S": {
           "name": "Boredom Zone",
-          "text": "You're better than the task. Raise the bar: add a time limit, a quality goal, or a harder version."
+          "text": "Today your skill is ahead of the task. Raise the bar: add a time limit, a quality goal, or a harder version."
         },
         "CS": {
           "name": "Flow Channel",
-          "text": "High challenge meets high skill. This is where time disappears. Protect it: phone away, one clear goal."
+          "text": "Today high challenge meets high skill. This is where time disappears. Protect it: phone away, one clear goal."
         }
       }
     },
-    "insight": "Csikszentmihalyi found that people feel most absorbed when a high challenge meets matching skill and the goal is clear. Too easy feels dull; too hard feels stressful. Later studies back the link but find it weaker than the classic picture suggests.",
+    "insight": "People get most absorbed when a high challenge meets matching skill and a clear goal. Too easy is dull; too hard is stressful. Later studies back this, but find the link weaker.",
     "model": "Flow = challenge slightly above skill + clear goal + quick feedback.",
     "try_today": "Pick one task and tweak it: a bit harder if bored, smaller if stressed. Then do 10 minutes with your phone away.",
     "source": {
@@ -397,7 +541,8 @@
       "deep_work",
       "wso_triad",
       "skill_gap"
-    ]
+    ],
+    "try_team": "Before a group task, each person rates their part 'too easy', 'just right' or 'too hard'. Swap or split parts until most say 'just right'."
   },
   {
     "id": "flow-conditions-radar",
@@ -415,7 +560,7 @@
       ],
       "questions": [
         {
-          "q": "When I sit down to work, I know exactly what 'done' looks like.",
+          "q": "When I start a task (homework, a hobby, a job), I know exactly what 'done' looks like.",
           "axis": 0
         },
         {
@@ -436,13 +581,13 @@
         }
       ],
       "advice": {
-        "0": "Lowest on clear goal? Before starting, write one line: 'Done means…'. Vague goals are a top flow-killer.",
-        "1": "Lowest on feedback? Build a check: a test, a word count, a friend's quick look. Flow needs to see progress.",
-        "2": "Lowest on difficulty fit? Adjust the task: add a constraint if it's dull, split it if it's overwhelming.",
-        "3": "Lowest on interruptions? Put your phone in another room for one 25-minute block. Switching tasks leaves your mind half elsewhere."
+        "0": "Clear goal scored lowest today. Before you start, write one line: 'Done means…'. Vague goals are a top flow-killer.",
+        "1": "Quick feedback scored lowest today. Build a check: a practice test, a word count, a friend's quick look. Flow needs to see progress.",
+        "2": "Right difficulty scored lowest today. Adjust the task: add a challenge if it's dull, split it if it's overwhelming.",
+        "3": "Interruptions scored lowest today. Put your phone in another room for one 25-minute block. Switching leaves part of your mind elsewhere."
       }
     },
-    "insight": "Flow isn't luck. Csikszentmihalyi's research points to a few conditions that make it likely: a clear goal, fast feedback, a challenge that fits your skill, and deep focus. Your weakest ingredient is usually the quickest fix.",
+    "insight": "Flow isn't luck. Csikszentmihalyi's research points to conditions that make it likely: a clear goal, fast feedback, the right difficulty, few interruptions. Fix the weakest one first.",
     "model": "Don't chase flow. Set up its conditions and let it arrive.",
     "try_today": "Fix your weakest ingredient, then work for 10 focused minutes and notice how it felt.",
     "source": {
@@ -457,6 +602,7 @@
       "attention_residue",
       "deep_work",
       "deliberate_practice"
-    ]
+    ],
+    "try_team": "For one 25-minute group work block: agree what 'done' looks like, put all phones away, and check progress together at the end."
   }
 ]

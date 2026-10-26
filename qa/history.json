@@ -1,25 +1,28 @@
 [
  {
   "session": 1,
-  "at": "2026-10-25T22:23:44+00:00",
-  "automated": 49.2,
-  "panel": null,
-  "composite": 49.2,
+  "at": "2026-10-26T01:56:55+00:00",
+  "automated": 47.12,
+  "panel": 33.33,
+  "composite": 80.45,
   "delta": null,
   "passed": true,
   "breakdown": {
    "schema": 5,
-   "playthrough": 10.0,
-   "console": 5,
+   "playthrough": 8.0,
+   "console": 4,
    "overflow": 3,
-   "a11y": 7.0,
+   "a11y": 6.0,
    "readability": 5,
-   "actionable": 3.3,
-   "sourced": 2.0,
+   "actionable": 3.0,
+   "sourced": 1.0,
    "graph_connected": 2,
    "coverage": 3.0,
    "type_diversity": 1.91,
-   "domain_balance": 1.99
+   "domain_balance": 1.99,
+   "depth": 1.04,
+   "hook_distinct": 1.98,
+   "brief_reveal": 0.2
   },
   "detail": {
    "validator_errors": 0,
@@ -29,12 +32,121 @@
    "overflow": 0,
    "a11y_serious": 0,
    "flesch_avg": 74.2,
-   "try_today_verb_rate": 0.825,
+   "try_today_verb_rate": 1.0,
    "sensitive_cards": 20,
    "first_card_ms": 345,
-   "edges": 241
+   "edges": 241,
+   "concept_depth": 0.347,
+   "hook_distinct_rate": 0.99,
+   "brief_reveal_rate": 0.196
+  },
+  "panel_detail": {
+   "persona_avg_10": 6.67,
+   "by_dim": {
+    "hook": 6.83,
+    "clarity": 6.5,
+    "usefulness": 6.67,
+    "safety": 7.67,
+    "fun": 5.67
+   }
+  },
+  "note": "baseline: 97 cards from 12 author+reviewer agents"
+ },
+ {
+  "session": 2,
+  "at": "2026-10-26T02:16:06+00:00",
+  "automated": 48.83,
+  "panel": 34.17,
+  "composite": 83.0,
+  "delta": 2.55,
+  "passed": true,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 8.0,
+   "console": 4,
+   "overflow": 3,
+   "a11y": 6.0,
+   "readability": 5,
+   "actionable": 3.0,
+   "sourced": 1.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.81,
+   "domain_balance": 2.0,
+   "depth": 2.04,
+   "hook_distinct": 1.98,
+   "brief_reveal": 1.0
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 121,
+   "played_ok": 121,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 0,
+   "flesch_avg": 75.9,
+   "try_today_verb_rate": 1.0,
+   "sensitive_cards": 27,
+   "first_card_ms": 382,
+   "edges": 258,
+   "concept_depth": 0.681,
+   "hook_distinct_rate": 0.992,
+   "brief_reveal_rate": 1.0
+  },
+  "panel_detail": {
+   "persona_avg_10": 6.83,
+   "by_dim": {
+    "hook": 7.0,
+    "clarity": 6.5,
+    "usefulness": 7.17,
+    "safety": 7.67,
+    "fun": 5.83
+   }
+  },
+  "note": "reveal punchline UI, venn fence fix, snapshot framing, try_team/from_source/answer fields, enrichment pass (+depth cards), Ollama generator"
+ },
+ {
+  "session": 3,
+  "at": "2026-10-26T02:22:06+00:00",
+  "automated": 48.8,
+  "panel": null,
+  "composite": 48.8,
+  "delta": -34.2,
+  "passed": false,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 8.0,
+   "console": 4,
+   "overflow": 3,
+   "a11y": 6.0,
+   "readability": 5,
+   "actionable": 3.0,
+   "sourced": 1.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.8,
+   "domain_balance": 2.0,
+   "depth": 2.04,
+   "hook_distinct": 1.98,
+   "brief_reveal": 0.98
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 121,
+   "played_ok": 121,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 0,
+   "flesch_avg": 75.4,
+   "try_today_verb_rate": 1.0,
+   "sensitive_cards": 27,
+   "first_card_ms": 323,
+   "edges": 258,
+   "concept_depth": 0.681,
+   "hook_distinct_rate": 0.992,
+   "brief_reveal_rate": 0.975
   },
   "panel_detail": {},
-  "note": "baseline: 97 cards from 12 author+reviewer agents"
+  "note": "estimate relative scoring, kind choice headlines, radar labels/cases, next button shows next hook, stop card every 5, map colors+halos, 37 content fixes"
  }
 ]

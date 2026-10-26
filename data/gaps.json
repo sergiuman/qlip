@@ -1,0 +1,69 @@
+{
+ "tasks": [
+  {
+   "kind": "depth",
+   "concept": "environment_design",
+   "domain": "habits",
+   "type": "venn",
+   "has": [
+    "radar"
+   ]
+  },
+  {
+   "kind": "depth",
+   "concept": "attention_residue",
+   "domain": "attention",
+   "type": "radar",
+   "has": [
+    "estimate"
+   ]
+  },
+  {
+   "kind": "depth",
+   "concept": "reframing",
+   "domain": "perception",
+   "type": "radar",
+   "has": [
+    "choice"
+   ]
+  },
+  {
+   "kind": "depth",
+   "concept": "procrastination_emotion",
+   "domain": "emotions",
+   "type": "venn",
+   "has": [
+    "reveal"
+   ]
+  },
+  {
+   "kind": "expand",
+   "seed": {
+    "from": "value",
+    "label": "Real-World Muddy Play",
+    "text": "Leaving the hypnotic glass screen on the desk to climb trees, invent messy backyard games, navigate real scrapes, and laugh outdoors with friends.",
+    "novelty": 19
+   }
+  },
+  {
+   "kind": "expand",
+   "seed": {
+    "from": "value",
+    "label": "Creative & Truthful Courage",
+    "text": "Standing with tall posture, telling the plain truth instead of protective fibs, and measuring progress against yesterday's you rather than someone else's trophy.",
+    "novelty": 17
+   }
+  }
+ ],
+ "concepts_single_card": 47,
+ "type_use": {
+  "venn": 7,
+  "reveal": 18,
+  "choice": 17,
+  "swipe": 14,
+  "spectrum": 14,
+  "order": 12,
+  "radar": 6,
+  "estimate": 13
+ }
+}

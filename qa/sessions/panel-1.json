@@ -1,0 +1,590 @@
+{
+ "session": 1,
+ "personas": [
+  {
+   "persona": "Maya, 16, Manchester. On TikTok all the time. If it feels like school or a lecture, I'm gone. I only stay if it's fast, surprising and about me.",
+   "scores": {
+    "hook": 6,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The reveal is a wall of text. After I answer I get the result, a paragraph of 'insight', a model box, a try-today box, a source list ('Deci & Ryan, Anthony Giddens...') and graph chips, all on one long scroll. That's a textbook page, not a TikTok. I stopped reading after the big coloured result line every time.",
+     "fix": "Show only 3 things on the reveal: the result headline, the 'model' line (max ~12 words) and the try-today line. Put the insight paragraph, the evidence chip and the sources behind one collapsed 'Why? (10s read)' toggle. Cap the visible insight at 140 characters. Move 'Go deeper along the graph' into a single 'Next: <title> →' button that scrolls straight to that card."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Most scenarios are for office adults: boss emails at 9pm, team meetings, deadlines, a business idea, quitting your job, partner arguments, buying something over $100. I can't see myself in any of them, so it isn't 'about me'. The 'Anyone' audience chip is a lie for half of these.",
+     "fix": "Add a teen/student variant of every scenario option and use it when the audience is 'Anyone'. Examples: impulse-pause-choice: 'Your mate texts \"we need to talk\" at 11pm.' leverage-points-spectrum Q2: 'Your group project keeps missing deadlines.' system1-system2-who-drives Q2: 'Buying something over £30 (trainers, a game)…' golden-mean-courage-spectrum Q3: 'You want to start a YouTube channel / side hustle. You…' with 'Quit school tomorrow to do it' replaced by 'Post every day and skip revision to do it'. Also use £, not $, for UK players."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "The first card in the feed is the most abstract one (Will/Skill/Opportunity, 6 agree/disagree statements, ~50s). The result screen I saw put the dot OUTSIDE all the circles with 5/10 on every axis, called 'The Seed: nothing is lit yet'. When I answer in the middle, the moving Venn (the whole point) does nothing and tells me I've got nothing. The subtitle 'Every action needs at least two of three' also contradicts results like 'The Dreamer' (only one).",
+     "fix": "Don't open the feed with this card. Lead with boredom-signal-estimate or map-territory-subway-reveal. For this card: make middle answers count, e.g. score a neutral 5/10 at a 0.5 position and lower the threshold to 0.5, or put the dot in the centre with the label 'Undecided: answer stronger to find your gap'. Rename 'The Seed' text to: 'Hard to tell yet. Answer with a specific goal in mind (like \"get better at drawing\") and play again.' Change the hook to: 'That thing you keep saying you'll do. Why haven't you?'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The score colours feel like being marked wrong at school. '1 of 2 best calls' is in big red, my wrong option gets a red border, and on the pre-mortem order card 4 of 5 pills are outlined red. That's the 'you failed' feeling I'm allergic to, even though the text is kind.",
+     "fix": "Never use red for the player's result. Use the track colour for the headline and change the copy to growth wording: '1 of 2 best calls' → 'Nice: you nailed the pause. 1 more trick unlocked.' For a wrong pick, use a neutral/amber outline plus a '💡' feedback bar instead of a red one. On order cards, show the correct position number next to wrong items instead of red borders."
+    },
+    {
+     "card_id": "premortem-order",
+     "severity": "medium",
+     "problem": "Tapping five long sentences into the right order is literally a school worksheet, and the answer is basically 'the steps in the order they were written'. There's no surprise. The hook ('Your plan already failed') is good, but the game kills it.",
+     "fix": "Change type to choice. Step 1: 'Your group trip to Leeds Fest is in 2 months. It's now after the trip and it was a disaster. What went wrong?' Let the player pick 3 of 6 failure reasons (money ran out, someone's parents said no, tickets sold out, tent broke, fell out with a mate, missed the train). Step 2: 'Which one can you fix TODAY?' with feedback. Keep the 5-step order only as the 'Why?' text."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The 'My map' graph is a hairball. Labels overlap ('The Pause Feedback Loops', 'Perceive → Appraise...' over 'Identity-Based Habi...') and I can't tell what I've lit up versus not. It's the coolest idea in the app (my brain as a constellation) but it looks like a maths diagram.",
+     "fix": "Grey out and shrink unplayed nodes, and show labels only for played nodes plus the one I tap. Cluster nodes by track in 12 radial sectors instead of a force layout. Add a top line: 'You've unlocked 14 of 120 ideas: you're strongest in Growth.' Add a 'Share my map' button that exports a PNG."
+    },
+    {
+     "card_id": "boredom-signal-estimate",
+     "severity": "low",
+     "problem": "Best hook in the set. But the explain line opens with dry stats ('12 of 18 men (67%) and 6 of 24 women (25%)'), and the insight never ties back to my actual life (phones). The try-today is good but buried.",
+     "fix": "Rewrite explain: '2 in 3 men chose to ZAP THEMSELVES rather than sit with their thoughts for 15 minutes (women: 1 in 4). Small study, but… oof.' Change the insight's first sentence to: 'That urge to grab your phone the second you're bored? Same thing.'"
+    },
+    {
+     "card_id": "courage-kindness-reveal",
+     "severity": "low",
+     "problem": "Useful idea for me (asking for help feels terrifying). But the reveal is about filling in a form for strangers, which is boring, and the 3 choices are confusingly worded ('About as many as it took').",
+     "fix": "Change the prompt to: 'People had to get 5 strangers to say yes to a small favour. They guessed they'd need to ask about 10. How many did they actually need?' with choices '~5', '~10', '~20'. Reveal: 'About 5. Strangers said yes roughly twice as often as people expected.' Change try_today to: 'Ask a teacher or classmate one specific question you've been too awkward to ask.'"
+    }
+   ],
+   "best_cards": [
+    "boredom-signal-estimate",
+    "quitting-wisely-swipe",
+    "map-territory-subway-reveal"
+   ],
+   "verdict": "Some of the ideas genuinely got me. The electric-shock boredom stat is mad, and the quit-or-push-through swipe actually helped me think about dropping a club. The app is kind and never made me feel stupid in the words. But it doesn't feel like TikTok yet. Every reveal turns into a long scroll of paragraphs and author names. Most scenarios are about bosses, jobs and $100 purchases. Red scores make it feel like being marked. The first card I got was the most abstract one, and it put me outside every circle. I'd play 2 or 3 and leave. To keep me: cut each reveal to one punchline plus one thing to try, rewrite scenarios for teens, ditch the red, and open with the surprising stat cards."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, English is my second language. I want tools I can use tomorrow with my team and with myself. No fluff.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "This is the flagship card and the 'where am I' moment fails. In the screenshot I score Will 5, Skill 5, Opportunity 5, and the dot sits OUTSIDE all three circles, at bottom-left. The result is 'The Seed: Nothing is lit yet'. I answered 'somewhat' on everything and the app tells me I have nothing, which feels like a bug and is a little insulting. The threshold of 0.55 means any middle answer counts as zero.",
+     "fix": "Place the dot by weighted position between the circle centres (as a barycentre of W/S/O, scaled by each score) so it always lands inside the diagram, with 5/5/5 in the middle of the triple overlap. Lower threshold to 0.5. Rewrite results[''] to name 'Half-lit' and text 'Everything is half-on, so nothing pulls hard yet. Pick the pillar you scored lowest and give it one concrete step this week.' Show each axis score next to its circle label."
+    },
+    {
+     "card_id": "circle-competence-venn",
+     "severity": "high",
+     "problem": "Same Venn problem. With Knowledge 3 and Confidence 4 the dot floats outside both circles, below-left, and nothing explains what that means. The label 'Proven knowledge' also runs over the circle edge ('Prov|en knowledg|e'), which looks broken on a phone.",
+     "fix": "Draw an outer zone labelled 'Outside both (early)' so the dot has a named place to land, or keep the dot inside the box at a position proportional to the K and C scores. Shorten the axis label to 'Proof' (or 'Track record') and keep 'Confidence'. Put labels inside the circles with enough padding."
+    },
+    {
+     "card_id": "begin-with-end-eulogy-radar",
+     "severity": "medium",
+     "problem": "The result contradicts itself. The headline says 'Even across the board (5/10)' and 'No single gap stands out', then the next line says 'Relationships lowest? Book 20 phone-free minutes'. Relationships is not lowest. It just falls back to axis 0. Also Craft, Contribution and Growth get only one question each, so one tap decides the whole axis.",
+     "fix": "When all axes are equal, use this text instead of advice[0]: 'Even shape. Ask yourself which of the five you would most regret neglecting at 80, and give it one 20-minute block this week.' Add a second question for each of Craft ('People rely on the quality of what I make.'), Contribution ('This month I taught or unblocked someone without being asked.') and Growth ('I did something this week I was not good at yet.')."
+    },
+    {
+     "card_id": "impulse-pause-choice",
+     "severity": "medium",
+     "problem": "A good card, but I am the manager who SENDS these 9pm 'We need to talk' emails. It only coaches the receiver. The practical lesson for a manager, never send a vague scary message at night, is missing. That would be the most useful line in the whole sample for me.",
+     "fix": "Append to insight: 'If you're the one sending: add one line of context (\"Nothing bad, want to plan Q3\") or wait until morning. A vague message from a boss costs someone a night of sleep.' Change try_today to: 'Today, before you send any message that could worry someone, add one sentence of context.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Most try_today actions are personal-only. As a manager I want a version I can run with my team on Monday. Pre-mortem and leverage points are perfect team tools, but the cards never say 'do this in your next meeting'. Other cards (circle of competence, scout/soldier, quitting wisely) would also work as 5-minute team rituals.",
+     "fix": "Add an optional field try_team to the card schema and show it under TRY TODAY as 'WITH YOUR TEAM'. Examples: premortem: 'Next planning meeting: 5 minutes, everyone writes \"It failed because...\" silently, then read them out.' leverage-points: 'At the next retro, ask: what are we actually rewarded for? before asking anyone to work harder.' quitting-wisely: 'Pick one project and agree the kill criteria together.' confirmation-bias: 'In the next design debate, each side states the other side's best argument first.'"
+    },
+    {
+     "card_id": "premortem-order",
+     "severity": "low",
+     "problem": "On a wrong order the screen shows four red pills and then a long arrow sentence with the correct order, which runs off the screen. It feels like a failed exam, not a lesson. Five items is a lot to tap for a burned-out person who is not sure what a pre-mortem is yet.",
+     "fix": "After submit, re-render the pills in the correct order with green numbers instead of printing the order as an arrow sentence. Mark only the ones that moved. Replace the result line with: 'Order fixed for you. The key move is step 2: assume it already failed.'"
+    },
+    {
+     "card_id": "growth-mindset-spectrum",
+     "severity": "low",
+     "problem": "The first question ('You bomb a test in a new subject') is school framing, and the options mix 4 and 3 answers with uneven values (-2,-1,1,2 vs -2,-1,2). Adults at work will not see themselves in it, and the uneven scale pushes most people to the 'Growth' side.",
+     "fix": "Replace q1 with 'Your first try at a new tool or skill at work goes badly. First thought...' and keep the same four options. Make q2 symmetric: options 'They're a natural. I'll never catch up.' (-2), 'I'd rather not compare, it stings.' (-1), 'Some of it is talent, some is practice.' (1), 'I wonder how they practise.' (2)."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "On My map the node labels overlap and are cut off ('Sleep Saves Your Le...', 'Looping for Underst...', 'Perceive -> Appraise...' sitting on top of other labels). It looks impressive but I cannot read it or use it to choose what to play next. The Tracks screen also tells me 9/9 played everywhere, but gives no 'start here' suggestion.",
+     "fix": "On phone widths, label only the played nodes plus the 5 most connected ones, and show the full title in a tooltip on tap. Add collision avoidance (offset labels or hide labels within 24px of another). At the top of Tracks add one line: 'Short on time? Start with: Pause Before Send, Pre-Mortem, Never Miss Twice.'"
+    }
+   ],
+   "best_cards": [
+    "impulse-pause-choice",
+    "premortem-order",
+    "leverage-points-spectrum"
+   ],
+   "verdict": "Good material and a kind tone. The cards are honest about weak evidence (grit, the voter study, growth mindset), and as a tired person I like that. Pause Before Send, Pre-Mortem, Leverage Points and Never Miss Twice gave me things I can actually do tomorrow. But the main visual idea, the Venn where 'you see where you stand', is broken for normal middle answers. The dot lands outside the circles and the app tells me 'nothing is lit', so the flagship WSO card makes me feel worse and confused. The radar's text also contradicts its own shape. Content is mostly personal-life focused, with almost no 'do this with your team' angle, which is the main thing I would come back for. Fix the Venn and radar logic and add team versions, and I would share this with my leads. Today it is a solid 6-7, not yet a habit."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 6,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "courage-kindness-reveal",
+     "severity": "high",
+     "problem": "Factual error. Vanessa Lake (co-author of Flynn & Lake, 2008) and Vanessa Bohns are the same researcher; Bohns is her later name. The reveal presents her as a second, independent confirmation ('later studies by Vanessa Bohns found the same'), which inflates the evidence. The answer choices are also muddled: the question asks how many people they guessed, but the options are phrased as comparisons ('About twice as many as it took'). On top of that, a children's picture book (Mackesy) sits in the source list beside a peer-reviewed study.",
+     "fix": "Change reveal to: \"They guessed they'd need to ask about 20 people. It took about 10, so half as many as feared (Flynn & Lake, 2008). Bohns (formerly Lake) has repeated this in several later studies.\" Change choices to [\"About 10, roughly right\", \"About 20, double the real number\", \"About 5, fewer than it took\"]. Change source.thinkers to [\"Francis Flynn\", \"Vanessa Bohns (Lake)\"] and source.work to \"Flynn & Lake, 'If You Need Help, Just Ask' (JPSP, 2008); Bohns, You Have More Influence Than You Think (2021)\". Drop Mackesy."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "A player who answers in the middle on all three axes (5/10 each, shown in the screenshot) is told 'Nothing is lit yet'. The dot then sits outside all three circles. That reading is wrong (they're at half, not zero) and quietly discouraging. The card also lists 'QUMNI' as a thinker next to Bandura and Deci & Ryan and labels it 'Philosophical lens'. That passes off the house framework as established scholarship.",
+     "fix": "Set threshold to 0.5 and treat >= as lit. Alternatively, add a result for all-near-middle: {\"name\": \"Half-Lit\", \"text\": \"Every pillar is flickering, none is strong or absent. Pick the one you can raise fastest this week; a clear gap is easier to work on than a general fog.\"}. In source.thinkers remove \"QUMNI\". Change source.work to \"Original QUMNI framework, drawing on Self-Determination Theory (Deci & Ryan) and self-efficacy (Bandura)\". Rename OW 'The Dreaming Sprinter' to 'The Eager Apprentice'."
+    },
+    {
+     "card_id": "golden-mean-courage-spectrum",
+     "severity": "high",
+     "problem": "The game contradicts its own lesson. The insight rightly says the mean is 'not the average', yet the scoring puts the mean at the arithmetic midpoint of the slider, and the 0-valued options are always the 'virtuous' ones. Declining a hard hike you're unprepared for can be prudence rather than cowardice, so the -2 label teaches the wrong thing. Practical wisdom (phronesis), the faculty that actually finds the mean, is never named, so Aristotle is reduced to 'don't overdo it'.",
+     "fix": "Change hike option -2 to \"Decline without even looking at the route\". Change insight to: \"Aristotle said a virtue sits between two vices: too little and too much. Courage lies between cowardice and rashness. The mean is 'relative to us', not the midpoint: sometimes the courageous act is bold, sometimes it's a quiet no. What finds it is practical wisdom (phronesis), built by practice and reflection.\" Change 'Near the mean' zone text to: \"Your answers cluster near the mean in these cases. Aristotle would add: the test is doing it when fear is real and the situation is new.\""
+    },
+    {
+     "card_id": "begin-with-end-eulogy-radar",
+     "severity": "medium",
+     "problem": "The frame shifts mid-card. The hook says 'speech at your 80th birthday' while the insight says Covey imagined 'your own funeral'. When all axes tie, the result says 'No single gap stands out' and then immediately 'Relationships lowest?', which contradicts itself. The Seneca line is paraphrased too loosely to carry his name.",
+     "fix": "Hook: \"Picture your funeral. Would this week's calendar match the speech?\" (or keep the birthday framing and change the insight to 'Covey suggested imagining the speeches at your own funeral; an 80th birthday works too'). In app.js radar tie handling, when max-min < 1 point, show only: \"No single gap stands out. Choose the one that matters most to you this week.\" Do not append advice[0]. Insight Seneca sentence: \"Seneca wrote that life is long enough if we know how to use it; we waste it by living as if we will live forever (On the Shortness of Life, 1.3-4).\""
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "For a 'practical Peterson Academy' there is no contact with the primary text. Every card ends in a paraphrase and a slogan, with the source shown as a grey author/title line. A reader who wants to go deeper has nowhere to go. That is the gap between a quiz app and an education.",
+     "fix": "Add an optional field \"from_source\": {\"quote\": \"<=25 words, public-domain translation\", \"cite\": \"Book/chapter\", \"next_read\": \"exact chapter or pages\"}. Render it between THE MODEL and TRY TODAY. Example for golden-mean: quote \"to feel them at the right times, about the right things, towards the right people... is what is both intermediate and best\" (NE II.6, Ross trans.), next_read \"Nicomachean Ethics Book II, ch. 6-9; Book III, ch. 6-9\". Do this first for all evidence='philosophy' cards."
+    },
+    {
+     "card_id": "order-chaos-border",
+     "severity": "medium",
+     "problem": "Peterson's reading of the yin-yang is presented as Taoist doctrine ('Taoist thought pictures opposites like these as partners, and Peterson says...'). The questions also reduce chaos to 'busy / irregular', when Peterson's point is voluntarily confronting the unknown and taking on responsibility. The insight never mentions that, so the card becomes a lifestyle-routine quiz.",
+     "fix": "Insight: \"Too much order and life goes stale; too much chaos and you lose your footing. Peterson, borrowing the yin-yang image from Taoism, argues meaning is found where you stand on what you know and step voluntarily into what you don't. The key word is voluntarily: chaos you choose to face grows you; chaos that merely happens to you mostly drains you.\" Replace the sleep/meals question with: q \"When something unknown and difficult appears in my life, I usually…\", options [\"Avoid it until it goes away\", -2], [\"Face it once I've prepared\", 0], [\"Charge in without a plan\", 2]."
+    },
+    {
+     "card_id": "base-rates-positive-test",
+     "severity": "low",
+     "problem": "A crisis/helpline footer ('If things feel heavy… findahelpline.com') appears under a probability puzzle. It reads as patronising and dilutes the footer where it matters. The card is flagged sensitive only because a medical test is mentioned.",
+     "fix": "Set \"sensitive\": false on this card; the insight already says 'Real results need a real doctor'. Optionally add a separate medical-only footer type: \"This is a math illustration, not medical advice.\""
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "Results are shown when a player has not really chosen. The golden-mean screen shows 'Leaning cautious' with the marker pinned at the far left, and the feed's life-in-weeks card says 'You said 25,250 weeks. Most people miss this one.' for what looks like the untouched slider default. Telling someone they 'said' something they didn't say is disrespectful to the reader.",
+     "fix": "In app.js, don't render the reveal for estimate cards until the slider has received an input event; label the button 'Lock in my guess'. Spectrum results should appear only after all questions are answered. Change the miss message to \"Your guess: X. The real number is Y.\" Drop 'Most people miss this one.' unless backed by data."
+    }
+   ],
+   "best_cards": [
+    "identity-habits-voter",
+    "map-territory-subway-reveal",
+    "quitting-wisely-swipe"
+   ],
+   "verdict": "A respectable start that is more honest than most of its genre. Cards such as the voter study, grit and growth mindset admit where the evidence is weak or contested, and I respect that greatly. The tube-map card is a small gem of a teaching image. Where it falls short is depth and precision on the philosophy itself. Aristotle's mean is scored as a midpoint, Peterson is blended into Taoism, Seneca is paraphrased, the house framework is cited like scholarship, and one study is given a phantom second author. For something that aspires to be a practical Peterson Academy, it needs at least one line of the original text per philosophy card and stricter fact-checking. Pleasant and kind, but I would not yet hand it to a former student as a way into the ideas."
+  },
+  {
+   "persona": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. I notice anything that shames me, labels me or pushes me, and I need this to feel safe and actually helpful.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 6,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "On spectrum cards the zone label is the biggest, most colourful text on the result screen ('Fixed-leaning', 'Soldier mode', 'Stress-is-harmful lens', 'Leaning cautious'). It reads like a diagnosis of who I am. Only confirmation-bias says 'a snapshot, not a verdict', and that line sits in small body text under the big label. Also, the helpline/'not diagnosis' footer only shows on cards marked sensitive. growth-mindset, wso-triad and begin-with-end all poke at self-worth and have no footer.",
+     "fix": "In app.js, render every spectrum/venn result heading as 'Today you're leaning: <label>' (or prefix 'Right now:'), and add a fixed small line under every spectrum/venn/radar result: 'This is a snapshot of today's answers, not a verdict on you.' Add \"sensitive\": true to growth-mindset-spectrum, wso-triad-venn and begin-with-end-eulogy-radar so the reflection/helpline footer appears."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "When I answered the middle on everything (Will 5/10, Skill 5/10, Opportunity 5/10), the dot landed OUTSIDE all three circles and I got 'The Seed: Nothing is lit yet'. Being half-sure isn't 'nothing'. Seeing myself outside every circle after a rough year felt like being told I have zero of anything. The 0.55 threshold turns a neutral answer into an empty one.",
+     "fix": "Lower threshold to 0.5 (inclusive), or add a result for all-middling scores: key \"mixed\" -> name 'Half-Lit', text 'Every pillar is partly there, just not strong yet. That's a real starting point. Pick the one that would take the least to push from 5 to 7 this week.' Rewrite 'The Seed' text to: 'None of the pillars feel strong right now, and that's a common place to be after a hard stretch. Pick the easiest one to grow this week. Two of three is enough to move.' Do not draw the dot outside all circles: clamp it to the edge of the nearest circle."
+    },
+    {
+     "card_id": "stress-mindset-spectrum",
+     "severity": "high",
+     "problem": "The model 'My body is gearing up' beats 'I'm breaking.' tells me that if I feel like I'm breaking, I'm just reading it wrong. Q3's '-2' answer, 'Mostly just hurt me', is an honest answer for anyone who had a genuinely bad time. The low-end result then says 'You often get to choose', which makes my pain sound like a mindset choice. The insight's caveat about chronic stress is good, but it's buried.",
+     "fix": "Model -> 'Some stress is your body gearing up, not breaking down. Reframe the everyday kind; get support for the heavy kind.' Q3 options -> 'Mostly hurt me (and that's real)': -1, 'Were mixed': 0, 'Also helped me grow': 2. Low-zone text -> 'You read stress mostly as danger, and if you've had a hard time, that makes sense. For everyday nerves (before a talk, an exam), try adding one more reading: my body is getting me ready. If stress feels constant or heavy, that's a reason to get support, not a mindset failure.' Mixed-zone: replace 'You often get to choose.' with 'Sometimes you can pick which story to lean on.'"
+    },
+    {
+     "card_id": "growth-mindset-spectrum",
+     "severity": "medium",
+     "problem": "The options quote my own inner voice ('I'm just not a numbers person', 'Why risk looking bad?') and score them -2, then label me 'Fixed-leaning'. Q1 and Q2 have no neutral option, so I'm forced to one side. The scale rewards 'Take the stretch' as the right answer. When I'm burnt out, picking the easy task is sometimes the wise choice, not a fixed mindset.",
+     "fix": "Q1: add {label: 'Depends what it is', value: 0}. Q2: add {label: 'A bit of both', value: 0}. Q4: change 'Take the easy one. Why risk looking bad?' to 'Usually the easy one' (-1) and add {label: 'Easy when I'm drained, stretch when I have energy', value: 1}. Low-zone label -> 'Leaning fixed (on these topics)'. Low-zone text -> 'Hard things can feel like tests of who you are. That's tiring, and very common. Next time, try treating it as a test of your method instead.'"
+    },
+    {
+     "card_id": "never-miss-twice-choice",
+     "severity": "medium",
+     "problem": "The card itself is kind and was one of the best. But the title and model ('Never Miss Twice', 'Missing twice risks starting a new pattern') swap one rule for another. For an anxious perfectionist, 'never' becomes a new thing to fail at. If I miss twice, the card implies I've now started a bad pattern.",
+     "fix": "Title -> 'Come Back Small'. Model -> 'Missing once is an accident. The skill is coming back soon and small, whenever you notice, even after two misses or ten.' Hook unchanged."
+    },
+    {
+     "card_id": "begin-with-end-eulogy-radar",
+     "severity": "medium",
+     "problem": "The hook says '80th birthday' but the insight switches to 'imagining your own funeral' without warning. On a low day that's heavy. The radar questions ('This week I moved, slept and ate like someone I'd want to be at 80') score me on a single week, and after a rough week the shape just shows how much I'm failing everywhere. There's no line to soften it.",
+     "fix": "Insight -> 'Covey suggested imagining what people would say about you at the end; here we use your 80th birthday. Seneca made a similar point: we act as if time is endless. Your shape is one week, not your life. It shows where to put a little attention next, not what you've failed at.' Change radar advice prefix from '<Axis> lowest?' to 'Want a small next step for <Axis>?'. Add \"sensitive\": true."
+    },
+    {
+     "card_id": "courage-kindness-reveal",
+     "severity": "low",
+     "problem": "Accuracy/credibility. The source lists 'Vanessa Lake' as a co-author, and the reveal then says 'later studies by Vanessa Bohns' as if she were a different person (she is the same researcher). Charlie Mackesy is a children's illustrator, but he's listed among the thinkers next to the research. The try_today ('ask one person for help today') is a big step for socially anxious players and has no smaller option.",
+     "fix": "Reveal last sentence -> 'Strangers were far more willing to help than askers expected (Flynn & Lake, 2008); later studies by the same researcher, Vanessa Bohns, found the same.' Move Mackesy out of thinkers (keep the book in work as 'inspired by'). try_today -> 'Ask one person for a small, specific bit of help today, even by text. If that feels too big, just write down who you'd ask and what you'd say.'"
+    },
+    {
+     "card_id": "grit-passion-perseverance-venn",
+     "severity": "low",
+     "problem": "'The Dreamer' is a result name here and in wso-triad-venn, with different meanings, which is confusing when they come one after another in the feed. 'The Workhorse' sounds a bit dehumanising. For a struggling grad, 'I usually lose steam after the first few weeks' (inverted) plus a low result can feel like confirmation of being a failure.",
+     "fix": "Rename P result to 'The Spark Keeper' and S result to 'The Steady One'. Add to the '' (Explorer) result text: 'Low staying power often reflects energy and circumstances, not character.'"
+    }
+   ],
+   "best_cards": [
+    "never-miss-twice-choice",
+    "impulse-pause-choice",
+    "map-territory-subway-reveal"
+   ],
+   "verdict": "Mostly it feels kind. Honest evidence labels ('treat this loosely', 'not magic', 'a metaphor'), small try-today steps and gentle feedback on choice cards made me trust it. The 9pm boss-email card and the missed-walk card read like a friend who gets anxiety. Where it slips is the result screens. Big coloured labels ('Fixed-leaning', 'Soldier mode', 'The Seed: nothing is lit') still land as verdicts on me. The stress card's 'gearing up beats breaking' brushes past people who really are struggling. Make every result a dated snapshot, never place the dot 'outside everything', give each spectrum a neutral middle option, and show the support footer on every self-worth card. Then I'd feel safe enough to keep scrolling and send it to a friend."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist. Checks claims, attributions, effect sizes, replication status and survey/scoring design.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 6,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "confirmation-bias-scout-soldier",
+     "severity": "high",
+     "problem": "The scoring punishes good scientific practice and is skewed toward 'Scout'. Q1 codes 'What's wrong with it?' (critical appraisal of a study) as -2 Soldier, so a methodologist is labelled a soldier. Q2-Q4 use options -2/+1/+2 with no 0 or -1, so any moderate answer pushes the score toward Scout. Q2 also treats changing your mind often as a virtue in itself.",
+     "fix": "Q1 options: {'Look for what's wrong with it, but not what's right', -2}, {'Check its methods, the same way I'd check one I agreed with', 2}, {'Read what they found before judging', 1}. Q2: 'Can't remember' -2, 'Within the last few years' 0, 'This year' 1 (remove 'This month'). Q3: 'Agree with me' -2, 'Mix of views' 0, 'I follow some smart critics on purpose' 2. Q4: 'Losing' -2, 'Annoying, but useful' 0, 'An upgrade' 2."
+    },
+    {
+     "card_id": "system1-system2-who-drives",
+     "severity": "high",
+     "problem": "The scale is asymmetric: every question uses -2/+1/+2, so the middle answer counts as 'Owl' and averages drift right. Q4 also codes 'Estimate roughly' as slow/Owl, although quick estimation is the textbook System 1 response. The middle answer on Q1 ('Draft it, send later') is closer to the Owl end than the scoring shows.",
+     "fix": "Recode the middle option of each question to 0. Q4 options: {'Blurt out a guess', -2}, {'Estimate roughly in my head', -1}, {'Work it out step by step', 2}. Add the attribution 'Stanovich & West (2000) coined System 1/2' to the insight so Keith Stanovich's listing as a thinker is justified."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "The card presents an established triad as an in-house invention. 'QUMNI WSO Framework' is listed as the first source and Anthony Giddens is added, but Blumberg & Pringle (1982, Academy of Management Review) already proposed 'capacity × willingness × opportunity'. The related Motivation-Ability-Opportunity (MAO) model (MacInnis & Jaworski, 1989) has a real literature behind it. Leaving them out misattributes the idea and understates the evidence.",
+     "fix": "source.thinkers: ['Melvin Blumberg & Charles Pringle', 'Deci & Ryan', 'Albert Bandura', 'QUMNI']. source.work: 'Blumberg & Pringle, The missing opportunity in organizational research (1982); adapted as the QUMNI WSO framework'. Remove Giddens. Add to the insight: 'Psychologists described this triad in 1982 as capacity, willingness and opportunity.' Set evidence to 'moderate'."
+    },
+    {
+     "card_id": "growth-mindset-spectrum",
+     "severity": "medium",
+     "problem": "The evidence label is too generous. Sisk et al. (2018) found meta-analytic effects near d=0.08. Macnamara & Burgoyne (2023) found effects close to zero once bias was corrected, while Yeager et al. (2019) found small effects only in lower-achieving students. 'Moderate' overstates this. The items are also leading because the growth answers are plainly the socially desirable ones. Q2 codes 'I'd rather not compare, it stings' (an emotion) as Fixed, and its options are lopsided (-2, -1, +2).",
+     "fix": "Set evidence to 'contested'. Rewrite the second insight sentence: 'Large studies find teaching it has small average effects, close to zero in some analyses, with somewhat larger gains for struggling students.' Q2 options: {'They're a natural. I'll never catch up.', -2}, {'It stings, but I'm curious how they got there.', 0}, {'I wonder how they practise.', 2}."
+    },
+    {
+     "card_id": "never-miss-twice-choice",
+     "severity": "medium",
+     "problem": "The card treats a rule of thumb as an evidence-backed finding. Lally et al. (2010) found that a single missed day did not materially affect habit formation. They never tested a second miss, so 'Missing twice risks starting a new pattern' is James Clear's heuristic. With the 'moderate evidence' badge, a reader will assume it comes from the study.",
+     "fix": "Model: 'Missing once is an accident. James Clear's rule of thumb: don't let it become twice. Return small and fast.' Add to the insight: 'The never-miss-twice rule is a practical heuristic, not something Lally tested.'"
+    },
+    {
+     "card_id": "order-chaos-border",
+     "severity": "medium",
+     "problem": "The items mix trait reactions with life circumstances, and the weights are inconsistent. Q3 uses ±1 while the others use ±2. 'Relieved, plans were never real anyway' is a cynical attitude rather than chaos in someone's life. Q2 lumps 'drowning in new things' in with learning. For someone with disordered eating, 'Rigidly controlled' meals leading to the advice 'add one small unknown' could land badly.",
+     "fix": "Q3 values: -2 / 0 / 2, with the third label changed to 'Relieved, I like things loose'. Q2 options: 'Can't remember' -2, 'This month' 0, 'So much is new I can't keep up' 2. Q4: change 'My sleep, meals and money are…' to 'My daily routines (sleep, schedule, money) are…', keeping the same options."
+    },
+    {
+     "card_id": "base-rates-positive-test",
+     "severity": "low",
+     "problem": "The card works, but the 'sensitive' flag places a mental-health helpline footer ('If things feel heavy… findahelpline.com') under a statistics problem, which reads as a non sequitur. 'Many doctors… guessed 95%' is also slightly vague: in Casscells et al. (1978), 27 of 60 answered 95% and only 11 gave about 2%.",
+     "fix": "Change the explain sentence to: 'In a 1978 Harvard study, 27 of 60 doctors and students answered 95%; only 11 got about 2%.' For cards flagged sensitive for medical reasons, show a footer such as 'This is math, not medical advice. Discuss real results with a clinician.' instead of the helpline text, for example via a new field sensitive_kind:'medical'."
+    },
+    {
+     "card_id": "map-territory-subway-reveal",
+     "severity": "low",
+     "problem": "The reveal says the tube map 'wins for most trips' but leaves out the best-known evidence on this exact map. Guo (2011) found the map's distortions lead many riders to pick slower routes or ride when walking would be quicker. That point demonstrates the card's own lesson ('useful for what?') and makes the content more trustworthy.",
+     "fix": "Add to the reveal: 'But it misleads too: studies of London riders found the map's distortions push people onto slower routes, sometimes riding between stops that are quicker to walk. A map is only good for the trip it was built for.'"
+    }
+   ],
+   "best_cards": [
+    "base-rates-positive-test",
+    "identity-habits-voter",
+    "self-efficacy-choice"
+   ],
+   "verdict": "A better-than-average pop-psych product. It honestly flags replication failures (the 'be a voter' card cites Gerber 2016, grit is marked contested, and the Wilson shock study has a small-sample warning), and its effect-size hedging is mostly sound (growth mindset 'helps a little', stress mindset 'modest', 'System 1/2 is a metaphor'). The weak point is the self-report spectrum games. Asymmetric option values (-2/+1/+2) bias the results toward the flattering pole, some items are leading or socially desirable, and the soldier/scout card penalises critical appraisal itself. A few attributions also need correcting: WSO repackages Blumberg & Pringle's 1982 triad, and 'never miss twice' is a heuristic, not a Lally finding. Fix the scoring symmetry across all spectrum cards before scaling, and I would rate usefulness and clarity 8."
+  },
+  {
+   "persona": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments, and whether people would share it.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The reward moment is flat or missing on half the formats. Reveal cards never say if you were right. courage-kindness-reveal shows 'You chose: Fewer than it took' in big pink type even though that answer is wrong, and nothing gets a green or red mark. Estimate cards say 'Most people miss this one.' for any guess more than 20% off, so a wild 25,250 and a thoughtful 50% get the same line. Swipe cards finish on '3 of 7 sorted', which sounds like 3 were processed, not 3 were correct. No format has a moment you'd screenshot.",
+     "fix": "Add an optional `answer` (index) to reveal games. In app.js reveal(), mark the picked button .correct/.wrong, outline the right option in green, and set the headline to 'Spot on.' or 'Most people pick that. The real answer: <choice>.' In swipe, change the done name to `${right}/${n} right` plus a tier line: 'Sharp eye.' when 6 or more are right, 'Solid.' at 4–5, 'Tricky set. Read the why lines.' below that. In estimate, replace 'You said X. Most people miss this one.' with 'You said X. Real: Y. You were Z× off.'. Add a 'Bullseye' confetti/haptic burst (navigator.vibrate(30)) for off < 0.05."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "Neutral answers give you a discouraging result, and the dot looks broken. Answering the middle option every time gives 0.5 on each axis. That is below the 0.55 threshold, so you land on 'The Seed: Nothing is lit yet' at Will 5/10 · Skill 5/10 · Opportunity 5/10. The dot also sits outside all three circles (bottom-left of the screenshot), which reads as a bug. A '5/10' and 'nothing is lit' contradict each other.",
+     "fix": "Set threshold to 0.5 (and the '' anchor in vennGeometry to the centre of the triad, not outside it). Rewrite results[''].text to: 'No pillar stands out yet: you're mid-way on all three. Pick the one you could raise fastest this week (often a tiny skill rep) and play again in 7 days.' Rename results[''].name to 'The Starting Line'."
+    },
+    {
+     "card_id": "begin-with-end-eulogy-radar",
+     "severity": "medium",
+     "problem": "The 'even' result contradicts itself. The headline says 'Even across the board (5/10). No single gap stands out', then the next sentence says 'Relationships lowest?' because the code appends advice[lo]. With an even profile it is always Relationships, since index 0 wins ties.",
+     "fix": "In app.js radar done(): when even, use the text 'No single gap stands out. Pick the area your 80-year-old self would care about most and give it one action this week.' and do not append g.advice. Optionally add a `game.advice_even` field to the card holding that sentence."
+    },
+    {
+     "card_id": "courage-kindness-reveal",
+     "severity": "medium",
+     "problem": "The hook promises 'the real odds', but no number is ever shown. The prompt is a double-relative brain-twister ('how many did they guess they'd need… about twice as many as it took'), so you have to read it twice. It's too slow for a 30-second card.",
+     "fix": "Rewrite prompt: 'People had to get 5 strangers to fill out a short form. They guessed they'd need to ask about 20 people. How many did it actually take?' choices: ['About 20', 'About 30', 'About 10'], answer: 2. reveal: 'About 10. Askers guessed roughly twice as many as needed (Flynn & Lake, 2008); Vanessa Bohns' later studies found the same pattern.' Keep the hook as is."
+    },
+    {
+     "card_id": "confirmation-bias-scout-soldier",
+     "severity": "medium",
+     "problem": "The first question is binary and punishes good thinking. 'What's wrong with it?' is scored -2 (Soldier), but checking a study's methods is what a scout should do. Careful users get labelled defensive, and that feels unfair and shaming.",
+     "fix": "Replace Q1 options with: [{label:'Look for reasons to dismiss it', value:-2}, {label:'Check its methods, same as I would for one I agree with', value:2}, {label:'Read what they found first', value:1}]."
+    },
+    {
+     "card_id": "premortem-order",
+     "severity": "medium",
+     "problem": "The order game is a recall test of a list I've never seen, so I get red on 4 of 5 and nothing teaches me. The correct order then shows as one long arrow-chained paragraph that is cut off below the fold. The hook 'Your plan already failed… Why did it?' is great, but the game never lets me write a reason.",
+     "fix": "Cut to 4 items (merge 'Share the reasons…' and 'Change the plan…' into 'Share, then fix the top risks'). In app.js order(), after submit, re-render the list in the correct order with green ticks instead of a prose paragraph. Change the explain text to start with the key insight: 'Imagine failure first, then write alone: that order is what makes it work.'"
+    },
+    {
+     "card_id": "feedback-loops-swipe",
+     "severity": "low",
+     "problem": "The hook 'Is your week snowballing, or quietly snapping back to normal?' promises something about MY week, but the game sorts textbook examples (interest, hunger, rumours). That's a bait-and-switch, and the left label 'Thermostat (balancing)' is long on a phone button.",
+     "fix": "Change hook to 'Snowball or thermostat? Sort 6 everyday loops in 30 seconds.' Shorten labels to left: 'Thermostat', right: 'Snowball'. Make the doom-scroll item the first card so the personal one lands early."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "My map: node labels overlap badly ('Perceive → Apprais…', 'The Pause Feedback Loops', 'Flow' on 'Grit'), so the screen I'd most want to share looks messy. Truncated labels like 'Sleep Saves Your Le…' don't read well either. The feed also shows identical 4 round action buttons (♥ ↗ ? i) with no labels, so '?' vs 'i' is unclear.",
+     "fix": "In the map renderer, show labels only for the 8 most-connected played nodes plus the tapped one. Run a simple collision pass that hides a label if its bbox overlaps an earlier one. Add aria-label and a small caption under the side buttons: 'Save', 'Share', 'Why?', 'Source'."
+    }
+   ],
+   "best_cards": [
+    "base-rates-positive-test",
+    "impulse-pause-choice",
+    "quitting-wisely-swipe"
+   ],
+   "verdict": "The content is strong and kind. The hooks are mostly sharp (base rates, 9pm boss email, pre-mortem), and the result pages follow a satisfying insight → model → try-today rhythm with a good evidence tag. But as a game it underdelivers on the payoff. Reveal and estimate cards don't celebrate a correct answer or explain a wrong one, swipe scores read ambiguously, and two profile cards (WSO venn, eulogy radar) give contradictory or deflating results for neutral answers. Fix the reward layer and the neutral-answer edge cases, and this goes from 'nice to read' to 'one more, then share'."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The reveal is a wall of text. After I answer I get the result, a paragraph of 'insight', a model box, a try-today box, a source list ('Deci & Ryan, Anthony Giddens...') and graph chips, all on one long scroll. That's a textbook page, not a TikTok. I stopped reading after the big coloured result line every time.",
+   "fix": "Show only 3 things on the reveal: the result headline, the 'model' line (max ~12 words) and the try-today line. Put the insight paragraph, the evidence chip and the sources behind one collapsed 'Why? (10s read)' toggle. Cap the visible insight at 140 characters. Move 'Go deeper along the graph' into a single 'Next: <title> →' button that scrolls straight to that card.",
+   "from": "Maya, 16, Manchester. On TikTok all the time. If it feels like school or a lecture, I'm gone. I only stay if it's fast, surprising and about me."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Most scenarios are for office adults: boss emails at 9pm, team meetings, deadlines, a business idea, quitting your job, partner arguments, buying something over $100. I can't see myself in any of them, so it isn't 'about me'. The 'Anyone' audience chip is a lie for half of these.",
+   "fix": "Add a teen/student variant of every scenario option and use it when the audience is 'Anyone'. Examples: impulse-pause-choice: 'Your mate texts \"we need to talk\" at 11pm.' leverage-points-spectrum Q2: 'Your group project keeps missing deadlines.' system1-system2-who-drives Q2: 'Buying something over £30 (trainers, a game)…' golden-mean-courage-spectrum Q3: 'You want to start a YouTube channel / side hustle. You…' with 'Quit school tomorrow to do it' replaced by 'Post every day and skip revision to do it'. Also use £, not $, for UK players.",
+   "from": "Maya, 16, Manchester. On TikTok all the time. If it feels like school or a lecture, I'm gone. I only stay if it's fast, surprising and about me."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The score colours feel like being marked wrong at school. '1 of 2 best calls' is in big red, my wrong option gets a red border, and on the pre-mortem order card 4 of 5 pills are outlined red. That's the 'you failed' feeling I'm allergic to, even though the text is kind.",
+   "fix": "Never use red for the player's result. Use the track colour for the headline and change the copy to growth wording: '1 of 2 best calls' → 'Nice: you nailed the pause. 1 more trick unlocked.' For a wrong pick, use a neutral/amber outline plus a '💡' feedback bar instead of a red one. On order cards, show the correct position number next to wrong items instead of red borders.",
+   "from": "Maya, 16, Manchester. On TikTok all the time. If it feels like school or a lecture, I'm gone. I only stay if it's fast, surprising and about me."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The 'My map' graph is a hairball. Labels overlap ('The Pause Feedback Loops', 'Perceive → Appraise...' over 'Identity-Based Habi...') and I can't tell what I've lit up versus not. It's the coolest idea in the app (my brain as a constellation) but it looks like a maths diagram.",
+   "fix": "Grey out and shrink unplayed nodes, and show labels only for played nodes plus the one I tap. Cluster nodes by track in 12 radial sectors instead of a force layout. Add a top line: 'You've unlocked 14 of 120 ideas: you're strongest in Growth.' Add a 'Share my map' button that exports a PNG.",
+   "from": "Maya, 16, Manchester. On TikTok all the time. If it feels like school or a lecture, I'm gone. I only stay if it's fast, surprising and about me."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Most try_today actions are personal-only. As a manager I want a version I can run with my team on Monday. Pre-mortem and leverage points are perfect team tools, but the cards never say 'do this in your next meeting'. Other cards (circle of competence, scout/soldier, quitting wisely) would also work as 5-minute team rituals.",
+   "fix": "Add an optional field try_team to the card schema and show it under TRY TODAY as 'WITH YOUR TEAM'. Examples: premortem: 'Next planning meeting: 5 minutes, everyone writes \"It failed because...\" silently, then read them out.' leverage-points: 'At the next retro, ask: what are we actually rewarded for? before asking anyone to work harder.' quitting-wisely: 'Pick one project and agree the kill criteria together.' confirmation-bias: 'In the next design debate, each side states the other side's best argument first.'",
+   "from": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, English is my second language. I want tools I can use tomorrow with my team and with myself. No fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "On My map the node labels overlap and are cut off ('Sleep Saves Your Le...', 'Looping for Underst...', 'Perceive -> Appraise...' sitting on top of other labels). It looks impressive but I cannot read it or use it to choose what to play next. The Tracks screen also tells me 9/9 played everywhere, but gives no 'start here' suggestion.",
+   "fix": "On phone widths, label only the played nodes plus the 5 most connected ones, and show the full title in a tooltip on tap. Add collision avoidance (offset labels or hide labels within 24px of another). At the top of Tracks add one line: 'Short on time? Start with: Pause Before Send, Pre-Mortem, Never Miss Twice.'",
+   "from": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, English is my second language. I want tools I can use tomorrow with my team and with myself. No fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "For a 'practical Peterson Academy' there is no contact with the primary text. Every card ends in a paraphrase and a slogan, with the source shown as a grey author/title line. A reader who wants to go deeper has nowhere to go. That is the gap between a quiz app and an education.",
+   "fix": "Add an optional field \"from_source\": {\"quote\": \"<=25 words, public-domain translation\", \"cite\": \"Book/chapter\", \"next_read\": \"exact chapter or pages\"}. Render it between THE MODEL and TRY TODAY. Example for golden-mean: quote \"to feel them at the right times, about the right things, towards the right people... is what is both intermediate and best\" (NE II.6, Ross trans.), next_read \"Nicomachean Ethics Book II, ch. 6-9; Book III, ch. 6-9\". Do this first for all evidence='philosophy' cards.",
+   "from": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "Results are shown when a player has not really chosen. The golden-mean screen shows 'Leaning cautious' with the marker pinned at the far left, and the feed's life-in-weeks card says 'You said 25,250 weeks. Most people miss this one.' for what looks like the untouched slider default. Telling someone they 'said' something they didn't say is disrespectful to the reader.",
+   "fix": "In app.js, don't render the reveal for estimate cards until the slider has received an input event; label the button 'Lock in my guess'. Spectrum results should appear only after all questions are answered. Change the miss message to \"Your guess: X. The real number is Y.\" Drop 'Most people miss this one.' unless backed by data.",
+   "from": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "On spectrum cards the zone label is the biggest, most colourful text on the result screen ('Fixed-leaning', 'Soldier mode', 'Stress-is-harmful lens', 'Leaning cautious'). It reads like a diagnosis of who I am. Only confirmation-bias says 'a snapshot, not a verdict', and that line sits in small body text under the big label. Also, the helpline/'not diagnosis' footer only shows on cards marked sensitive. growth-mindset, wso-triad and begin-with-end all poke at self-worth and have no footer.",
+   "fix": "In app.js, render every spectrum/venn result heading as 'Today you're leaning: <label>' (or prefix 'Right now:'), and add a fixed small line under every spectrum/venn/radar result: 'This is a snapshot of today's answers, not a verdict on you.' Add \"sensitive\": true to growth-mindset-spectrum, wso-triad-venn and begin-with-end-eulogy-radar so the reflection/helpline footer appears.",
+   "from": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. I notice anything that shames me, labels me or pushes me, and I need this to feel safe and actually helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The reward moment is flat or missing on half the formats. Reveal cards never say if you were right. courage-kindness-reveal shows 'You chose: Fewer than it took' in big pink type even though that answer is wrong, and nothing gets a green or red mark. Estimate cards say 'Most people miss this one.' for any guess more than 20% off, so a wild 25,250 and a thoughtful 50% get the same line. Swipe cards finish on '3 of 7 sorted', which sounds like 3 were processed, not 3 were correct. No format has a moment you'd screenshot.",
+   "fix": "Add an optional `answer` (index) to reveal games. In app.js reveal(), mark the picked button .correct/.wrong, outline the right option in green, and set the headline to 'Spot on.' or 'Most people pick that. The real answer: <choice>.' In swipe, change the done name to `${right}/${n} right` plus a tier line: 'Sharp eye.' when 6 or more are right, 'Solid.' at 4–5, 'Tricky set. Read the why lines.' below that. In estimate, replace 'You said X. Most people miss this one.' with 'You said X. Real: Y. You were Z× off.'. Add a 'Bullseye' confetti/haptic burst (navigator.vibrate(30)) for off < 0.05.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments, and whether people would share it."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "My map: node labels overlap badly ('Perceive → Apprais…', 'The Pause Feedback Loops', 'Flow' on 'Grit'), so the screen I'd most want to share looks messy. Truncated labels like 'Sleep Saves Your Le…' don't read well either. The feed also shows identical 4 round action buttons (♥ ↗ ? i) with no labels, so '?' vs 'i' is unclear.",
+   "fix": "In the map renderer, show labels only for the 8 most-connected played nodes plus the tapped one. Run a simple collision pass that hides a label if its bbox overlaps an earlier one. Add aria-label and a small caption under the side buttons: 'Save', 'Share', 'Why?', 'Source'.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments, and whether people would share it."
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 9,
+   "skipped": [
+    "wso-triad-venn: dot placement/clamping, axis scores beside circle labels, and the 'two of three' subtitle are app.js/rendering changes outside this file",
+    "wso-triad-venn: feed ordering (do not open with this card) is a feed/app concern, not card content",
+    "wso-triad-venn: kept the W result name 'The Dreamer' (the grit card's rename is in another file)",
+    "two-thirds-rule-choice/two-thirds-rule-swipe: kept 'QUMNI' as the only thinker, since removing it would leave thinkers empty",
+    "All other issues concern cards not in action.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 4,
+   "skipped": [
+    "All issues for cards not in perception.json (wso-triad-venn, premortem-order, boredom-signal-estimate, courage-kindness-reveal, circle-competence-venn, begin-with-end-eulogy-radar, impulse-pause-choice, growth-mindset-spectrum, golden-mean-courage-spectrum, order-chaos-border, base-rates-positive-test, never-miss-twice-choice, grit-passion-perseverance-venn, confirmation-bias-scout-soldier, system1-system2-who-drives, feedback-loops-swipe)",
+    "stress-mindset-spectrum model shortened slightly ('not breaking down' -> 'not breaking') to fit the 110-char validator limit"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 3,
+   "skipped": [
+    "base-rates-positive-test: optional new sensitive_kind:'medical' footer not added (requires schema/app change); removed sensitive flag instead, insight already says 'Real results need a real doctor'",
+    "All other issues concern cards not in thinking.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 1,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 2,
+   "skipped": [
+    "All other issues: card_ids not in habits.json (only never-miss-twice-choice is in this file)",
+    "never-miss-twice-choice (Okafor): used Sam's model wording instead of 'James Clear's rule of thumb: don't let it become twice' to avoid reintroducing a never-miss rule; the Clear-heuristic attribution was added to the insight instead"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 1,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 2,
+   "skipped": [
+    "order-chaos-border (Elena): kept the sleep/schedule/money question, reworded per Dr. Okafor, and added the 'unknown and difficult' question as Q5 so both fixes apply; shortened the insight to fit the 320-char limit"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 2,
+   "skipped": [
+    "growth-mindset-spectrum q1: used neutral framing 'Your first try at something new (a tool, a skill, a subject)' to serve both work (Radu) and general audiences, plus added neutral option (Sam)",
+    "growth-mindset-spectrum q2/q4: merged Radu/Sam/Okafor fixes into symmetric-ish scales (-2,0,1,2 and -1,0,1,2) rather than any single persona's exact set",
+    "All other issues target cards not in growth.json (wso-triad-venn, premortem-order, courage-kindness-reveal, etc.) and were ignored"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 4,
+   "skipped": [
+    "courage-kindness-reveal (Maya): proposed numbers (guessed ~10, needed ~5) are factually wrong; used the study's real figures (guessed ~20, took ~10) with her simpler prompt/choice format",
+    "courage-kindness-reveal (Maya): teacher/classmate-specific try_today replaced by Sam's broader graded version",
+    "courage-kindness-reveal (Sam): kept Mackesy book as 'inspired by' not applied; followed Elena's drop of Mackesy for source accuracy",
+    "courage-kindness-reveal (Lina): 'answer' field not added (not in reveal schema)"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 1,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 2,
+   "skipped": [
+    "premortem-order (Radu/Lina): app.js order() re-render with green ticks and 4-item merge not applied; card converted to a 2-step choice game instead (Maya's fix), which makes the order-game rendering issues moot. The 5-step order is kept in the first step's best-answer feedback, which names step 2 as the key move.",
+    "premortem-order (Maya): 'pick 3 of 6' multi-select isn't supported by the choice schema (one best answer per step), so I used two single-pick steps: first move, then which risk can be fixed today.",
+    "circle-competence-venn: making the dot position proportional to K/C and padding the labels need app.js/CSS changes, which are outside this file. Content fix done: axis label shortened to 'Track record', and the '' result renamed 'Outside Both (Early)' with text explaining the dot's position.",
+    "All other card_ids (wso-triad-venn, boredom-signal-estimate, courage-kindness-reveal, begin-with-end-eulogy-radar, etc.) are not in decisions.json."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 9,
+   "skipped": [
+    "begin-with-end-eulogy-radar: app.js tie handling (advice not appended when all axes are even) is a code change outside wisdom.json; I added game.advice_even to the card for app.js to use",
+    "begin-with-end-eulogy-radar: the hook keeps the 80th-birthday framing, and the insight now says Covey used a funeral and this card uses an 80th birthday; Elena allowed this option",
+    "begin-with-end-eulogy-radar: the exact section citation for the Seneca paraphrase was left out to keep the insight under 320 characters",
+    "All other issues are for cards that are not in wisdom.json"
+   ],
+   "validator_errors": 0
+  }
+ ]
+}

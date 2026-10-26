@@ -11,7 +11,7 @@
       "right": "Growth",
       "questions": [
         {
-          "q": "You bomb a test in a new subject. Your first thought is…",
+          "q": "Your first try at something new (a tool, a skill, a subject) goes badly. Your first thought is…",
           "options": [
             {
               "label": "I'm just not a numbers person.",
@@ -20,6 +20,10 @@
             {
               "label": "Ugh. Maybe I'm not cut out for this.",
               "value": -1
+            },
+            {
+              "label": "Depends what it is.",
+              "value": 0
             },
             {
               "label": "Annoying. Which part lost me?",
@@ -39,8 +43,12 @@
               "value": -2
             },
             {
-              "label": "I'd rather not compare, it stings.",
-              "value": -1
+              "label": "It stings, but I'm curious how they got there.",
+              "value": 0
+            },
+            {
+              "label": "Some of it is talent, some is practice.",
+              "value": 1
             },
             {
               "label": "I wonder how they practise.",
@@ -49,7 +57,7 @@
           ]
         },
         {
-          "q": "Someone gives you blunt feedback on your work.",
+          "q": "Someone gives you blunt feedback on something you made (an essay, a drawing, a dish).",
           "options": [
             {
               "label": "It feels like a verdict on me.",
@@ -66,15 +74,19 @@
           ]
         },
         {
-          "q": "Picking between an easy task and a stretch task, you usually…",
+          "q": "Picking between an easy task and a stretch task (a game level, a recipe, a project), you usually…",
           "options": [
             {
-              "label": "Take the easy one. Why risk looking bad?",
-              "value": -2
+              "label": "Usually the easy one.",
+              "value": -1
             },
             {
               "label": "Depends on who's watching.",
               "value": 0
+            },
+            {
+              "label": "Easy when I'm drained, stretch when I have energy.",
+              "value": 1
             },
             {
               "label": "Take the stretch. That's where I grow.",
@@ -86,22 +98,22 @@
       "zones": [
         {
           "upTo": -0.34,
-          "label": "Fixed-leaning",
-          "text": "Hard things feel like tests of who you are. That's tiring. Try treating the next one as a test of your method instead."
+          "label": "Leaning fixed today (on these topics)",
+          "text": "Today's answers treat hard things as tests of who you are. That's tiring, and very common. Next time, try treating it as a test of your method instead."
         },
         {
           "upTo": 0.34,
-          "label": "Mixed (like most people)",
-          "text": "Everyone carries both mindsets. Notice which topics flip you to 'fixed', that's where the work is."
+          "label": "Mixed today (like most people)",
+          "text": "Your answers mix both mindsets, as most people's do. Notice which topics flip you to 'fixed': that's where the work is."
         },
         {
           "upTo": 1,
-          "label": "Growth-leaning",
-          "text": "You treat ability as trainable. Pair that with real strategy changes, not just 'try harder', and it pays off."
+          "label": "Leaning growth today",
+          "text": "Today's answers treat ability as trainable. Pair that with real changes of method, not just 'try harder', and it pays off."
         }
       ]
     },
-    "insight": "Your mindset isn't one setting: it shifts by topic. Big studies find teaching a growth mindset helps a little on average, mostly for students who are struggling. It's a useful lens, not magic.",
+    "insight": "Mindset shifts by topic; it isn't one setting. Big studies find teaching it has small average effects, near zero in some, a bit larger for struggling students. A lens, not magic.",
     "model": "Treat a struggle as feedback on your method, not a verdict on your worth.",
     "try_today": "Pick one 'I'm just not a ___ person' belief and write one different method you haven't tried yet.",
     "source": {
@@ -110,13 +122,15 @@
       ],
       "work": "Mindset: The New Psychology of Success (2006)"
     },
-    "evidence": "moderate",
+    "evidence": "contested",
     "level": 1,
     "related": [
       "power_of_yet",
       "stress_mindset",
       "self_efficacy"
-    ]
+    ],
+    "try_team": "Each person shares one 'I'm not a ___ person' belief. The group suggests one new method to try for it. Fix methods, not people.",
+    "sensitive": true
   },
   {
     "id": "growth-mindset-praise-choice",
@@ -165,7 +179,7 @@
         }
       ]
     },
-    "insight": "In a classic 1998 study, kids praised for being smart later chose easier tasks than kids praised for effort. Replications are mixed and effects small, but praising strategy is low-risk and gives people something to repeat.",
+    "insight": "In a 1998 study, kids praised for being smart later picked easier tasks than kids praised for effort. Replications are mixed and effects small, but praising strategy is low-risk.",
     "model": "Praise what someone did (strategy, effort, choices), not what they are.",
     "try_today": "Give one person a compliment today that names a specific thing they did, not a trait they have.",
     "source": {
@@ -181,7 +195,8 @@
       "power_of_yet",
       "mistake_alchemy",
       "emotional_contagion"
-    ]
+    ],
+    "try_team": "At dinner, in class or at work, go round once: each person names one specific thing someone else did well this week, and how they did it."
   },
   {
     "id": "power-of-yet-reveal",
@@ -197,9 +212,9 @@
         "NOT YET",
         "Honestly, no difference"
       ],
-      "reveal": "Carol Dweck tells of a Chicago high school that graded unfinished courses 'Not Yet'. It's a story, not a study, but the point stands: 'Fail' sounds like an ending, 'Not yet' sounds like a road."
+      "reveal": "Any pick is fair here: there's no study behind this one. Carol Dweck tells of a Chicago school that graded unfinished courses 'Not Yet'. 'Fail' sounds like an ending; 'Not yet' sounds like a road."
     },
-    "insight": "Adding 'yet' doesn't change your skill, it changes the story about time. 'I can't' sounds permanent. 'I can't yet' says you're on a path, which makes the next attempt feel worth making.",
+    "insight": "'Yet' doesn't change your skill; it changes the story about time. 'I can't' sounds permanent. 'I can't yet' puts you on a path, so the next try feels worth making.",
     "model": "Add 'yet': it turns a verdict into a stage on a path.",
     "try_today": "Catch one 'I can't…' you say today and finish it out loud with '…yet, and my next step is ___'.",
     "source": {
@@ -213,26 +228,28 @@
     "related": [
       "reframing",
       "growth_mindset"
-    ]
+    ],
+    "try_team": "For one week, when anyone in your family, class or team says 'I can't', the others add a friendly '…yet?' and ask for the next step."
   },
   {
     "id": "grit-west-point-reveal",
     "concept": "grit",
     "domain": "growth",
     "type": "reveal",
-    "hook": "West Point's toughest summer: who made it through?",
+    "hook": "Talent or not giving up: who survived the army's hardest summer?",
     "title": "Grit vs Talent",
     "game": {
-      "prompt": "New West Point cadets face 'Beast Barracks', a brutal first summer. The academy scores every cadet on grades, fitness and leadership. What better predicted who stayed?",
+      "prompt": "New cadets at West Point, the US army academy, face 'Beast Barracks', a brutal first summer. Which better predicted who stayed?",
       "choices": [
-        "The academy's talent score",
+        "The academy's own admissions score",
         "A 12-question grit survey",
-        "Physical fitness"
+        "Their high-school grades"
       ],
-      "reveal": "In a 2007 study, a short grit survey predicted who finished Beast Barracks better than the academy's own score. But dropouts were rare, and later reviews found grit overlaps heavily with conscientiousness and predicts less than first claimed."
+      "reveal": "The grit survey, in that one 2007 study, beat the academy's own score at predicting who finished. But dropouts were rare, and later reviews found the effect smaller than the hype: it's mostly the 'keep going' part that matters.",
+      "answer": 1
     },
-    "insight": "Sticking with one goal through boredom and setbacks matters. But grit is contested: a 2017 meta-analysis of 88 samples found its links to success modest, mostly from the perseverance part. Treat it as one ingredient, not the recipe.",
-    "model": "Talent and staying power both count; neither alone is the whole story.",
+    "insight": "Sticking with a goal through boredom matters, but grit is contested: a 2017 review of 88 samples found modest links to success, mostly from the perseverance part. One ingredient, not the recipe.",
+    "model": "Keep going on the boring bits. That part of grit holds up; the rest is oversold.",
     "try_today": "Name one long-term goal and write the single smallest action that keeps it alive this week.",
     "source": {
       "thinkers": [
@@ -250,14 +267,15 @@
       "deliberate_practice",
       "quitting_wisely",
       "one_percent"
-    ]
+    ],
+    "try_team": "Each person names one long goal and the boring part they keep skipping. Pair up and agree one 10-minute step on that part this week."
   },
   {
     "id": "grit-passion-perseverance-venn",
     "concept": "grit",
     "domain": "growth",
     "type": "venn",
-    "hook": "Are you a sprinter, a wanderer, or a long-haul builder?",
+    "hook": "Sprinting, wandering, or building for the long haul: which is you now?",
     "title": "Your Grit Map",
     "game": {
       "axes": [
@@ -303,24 +321,24 @@
       "threshold": 0.55,
       "results": {
         "": {
-          "name": "The Explorer",
-          "text": "You're still sampling, and that's valid: interests are often found by trying things. Pick one thread to follow for a month and see if it holds."
+          "name": "Explore mode",
+          "text": "Today's answers show you're still sampling, and that's valid: interests are often found by trying things. Pick one thread to follow for a month. Low staying power often reflects energy and circumstances, not character."
         },
         "P": {
-          "name": "The Dreamer",
-          "text": "You know what lights you up, but effort comes in bursts. Shrink the daily step so small you can't skip it."
+          "name": "Spark mode",
+          "text": "Your answers show a clear interest, with effort that comes in bursts. Shrink the daily step so small you can't skip it."
         },
         "S": {
-          "name": "The Workhorse",
-          "text": "You can grind. Check that you're grinding toward something you actually chose, not just what's in front of you."
+          "name": "Steady mode",
+          "text": "Your answers show real staying power. Check that it's aimed at something you actually chose, not just what's in front of you."
         },
         "PS": {
-          "name": "The Long-Haul Builder",
-          "text": "Stable interest plus staying power. Protect it by also knowing when a path stops serving you: grit includes smart quitting."
+          "name": "Long-haul mode",
+          "text": "Today's answers show stable interest plus staying power. Protect it by also knowing when a path stops serving you: grit includes smart quitting."
         }
       }
     },
-    "insight": "Duckworth splits grit into two parts: keeping the same interest over time, and pushing through setbacks. How much grit predicts success is debated, so treat this as a mirror, not a score. Build the half that's weaker.",
+    "insight": "Duckworth splits grit in two: keeping an interest over time, and pushing through setbacks. How much grit predicts success is debated, so use this as a mirror, not a score.",
     "model": "Grit = a direction you keep + effort you sustain. Build the weaker half.",
     "try_today": "Write your one-sentence 'top goal' on a sticky note and put it where you'll see it tomorrow morning.",
     "source": {
@@ -335,7 +353,8 @@
       "quitting_wisely",
       "aim_high",
       "small_wins"
-    ]
+    ],
+    "try_team": "Everyone writes one goal for this term on a card and swaps with a partner, who checks in weekly: 'Still your goal? What's the next step?'"
   },
   {
     "id": "deliberate-practice-order",
@@ -355,7 +374,7 @@
       ],
       "explain": "Comfortable repetition keeps you where you are. Improvement comes from aiming at one weak spot, just beyond your reach, with fast feedback telling you what to change."
     },
-    "insight": "Hours alone don't make experts; focused practice on weak spots helps far more. The '10,000-hour rule' (popularised by Gladwell) oversimplifies Ericsson's work, and a 2014 meta-analysis found practice explains only part of skill differences.",
+    "insight": "Hours alone don't make experts; focused work on weak spots helps far more. The '10,000-hour rule' oversimplifies Ericsson, and a 2014 meta-analysis found practice explains only part of skill gaps.",
     "model": "Not more practice: harder, narrower practice with feedback.",
     "try_today": "Pick a skill you use often, name its weakest sub-part, and drill only that for 10 focused minutes.",
     "source": {
@@ -373,6 +392,81 @@
       "skill_gap",
       "flow",
       "deep_work"
+    ],
+    "try_team": "Pick one thing your team, class or family does often (a pitch, a dish, a match). Name its weakest part and run 3 quick rounds on just that, with feedback."
+  },
+  {
+    "id": "deliberate-practice-repetition-swipe",
+    "concept": "deliberate_practice",
+    "domain": "growth",
+    "type": "swipe",
+    "hook": "20 years of driving. Are you a better driver than in year three?",
+    "title": "Practice or Just Repetition?",
+    "game": {
+      "prompt": "Does this grow the skill, or just keep it where it is?",
+      "left": "Just repetition",
+      "right": "Real practice",
+      "items": [
+        {
+          "text": "Playing the songs you already know, start to finish, every evening.",
+          "side": "left",
+          "why": "Fun and worth doing, but it rehearses what you have. Growth lives in the bit you can't play yet."
+        },
+        {
+          "text": "Replaying the 3 bars you always fumble, slowly, until they're clean.",
+          "side": "right",
+          "why": "One weak spot, just past your level, with instant feedback from your own ears. Textbook."
+        },
+        {
+          "text": "Driving to school or work every day for 20 years.",
+          "side": "left",
+          "why": "Once a skill feels automatic, it mostly stops improving. Experience isn't the same as practice."
+        },
+        {
+          "text": "Going back over a chess game you lost to find the move where it went wrong.",
+          "side": "right",
+          "why": "Finding the exact error and fixing it is the heart of deliberate practice."
+        },
+        {
+          "text": "A 400-day streak on a language app, always on the easy setting.",
+          "side": "left",
+          "why": "Streaks build habit, which matters. But if it never stretches you, it's mostly upkeep."
+        },
+        {
+          "text": "Rewriting a great article from your notes, then comparing it to the original.",
+          "side": "right",
+          "why": "Ben Franklin's own trick: the original shows exactly where your version falls short."
+        },
+        {
+          "text": "Cooking a new dish, then asking someone for one thing to change.",
+          "side": "right",
+          "why": "A stretch plus honest feedback. Asking for just one thing keeps it usable."
+        }
+      ]
+    },
+    "insight": "Ericsson argued that once a skill feels automatic, more hours add little. Growth comes from narrow, slightly-too-hard work with feedback. Experience isn't the same as practice.",
+    "model": "Hours keep a skill. Feedback on your weakest part grows it.",
+    "try_today": "Pick a hobby where you've stopped improving. Find the one moment you always get wrong and practise only that for 10 minutes.",
+    "try_team": "Pick one thing your class, team or family does on repeat. Ask: where are we just repeating? Choose one weak spot to practise, with feedback.",
+    "source": {
+      "thinkers": [
+        "K. Anders Ericsson",
+        "Robert Pool",
+        "Benjamin Franklin"
+      ],
+      "work": "Peak (2016); The Autobiography of Benjamin Franklin (1791)"
+    },
+    "from_source": {
+      "quote": "without looking at the book, try'd to compleat the papers again",
+      "cite": "Benjamin Franklin, Autobiography, Part One (written 1771), on rewriting Spectator essays",
+      "next_read": "Franklin's Autobiography, Part One: the passage where he teaches himself to write from The Spectator"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "skill_gap",
+      "flow",
+      "grit"
     ]
   },
   {
@@ -380,24 +474,24 @@
     "concept": "mistake_alchemy",
     "domain": "growth",
     "type": "choice",
-    "hook": "You just messed up at work. What you do in the next hour matters.",
+    "hook": "You just messed up in front of people. What you do next matters.",
     "title": "Mistakes as Data",
     "game": {
       "steps": [
         {
-          "scenario": "You sent a report with a wrong number to your whole team. Someone points it out. Your first move…",
+          "scenario": "You posted the wrong date for a friend's party in the group chat. Two people already planned around it. Someone points it out. Your first move…",
           "options": [
             {
-              "text": "Quietly fix it and hope nobody else noticed.",
-              "feedback": "Very human. But the lesson stays hidden, and others may still be using the wrong number."
+              "text": "Quietly delete the message and hope nobody noticed.",
+              "feedback": "Very human. But the lesson stays hidden, and people may still plan around the wrong date."
             },
             {
-              "text": "Send a short correction: what was wrong, the right number, done.",
+              "text": "Post a short correction: what was wrong, the right date, sorry for the hassle.",
               "best": true,
               "feedback": "Clean and calm. Owning it fast builds trust and stops the error spreading."
             },
             {
-              "text": "Apologise at length about how careless you are.",
+              "text": "Apologise at length about how useless you are.",
               "feedback": "Harsh self-talk feels responsible but uses energy you need for the fix. Be kind to yourself and precise about the error."
             }
           ]
@@ -412,17 +506,17 @@
             {
               "text": "Write 3 lines: what happened, why, what I'll change.",
               "best": true,
-              "feedback": "This is the alchemy: a mistake turned into a rule you keep, like 'double-check numbers before sending'."
+              "feedback": "This is the alchemy: a mistake turned into a rule you keep, like 'check the date before I post'."
             },
             {
-              "text": "Decide you're not cut out for this job.",
-              "feedback": "One error is one data point, not a verdict on you. Look for the cause you can change."
+              "text": "Decide you're just hopeless at organising things.",
+              "feedback": "One slip is one data point, not a verdict on you. Look for the cause you can change."
             }
           ]
         }
       ]
     },
-    "insight": "A mistake shows exactly where your method breaks, more precisely than any praise. Ray Dalio sums it up as pain plus reflection equals progress. The trick is reflecting on the cause, not punishing yourself.",
+    "insight": "A mistake shows exactly where your method breaks. Ray Dalio sums it up as pain plus reflection equals progress. The trick is to study the cause, not punish yourself.",
     "model": "Mistake → cause → new rule. Keep the lesson, drop the shame.",
     "try_today": "Write down one recent mistake in 3 lines: what happened, why, and one rule you'll follow next time.",
     "source": {
@@ -439,34 +533,41 @@
       "self_compassion",
       "premortem"
     ],
-    "sensitive": true
+    "sensitive": true,
+    "try_team": "After a slip at work, school or home, hold a 5-minute no-blame review: what happened, why, and one rule you add. Talk about the process, not the person.",
+    "from_source": {
+      "quote": "To have faults and not to reform them, this, indeed, should be pronounced having faults.",
+      "cite": "Confucius, Analects XV.29 (trans. James Legge, 1861)",
+      "next_read": "Analects, Book I.8 ('When you have faults, do not fear to abandon them') and Book XV"
+    }
   },
   {
     "id": "small-wins-estimate",
     "concept": "small_wins",
     "domain": "growth",
-    "type": "estimate",
-    "hook": "Managers ranked 5 motivators. Guess where 'progress' landed.",
-    "title": "The Cookie Jar of Wins",
+    "type": "reveal",
+    "hook": "What makes a good day at work or study? Bosses guessed wrong.",
+    "title": "The Progress Principle",
     "game": {
-      "question": "669 managers ranked five workplace motivators (like recognition, incentives, clear goals, support, and making progress). Where did 'making progress' land? (1 = top, 5 = last)",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "unit": "",
-      "answer": 5,
-      "explain": "Dead last. Yet in nearly 12,000 diary entries from 238 knowledge workers, making progress on meaningful work was the strongest booster of their best days."
+      "prompt": "669 managers ranked five things that motivate people: praise, rewards, clear goals, support, and making progress. Where did 'making progress' land?",
+      "choices": [
+        "1st",
+        "2nd or 3rd",
+        "4th",
+        "Dead last (5th)"
+      ],
+      "answer": 3,
+      "reveal": "Dead last. Yet in nearly 12,000 diary entries from 238 workers, making progress on meaningful work was the strongest booster of their best days. Same goes for school: a tiny visible win beats a big vague goal."
     },
-    "insight": "We underrate small steps forward, even though diary studies show they lift motivation most. David Goggins calls it a 'cookie jar': a mental store of past wins you reach into when things get hard. Small wins become fuel.",
+    "insight": "We underrate small steps, yet in 12,000 diary entries visible progress lifted motivation most. Keeping a record of your wins gives you evidence to reach for on hard days.",
     "model": "Progress you can see is the strongest fuel. Keep evidence of it.",
-    "try_today": "Start a 'cookie jar' note: list 3 hard things you've already handled. Add one small win every evening.",
+    "try_today": "Start a 'wins' note: list 3 hard things you've already handled. Add one small win every evening.",
     "source": {
       "thinkers": [
         "Teresa Amabile",
-        "Steven Kramer",
-        "David Goggins"
+        "Steven Kramer"
       ],
-      "work": "The Progress Principle (2011); Can't Hurt Me (2018)"
+      "work": "The Progress Principle (2011)"
     },
     "evidence": "moderate",
     "level": 1,
@@ -474,6 +575,45 @@
       "self_efficacy",
       "never_miss_twice",
       "one_percent"
+    ],
+    "sensitive": true,
+    "try_team": "End a meeting, class or family dinner with one quick round: 'One small step forward I made this week.' 30 seconds each, no ranking."
+  },
+  {
+    "id": "small-wins-setback-reveal",
+    "concept": "small_wins",
+    "domain": "growth",
+    "type": "reveal",
+    "hook": "One step forward, one step back. Which does your brain count louder?",
+    "title": "Setbacks Shout, Wins Whisper",
+    "game": {
+      "prompt": "In a diary study, 238 people wrote about their workday, every day, for months. What moved their mood more: a step forward, or a step back?",
+      "choices": [
+        "A step forward",
+        "A step back",
+        "About the same"
+      ],
+      "answer": 1,
+      "reveal": "A step back. In Amabile and Kramer's diaries, a setback's power to sink happiness was more than twice as strong as progress's power to lift it. If you picked 'forward', that's the hopeful guess, and progress did matter a lot. It just whispers while setbacks shout."
+    },
+    "insight": "Bad events tend to weigh more than good ones (Baumeister and colleagues, 2001). So a day with one step forward and one back can feel like a loss. Writing wins down gives them a fair vote.",
+    "model": "Setbacks shout, progress whispers. Write the wins down so they get a vote.",
+    "try_today": "Tonight, write one step back and two steps forward from today, however small. Read the forward ones twice.",
+    "try_team": "End the week with each person naming one setback and one bit of progress. Write the progress where everyone can see it.",
+    "source": {
+      "thinkers": [
+        "Teresa Amabile",
+        "Steven Kramer",
+        "Roy Baumeister"
+      ],
+      "work": "The Progress Principle (2011); Bad is stronger than good (2001)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "self_efficacy",
+      "never_miss_twice",
+      "self_compassion"
     ],
     "sensitive": true
   },
@@ -526,7 +666,7 @@
         }
       ]
     },
-    "insight": "Quitting isn't failure; it frees time and energy for better bets. Seth Godin separates 'the dip' worth pushing through from dead ends. Annie Duke adds: we usually quit too late, held back by sunk costs.",
+    "insight": "Quitting isn't failure; it frees time for better bets. Seth Godin separates a dip worth pushing through from a dead end. Annie Duke adds: we usually quit too late, held by sunk costs.",
     "model": "Quit what you wouldn't start today. Push through dips that still show progress.",
     "try_today": "Write one commitment you're unsure about and set a 'kill criteria': the signal that would tell you to stop.",
     "source": {
@@ -542,6 +682,7 @@
       "opportunity_cost",
       "loss_aversion",
       "grit"
-    ]
+    ],
+    "try_team": "Pick one shared project, club or family plan and agree its kill criteria together: 'If ___ hasn't happened by ___, we stop or change course.'"
   }
 ]

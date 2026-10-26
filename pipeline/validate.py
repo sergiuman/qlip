@@ -121,6 +121,8 @@ def validate_game(t, g, errs):
         _req(g, "reveal", str, errs, w)
         if _req(g, "choices", list, errs, w) and not 2 <= len(g["choices"]) <= 4:
             errs.append("reveal: 2-4 choices")
+        if "answer" in g and not (isinstance(g["answer"], int) and 0 <= g["answer"] < len(g.get("choices", []))):
+            errs.append("reveal: answer must be a valid choice index")
 
 
 def all_text(obj):
@@ -162,6 +164,14 @@ def validate_card(card, concepts):
     src = card["source"]
     if not isinstance(src, dict) or not src.get("thinkers") or not src.get("work"):
         errs.append("source needs thinkers[] and work")
+    if "try_team" in card and (not isinstance(card["try_team"], str) or len(card["try_team"]) > 160):
+        errs.append("try_team must be a string <= 160 chars")
+    fs = card.get("from_source")
+    if fs is not None:
+        if not isinstance(fs, dict) or not fs.get("quote") or not fs.get("cite"):
+            errs.append("from_source needs quote and cite")
+        elif len(fs["quote"].split()) > 30:
+            errs.append("from_source.quote must be <= 30 words")
     rel = card["related"]
     if not isinstance(rel, list) or not 1 <= len(rel) <= 3 or any(r not in concepts for r in rel):
         errs.append(f"related must be 1-3 known concept ids: {rel}")

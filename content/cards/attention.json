@@ -18,17 +18,17 @@
               "value": -2
             },
             {
-              "label": "Stretch, then go back in",
-              "value": 1
+              "label": "Switch to something easier for a bit",
+              "value": 0
             },
             {
-              "label": "Stay with it until it gives a little",
+              "label": "Take a short pause, then go back in",
               "value": 2
             }
           ]
         },
         {
-          "q": "My notifications while I work are…",
+          "q": "When I study or work on something hard, my notifications are…",
           "options": [
             {
               "label": "All on, I like being reachable",
@@ -45,7 +45,7 @@
           ]
         },
         {
-          "q": "My most important work happens…",
+          "q": "The thing that matters most to me right now (a subject, a project, a hobby) gets done…",
           "options": [
             {
               "label": "In the gaps between other things",
@@ -82,22 +82,22 @@
       "zones": [
         {
           "upTo": -0.34,
-          "label": "Mostly shallow",
-          "text": "Your days are full of reacting. That's normal in a ping-everywhere world, not a flaw. One protected block a day would change your output more than any app."
+          "label": "Mostly shallow today",
+          "text": "Today's answers lean toward reacting. That's normal in a ping-everywhere world, not a flaw. One protected block a day would change more than any app."
         },
         {
           "upTo": 0.34,
-          "label": "Mixed",
-          "text": "You go deep sometimes, but it's luck more than design. Pick the time, the place and the one task in advance and it gets far more reliable."
+          "label": "Mixed today",
+          "text": "Your answers show deep focus sometimes, more by luck than design. Choose the time, the place and the one task in advance and it gets far more reliable."
         },
         {
           "upTo": 1,
-          "label": "Deep-leaning",
-          "text": "You already guard your focus. Next level: make the block longer by 10 minutes, or tackle a harder problem inside it."
+          "label": "Deep-leaning today",
+          "text": "Your answers say you already guard your focus. Next step: stretch the block by 10 minutes, or bring a harder problem into it."
         }
       ]
     },
-    "insight": "Newport argues that focus on hard things without distraction is getting rarer, so it's getting more valuable. It's a skill, not a personality type. You train it by scheduling it and by sitting through the first few uncomfortable minutes.",
+    "insight": "Newport argues that focus on hard things is getting rarer, so it's worth more. It's a skill, not a personality type: schedule it, then sit through the first uncomfortable minutes.",
     "model": "Busy is not the same as productive. Protect one block for the work that actually moves things.",
     "try_today": "Pick one task, set a 25-minute timer, put your phone in another room, and work until it rings.",
     "source": {
@@ -112,7 +112,13 @@
       "flow",
       "attention_residue",
       "environment_design"
-    ]
+    ],
+    "try_team": "Hold a 45-minute quiet hour together: phones in a basket, questions wait. Afterwards each person names one thing they finished.",
+    "from_source": {
+      "quote": "the faculty of voluntarily bringing back a wandering attention, over and over again, is the very root of judgment, character, and will.",
+      "cite": "William James, The Principles of Psychology (1890), Vol. 1, Ch. XI 'Attention'",
+      "next_read": "The Principles of Psychology, Vol. 1, Ch. XI 'Attention' (read the whole chapter; the passage is in its closing pages on voluntary attention)"
+    }
   },
   {
     "id": "deep-work-sort",
@@ -127,7 +133,7 @@
       "right": "Deep",
       "items": [
         {
-          "text": "Replying 'sounds good!' to an email",
+          "text": "Replying 'sounds good!' in a group chat",
           "side": "left",
           "why": "Easy to do while distracted, and easy for anyone to do."
         },
@@ -152,15 +158,15 @@
           "why": "Hard trade-offs need quiet thinking, not 30-second bursts."
         },
         {
-          "text": "Tidying your desktop files",
+          "text": "Rearranging the apps on your phone",
           "side": "left",
           "why": "Feels productive, uses little brain. A classic stand-in for hard work."
         }
       ]
     },
-    "insight": "Shallow tasks are real and need doing, but they are easy to copy and easy to do tired. Deep tasks create new value and need your fresh hours. Most people spend their best energy on the shallow pile first.",
+    "insight": "Shallow tasks need doing, but anyone can do them tired. Deep tasks make something new and need your fresh hours. Most of us spend our best energy on the shallow pile first.",
     "model": "Give your freshest hour to the deep pile. Batch the shallow pile for when you're tired.",
-    "try_today": "Write tomorrow's list in two columns, deep and shallow, and schedule one deep item before you open email.",
+    "try_today": "Write tomorrow's list in two columns, deep and shallow, and do one deep item before you open any messages.",
     "source": {
       "thinkers": [
         "Cal Newport"
@@ -172,7 +178,13 @@
     "related": [
       "flow",
       "opportunity_cost"
-    ]
+    ],
+    "try_team": "Everyone sorts this week's tasks into deep and shallow. Protect one deep slot each, then clear the shallow ones together in one 20-minute sweep.",
+    "from_source": {
+      "quote": "My experience is what I agree to attend to. Only those items which I notice shape my mind",
+      "cite": "William James, The Principles of Psychology (1890), Vol. 1, Ch. XI 'Attention'",
+      "next_read": "The Principles of Psychology, Vol. 1, Ch. XI 'Attention', opening pages"
+    }
   },
   {
     "id": "attention-residue-estimate",
@@ -190,7 +202,7 @@
       "answer": 47,
       "explain": "About 47 seconds on average in her studies from 2016 onward, down from about 2.5 minutes in 2004 (Mark, Attention Span, 2023). Sophie Leroy separately found that after a switch, part of your mind stays stuck on the task you just left."
     },
-    "insight": "Leroy called it attention residue: after a switch, part of your mind is still on the last task, so you think less sharply on the new one. Quick 'just checking' glances look free, but they leave a trail. Finishing, or writing a note on where you stopped, helps you let go.",
+    "insight": "Leroy calls it attention residue: after a switch, part of your mind stays on the last task. So quick 'just checking' glances aren't free. A note on where you stopped helps you let go.",
     "model": "Every switch leaves a bit of you behind. Fewer switches means more of you shows up.",
     "try_today": "Before you switch tasks, write one line: where you stopped and the next step. Then switch.",
     "source": {
@@ -205,19 +217,20 @@
     "related": [
       "deep_work",
       "environment_design"
-    ]
+    ],
+    "try_team": "Start your next meeting, lesson or family task with 60 seconds of silence: everyone writes where they left their last task. Then phones face-down."
   },
   {
     "id": "sleep-memory-choice",
     "concept": "sleep_memory",
     "domain": "attention",
     "type": "choice",
-    "hook": "It's 1 a.m. before a big exam. Do you cram or close the book?",
+    "hook": "It's 1 a.m. before a big day. Do you push on or close the laptop?",
     "title": "Sleep Saves Your Learning",
     "game": {
       "steps": [
         {
-          "scenario": "Exam at 9 a.m. You've studied all evening. It's 1 a.m. and you feel you've only half got it. You…",
+          "scenario": "Big exam or presentation at 9 a.m. You've prepared all evening. It's 1 a.m. and you feel you've only half got it. You…",
           "options": [
             {
               "text": "Do one quick review of the key points, then sleep",
@@ -225,12 +238,12 @@
               "feedback": "Smart. A short review before sleep, then real sleep, gives your brain both the material and the time to store it."
             },
             {
-              "text": "Pull an all-nighter to cover everything",
+              "text": "Stay up all night to cover everything",
               "feedback": "Understandable panic. But without sleep, recall and focus usually drop, so extra hours can cost more than they add."
             },
             {
               "text": "Sleep, then cram at 6 a.m.",
-              "feedback": "Better than no sleep. But cutting the last hours of the night trims REM-rich sleep, which research links to memory too."
+              "feedback": "Better than no sleep. But you're tired at 9 a.m., and you've lost some of the sleep that seems to help memory."
             }
           ]
         },
@@ -239,12 +252,12 @@
           "options": [
             {
               "text": "Practice once a week for three hours",
-              "feedback": "Better than nothing, but one long session gets only one night of sleep to lock it in."
+              "feedback": "Better than nothing, but one long session is harder to hold on to than the same time spread across many days."
             },
             {
               "text": "Practice 20 minutes most days, sleeping well between",
               "best": true,
-              "feedback": "Yes. Spaced practice plus nights of sleep lets the brain replay and file what you learned."
+              "feedback": "Yes. Spreading practice out is one of the best-tested ways to learn, and the nights of sleep in between seem to help too."
             },
             {
               "text": "Practice late at night to save time",
@@ -254,8 +267,8 @@
         }
       ]
     },
-    "insight": "Lots of research shows sleep helps the brain strengthen and file what you learned that day. Learning is the study plus the nights after. Walker's book made this famous, though critics say some of its wider claims go beyond the evidence.",
-    "model": "Learning = practice + sleep. Cutting sleep to study more often means remembering less.",
+    "insight": "Many studies link sleep to holding on to what you learned, though the effect is smaller and patchier than popular books suggest (Walker's included).",
+    "model": "Learning = practice + sleep. Cutting sleep to cram more rarely pays off.",
     "try_today": "Set an alarm 30 minutes before your bedtime tonight that means: screens down, lights low.",
     "source": {
       "thinkers": [
@@ -264,12 +277,13 @@
       ],
       "work": "Stickgold, Sleep-dependent memory consolidation, Nature (2005); Walker, Why We Sleep (2017)"
     },
-    "evidence": "strong",
+    "evidence": "moderate",
     "level": 1,
     "related": [
       "deliberate_practice",
       "deep_work"
-    ]
+    ],
+    "try_team": "Agree a team rule: no messages about tomorrow's deadline after 10 p.m. Try it for one release or project cycle and compare how the mornings go."
   },
   {
     "id": "doomscroll-loop-order",
@@ -289,7 +303,7 @@
       ],
       "explain": "The feed works like a slot machine: you never know when the next good post comes, so you keep pulling. The relief is real but brief, and it doesn't fix the itch that started it."
     },
-    "insight": "Scrolling is a habit loop driven by unpredictable rewards, which are the hardest kind to stop chasing. You're not weak; the design is strong. Haidt argues heavy phone use harms young people, but researchers still debate how big that effect is.",
+    "insight": "Feeds reward you at random, the hardest kind of reward to stop chasing. You're not weak; the design is strong. Haidt links heavy phone use to harm in teens; researchers still debate how much.",
     "model": "If the reward is random, the habit is sticky. Break the loop at the itch, not the thumb.",
     "try_today": "Next time you reach for your phone, pause and name the itch in one word (bored, tense, lonely). Then decide.",
     "source": {
@@ -306,7 +320,8 @@
       "habit_loop",
       "fixes_that_fail",
       "impulse_pause"
-    ]
+    ],
+    "try_team": "Each person names the itch that starts their scroll (bored, tense, lonely). Then everyone picks one swap for it, like a walk or texting a friend."
   },
   {
     "id": "doomscroll-loop-pigeons",
@@ -322,9 +337,10 @@
         "Pigeon B (randomly fed)",
         "About the same"
       ],
-      "reveal": "Pigeon B, by a lot. Behaviour rewarded on an unpredictable schedule is much harder to extinguish (Ferster & Skinner). Feeds, inboxes and slot machines all pay out unpredictably."
+      "reveal": "Pigeon B, by a lot. If you picked A, that's the natural guess: more food should mean a stronger habit. But random rewards are much harder to give up (Ferster & Skinner). Feeds and slot machines pay out at random too.",
+      "answer": 1
     },
-    "insight": "When rewards are predictable, you notice fast when they stop. When they're random, every empty pull feels like 'maybe next time.' That's why apps with refresh-for-something-new are so hard to put down.",
+    "insight": "When rewards are predictable, you notice fast when they stop. When they're random, every empty pull feels like 'maybe next time.' That's why refresh-for-something-new apps are hard to put down.",
     "model": "Random rewards build the stickiest habits. Make the good stuff predictable and the feed boring.",
     "try_today": "Turn off notifications for one app that pings you at random, and check it at two set times instead.",
     "source": {
@@ -339,7 +355,8 @@
     "related": [
       "habit_loop",
       "environment_design"
-    ]
+    ],
+    "try_team": "Agree two set times a day to check the family, class or team chat, instead of answering every ping. Try it for a week and compare notes."
   },
   {
     "id": "boredom-signal-estimate",
@@ -355,9 +372,9 @@
       "step": 1,
       "unit": "%",
       "answer": 67,
-      "explain": "12 of 18 men (67%) and 6 of 24 women (25%) pressed it at least once, and all of them had earlier said they'd pay money to avoid that shock (Wilson et al., Science, 2014). Small samples, so treat the exact numbers loosely."
+      "explain": "2 in 3 men chose to ZAP THEMSELVES rather than just sit with their thoughts for 15 minutes (women: 1 in 4), even though they'd said they'd pay to avoid that shock. Small study (Wilson et al., Science, 2014), but… oof."
     },
-    "insight": "Many of us would rather feel something unpleasant than feel nothing. Researchers like Danckert and Eastwood describe boredom as a signal that what you're doing doesn't engage you. Listened to, it can point you toward a better goal instead of a quick escape.",
+    "insight": "That urge to grab your phone the second you're bored? Same thing. Researchers see boredom as a signal that what you're doing doesn't engage you. Listened to, it can point to a better goal.",
     "model": "Boredom is a question, not a void: 'What would actually be worth my attention right now?'",
     "try_today": "Next time you feel bored, wait two minutes before grabbing your phone and ask: what would I like to be doing?",
     "source": {
@@ -374,6 +391,113 @@
       "doomscroll_loop",
       "flow",
       "procrastination_emotion"
+    ],
+    "try_team": "Set a 3-minute timer: no phones, no talking, just sit. When it rings, each person shares one idea or wish that popped up while bored.",
+    "from_source": {
+      "quote": "all the unhappiness of men arises from one single fact, that they cannot stay quietly in their own chamber.",
+      "cite": "Blaise Pascal, Pensées (1670), §139, trans. W. F. Trotter",
+      "next_read": "Pensées, Section II, §139 to §143 (on diversion), Trotter translation"
+    }
+  },
+  {
+    "id": "attention-residue-clean-switch",
+    "concept": "attention_residue",
+    "domain": "attention",
+    "type": "choice",
+    "hook": "Mid-task, your phone buzzes. Is checking it really 'just a second'?",
+    "title": "Leave Tasks Cleanly",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You're halfway through something that needs thought: homework, a tax form, a tricky knitting pattern. Your phone buzzes with a group chat. You…",
+          "options": [
+            {
+              "text": "Check it now, then come back",
+              "feedback": "Very normal. The catch: the task you left keeps tugging at you while you read, and the chat tugs once you're back. Both get less of you."
+            },
+            {
+              "text": "Finish the sentence or row, jot the next step, then check",
+              "best": true,
+              "feedback": "Yes. Leroy and Glomb found a quick 'ready-to-resume' note helps people let go of the unfinished task, so the next one gets more of their mind."
+            },
+            {
+              "text": "Ignore it, but keep wondering who it was",
+              "feedback": "Half a win: the phone stayed down. But the wondering is residue too. Next time, put the phone out of sight before you start."
+            }
+          ]
+        },
+        {
+          "scenario": "You have one hour for two things: writing something hard (an essay, a letter) and catching up on messages. Which plan leaves the least residue?",
+          "options": [
+            {
+              "text": "Switch every few minutes so nothing piles up",
+              "feedback": "It feels efficient, but each switch leaves a trail. Twenty switches, twenty trails."
+            },
+            {
+              "text": "40 minutes on the hard thing, then 20 on messages",
+              "best": true,
+              "feedback": "Yes. One switch, at a clean stopping point. The messages will still be there in 40 minutes."
+            },
+            {
+              "text": "Both at once, with the chat open in a corner",
+              "feedback": "Most of us feel we can multitask. Mostly we switch fast and pay a small cost each time."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Leroy found people do worse on a new task when the last one is left unfinished. A short note on where you stopped helps your mind let go. A few clean switches beat many quick ones.",
+    "model": "Close the loop before you switch: finish the bit, note the next step, then move.",
+    "try_today": "Check your messages at three set times today instead of whenever they buzz.",
+    "try_team": "Agree a 'clean switch' rule for a week: before interrupting someone, ask 'good stopping point?' If not, wait two minutes.",
+    "source": {
+      "thinkers": [
+        "Sophie Leroy",
+        "Theresa Glomb"
+      ],
+      "work": "Leroy, Why is it so hard to do my work? (2009); Leroy & Glomb, Tasks interrupted, Organization Science (2018)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deep_work",
+      "environment_design"
+    ]
+  },
+  {
+    "id": "sleep-memory-replay-reveal",
+    "concept": "sleep_memory",
+    "domain": "attention",
+    "type": "reveal",
+    "hook": "Rats ran a maze all day. At night, their brains did something eerie.",
+    "title": "Your Brain Replays the Day",
+    "game": {
+      "prompt": "Scientists record 'place cells' in rats: brain cells that fire at certain spots along a maze route. The rats run the maze, then fall asleep. What do those cells do during sleep?",
+      "choices": [
+        "Go quiet: the brain is resting",
+        "Fire at random, like static",
+        "Replay the maze route, in order"
+      ],
+      "answer": 2,
+      "reveal": "They replay the route, in the same order, often many times faster than the real run. If you guessed 'quiet', that's the common view: sleep looks like switching off. It isn't (Wilson & McNaughton, 1994; Lee & Wilson, 2002)."
+    },
+    "insight": "Human studies suggest something similar: memories get reactivated and strengthened in deep sleep. The replay evidence is mostly from rats, but it's a big reason sleep after learning matters.",
+    "model": "Sleep isn't switching off. It's when your brain rehearses what you learned today.",
+    "try_today": "Tonight, spend two minutes before bed recalling one thing you learned today. Then put the screen away and sleep.",
+    "try_team": "End the day as a family or class: each person says one thing they learned. Recall it again at breakfast and see what stuck.",
+    "source": {
+      "thinkers": [
+        "Matthew Wilson",
+        "Bruce McNaughton",
+        "Björn Rasch"
+      ],
+      "work": "Wilson & McNaughton, Science (1994); Lee & Wilson, Neuron (2002); Rasch et al., Science (2007)"
+    },
+    "evidence": "strong",
+    "level": 2,
+    "related": [
+      "deliberate_practice",
+      "deep_work"
     ]
   }
 ]

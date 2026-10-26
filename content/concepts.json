@@ -14,12 +14,12 @@
     {"id": "systems", "name": "Systems", "color": "#10B981", "emoji": "🔁", "tagline": "Loops, delays, leverage"},
     {"id": "habits", "name": "Habits", "color": "#EAB308", "emoji": "🧱", "tagline": "Tiny votes for who you become"},
     {"id": "emotions", "name": "Emotions", "color": "#EF4444", "emoji": "🌊", "tagline": "Weather you can read"},
-    {"id": "meaning", "name": "Meaning", "color": "#F59E0B", "emoji": "🧭", "tagline": "Aim, responsibility, why"},
+    {"id": "meaning", "name": "Meaning", "color": "#D946EF", "emoji": "🧭", "tagline": "Aim, responsibility, why"},
     {"id": "growth", "name": "Growth", "color": "#22C55E", "emoji": "🌱", "tagline": "Ability is a verb"},
     {"id": "connection", "name": "Connection", "color": "#EC4899", "emoji": "🤝", "tagline": "Minds meeting minds"},
     {"id": "attention", "name": "Attention & Rest", "color": "#6366F1", "emoji": "🌙", "tagline": "Your mind's real currency"},
     {"id": "decisions", "name": "Decisions", "color": "#14B8A6", "emoji": "🎲", "tagline": "Choosing under uncertainty"},
-    {"id": "wisdom", "name": "Old Wisdom", "color": "#A16207", "emoji": "🏛", "tagline": "2,500 years of field-tested advice"}
+    {"id": "wisdom", "name": "Old Wisdom", "color": "#A8A29E", "emoji": "🏛", "tagline": "2,500 years of field-tested advice"}
   ],
   "concepts": [
     {"id": "wso_triad", "domain": "action", "name": "Will · Skill · Opportunity", "line": "Every action needs at least two of three: wanting it, being able, and an open door.", "thinkers": ["QUMNI", "Deci & Ryan", "Bandura", "Giddens"], "sources": ["qumni_wso"], "links": [{"to": "self_efficacy", "type": "BUILDS_ON"}, {"to": "goal_directed_perception", "type": "BUILDS_ON"}, {"to": "start_with_why", "type": "AMPLIFIES"}]},

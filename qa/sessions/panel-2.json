@@ -1,0 +1,618 @@
+{
+ "session": 2,
+ "personas": [
+  {
+   "persona": "Maya, 16, Manchester student. Lives on TikTok, can't stand anything that feels like school or a lecture, and only stays if it's fast, surprising and about her.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The reveal is a long scroll of homework: reveal text, then the score, THE MODEL, TRY TODAY, a 'WITH YOUR TEAM OR CLASS' box, the Next button, 'Why? 15-second read', a disclaimer and Play again. On every card the b-screenshot needs a full scroll. The 'team or class' box is literally the word 'class' and makes it feel like a worksheet. By the time I get to the Next button I've already swiped away.",
+     "fix": "Collapse try_team by default behind a one-line toggle labelled 'Do it with friends ▸' (rename the header from 'WITH YOUR TEAM OR CLASS' to 'WITH FRIENDS'). Put the Next button directly under TRY TODAY. Keep the reveal and the model above the fold, so the reveal fits in one phone screen at 390px."
+    },
+    {
+     "card_id": "small-wins-estimate",
+     "severity": "high",
+     "problem": "It's about '669 managers' ranking 'workplace motivators' and '238 knowledge workers'. That has nothing to do with me, so I would scroll past at the hook. The ending is also wrong for a rank: it says 'Your guess: 1. The real number: 5.'",
+     "fix": "Hook: 'What actually makes you have a good day? Bosses guessed wrong. Guess where \"making progress\" ranked.' Question: 'Bosses ranked 5 things that motivate people: praise, rewards, clear goals, support, making progress. Where did \"making progress\" land? (1 = top, 5 = last)'. Add one line to explain: 'Same goes for school: a tiny visible win beats a big vague goal.' In app.js estimate results, when max <= 10 and unit is '', render 'Your guess: #1. Actual rank: #5.'"
+    },
+    {
+     "card_id": "opportunity-cost-dvd",
+     "severity": "medium",
+     "problem": "'A film you love costs 15 to buy': 15 what? Also, nobody my age buys films. The tension doesn't land, and the reveal is a stats lecture (75%, 55%, Frederick et al., replications).",
+     "fix": "Prompt: 'New trainers you love cost £60. A: buy them. B: keep the £60 for other things you want (gig tickets, food with mates, saving).' Choices: 'Buy them' / 'Keep the £60 for other stuff'. Reveal: 'No wrong answer. But just naming option B made way fewer people buy in a study (75% → 55%). Your brain hides what a yes costs until someone says it out loud.' Rename the id/title away from 'dvd'."
+    },
+    {
+     "card_id": "opportunity-gap-lost-einsteins-estimate",
+     "severity": "medium",
+     "problem": "The hook promises 'Two kids, same maths scores at age 8' but the question asks about the richest 1% vs the poorer half, with no matching scores at all. I felt tricked and confused about what I was guessing.",
+     "fix": "Change the hook to: 'Rich kid vs poorer kid. How many times more likely is the rich one to become an inventor?' Or keep the hook and rewrite the question: 'Two US kids with equally high maths scores at age 8: one from a rich family, one from a poorer one. How many times more likely is the rich kid to end up an inventor?' Before using that version, check the Bell et al. figure for high-scoring kids (roughly 2–4x, not 10x) and set answer/min/max to match."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The small labels feel like an app talking to itself. The feed says '1 steps' (grammar error) in a monospace code font. The chips say 'Anyone' and 'Some background', which mean nothing to me. Next buttons name jargon concepts ('Next: Self-Efficacy', 'Next: Deliberate Practice') instead of a reason to tap.",
+     "fix": "Pluralise properly ('1 step'), and drop the step count when it is 1. Rename the level chips: 'Anyone' → 'Quick one', 'Some background' → 'Bit deeper', or hide them on the feed. Make the Next button use the next card's hook, cut to about 40 chars, e.g. 'Next: Where does your \"I can do this\" come from? →' instead of the concept title."
+    },
+    {
+     "card_id": "looping-choice",
+     "severity": "low",
+     "problem": "'Someone you live with (a parent, partner or flatmate)' is written for adults. 'Partner or flatmate' tells me it isn't for me, even though the dishes fight is literally my house.",
+     "fix": "Scenario 1: 'Your mum (or dad, or sibling) snaps: \"You never help with the dishes!\" You did them twice this week. You say…'. Make the try_team version: 'In pairs: one moans about something small for 1 minute; the other loops until they hear \"yes, exactly.\" Swap.'"
+    },
+    {
+     "card_id": "skill-gap-order",
+     "severity": "low",
+     "problem": "The title 'The Dreaming Sprinter' has nothing to do with the game, which is about ordering a practice session. On the map it shows as a random cut-off label, so I can't tell what it is.",
+     "fix": "Rename the title to 'Practice That Actually Works' and change the hook to: 'You've practised for hours. Why aren't you better? Put a real practice session in order.'"
+    },
+    {
+     "card_id": "grit-west-point-reveal",
+     "severity": "low",
+     "problem": "Military academy, 'Beast Barracks' and cadets are far from my life. The reveal then says 'Spot on' and immediately walks back its own result with conscientiousness and dropout-rate caveats, so the takeaway ('neither alone is the whole story') feels like a shrug.",
+     "fix": "Hook: 'Talent or not giving up: which one predicted who survived the army's hardest summer?' Shorten the reveal to: 'The grit survey, in a 2007 study. But later reviews found the effect is smaller than the hype; it's mostly the \"keep going\" part that matters.' Model: 'Keep going on the boring bits. That part of grit holds up; the rest is hype.'"
+    }
+   ],
+   "best_cards": [
+    "skill-gap-test-yourself-choice",
+    "doomscroll-loop-pigeons",
+    "procrastination-emotion-future-self-choice"
+   ],
+   "verdict": "The hooks are mostly good. 'Ketchup + soy sauce for science', the pigeons and 'reading your notes is lying to you' are things I'd actually send my mates, and the study and procrastination cards are about MY life. The tone is kind and never makes me feel stupid. But too many cards are written for office adults (managers, knowledge workers, flatmates, qualifications from abroad, DVDs), and every reveal turns into a long scroll ending in a 'team or class' worksheet box. That kills the TikTok speed. Cut the after-reveal stack to one screen, rewrite the adult scenarios into teen ones, and I'd play the next one instead of swiping away."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, non-native English. I want tools I can use tomorrow in my 1:1s, my standup, and on myself. I have no patience for fluff or for content made for teenagers.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Radar result is broken. On a phone the axis labels are cut off ('n body', 'Role m'). When all scores are equal the title says 'Even across the board (0/10)', and the body says 'No single gap stands out' but then gives the Own-wins advice as if Own wins were the lowest. It contradicts itself, and '0/10' reads like a verdict on me.",
+     "fix": "In app.js radar(): change the viewBox to '-40 0 380 300' (or use R = 80) so the start/end labels fit. For the even case, drop the '(x/10)' from the name and use text: `No single gap stands out today. If you want one place to start: ${g.advice['0']}`. Add a separate low-everything case when avg(hi) < 0.3: name 'Low on all four today', text 'That happens after a hard stretch. Start with Own wins: one tiny task you can finish today.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The estimate verdict says 'Close' when the guess is far off. On the Life-in-Weeks card in view-feed-dark, a guess of 500 vs the real 4,174 shows 'Close. Your guess: 500 weeks'. Closeness is measured as a share of the slider span, not of the answer. A manager notices this right away and stops trusting the numbers.",
+     "fix": "In app.js estimate, line ~464: compute off = Math.abs(guess - g.answer) / Math.max(Math.abs(g.answer), 1) and keep the thresholds at 0.05 for 'Bullseye.' and 0.2 for 'Close.'. For small integer ranges like 1-5, also count a difference of 0 as Bullseye and a difference of 1 as Close."
+    },
+    {
+     "card_id": "sleep-memory-choice",
+     "severity": "medium",
+     "problem": "Both scenarios are for students (a 9 a.m. exam, learning a language this month). I don't take exams. My version of this is a 1 a.m. release or a slide deck for the board. The science applies to me, but the framing tells me the card is not for me.",
+     "fix": "Change hook to: 'It's 1 a.m. before a big day. Do you push on or close the laptop?' Change step 1 scenario to: 'Big exam or presentation at 9 a.m. You've prepared all evening. It's 1 a.m. and you feel you've only half got it. You…'. Change option 2 to 'Stay up all night to cover everything'. Change try_team to: 'Agree a team rule: no messages about tomorrow's deadline after 10 p.m. Try it for one release cycle and compare how the morning goes.'"
+    },
+    {
+     "card_id": "skill-gap-test-yourself-choice",
+     "severity": "medium",
+     "problem": "The scenario is 'a quiz in a week: new words, song lyrics or your lines for a play'. That is school-flavoured, so an adult learner (new tech stack, certification, onboarding) doesn't see himself in it. The try_team line is useful but is hidden behind a teen scenario.",
+     "fix": "Change step 1 scenario to: 'In a week you need to know new material: words in a language, a certification topic, or how a new system works. You've got one hour. Which plan sticks best?'. Change try_team to: 'End a meeting, lesson or onboarding session with a 2-minute brain dump: everyone writes the 3 things they remember, no notes, then compares.'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "medium",
+     "problem": "The questions say 'this' ('I genuinely want this'), but the card never asks me to choose one goal first. Tired and scrolling, I answered about my life in general, got all 5/10, and the result was 'Right on the fence', which tells me nothing. The best framework in the set is wasted on a first play.",
+     "fix": "Rewrite the first question as: 'Pick one goal you keep postponing. For THAT goal: I genuinely want it, even when nobody is watching.' Rewrite the hook as: 'Pick one thing you keep saying you'll do. Let's find why you haven't.' Optionally add a game.prompt line rendered above the diagram: 'Think of one specific goal. Answer every line for that goal only.'"
+    },
+    {
+     "card_id": "impulse-pause-order",
+     "severity": "medium",
+     "problem": "The labels 'Closes the gap' and 'Widens the gap' are abstract. As a non-native speaker I had to stop and think about which side is the good one, and I mis-sorted several (4 of 7). The id says 'order' but the type is swipe, which is confusing for editors.",
+     "fix": "Set game.prompt to 'Something just made you furious. Does this move buy you time, or keep you hot?', left to 'Keeps you hot', right to 'Buys you time'. Rename the id to impulse-pause-swipe and update any references."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "The My map view (view-map-dark) is a hairball. Node labels overlap ('Will · Skill · Oppo...' on top of others, 'The Pause Feedback Loops' runs together), and Action, Meaning and Old Wisdom are all orange/brown and hard to tell apart. It looks impressive but I cannot use it to find what to play next.",
+     "fix": "Show a label only on hover/tap, or only for the 8 largest/most recent nodes, and use collision offsets. Change the Meaning colour to a clearly different hue (e.g. #EAB308 yellow is taken by Habits, so use #A855F7-adjacent magenta #D946EF) and Old Wisdom to a neutral #78716C. Add a plain list under the graph: 'Next up for you: 3 models'."
+    },
+    {
+     "card_id": "opportunity-cost-dvd",
+     "severity": "low",
+     "problem": "'A film you love costs 15 to buy' has no currency, and 'DVD/buy a film' feels dated. The idea is very useful for a manager (every yes to a meeting is a no to deep work), but the card never makes that link.",
+     "fix": "Change prompt to: 'A film you love costs 15 euros. Option A: buy it. Option B: keep the 15 euros for other things you want. Which do you pick?'. Change choices[1] to 'Keep the 15 euros for other things'. Change try_today to: 'Before your next yes (a purchase, a meeting, an hour online), name what it pushes out. Then decide.'"
+    }
+   ],
+   "best_cards": [
+    "two-thirds-rule-choice",
+    "small-wins-estimate",
+    "looping-choice"
+   ],
+   "verdict": "This is useful. Several cards I can take to work tomorrow: the 'wanting, knowing how, or access?' question for 1:1s (two-thirds-rule-choice), the 'one small step forward' round at the end of a meeting (small-wins-estimate, and that hook hit me personally as a manager), and looping for tense conversations. The tone is kind and never shames. Evidence is labelled honestly (grit is contested, the 10,000-hour myth is called out), which I respect. Two things made me trust it less. First, the interface: the radar labels are clipped and its text contradicts itself, and the estimate says 'Close' when I was 8x off. Second, too many scenarios assume I'm a student (exams, quizzes, lyrics, parents). The Venn tool is the best idea here, but it fails on the first play because it never asks me to choose one goal. Fix the radar and estimate bugs and the student framing, and I'd show it to my team. Today it's a solid 7 with sharp edges."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher; reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader; dislikes pop-psych oversimplification.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "two-thirds-rule-swipe",
+     "severity": "high",
+     "problem": "The '2/3 rule' is a house heuristic presented as if it were established ('Two pillars make motion possible'). It also contradicts the sibling cards. Sam (Skill + Opportunity, no Will) is marked 'Two or more', i.e. about to move, yet will-gap-spectrum and the wso-triad-venn 'Capable Bystander' result say 'No productivity trick fixes a missing why.' A careful reader notices the framework arguing with itself.",
+     "fix": "Insight: 'A QUMNI rule of thumb, not a research finding: with two pillars lit, the third can often grow on the way. Will is the exception: without a reason that is yours, the others rarely carry you.' Model: 'Two pillars often make motion possible; if the missing one is Will, start there.' Sam's 'why': 'Skill + Opportunity, so two are lit. But the missing one is Will, the hardest to borrow. Rest first, then find a reason to play that's his, not the exam's.' Apply the same caveat to the insight of two-thirds-rule-choice."
+    },
+    {
+     "card_id": "opportunity-gap-lost-einsteins-estimate",
+     "severity": "high",
+     "problem": "The hook says 'Two kids, same maths scores at age 8. Guess how far apart they end up', but the question and the 10x answer compare rich and poor children with no control for test scores. The hook promises a controlled comparison the number does not deliver. That misrepresents Bell et al.",
+     "fix": "Change the hook to: 'Rich kid, poor kid, both good at maths. Guess who becomes the inventor.' Or keep the 'same scores' framing and change the explain to: 'About 10 times overall. Even among children with top-5% maths scores at age 8, the richer ones were still far more likely to invent. Early scores explained only a small part of the gap.'"
+    },
+    {
+     "card_id": "identity-habits-spectrum",
+     "severity": "medium",
+     "problem": "The hook overclaims ('Only one tends to last') while the card's own insight admits 'A lens, not a lab result.' The scale also places outcome goals at the 'lesser' pole, and the 'right' end ('that's not really me anymore') can turn into rigid self-labelling, which Aristotle's habituation does not license.",
+     "fix": "Hook: 'Same habit, two ways to talk about it. Which one keeps you going on a slow week?' Insight: '...Each small action is a vote for a type of person. Clear argues identity outlasts goals; it's a useful lens with little direct testing. Aristotle said it first: we become what we repeatedly do.'"
+    },
+    {
+     "card_id": "small-wins-estimate",
+     "severity": "medium",
+     "problem": "David Goggins sits beside Amabile and Kramer as if he were an equal authority. That pairing cheapens a solid diary study. The slider also runs only 1-5 and the answer is the end value, so it is a guess rather than an estimate.",
+     "fix": "Drop Goggins from thinkers. Rewrite the insight: 'We underrate small steps, yet in 12,000 diary entries visible progress lifted motivation most. Bandura found the same: your own past wins are the strongest source of \"I can\".' Rename the title to 'The Progress Principle'. Turn the game into a 5-option choice ('Where did progress rank? 1st / 2nd / 3rd / 4th / Last'), or reword the question as 'What share of managers ranked progress first?' with min 0, max 100, unit '%', answer 5."
+    },
+    {
+     "card_id": "grit-west-point-reveal",
+     "severity": "medium",
+     "problem": "The academy's Whole Candidate Score combines grades, fitness and leadership ratings. Calling it 'the talent score' is inaccurate, and the 'Physical fitness' option overlaps with it. The reveal also starts with a flat 'The grit survey.', which crowns grit before the caveats arrive.",
+     "fix": "Rename choice 1 to 'The academy's own admissions score'. Replace 'Physical fitness' with 'Their high-school grades'. Reveal opening: 'The grit survey, in that one 2007 study, beat the academy's own score at predicting who finished Beast Barracks.' Keep the remaining caveats as they are."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The result headline for a wrong call reads '0 of 2 best calls', with a red underline, in large display type. For a reflective reader this feels like a school mark in red ink, and it fits poorly with 'always leaves the player better off'. It appears on procrastination-emotion-future-self-choice, which is marked sensitive.",
+     "fix": "For choice cards scoring 0 or 1, replace the headline with 'You found the trap most people fall into' (0) or 'Half there, and the other half is the lesson' (1). Use the domain accent colour for the underline instead of red. Show the 'x of y' tally in small grey text below it."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "On My Map (dark), node labels overlap and are truncated ('Sleep Saves Your Le...', 'The Pause Feedback Loops' read as one label, 'Will · Skill · Oppo...'), so the map of ideas is unreadable just where it should reward reflection. 'Next:' buttons also use internal nicknames ('The Competent Prisoner', 'The Dreaming Sprinter') that mean nothing to a reader before they play.",
+     "fix": "On the map, show labels only for the hovered or tapped node plus the 5 most-connected nodes, and give long labels a two-line wrap instead of an ellipsis. On 'Next:' buttons, use the concept's plain name ('Next: When the door is shut', 'Next: Deliberate practice') instead of the card title."
+    },
+    {
+     "card_id": "opportunity-cost-dvd",
+     "severity": "low",
+     "problem": "'Costs 15' has no currency, which reads like a placeholder. 'Opportunity Cost' as a title is a textbook label, not an invitation. Bastiat is quoted well, but the reveal could use one sentence of his depth rather than only the consumer-study numbers.",
+     "fix": "Prompt: 'A film you love costs €15 (or $15) to buy...'. Title: 'What is not seen'. Add to the reveal after the study: 'Bastiat's point, 1850: the cost you see is the price; the cost you don't see is everything else that money could have been.'"
+    }
+   ],
+   "best_cards": [
+    "wso-triad-reveal",
+    "impulse-pause-order",
+    "skill-gap-test-yourself-choice"
+   ],
+   "verdict": "This is a thoughtful, honest set of cards. I was glad to see Gray's Elegy, Aristotle's lyre-players, Epictetus on gaining time, and a correction of the misattributed Frankl 'gap' quote. The evidence caveats on Walker, Haidt, grit and the opportunity-cost replication show real respect for the reader, and the try-today steps are usable. What keeps it at 'good' rather than 'excellent': the house WSO/2-of-3 framework is presented with more certainty than it has earned and contradicts itself on Will. A few hooks promise more than the data says (the lost Einsteins, identity habits). One pop figure (Goggins) is set beside real scholarship. And the red '0 of 2' verdict lands like a school mark. The philosophy is mostly a garnish of quotes; one more sentence of the thinker's own argument per card would give the depth this format can carry. I would play on, but more out of respect than delight."
+  },
+  {
+   "persona": "Sam, 24, a graduate with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures, and needs the experience to feel safe and genuinely helpful.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 6,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "opportunity-gap-swipe",
+     "severity": "high",
+     "problem": "The hook says 'What if the wall isn't you?', but the left bucket is labelled 'Inside me' and holds both Will and Skill items. So 'not knowing how to edit videos' goes in the same 'inside me' pile as not caring, which reads as personal fault. A wrong swipe gets the blunt 'Not quite —' and the result is '2 of 5 sorted', so I came away feeling I failed a self-blame quiz on the one card meant to lift self-blame.",
+     "fix": "Change game.left to 'Something I can build' and game.right to 'Something in the setup'. Change prompt to 'Where's the blocker: something you can grow, or something in the way?' Change the guitar item's why to 'That's Will, and it's allowed to change. Pick songs you love, or take a guilt-free break.' In the app, replace the 'Not quite —' prefix on swipe feedback with 'Another way to see it:'."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Estimate results grade generously but wrongly. In view-feed-dark, a guess of 500 weeks against a real 4,174 is headlined 'Close.' Elsewhere a miss shows a stark 'Your guess: 1. The real number: 5.' in big underlined type. False praise feels patronising and a big 'you were wrong' banner stings, so neither feels safe.",
+     "fix": "In app.js estimate scoring, call it 'Close' only when |guess-answer| <= 15% of (max-min). Otherwise use a neutral, curious headline: 'Most people guess low here too. Real: {answer}{unit}.' Never put the user's wrong number in the big headline. Show it small under the bar."
+    },
+    {
+     "card_id": "will-gap-spectrum",
+     "severity": "high",
+     "problem": "The hook 'Is it really laziness...' opens with the exact label anxious people already use on themselves. The try_today 'If you can't, cross the goal off or hand it back' adds pressure on goals I can't drop, like finding a job after graduating.",
+     "fix": "Hook: 'Stuck on a goal? Maybe the reason isn't yours yet.' try_today: 'Finish this sentence in writing: \"This matters to me because...\" If nothing comes, that's useful information, not failure. Find one small part you do care about, or ask whether it can wait.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The feed teaches that random-reward infinite feeds are hard to put down (doomscroll-loop-order, doomscroll-loop-pigeons), yet it is itself an endless 'Swipe up for the next one' feed with no natural stopping point. For someone prone to anxious scrolling, that's both ironic and a little unsafe.",
+     "fix": "After every 5 cards, insert a gentle stop card: 'Nice session. You've played 5. Want to stop here and try one thing from today?' Give it two buttons, 'I'm done for now' (shows the saved Try-today items) and 'One more'. On both doomscroll cards, add one line to insight: 'Qlip pauses every few cards on purpose.'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "medium",
+     "problem": "The result labels 'The Idle Expert', 'The Competent Prisoner' and 'The Dreamer' feel like verdicts on me, despite the good 'today' framing. 'Idle' in particular reads as lazy. 'The Competent Prisoner' is also used as the title chip on opportunity-gap-swipe, so 'prisoner' follows me around.",
+     "fix": "Rename results.S.name to 'Skilled, Looking for a Why', results.SW.name to 'Ready, Door Closed (for now)' and results.W.name to 'Fired Up, Building Up'. Change opportunity-gap-swipe title to 'Ready, Door Closed' and the related concept title to match."
+    },
+    {
+     "card_id": "small-wins-estimate",
+     "severity": "medium",
+     "problem": "Citing David Goggins as the source of the 'cookie jar' clashes with a gentle self-worth card, because his brand is harsh self-punishment. The hook about 'managers' also feels irrelevant to a jobless graduate. After this card, 'Next' leads back to Self-Efficacy, which I'd just played, so it ping-pongs.",
+     "fix": "insight: 'We underrate small steps, yet diary studies show they lift motivation most. Keeping a record of them gives you evidence to reach for on hard days.' Remove Goggins from source.thinkers and 'Can't Hurt Me (2018)' from source.work. Hook: 'What makes a good day at work or study? Bosses guessed wrong.' In app.js, never offer a Next card the user played in the last 3 cards."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "Every card has a big 'WITH YOUR TEAM OR CLASS' box. When you're isolated after graduating, a box that assumes a team, class or family on every card quietly says 'you should have people'. It also pushes the safety footer and Next button further down.",
+     "fix": "Collapse the try_team box by default into a single line, '▸ Doing this with others? (optional)', and relabel the heading 'WITH OTHERS (OPTIONAL)'."
+    },
+    {
+     "card_id": "opportunity-gap-lost-einsteins-estimate",
+     "severity": "low",
+     "problem": "The hook ('Two kids, same maths scores at age 8...') sets up a same-ability comparison, but the question compares the richest 1% vs the poorer half overall. The 10× answer then doesn't match what the hook primed, which was confusing.",
+     "fix": "Hook: 'Rich kid, poorer kid. Guess how much likelier one is to become an inventor.' Leave the question as is. Add to explain: 'Even among kids with top maths scores at age 8, the gap stayed large.'"
+    }
+   ],
+   "best_cards": [
+    "procrastination-emotion-future-self-choice",
+    "self-efficacy-radar",
+    "skill-gap-test-yourself-choice"
+   ],
+   "verdict": "As Sam, this mostly felt safe and quietly useful. The 'today' framing, the 'starting point, not a verdict' result, the helpline footer, honest caveats (grit, Walker, Frankl) and kind feedback on wrong choices like 'You always do this' made me trust it. The tiny Try-today steps are things I'd actually do. What still stings: a few labels ('laziness', 'Idle Expert', 'Prisoner', 'Inside me'), estimate headlines that either over-praise ('Close' at 500 vs 4,174) or spotlight my wrong guess, and an endless feed that teaches me about doomscrolling while having no stopping point. Fix those and I'd share it with a friend who's having a hard year."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist. I check every attribution and effect size, look for replication-crisis myths and overclaiming, and audit the self-report items as I would a questionnaire submitted for peer review.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "two-thirds-rule-swipe",
+     "severity": "high",
+     "problem": "The source line says the 'QUMNI 2/3 rule' is 'built on Blumberg & Pringle's capacity-willingness-opportunity triad'. That triad does not support the rule. Blumberg & Pringle (1982) model performance as an interaction of capacity, willingness and opportunity, so a near-zero on any one pillar suppresses performance. The card's insight claims the opposite: 'With two pillars lit, action is possible.' An untested house heuristic is being presented as if it came from the paper. The same problem appears in two-thirds-rule-choice, whose insight says 'Two pillars out of three is usually enough to move'. wso-triad-venn's 'pushing harder on the others rarely helps' is another unsupported empirical claim.",
+     "fix": "In both two-thirds-rule cards, set source.work to: \"QUMNI 2/3 rule: an untested rule of thumb inspired by Blumberg & Pringle (1982), whose own model says all three pillars interact\". Rewrite two-thirds-rule-swipe insight to: \"A rule of thumb, not a finding: with two pillars lit, a first step is often possible and the third can grow on the way. With only one lit, building a second usually helps more than pushing the first.\" In two-thirds-rule-choice insight, change 'Two pillars out of three is usually enough to move' to 'As a rule of thumb, two pillars are often enough to take a first step'. In wso-triad-venn insight, change 'pushing harder on the others rarely helps' to 'pushing harder on the strong ones may not fix the weak one'. Lower wso-triad-venn evidence from 'moderate' to 'philosophy', since the 1982 paper is a conceptual model."
+    },
+    {
+     "card_id": "opportunity-gap-lost-einsteins-estimate",
+     "severity": "high",
+     "problem": "The hook and the question measure different things. The hook says 'Two kids, same maths scores at age 8. Guess how far apart they end up', which implies a gap after matching on scores. The answer, 10x, is the unconditional top-1% vs bottom-50% ratio from Bell et al. (2019). Among high-scoring third graders the income gap is real but much smaller, so a reader will remember the wrong statistic. 'Only a small part' also understates the paper: grade-3 test scores accounted for less than a third of the gap.",
+     "fix": "Change hook to: \"Rich kids vs poorer kids in the US: guess how much likelier the rich ones are to become inventors.\" Change the first sentence of explain to: \"About 10 times. Differences in maths scores at age 8 explained less than a third of that gap.\" Keep the rest."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Estimate feedback calls a guess 'Close' when it is off by a large factor. The feed screenshot (view-feed-dark) shows 'Close. Your guess: 500 weeks, real: 4,174 weeks', which is 88% too low. app.js line ~463 measures error as a fraction of the slider span (|guess-answer|/(max-min)), so wide sliders reward bad guesses. The point of these estimate cards is to expose miscalibration, and this praises it.",
+     "fix": "In app.js estimate(), replace `const off = Math.abs(guess - g.answer) / span;` with relative error: `const off = g.answer ? Math.abs(guess - g.answer) / Math.abs(g.answer) : Math.abs(guess - g.answer) / span;`. Change the thresholds to `off < 0.1 ? \"Bullseye.\" : off < 0.3 ? \"Close…\" : …`. For rank-style cards (small-wins-estimate, range 1-5), keep the span rule by adding an optional per-card `game.tolerance`."
+    },
+    {
+     "card_id": "self-efficacy-radar",
+     "severity": "medium",
+     "problem": "The 'Calm body' axis is mislabelled and its advice contradicts its own source. Bandura's fourth source is how you read physiological and affective states. The only item on this axis measures arousal reappraisal ('my body getting ready'), and Jamieson's work (cited) argues for reinterpreting arousal, not calming it. The advice mixes the two ('take three slow breaths and say my body is getting ready'). The scale is also unbalanced: axis 0 has 2 items and axes 1-3 have 1 each, so one answer decides 'weakest source' on three axes. Single-item scores this noisy should not drive a 'feed your weakest' instruction.",
+     "fix": "Rename axis 3 from 'Calm body' to 'Reading your body'. Change advice '3' to: \"Reading your body scored lowest today? Before a hard task, notice the racing heart and tell yourself: 'This is my body getting ready, not a sign I'll fail.'\" Add one item each to axes 1-3: axis 1 \"I've watched someone at my level learn this and get better.\"; axis 2 \"Someone has given me specific, honest feedback that I'm improving.\"; axis 3 \"Butterflies before a challenge usually help me more than they hurt.\""
+    },
+    {
+     "card_id": "will-gap-spectrum",
+     "severity": "medium",
+     "problem": "Item 1 is ambiguous. 'Relief it's over' scores -2 ('should'), but relief is the normal feeling on finishing hard, self-chosen goals such as a thesis, a marathon or rehab, so it confounds goal difficulty with motivation type. In SDT a goal can also be valued but unpleasant (identified regulation) without being borrowed. try_today then says 'If you can't [finish the sentence], cross the goal off or hand it back.' That is unsafe for non-negotiable obligations a teen or worker cannot drop, such as exams, medication or rent.",
+     "fix": "Change Q1 option labels to: -2 \"Like I've finally pleased someone else\", 0 \"Not much either way\", 2 \"Like I did something that matters to me\". Change try_today to: \"Finish this sentence in writing: 'This matters to me because…' If nothing comes, ask whether the goal can be dropped, changed, or linked to something you do care about.\""
+    },
+    {
+     "card_id": "deep-work-spectrum",
+     "severity": "medium",
+     "problem": "The response scale is inconsistent. Q1 options score -2 / 1 / 2, while every other item uses -2 / 0 / 2, so Q1 shifts everyone toward 'Deep mode'. 'Stretch, then go back in' is also arguably as deep a strategy as 'Stay with it', so the item does not discriminate.",
+     "fix": "Change Q1 option values to -2 / 0 / 2. Reword the middle option to \"Switch to something easier for a bit\" (0). Change the third option to \"Take a short pause, then go back in\" (2). This keeps the scale symmetric and the anchors ordered."
+    },
+    {
+     "card_id": "sleep-memory-choice",
+     "severity": "medium",
+     "problem": "Evidence is tagged 'strong', but sleep-dependent consolidation of declarative memory has had replication problems. Cordi & Rasch's 2021 review found the effects smaller and less consistent than once thought. The step-2 'best' feedback also credits sleep for what is mainly the spacing effect ('20 minutes most days'), which confounds the two. The feedback on the 6 a.m. option asserts a specific REM-memory link that the evidence does not establish.",
+     "fix": "Set evidence to 'moderate'. Change step-2 best feedback to: \"Yes. Spreading practice out is one of the best-tested ways to learn, and the nights of sleep in between seem to help too.\" Change the 6 a.m. feedback to: \"Better than no sleep. But you're tired at the exam, and you've lost some of the sleep that seems to help memory.\" Change insight to: \"Many studies link sleep to holding on to what you learned, though the effect is smaller and patchier than popular books suggest (Walker's included).\""
+    },
+    {
+     "card_id": "identity-habits-spectrum",
+     "severity": "low",
+     "problem": "The hook makes an empirical claim ('Only one tends to last') on a card whose own insight says 'A lens, not a lab result' and whose evidence is 'philosophy'. Identity-based habit framing comes from Clear's book, not a body of trials. The spectrum also implicitly scores outcome answers as worse. Separately, steelmanning-order's explain states an unmeasured effect as fact: 'By step 4, the other person is far more ready to listen.'",
+     "fix": "Change hook to: \"Same habit, two ways to talk about it. Which one sounds like you?\" In steelmanning-order explain, change the last sentence to: \"Dennett's bet: by step 4, the other person is far more ready to listen.\""
+    }
+   ],
+   "best_cards": [
+    "grit-west-point-reveal",
+    "skill-gap-test-yourself-choice",
+    "impulse-pause-order"
+   ],
+   "verdict": "This is a better-sourced set than most pop-psych content I review. Roediger & Karpicke (40% vs 61%), Bell et al.'s 10x, Credé's 88-sample grit meta-analysis, Kjærvik & Bushman on venting, Gilovich & Medvec, Frederick et al.'s 75%→55% and Pronin's ketchup-and-soy-sauce drink are all reported accurately. The caveats about Haidt, Walker, Frankl and the 10,000-hour rule are exactly what I want to see. The main weakness is in the house QUMNI cards. The '2 of 3 pillars' rule is borrowed from Blumberg & Pringle, but their interactive model implies the opposite, and the WSO cards are graded as more evidence-backed than they are. The self-report instruments also have psychometric problems: single-item axes, mislabelled constructs, asymmetric scoring and ambiguous anchors. One app-level bug actively miscalibrates players: the estimate game calls 500 vs 4,174 'Close'. The lost-Einsteins hook implies a score-matched comparison the statistic does not make. Fix those and this is a 7.5-8 experience. As it stands it is informative and kind but not yet trustworthy enough for me to recommend to students without a caveat."
+  },
+  {
+   "persona": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments and shareability.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 8,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "self-efficacy-radar",
+     "severity": "high",
+     "problem": "The result moment contradicts itself and feels deflating. When all answers are low it shows 'Even across the board (0/10)', a zero score in big underlined type on a card marked sensitive. The body then says 'No single gap stands out. Start with the one that matters most this week: Own wins scored lowest today?', which names a lowest pillar right after saying there isn't one. On a 390px phone the side axis labels are also clipped ('n body', 'Role m'), so the chart can't be read.",
+     "fix": "In app.js radar done(): when even, drop the numeric score. Use the name 'All four are quiet today' if avg(hi) < 0.5 and 'Balanced and strong today' otherwise. Use the text 'No single source stands out, so start with the easiest: your own wins. Set a goal so small you can't fail, finish it, and write it down.' when low, and 'All four sources are feeding you. Bring a harder goal into play this week.' when high. Do not append g.advice in the even case. Fix the clipping by shortening the axes to ['Wins', 'Models', 'Support', 'Body'] or by changing the label radius from 1.24 to 1.12 and the viewBox to '-20 0 340 300'."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "This is the flagship 'where are you' game, but a middle-of-the-road run lands on an app fallback ('Right on the fence', 5/5/5) that isn't one of the card's 8 named archetypes. Its message is 'the map can't find your gap yet... play again', which is an anticlimax: I did six taps and got 'try again' instead of an identity reveal I'd share. It also never asks me to name the goal before the questions, so the questions ('I genuinely want this') float without a 'this'.",
+     "fix": "Add a first prompt before the questions: 'Think of one specific thing you keep saying you'll do. Got it? Keep it in mind for 6 quick taps.' Add a results entry \"mid\": {\"name\": \"The Half-Lit Path\", \"text\": \"Today all three pillars sit in the middle: nothing blocks you, nothing pulls you. Pick the pillar that would be cheapest to raise by one notch this week, usually a 10-minute skill rep, and play again in 7 days.\"}, and have app.js line 312 use card.game.results.mid when present instead of the hard-coded fallback."
+    },
+    {
+     "card_id": "small-wins-estimate",
+     "severity": "medium",
+     "problem": "The estimate slider is the wrong mechanic for a rank from 1 to 5. Five slider stops feel mushy, the slider starts on 1 (the 'top' answer) so a lazy tap counts as a guess, and the payoff reads 'Your guess: 1. The real number: 5.', but a rank isn't a 'number'. The best fact in the card ('dead last') gets a flat reward moment.",
+     "fix": "Change type to 'reveal': prompt '669 managers ranked five motivators: recognition, incentives, clear goals, support, and making progress. Where did making progress land?', choices ['1st', '2nd or 3rd', '4th', 'Dead last (5th)'], answer 3, reveal 'Dead last. Yet in nearly 12,000 diary entries from 238 workers, making progress on meaningful work was the strongest booster of their best days. If you guessed higher, you rate progress more than most managers do.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The meta line under Play reads 'Guess the number · 1 steps · about 20 seconds'. The plural is broken, and on every non-reveal card it is set in a wide mono font that wraps to 2 lines right under the main CTA, which adds noise exactly where the eye should land on Play. On reveal cards, the result scroll also only shows the final item's feedback (impulse-pause shows '7 / 7' plus one tick, then '4 of 7 sorted'), so I never see which ones I got wrong.",
+     "fix": "In app.js line 175 use `${steps} ${card.type === 'reveal' ? (steps === 1 ? 'choice' : 'choices') : (steps === 1 ? 'step' : 'steps')}` and shorten it to `${TYPE_LABEL[card.type]} · ~${secs}s`. In the swipe done() result, add a compact recap list of the missed items with their 'why' (for example, 'Missed: Punching a pillow, Rereading the message') under the 'X of 7 sorted' headline."
+    },
+    {
+     "card_id": "opportunity-cost-dvd",
+     "severity": "medium",
+     "problem": "The money has no currency ('costs 15', 'Keep the 15 for other things'), which reads like a typo. The card also has no answer, so the tap has no stakes: the player picks, then is told 'No wrong answer here', and the reveal feels like a lecture rather than a twist. The id says DVD but the text says film, which is fine, but the hook promise ('Want to see?') isn't paid off by a surprise.",
+     "fix": "Rewrite the prompt: 'A film you love is on sale for $15. Quick, do you buy it?' with choices ['Buy it', 'Skip it']. Reveal: 'Notice what you just weighed: only the film. In one study, 75% bought when asked \"buy or not\". Just adding \"keep the $15 for other things\" dropped buyers to 55% (Frederick et al., 2009); later replications found a smaller effect. Naming the alternative changes the choice.' Then change the second choice label in the try_today to keep 'name what you give up'."
+    },
+    {
+     "card_id": "steelmanning-order",
+     "severity": "medium",
+     "problem": "As an order game, steps 2 and 3 ('List the points where you agree' / 'Mention anything you learned from them') can't be told apart by logic. The order is Dennett's convention, not something the player can reason out, so a wrong swap feels unfair and players will blame the game, not learn.",
+     "fix": "Merge steps 2 and 3 into one item, 'Name where you agree and what you learned', so there are 3 items with a reasoned order. Or keep all 4 and change explain to open with: 'Steps 2 and 3 can swap; Dennett lists agreement first. What matters is that all three come before step 4.' Also make the app's order check accept either order for those two items."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "On My map (dark), labels overlap and stack on top of nodes ('The Pause' collides with 'Feedback Loops', and 'Deliberate Practice' and 'Start With Why' run over other nodes). With 72 nodes the map looks like a hairball rather than a reward. It's the main progress screen, so the payoff of 'You've lit up 72 of 72' is visually weak and wouldn't survive a share screenshot.",
+     "fix": "Show labels only for the 8 most recently played nodes plus the tapped node, and truncate at 16 characters. Add a 4px dark text halo (paint-order: stroke; stroke: var(--bg); stroke-width: 4px) to the labels. Run a collision pass that hides any label whose bounding box overlaps one already drawn."
+    },
+    {
+     "card_id": "will-gap-spectrum",
+     "severity": "low",
+     "problem": "The hook 'Is it really laziness, or do you just not care about this goal?' frames both options as personal failings, and the opening word 'laziness' could sting someone already stuck, on a card marked sensitive. On screen the result knob also overflows the right edge of the card at the extreme ('Real fire').",
+     "fix": "Change the hook to 'Stuck on a goal? Maybe it's not laziness. Maybe it's not yours.' In CSS, clamp the spectrum knob position to calc(100% - knob radius) so it stays inside the card at ±1."
+    }
+   ],
+   "best_cards": [
+    "doomscroll-loop-pigeons",
+    "skill-gap-test-yourself-choice",
+    "procrastination-emotion-future-self-choice"
+   ],
+   "verdict": "This is a solid, kind and genuinely useful batch. The WSO arc (venn, door reveal, 2/3 rule, gap cards) feels like a real course and not random trivia, and the reveal cards with a counterintuitive twist (pigeons, self-quizzing, the ketchup-soy future-self study, West Point) are what I'd stop scrolling for and send to a friend. Safety copy is careful throughout: 'today' framing, 'not a verdict', helpline footer, honest caveats on grit, Walker and Haidt. What holds the scores back is game feel at the payoff. The profile games (venn and radar) can end on a fallback or a self-contradicting '0/10' result instead of a named, shareable identity. A few mechanics fight their content: a slider for a 1-5 rank, an order game with an arbitrary step order, and a no-answer reveal. Small polish bugs ('1 steps', clipped radar labels, an overlapping map) chip at trust. Fix the two profile endings and the estimate mechanic first, and fun and clarity would both move up a point."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The reveal is a long scroll of homework: reveal text, then the score, THE MODEL, TRY TODAY, a 'WITH YOUR TEAM OR CLASS' box, the Next button, 'Why? 15-second read', a disclaimer and Play again. On every card the b-screenshot needs a full scroll. The 'team or class' box is literally the word 'class' and makes it feel like a worksheet. By the time I get to the Next button I've already swiped away.",
+   "fix": "Collapse try_team by default behind a one-line toggle labelled 'Do it with friends ▸' (rename the header from 'WITH YOUR TEAM OR CLASS' to 'WITH FRIENDS'). Put the Next button directly under TRY TODAY. Keep the reveal and the model above the fold, so the reveal fits in one phone screen at 390px.",
+   "from": "Maya, 16, Manchester student. Lives on TikTok, can't stand anything that feels like school or a lecture, and only stays if it's fast, surprising and about her."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The small labels feel like an app talking to itself. The feed says '1 steps' (grammar error) in a monospace code font. The chips say 'Anyone' and 'Some background', which mean nothing to me. Next buttons name jargon concepts ('Next: Self-Efficacy', 'Next: Deliberate Practice') instead of a reason to tap.",
+   "fix": "Pluralise properly ('1 step'), and drop the step count when it is 1. Rename the level chips: 'Anyone' → 'Quick one', 'Some background' → 'Bit deeper', or hide them on the feed. Make the Next button use the next card's hook, cut to about 40 chars, e.g. 'Next: Where does your \"I can do this\" come from? →' instead of the concept title.",
+   "from": "Maya, 16, Manchester student. Lives on TikTok, can't stand anything that feels like school or a lecture, and only stays if it's fast, surprising and about her."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Radar result is broken. On a phone the axis labels are cut off ('n body', 'Role m'). When all scores are equal the title says 'Even across the board (0/10)', and the body says 'No single gap stands out' but then gives the Own-wins advice as if Own wins were the lowest. It contradicts itself, and '0/10' reads like a verdict on me.",
+   "fix": "In app.js radar(): change the viewBox to '-40 0 380 300' (or use R = 80) so the start/end labels fit. For the even case, drop the '(x/10)' from the name and use text: `No single gap stands out today. If you want one place to start: ${g.advice['0']}`. Add a separate low-everything case when avg(hi) < 0.3: name 'Low on all four today', text 'That happens after a hard stretch. Start with Own wins: one tiny task you can finish today.'",
+   "from": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, non-native English. I want tools I can use tomorrow in my 1:1s, my standup, and on myself. I have no patience for fluff or for content made for teenagers."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The estimate verdict says 'Close' when the guess is far off. On the Life-in-Weeks card in view-feed-dark, a guess of 500 vs the real 4,174 shows 'Close. Your guess: 500 weeks'. Closeness is measured as a share of the slider span, not of the answer. A manager notices this right away and stops trusting the numbers.",
+   "fix": "In app.js estimate, line ~464: compute off = Math.abs(guess - g.answer) / Math.max(Math.abs(g.answer), 1) and keep the thresholds at 0.05 for 'Bullseye.' and 0.2 for 'Close.'. For small integer ranges like 1-5, also count a difference of 0 as Bullseye and a difference of 1 as Close.",
+   "from": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, non-native English. I want tools I can use tomorrow in my 1:1s, my standup, and on myself. I have no patience for fluff or for content made for teenagers."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "The My map view (view-map-dark) is a hairball. Node labels overlap ('Will · Skill · Oppo...' on top of others, 'The Pause Feedback Loops' runs together), and Action, Meaning and Old Wisdom are all orange/brown and hard to tell apart. It looks impressive but I cannot use it to find what to play next.",
+   "fix": "Show a label only on hover/tap, or only for the 8 largest/most recent nodes, and use collision offsets. Change the Meaning colour to a clearly different hue (e.g. #EAB308 yellow is taken by Habits, so use #A855F7-adjacent magenta #D946EF) and Old Wisdom to a neutral #78716C. Add a plain list under the graph: 'Next up for you: 3 models'.",
+   "from": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, non-native English. I want tools I can use tomorrow in my 1:1s, my standup, and on myself. I have no patience for fluff or for content made for teenagers."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The result headline for a wrong call reads '0 of 2 best calls', with a red underline, in large display type. For a reflective reader this feels like a school mark in red ink, and it fits poorly with 'always leaves the player better off'. It appears on procrastination-emotion-future-self-choice, which is marked sensitive.",
+   "fix": "For choice cards scoring 0 or 1, replace the headline with 'You found the trap most people fall into' (0) or 'Half there, and the other half is the lesson' (1). Use the domain accent colour for the underline instead of red. Show the 'x of y' tally in small grey text below it.",
+   "from": "Elena, 68, retired literature teacher; reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader; dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "On My Map (dark), node labels overlap and are truncated ('Sleep Saves Your Le...', 'The Pause Feedback Loops' read as one label, 'Will · Skill · Oppo...'), so the map of ideas is unreadable just where it should reward reflection. 'Next:' buttons also use internal nicknames ('The Competent Prisoner', 'The Dreaming Sprinter') that mean nothing to a reader before they play.",
+   "fix": "On the map, show labels only for the hovered or tapped node plus the 5 most-connected nodes, and give long labels a two-line wrap instead of an ellipsis. On 'Next:' buttons, use the concept's plain name ('Next: When the door is shut', 'Next: Deliberate practice') instead of the card title.",
+   "from": "Elena, 68, retired literature teacher; reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader; dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Estimate results grade generously but wrongly. In view-feed-dark, a guess of 500 weeks against a real 4,174 is headlined 'Close.' Elsewhere a miss shows a stark 'Your guess: 1. The real number: 5.' in big underlined type. False praise feels patronising and a big 'you were wrong' banner stings, so neither feels safe.",
+   "fix": "In app.js estimate scoring, call it 'Close' only when |guess-answer| <= 15% of (max-min). Otherwise use a neutral, curious headline: 'Most people guess low here too. Real: {answer}{unit}.' Never put the user's wrong number in the big headline. Show it small under the bar.",
+   "from": "Sam, 24, a graduate with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures, and needs the experience to feel safe and genuinely helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The feed teaches that random-reward infinite feeds are hard to put down (doomscroll-loop-order, doomscroll-loop-pigeons), yet it is itself an endless 'Swipe up for the next one' feed with no natural stopping point. For someone prone to anxious scrolling, that's both ironic and a little unsafe.",
+   "fix": "After every 5 cards, insert a gentle stop card: 'Nice session. You've played 5. Want to stop here and try one thing from today?' Give it two buttons, 'I'm done for now' (shows the saved Try-today items) and 'One more'. On both doomscroll cards, add one line to insight: 'Qlip pauses every few cards on purpose.'",
+   "from": "Sam, 24, a graduate with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures, and needs the experience to feel safe and genuinely helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "Every card has a big 'WITH YOUR TEAM OR CLASS' box. When you're isolated after graduating, a box that assumes a team, class or family on every card quietly says 'you should have people'. It also pushes the safety footer and Next button further down.",
+   "fix": "Collapse the try_team box by default into a single line, '▸ Doing this with others? (optional)', and relabel the heading 'WITH OTHERS (OPTIONAL)'.",
+   "from": "Sam, 24, a graduate with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures, and needs the experience to feel safe and genuinely helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Estimate feedback calls a guess 'Close' when it is off by a large factor. The feed screenshot (view-feed-dark) shows 'Close. Your guess: 500 weeks, real: 4,174 weeks', which is 88% too low. app.js line ~463 measures error as a fraction of the slider span (|guess-answer|/(max-min)), so wide sliders reward bad guesses. The point of these estimate cards is to expose miscalibration, and this praises it.",
+   "fix": "In app.js estimate(), replace `const off = Math.abs(guess - g.answer) / span;` with relative error: `const off = g.answer ? Math.abs(guess - g.answer) / Math.abs(g.answer) : Math.abs(guess - g.answer) / span;`. Change the thresholds to `off < 0.1 ? \"Bullseye.\" : off < 0.3 ? \"Close…\" : …`. For rank-style cards (small-wins-estimate, range 1-5), keep the span rule by adding an optional per-card `game.tolerance`.",
+   "from": "Dr. Okafor, 51, research psychologist. I check every attribution and effect size, look for replication-crisis myths and overclaiming, and audit the self-report items as I would a questionnaire submitted for peer review."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The meta line under Play reads 'Guess the number · 1 steps · about 20 seconds'. The plural is broken, and on every non-reveal card it is set in a wide mono font that wraps to 2 lines right under the main CTA, which adds noise exactly where the eye should land on Play. On reveal cards, the result scroll also only shows the final item's feedback (impulse-pause shows '7 / 7' plus one tick, then '4 of 7 sorted'), so I never see which ones I got wrong.",
+   "fix": "In app.js line 175 use `${steps} ${card.type === 'reveal' ? (steps === 1 ? 'choice' : 'choices') : (steps === 1 ? 'step' : 'steps')}` and shorten it to `${TYPE_LABEL[card.type]} · ~${secs}s`. In the swipe done() result, add a compact recap list of the missed items with their 'why' (for example, 'Missed: Punching a pillow, Rereading the message') under the 'X of 7 sorted' headline.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments and shareability."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "On My map (dark), labels overlap and stack on top of nodes ('The Pause' collides with 'Feedback Loops', and 'Deliberate Practice' and 'Start With Why' run over other nodes). With 72 nodes the map looks like a hairball rather than a reward. It's the main progress screen, so the payoff of 'You've lit up 72 of 72' is visually weak and wouldn't survive a share screenshot.",
+   "fix": "Show labels only for the 8 most recently played nodes plus the tapped node, and truncate at 16 characters. Add a 4px dark text halo (paint-order: stroke; stroke: var(--bg); stroke-width: 4px) to the labels. Run a collision pass that hides any label whose bounding box overlaps one already drawn.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments and shareability."
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 17,
+   "skipped": [
+    "small-wins-estimate (not in action.json)",
+    "opportunity-cost-dvd (not in action.json)",
+    "looping-choice (not in action.json)",
+    "grit-west-point-reveal (not in action.json)",
+    "sleep-memory-choice (not in action.json)",
+    "impulse-pause-order (not in action.json)",
+    "identity-habits-spectrum (not in action.json)",
+    "deep-work-spectrum (not in action.json)",
+    "steelmanning-order (not in action.json)",
+    "wso-triad-venn: app.js change so line 312 uses results.mid (outside file scope; results.mid and game.prompt were added to the card)",
+    "self-efficacy-radar: app.js even-case result rewrite (outside file scope; axes were shortened to Wins/Models/Support/Body to fix clipping)",
+    "will-gap-spectrum: CSS knob clamp (outside file scope)",
+    "opportunity-gap-swipe: 'Not quite' prefix in app.js and concept title in concepts.json (outside file scope)"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 0,
+   "skipped": [
+    "small-wins-estimate",
+    "opportunity-cost-dvd",
+    "opportunity-gap-lost-einsteins-estimate",
+    "looping-choice",
+    "skill-gap-order",
+    "grit-west-point-reveal",
+    "sleep-memory-choice",
+    "skill-gap-test-yourself-choice",
+    "wso-triad-venn",
+    "impulse-pause-order",
+    "two-thirds-rule-swipe",
+    "identity-habits-spectrum",
+    "opportunity-gap-swipe",
+    "will-gap-spectrum",
+    "self-efficacy-radar",
+    "deep-work-spectrum",
+    "steelmanning-order"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 2,
+   "skipped": [
+    "All other issues target cards not in habits.json (small-wins-estimate, opportunity-cost-dvd, opportunity-gap-*, looping-choice, skill-gap-*, grit-west-point-reveal, sleep-memory-choice, wso-triad-venn, impulse-pause-order, two-thirds-rule-*, will-gap-spectrum, self-efficacy-radar, deep-work-spectrum, steelmanning-order)",
+    "identity-habits-spectrum: two hook rewrites were suggested (Elena's 'slow week' version and Okafor's 'sounds like you' version); I applied Okafor's non-evaluative one and merged Elena's insight wording"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 1,
+   "skipped": [
+    "All other issues concern cards not in emotions.json",
+    "impulse-pause rename: data/qlip.json (build output) and qa/sessions/sample-2.txt still reference old id impulse-pause-order; not edited per file scope"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 7,
+   "skipped": [
+    "small-wins-estimate (Maya): app.js rank rendering not applied; card converted to reveal type instead, per Lina's fix",
+    "small-wins-estimate (Sam): app.js 'no recently played Next card' rule is outside this file",
+    "small-wins-estimate (Elena): Bandura sentence not added because Bandura is not in the source; Sam's sourced wording used instead",
+    "grit-west-point-reveal: Elena asked to keep the remaining caveats as they are; Maya asked to shorten the reveal. Merged: kept the rare-dropouts and smaller-effect caveats and dropped the conscientiousness clause to keep it short",
+    "All other issues refer to cards not in growth.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 3,
+   "skipped": [
+    "steelmanning-order: app order-check change not applied (app.js out of scope); merged steps 2 and 3 into one item instead, so a fixed order is no longer needed"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 3,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 4,
+   "skipped": [
+    "All other issues: card_ids not in decisions.json",
+    "opportunity-cost-dvd: app.js / other-file changes not in scope; data/qlip.json (built output) still references old id opportunity-cost-dvd and needs a rebuild",
+    "opportunity-cost-dvd: Lina's 'Skip it' binary choice not adopted; kept the A/B framing (Maya/Radu) since naming option B is the point of the study"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  }
+ ]
+}

@@ -23,7 +23,29 @@ from validate import load_cards, load_concepts, validate_card  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 HIST = ROOT / "qa" / "history.json"
-NOT_VERBS = {"the", "a", "an", "your", "you", "if", "when", "this", "it", "my", "i", "next", "today", "before", "after", "for", "once"}
+# try_today may open with a verb or a trigger ("Next time…", "Before…"); these openers mean neither.
+NOT_VERBS = {"the", "a", "an", "your", "you", "this", "it", "my", "i", "for", "there", "people", "we"}
+
+
+def tokens(t):
+    return set(re.findall(r"[a-z']{3,}", t.lower()))
+
+
+def first_prompt(card):
+    g = card["game"]
+    for k in ("prompt", "question"):
+        if g.get(k):
+            return g[k]
+    if g.get("steps"):
+        return g["steps"][0]["scenario"]
+    if g.get("questions"):
+        return g["questions"][0]["q"]
+    return ""
+
+
+def hook_distinct(card):
+    a, b = tokens(card["hook"]), tokens(first_prompt(card))
+    return not a or not b or len(a & b) / len(a | b) < 0.5
 
 
 def syllables(word):
@@ -63,23 +85,31 @@ def automated():
     sources_ok = sum(1 for c in cards if c["source"].get("work") and c["source"].get("thinkers")) / len(cards)
     sens = [c for c in cards if c.get("sensitive")]
     a11y = len(pt.get("a11y", []))
+    per_concept = Counter(c["concept"] for c in cards)
+    depth = sum(1 for k in concepts if per_concept.get(k, 0) >= 2) / len(concepts)
+    distinct = sum(1 for c in cards if hook_distinct(c)) / len(cards)
+    brief = sum(1 for c in cards if len(c["insight"]) <= 200) / len(cards)
     m = {
         "schema": 5 * (1 if errs == 0 else max(0, 1 - errs / 20)),
-        "playthrough": 10 * pt["played_ok"] / max(1, pt["cards"]),
-        "console": 5 * (1 if not pt["console_errors"] else max(0, 1 - len(pt["console_errors"]) / 5)),
+        "playthrough": 8 * pt["played_ok"] / max(1, pt["cards"]),
+        "console": 4 * (1 if not pt["console_errors"] else max(0, 1 - len(pt["console_errors"]) / 5)),
         "overflow": 3 * (1 if not pt["overflow"] else 0),
-        "a11y": 7 * max(0, 1 - a11y / 8),
+        "a11y": 6 * max(0, 1 - a11y / 8),
         "readability": 5 * min(1, max(0, (reading - 30) / 35)),       # Flesch 65+ = full marks
-        "actionable": 4 * verb_ok,
-        "sourced": 2 * sources_ok,
+        "actionable": 3 * verb_ok,
+        "sourced": 1 * sources_ok,
         "graph_connected": 2 * (1 if st["components"] == 1 else 0),
         "coverage": 3 * (1 - len(st["concepts_without_cards"]) / max(1, st["nodes"])),
         "type_diversity": 2 * entropy_ratio(Counter(st["cards_by_type"]), 8),
         "domain_balance": 2 * entropy_ratio(Counter(st["cards_by_domain"]), len(st["cards_by_domain"])),
+        "depth": 3 * depth,               # concepts explored from more than one angle
+        "hook_distinct": 2 * distinct,    # hook adds something the game question doesn't
+        "brief_reveal": 1 * brief,        # insight short enough to read in the feed
     }
     detail = {"validator_errors": errs, "cards": len(cards), "played_ok": pt["played_ok"], "console_errors": len(pt["console_errors"]),
               "overflow": len(pt["overflow"]), "a11y_serious": a11y, "flesch_avg": round(reading, 1), "try_today_verb_rate": round(verb_ok, 3),
-              "sensitive_cards": len(sens), "first_card_ms": pt.get("first_card_ms"), "edges": st["edges"]}
+              "sensitive_cards": len(sens), "first_card_ms": pt.get("first_card_ms"), "edges": st["edges"],
+              "concept_depth": round(depth, 3), "hook_distinct_rate": round(distinct, 3), "brief_reveal_rate": round(brief, 3)}
     return {k: round(v, 2) for k, v in m.items()}, detail
 
 

@@ -27,9 +27,9 @@
           "why": "Paint is cheap. A weekend fixes a bad call."
         },
         {
-          "text": "Quitting a stable job with no savings",
+          "text": "Lending all your savings to a friend's 'sure thing'",
           "side": "left",
-          "why": "Hard to walk back. Slow down, gather info, maybe build a buffer first."
+          "why": "Money lent is hard to get back, and so is the friendship. Slow down here."
         },
         {
           "text": "Testing a new morning routine for a week",
@@ -43,7 +43,7 @@
         }
       ]
     },
-    "insight": "Most choices are two-way doors: if they go wrong, you can step back. Treating them like life-or-death costs time and energy. Save your careful thinking for the few doors that lock behind you.",
+    "insight": "Most choices are two-way doors: if they go wrong, you can step back. Save your slow, careful thinking for the few doors that lock behind you.",
     "model": "Ask 'Can I undo this?' Reversible: decide fast and learn. Irreversible: slow down.",
     "try_today": "Pick one choice you've been stalling on. If it's reversible, decide it in the next 5 minutes and treat it as a test.",
     "source": {
@@ -58,7 +58,8 @@
       "regret_minimization",
       "premortem",
       "impulse_pause"
-    ]
+    ],
+    "try_team": "List 5 choices your team, class or family keeps putting off. Vote: one-way or two-way door? Decide every two-way door before you leave the room."
   },
   {
     "id": "reversible-doors-spectrum",
@@ -85,7 +86,7 @@
           ]
         },
         {
-          "q": "Before a big move (new city, new career), I…",
+          "q": "Before a big change (new school, moving home, a new job), I…",
           "options": [
             {
               "label": "Jump in on a gut feeling",
@@ -127,22 +128,22 @@
       "zones": [
         {
           "upTo": -0.34,
-          "label": "Over-deliberator",
-          "text": "You give small choices big-choice energy. That's tiring. Try deadlines for reversible decisions and save your care for the big ones."
+          "label": "Today: over-deliberating",
+          "text": "Today your answers give small choices big-choice energy. That's tiring. Try a deadline for reversible picks and save your care for the big ones."
         },
         {
           "upTo": 0.34,
-          "label": "Mixed",
-          "text": "Sometimes you sort well, sometimes small things eat your time. The quick test 'Can I undo this?' will tip you the right way."
+          "label": "Today: mixed",
+          "text": "Your answers today are mixed: some small choices get sorted fast, others eat your time. Asking 'Can I undo this?' tips them the right way."
         },
         {
           "upTo": 1,
-          "label": "Door-sorter",
-          "text": "You move fast where it's safe and slow where it matters. Keep checking that 'fast' never sneaks onto a one-way door."
+          "label": "Today: sorting doors",
+          "text": "Your answers today move fast where it's safe and slow where it matters. Keep checking that 'fast' never sneaks onto a one-way door."
         }
       ]
     },
-    "insight": "Good deciders aren't always slow or fast. They match speed to stakes. Barry Schwartz's research found people who always hunt for the best option (maximizers) tend, on average, to feel less satisfied than 'good enough' pickers, though later studies show mixed results.",
+    "insight": "Good deciders match speed to stakes. Barry Schwartz linked always hunting for the best option ('maximizing') to lower satisfaction, but later studies are mixed.",
     "model": "Match your decision speed to how reversible the choice is, not how anxious it makes you.",
     "try_today": "Set a 2-minute timer for your next small choice (food, show, outfit). When it rings, pick and don't look back.",
     "source": {
@@ -158,7 +159,8 @@
     "related": [
       "regret_minimization",
       "opportunity_cost"
-    ]
+    ],
+    "try_team": "Before your next group choice (a film, a trip, a project name), ask: can we undo it? If yes, set a 3-minute limit, pick, and move on."
   },
   {
     "id": "regret-minimization-80",
@@ -173,9 +175,10 @@
         "The risks that failed",
         "The chances I never took"
       ],
-      "reveal": "In the short run, people regret mistakes they made. Over a lifetime, the regrets that last are mostly about what they didn't do (Gilovich & Medvec, 1995). Daniel Pink's World Regret Survey found 'boldness regrets' among the most common."
+      "reveal": "Over a lifetime, most people regret the chances they never took. Picked failed risks? That's true in the short run: fresh mistakes sting most. But they fade, while 'what if' stays open (Gilovich & Medvec, 1995).",
+      "answer": 1
     },
-    "insight": "Failed attempts hurt, then fade: you learn, you explain them, you move on. Untaken chances stay open in your mind as 'what if'. Jeff Bezos used this test in 1994 to leave a secure job and start Amazon. Of course, it's a lens, not a license for reckless bets.",
+    "insight": "Failed tries hurt, then fade: you learn and move on. Untaken chances stay open as 'what if'. It's a lens for close calls, not a license for reckless bets.",
     "model": "From age 80, inaction usually hurts longer than a failed try. Let that tip close calls toward action.",
     "try_today": "Write down one thing you'd regret never trying. Then write the smallest first step you could take this week.",
     "source": {
@@ -193,29 +196,127 @@
       "loss_aversion",
       "reversible_doors",
       "begin_with_end"
+    ],
+    "try_team": "Each person finishes 'At 80, I'd regret our group never trying…' (club, class, family, team). Pick one and plan its first small step together."
+  },
+  {
+    "id": "regret-minimization-hacked",
+    "concept": "regret_minimization",
+    "domain": "decisions",
+    "type": "choice",
+    "hook": "The 80-year-old test can be hijacked. Can you spot when?",
+    "title": "Regret Test, Used Well",
+    "game": {
+      "steps": [
+        {
+          "scenario": "An old friend you drifted from pops up on your feed. Messaging after 3 years feels awkward. Use the 80-year-old test. You…",
+          "options": [
+            {
+              "text": "Send one line: 'Saw this and thought of you'",
+              "best": true,
+              "feedback": "Yes. The awkward bit lasts a minute. In Daniel Pink's big regret survey, lost friendships were one of the four most common kinds of regret."
+            },
+            {
+              "text": "Wait for them to message first",
+              "feedback": "Very common, and they're probably waiting too. Looking back from 80, the unsent message is the one that tends to linger."
+            },
+            {
+              "text": "Leave it. If it mattered, it would have lasted",
+              "feedback": "Friendships often fade from drift, not because they didn't matter. A short message is a cheap, two-way door."
+            }
+          ]
+        },
+        {
+          "scenario": "A mate says: 'Put all your savings into this new crypto coin. At 80 you'll regret missing out!' Does the test say yes?",
+          "options": [
+            {
+              "text": "No. That's fear of missing out using the test's name",
+              "best": true,
+              "feedback": "Right. The test tips close calls toward trying. It can't turn a bet you can't afford to lose into a good one. All your savings is a one-way door."
+            },
+            {
+              "text": "Yes. Regrets about not acting last longest",
+              "feedback": "Tempting logic, but that research is about chances people wished they'd tried, not bets that wiped them out. Losing your savings is a regret too."
+            },
+            {
+              "text": "Never take risks, then there's nothing to regret",
+              "feedback": "Sounds safe, but from 80, a life with no tries is the regret people describe most. The skill is sizing the risk, not avoiding all of it."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Regrets about not acting tend to last longer than regrets about acting (Gilovich & Medvec). But the test is for meaningful tries you can afford, not all-in bets.",
+    "model": "Ask 'Will I regret not trying?' then 'Can I survive it failing?' Two yeses: go.",
+    "try_today": "Message one person you've drifted from. Keep it to one line, like 'Saw this and thought of you.'",
+    "try_team": "Everyone writes one 'I wish we'd tried…' for your group. Sort them: cheap to try, or a one-way door? Plan the cheapest one this month.",
+    "source": {
+      "thinkers": [
+        "Thomas Gilovich",
+        "Victoria Husted Medvec",
+        "Daniel Pink",
+        "Jeff Bezos"
+      ],
+      "work": "The experience of regret (Psychological Review, 1995); The Power of Regret (2022)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "reversible_doors",
+      "expected_value",
+      "loss_aversion"
     ]
   },
   {
     "id": "premortem-order",
     "concept": "premortem",
     "domain": "decisions",
-    "type": "order",
+    "type": "choice",
     "hook": "Your plan already failed. It's a year from now. Why did it?",
     "title": "The Pre-Mortem",
     "game": {
-      "prompt": "Put the pre-mortem steps in order.",
-      "items": [
-        "Describe the plan in one sentence",
-        "Imagine it's a year later and it failed badly",
-        "Write every reason it failed, alone and fast",
-        "Share the reasons and spot the biggest risks",
-        "Change the plan to block the top risks"
-      ],
-      "explain": "Assuming failure has already happened frees you to name problems you'd normally avoid saying out loud. Writing alone first stops the loudest voice from setting the list."
+      "steps": [
+        {
+          "scenario": "Your group festival trip is in 2 months. Before you book anything, what's the smartest first move?",
+          "options": [
+            {
+              "text": "Picture it's after the trip and it was a disaster. List why.",
+              "best": true,
+              "feedback": "Yes. That's a pre-mortem: 1) say the plan, 2) assume it already failed, 3) write reasons alone, 4) share, 5) fix the top risks. Step 2 is the key move."
+            },
+            {
+              "text": "Hype everyone up so nobody drops out",
+              "feedback": "Energy helps, but it hides problems. Imagining the failure first brings them out while you can still fix them."
+            },
+            {
+              "text": "Wait and sort problems as they come",
+              "feedback": "Common, but by then the easy fixes are gone. Naming risks now is cheaper."
+            }
+          ]
+        },
+        {
+          "scenario": "Your list: money ran out, someone's parents said no, tickets sold out, the tent broke. Which can you fix TODAY?",
+          "options": [
+            {
+              "text": "Someone's parents said no",
+              "best": true,
+              "feedback": "One message tonight settles it. Fix the cheap, fast risks first."
+            },
+            {
+              "text": "Money ran out",
+              "feedback": "Worth planning, but saving takes weeks. A budget chat is a good next step after the quick wins."
+            },
+            {
+              "text": "The tent broke",
+              "feedback": "Good catch, but that's a check for the week before, not today."
+            }
+          ]
+        }
+      ]
     },
-    "insight": "A post-mortem explains a failure after it's too late. A pre-mortem does it while you can still act. Research on 'prospective hindsight' found that imagining an event has already happened helps people come up with more reasons for it (Mitchell, Russo & Pennington, 1989).",
+    "insight": "The key move is assuming it already failed: that frees people to name risks. Imagining an event as done helps people find more reasons for it (Mitchell et al., 1989).",
     "model": "Pretend it already failed, then ask why. Fix those reasons before you start.",
-    "try_today": "Take one plan for this week. Spend 3 minutes writing 'It failed because…' five times. Fix the easiest one now.",
+    "try_today": "Take one plan for this week. Write 'It failed because…' three times. Fix the easiest reason now.",
     "source": {
       "thinkers": [
         "Gary Klein",
@@ -231,26 +332,27 @@
       "inversion",
       "second_order",
       "reversible_doors"
-    ]
+    ],
+    "try_team": "Next planning meeting or family trip chat: 5 minutes, everyone silently writes 'It failed because…', then read them out. Fix the top two risks first."
   },
   {
     "id": "expected-value-coin",
     "concept": "expected_value",
     "domain": "decisions",
     "type": "estimate",
-    "hook": "Coin flip: win $100 or lose $40. On average, what's a flip worth?",
+    "hook": "Coin flip: win 100 or lose 40. Why does your gut say no?",
     "title": "Expected Value",
     "game": {
-      "question": "Heads you win $100, tails you lose $40. On average, how much is one flip worth?",
+      "question": "Heads you win 100, tails you lose 40 (any currency). On average, how much is one flip worth?",
       "min": -50,
       "max": 100,
       "step": 5,
-      "unit": "$",
+      "unit": "",
       "answer": 30,
       "anchor": null,
-      "explain": "Expected value = chance × payoff, added up. 0.5 × $100 + 0.5 × (−$40) = $50 − $20 = $30. Over many flips, you'd average about $30 a flip."
+      "explain": "Expected value = chance × payoff, added up. 0.5 × 100 + 0.5 × (−40) = 50 − 20 = 30. Over many flips, you'd average about +30 a flip."
     },
-    "insight": "Losses tend to feel about twice as strong as equal gains (loss aversion), so some people still hesitate here. Expected value shows the math under the feeling. One flip can still lose, so only bet what you can afford to lose.",
+    "insight": "Losses tend to feel bigger than equal gains (loss aversion), so many people refuse this bet. Expected value shows the math under the feeling. One flip can still lose.",
     "model": "Odds × payoff, added up. Take bets with positive value that you can afford to lose.",
     "try_today": "Write two outcomes for one choice today, each with a rough chance and payoff. Multiply each pair and compare.",
     "source": {
@@ -267,7 +369,13 @@
     "related": [
       "loss_aversion",
       "base_rates"
-    ]
+    ],
+    "try_team": "Take one real group choice (a fundraiser, a trip, a new rule). Everyone guesses the chance and payoff of the best and worst case. Compare the numbers aloud.",
+    "from_source": {
+      "quote": "Let us weigh the gain and the loss in wagering that God is. Let us estimate these two chances.",
+      "cite": "Blaise Pascal, Pensées, §233 (trans. W. F. Trotter, 1910)",
+      "next_read": "Pensées §233 (the wager), the first famous expected-value argument; then the Pascal–Fermat letters of 1654 on the 'problem of points'"
+    }
   },
   {
     "id": "expected-value-resulting",
@@ -279,7 +387,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "Your friend researched a job offer for weeks, talked to staff, checked the company's finances. Six months later, the company shuts down. They say: 'I'm so stupid for taking it.' You reply…",
+          "scenario": "Your friend spent weeks choosing a second-hand laptop: read reviews, asked someone who knows tech, tested it in person. A month later it dies. They say: 'I'm so stupid for buying it.' You reply…",
           "options": [
             {
               "text": "\"You decided well with what you knew. The outcome was bad luck.\"",
@@ -291,7 +399,7 @@
               "feedback": "Hindsight makes the future look obvious. If no info pointed to it, the decision wasn't the problem."
             },
             {
-              "text": "\"Never trust a job offer again.\"",
+              "text": "\"Never buy second-hand again.\"",
               "feedback": "Understandable instinct, but it learns the wrong lesson from one roll of the dice."
             }
           ]
@@ -312,7 +420,7 @@
         }
       ]
     },
-    "insight": "Poker player Annie Duke calls it 'resulting': judging a decision only by its outcome. Life has luck in it. Good choices sometimes lose and bad ones sometimes win. Judge yourself on the process, and you'll learn the right lessons.",
+    "insight": "Poker player Annie Duke calls it 'resulting': judging a choice only by how it turned out. Good choices sometimes lose; bad ones sometimes win. Judge the process.",
     "model": "Decision quality = what you knew and how you weighed it. Outcome = decision + luck.",
     "try_today": "Pick one past choice you regret. Ask: given what I knew then, was it reasonable? Write one sentence answering.",
     "source": {
@@ -328,26 +436,27 @@
       "base_rates",
       "mistake_alchemy"
     ],
-    "sensitive": true
+    "sensitive": true,
+    "try_team": "After a game, test or project, review one call in two columns: 'what we knew then' and 'what luck did'. Praise good process, even when it lost."
   },
   {
-    "id": "opportunity-cost-dvd",
+    "id": "opportunity-cost-unseen",
     "concept": "opportunity_cost",
     "domain": "decisions",
     "type": "reveal",
-    "hook": "Saying 'yes' to this costs more than its price tag. Want to see?",
-    "title": "Opportunity Cost",
+    "hook": "Every yes has a hidden price. Quick: would you buy these?",
+    "title": "What Is Not Seen",
     "game": {
-      "prompt": "A movie you like costs $14.99. Option A: buy it. Option B: keep the $14.99 for other things you want. Which do you pick?",
+      "prompt": "New trainers you love cost €60. Option A: buy them. Option B: keep the €60 for other things you want (tickets, food with friends, saving). Which do you pick?",
       "choices": [
-        "Buy it",
-        "Keep the $14.99 for other things"
+        "Buy them",
+        "Keep the €60 for other stuff"
       ],
-      "reveal": "In one study, 75% bought when the options were 'buy' or 'don't buy'. Adding 'keep the $14.99 for other purchases' dropped buyers to 55% (Frederick et al., 2009). Later replications found the effect, but often smaller."
+      "reveal": "No wrong answer. But in one study, just naming option B cut buyers from 75% to 55% (Frederick et al., 2009); later replications found a smaller effect. Bastiat's point, 1850: the cost you see is the price; the cost you don't see is everything else that money could have been."
     },
-    "insight": "Every yes is a no to something else: money, time, attention. Our minds rarely show us the thing we're giving up unless someone says it out loud. Economist Frédéric Bastiat called it 'what is not seen'.",
+    "insight": "Every yes is a no to something else: money, time, attention. Our minds rarely show what we give up unless someone names it. Bastiat called it 'what is not seen'.",
     "model": "The real price of a yes is the best thing it pushes out. Name it before you agree.",
-    "try_today": "Name what you're giving up before your next yes (a purchase, a meeting, an hour online). Then decide.",
+    "try_today": "Before your next yes (a purchase, a meeting, an hour online), name what it pushes out. Then decide.",
     "source": {
       "thinkers": [
         "Frédéric Bastiat",
@@ -362,6 +471,48 @@
       "deep_work",
       "attention_residue",
       "reversible_doors"
+    ],
+    "try_team": "Spending a shared budget or Saturday? Before voting, each person names what a yes pushes out. Decide only after the trade-offs are said aloud.",
+    "from_source": {
+      "quote": "the first only is immediate; it manifests itself simultaneously with its cause—it is seen. The others unfold in succession—they are not seen",
+      "cite": "Frédéric Bastiat, That Which Is Seen, and That Which Is Not Seen (1850), opening paragraph; 19th-century English translation",
+      "next_read": "Bastiat, That Which Is Seen, and That Which Is Not Seen, introduction and ch. 1 'The Broken Window'"
+    }
+  },
+  {
+    "id": "opportunity-cost-free-ticket",
+    "concept": "opportunity_cost",
+    "domain": "decisions",
+    "type": "estimate",
+    "hook": "A free ticket. What does it really cost? Most economists missed it.",
+    "title": "The Free Ticket Puzzle",
+    "game": {
+      "question": "You win a free ticket to see Band A (you can't sell it). Same night, Band B plays: tickets cost 40, and you'd happily pay up to 50 to see them. What does going to Band A really cost you?",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "",
+      "answer": 10,
+      "anchor": null,
+      "explain": "10. Going to A means giving up B. Seeing B was worth 50 to you but would have cost 40, so you give up 50 − 40 = 10 of value. When 199 economists got this puzzle (with 0, 10, 40 or 50 as options), only about 22% picked 10 (Ferraro & Taylor, 2005)."
+    },
+    "insight": "Opportunity cost is the value of the best thing you give up, minus what it would have cost you. Even experts skip it. Some argue the puzzle's wording is unclear, so hold it lightly.",
+    "model": "'Free' isn't free: the cost is the best option you give up, minus its own price.",
+    "try_today": "Pick one 'free' plan this week. Write what you'll miss to do it, and decide if it still wins.",
+    "try_team": "Pose the ticket puzzle to your group and compare guesses. Then ask: what 'free' thing are we doing that quietly costs us a better option?",
+    "source": {
+      "thinkers": [
+        "Paul J. Ferraro",
+        "Laura O. Taylor"
+      ],
+      "work": "Do Economists Recognize an Opportunity Cost When They Sense One? (Topics in Economic Analysis & Policy, 2005)"
+    },
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "expected_value",
+      "deep_work",
+      "regret_minimization"
     ]
   },
   {
@@ -375,7 +526,7 @@
       "axes": [
         {
           "key": "K",
-          "label": "Proven knowledge",
+          "label": "Track record",
           "color": "#0EA5E9"
         },
         {
@@ -414,24 +565,24 @@
       "threshold": 0.55,
       "results": {
         "": {
-          "name": "The Explorer",
-          "text": "You're early on this topic and you know it. That's honest. Learn by asking people inside their circle, and keep decisions small and reversible for now."
+          "name": "Outside both (early)",
+          "text": "Today your dot sits outside both circles: your answers say this topic is new to you, and you know it. That's honest. Learn from people with results, and keep decisions small and reversible."
         },
         "C": {
-          "name": "Edge Walker",
-          "text": "Your confidence is ahead of your track record. That's where mistakes live. Before big calls, ask someone with results to check you."
+          "name": "Confidence ahead of proof",
+          "text": "Your answers put confidence ahead of track record on this topic. That's where mistakes live. Before big calls, ask someone with results to check you."
         },
         "K": {
-          "name": "Quiet Expert",
-          "text": "You know more than you claim. Humility is good, but your knowledge could help others. Share it, and note where it ends."
+          "name": "Proof ahead of confidence",
+          "text": "Your answers show more track record than you claim on this topic. Humility is good, but your knowledge could help others. Share it, and say where it ends."
         },
         "CK": {
-          "name": "Inside the Circle",
-          "text": "Confidence and proof line up. Great. Your job now is guarding the border: notice when a question drifts outside what you've tested."
+          "name": "Inside the circle",
+          "text": "Your answers line up confidence and proof on this topic. Your job now is guarding the border: notice when a question drifts past what you've tested."
         }
       }
     },
-    "insight": "Warren Buffett's rule: the size of your circle matters less than knowing where its edge is. Socrates made the same point 2,400 years ago: wisdom starts with knowing what you don't know. Trouble comes when confidence spreads wider than real knowledge.",
+    "insight": "Warren Buffett's rule: the size of your circle matters less than knowing where its edge is. Socrates said wisdom starts with knowing what you don't know.",
     "model": "Know the edge of what you know. Act boldly inside it; ask, test, or pass outside it.",
     "try_today": "Write one topic where you're truly competent and one where you only feel confident. Ask an expert one question on the second.",
     "source": {
@@ -447,6 +598,12 @@
       "socratic_ignorance",
       "confirmation_bias",
       "deliberate_practice"
-    ]
+    ],
+    "try_team": "Each person names one topic they've truly tested and one they only feel sure about. Make a 'who to ask' list from it and use it next time you're stuck.",
+    "from_source": {
+      "quote": "he knows nothing, and thinks that he knows; I neither know nor think that I know.",
+      "cite": "Plato, Apology 21d (trans. Benjamin Jowett, 1871)",
+      "next_read": "Plato, Apology 20e–23c: the oracle at Delphi and Socrates' search for a wiser man"
+    }
   }
 ]

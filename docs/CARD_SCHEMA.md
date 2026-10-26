@@ -25,6 +25,8 @@ Cards live in `content/cards/<domain>.json` as a JSON array.
 | `evidence` | `strong` (replicated science) · `moderate` (good evidence, some debate) · `contested` (popular but disputed — say so in insight) · `philosophy` (a lens, not an empirical claim) |
 | `level` | 1 = anyone, 2 = some background, 3 = deep |
 | `related` | 1–3 other concept ids this card should lead to |
+| `try_team` | optional, ≤ 160 chars: the same idea as a 5-minute exercise for a team, class or family |
+| `from_source` | optional `{ "quote": "≤ 25 words, public-domain text or a short fair-use phrase", "cite": "Author, Work, chapter", "next_read": "exact chapter/pages" }` — a doorway to the primary text |
 | `sensitive` | optional `true` when the topic touches mood, anxiety, self-worth; the app shows a gentle support line |
 
 ## Game types
@@ -83,10 +85,14 @@ Use only numbers you can source. `anchor` (optional) shows a number first to dem
 
 ### `reveal` — a thought experiment, then a flip
 ```json
-{"prompt":"You're 80. Looking back, which hurts more: the risks you took that failed, or the ones you never took?","choices":["Failed risks","Untaken risks"],"reveal":"Most people regret inactions more over the long run (Gilovich & Medvec, 1995)."}
+{"prompt":"You're 80. Looking back, which hurts more: the risks you took that failed, or the ones you never took?","choices":["Failed risks","Untaken risks"],"answer":1,"reveal":"Most people regret inactions more over the long run (Gilovich & Medvec, 1995)."}
 ```
+`answer` (optional) = index of the factually right choice; set it whenever the reveal has a right answer, omit it for pure opinion prompts.
 
 ## Voice
+
+- Scenarios must fit **anyone**: prefer school, friends, family, hobbies, money and phones over office-only situations. When a scenario is work-specific, the card's `try_team` carries the workplace angle.
+- Results of "where are you" games describe *today's answers*, never the person ("you lean…", not "you are…").
 
 - Talk *to* the player, warm and direct, like a sharp friend — not a guru, not a textbook.
 - Practical philosophy: always end in something usable.

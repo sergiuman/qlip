@@ -9,25 +9,25 @@
     "game": {
       "steps": [
         {
-          "scenario": "Your friend says: 'My boss rewrote my whole report in front of everyone.' You reply…",
+          "scenario": "Your friend says: 'My brother corrected me in front of the whole family at dinner.' You reply…",
           "options": [
             {
-              "text": "Next time, send him a draft a day early.",
-              "feedback": "Solid advice — for a practical talk. But this one sounds like it's about feelings first. Solutions land better after they feel heard."
+              "text": "Next time, just correct him right back.",
+              "feedback": "Could work in a practical talk. But this one sounds like feelings first. Solutions land better after they feel heard."
             },
             {
-              "text": "In front of everyone? That sounds humiliating.",
+              "text": "In front of everyone? That sounds embarrassing.",
               "best": true,
               "feedback": "Yes. This is an emotional conversation. Naming the feeling tells them you're on the same channel."
             },
             {
-              "text": "My boss does that too, it's so annoying.",
+              "text": "My brother does that too, it's so annoying.",
               "feedback": "Friendly instinct, but it moves the spotlight to you. Stay on their story a bit longer."
             }
           ]
         },
         {
-          "scenario": "Later they say: 'OK, I'm calmer. What should I actually do on Monday?' Now you…",
+          "scenario": "Later they say: 'OK, I'm calmer. What should I actually say to him?' Now you…",
           "options": [
             {
               "text": "Keep validating: 'That must have felt awful.'",
@@ -39,14 +39,14 @@
               "feedback": "Right. The talk turned practical, so you turned with it. Matching is a moving target."
             },
             {
-              "text": "Ask what this says about who they are at work.",
-              "feedback": "That's a social/identity question. Could matter later — but they asked for a next step."
+              "text": "Ask what this says about their place in the family.",
+              "feedback": "That's a social, who-are-we question. It may matter later, but right now they asked for a next step."
             }
           ]
         }
       ]
     },
-    "insight": "Most talks are one of three kinds: practical (what should we do?), emotional (how do we feel?), or social (who are we?). Advice given in an emotional talk often misses. Notice which kind you're in — and when it switches.",
+    "insight": "Most talks are practical (what do we do?), emotional (how do we feel?) or social (who are we?). Advice in an emotional talk often misses. Notice the kind, and when it switches.",
     "model": "Ask: is this about solving, feeling, or identity? Then answer in that same channel.",
     "try_today": "In your next real conversation, silently label it practical, emotional, or social before you reply.",
     "source": {
@@ -61,6 +61,73 @@
       "looping",
       "emotion_naming",
       "emotional_contagion"
+    ],
+    "try_team": "Read out 3 real messages (group chat, a note from school, a work email). Everyone votes: practical, emotional or social? Talk through the splits."
+  },
+  {
+    "id": "three-conversations-swipe",
+    "concept": "three_conversations",
+    "domain": "connection",
+    "type": "swipe",
+    "hook": "Same calm sentence, two different needs. Can you hear which one?",
+    "title": "Fix It, or Hear Me?",
+    "game": {
+      "prompt": "What do they need from you first?",
+      "left": "Hear me first",
+      "right": "Help me fix it",
+      "items": [
+        {
+          "text": "I got 4 out of 10 on the maths test. Again.",
+          "side": "left",
+          "why": "'Again' carries the feeling. Name it before you suggest a tutor."
+        },
+        {
+          "text": "Which bus gets me to the hospital by 10?",
+          "side": "right",
+          "why": "A clear practical question. Answer it. A feelings chat here would feel odd."
+        },
+        {
+          "text": "Everyone got invited to the party except me.",
+          "side": "left",
+          "why": "This is about belonging, the social kind of talk. Listen before you plan."
+        },
+        {
+          "text": "My phone's on 2%. Have you got a charger?",
+          "side": "right",
+          "why": "Pure logistics. Hand over the cable."
+        },
+        {
+          "text": "I've retired and I don't know what to do with my days.",
+          "side": "left",
+          "why": "Sounds practical, but it's about identity: who am I now? Ask before suggesting hobbies."
+        },
+        {
+          "text": "How do we split the bill fairly between five of us?",
+          "side": "right",
+          "why": "A maths and fairness question. Offer a method."
+        },
+        {
+          "text": "My mum keeps reading my messages.",
+          "side": "left",
+          "why": "Trust and privacy: feelings first. Plans can come after they feel heard."
+        }
+      ]
+    },
+    "insight": "Many sentences sound practical but carry a feeling or a question of belonging underneath. Clues: 'again', 'everyone', 'except me', big life changes. Not sure? Ask.",
+    "model": "Before you solve it, check the need: 'Do you want ideas, or just to vent?'",
+    "try_today": "Next time someone shares a problem, ask 'Do you want ideas, or do you just need to vent?' before you answer.",
+    "try_team": "Each person writes one thing they said this week. Others guess: did they want a fix, a listener, or to belong? The writer reveals.",
+    "source": {
+      "thinkers": [
+        "Charles Duhigg"
+      ],
+      "work": "Supercommunicators (2024)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "looping",
+      "emotion_naming"
     ]
   },
   {
@@ -73,7 +140,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "Your partner snaps: 'You never help with the dishes!' You actually did them twice this week. You say…",
+          "scenario": "Your mum (or dad, or sibling) snaps: 'You never help with the dishes!' You did them twice this week. You say…",
           "options": [
             {
               "text": "That's not true, I did them Tuesday and Thursday.",
@@ -106,7 +173,7 @@
         }
       ]
     },
-    "insight": "Looping means: ask, repeat back what you heard in your own words, then check if you got it right. People soften when they're proven heard — not just told 'I hear you.' Getting corrected is part of the method.",
+    "insight": "Looping: ask, say back what you heard in your own words, then check you got it right. People soften when they're shown they were heard, not just told. Being corrected is part of it.",
     "model": "Ask → say it back in your words → 'Did I get that right?' → repeat until they say yes.",
     "try_today": "In one conversation today, say back what you heard and ask 'Did I get that right?' before giving your view.",
     "source": {
@@ -122,29 +189,62 @@
       "steelmanning",
       "three_conversations",
       "emotion_naming"
-    ]
+    ],
+    "try_team": "In pairs: one moans about something small for 1 minute; the other loops until they hear 'yes, exactly.' Swap.",
+    "from_source": {
+      "quote": "The reason why we have two ears and only one mouth is that we may listen the more and talk the less.",
+      "cite": "Zeno of Citium, in Diogenes Laertius, Lives of Eminent Philosophers, VII.23, trans. R. D. Hicks (1925)",
+      "next_read": "Diogenes Laertius, Lives of Eminent Philosophers, Book VII, sections 1-38 (the life of Zeno)"
+    }
   },
   {
-    "id": "looping-order",
+    "id": "looping-swipe",
     "concept": "looping",
     "domain": "connection",
-    "type": "order",
-    "hook": "'I hear you' is not proof. Can you build the real thing?",
-    "title": "The Loop, Step by Step",
+    "type": "swipe",
+    "hook": "'I hear you' sounds kind. So why can it make things worse?",
+    "title": "Real Loop or Fake Loop?",
     "game": {
-      "prompt": "Put the steps of looping for understanding in order",
+      "prompt": "Does this reply prove you listened?",
+      "left": "Fake loop",
+      "right": "Real loop",
       "items": [
-        "Ask a real question",
-        "Listen without planning your reply",
-        "Say back the core of it in your own words",
-        "Ask: 'Did I get that right?'",
-        "Adjust if they correct you"
-      ],
-      "explain": "The key is the check at the end. Summarizing without asking is still a guess. Asking turns your guess into shared understanding."
+        {
+          "text": "I hear you.",
+          "side": "left",
+          "why": "It claims you listened but proves nothing. They have nothing to check."
+        },
+        {
+          "text": "So the worst part was that nobody even asked you. Right?",
+          "side": "right",
+          "why": "Their point in your words, plus a check. They can say yes or fix it."
+        },
+        {
+          "text": "I know exactly how you feel.",
+          "side": "left",
+          "why": "Often a turn to your own story. And they can't correct a guess you never said."
+        },
+        {
+          "text": "Let me check: it's not the money, it's that nobody told you first?",
+          "side": "right",
+          "why": "Specific and checkable. Even if you're wrong, their correction gets you closer."
+        },
+        {
+          "text": "Totally. Anyway, what I'd do is…",
+          "side": "left",
+          "why": "A nod, then straight to advice. The listening was just waiting."
+        },
+        {
+          "text": "You want more say in the plan. Did I get that right?",
+          "side": "right",
+          "why": "Short and complete: a summary plus 'Did I get that right?'"
+        }
+      ]
     },
-    "insight": "Listening is invisible; looping makes it visible. The person hears their idea in your words and gets a chance to fix it. That moment of 'yes, that's it' is often when tension drops.",
+    "insight": "A real loop has two parts: their point in your words, and a check. Without the check it's still a guess. The moment they say 'yes, that's it' is often when tension drops.",
     "model": "Understanding isn't what you feel — it's what the other person confirms.",
     "try_today": "Pick one person today and do one full loop, ending with 'Did I get that right?'",
+    "try_team": "Play 'loop tennis': one person gives an opinion in 2 lines; the next loops it to a 'yes' before adding their own. Go round the circle.",
     "source": {
       "thinkers": [
         "Charles Duhigg",
@@ -171,7 +271,7 @@
       "right": "Recharge with people",
       "questions": [
         {
-          "q": "After a long day of meetings, I want…",
+          "q": "After a long, busy day (school, work or family), I want…",
           "options": [
             {
               "label": "A quiet room and no talking",
@@ -182,7 +282,7 @@
               "value": 0
             },
             {
-              "label": "Drinks with friends",
+              "label": "To go out with friends",
               "value": 2
             }
           ]
@@ -242,22 +342,22 @@
       "zones": [
         {
           "upTo": -0.34,
-          "label": "Introvert-leaning",
-          "text": "You probably recharge best in quiet. That's not shyness — you can be warm and bold and still need solitude to refuel."
+          "label": "Quiet-leaning today",
+          "text": "Today your answers lean toward recharging in quiet. That isn't shyness: you can be warm and bold and still refuel best alone."
         },
         {
           "upTo": 0.34,
-          "label": "Ambivert zone",
-          "text": "Like many people, you sit near the middle. Your need for people vs. quiet may shift with sleep, stress, and who's around."
+          "label": "Middle zone today",
+          "text": "Today your answers sit near the middle, like most people's. The pull toward people or quiet can shift with sleep, stress and who's around."
         },
         {
           "upTo": 1,
-          "label": "Extrovert-leaning",
-          "text": "You likely get energy from people and stimulation. Quiet focus may need a bit more structure for you to enjoy."
+          "label": "People-leaning today",
+          "text": "Today your answers lean toward refuelling with people and buzz. Quiet focus may go better with some structure, or company nearby."
         }
       ]
     },
-    "insight": "Introversion isn't shyness; it's mostly about how much stimulation feels good. Most people land near the middle, not at the poles. 'Recharge' is a handy lens, but researchers still debate what extraversion really measures.",
+    "insight": "Introversion isn't shyness; it's mostly how much stimulation feels good. Most people land near the middle. 'Recharge' is a handy lens, but researchers still debate what extraversion measures.",
     "model": "Not shy vs. loud — notice what drains you and what refuels you, then plan around it.",
     "try_today": "Look at tomorrow's schedule and add one 10-minute recharge block that fits your end of the spectrum.",
     "source": {
@@ -272,7 +372,8 @@
     "related": [
       "deep_work",
       "flow"
-    ]
+    ],
+    "try_team": "Planning a team, class or family day? Each person marks one moment they'd want quiet and one they'd want company. Build both in."
   },
   {
     "id": "shared-fictions-swipe",
@@ -287,7 +388,7 @@
       "right": "Exists anyway",
       "items": [
         {
-          "text": "The value of a 100-dollar bill",
+          "text": "The value of a banknote",
           "side": "left",
           "why": "The paper stays. Its value lives in what millions of people agree to accept."
         },
@@ -318,7 +419,7 @@
         }
       ]
     },
-    "insight": "Harari argues humans cooperate in huge numbers because we believe the same stories — money, laws, nations. 'Fiction' doesn't mean fake or bad: these stories are tools. The trick is remembering they can be rewritten.",
+    "insight": "Harari argues humans cooperate in huge numbers because we believe the same stories: money, laws, nations. 'Fiction' doesn't mean fake or bad. These stories are tools, and they can be rewritten.",
     "model": "Some things are rocks, some are agreements. Agreements can be questioned — and changed.",
     "try_today": "Name one 'rule' you follow today and ask: is this a rock or an agreement? Who could change it?",
     "source": {
@@ -332,7 +433,8 @@
     "related": [
       "map_territory",
       "reframing"
-    ]
+    ],
+    "try_team": "List 5 rules your team, class or family follows. Sort them: rock or agreement? Pick one agreement that no longer helps and redesign it together."
   },
   {
     "id": "steelmanning-choice",
@@ -377,7 +479,7 @@
         }
       ]
     },
-    "insight": "A strawman attacks the weakest version of a view. A steelman restates the strongest one first. It makes you fairer, makes others listen, and sometimes shows you that you were the one missing something.",
+    "insight": "A strawman attacks the weakest version of a view. A steelman states the strongest one first. It makes you fairer, makes others listen, and sometimes shows you what you were missing.",
     "model": "Before you disagree, state their view so well they say 'yes, exactly.'",
     "try_today": "Pick a view you disagree with and write its strongest case in 3 sentences — as if you believed it.",
     "source": {
@@ -393,28 +495,33 @@
       "confirmation_bias",
       "looping",
       "socratic_ignorance"
-    ]
+    ],
+    "try_team": "Pick a topic people disagree on. In pairs, each states the other's view until they hear 'yes, exactly.' Only then debate. 5 minutes per pair.",
+    "from_source": {
+      "quote": "He who knows only his own side of the case, knows little of that.",
+      "cite": "John Stuart Mill, On Liberty (1859), Chapter II",
+      "next_read": "On Liberty, Chapter II, 'Of the Liberty of Thought and Discussion'"
+    }
   },
   {
     "id": "steelmanning-order",
     "concept": "steelmanning",
     "domain": "connection",
     "type": "order",
-    "hook": "Fair criticism has 4 steps. Most of us jump straight to step 4.",
+    "hook": "Fair criticism has steps. Most of us jump straight to the last one.",
     "title": "Rapoport's Rules",
     "game": {
       "prompt": "Order the steps for criticizing someone's view fairly",
       "items": [
         "Restate their view so clearly they wish they'd said it that way",
-        "List the points where you agree",
-        "Mention anything you learned from them",
+        "Name where you agree and what you learned from them",
         "Only then, offer your criticism"
       ],
-      "explain": "Daniel Dennett popularized these as 'Rapoport's Rules,' crediting the game theorist Anatol Rapoport. By step 4, the other person is far more ready to listen."
+      "explain": "Daniel Dennett popularized these as 'Rapoport's Rules,' crediting the game theorist Anatol Rapoport. He lists agreeing and learning as two steps; here they're one. Dennett's bet: by the last step, the other person is far more ready to listen."
     },
-    "insight": "Criticism lands better after the other person feels understood and respected. These rules slow you down just enough to check you're arguing with their real view — not one you invented.",
-    "model": "Restate → agree → learn → then critique. Earn the right to disagree.",
-    "try_today": "Next time you disagree in a chat or meeting, do steps 1 and 2 out loud before your point.",
+    "insight": "Criticism lands better once the other person feels understood and respected. These rules slow you down just enough to check you're arguing with their real view, not one you invented.",
+    "model": "Restate → agree and learn → then critique. Earn the right to disagree.",
+    "try_today": "Next time you disagree in a chat, class or meeting, do steps 1 and 2 out loud before making your point.",
     "source": {
       "thinkers": [
         "Daniel Dennett",
@@ -427,7 +534,8 @@
     "related": [
       "looping",
       "confirmation_bias"
-    ]
+    ],
+    "try_team": "In your next group decision, nobody may criticize an idea until they've restated it and named one thing they agree with. Notice the mood."
   },
   {
     "id": "courage-kindness-reveal",
@@ -437,24 +545,102 @@
     "hook": "You think people will say no if you ask for help. Want the real odds?",
     "title": "Asking for Help Is Brave",
     "game": {
-      "prompt": "In a study, people had to ask strangers to fill out a short form. To get 5 yeses, how many did they guess they'd need to ask?",
+      "prompt": "People had to get 5 strangers to fill out a short form. They guessed they'd need to ask about 20. How many did it actually take?",
       "choices": [
-        "About as many as it took",
-        "About twice as many as it took",
-        "Fewer than it took"
+        "About 5",
+        "About 10",
+        "About 20"
       ],
-      "reveal": "They guessed about twice as many as it took. Strangers were far more willing to help than askers expected (Flynn & Lake, 2008); later studies by Vanessa Bohns found the same."
+      "reveal": "About 10, half as many as they feared. If you guessed 20, you think like the askers did: we expect more no's than we get (Flynn & Lake, 2008). Bohns (formerly Lake) found the same later.",
+      "answer": 1
     },
-    "insight": "We tend to underestimate how often others will say yes — partly because we focus on the cost of helping, while they feel the awkwardness of saying no. Asking isn't weakness; it's often what lets connection start.",
+    "insight": "We underestimate how often people say yes. We focus on the cost of helping; they feel how awkward it is to say no. Asking isn't weakness. It's often how connection starts.",
     "model": "Others say yes more than you predict. 'Help' is a short, brave word.",
-    "try_today": "Ask one person for a small, specific bit of help today — and notice how they actually respond.",
+    "try_today": "Ask one person for a small, specific bit of help today, even by text. Too big? Write down who you'd ask and what you'd say.",
     "source": {
       "thinkers": [
         "Francis Flynn",
-        "Vanessa Lake",
-        "Charlie Mackesy"
+        "Vanessa Bohns (Lake)"
       ],
-      "work": "Flynn & Lake, 'If You Need Help, Just Ask' (2008); The Boy, the Mole, the Fox and the Horse (2019)"
+      "work": "Flynn & Lake, 'If You Need Help, Just Ask' (JPSP, 2008); Bohns, You Have More Influence Than You Think (2021)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "self_compassion",
+      "self_efficacy"
+    ],
+    "sensitive": true,
+    "try_team": "Go round: each person names one small thing they could use help with this week. Others offer only what's easy for them. Count the yeses."
+  },
+  {
+    "id": "courage-kindness-choice",
+    "concept": "courage_kindness",
+    "domain": "connection",
+    "type": "choice",
+    "hook": "Group chat or one person? One of these usually gets ignored.",
+    "title": "How to Ask for Help",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your phone won't back up your photos and you're stuck. You…",
+          "options": [
+            {
+              "text": "Post 'Can anyone help with phones?' in the big group chat.",
+              "feedback": "Feels safer, but in a crowd everyone can assume someone else will answer. Bystander research (Darley & Latané, 1968) points that way."
+            },
+            {
+              "text": "Message one person who knows phones: 'Could you look at my photo backup for 10 minutes?'",
+              "best": true,
+              "feedback": "Yes. One named person, one clear task, a small size. That's the easiest kind of ask to say yes to."
+            },
+            {
+              "text": "Keep trying alone. You don't want to bother anyone.",
+              "feedback": "Very human. But we tend to overestimate how much asking bothers people. You may be skipping an easy yes."
+            }
+          ]
+        },
+        {
+          "scenario": "Next, a bigger favour: a lift to an appointment next week. You can text or ask in person. You…",
+          "options": [
+            {
+              "text": "Send a long text full of apologies.",
+              "feedback": "Texts are easy to put off, and all the sorry makes the favour sound heavier than it is."
+            },
+            {
+              "text": "Ask in person or by phone, simply and warmly.",
+              "best": true,
+              "feedback": "In one study, asking strangers face to face got about 34 times more yeses than email (Roghanizad & Bohns, 2017)."
+            }
+          ]
+        },
+        {
+          "scenario": "They said yes and drove you. Afterwards you…",
+          "options": [
+            {
+              "text": "Apologize again for being such a bother.",
+              "feedback": "Kind instinct, but it frames help as a burden. Helpers often feel better than askers expect (Zhao & Epley, 2022)."
+            },
+            {
+              "text": "Thank them and say exactly how it helped.",
+              "best": true,
+              "feedback": "Yes. Seeing the difference they made is the helper's reward, and it makes the next ask easier for you both."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Askers misjudge three things: how often people say yes, how much the way you ask matters, and how good helping feels. Ask one person, be specific, ask face to face, thank well.",
+    "model": "One person, one clear ask, face to face, then a real thank-you.",
+    "try_today": "Pick one small thing you're stuck on. Ask one person today: 'Could you help me with this for 10 minutes?'",
+    "try_team": "Go round the room: each person names one thing they're stuck on, in one sentence. Anyone who can help in under 10 minutes says so.",
+    "source": {
+      "thinkers": [
+        "Vanessa Bohns",
+        "Xuan Zhao",
+        "Nicholas Epley"
+      ],
+      "work": "Roghanizad & Bohns, JESP (2017); Zhao & Epley, Psychological Science (2022); Bohns, You Have More Influence Than You Think (2021)"
     },
     "evidence": "moderate",
     "level": 1,

@@ -1,10 +1,10 @@
 {
- "cards": 97,
+ "cards": 121,
  "failed": [],
  "console_errors": [],
  "overflow": [],
- "first_card_ms": 345,
- "first_card": "wso-triad-venn",
+ "first_card_ms": 323,
+ "first_card": "boredom-signal-estimate",
  "a11y": [],
- "played_ok": 97
+ "played_ok": 121
 }

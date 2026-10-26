@@ -111,6 +111,7 @@
       activeEl = el;
       document.documentElement.style.setProperty("--accent", el.style.getPropertyValue("--c"));
       const id = el.dataset.id;
+      if (!id) continue;
       if (!el.dataset.counted) { el.dataset.counted = "1"; S.seen[id] = (S.seen[id] || 0) + 1; save(); }
       const idx = queue.indexOf(id);
       if (idx >= queue.length - 3) appendCards(recommend(queue, 4));
@@ -127,7 +128,7 @@
       h("div", { class: "meta-row" },
         h("span", { class: "chip" }, `${d.emoji} ${d.name}`),
         h("span", { class: "chip plain" }, card.title),
-        h("span", { class: "chip plain" }, ["", "Anyone", "Some background", "Deep"][card.level])),
+        h("span", { class: "chip plain" }, ["", "Quick one", "Bit deeper", "Deep dive"][card.level])),
       h("h2", { class: "hook" }, card.hook),
       h("p", { class: "concept-line" }, reasons[card.id] || concept.line),
       play, h("p", { class: "teaser" }, teaser(card)), game,
@@ -141,7 +142,8 @@
     const shareBtn = h("button", { "aria-label": "Share", onclick: () => share(card) }, "↗");
     const whyBtn = h("button", { "aria-label": "Why am I seeing this?", onclick: () => toast(reasons[card.id] || `From ${d.name}: ${d.tagline}.`) }, "?");
     const aboutBtn = h("button", { "aria-label": "About Qlip", onclick: () => $("#about").showModal() }, "i");
-    el.append(body, h("aside", { class: "rail" }, likeBtn, shareBtn, whyBtn, aboutBtn));
+    const cap = (btn, label) => h("div", { class: "rail-item" }, btn, h("small", { "aria-hidden": "true" }, label));
+    el.append(body, h("aside", { class: "rail" }, cap(likeBtn, "Save"), cap(shareBtn, "Share"), cap(whyBtn, "Why this"), cap(aboutBtn, "About")));
 
     function start() {
       el.classList.add("playing");
@@ -155,6 +157,8 @@
       if (result.profile) S.profile[card.id] = { label: result.name, title: card.title, concept: card.concept, at: Date.now() };
       bumpStreak(); save();
       game.append(renderReveal(card, result, start));
+      playedThisVisit++;
+      if (playedThisVisit % 5 === 0) el.after(renderBreak());
       // refresh the not-yet-seen tail so the next cards follow the graph from here
       const idx = queue.indexOf(card.id);
       const tail = queue.slice(idx + 1).filter((id) => !feed.querySelector(`[data-id="${CSS.escape(id)}"]`)?.dataset.counted);
@@ -171,14 +175,16 @@
     const g = card.game;
     const steps = (g.questions || g.items || g.steps || g.choices || [1]).length;
     const secs = Math.max(15, Math.round((steps * 6 + 15) / 5) * 5);
-    return `${TYPE_LABEL[card.type]} · ${steps} ${card.type === "reveal" ? "choices" : "steps"} · about ${secs} seconds`;
+    return `${TYPE_LABEL[card.type]} · ~${secs}s`;
   }
 
+  // Reveal = punchline first: result, the model, one thing to try, one "next" button. Depth sits behind "Why?".
   function renderReveal(card, result, replay) {
     const wrap = h("div", { class: "reveal", "aria-live": "polite" });
-    if (result.name) wrap.append(h("p", { class: "result-name" }, result.name));
+    if (result.name) wrap.append(h("p", { class: "result-name" }, result.profile ? h("small", {}, "Right now you lean") : null, result.name));
+    if (result.tally) wrap.append(h("p", { class: "small muted", style: "margin:0" }, result.tally));
     if (result.text) wrap.append(h("p", { style: "margin:0" }, result.text));
-    wrap.append(h("p", { style: "margin:0" }, card.insight));
+    if (result.profile) wrap.append(h("p", { class: "small muted", style: "margin:0" }, "A snapshot of today's answers, not a verdict on you. People move."));
     wrap.append(h("p", { class: "model-line" }, h("small", {}, "The model"), card.model));
     const cbId = `try-${card.id}`;
     const cb = h("input", { type: "checkbox", id: cbId, checked: !!S.commits[card.id], onchange: (e) => {
@@ -187,20 +193,42 @@
       save();
     } });
     wrap.append(h("div", { class: "try" }, cb, h("label", { for: cbId }, h("b", {}, "Try today"), card.try_today)));
-    const ev = { strong: "Strong evidence", moderate: "Moderate evidence", contested: "Contested — read critically", philosophy: "Philosophical lens" }[card.evidence];
-    wrap.append(h("div", { class: "meta-row" }, h("span", { class: `chip plain ev-${card.evidence}` }, ev),
-      h("span", { class: "src" }, `${card.source.thinkers.join(", ")} · ${card.source.work}`)));
-    const rel = h("div", { class: "related" });
-    for (const cid of card.related) {
-      const target = (BY_CONCEPT[cid] || []).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || [])[0];
-      if (!target || !CONCEPT[cid]) continue;
-      rel.append(h("button", { onclick: () => jumpTo(target) }, h("span", {}, DOMAIN[CONCEPT[cid].domain].name), CONCEPT[cid].name));
+    if (card.try_team) wrap.append(h("details", { class: "why team" }, h("summary", {}, "👥 Doing this with others? (optional)"), h("p", {}, card.try_team)));
+    const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || [])[0]]).filter(([cid, t]) => t && CONCEPT[cid]);
+    if (targets.length) {
+      const [cid, t] = targets[0];
+      const hook = CARD[t].hook.length > 52 ? CARD[t].hook.slice(0, 50).replace(/\s+\S*$/, "") + "…" : CARD[t].hook;
+      wrap.append(h("button", { class: "btn next-up", onclick: () => jumpTo(t) }, h("small", {}, `Next · ${CONCEPT[cid].name}`), `${hook}\u00a0→`));
     }
-    if (rel.children.length) wrap.append(h("p", { class: "small muted", style: "margin:0" }, "Go deeper along the graph"), rel);
+    const ev = { strong: "Strong evidence", moderate: "Moderate evidence", contested: "Contested — read critically", philosophy: "Philosophical lens" }[card.evidence];
+    const more = h("details", { class: "why" }, h("summary", {}, "Why? · 15-second read"),
+      h("p", {}, card.insight),
+      card.from_source ? h("blockquote", { class: "primary" }, h("p", {}, `“${card.from_source.quote}”`),
+        h("footer", {}, card.from_source.cite, card.from_source.next_read ? h("span", {}, ` · Read next: ${card.from_source.next_read}`) : null)) : null,
+      h("div", { class: "meta-row" }, h("span", { class: `chip plain ev-${card.evidence}` }, ev),
+        h("span", { class: "src" }, `${card.source.thinkers.join(", ")} · ${card.source.work}`)));
+    if (targets.length > 1) more.append(h("div", { class: "related" }, targets.slice(1).map(([cid, t]) =>
+      h("button", { onclick: () => jumpTo(t) }, h("span", {}, DOMAIN[CONCEPT[cid].domain].name), CONCEPT[cid].name))));
+    wrap.append(more);
     if (card.sensitive) wrap.append(h("p", { class: "sens" }, "This is for reflection, not diagnosis. If things feel heavy, talk to someone you trust or find free support at ",
       h("a", { href: "https://findahelpline.com", target: "_blank", rel: "noopener" }, "findahelpline.com"), "."));
     wrap.append(h("button", { class: "replay", onclick: replay }, "Play again"));
     return wrap;
+  }
+
+  // A natural stopping point: Qlip teaches how endless feeds hook us, so it offers the exit itself.
+  let playedThisVisit = 0;
+  function renderBreak() {
+    const commits = Object.values(S.commits).filter((c) => !c.done).slice(-3);
+    const el = h("section", { class: "qlip break-card", style: "--c:var(--good)", "aria-label": "Break" },
+      h("div", { class: "qlip-body" },
+        h("h2", { class: "hook" }, `Nice. ${playedThisVisit} ideas played.`),
+        h("p", { class: "concept-line" }, "Stopping here is a win too. The ideas stick better when you use one than when you scroll ten more."),
+        commits.length ? h("ul", { class: "commit-list" }, commits.map((c) => h("li", {}, c.text))) : h("p", { class: "muted" }, "Pick one thing you'd like to try before tomorrow."),
+        h("div", { class: "swipe-btns" },
+          h("button", { onclick: () => showView("map") }, "I'm done for now"),
+          h("button", { onclick: () => el.nextElementSibling?.scrollIntoView({ behavior: "smooth" }) }, "One more"))));
+    return el;
   }
 
   function jumpTo(id) {
@@ -298,10 +326,15 @@
         const val = q.invert ? 1 - v / 4 : v / 4;
         sums[q.axis] = (sums[q.axis] || 0) + val; counts[q.axis] = (counts[q.axis] || 0) + 1; move();
       }, () => {
-        const sc = scores(), reg = regionOf(sc), r = g.results[reg] || { name: "", text: "" };
+        const sc = scores(), reg = regionOf(sc);
+        const undecided = keys.every((k) => sc[k] != null && Math.abs(sc[k] - 0.5) <= 0.13);
+        const r = undecided
+          ? { name: "Right on the fence", text: "Every answer landed in the middle, so the map can't find your gap yet. Pick one specific goal (\"run 5 km\", \"ask for a raise\") and play again with that in mind." }
+          : g.results[reg] || { name: "", text: "" };
+        if (undecided) { dot.setAttribute("cx", geo.g[0].toFixed(1)); dot.setAttribute("cy", geo.g[1].toFixed(1)); }
         const bars = keys.map((k) => `${g.axes.find((a) => a.key === k).label} ${Math.round((sc[k] ?? 0) * 10)}/10`).join(" · ");
         live.textContent = bars;
-        done({ name: r.name, text: r.text, profile: true });
+        done({ name: r.name, text: r.text, profile: !undecided });
       });
       return h("div", {}, view, live, qs);
     },
@@ -333,7 +366,7 @@
     radar(card, done) {
       const g = card.game, n = g.axes.length, sums = Array(n).fill(0), counts = Array(n).fill(0);
       const C = 150, R = 92;
-      const view = svg("svg", { viewBox: "0 0 300 300", class: "viz", role: "img", "aria-label": "Radar chart of your answers" });
+      const view = svg("svg", { viewBox: "-50 -10 400 320", class: "viz", role: "img", "aria-label": "Radar chart of your answers" });
       const pt = (i, f) => { const a = -Math.PI / 2 + (i * 2 * Math.PI) / n; return [C + Math.cos(a) * R * f, C + Math.sin(a) * R * f]; };
       [0.25, 0.5, 0.75, 1].forEach((f) => view.append(svg("polygon", { points: g.axes.map((_, i) => pt(i, f).join(",")).join(" "), fill: "none", stroke: "var(--line)" })));
       g.axes.forEach((a, i) => {
@@ -348,9 +381,10 @@
       const draw = () => poly.setAttribute("points", g.axes.map((_, i) => pt(i, Math.max(0.04, avg(i))).join(",")).join(" "));
       const qs = rated(g.questions, (q, v) => { sums[q.axis] += v; counts[q.axis]++; draw(); }, () => {
         let lo = 0, hi = 0; for (let i = 1; i < n; i++) { if (avg(i) < avg(lo)) lo = i; if (avg(i) > avg(hi)) hi = i; }
-        const even = avg(hi) - avg(lo) < 0.13;
-        done({ name: even ? `Even across the board (${Math.round(avg(hi) * 10)}/10)` : `Strongest: ${g.axes[hi]}. Room to grow: ${g.axes[lo]}.`,
-          text: even ? `No single gap stands out. Start with the one that matters most this week: ${g.advice[String(lo)]}` : g.advice[String(lo)], profile: true });
+        const even = avg(hi) - avg(lo) < 0.13, low = avg(hi) < 0.3;
+        done(low ? { name: "Low on all of them today", text: `That happens after a hard stretch, and it passes. Start tiny: ${g.advice[String(lo)]}`, profile: true }
+          : even ? { name: "Even across the board", text: `No single gap stands out today. If you want one place to start: ${g.advice["0"]}`, profile: true }
+          : { name: `Strongest: ${g.axes[hi]}. Room to grow: ${g.axes[lo]}.`, text: g.advice[String(lo)], profile: true });
       });
       return h("div", { style: "display:flex;flex-direction:column;gap:12px" }, view, qs);
     },
@@ -394,7 +428,7 @@
       const step = () => {
         const s = g.steps[i];
         const fb = h("p", { class: "feedback", hidden: true });
-        const next = h("button", { class: "btn next-q", hidden: true, onclick: () => { i++; if (i < g.steps.length) step(); else { next.remove(); done({ name: g.steps.length > 1 ? `${best} of ${g.steps.length} best calls` : "" }); } } },
+        const next = h("button", { class: "btn next-q", hidden: true, onclick: () => { i++; if (i < g.steps.length) step(); else { next.remove(); done({ name: g.steps.length < 2 ? "" : best === g.steps.length ? "Every call landed." : best === 0 ? "You found the trap most people fall into." : "Part there. The rest is the lesson.", tally: g.steps.length > 1 ? `${best} of ${g.steps.length} best calls` : "" }); } } },
           i + 1 < g.steps.length ? "Next" : "See the model");
         const opts = h("div", { class: "opts" }, s.options.map((o) => h("button", { class: "opt", onclick: (e) => {
           opts.querySelectorAll("button").forEach((b, k) => { b.disabled = true; if (s.options[k].best) b.classList.add("best"); });
@@ -416,11 +450,11 @@
       const poolEl = h("div", { class: "order-pool" }), pickEl = h("div", { class: "order-picked", "aria-label": "Your order" });
       const check = h("button", { class: "btn", hidden: true, onclick: () => {
         let ok = 0;
-        pickEl.querySelectorAll("span").forEach((s, k) => { const good = picked[k].k === k; if (good) ok++; s.classList.add(good ? "ok" : "no"); });
+        pickEl.querySelectorAll("span").forEach((s, k) => { const good = picked[k].k === k; if (good) ok++; s.classList.add(good ? "ok" : "no"); if (!good) s.append(h("em", {}, ` → step ${picked[k].k + 1}`)); });
         check.remove();
         const correct = h("p", { class: "feedback" }, `Order: ${items.join(" → ")}. ${g.explain}`);
         pickEl.after(correct);
-        done({ name: `${ok} of ${items.length} in place` });
+        done({ name: ok === items.length ? "Every step in place." : `${ok} of ${items.length} in place. Now you know the rest.` });
       } }, "Check");
       const draw = () => {
         poolEl.replaceChildren(...pool.map((p) => h("button", { onclick: () => { picked.push(p); pool = pool.filter((x) => x !== p); draw(); } }, p.t)));
@@ -438,8 +472,8 @@
       const slider = () => {
         const mid = g.anchor != null ? g.anchor : (g.min + g.max) / 2;
         const out = h("div", { class: "est-val" }, fmt(mid));
-        const rng = h("input", { type: "range", id: `est-${card.id}`, min: g.min, max: g.max, step: g.step || 1, value: mid, "aria-label": "Your estimate", oninput: (e) => (out.textContent = fmt(e.target.value)) });
-        const lock = h("button", { class: "btn", onclick: () => {
+        const rng = h("input", { type: "range", id: `est-${card.id}`, min: g.min, max: g.max, step: g.step || 1, value: mid, "aria-label": "Your estimate", oninput: (e) => { out.textContent = fmt(e.target.value); lock.disabled = false; lock.textContent = "Lock in my guess"; } });
+        const lock = h("button", { class: "btn", disabled: true, onclick: () => {
           const guess = Number(rng.value), span = g.max - g.min || 1;
           const pct = (v) => `${((v - g.min) / span) * 100}%`;
           rng.disabled = true; lock.remove();
@@ -447,9 +481,11 @@
             h("i", { class: "you", style: `left:${pct(guess)}` }), h("i", { class: "truth", style: `left:${pct(g.answer)}` }),
             h("b", { style: `left:${pct(g.answer)};color:var(--c);transform:translateX(${(g.answer - g.min) / span < 0.2 ? "0" : (g.answer - g.min) / span > 0.8 ? "-100%" : "-50%"})` }, `Real: ${fmt(g.answer)}`)));
           box.append(h("p", { class: "feedback" }, g.explain));
-          const off = Math.abs(guess - g.answer) / span;
-          done({ name: off < 0.05 ? "Bullseye." : off < 0.2 ? `Close — you said ${fmt(guess)}` : `You said ${fmt(guess)}. Most people miss this one.` });
-        } }, "Lock it in");
+          box.append(h("p", { class: "small muted", style: "margin:0" }, `Your guess: ${fmt(guess)}`));
+          const diff = Math.abs(guess - g.answer);
+          const off = span <= 10 ? diff / Math.max(1, (g.step || 1) * 4) : diff / Math.max(Math.abs(g.answer), 1e-9);
+          done({ name: off < 0.1 ? "Bullseye." : off < 0.3 ? `Close. The real number: ${fmt(g.answer)}.` : `Most people miss this one. The real number: ${fmt(g.answer)}.` });
+        } }, "Move the slider to guess");
         box.append(out, rng, lock);
       };
       box.append(h("p", { class: "q-text" }, g.question));
@@ -463,10 +499,12 @@
 
     reveal(card, done) {
       const g = card.game;
-      const opts = h("div", { class: "opts" }, g.choices.map((c) => h("button", { class: "opt", onclick: (e) => {
-        opts.querySelectorAll("button").forEach((b) => (b.disabled = true)); e.currentTarget.classList.add("picked");
+      const has = Number.isInteger(g.answer);
+      const opts = h("div", { class: "opts" }, g.choices.map((c, k) => h("button", { class: "opt", onclick: (e) => {
+        opts.querySelectorAll("button").forEach((b, j) => { b.disabled = true; if (has && j === g.answer) b.classList.add("best"); });
+        e.currentTarget.classList.add("picked");
         opts.after(h("p", { class: "feedback" }, g.reveal));
-        done({ name: `You chose: ${c}` });
+        done({ name: !has ? `You chose: ${c}` : k === g.answer ? "Spot on." : `Most people pick that. The real answer: ${g.choices[g.answer]}` });
       } }, c)));
       return h("div", { style: "display:flex;flex-direction:column;gap:12px" }, h("p", { class: "q-text" }, g.prompt), opts);
     },
@@ -526,7 +564,7 @@
           n.x += n.vx; n.y += n.vy; n.vx *= 0.55; n.vy *= 0.55;
         }
       }
-      sim.labelled = new Set(DB.concepts.slice().sort((a, b) => b.rank - a.rank).slice(0, 8).map((c) => c.id));
+      sim.labelled = new Set(DB.concepts.slice().sort((a, b) => b.rank - a.rank).slice(0, 5).map((c) => c.id));
       const xs = sim.nodes.map((n) => n.x), ys = sim.nodes.map((n) => n.y);
       const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
       for (const n of sim.nodes) { n.x = (n.x - x0) / (x1 - x0 || 1); n.y = (n.y - y0) / (y1 - y0 || 1); }
@@ -562,9 +600,18 @@
       const box = [lx - 2, n.y - 8, lx + w + 2, n.y + 8];
       if (boxes.some((b) => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) continue;
       boxes.push(box);
+      ctx.lineWidth = 4; ctx.lineJoin = "round"; ctx.strokeStyle = css.getPropertyValue("--surface");
+      ctx.strokeText(text, lx, n.y);
       ctx.fillStyle = n.p ? css.getPropertyValue("--fg") : css.getPropertyValue("--muted");
       ctx.fillText(text, lx, n.y);
     }
+    const lit = Object.keys(plays).length;
+    const domPlays = {};
+    for (const [cid, n] of Object.entries(plays)) domPlays[CONCEPT[cid].domain] = (domPlays[CONCEPT[cid].domain] || 0) + n;
+    const top = Object.entries(domPlays).sort((a, b) => b[1] - a[1])[0];
+    $("#map-summary").textContent = lit
+      ? `You've lit up ${lit} of ${DB.concepts.length} ideas.${top ? ` Most explored: ${DOMAIN[top[0]].name}.` : ""}`
+      : `${DB.concepts.length} ideas are waiting. Play any game to light up your first one.`;
     $("#map-legend").replaceChildren(...DB.domains.map((d) => h("span", {}, h("i", { style: `background:${d.color}` }), d.name)));
     const prof = Object.entries(S.profile).sort((a, b) => b[1].at - a[1].at);
     $("#profile-list").replaceChildren(...(prof.length ? prof.map(([id, p]) => h("li", {}, h("b", {}, p.label), h("span", {}, `${p.title} · `, h("a", { href: `#${id}`, onclick: (e) => { e.preventDefault(); jumpTo(id); } }, "play again"))))
@@ -592,6 +639,14 @@
   document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => showView(b.dataset.view)));
   $("#brand").addEventListener("click", () => { showView("feed"); feed.scrollTo({ top: 0, behavior: "smooth" }); });
   $("#streak").addEventListener("click", () => toast(S.streak.n ? `${S.streak.n}-day streak. One game a day keeps it alive.` : "Finish a game to start your streak."));
+  $("#share-map").addEventListener("click", () => {
+    $("#map-canvas").toBlob(async (blob) => {
+      const file = new File([blob], "my-qlip-map.png", { type: "image/png" });
+      try { if (navigator.canShare?.({ files: [file] })) { await navigator.share({ files: [file], title: "My Qlip map", text: $("#map-summary").textContent }); return; } } catch { return; }
+      const a = h("a", { href: URL.createObjectURL(blob), download: "my-qlip-map.png" }); document.body.append(a); a.click(); a.remove();
+      toast("Map saved as an image");
+    });
+  });
   $("#reset-btn").addEventListener("click", () => ($("#reset-confirm").hidden = false));
   $("#reset-no").addEventListener("click", () => ($("#reset-confirm").hidden = true));
   $("#reset-yes").addEventListener("click", () => { Object.assign(S, blank()); save(); $("#reset-confirm").hidden = true; $("#streak-n").textContent = 0; renderMap(); toast("Progress cleared"); });
@@ -616,7 +671,7 @@
   }
   function firstQueue() {
     // New players open on the flagship "where are you" game; returning players get the graph's next steps.
-    const start = Object.keys(S.done).length ? [] : ["wso-triad-venn"].filter((id) => CARD[id]);
+    const start = Object.keys(S.done).length ? [] : ["boredom-signal-estimate", "wso-triad-venn"].filter((id) => CARD[id]);
     return start.concat(recommend(start, 5 - start.length));
   }
   boot().catch((err) => {

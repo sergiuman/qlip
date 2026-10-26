@@ -12,9 +12,10 @@
         "The satellite photo",
         "The tube map"
       ],
-      "reveal": "For most trips, the tube map wins. It's 'wrong' about distance and geography on purpose: it throws away detail so you can act. Every map you carry in your head works the same way."
+      "reveal": "For most trips, the tube map wins. It bends geography on purpose so you can act fast. If you picked the photo, you spotted the catch: studies of London riders found the map's distortions push some people onto slower routes, even riding between stops that are quicker to walk. A map is only good for the trip it was built for.",
+      "answer": 1
     },
-    "insight": "A more accurate map isn't always a better one. Your beliefs about people, money and yourself are maps too: simplified, partly wrong, useful for some trips and useless for others. The skill is knowing which trip you're on.",
+    "insight": "A more accurate map isn't always a better one. Your beliefs about people, money and yourself are maps too: simplified, useful for some trips, misleading on others.",
     "model": "Every belief is a map. Ask 'useful for what?' before asking 'true or false?'",
     "try_today": "Pick one firm belief about yourself. Write one situation where that map works and one where it would get you lost.",
     "source": {
@@ -22,7 +23,7 @@
         "Alfred Korzybski",
         "George Box"
       ],
-      "work": "Science and Sanity (1933); Box, 'Science and Statistics' (1976)"
+      "work": "Korzybski, Science and Sanity (1933); Box, Science and Statistics (1976) and Robustness in the Strategy of Scientific Model Building (1979)"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -30,7 +31,13 @@
       "useful_truth",
       "confirmation_bias",
       "mpc_loop"
-    ]
+    ],
+    "try_team": "Each person names one rule your group runs on ('homework before screens', 'we always reply fast'). Ask together: useful for which trip? Where does it mislead?",
+    "from_source": {
+      "quote": "All models are wrong but some are useful.",
+      "cite": "George E. P. Box, 'Robustness in the Strategy of Scientific Model Building' (1979)",
+      "next_read": "Box, 'Science and Statistics', Journal of the American Statistical Association 71 (1976), sections 'Parsimony' and 'Worrying Selectively'"
+    }
   },
   {
     "id": "map-territory-swipe",
@@ -70,13 +77,13 @@
           "why": "Direct experience. The menu description was the map."
         },
         {
-          "text": "Your GPA or performance score",
+          "text": "Your exam grade or step count",
           "side": "left",
           "why": "A useful number that leaves out most of what you actually did."
         }
       ]
     },
-    "insight": "Most of what we react to is a map: numbers, labels, stories, reviews. They're handy, but they leave things out. When a map upsets you, check the territory before you act.",
+    "insight": "Most of what we react to is a map: numbers, labels, stories, reviews. Handy, but they leave things out. When a map upsets you, check the territory before you act.",
     "model": "When a label stings, ask: is this the thing, or a description of the thing?",
     "try_today": "Next time a number or label bothers you today, name one important thing it leaves out.",
     "source": {
@@ -91,7 +98,8 @@
       "useful_truth",
       "reframing",
       "confirmation_bias"
-    ]
+    ],
+    "try_team": "Put one number your group watches on the table (grades, likes, sales, steps). Everyone names one important thing it leaves out. Five minutes, no debate."
   },
   {
     "id": "goal-directed-perception-gorilla",
@@ -110,7 +118,7 @@
       "explain": "In Simons & Chabris's 1999 study, 46% of viewers missed it overall (more in harder versions). Counting passes was the goal, so the gorilla went unseen.",
       "anchor": null
     },
-    "insight": "Attention follows aims. When you hunt for one thing, your brain filters out a lot of the rest, even big, strange things. That's not a flaw; it's how focus works. But it means your goals quietly shape what you see.",
+    "insight": "Attention follows aims. Hunting for one thing, your brain filters out much of the rest, even a gorilla. That's how focus works, but it means your goals quietly shape what you see.",
     "model": "Your aim is a filter. Change what you're looking for and the world rearranges.",
     "try_today": "Before your next walk or meeting, set a new aim: 'notice three things that are going well.' Then count them.",
     "source": {
@@ -127,6 +135,47 @@
       "aim_high",
       "map_territory",
       "confirmation_bias"
+    ],
+    "try_team": "Before a class, practice or meeting, give everyone a different 'look for' job: one good idea, one risk, one person who's quiet. Compare notes at the end.",
+    "from_source": {
+      "quote": "My experience is what I agree to attend to. Only those items which I notice shape my mind.",
+      "cite": "William James, The Principles of Psychology (1890), vol. 1, ch. XI 'Attention'",
+      "next_read": "The Principles of Psychology, vol. 1, ch. XI 'Attention', opening pages (free online)"
+    }
+  },
+  {
+    "id": "goal-directed-perception-door-swap-reveal",
+    "concept": "goal_directed_perception",
+    "domain": "perception",
+    "type": "reveal",
+    "hook": "A stranger swaps into someone else mid-chat. Surely you'd notice?",
+    "title": "The Person Swap",
+    "game": {
+      "prompt": "A stranger with a map asks you for directions. As you explain, two workers carry a door between you. Behind it, the stranger is replaced by a different person with different clothes and voice. Would you notice?",
+      "choices": [
+        "Yes, instantly",
+        "Quite possibly not"
+      ],
+      "answer": 1,
+      "reveal": "If you said yes, you're in good company: almost everyone does. But in Simons and Levin's 1998 street study, about half of the people kept giving directions to the new person without noticing. Their aim was 'explain the route', so the face barely got stored."
+    },
+    "insight": "Your aim decides what gets stored, not just what you see. A small study (15 people), but this 'change blindness' has been found many times.",
+    "model": "You remember what you were aiming at. Aim at the person, and you'll see the person.",
+    "try_today": "In your next chat, set a tiny aim: notice one thing about the person (their mood, their eyes, what they care about today).",
+    "try_team": "Pair up for 60 seconds of chat, then turn back to back. Each changes one small thing (glasses, sleeve, hair). Turn round: who spots it? Then swap.",
+    "source": {
+      "thinkers": [
+        "Daniel Simons",
+        "Daniel Levin"
+      ],
+      "work": "Simons & Levin, Failure to detect changes to people during a real-world interaction, Psychonomic Bulletin & Review (1998)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "map_territory",
+      "confirmation_bias",
+      "aim_high"
     ]
   },
   {
@@ -134,19 +183,19 @@
     "concept": "reframing",
     "domain": "perception",
     "type": "choice",
-    "hook": "Your boss texts: 'Can we talk tomorrow?' What does your gut say?",
+    "hook": "11pm. A text: 'We need to talk.' What does your gut say?",
     "title": "Reframing",
     "game": {
       "steps": [
         {
-          "scenario": "9pm. Your manager texts: 'Can we talk tomorrow at 10?' No context. Your heart rate goes up. What do you tell yourself?",
+          "scenario": "11pm. A close friend (or your mum, or your partner) texts: 'We need to talk. Tomorrow?' No context. Your heart speeds up. What do you tell yourself?",
           "options": [
             {
-              "text": "'I'm in trouble. I should prepare for the worst.'",
-              "feedback": "Totally normal first reaction. But it's one story out of many, and it will cost you a night's sleep before you know anything."
+              "text": "'I've done something wrong. I should prepare for the worst.'",
+              "feedback": "A very normal first reaction. But it's one story out of many, and it will cost you a night's sleep before you know anything."
             },
             {
-              "text": "'I don't know what this is yet. Could be a project, feedback, or news. I'll find out at 10.'",
+              "text": "'I don't know what this is yet. Could be news, a favour, a plan. I'll find out tomorrow.'",
               "best": true,
               "feedback": "That's reappraisal: same facts, wider frame. You haven't lied to yourself, you've just stopped writing the ending early."
             },
@@ -157,30 +206,31 @@
           ]
         },
         {
-          "scenario": "Next morning, still nervous. What's a useful move?",
+          "scenario": "Next morning, still a bit nervous. What's a useful move?",
           "options": [
             {
-              "text": "Reply: 'Sure! Anything I should bring?'",
+              "text": "Reply: 'Sure! Everything ok? What time works?'",
               "best": true,
-              "feedback": "Turns a vague threat into a concrete task. Often you'll get the context you were missing."
+              "feedback": "Turns a vague threat into a concrete plan. Often you'll get the context you were missing."
             },
             {
-              "text": "Replay worst cases until 10am",
-              "feedback": "Understandable, but rumination rarely adds information. One small action usually helps more."
+              "text": "Replay worst cases until you meet",
+              "feedback": "Understandable, but going round in circles rarely adds information. One small action usually helps more."
             }
           ]
         }
       ]
     },
-    "insight": "Events don't hit you raw; they arrive inside a frame. Changing the frame (not the facts) can change how your body reacts and what you do next. Research by James Gross and others finds reappraisal usually works better than suppression.",
+    "insight": "Events arrive inside a frame. Changing the frame, not the facts, can change your body's reaction and your next move. Studies find reappraisal usually beats pushing feelings down.",
     "model": "Same facts, new frame: 'What else could this mean?' is the cheapest stress tool you own.",
     "try_today": "When something stings today, write two other honest explanations for it before you react.",
     "source": {
       "thinkers": [
         "James Gross",
-        "Epictetus"
+        "Epictetus",
+        "Seneca"
       ],
-      "work": "Gross & John, Individual differences in two emotion regulation processes (2003); Epictetus, Enchiridion"
+      "work": "Gross & John, Individual differences in two emotion regulation processes (2003); Epictetus, Enchiridion; Seneca, Moral Letters 13"
     },
     "evidence": "moderate",
     "level": 1,
@@ -189,7 +239,83 @@
       "dichotomy_of_control",
       "stress_mindset"
     ],
-    "sensitive": true
+    "sensitive": true,
+    "try_team": "If you lead a team or class: before sending 'Can we talk?', add one line of context ('Nothing bad, want to plan next week'). Agree this as a group rule.",
+    "from_source": {
+      "quote": "There are more things, Lucilius, likely to frighten us than there are to crush us; we suffer more often in imagination than in reality.",
+      "cite": "Seneca, Moral Letters to Lucilius, Letter 13 'On Groundless Fears', trans. R. M. Gummere (1917)",
+      "next_read": "Seneca, Moral Letters, Letter 13 'On Groundless Fears' (about 4 pages)"
+    }
+  },
+  {
+    "id": "reframing-spin-or-reframe-swipe",
+    "concept": "reframing",
+    "domain": "perception",
+    "type": "swipe",
+    "hook": "Some 'positive thinking' makes you feel worse. Can you spot which?",
+    "title": "Reframe, Not Spin",
+    "game": {
+      "prompt": "Something went wrong. Is this thought an honest reframe, or spin?",
+      "left": "Spin",
+      "right": "Honest reframe",
+      "items": [
+        {
+          "text": "Failed your driving test: 'Now I know exactly which two things to practise.'",
+          "side": "right",
+          "why": "True, useful, and it points to a next step. That's a reframe."
+        },
+        {
+          "text": "Failed your driving test: 'Who cares, I never wanted to drive anyway.'",
+          "side": "left",
+          "why": "Sour grapes. If part of you doesn't believe it, it won't calm you."
+        },
+        {
+          "text": "Friend hasn't replied all day: 'She might just be busy. I'll check in tomorrow.'",
+          "side": "right",
+          "why": "A believable other explanation, plus an action. You stay open, not certain."
+        },
+        {
+          "text": "Low mark on an essay: 'Grades are meaningless, so it doesn't matter.'",
+          "side": "left",
+          "why": "Denial. Grades leave things out, but this one still has information for you."
+        },
+        {
+          "text": "Bus cancelled, 25-minute wait: 'Good time to call Grandma.'",
+          "side": "right",
+          "why": "Same facts, better use of them. Nothing here is pretend."
+        },
+        {
+          "text": "Feeling low: repeating 'I am totally happy and loved' ten times.",
+          "side": "left",
+          "why": "In one study, statements like this made people with low self-esteem feel worse."
+        }
+      ]
+    },
+    "insight": "Reframing works when you believe the new frame. Spin and forced positivity can backfire: in one study, 'I am a lovable person' made people with low self-esteem feel worse.",
+    "model": "A good reframe is true, believable and points to a next step. If it's not true, it's spin.",
+    "try_today": "When something stings today, write one reframe. Then ask: do I actually believe this? If not, find a truer one.",
+    "try_team": "Someone shares a small setback. Everyone offers one reframe; the group votes each 'honest' or 'spin', and says why. Keep it light and kind.",
+    "source": {
+      "thinkers": [
+        "James Gross",
+        "Joanne Wood",
+        "Epictetus"
+      ],
+      "work": "Gross & John (2003); Wood, Perunovic & Lee, Positive self-statements: Power for some, peril for others, Psychological Science (2009); Epictetus, Enchiridion"
+    },
+    "from_source": {
+      "quote": "Men are disturbed not by the things which happen, but by the opinions about the things.",
+      "cite": "Epictetus, Enchiridion 5, trans. George Long",
+      "next_read": "Epictetus, Enchiridion, sections 1-5 (about two pages)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "sensitive": true,
+    "related": [
+      "emotion_naming",
+      "stress_mindset",
+      "map_territory"
+    ]
   },
   {
     "id": "stress-mindset-spectrum",
@@ -220,7 +346,7 @@
           ]
         },
         {
-          "q": "When work piles up, I mostly try to…",
+          "q": "When things pile up (homework, chores, bills), I mostly try to…",
           "options": [
             {
               "label": "Avoid thinking about it",
@@ -240,8 +366,8 @@
           "q": "Looking back, stressful times in my life…",
           "options": [
             {
-              "label": "Mostly just hurt me",
-              "value": -2
+              "label": "Mostly hurt me (and that's real)",
+              "value": -1
             },
             {
               "label": "Were mixed",
@@ -249,7 +375,7 @@
             },
             {
               "label": "Also helped me grow",
-              "value": 2
+              "value": 1
             }
           ]
         },
@@ -274,23 +400,23 @@
       "zones": [
         {
           "upTo": -0.34,
-          "label": "Stress-is-harmful lens",
-          "text": "You read stress mostly as danger. That's understandable, and sometimes right. Try adding one more reading: 'my body is getting me ready.'"
+          "label": "Today: leaning 'stress harms'",
+          "text": "Today your answers read stress mostly as danger, and if you've had a hard time, that makes sense. For everyday nerves (a talk, an exam), try one more reading: my body is getting me ready. If stress feels constant or heavy, that's a reason to get support, not a mindset failure."
         },
         {
           "upTo": 0.34,
-          "label": "Mixed lens",
-          "text": "You see both sides. Next time, notice which story you pick in the moment. You often get to choose."
+          "label": "Today: a mixed lens",
+          "text": "Today your answers see both sides. Next time, notice which story you pick in the moment. Sometimes you can pick which story to lean on."
         },
         {
           "upTo": 1,
-          "label": "Stress-can-fuel lens",
-          "text": "You tend to read stress as energy. Keep it, and still watch for real overload: rest is part of the deal."
+          "label": "Today: leaning 'stress can fuel'",
+          "text": "Today your answers read stress as energy. Keep that, and still watch for real overload: rest is part of the deal."
         }
       ]
     },
-    "insight": "In Alia Crum's studies, people taught to see stress as enhancing reported better performance and health than those shown its harms. The effect is real but modest, and chronic or severe stress still deserves real support, not just a new mindset.",
-    "model": "Stress has a meaning you assign. 'My body is gearing up' beats 'I'm breaking.'",
+    "insight": "In Alia Crum's studies, people shown stress as enhancing reported somewhat better performance and health. The effect is modest. Heavy or constant stress needs real support, not just a mindset.",
+    "model": "Some stress is your body gearing up, not breaking. Reframe the everyday kind; get support for the heavy kind.",
     "try_today": "Before your next nervous moment, take one slow breath and tell yourself: 'This is energy for something I care about.'",
     "source": {
       "thinkers": [
@@ -308,7 +434,8 @@
       "reframing",
       "growth_mindset",
       "emotion_naming"
-    ]
+    ],
+    "try_team": "Before a match, exam or big deadline, everyone says one thing they care about in it. Then together: 'This buzz is energy for that.' One slow breath."
   },
   {
     "id": "useful-truth-people-person",
@@ -323,9 +450,10 @@
         "Thinking hard about whether it's really true",
         "Living one week as if it might be false, then checking"
       ],
-      "reveal": "William James and Charles Peirce argued an idea's meaning lies in its practical consequences. Live by it, see what happens. A belief that keeps you home alone 'proves itself' only because you never ran the test."
+      "reveal": "Thinking it over has its place, but it mostly replays old memories. William James and Charles Peirce argued an idea's meaning lies in its practical consequences: live by it, see what happens. A belief that keeps you home alone 'proves itself' only because you never ran the test.",
+      "answer": 1
     },
-    "insight": "Pragmatism asks a practical question: what happens when you act on this idea? Some beliefs make your life bigger, some smaller. This is a philosophical lens, not a lab finding, and it doesn't mean facts don't matter. It means test beliefs in action.",
+    "insight": "Pragmatism asks: what happens when you act on this idea? Some beliefs make life bigger, some smaller. A philosophical lens, not a lab finding, and facts still matter.",
     "model": "Judge a belief by its consequences: run the experiment, then decide.",
     "try_today": "Pick one limiting belief. Do one small action that would only make sense if it were false. Note what actually happened.",
     "source": {
@@ -342,14 +470,20 @@
       "map_territory",
       "mpc_loop",
       "growth_mindset"
-    ]
+    ],
+    "try_team": "Each person names one 'we're just not the kind of group that…' belief. Pick one, design a one-week test that could prove it false, and agree when to check.",
+    "from_source": {
+      "quote": "The truth of an idea is not a stagnant property inherent in it. Truth happens to an idea.",
+      "cite": "William James, Pragmatism (1907), Lecture VI 'Pragmatism's Conception of Truth'",
+      "next_read": "James, Pragmatism, Lecture II 'What Pragmatism Means', then Lecture VI (free online)"
+    }
   },
   {
     "id": "mpc-loop-pcf-venn",
     "concept": "mpc_loop",
     "domain": "perception",
     "type": "venn",
-    "hook": "Your lens might be fogged in one spot. Find out which in 30 sec.",
+    "hook": "Your lens might be fogged in one spot. Find which in 30 seconds.",
     "title": "Your Perception Loop",
     "game": {
       "axes": [
@@ -398,51 +532,50 @@
           "invert": true
         }
       ],
-      "threshold": 0.55,
+      "threshold": 0.5,
       "results": {
         "": {
-          "name": "Running on Autopilot",
-          "text": "Right now the loop is mostly quiet, which happens when we're tired or busy. Start with Perceive: spend one minute a day noticing three new things."
+          "name": "All three dimmed today",
+          "text": "Today no step stands out, which often happens when we're tired or busy. A starting point, not a verdict. Begin with Perceive: one minute a day noticing three new things."
         },
         "P": {
-          "name": "The Noticer",
-          "text": "You see a lot, but you may lock into the first story and keep doing the same thing. Your fogged spots: Appraise and Recalibrate. Ask 'what else could this mean?'"
+          "name": "Noticing leads today",
+          "text": "Today your answers show strong noticing, with less room for second readings or changing course. Try asking 'what else could this mean?'"
         },
         "A": {
-          "name": "The Interpreter",
-          "text": "You're good at re-reading situations, but may be working from thin data and slow to change course. Gather one more fact before deciding."
+          "name": "Interpreting leads today",
+          "text": "Today your answers show you re-read situations well, but may be working from thin data and slow to change course. Gather one more fact before deciding."
         },
         "R": {
-          "name": "The Adapter",
-          "text": "You change course readily. Check that you're adjusting to real signals, not noise: slow down to notice and interpret first."
+          "name": "Adjusting leads today",
+          "text": "Today your answers show you change course readily. Check you're adjusting to real signals, not noise: notice and interpret first."
         },
         "AP": {
-          "name": "The Analyst",
-          "text": "You see clearly and think flexibly, but insight may not turn into change. Your fogged spot is Recalibrate: make one small adjustment this week."
+          "name": "Noticing + interpreting",
+          "text": "Today your answers show clear seeing and flexible thinking, but insight may not turn into change. Try Recalibrate: make one small adjustment this week."
         },
         "PR": {
-          "name": "The Reactor",
-          "text": "You spot change and move fast, but may jump on the first interpretation. Your fogged spot is Appraise: pause for a second explanation."
+          "name": "Noticing + adjusting",
+          "text": "Today your answers show you spot change and move fast, maybe on the first interpretation. Try Appraise: pause for a second explanation."
         },
         "AR": {
-          "name": "The Theorist-in-Motion",
-          "text": "You reframe and adapt well, but may be missing inputs. Your fogged spot is Perceive: ask someone what they see that you don't."
+          "name": "Interpreting + adjusting",
+          "text": "Today your answers show you reframe and adapt well, but may be missing inputs. Try Perceive: ask someone what they see that you don't."
         },
         "APR": {
-          "name": "Calibrated Loop",
-          "text": "All three are humming. Keep it honest by measuring results: a good loop checks itself against reality, not just feelings."
+          "name": "All three switched on",
+          "text": "Today all three steps are at least switched on. Keep it honest by checking results, not just feelings. Pick the step you scored lowest and sharpen it."
         }
       }
     },
-    "insight": "QUMNI's PCF treats your mind like a controller: perceive the world, appraise what it means, recalibrate, act, repeat. Most people are stronger at one or two steps. Your weakest step is where your view can quietly bend. A self-check, not a diagnosis.",
+    "insight": "Qlip's own framework (built on Powers's control theory, not a tested scale): perceive, appraise, recalibrate, act, repeat. Your weakest step is where your view can quietly bend.",
     "model": "Perceive, appraise, recalibrate. Your weakest step is where your view of reality bends.",
     "try_today": "Take one frustrating situation from this week and run it through your weakest step, on paper, in five minutes.",
     "source": {
       "thinkers": [
-        "QUMNI",
         "William T. Powers"
       ],
-      "work": "QUMNI Perceptual Control Framework; Powers, Behavior: The Control of Perception (1973)"
+      "work": "Original QUMNI Perceptual Control Framework (house model), drawing on Powers, Behavior: The Control of Perception (1973)"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -450,35 +583,65 @@
       "wso_triad",
       "feedback_loops",
       "reframing"
-    ]
+    ],
+    "try_team": "Take one recent hiccup (a lost match, a missed deadline, a row). Spend 90 seconds each on: what did we see, what did it mean, what will we adjust?"
   },
   {
-    "id": "mpc-loop-order",
+    "id": "mpc-loop-thermostat-choice",
     "concept": "mpc_loop",
     "domain": "perception",
-    "type": "order",
+    "type": "choice",
     "hook": "A thermostat is smarter than most New Year's resolutions. Why?",
     "title": "Perceive, Adjust, Repeat",
     "game": {
-      "prompt": "Put the PCF loop in order, the way a good controller (or a good mind) runs it.",
-      "items": [
-        "Perceive what's actually happening",
-        "Appraise what it means for your goal",
-        "Recalibrate your model or plan",
-        "Act",
-        "Measure the result, then repeat"
-      ],
-      "explain": "A thermostat senses, compares to its target, adjusts, and checks again, forever. Many resolutions stall because they skip 'measure and adjust.' Perceptual Control Theory (Powers, 1973) describes living things as running loops like this."
+      "steps": [
+        {
+          "scenario": "You promised yourself 20 minutes of guitar (or running, or a language app) a day. Two weeks in, you've done it 3 times. What would a thermostat do?",
+          "options": [
+            {
+              "text": "Try harder tomorrow. More willpower.",
+              "feedback": "Very common, and it rarely changes the result. A thermostat doesn't try harder; it checks the reading and adjusts."
+            },
+            {
+              "text": "Admit it's just not for me and stop.",
+              "feedback": "Maybe, one day. But you'd be quitting on 3 data points without asking why. Check first, then decide."
+            },
+            {
+              "text": "Look at what actually happened on the missed days, change one thing, try again.",
+              "best": true,
+              "feedback": "That's the loop: perceive, appraise, recalibrate, act, check. Small corrections beat big resolutions."
+            },
+            {
+              "text": "Write a bigger, more perfect plan.",
+              "feedback": "Tempting, but a new plan without new information repeats the old one. Measure first."
+            }
+          ]
+        },
+        {
+          "scenario": "You check: the missed days were all when you got home after 8pm. Best adjustment?",
+          "options": [
+            {
+              "text": "Move practice to before dinner, and make it 10 minutes on late days.",
+              "best": true,
+              "feedback": "Adjust to the real signal, keep it small, then check again next week."
+            },
+            {
+              "text": "Promise to do 40 minutes on the good days to make up.",
+              "feedback": "Ambitious, but it ignores the signal. The late days will still break the loop."
+            }
+          ]
+        }
+      ]
     },
-    "insight": "Good controllers don't need a perfect plan. They need a fast loop: notice, compare, adjust, act, check. Your habits, relationships and goals improve the same way: small corrections, often.",
+    "insight": "Good controllers don't need a perfect plan. They need a fast loop: notice, compare, adjust, act, check. Habits and goals improve the same way: small corrections, often.",
     "model": "Don't aim for a perfect plan. Aim for a fast, honest feedback loop.",
     "try_today": "Pick one goal. Set a 2-minute check-in tonight: what happened, what does it mean, what will I adjust tomorrow?",
+    "try_team": "End a practice, lesson or week with 3 questions, one minute each: What happened? What does it mean for our goal? What one thing do we change next time?",
     "source": {
       "thinkers": [
-        "William T. Powers",
-        "QUMNI"
+        "William T. Powers"
       ],
-      "work": "Powers, Behavior: The Control of Perception (1973); QUMNI Perceptual Control Framework"
+      "work": "Powers, Behavior: The Control of Perception (1973); adapted as the original QUMNI Perceptual Control Framework"
     },
     "evidence": "philosophy",
     "level": 1,

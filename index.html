@@ -41,6 +41,7 @@
   <div class="wrap">
     <h1 class="h-display">Your map</h1>
     <p class="lede">Every model you've played lights up. Lines are how ideas lean on each other. Tap a node to play it.</p>
+    <p id="map-summary" class="map-summary"></p>
     <div class="map-stage"><canvas id="map-canvas" aria-label="Graph of concepts you have explored"></canvas></div>
     <div class="map-legend" id="map-legend"></div>
     <div class="map-cols">
@@ -55,6 +56,7 @@
       </div>
     </div>
     <div class="map-foot">
+      <button class="btn" id="share-map">Share my map</button>
       <button class="btn ghost" id="reset-btn">Clear my progress</button>
       <div id="reset-confirm" class="reset-confirm" hidden>
         <span>This deletes your progress on this device.</span>
