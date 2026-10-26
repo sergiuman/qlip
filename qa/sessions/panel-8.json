@@ -1,0 +1,617 @@
+{
+ "session": 8,
+ "personas": [
+  {
+   "persona": "Maya, 16, Manchester. TikTok native who scrolls away from anything that feels like school or a lecture, and stays only if it's fast, surprising and about her.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 6,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "fae-why-late",
+     "severity": "high",
+     "problem": "Step 3 makes me 'you', a parent whose grown-up son forgot my birthday, and step 2 makes me a manager writing someone's review. I'm 16. Two of the three steps are about a life I don't have, so it stops being about me and I'd swipe away halfway. The hook ('Someone lets you down') promised something about my own life.",
+     "fix": "Replace step 2 scenario with: \"Your best mate left you on read all evening, then you see them active on Snap.\" Options: \"'They're ignoring me on purpose.'\" (feedback: \"One dot on a screen, and you've written a whole story. Could be family stuff, a dead battery, or they just opened it and forgot.\"); \"'Something's probably going on. I'll send a quick 'you ok?' tomorrow.'\" (best, feedback: \"Best pick. You check the situation before judging the person, and you still say something.\"); \"'Fine. I'll ignore them back.'\" (feedback: \"Feels fair, but now you're both guessing and the gap grows.\"). Replace step 3 scenario with: \"Your mum forgot to pick you up after practice and you waited 40 minutes.\" Best option: \"'Her day must have gone sideways. I'll ask what happened before I kick off.'\""
+    },
+    {
+     "card_id": "second-order-hanoi-rats",
+     "severity": "medium",
+     "problem": "The id says rats (the Hanoi story), but the hook is about cobras, and step 2 is a parent paying a kid to read. The 'Try today' says 'for you, your kids, or a group', and 'With others' says 'bugs fixed, sales calls'. That's adult office talk. The cobra hook is brilliant, but the payoff isn't about me.",
+     "fix": "Change step 2 scenario to: \"Your school gives a merit for every homework handed in on time. Ask 'and then what?' twice. What's the sneaky side effect?\" Best option: \"People rush rubbish homework just to hit the deadline\". Rewrite try_today: \"Before you set yourself a rule or reward (screen time, streaks, revision points), write 'and then what?' and answer it twice.\" Rewrite try_team: \"Before your group sets a target (most streaks, most pages read), ask: 'How could someone hit this number without actually doing the thing?'\" Rename the id, or the hook, so cobra and rats match."
+    },
+    {
+     "card_id": "anchoring-africa-un",
+     "severity": "medium",
+     "problem": "The game is good, but 'Try today' says 'Before your next salary talk'. I don't have a salary. The one practical takeaway is useless to me, and it reminds me this app was written for adults.",
+     "fix": "Rewrite try_today: \"Next time you sell something on Vinted or Depop, or haggle at a market, write your price and one reason it's fair before you see their offer.\" Rewrite try_team: \"Before your friends guess a number together (trip cost, how long to queue, a score), everyone types their guess in the chat at the same time.\""
+    },
+    {
+     "card_id": "still-water-vision-pause",
+     "severity": "medium",
+     "problem": "Step 3 is about the household energy bill creeping up and comparing 12 bills. That's a parents-at-the-kitchen-table problem. I scored 3/3, but by step 3 I was bored. The card is also tagged 'Systems', but it's really about group talk.",
+     "fix": "Replace step 3 scenario with: \"Your group chat is arguing about why your friend group keeps falling out. Everyone has a quick theory. What finds the real pattern?\" Options: \"Go with whoever's loudest\"; \"Scroll back and look at when each fall-out actually started\" (best, feedback: \"Yes. A pattern hides in any one argument and shows up when you line them up.\"); \"Mute the chat and start a new one\"."
+    },
+    {
+     "card_id": "leverage-points-order",
+     "severity": "medium",
+     "problem": "Six abstract labels like 'Feedback loops (how strongly the system self-corrects)' with no example. This is the most 'school' card in the set. I tapped them randomly. The reveal is a long arrow chain I didn't read, and I got 1/6 placed right with no idea why.",
+     "fix": "Add one concrete running example to the prompt: \"Your school wants fewer phones in lessons. Rank these fixes from weakest to strongest lever.\" Items: \"Numbers: fine people 1 more detention\"; \"Feedback loops: show the class its phone-free minutes each week\"; \"Information: post the grades of phone-free vs phone-on classes\"; \"Rules: phones go in a box at the door\"; \"Goals: lessons are judged on focus, not just silence\"; \"Mindset: students decide phones in class are cringe\". Shorten explain to: \"Changing the number is easiest and weakest. Changing what people want is hardest and strongest.\""
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Both Venn quizzes (wso-triad-venn, mpc-loop-pcf-venn) landed on exactly 5/10, 5/10, 5/10 with the dot in the dead centre. That gives a 'Half-Lit Path' or 'Evenly balanced' result, which feels like the app didn't listen to me. If middle answers are the default, the result is generic, and I won't share a generic result.",
+     "fix": "In app.js, don't pre-select the middle value on Venn questions. Require a tap on each line before the result shows, and use a 4-point scale (no neutral middle) so scores can't all tie at 5. If all three axes still tie, show: \"Too close to call. Answer the two you hesitated on again, more honestly.\" with a 'Redo 2' button."
+    },
+    {
+     "card_id": "mpc-loop-pcf-venn",
+     "severity": "low",
+     "problem": "The hook says 'adjust', but the circle says 'Recalibrate'. Words like 'appraise' and 'recalibrate' sound like a GCSE mark scheme. I had to work out what the quiz even measured.",
+     "fix": "Change the hook to \"Notice, read, adjust: which one do you skip?\" and the axis labels to \"Notice\", \"Read it\", \"Adjust\". Rewrite the model: \"Notice, read it, adjust. The step you skip is where you get things wrong.\""
+    },
+    {
+     "card_id": "hedonic-adaptation-fade-swipe",
+     "severity": "low",
+     "problem": "'Living somewhere sunnier for the weather' with a Californians study isn't a choice anyone my age makes. 'Money from your first Saturday job' is good, though. The swipe works, but one item breaks the 'about me' feeling.",
+     "fix": "Replace the sunnier-weather item with {\"text\": \"Finally getting the trainers you saved up for\", \"side\": \"left\", \"why\": \"A few weeks in they're just your trainers. The saving-up was half the buzz.\"}."
+    }
+   ],
+   "best_cards": [
+    "system1-system2-bat-ball",
+    "goal-directed-perception-door-swap-reveal",
+    "confirmation-bias-2-4-6"
+   ],
+   "verdict": "Some of the hooks really would stop my thumb: the cobra bounty, swapping a stranger behind a door, the bat and ball ('Plot twist: it's smaller'), and Heads 150 / Tails 100. Those feel like TikTok brain-teasers I'd send to the group chat. The problem comes after the hook. Too many cards drift into adult life halfway through: managers, salary talks, energy bills, my 'grown-up son', 'your kids'. Some reveals turn into long quote-and-citation blocks that look exactly like homework. The Venn quizzes gave me flat 5/5/5 results that felt like the app wasn't listening. Tone is kind and never shaming, which I'd notice and like. Fix the adult scenarios and cut the reveal text, and I'd play three or four in a row. Right now I bail around card two."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, non-native English speaker. I want tools I can use tomorrow with my team and with myself, and I have no patience for fluff.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Many examples are written for teenagers or students: 'first Saturday job', 'getting the bigger bedroom', 'bus to college', 'parent makes your awkward phone calls', 'class council', 'revise for a test', 'asking a teacher'. As a 44-year-old manager I feel the app is not talking to me, and I scroll away. Only fae-why-late has a real manager scenario, and it is the best one in the session.",
+     "fix": "Each card should have at least one adult or work example next to the school one. Concretely: in hedonic-adaptation-fade-swipe, change 'The money from your first Saturday job' to 'A pay rise' (why: 'After a few months it's just your salary, and your spending rises to match.') and 'Getting the bigger bedroom' to 'Moving into a bigger flat or office' (why: 'A few weeks later it's just where you live or work.'). In shifting-burden-swipe, change 'Always getting a parent or friend to make your awkward phone calls' to 'Always asking a colleague to handle the difficult client call' and 'Making the awkward call yourself...' to 'Taking the difficult call yourself, with the colleague listening in for backup'. In wso-triad-venn, change the prompt to 'Pick your thing: a work skill, a side project, an instrument, getting fitter, or something else.'"
+    },
+    {
+     "card_id": "still-water-vision-hidden-clue",
+     "severity": "high",
+     "problem": "The last line of the reveal reads 'If you guessed pooled the clues, so did the groups.' But the groups did NOT pool the clues, so the line contradicts the finding. I read it twice and still could not follow. For a non-native reader this is real confusion at the most important moment.",
+     "fix": "Replace the last sentence of the reveal with: 'If you guessed pooled the clues, you're not alone: that's what the groups themselves believed they were doing.'"
+    },
+    {
+     "card_id": "leverage-points-order",
+     "severity": "medium",
+     "problem": "The difference between 'Feedback loops (how strongly the system self-corrects)' and 'Information (who sees what, when)' is too abstract to rank in 30 seconds. I got almost everything wrong, then I just read the answer. The result is a long wall of arrows, I learned nothing practical, and it feels like a trivia test.",
+     "fix": "Add one concrete team example to each item: 'Numbers (e.g. raise the sprint target)', 'Feedback loops (e.g. how fast a bug report gets back to the developer)', 'Information (e.g. show the team the live customer complaints)', 'Rules (e.g. no deploys on Friday)', 'Goals (e.g. from features shipped to customer problems solved)', 'Mindset (e.g. bugs are learning, not blame)'. Shorten explain to: 'Meadows: numbers are easiest to change and weakest. Goals and mindset are hardest and strongest.'"
+    },
+    {
+     "card_id": "mpc-loop-pcf-venn",
+     "severity": "medium",
+     "problem": "The hook says 'Perceive, appraise, adjust', but the game axis and the model say 'Recalibrate'. Three abstract words that keep changing name confuse me. Also, when I answered in the middle I got 5/10 / 5/10 / 5/10, 'Evenly balanced today', which tells me nothing. It is a house framework with jargon and gives a weak takeaway.",
+     "fix": "Use one word everywhere: change the hook to 'Notice, interpret, adjust: which step do you skip most?' and rename the axis labels to 'Notice', 'Interpret', 'Adjust' (update the model text to 'Notice, interpret, adjust. Your weakest step is where your view of reality bends.'). Change the 'mid' result text to name a default action: 'Every step scored near the middle. Start with Adjust: name one thing you have kept doing this month even though results disappointed, and change one detail of it this week.'"
+    },
+    {
+     "card_id": "fae-why-late",
+     "severity": "medium",
+     "problem": "After a sensitive scenario (my grown-up son forgot my birthday), picking the hurt answer gives a header 'Sneaky one. Here's the trick.' That sounds like a game show mocking a real feeling. Tone is wrong for a card about family hurt. The card is also labelled 'Quick one' but has 3 steps.",
+     "fix": "Mark the card \"sensitive\": true so the app uses a gentle result header (e.g. 'Very human. Here's the pattern.') instead of 'Sneaky one. Here's the trick.'. Either change the level label to 'Bit deeper', or cut it to 2 steps by dropping the group-project step, because the manager and family steps are the strong ones."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The NEXT suggestions repeat what I just played. After loss-aversion-coin-flip (win 150/lose 100) the next card is expected value. After the mug card, the next one is again 'Coin flip: win 100 or lose 60'. Two coin flips close together feel like the same game. Beer-game and leverage-points both point to the same 'Feedback loops' card, so the feed feels circular.",
+     "fix": "In the next-card picker, skip any card whose hook shares the same core mechanic (coin flip / bet) with a card played in the last 5. When two cards in a row would point to the same 'related' concept, pick the second related entry. For example, leverage-points-order should point to environment_design, not feedback_loops, when delays-beer-game was just played."
+    },
+    {
+     "card_id": "loss-aversion-coin-flip",
+     "severity": "low",
+     "problem": "'Real money in your own currency' with win 150 / lose 100 means very different things in lei, euro or dollars, so the bet feels different for each reader. There is also no 'correct' answer, so the card ends without a game moment. The try_today is good, though.",
+     "fix": "Change the prompt to: 'One fair coin flip. Heads: you win a day's pay and a half. Tails: you lose a day's pay. On average it pays you a quarter of a day. Do you take it?' Keep the reveal, but add at the start: 'Most people say no.'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "The result 'The Half-Lit Path' says 'watch one 5-minute how-to'. For someone already tired, 'watch a video' is passive and easy to fake. The try_team ('helper may only offer help on the lowest score') is excellent and should be more visible, because it is the best manager tool in the session.",
+     "fix": "Change the mid text to: 'All three are half-lit today. Pick the easiest to bump: do one 5-minute practice rep (Skill), or send one message asking for access or time (Opportunity). Then come back in a week.' Move try_team above the 'Why?' fold, or show it as a second checkbox the same way try_today is shown."
+    }
+   ],
+   "best_cards": [
+    "delays-beer-game",
+    "fae-why-late",
+    "still-water-vision-pause"
+   ],
+   "verdict": "Better than I expected. Beer Game, the late-deadline manager scenario and the 3-second-pause/silent-writing cards gave me things I can try in tomorrow's stand-up, and nothing made me feel stupid or ashamed. The tone is kind and the sources are honest about how strong the evidence is. But half the examples are for teenagers (Saturday job, bigger bedroom, teacher), some abstract cards (leverage ranking, the perception loop) are clever and not useful, and one reveal (the hidden clue) contradicts itself. Give me adult and work versions of the examples and a cleaner feed without repeats, and I would use this daily and share some cards with my team. Right now it is a 7 for usefulness and a 6 for fun."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher; reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader, dislikes pop-psych oversimplification.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "hedonic-adaptation-fade-swipe",
+     "severity": "high",
+     "problem": "The item 'Living somewhere sunnier for the weather' is filed under 'Fades', and the card cites Schkade & Kahneman (1998) as the evidence. That study is about the focusing illusion: both groups expected Californians to be happier, and they weren't. It did not measure anyone adapting over time, so the citation doesn't support the claim. A careful reader will notice this, and it weakens trust in the whole card.",
+     "fix": "Change that item's why to: \"Climate barely shows up in life satisfaction. Schkade & Kahneman (1998) found Californians no more satisfied than Midwesterners, though both groups expected they would be. We overrate what we focus on.\" Better still, replace the item with {\"text\": \"A pay rise\", \"side\": \"left\", \"why\": \"The lift in mood tends to fade as your spending and comparisons rise to match (Di Tella, Haisken-DeNew & Schupp, 2010).\"} and add Di Tella et al. (2010) to source.work."
+    },
+    {
+     "card_id": "inversion-guarantee-failure",
+     "severity": "high",
+     "problem": "The insight states 'Your brain spots ways to fail faster than recipes for success' as a fact about the brain, with no source. This is exactly the pop-psych overreach I object to. The Jacobi/Munger tradition is about method, not brain wiring.",
+     "fix": "Rewrite insight to: \"Failure is often easier to picture in concrete detail than success, so it gives you things you can act on. Mathematician Carl Jacobi advised 'invert, always invert'; investor Charlie Munger made it a life habit.\""
+    },
+    {
+     "card_id": "fae-why-late",
+     "severity": "high",
+     "problem": "Step 3 asks the player to imagine a grown-up son forgetting their birthday, a tender and possibly real hurt. When I picked 'He doesn't care about me anymore', the result headline was 'Sneaky one. Here's the trick.' That is glib after an emotional scenario. The scenarios also assume the player is both a manager (step 2) and the parent of a son (step 3).",
+     "fix": "In app.js, stop using the quiz-style headlines ('Sneaky one. Here's the trick.') on choice cards where any step is about a relationship, or on any card marked sensitive. Use \"Worth a second look.\" there instead. In the card, rewrite step 3's scenario to: \"Someone close to you (a grown child, a sibling, an old friend) forgot your birthday. Before you pick up the phone, you tell yourself…\" and change 'He'/'his'/'him' in the options to 'they'/'their'/'them'."
+    },
+    {
+     "card_id": "anchoring-africa-un",
+     "severity": "medium",
+     "problem": "The explain text says 'If your guess landed above 35%, that number probably pulled you up.' A group-level effect can't be diagnosed in one person, so this overclaims. The result screen also never shows the anchor of 65 again, so I had to take the card's word that I saw it. And the headline 'Plot twist: it's smaller.' is the same gimmick the mug card uses.",
+     "fix": "Change explain to: \"54 of the 193 UN members are African: about 28%. Before you guessed, you saw 65. We can't know if it moved your guess, but on average it moves people: in the 1974 study, people who saw a wheel land on 65 guessed a median of 45%, and those who saw 10 guessed 25%.\" In app.js, when an estimate card has an anchor, show 'Anchor: 65' as a third marker on the result bar. Rotate the result headlines (e.g. 'Lower than you guessed.') so 'Plot twist' isn't repeated."
+    },
+    {
+     "card_id": "order-chaos-border",
+     "severity": "medium",
+     "problem": "This is the card closest to Peterson, but it gives no primary text to read, only a one-line paraphrase that calls order and chaos 'like yin and yang'. The scoring is also lopsided: in question 2, the most chaotic answer is worth +1, while every other question allows +2, so the scale leans toward Order.",
+     "fix": "In questions[1], change the value of 'Lots is new, and it's exciting but a lot' from 1 to 2. Add from_source: {\"quote\": \"Yin and yang ... blend to create harmony.\" is NOT safe; instead use cite: \"Tao Te Ching, ch. 42 (public domain)\", quote: \"The ten thousand things carry yin and embrace yang.\", next_read: \"Peterson, 12 Rules for Life (2018), Rule 2, the section on order and chaos; then Maps of Meaning (1999), ch. 2\"}. Rewrite insight to: \"Peterson (Maps of Meaning) borrows the Taoist image: order is the explored, chaos the unexplored. Too much order goes stale; too much chaos overwhelms. Meaning is found on the border, facing the unknown by choice.\""
+    },
+    {
+     "card_id": "leverage-points-order",
+     "severity": "medium",
+     "problem": "The explain text says changing goals and mindsets 'changes everything downstream'. That is stronger than Meadows's own claim. She stressed that high levers are counterintuitive and that people often push them in the wrong direction. The from_source quote is Archimedes, which is decorative rather than Meadows's own words.",
+     "fix": "Change explain to: \"Donella Meadows ranked 12 places to intervene. Tweaking numbers is easiest and usually weakest. Goals and mindsets are harder to move but reshape what follows. She also warned that people often find the high levers and push them the wrong way.\" Keep Archimedes if you like, but change from_source.next_read to say: \"...ch. 6, especially her warning that leverage points are counterintuitive\"."
+    },
+    {
+     "card_id": "mpc-loop-pcf-venn",
+     "severity": "medium",
+     "problem": "The labels don't match each other. The hook says 'adjust', the axis says 'Recalibrate', and the insight lists five steps ('perceive, appraise, recalibrate, act, repeat') where the game measures three. The model line, 'Your weakest step is where your view of reality bends', claims too much for a six-item self-rating of a house model that has not been tested.",
+     "fix": "Change hook to \"Notice, interpret, adjust: which step do you use least?\" and rename the axis labels in display only to 'Perceive (notice)', 'Appraise (interpret)' and 'Recalibrate (adjust)'. Change insight to: \"Qlip's own framework, built on Powers's control theory and not a tested scale: perceive, appraise, recalibrate, then act again. The step you use least is a good one to practise.\" Change model to: \"Perceive, appraise, recalibrate. Practise the step you use least.\""
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "My map (dark) is an unlabelled tangle of 88 coloured dots. As a reader I can't tell which idea is which, or what I have actually learned, unless I tap dots at random. The header reads 'You've explored all 88 ideas', yet the screen doesn't show me any of them.",
+     "fix": "Under the graph, add a collapsible list called 'Ideas you've played', grouped by domain. Each row shows the card title and its one-line model, and tapping a row opens the card. On the graph, show the concept title as a small label beside each node, or on long-press."
+    }
+   ],
+   "best_cards": [
+    "stockdale-paradox-christmas-reveal",
+    "confirmation-bias-2-4-6",
+    "delays-beer-game"
+   ],
+   "verdict": "This is a thoughtful, mostly well-sourced set. Most cards are honest about how strong their evidence is: Stockdale is presented as one man's testimony, the cobra story as a parable, endowment effect sizes are flagged as varying, and the scoring itself is called 'not a verdict'. That shows real respect for the reader, and the from_source quotes (Bacon, Adam Smith, Hardin) are exactly the bridge to primary texts I want. It falls short of excellent in a few places. There are unsupported claims about how the brain works (inversion), one misapplied citation (sunnier climate filed under 'fades'), and the anchoring card tells individual players that the anchor moved them. Some quiz-show copy ('Sneaky one', 'Plot twist') also clashes with tender scenarios like a child forgetting a birthday. The Peterson card is the thinnest treatment of the thinker this audience will care most about. Fix those and this would be a 7-to-8 experience for a serious reader. For now it is a solid 7 on usefulness and a little less on fun, because the 30-second form sometimes flattens ideas that deserve a second paragraph."
+  },
+  {
+   "persona": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures. Needs the feed to feel safe and genuinely helpful.",
+   "scores": {
+    "hook": 7,
+    "clarity": 8,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 7
+   },
+   "issues": [
+    {
+     "card_id": "fae-why-late",
+     "severity": "medium",
+     "problem": "Step 3 asks me to play a parent whose grown-up son forgot their birthday. I'm 24, so I can't step into that. The wrong option, 'He doesn't care about me anymore', is the exact thought I have about friends, and I never get to practise it from my own side. Step 2 also puts me in a manager role I don't have. The card's strongest lesson for someone like me (people going quiet usually isn't about you) is in a scenario I can't relate to.",
+     "fix": "Replace step 3 with: scenario \"A close friend hasn't replied to your message for two days, but you saw them post a story. Before you message again, you tell yourself…\"; options: [{text: \"'They're ignoring me. I must have annoyed them.'\", feedback: \"A painful leap, and a very common one. Posting a story takes five seconds; a real reply takes energy they might not have this week.\"}, {text: \"'They're probably swamped. I'll send something light, no pressure to reply.'\", best: true, feedback: \"Best pick. You leave room for their situation and keep the door open without chasing.\"}, {text: \"'I'll stop messaging and see if they notice.'\", feedback: \"Understandable, but a silent test usually lets the hurt grow on both sides. A light message answers it faster.\"}]. Optionally change step 2 to a peer version: \"A usually reliable flatmate has forgotten their bins/chores twice this month. You…\"."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "When I miss every best call in a choice game, the result header says 'Sneaky one. Here's the trick.' Swipe games say 'X of N. These ones are sneaky.' After answering honestly with my anxious first thought, 'trick' makes me feel I failed a test, or that the game was trying to catch me out. That is the opposite of the 'never harmed' aim.",
+     "fix": "In app.js choice(): change best===0 to { name: \"Here's the move most people miss.\", tally: \"Your first answers were the common ones. That's the point of the game.\" }. In the swipe done(): change the low-score name to `${right} of ${n}. Most people sort these the same way.` and keep the ↺ tally."
+    },
+    {
+     "card_id": "inversion-guarantee-failure",
+     "severity": "medium",
+     "problem": "Try Today tells me to write 3 ways to guarantee my goal fails, then circle the one I'm 'closest to doing'. With anxiety and low self-worth, that turns quickly into a list of my flaws plus rumination. The in-game option 'Feel bad about the list' handles this well, but the Try Today box, the thing I actually take away, loses that safety net.",
+     "fix": "Rewrite try_today to: \"Pick one goal. Spend 5 minutes writing 3 ways it could go wrong. Circle the easiest one to avoid and skip it today. It's a checklist, not a judgement of you.\""
+    },
+    {
+     "card_id": "loss-aversion-coin-flip",
+     "severity": "medium",
+     "problem": "Try Today ends with 'Is it really that bad?' To an anxious reader that sounds like 'you're overreacting'. It dismisses the feeling instead of helping me cope with it. The With others line has the same tone.",
+     "fix": "Rewrite try_today to: \"Name one small risk you've avoided (asking, applying, trying). Write the realistic worst case, then one thing you'd do if it happened. Does it feel a bit more manageable now?\" Change the try_team ending from 'Is it as bad as it felt?' to 'What would help if it happened?'"
+    },
+    {
+     "card_id": "order-chaos-border",
+     "severity": "medium",
+     "problem": "The 'Leaning Order' result pushes me to add unknowns and adds 'Keeping away from the unknown can feel safe without being stable.' After a rough year, routine is how I'm recovering, and this reads as a quiet telling-off. The model ('step willingly into chaos') adds more pressure. The scoring is also lopsided: Q2's highest option is worth 1 while every other question's top option is worth 2, so the result leans toward Order.",
+     "fix": "Change the Leaning Order zone text to: \"Today your answers lean toward order: steady, maybe a bit tight. If steadiness is what's helping you recover, that's allowed. When you feel ready, add one small unknown: a new route, a new recipe, one new person.\" Change Q2's third option value from 1 to 2. Soften the model to: \"Stand on order, then step into the unknown at a pace you choose.\""
+    },
+    {
+     "card_id": "mpc-loop-pcf-venn",
+     "severity": "low",
+     "problem": "The inverted items ('I often realise later that I missed something obvious', 'My first read ... feels like the only one') invite self-criticism. The model calls my lowest score my 'weakest step'. Answering middling gave a 5/5/5 screen with a muted result, and it read like a nothing result about me.",
+     "fix": "Rewrite the inverted P item to \"Sometimes I spot something only afterwards that was there all along.\" Change the model to \"Perceive, appraise, recalibrate. The step you use least is where your view can drift.\" Change insight 'Your weakest step' to 'The step you use least'."
+    },
+    {
+     "card_id": "stockdale-paradox-christmas-reveal",
+     "severity": "low",
+     "problem": "The answer is 'The optimists struggled most'. For someone holding on to hope that things get better, a quick read says hope is dangerous. The nuance (hope pinned to a date is the problem) only arrives in the insight, below the fold.",
+     "fix": "Add to the end of the reveal: \"Hope itself wasn't the problem. Hope pinned to a date he couldn't control was.\""
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "The top result is called 'Full Agency', which implies the other results lack agency. That's a label about me, not about the goal. 'The Starting Line' and 'Ready, Door Closed (for now)' are excellent and show the right tone.",
+     "fix": "Rename result OSW to \"All Lights On (for this goal)\" and start its text with \"For this goal, all three pillars score high today.\""
+    }
+   ],
+   "best_cards": [
+    "never-miss-twice-reveal-reframing",
+    "fae-quizmaster",
+    "circle-influence-library-choice"
+   ],
+   "verdict": "As Sam, I mostly felt safe and occasionally helped. Lines like 'today', 'a snapshot, not a verdict', 'A miss is an event, not a verdict about you' and the helpline footer on sensitive cards are exactly right. never-miss-twice and fae-quizmaster ('you look clueless because of the role you were handed') landed on my self-worth. What pulled me out: feedback that calls my honest first answer a 'trick', Try Todays that ask me to list my failures or ask 'is it really that bad?', a birthday scenario written for parents, and an Order/Chaos result that treats my need for routine as something to fix. Fix those few lines and this would go from good to something I'd trust and recommend."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist. I check every claim, attribution and effect size, look for replication-crisis myths and overclaiming, and audit the self-report games the way I would audit a questionnaire.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 7
+   },
+   "issues": [
+    {
+     "card_id": "fae-quizmaster",
+     "severity": "high",
+     "problem": "The item is keyed wrong. The prompt asks 'Who SEEMS more knowledgeable?' The study's actual finding is that the questioner seemed more knowledgeable, and that is the 'wrong' option here. The keyed answer, 'Can't tell: the coin set the roles', answers a different question: who IS more knowledgeable. A player who reads carefully and gives the empirically correct answer is told they were wrong, which teaches the opposite of attentive reading.",
+     "fix": "Change game.prompt to: \"A coin toss splits two people. One writes 10 hard trivia questions from their own odd knowledge. The other must answer them and gets about 4 right. Based on this, who is actually more knowledgeable?\" Keep choices and answer:1. Change the first sentence of the reveal to: \"You can't tell: the coin set the roles. Yet almost everyone feels the asker is smarter.\""
+    },
+    {
+     "card_id": "base-rates-librarian-farmer",
+     "severity": "high",
+     "problem": "Mathematical overclaim. 'Even if Steve fits librarians far better, farmers still win on the count' is false in general. With a 20:1 base rate, farmer wins only if the description is less than about 20 times more typical of librarians. With a stereotype this extreme, the likelihood ratio could exceed that. Treating 'Farmer' as simply correct teaches 'ignore the evidence', when the real lesson is 'weigh it against the base rate'.",
+     "fix": "Reveal: \"Librarian is the natural pick: the story fits. But Kahneman notes the US had over 20 male farmers for every male librarian. Unless that description is more than 20 times likelier for a librarian, which few descriptions are, farmer is the better bet.\" Model: \"The story says who fits. The count says who's common. Start from the count, then let the story adjust it.\""
+    },
+    {
+     "card_id": "still-water-vision-hidden-clue",
+     "severity": "medium",
+     "problem": "The last line of the reveal, 'If you guessed pooled the clues, so did the groups', is false. In the hidden-profile condition the groups did NOT pool. Players who answered wrongly are told they matched the groups, which reverses the finding.",
+     "fix": "Replace the last sentence with: \"If you guessed 'pooled the clues', you're in good company: that's what most people expect groups to do.\""
+    },
+    {
+     "card_id": "second-order-hanoi-rats",
+     "severity": "medium",
+     "problem": "The hook ('A city paid people for every dead cobra. Guess what it got more of.') states a poorly documented parable as fact. The card body hedges correctly ('as the classic story goes', 'thin records'), but the hook is what gets shared. The card id refers to the Hanoi rat bounty (1902), which is historically documented (Vann, 2003) and would carry the same lesson on a firmer footing.",
+     "fix": "Option A: hook -> \"A city paid for every dead cobra, or so the story goes. Guess what it got more of.\" Option B (preferred): step 1 scenario -> \"Hanoi, 1902. Rats are spreading through the new sewers, so French officials pay a bounty for every rat tail handed in. What happens next?\" Best option -> \"People cut off tails, let the rats go, and some breed them\". Insight -> \"...Historian Michael Vann documented Hanoi's rat-tail bounty (2003); the famous Delhi cobra version has thin records.\" Add 'Michael Vann' to thinkers and Vann, 'Of Rats, Rice, and Race' (French Colonial History, 2003) to work."
+    },
+    {
+     "card_id": "order-chaos-border",
+     "severity": "medium",
+     "problem": "Measurement problems. (1) Q2's top option scores 1 while every other item's top scores 2, so the scale is asymmetric toward Order. (2) Q2's top option is double-barrelled ('exciting but a lot'). (3) The endpoint labels carry judgement ('Rigidly fixed', 'All over the place') while the middle options sound pleasant, so social desirability pulls answers to 0. Every middle option scores 0, so a hedging player always lands 'On the Border', the flattering ideal. (4) The time frames mix 'typical week', 'this week' and 'right now'.",
+     "fix": "Q2 options -> [\"Almost nothing\",-2],[\"Some\",0],[\"A lot\",2]. Q1 -> \"My last two weeks were…\" with options \"Almost identical day to day\" (-2), \"Mostly routine, a few surprises\" (0), \"Different every day, hard to plan\" (2). Q4 options -> \"The same every day\" (-2), \"Fairly steady\" (0), \"Different most days\" (2). Add a 4th option to Q3: \"A few, and they stretched me\" = 1. Tighten the middle zone: upTo -0.25 / 0.25."
+    },
+    {
+     "card_id": "mpc-loop-pcf-venn",
+     "severity": "medium",
+     "problem": "One reverse-keyed item does not invert cleanly. 'I often realise later that I missed something obvious' (P, invert) is endorsed by people with good metacognitive monitoring, the very noticing the P axis is meant to reward, so careful self-observers lose Perceive points. This is a known pitfall of negatively worded items. Separately, the result texts say 'your answers show strong noticing' for abilities people self-rate poorly.",
+     "fix": "Replace that item with {\"q\": \"Changes around me often catch me by surprise when others saw them coming.\", \"axis\": \"P\", \"invert\": true}. In every result text, change 'your answers show' to 'you rate yourself' (e.g. P: \"Today you rate your noticing highest...\")."
+    },
+    {
+     "card_id": "hedonic-adaptation-fade-swipe",
+     "severity": "low",
+     "problem": "Two items overstate shaky or mismatched evidence. (1) The commuting 'Sticks' item rests on Stutzer & Frey (2008), whose 'commuting paradox' was not robust in later panel work (e.g. Dickerson, Hole & Munford, 2014). (2) The sunnier-weather item cites Schkade & Kahneman (1998), which showed a focusing illusion, not adaptation over time. (3) The Lyubomirsky citation for 'varied time with people' is a theoretical chapter, not a direct test.",
+     "fix": "Commute why -> \"Some studies found long commuters less satisfied even years later (Stutzer & Frey, 2008), though later data are mixed.\" Sunny why -> \"People expected Californians to be happier; they weren't (Schkade & Kahneman, 1998). Weather matters less to life than it seems when you imagine it.\" Social why -> \"Lyubomirsky (2011) argues varied, surprising joys slow adaptation; it's a well-supported idea, though less directly tested.\""
+    },
+    {
+     "card_id": "inversion-guarantee-failure",
+     "severity": "low",
+     "problem": "The insight opens with an unsupported empirical claim: 'Your brain spots ways to fail faster than recipes for success.' No source is given. There is a real, citable finding nearby that should be used instead.",
+     "fix": "Insight -> \"Picturing failure is often more concrete than picturing success. In one 1989 study, imagining an outcome had already happened helped people list about 30% more reasons for it (Mitchell, Russo & Pennington). Jacobi advised 'invert, always invert'; Munger made it a habit.\" Add 'Deborah Mitchell, J. Edward Russo & Nancy Pennington' to thinkers."
+    }
+   ],
+   "best_cards": [
+    "delays-beer-game",
+    "stockdale-paradox-christmas-reveal",
+    "confirmation-bias-2-4-6"
+   ],
+   "verdict": "Better than most pop-psychology I review. The hedges are real. Stockdale is labelled as one man's account. Lally is quoted correctly. The anchoring medians (45%/25%) and the endowment ratio (about 2.5x) match the 1974 and 1990 papers. Loss aversion and the actor-observer asymmetry are both flagged as smaller than once claimed. The two house models are labelled as not validated. The Beer Game, Wason 2-4-6 and the Stasser-Titus card are faithful and genuinely useful. The faults are in item construction, not the science. One reveal item asks a different question from the one its keyed answer replies to (quizmaster). One reveal turns base-rate neglect into 'ignore the evidence'. One reveal states the finding backwards (hidden clue). The self-report games show textbook design flaws: an asymmetric scale, double-barrelled options, judgemental endpoint labels, and a reverse-keyed item that penalises good self-monitoring. Smaller notes: the anchoring hook calls the fixed 65 'random', and its explanation infers an individual's anchoring from one guess. The fae-why-late opener 'Your first thought should be' is leading. Fix the three answer keys and the two questionnaires and this is a 7.5-8 product. As it stands: solid, not yet rigorous."
+  },
+  {
+   "persona": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how clear the tap targets are, reward moments, and whether people would share it.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "fae-quizmaster",
+     "severity": "high",
+     "problem": "The answer key contradicts the question. The prompt asks 'Who SEEMS more knowledgeable?', and the study found that the questioner seemed smarter, so 'The one asking' is the factually correct answer to what was asked. The card marks 'Can't tell: the coin set the roles' as right, which also gives the trick away inside the option text. Players who answer correctly get told they were wrong, which kills trust in the reveal.",
+     "fix": "Change the prompt's last sentence to: 'Who actually knows more?' Keep the choices and answer 1 the same. Change the reveal's first sentence to: 'You can't tell: the coin decided it.' Better still, make it a two-step reveal: choices ['The one asking', 'The one answering'] for 'Who would most watchers rate as smarter?' with answer 0, and the reveal: 'Most watchers (and even the answerers) picked the questioner. But the coin set the roles: asking your own questions is easy, answering someone else's is hard.'"
+    },
+    {
+     "card_id": "leverage-points-order",
+     "severity": "high",
+     "problem": "This is the heaviest 30-second card in the session. You put 6 long, parenthesised items in order, then the reveal shows orange '→ step 3' tags on every misplaced row, plus a long text paragraph repeating the full order. In the screenshot 5 of 6 rows are orange, so it reads as a wall of failure with no clear 'aha' moment. On a phone, ranking abstract system levers from memory is guessing, not playing.",
+     "fix": "Cut it to 4 items: 'Numbers (budgets, targets)', 'Rules (rewards, punishments)', 'Information (who sees what)', 'Goals (what it's really for)'. Change the prompt to 'Rank from weakest to strongest lever. Hint: the easiest to change is usually the weakest.' Change the explain to one line: 'Meadows: numbers are easy and weak; goals are hard and strong. Information and rules sit between.' In the UI, replace '→ step N' with a green tick on correct rows and a small grey 'belongs #N' on the others."
+    },
+    {
+     "card_id": "still-water-vision-hidden-clue",
+     "severity": "medium",
+     "problem": "The last line of the reveal, 'If you guessed pooled the clues, so did the groups', is confusing. The groups didn't pool, so it reads like a contradiction. Reveal cards depend on one clean punchline, and this one ends on a muddle.",
+     "fix": "Replace the last sentence with: 'If you guessed they'd pool the clues, that's what the groups expected of themselves too.'"
+    },
+    {
+     "card_id": "fae-why-late",
+     "severity": "medium",
+     "problem": "The player's role changes three times in one 30-second game: student with a project partner, then manager, then parent of a grown-up son. A 17-year-old suddenly being 'your grown-up son' breaks immersion. The step-3 header after a wrong pick ('Sneaky one. Here's the trick.') is also cut off awkwardly at the screen width.",
+     "fix": "Make step 3 role-neutral: 'A close friend forgot your birthday. Before you message them, you tell yourself…' Options: \"'They don't care about me anymore.'\" / \"'Their week must be chaotic. I'll message and see how they are.'\" (best) / \"'I'll wait and see how long it takes them.'\" Change the feedback to use 'them'. Change step 2 to 'A usually reliable teammate (at work, in a club or a class project) has missed two deadlines…' with the option 'Ask privately what changed…'."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Estimate reveal: the 'You: 8 cents' label is left-aligned and 'Real: 5 cents' right-aligned no matter where the markers sit. The 'you' marker is actually to the RIGHT of the truth marker, so labels and bars point the wrong way (bat-ball, anchoring). The markers are also unlabelled thin lines in two near-identical colours. This is the main reward moment for estimate cards and it reads backwards.",
+     "fix": "In app.js estimate(), attach labels to the markers: render a small caption under each <i> ('you' and 'real') positioned with the same left:%. Or swap the est-line order when guess > answer so 'Real' sits on the left. Give the truth marker a filled dot and a contrasting colour (e.g. green) and the 'you' marker a grey outline."
+    },
+    {
+     "card_id": "anchoring-africa-un",
+     "severity": "medium",
+     "problem": "The hook promises 'a random number', but it is always 65, which is a small untruth in a card about honesty with numbers. Also, after the 'more or less than 65?' step, the slider STARTS at 65, so lazy draggers land near 40–50 because of the UI, not their minds. That muddies the lesson.",
+     "fix": "Change the hook to: 'First we'll show you a number that has nothing to do with the answer. Watch it bend your guess.' In app.js estimate(), start the slider at g.min (or the midpoint) instead of g.anchor when an anchor was shown, so the pull comes only from the earlier question."
+    },
+    {
+     "card_id": "hedonic-adaptation-fade-swipe",
+     "severity": "low",
+     "problem": "The right-hand label 'Sticks (you don't fully adapt)' covers both a hassle (commute) and a joy (varied time with friends). On the swipe, 'sticks' sounds negative, so many players will send friends left and feel tricked. 'Fades slower' is not the same as 'sticks'.",
+     "fix": "Change right label to 'Keeps its effect (you don't fully adapt)'. Change the item text to 'Seeing friends in new, varied ways each week' and its why to 'Varied, surprising joys keep their effect longer than fixed ones (Lyubomirsky, 2011).'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "The scales don't match: the result line says 'Will 5/10 · Skill 5/10 · Opportunity 5/10', but Try Today asks for 1-5 ratings. Six self-rating questions before any payoff is also slow for a 'Quick one' badge.",
+     "fix": "Change try_today to: 'In your notes app, type your goal and rate Will, Skill and Opportunity out of 10. Do one 5-minute move on the lowest one tonight.' Change try_team to 'scores Will, Skill and Opportunity out of 10'. Consider removing the second Will question ('I'd still do it if nobody ever knew.') to bring it to 5 taps, or drop the 'Quick one' badge for venn cards."
+    }
+   ],
+   "best_cards": [
+    "system1-system2-bat-ball",
+    "confirmation-bias-2-4-6",
+    "delays-beer-game"
+   ],
+   "verdict": "This is a solid, kind feed with strong hooks. 'A bat and ball cost 1.10', '2, 4, 6 follows a secret rule' and the Beer Game are the cards I'd screenshot and send to a friend. The model and Try Today blocks give a real takeaway, and the tone never shames: 'not a verdict', 'no wrong answer', and honest evidence caveats throughout. Where it slips is game feel and how reliable the reveals are. One card's answer key contradicts its own question (fae-quizmaster). The order card turns into a red-tag wall. Estimate reveals label their markers backwards. A few reveals end on a muddled punchline instead of a clean 'aha'. Several reveal cards also give the twist away in the hook or option text, which costs surprise. Fix the answer-key and reveal-UI issues first, because they hit trust and the reward moment directly. Then tighten the long cards (leverage, WSO) so they actually fit 30 seconds."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Both Venn quizzes (wso-triad-venn, mpc-loop-pcf-venn) landed on exactly 5/10, 5/10, 5/10 with the dot in the dead centre. That gives a 'Half-Lit Path' or 'Evenly balanced' result, which feels like the app didn't listen to me. If middle answers are the default, the result is generic, and I won't share a generic result.",
+   "fix": "In app.js, don't pre-select the middle value on Venn questions. Require a tap on each line before the result shows, and use a 4-point scale (no neutral middle) so scores can't all tie at 5. If all three axes still tie, show: \"Too close to call. Answer the two you hesitated on again, more honestly.\" with a 'Redo 2' button.",
+   "from": "Maya, 16, Manchester. TikTok native who scrolls away from anything that feels like school or a lecture, and stays only if it's fast, surprising and about her."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Many examples are written for teenagers or students: 'first Saturday job', 'getting the bigger bedroom', 'bus to college', 'parent makes your awkward phone calls', 'class council', 'revise for a test', 'asking a teacher'. As a 44-year-old manager I feel the app is not talking to me, and I scroll away. Only fae-why-late has a real manager scenario, and it is the best one in the session.",
+   "fix": "Each card should have at least one adult or work example next to the school one. Concretely: in hedonic-adaptation-fade-swipe, change 'The money from your first Saturday job' to 'A pay rise' (why: 'After a few months it's just your salary, and your spending rises to match.') and 'Getting the bigger bedroom' to 'Moving into a bigger flat or office' (why: 'A few weeks later it's just where you live or work.'). In shifting-burden-swipe, change 'Always getting a parent or friend to make your awkward phone calls' to 'Always asking a colleague to handle the difficult client call' and 'Making the awkward call yourself...' to 'Taking the difficult call yourself, with the colleague listening in for backup'. In wso-triad-venn, change the prompt to 'Pick your thing: a work skill, a side project, an instrument, getting fitter, or something else.'",
+   "from": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, non-native English speaker. I want tools I can use tomorrow with my team and with myself, and I have no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The NEXT suggestions repeat what I just played. After loss-aversion-coin-flip (win 150/lose 100) the next card is expected value. After the mug card, the next one is again 'Coin flip: win 100 or lose 60'. Two coin flips close together feel like the same game. Beer-game and leverage-points both point to the same 'Feedback loops' card, so the feed feels circular.",
+   "fix": "In the next-card picker, skip any card whose hook shares the same core mechanic (coin flip / bet) with a card played in the last 5. When two cards in a row would point to the same 'related' concept, pick the second related entry. For example, leverage-points-order should point to environment_design, not feedback_loops, when delays-beer-game was just played.",
+   "from": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, non-native English speaker. I want tools I can use tomorrow with my team and with myself, and I have no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "My map (dark) is an unlabelled tangle of 88 coloured dots. As a reader I can't tell which idea is which, or what I have actually learned, unless I tap dots at random. The header reads 'You've explored all 88 ideas', yet the screen doesn't show me any of them.",
+   "fix": "Under the graph, add a collapsible list called 'Ideas you've played', grouped by domain. Each row shows the card title and its one-line model, and tapping a row opens the card. On the graph, show the concept title as a small label beside each node, or on long-press.",
+   "from": "Elena, 68, retired literature teacher; reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader, dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "When I miss every best call in a choice game, the result header says 'Sneaky one. Here's the trick.' Swipe games say 'X of N. These ones are sneaky.' After answering honestly with my anxious first thought, 'trick' makes me feel I failed a test, or that the game was trying to catch me out. That is the opposite of the 'never harmed' aim.",
+   "fix": "In app.js choice(): change best===0 to { name: \"Here's the move most people miss.\", tally: \"Your first answers were the common ones. That's the point of the game.\" }. In the swipe done(): change the low-score name to `${right} of ${n}. Most people sort these the same way.` and keep the ↺ tally.",
+   "from": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures. Needs the feed to feel safe and genuinely helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Estimate reveal: the 'You: 8 cents' label is left-aligned and 'Real: 5 cents' right-aligned no matter where the markers sit. The 'you' marker is actually to the RIGHT of the truth marker, so labels and bars point the wrong way (bat-ball, anchoring). The markers are also unlabelled thin lines in two near-identical colours. This is the main reward moment for estimate cards and it reads backwards.",
+   "fix": "In app.js estimate(), attach labels to the markers: render a small caption under each <i> ('you' and 'real') positioned with the same left:%. Or swap the est-line order when guess > answer so 'Real' sits on the left. Give the truth marker a filled dot and a contrasting colour (e.g. green) and the 'you' marker a grey outline.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how clear the tap targets are, reward moments, and whether people would share it."
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 8,
+   "skipped": [
+    "wso-triad-venn: removing the second Will question was skipped (marked optional; keeps two items per axis)",
+    "wso-triad-venn: moving try_team above the fold is a UI/app.js change, outside this file",
+    "All other issue card_ids are not in action.json",
+    "No insight is over 200 chars; needs_review.json is empty"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 13,
+   "skipped": [
+    "mpc-loop-pcf-venn: Elena's 'Perceive (notice)' two-word display labels not used; adopted Radu/Maya single words Notice/Interpret/Adjust everywhere (schema: labels 1-2 words) for consistency",
+    "mpc-loop-pcf-venn: Maya's 'Read it' label replaced by 'Interpret' to keep one term across hook, axes, insight, model, results",
+    "mpc-loop-pcf-venn: Sam's inverted P rewrite superseded by Okafor's cleaner reverse-keyed item",
+    "hedonic-adaptation-fade-swipe: Elena's 'pay rise' replacement and Di Tella citation not used; Maya's trainers item chosen (fits teens and adults, no citation needed); Schkade & Kahneman removed from source since item gone",
+    "All other issues: card_ids not in perception.json (fae-why-late, second-order-hanoi-rats, anchoring-africa-un, still-water-vision-*, leverage-points-order, loss-aversion-coin-flip, wso-triad-venn, inversion-guarantee-failure, order-chaos-border, stockdale-paradox-christmas-reveal, fae-quizmaster, base-rates-librarian-farmer, responsibility-meaning-pick-your-load, dichotomy-of-control-swipe, self-reflection-loop-example, deep-work-spectrum)",
+    "app.js changes requested in issues: out of scope (edit only perception.json)",
+    "Insight shortening: none needed (all <=200 chars); needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 28,
+   "skipped": [
+    "fae-why-late: did not set sensitive:true, because in app.js that flag adds a mental-health support line, which doesn't fit a card about attribution error. Instead the step 2 and 3 wording was made gentler and role-neutral, the level was raised to 2 ('Bit deeper') since the card has 3 steps, and the manager scenario moved to try_team",
+    "fae-why-late / anchoring-africa-un / leverage-points-order: the app.js changes (gentler headline instead of 'Sneaky one', an anchor marker on the result bar, the slider start position, rotating headlines, 'belongs #N' tags) are outside thinking.json and were not made",
+    "second-order-hanoi-rats: Option B (Hanoi rats) was applied and the id kept. Siebert is still in thinkers but dropped from the insight to stay under 200 chars",
+    "inversion-guarantee-failure: Jacobi/Munger dropped from the insight to stay under 200 chars; the Jacobi quote is still in from_source",
+    "fae-why-late: the issues gave conflicting step 2/3 replacements (Maya's Snap step 2, Sam's friend-posted-story step 3, Elena's and Lina's role-neutral birthday). Merged them: step 2 is now the friend on read who is active online, and step 3 is the role-neutral birthday with 'they'",
+    "Issues for cards outside this file were ignored (still-water, leverage-points, mpc-loop, hedonic, wso, order-chaos, stockdale, Epictetus/Seneca/James quotes)",
+    "needs_review.json lists no cards; no insights were over 200 chars"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 8,
+   "skipped": [
+    "leverage-points-order: Lina's 4-item cut and UI tick/'belongs #N' change (app.js out of scope); used 5 items (Numbers, Information, Rules, Goals, Mindset) with one concrete phones example for teens and adults, dropping the abstract 'Feedback loops' item",
+    "leverage-points-order: Radu's per-item sprint/deploy examples replaced by a single shared class-or-team phones example (fits teens and adults)",
+    "still-water-vision-pause: domain retag from Systems not applied (concept graph assigns still_water_vision to systems)",
+    "still-water-vision-hidden-clue: Radu's 'groups believed they were doing' wording not used (not supported by the study); used Okafor's safer version",
+    "All other issues target cards not in systems.json",
+    "needs_review.json lists no cards; no insight exceeded 200 chars"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 0,
+   "skipped": [
+    "All 44 issues target cards not in habits.json (fae-why-late, second-order-hanoi-rats, anchoring-africa-un, still-water-vision-pause, leverage-points-order, mpc-loop-pcf-venn, hedonic-adaptation-fade-swipe, still-water-vision-hidden-clue, inversion-guarantee-failure, loss-aversion-coin-flip, wso-triad-venn, order-chaos-border, stockdale-paradox-christmas-reveal, fae-quizmaster, base-rates-librarian-farmer, responsibility-meaning-pick-your-load, dichotomy-of-control-swipe, self-reflection-loop-example, deep-work-spectrum)",
+    "No insight in habits.json exceeds 200 chars (max 197)",
+    "needs_review.json lists no cards",
+    "Pattern scan (adult-only try_today, quiz-style headlines, unsourced brain claims, judgemental result labels) found nothing needing change"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 2,
+   "skipped": [
+    "All listed card_ids (fae-why-late, second-order-hanoi-rats, anchoring-africa-un, still-water-vision-pause, leverage-points-order, mpc-loop-pcf-venn, hedonic-adaptation-fade-swipe, still-water-vision-hidden-clue, inversion-guarantee-failure, loss-aversion-coin-flip, wso-triad-venn, order-chaos-border, stockdale-paradox-christmas-reveal, fae-quizmaster, base-rates-librarian-farmer, responsibility-meaning-pick-your-load, dichotomy-of-control-swipe, self-reflection-loop-example, deep-work-spectrum): not in emotions.json",
+    "Insight shortening: all 11 insights already <=200 chars",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 12,
+   "skipped": [
+    "All issues for cards not in meaning.json (fae-why-late, second-order-hanoi-rats, anchoring-africa-un, still-water-vision-*, leverage-points-order, mpc-loop-pcf-venn, hedonic-adaptation-fade-swipe, wso-triad-venn, inversion-guarantee-failure, loss-aversion-coin-flip, fae-quizmaster, base-rates-librarian-farmer, dichotomy-of-control-swipe, self-reflection-loop-example, deep-work-spectrum)",
+    "app.js changes (outside this file's scope)",
+    "needs_review.json lists no cards; no insights exceeded 200 chars"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 2,
+   "skipped": [
+    "self-reflection-loop-example: the full exact Basore quote ('What bad habit have you cured to-day? ...') trips the validator's /\\bcure[sd]?\\b/ ban. As the closest safe version, the quote field now holds Basore's exact wording from the second question on: 'What fault have you resisted? In what respect are you better?'. The cite is set exactly as asked: 'Seneca, On Anger III.36, quoting Sextius (trans. John W. Basore, 1928)'.",
+    "None of the other issues name a card in growth.json, so they were ignored.",
+    "All insights are already at 200 characters or fewer, so none needed shortening.",
+    "data/needs_review.json lists no cards, so nothing needed a house-standard rework."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 0,
+   "skipped": [
+    "fae-why-late (not in connection.json)",
+    "second-order-hanoi-rats (not in file)",
+    "anchoring-africa-un (not in file)",
+    "still-water-vision-pause (not in file)",
+    "leverage-points-order (not in file)",
+    "mpc-loop-pcf-venn (not in file)",
+    "hedonic-adaptation-fade-swipe (not in file)",
+    "still-water-vision-hidden-clue (not in file)",
+    "loss-aversion-coin-flip (not in file)",
+    "wso-triad-venn (not in file)",
+    "inversion-guarantee-failure (not in file)",
+    "order-chaos-border (not in file)",
+    "stockdale-paradox-christmas-reveal (not in file)",
+    "fae-quizmaster (not in file)",
+    "base-rates-librarian-farmer (not in file)",
+    "responsibility-meaning-pick-your-load (not in file)",
+    "dichotomy-of-control-swipe (not in file)",
+    "self-reflection-loop-example (not in file)",
+    "deep-work-spectrum (not in file)",
+    "insight length: all 14 insights already <=200 chars",
+    "needs_review.json lists no cards",
+    "pattern sweep: no adult-only scenarios, 'your answers show', glib headers or dismissive try_today wording found in connection cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 1,
+   "skipped": [
+    "All other issues target cards not in attention.json (fae-why-late, second-order-hanoi-rats, anchoring-africa-un, still-water-vision-*, leverage-points-order, mpc-loop-pcf-venn, hedonic-adaptation-fade-swipe, inversion-guarantee-failure, order-chaos-border, loss-aversion-coin-flip, wso-triad-venn, stockdale-paradox-christmas-reveal, fae-quizmaster, base-rates-librarian-farmer, responsibility-meaning-pick-your-load, dichotomy-of-control-swipe, self-reflection-loop-example)",
+    "No insight exceeds 200 chars; needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 7,
+   "skipped": [
+    "No listed issue card_id is in decisions.json; all direct persona/fact-check fixes skipped as out of file",
+    "No insights over 200 chars in decisions.json (max 189)",
+    "needs_review.json lists no cards; nothing to rework or delete",
+    "Pattern fixes applied instead: sunk-cost-three-lives step 2 made role-neutral (no assumed workplace) plus feedback; its try_team broadened; circle-competence-venn 4 result texts changed from 'your answers show' to 'you rate yourself' and softened; expected-value-resulting hook dropped 'your brain says yes' claim"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 1,
+   "skipped": [
+    "fae-why-late (not in wisdom.json)",
+    "second-order-hanoi-rats (not in file)",
+    "anchoring-africa-un (not in file)",
+    "still-water-vision-pause (not in file)",
+    "leverage-points-order (not in file)",
+    "mpc-loop-pcf-venn (not in file)",
+    "hedonic-adaptation-fade-swipe (not in file)",
+    "still-water-vision-hidden-clue (not in file)",
+    "wso-triad-venn (not in file)",
+    "inversion-guarantee-failure (not in file)",
+    "loss-aversion-coin-flip (not in file)",
+    "order-chaos-border (not in file)",
+    "stockdale-paradox-christmas-reveal (not in file)",
+    "fae-quizmaster (not in file)",
+    "base-rates-librarian-farmer (not in file)",
+    "responsibility-meaning-pick-your-load (not in file)",
+    "self-reflection-loop-example (not in file)",
+    "deep-work-spectrum (not in file)",
+    "insight length: all 14 insights already <=200 chars",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  }
+ ]
+}

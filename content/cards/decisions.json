@@ -398,7 +398,7 @@
     "concept": "expected_value",
     "domain": "decisions",
     "type": "choice",
-    "hook": "Bad outcome = bad decision? Your brain says yes. Here's why not.",
+    "hook": "Bad outcome = bad decision? It feels that way. Here's why not.",
     "title": "Judge the Decision, Not the Dice",
     "game": {
       "steps": [
@@ -582,19 +582,19 @@
       "results": {
         "": {
           "name": "Outside both (early)",
-          "text": "Today your dot sits outside both circles: your answers say this topic is new to you, and you know it. That's honest. Learn from people with results, and keep decisions small and reversible."
+          "text": "Today you rate both your track record and your confidence low on this topic: it's new to you, and you know it. That's honest. Learn from people with results, and keep decisions small and reversible."
         },
         "C": {
           "name": "Confidence ahead of proof",
-          "text": "Your answers put confidence ahead of track record on this topic. That's where mistakes live. Before big calls, ask someone with results to check you."
+          "text": "You rate your confidence ahead of your track record on this topic. That's a common gap, and it's where mistakes slip in. Before big calls, ask someone with results to check you."
         },
         "K": {
           "name": "Proof ahead of confidence",
-          "text": "Your answers show more track record than you claim on this topic. Humility is good, but your knowledge could help others. Share it, and say where it ends."
+          "text": "You rate your track record above your confidence on this topic. Humility is good, but your knowledge could help others. Share it, and say where it ends."
         },
         "CK": {
           "name": "Inside the circle",
-          "text": "Your answers line up confidence and proof on this topic. Your job now is guarding the border: notice when a question drifts past what you've tested."
+          "text": "You rate your confidence and your proof about level on this topic. Your job now is guarding the border: notice when a question drifts past what you've tested."
         }
       }
     },
@@ -685,16 +685,16 @@
           ]
         },
         {
-          "scenario": "At work, a project is 18 months in. New numbers say it will likely lose money even if finished. A colleague says: 'We can't stop now, look how much we've invested.' You…",
+          "scenario": "Your group (a team at work, a club, a class project) is 18 months into a big plan. New numbers say it will likely fail even if finished. Someone says: 'We can't stop now, look how much we've put in.' You…",
           "options": [
             {
               "text": "Compare the cost to finish with what it will likely earn",
               "best": true,
-              "feedback": "Right. Only future costs and gains decide. The 18 months are gone; the next 6 aren't. Name it kindly: stopping isn't the same as admitting failure."
+              "feedback": "Right. Only future costs and gains decide. The 18 months are gone; the next 6 aren't. Say it kindly: stopping isn't the same as admitting failure."
             },
             {
               "text": "Agree. Stopping would waste 18 months",
-              "feedback": "Understandable, and common in organisations. But finishing a losing project adds to the loss rather than rescuing what's spent."
+              "feedback": "Understandable, and common in groups and organisations. But finishing a plan that's likely to fail adds to the loss rather than rescuing what's spent."
             },
             {
               "text": "Blame whoever started it",
@@ -725,7 +725,7 @@
     "insight": "Past costs pull us to keep going. The pull is real but modest in studies. And staying is fine when the future says so.",
     "model": "Ask 'From here, is this the best use of my next hour or next bit of money?' Ignore what's gone.",
     "try_today": "Pick one thing you're sticking with. Write one line: 'If I hadn't started yet, would I start today?' Act if the answer is a clear no.",
-    "try_team": "Before your next review of a long project, ban the phrase 'we've already invested'. Discuss only remaining cost and likely payoff.",
+    "try_team": "Before your group reviews a long project (club, class or work), ban the phrase 'we've already invested'. Discuss only what's left to spend and the payoff.",
     "source": {
       "thinkers": [
         "Richard Thaler",

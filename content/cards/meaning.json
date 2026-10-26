@@ -203,7 +203,7 @@
     "sensitive": true,
     "try_team": "Everyone writes three worries on sticky notes. Sort them together: 'ours to act on' vs 'not ours'. Pick one 'ours' and agree a first step.",
     "from_source": {
-      "quote": "Some things are in our control and others not.",
+      "quote": "Of things, some are in our power, and others not.",
       "cite": "Epictetus, Enchiridion, ch. 1 (trans. Elizabeth Carter, 1758)",
       "next_read": "Enchiridion, chapters 1-5 (short; about 10 minutes)"
     }
@@ -220,10 +220,10 @@
       "right": "Chaos",
       "questions": [
         {
-          "q": "My typical week is…",
+          "q": "My last two weeks were…",
           "options": [
             {
-              "label": "Exactly the same every week",
+              "label": "Almost identical day to day",
               "value": -2
             },
             {
@@ -237,7 +237,7 @@
           ]
         },
         {
-          "q": "How much of my week is new to me (new tasks, places, people)?",
+          "q": "How much of the last two weeks was new to me (new tasks, places, people)?",
           "options": [
             {
               "label": "Almost nothing",
@@ -248,13 +248,13 @@
               "value": 0
             },
             {
-              "label": "Lots is new, and it's exciting but a lot",
-              "value": 1
+              "label": "A lot",
+              "value": 2
             }
           ]
         },
         {
-          "q": "This week, how many surprises did you have to absorb?",
+          "q": "In the last two weeks, how many surprises did you have to absorb?",
           "options": [
             {
               "label": "None at all",
@@ -263,6 +263,10 @@
             {
               "label": "A few I could handle",
               "value": 0
+            },
+            {
+              "label": "A few, and they stretched me",
+              "value": 1
             },
             {
               "label": "More than I can keep up with",
@@ -274,7 +278,7 @@
           "q": "My daily routines (sleep, work or homework, phone time) are…",
           "options": [
             {
-              "label": "Rigidly fixed",
+              "label": "The same every day",
               "value": -2
             },
             {
@@ -282,7 +286,7 @@
               "value": 0
             },
             {
-              "label": "All over the place",
+              "label": "Different most days",
               "value": 2
             }
           ]
@@ -307,12 +311,12 @@
       ],
       "zones": [
         {
-          "upTo": -0.34,
+          "upTo": -0.25,
           "label": "Leaning Order",
-          "text": "Today your answers lean toward order: steady, maybe a bit tight. Add one small unknown: a new route, a new skill, a new person. (Keeping away from the unknown can feel safe without being stable.)"
+          "text": "Today your answers lean toward order: steady, maybe a bit tight. If steadiness is what's helping you recover, that's allowed. When you feel ready, add one small unknown: a new route, a new recipe, one new person."
         },
         {
-          "upTo": 0.34,
+          "upTo": 0.25,
           "label": "On the Border",
           "text": "Today your answers sit on the border: enough structure to stand on, enough new to grow. If some answers sat at opposite ends, pick the one area that feels most out of balance."
         },
@@ -323,8 +327,8 @@
         }
       ]
     },
-    "insight": "Peterson (Maps of Meaning) pictures life on the border of order, the known, and chaos, the unknown, like yin and yang. Too much order goes stale; too much chaos overwhelms. Face the unknown by choice.",
-    "model": "Stand on order, step willingly into chaos. Growth happens at the edge you choose to face.",
+    "insight": "Peterson borrows the Taoist image: order is the explored, chaos the unexplored. Too much order goes stale; too much chaos overwhelms. Meaning is found on the border, facing the unknown by choice.",
+    "model": "Stand on order, then step into the unknown at a pace you choose.",
     "try_today": "If you lean Order, try one new thing today. If you lean Chaos, fix one anchor: same bedtime tonight.",
     "source": {
       "thinkers": [
@@ -340,7 +344,12 @@
       "flow",
       "impermanence"
     ],
-    "try_team": "Ask the group: which routine keeps us steady, and what one new thing could we try this month? Keep one of each and check back in a week."
+    "try_team": "Ask the group: which routine keeps us steady, and what one new thing could we try this month? Keep one of each and check back in a week.",
+    "from_source": {
+      "quote": "The ten thousand things carry yin and embrace yang.",
+      "cite": "Laozi, Tao Te Ching, ch. 42 (public domain)",
+      "next_read": "Peterson, 12 Rules for Life (2018), Rule 2, the section on order and chaos; then Maps of Meaning (1999), ch. 2"
+    }
   },
   {
     "id": "aim-high-gorilla",
@@ -619,7 +628,7 @@
         "The quiet loners"
       ],
       "answer": 1,
-      "reveal": "The optimists. In his telling, they kept picking dates: 'out by Christmas', then Easter. Each missed date hit them harder. Stockdale held two things at once: total faith he'd get home, and zero denial about how bad it was."
+      "reveal": "The optimists. In his telling, they kept picking dates: 'out by Christmas', then Easter. Each missed date hit them harder. Stockdale held two things at once: total faith he'd get home, and zero denial about how bad it was. Hope itself wasn't the problem. Hope pinned to a date he couldn't control was."
     },
     "insight": "This is one man's account to Jim Collins, not a study. Its lesson: hope tied to a date you don't control can break you. Keep faith that you can endure; face today's facts.",
     "model": "Keep faith you can get through it. Face the facts honestly. Drop deadlines you don't control.",

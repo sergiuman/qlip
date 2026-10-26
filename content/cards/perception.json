@@ -491,23 +491,23 @@
     "concept": "mpc_loop",
     "domain": "perception",
     "type": "venn",
-    "hook": "Perceive, appraise, adjust: which step do you lean on least?",
+    "hook": "Notice, interpret, adjust: which step do you use least?",
     "title": "Your Perception Loop",
     "game": {
       "axes": [
         {
           "key": "P",
-          "label": "Perceive",
+          "label": "Notice",
           "color": "#38BDF8"
         },
         {
           "key": "A",
-          "label": "Appraise",
+          "label": "Interpret",
           "color": "#A78BFA"
         },
         {
           "key": "R",
-          "label": "Recalibrate",
+          "label": "Adjust",
           "color": "#34D399"
         }
       ],
@@ -517,7 +517,7 @@
           "axis": "P"
         },
         {
-          "q": "I often realise later that I missed something obvious.",
+          "q": "Changes around me often catch me by surprise when others saw them coming.",
           "axis": "P",
           "invert": true
         },
@@ -544,45 +544,45 @@
       "results": {
         "": {
           "name": "All three dimmed today",
-          "text": "Today no step stands out, which often happens when we're tired or busy. A starting point, not a verdict. Begin with Perceive: one minute a day noticing three new things."
+          "text": "Today no step stands out, which often happens when we're tired or busy. A starting point, not a verdict. Begin with Notice: one minute a day spotting three new things."
         },
         "P": {
           "name": "Noticing leads today",
-          "text": "Today your answers show strong noticing, with less room for second readings or changing course. Try asking 'what else could this mean?'"
+          "text": "Today you rate your noticing highest, with less room for second readings or changing course. Try asking 'what else could this mean?'"
         },
         "A": {
           "name": "Interpreting leads today",
-          "text": "Today your answers show you re-read situations well, but may be working from thin data and slow to change course. Gather one more fact before deciding."
+          "text": "Today you rate yourself strong at re-reading situations, but you may be working from thin data and slow to change course. Gather one more fact before deciding."
         },
         "R": {
           "name": "Adjusting leads today",
-          "text": "Today your answers show you change course readily. Check you're adjusting to real signals, not noise: notice and interpret first."
+          "text": "Today you rate yourself quick to change course. Check you're adjusting to real signals, not noise: notice and interpret first."
         },
         "AP": {
           "name": "Noticing + interpreting",
-          "text": "Today your answers show clear seeing and flexible thinking, but insight may not turn into change. Try Recalibrate: make one small adjustment this week."
+          "text": "Today you rate yourself clear-seeing and flexible, but insight may not turn into change. Try Adjust: make one small change this week."
         },
         "PR": {
           "name": "Noticing + adjusting",
-          "text": "Today your answers show you spot change and move fast, maybe on the first interpretation. Try Appraise: pause for a second explanation."
+          "text": "Today you rate yourself quick to spot change and move, maybe on the first reading. Try Interpret: pause for a second explanation."
         },
         "AR": {
           "name": "Interpreting + adjusting",
-          "text": "Today your answers show you reframe and adapt well, but may be missing inputs. Try Perceive: ask someone what they see that you don't."
+          "text": "Today you rate yourself good at reframing and adapting, but you may be missing inputs. Try Notice: ask someone what they see that you don't."
         },
         "APR": {
           "name": "All three switched on",
-          "text": "Today all three steps are at least switched on. Keep it honest by checking results, not just feelings. Pick the step you scored lowest and sharpen it."
+          "text": "Today you rate all three steps as switched on. Keep it honest by checking results, not just feelings. Pick the step you scored lowest and practise it."
         },
         "mid": {
           "name": "Evenly balanced today",
-          "text": "Every step scored near the middle today, which is common when you're busy or unsure how to rate yourself. That's fine. Pick one recent surprise and ask: did I miss it, misread it, or fail to adjust?"
+          "text": "Every step scored near the middle. Start with Adjust: name one thing you've kept doing this month even though results disappointed, and change one detail of it this week."
         }
       }
     },
-    "insight": "Qlip's own framework (built on Powers's control theory, not a tested scale): perceive, appraise, recalibrate, act, repeat. Your weakest step is where your view can quietly bend.",
-    "model": "Perceive, appraise, recalibrate. Your weakest step is where your view of reality bends.",
-    "try_today": "Take one frustrating situation from this week and run it through your weakest step, on paper, in five minutes.",
+    "insight": "Qlip's own framework, built on Powers's control theory, not a tested scale: notice, interpret, adjust, then act again. The step you use least is a good one to practise.",
+    "model": "Notice, interpret, adjust. Practise the step you use least.",
+    "try_today": "Take one frustrating situation from this week and run it through the step you use least, on paper, in five minutes.",
     "source": {
       "thinkers": [
         "William T. Powers"
@@ -835,7 +835,7 @@
     "game": {
       "prompt": "Does the feeling fade, or does it stick around?",
       "left": "Fades (you get used to it)",
-      "right": "Sticks (you don't fully adapt)",
+      "right": "Keeps its effect (you don't fully adapt)",
       "items": [
         {
           "text": "The buzz of a brand-new phone",
@@ -853,19 +853,19 @@
           "why": "A week later it's just your room."
         },
         {
-          "text": "Living somewhere sunnier for the weather",
+          "text": "Finally getting the trainers you saved up for",
           "side": "left",
-          "why": "Californians weren't more satisfied with life than Midwesterners (Schkade & Kahneman, 1998)."
+          "why": "A few weeks in they're just your trainers. The saving-up was half the buzz."
         },
         {
           "text": "A 50-minute bus to college or work every day",
           "side": "right",
-          "why": "People don't seem to fully get used to long daily journeys (Stutzer & Frey, 2008)."
+          "why": "Some studies found long commuters less satisfied even years later (Stutzer & Frey, 2008), though later data are mixed."
         },
         {
-          "text": "Varied, regular time with people you like",
+          "text": "Seeing friends in new, varied ways each week",
           "side": "right",
-          "why": "Changing, surprising joys fade slower than fixed ones (Lyubomirsky, 2011)."
+          "why": "Varied, surprising joys seem to keep their effect longer than fixed ones (Lyubomirsky, 2011), though this is less directly tested."
         }
       ]
     },
@@ -876,11 +876,9 @@
       "thinkers": [
         "Sonja Lyubomirsky",
         "Alois Stutzer",
-        "Bruno Frey",
-        "David Schkade",
-        "Daniel Kahneman"
+        "Bruno Frey"
       ],
-      "work": "Lyubomirsky, 'Hedonic Adaptation to Positive and Negative Experiences' (2011); Stutzer & Frey (2008); Schkade & Kahneman (1998)"
+      "work": "Lyubomirsky, 'Hedonic Adaptation to Positive and Negative Experiences' (2011); Stutzer & Frey, 'Stress that Doesn't Pay: The Commuting Paradox' (2008)"
     },
     "evidence": "moderate",
     "level": 2,

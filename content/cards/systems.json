@@ -245,16 +245,15 @@
   "hook": "Most people push where change is hardest. Can you find the lever?",
   "title": "Where to Push",
   "game": {
-   "prompt": "Rank these places to change a system, from weakest to strongest lever",
+   "prompt": "Your class or team wants fewer phones out. Rank these fixes from weakest to strongest lever. Hint: the easiest to change is usually the weakest.",
    "items": [
-    "Numbers (budgets, targets, quantities)",
-    "Feedback loops (how strongly the system self-corrects)",
-    "Information (who sees what, when)",
-    "Rules (incentives, permissions, punishments)",
-    "Goals (what the system is actually trying to do)",
-    "Mindset (the shared beliefs the whole system grows from)"
+    "Numbers: one extra detention or fine per phone seen",
+    "Information: show everyone how phone-free sessions went vs phone-on ones",
+    "Rules: phones go in a box at the door",
+    "Goals: sessions are judged on focus, not just quiet",
+    "Mindset: phones out stops feeling normal to anyone"
    ],
-   "explain": "Donella Meadows ranked 12 places to intervene. Tweaking numbers is the easiest and usually the weakest. Changing goals and mindsets is harder, but it changes everything downstream."
+   "explain": "Donella Meadows ranked 12 places to intervene. Numbers are easiest to change and usually weakest. Goals and mindsets are harder to move but reshape what follows. She also warned people often push high levers the wrong way."
   },
   "insight": "Adjusting numbers rarely changes how a system behaves. Changing who sees what, the rules, or the goal moves more with less force. Meadows called her list a draft, not a law.",
   "model": "Numbers are easy and weak. Information, rules, and goals are harder and strong.",
@@ -276,7 +275,7 @@
   "from_source": {
    "quote": "Give me a place to stand, and I will move the earth.",
    "cite": "Archimedes, as reported by Pappus of Alexandria, Collection, Book 8 (traditional English rendering)",
-   "next_read": "Donella Meadows, Thinking in Systems (2008), ch. 6 'Leverage Points: Places to Intervene in a System'"
+   "next_read": "Donella Meadows, Thinking in Systems (2008), ch. 6 'Leverage Points: Places to Intervene in a System', especially her warning that leverage points are counterintuitive"
   }
  },
  {
@@ -605,7 +604,7 @@
     "Asked the quietest member first"
    ],
    "answer": 1,
-   "reveal": "They mostly talked about what they all already knew. In Stasser and Titus's 1985 study, shared facts got far more airtime than facts only one person held, so few groups picked the best candidate. When everyone got all the facts up front, most did. If you guessed 'pooled the clues', so did the groups."
+   "reveal": "They mostly talked about what they all already knew. In Stasser and Titus's 1985 study, shared facts got far more airtime than facts only one person held, so few groups picked the best candidate. When everyone got all the facts up front, most did. If you guessed 'pooled the clues', you're in good company: that's what most people expect groups to do."
   },
   "insight": "Groups drift to facts everyone already holds, so the clue only one person has can go unsaid. Being quiet isn't the fix on its own; asking for unshared facts is.",
   "model": "Before a group decides, ask: what does only one of us know?",
@@ -673,27 +672,27 @@
      ]
     },
     {
-     "scenario": "At home, the energy bill has crept up all year. Over dinner, everyone has a quick theory. What finds the real cause?",
+     "scenario": "Your group chat (friends, team or family) keeps flaring up into fall-outs. Everyone has a quick theory why. What finds the real pattern?",
      "options": [
       {
-       "text": "Go with the most confident theory",
-       "feedback": "Confidence is loud, not proof. A slow creep needs the record more than a debate."
+       "text": "Go with whoever's loudest",
+       "feedback": "Loud isn't proof. A pattern that repeats needs the record more than a debate."
       },
       {
-       "text": "Lay the last 12 bills side by side and look first",
+       "text": "Scroll back and look at when each fall-out actually started",
        "best": true,
-       "feedback": "Yes. A slow trend hides in any single month and shows up in a timeline. Looking together turns an argument into a shared view."
+       "feedback": "Yes. A pattern hides in any one argument and shows up when you line them up."
       },
       {
-       "text": "Cut everything at once and see what happens",
-       "feedback": "Bold, but if you change everything, you won't learn what was driving it."
+       "text": "Mute the chat and start a new one",
+       "feedback": "Tempting, but the same pattern usually moves to the new chat with you."
       }
      ]
     }
    ]
   },
-  "insight": "Loud, fast rooms reward the first idea. A short pause, silent writing or a timeline lets slower clues surface. That helps everyone think, not just quiet people.",
-  "model": "Pause before the talk: silence, paper or a timeline lets slow patterns show.",
+  "insight": "Loud, fast rooms reward the first idea. A short pause, silent writing or a look back at the record lets slower clues surface. That helps everyone think, not just quiet people.",
+  "model": "Pause before the talk: silence, paper or a look back lets slow patterns show.",
   "try_today": "Next time you ask someone a question, count three seconds in your head before you fill the silence.",
   "try_team": "Open your next meeting, class or family plan with 3 minutes of silent writing. Go round, one idea each, before open talk.",
   "source": {

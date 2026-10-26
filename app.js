@@ -53,7 +53,8 @@
   // ---------- recommender (graph walk + novelty + balance) ----------
   const EDGE_WORD = { BUILDS_ON: "builds on", AMPLIFIES: "amplifies", CONTRASTS: "pulls against", REMEDIES: "is a fix for", PART_OF: "is part of", RELATED: "connects to" };
   const reasons = {};
-  const storyWords = (c) => new Set(`${c.hook} ${c.title} ${c.game.prompt || c.game.question || c.game.steps?.[0]?.scenario || ""}`.toLowerCase().match(/[a-z]{5,}/g) || []);
+  const FILLER = new Set("your that with what this have from they them when will just about would could there their more than been into does like make most only some then time want were".split(" "));
+  const storyWords = (c) => new Set((`${c.hook} ${c.title} ${c.game.prompt || c.game.question || c.game.steps?.[0]?.scenario || ""}`.toLowerCase().match(/[a-z]{4,}/g) || []).filter((w) => !FILLER.has(w)));
   function sameStory(a, b) {
     const A = storyWords(a), B = storyWords(b);
     let n = 0; for (const w of A) if (B.has(w)) n++;
@@ -273,7 +274,8 @@
 
   // ---------- games ----------
   // Each game renders into a node and calls done({name, text, profile}) once.
-  function rated(questions, onAnswer, onEnd, label) {
+  const SCALE4 = ["Not really", "A bit", "Mostly", "Totally"];
+  function rated(questions, onAnswer, onEnd, label, scale = SCALE) {
     const box = h("div", { style: "display:flex;flex-direction:column;gap:10px" });
     let i = 0;
     const step = () => {
@@ -282,8 +284,8 @@
       box.replaceChildren(
         h("span", { class: "q-count" }, `${i + 1} / ${questions.length}${label ? " · " + label : ""}`),
         h("p", { class: "q-text" }, q.q),
-        h("div", { class: "scale", role: "group", "aria-label": "Rate from not at all to totally" },
-          SCALE.map((s, v) => h("button", { onclick: () => { onAnswer(q, v); i++; step(); } }, s))));
+        h("div", { class: "scale", role: "group", "aria-label": "Rate from not at all to totally", style: `grid-template-columns:repeat(${scale.length},minmax(0,1fr))` },
+          scale.map((s, v) => h("button", { onclick: () => { onAnswer(q, v / (scale.length - 1)); i++; step(); } }, s))));
     };
     step();
     return box;
@@ -336,7 +338,7 @@
         const r = g.results[reg]; if (r) live.textContent = `Right now: ${r.name}`;
       };
       const qs = rated(g.questions, (q, v) => {
-        const val = q.invert ? 1 - v / 4 : v / 4;
+        const val = q.invert ? 1 - v : v;
         sums[q.axis] = (sums[q.axis] || 0) + val; counts[q.axis] = (counts[q.axis] || 0) + 1; move();
       }, () => {
         const sc = scores(), reg = regionOf(sc);
@@ -348,7 +350,7 @@
         const bars = keys.map((k) => `${g.axes.find((a) => a.key === k).label} ${Math.round((sc[k] ?? 0) * 10)}/10`).join(" · ");
         live.textContent = bars;
         done({ name: r.name, text: r.text, profile: !undecided });
-      });
+      }, "", SCALE4);
       return h("div", {}, view, live, qs);
     },
 
@@ -392,7 +394,7 @@
       view.append(poly);
       const avg = (i) => (counts[i] ? sums[i] / counts[i] / 4 : 0);
       const draw = () => poly.setAttribute("points", g.axes.map((_, i) => pt(i, Math.max(0.04, avg(i))).join(",")).join(" "));
-      const qs = rated(g.questions, (q, v) => { sums[q.axis] += v; counts[q.axis]++; draw(); }, () => {
+      const qs = rated(g.questions, (q, v) => { sums[q.axis] += v * 4; counts[q.axis]++; draw(); }, () => {
         let lo = 0, hi = 0; for (let i = 1; i < n; i++) { if (avg(i) < avg(lo)) lo = i; if (avg(i) > avg(hi)) hi = i; }
         const even = avg(hi) - avg(lo) < 0.13, low = avg(hi) < 0.3;
         done(low ? { name: "Low on all of them today", text: "That happens after a hard stretch, and it passes. Start with the smallest possible step today, and play this again next week to see what moved.", profile: true }
@@ -437,7 +439,7 @@
               h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, x.ok ? "✓" : "↺"),
                 h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.label}${x.ok ? "" : " · " + x.it.why}`)))));
             score.replaceWith(recap);
-            done({ name: right === n ? "Clean sweep." : right >= n * 0.75 ? `${right} of ${n}. Sharp sorting.` : `${right} of ${n}. These ones are sneaky.`,
+            done({ name: right === n ? "Clean sweep." : right >= n * 0.75 ? `${right} of ${n}. Sharp sorting.` : `${right} of ${n}. Here's the pattern.`,
               tally: misses.length ? "The ↺ ones are worth a second look." : "" });
           }
           else show();
@@ -456,7 +458,7 @@
         const next = h("button", { class: "btn next-q", hidden: true, onclick: () => { i++; if (i < g.steps.length) step(); else { next.remove(); const total = g.steps.length;
             done(total < 2 ? { name: "" }
               : best === total ? { name: "You'd coach this one.", tally: `${best}/${total} best calls` }
-              : best === 0 ? { name: "Sneaky one. Here's the trick." }
+              : best === 0 ? { name: "Here's another way to play it." }
               : { name: "Good instincts. One more trick below.", tally: `${best}/${total} best calls` });
           } } },
           i + 1 < g.steps.length ? "Next" : "See the model");
@@ -514,7 +516,9 @@
           const truth = h("i", { class: "truth", style: `left:${pct(guess)}` });
           box.append(h("p", { class: "est-verdict" }, verdict),
             h("div", { class: "est-track" }, h("i", { class: "you", style: `left:${pct(guess)}` }), truth),
-            h("p", { class: "est-line" }, h("span", {}, `You: ${fmt(guess)}`), h("b", {}, `Real: ${fmt(g.answer)}`)),
+            h("p", { class: "est-line" }, ...(guess <= g.answer
+              ? [h("span", {}, `You: ${fmt(guess)}`), h("b", {}, `Real: ${fmt(g.answer)}`)]
+              : [h("b", {}, `Real: ${fmt(g.answer)}`), h("span", {}, `You: ${fmt(guess)}`)])),
             h("p", { class: "feedback" }, g.explain));
           requestAnimationFrame(() => requestAnimationFrame(() => (truth.style.left = pct(g.answer))));
           done({});
@@ -622,6 +626,15 @@
       sim.hit.push({ x, y, r: Math.max(r, 12), id: n.id, p, label: c.name });
     }
     sim.topPlayed = new Set(sim.hit.filter((n) => n.p).sort((a, b) => b.p - a.p).slice(0, 8).map((n) => n.id));
+    ctx.save(); ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.font = `800 13px ${css.getPropertyValue("--font-display")}`;
+    for (const d of DB.domains) {
+      const ns = sim.hit.filter((n) => CONCEPT[n.id].domain === d.id); if (!ns.length) continue;
+      const cx = ns.reduce((a, n) => a + n.x, 0) / ns.length, cy = Math.min(...ns.map((n) => n.y)) - 14;
+      ctx.lineWidth = 4; ctx.strokeStyle = css.getPropertyValue("--surface"); ctx.strokeText(d.name, cx, Math.max(10, cy));
+      ctx.fillStyle = d.color; ctx.fillText(d.name, cx, Math.max(10, cy));
+    }
+    ctx.restore();
     // Labels last, skipping any that would collide with one already drawn.
     const boxes = sim.hit.map((n) => [n.x - n.r * 0.6, n.y - n.r * 0.6, n.x + n.r * 0.6, n.y + n.r * 0.6]);
     ctx.textBaseline = "middle";

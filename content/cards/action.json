@@ -59,7 +59,7 @@
     },
     "S": {
      "name": "Skilled, Looking for a Why",
-     "text": "Today your answers show skill, but less want and a narrower door. Worth asking what would make this matter to you."
+     "text": "Today you rate your skill high, but want and the door lower. Worth asking what would make this matter to you."
     },
     "O": {
      "name": "The Open Door",
@@ -78,8 +78,8 @@
      "text": "Everything scores high today except the fire. No productivity trick fixes a missing why. Look for the reason that would make this matter to you."
     },
     "OSW": {
-     "name": "Full Agency",
-     "text": "All three pillars score high today. The only thing left is to start. Put the first 10 minutes in your calendar."
+     "name": "All Lights On (for this goal)",
+     "text": "For this goal, all three pillars score high today. The only thing left is to start. Put the first 10 minutes in your calendar."
     },
     "": {
      "name": "The Starting Line",
@@ -87,13 +87,13 @@
     },
     "mid": {
      "name": "The Half-Lit Path",
-     "text": "All three are half-lit today. Pick the easiest to bump: watch one 5-minute how-to (Skill), or ask someone for access (Opportunity). Then come back."
+     "text": "All three are half-lit today. Pick the easiest to bump: do one 5-minute practice rep (Skill), or send one message asking for access or time (Opportunity). Then come back in a week."
     }
    }
   },
   "insight": "Action needs a want, an ability and an open door; Blumberg and Pringle (1982) said research kept forgetting the door. Pushing harder on strong pillars rarely fixes the weak one.",
   "model": "Stuck? Don't push everywhere. Find the missing pillar: Will, Skill or Opportunity.",
-  "try_today": "In your notes app, type your goal and rate W, S, O from 1 to 5. Do one 5-minute move on the lowest one tonight.",
+  "try_today": "In your notes app, type your goal and rate Will, Skill and Opportunity out of 10. Do one 5-minute move on the lowest one tonight.",
   "source": {
    "thinkers": [
     "Melvin Blumberg & Charles Pringle",
@@ -109,7 +109,7 @@
    "goal_directed_perception",
    "start_with_why"
   ],
-  "try_team": "Each person writes one stuck goal and scores Will, Skill and Opportunity 1-5. In pairs, the helper may only offer help on the lowest score."
+  "try_team": "Each person writes one stuck goal and scores Will, Skill and Opportunity out of 10. In pairs, the helper may only offer help on the lowest score."
  },
  {
   "id": "wso-triad-reveal",
@@ -367,7 +367,7 @@
     {
      "upTo": 1,
      "label": "Real fire",
-     "text": "Today your answers show real want. If you're still stuck, look at Skill or Opportunity instead of blaming motivation."
+     "text": "Today you rate your want high. If you're still stuck, look at Skill or Opportunity instead of blaming motivation."
     }
    ]
   },
@@ -710,7 +710,7 @@
    }
   },
   "insight": "Bandura named four sources of 'I can': your own wins, seeing people like you succeed, encouragement, and how you read your body. Own wins count most; the others fill gaps.",
-  "model": "Belief in yourself is built from four sources. Find your weakest and feed it.",
+  "model": "Belief in yourself is built from four sources. Find the one that feels lowest for you and feed it.",
   "try_today": "Write down three things you did well in the past month. Read the list right before your next hard task.",
   "source": {
    "thinkers": [

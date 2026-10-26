@@ -3,8 +3,23 @@
  "failed": [],
  "console_errors": [],
  "overflow": [],
- "first_card_ms": 319,
+ "first_card_ms": 323,
  "first_card": "boredom-signal-estimate",
- "a11y": [],
+ "a11y": [
+  {
+   "id": "color-contrast",
+   "impact": "serious",
+   "nodes": 1,
+   "sample": ".next-up > small",
+   "view": "feed/dark"
+  },
+  {
+   "id": "color-contrast",
+   "impact": "serious",
+   "nodes": 1,
+   "sample": ".next-up > small",
+   "view": "feed/light"
+  }
+ ],
  "played_ok": 154
 }

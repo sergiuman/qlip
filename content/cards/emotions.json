@@ -27,9 +27,9 @@
      "why": "'Everything' is too big to touch. Shrink it to one feeling, one cause."
     },
     {
-     "text": "\"I'm anxious because I haven't opened the bill yet.\"",
+     "text": "\"I'm anxious because I haven't opened the email with my results yet.\"",
      "side": "right",
-     "why": "Now the next step is obvious: open the bill."
+     "why": "Now the next step is obvious: open it, ideally with someone nearby."
     },
     {
      "text": "\"I'm stressed.\"",
@@ -652,7 +652,7 @@
      ]
     },
     {
-     "scenario": "A friend, a coworker or your grown-up child says they've had a miserable week. You're tempted to say: 'Look on the bright side, you have so much to be grateful for.' Best move?",
+     "scenario": "A friend or someone in your family says they've had a miserable week. You're tempted to say: 'Look on the bright side, you have so much to be grateful for.' Best move?",
      "options": [
       {
        "text": "Say it: gratitude helps.",

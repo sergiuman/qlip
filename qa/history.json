@@ -372,12 +372,12 @@
  },
  {
   "session": 8,
-  "at": "2026-10-26T12:42:28+00:00",
+  "at": "2026-10-26T16:53:24+00:00",
   "automated": 48.93,
-  "panel": null,
-  "composite": 48.93,
-  "delta": -33.33,
-  "passed": false,
+  "panel": 35.5,
+  "composite": 84.43,
+  "delta": 2.17,
+  "passed": true,
   "breakdown": {
    "schema": 5,
    "playthrough": 8.0,
@@ -411,8 +411,61 @@
    "hook_distinct_rate": 0.994,
    "brief_reveal_rate": 1.0
   },
-  "panel_detail": {},
+  "panel_detail": {
+   "persona_avg_10": 7.1,
+   "by_dim": {
+    "hook": 7.0,
+    "clarity": 7.0,
+    "usefulness": 6.83,
+    "safety": 8.33,
+    "fun": 6.33
+   }
+  },
   "note": "venn circles glow with each score (centre dot reads as half-lit), no big zero headlines, neutral reveal wording, shares include your result, audience-balance lessons, 65 content fixes"
+ },
+ {
+  "session": 9,
+  "at": "2026-10-26T16:59:34+00:00",
+  "automated": 47.41,
+  "panel": null,
+  "composite": 47.41,
+  "delta": -37.02,
+  "passed": false,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 8.0,
+   "console": 4,
+   "overflow": 3,
+   "a11y": 4.5,
+   "readability": 5,
+   "actionable": 2.98,
+   "sourced": 1.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.72,
+   "domain_balance": 1.99,
+   "depth": 2.25,
+   "hook_distinct": 1.97,
+   "brief_reveal": 1.0
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 154,
+   "played_ok": 154,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 2,
+   "flesch_avg": 75.9,
+   "try_today_verb_rate": 0.994,
+   "sensitive_cards": 43,
+   "first_card_ms": 323,
+   "edges": 328,
+   "concept_depth": 0.75,
+   "hook_distinct_rate": 0.987,
+   "brief_reveal_rate": 1.0
+  },
+  "panel_detail": {},
+  "note": "4-point venn scale (no flat 5/5/5), estimate labels follow markers, gentler miss copy, named map clusters, stricter duplicate filter, session-8 content fixes"
  },
  {
   "session": 1001,

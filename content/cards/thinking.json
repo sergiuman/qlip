@@ -156,7 +156,7 @@
   "concept": "anchoring",
   "domain": "thinking",
   "type": "estimate",
-  "hook": "We'll show you a random number first. Watch it bend your guess.",
+  "hook": "First, a number unrelated to the answer. Watch it bend your guess.",
   "title": "Anchoring",
   "game": {
    "question": "What percentage of UN member countries are in Africa?",
@@ -165,12 +165,12 @@
    "step": 1,
    "unit": "%",
    "answer": 28,
-   "explain": "54 of the 193 UN members are African: about 28%. You saw 65 first. If your guess landed above 35%, that number probably pulled you up. In the 1974 study, people who saw a wheel land on 65 guessed a median of 45%; those who saw 10 guessed 25%.",
+   "explain": "54 of the 193 UN members are African: about 28%. Before you guessed, you saw 65. We can't know if it moved your guess, but on average it moves people: in the 1974 study, people who saw a wheel land on 65 guessed a median of 45%, and those who saw 10 guessed 25%.",
    "anchor": 65
   },
   "insight": "An irrelevant number still drags your guess toward it. Price tags like 'was 199, now 99' use this. Knowing about it helps a little; bringing your own number helps more.",
   "model": "The first number sets the field. Bring your own number before you hear theirs.",
-  "try_today": "Before your next salary talk, quote or haggle, write your own number and one reason it's fair, before you hear theirs.",
+  "try_today": "Next time you sell something online, haggle at a market or talk pay, write your price and one reason it's fair before you see their offer.",
   "source": {
    "thinkers": [
     "Amos Tversky",
@@ -184,7 +184,7 @@
    "system1_system2",
    "base_rates"
   ],
-  "try_team": "Before any group estimate (trip cost, deadline, budget), everyone writes a number privately, then reveal together. No one anchors the room."
+  "try_team": "Before your friends or team guess a number together (trip cost, queue time, a deadline), everyone types their guess in the chat at the same time."
  },
  {
   "id": "availability-feels-common",
@@ -443,19 +443,19 @@
   "concept": "loss_aversion",
   "domain": "thinking",
   "type": "reveal",
-  "hook": "Heads you win 150, tails you lose 100. Do you flip?",
+  "hook": "Heads: win a day and a half's pay. Tails: lose a day's pay. Flip?",
   "title": "Loss Aversion",
   "game": {
-   "prompt": "One fair coin flip, real money in your own currency. Heads: you win 150. Tails: you lose 100. On average this bet pays you 25. Do you take it?",
+   "prompt": "One fair coin flip, real money. Heads: you win a day and a half's pay. Tails: you lose a day's pay. On average it pays you a quarter of a day. Do you take it?",
    "choices": [
     "Flip it",
     "No thanks"
    ],
-   "reveal": "No wrong answer here: it's your money. But notice the pull. In Kahneman's studies most people refuse, wanting a win of about 200 before risking 100. Losses tend to feel roughly 1.5–2.5× as strong as equal gains."
+   "reveal": "Most people say no. There's no wrong answer: it's your money. But notice the pull. In Kahneman's studies people wanted a win about twice the loss before they'd flip. Losses tend to feel roughly 1.5–2.5× as strong as equal gains."
   },
   "insight": "Saying no is fine when the loss would really hurt. But we often skip small, smart risks just because losing stings. Some research finds the effect smaller than claimed for small amounts.",
   "model": "Losses shout, gains whisper. For small, repeatable bets, judge the average, not the sting.",
-  "try_today": "Name one small risk you've avoided (asking, applying, trying). Write the realistic worst case. Is it really that bad?",
+  "try_today": "Name one small risk you've avoided (asking, applying, trying). Write the realistic worst case, then one thing you'd do if it happened.",
   "source": {
    "thinkers": [
     "Daniel Kahneman",
@@ -471,7 +471,7 @@
    "regret_minimization",
    "reversible_doors"
   ],
-  "try_team": "Each person writes one small risk they've avoided. Swap papers and estimate the realistic worst case for each other. Is it as bad as it felt?",
+  "try_team": "Each person writes one small risk they've avoided. Swap papers, estimate the realistic worst case for each other, then ask: what would help if it happened?",
   "from_source": {
    "quote": "We suffer more ... when we fall from a better to a worse situation, than we ever enjoy when we rise ...",
    "cite": "Adam Smith, The Theory of Moral Sentiments (1759), Part VI, Section I",
@@ -562,15 +562,18 @@
     }
    ]
   },
-  "insight": "Your brain spots ways to fail faster than recipes for success. Mathematician Carl Jacobi advised 'invert, always invert'; investor Charlie Munger made it a life habit.",
+  "insight": "Failure is often easier to picture in concrete detail than success. Imagining an outcome had already happened helped people list ~30% more reasons for it (Mitchell et al., 1989).",
   "model": "Ask what would guarantee failure, then don't do that.",
-  "try_today": "Pick one goal. Write 3 ways to guarantee it fails. Circle the one you're closest to doing, and drop it today.",
+  "try_today": "Pick one goal. Write 3 ways it could go wrong. Circle the easiest to avoid and skip it today. It's a checklist, not a verdict on you.",
   "source": {
    "thinkers": [
     "Carl Jacobi",
-    "Charlie Munger"
+    "Charlie Munger",
+    "Deborah Mitchell",
+    "J. Edward Russo",
+    "Nancy Pennington"
    ],
-   "work": "Poor Charlie's Almanack (2005)"
+   "work": "Poor Charlie's Almanack (2005); Mitchell, Russo & Pennington, Back to the Future: Temporal Perspective in the Explanation of Events (1989)"
   },
   "evidence": "philosophy",
   "level": 1,
@@ -590,58 +593,59 @@
   "concept": "second_order",
   "domain": "thinking",
   "type": "choice",
-  "hook": "A city paid people for every dead cobra. Guess what it got more of.",
+  "hook": "A city paid for every rat tail. Guess what it got more of.",
   "title": "Second-Order Thinking",
   "game": {
    "steps": [
     {
-     "scenario": "Colonial Delhi, as the classic story goes. Cobras are a danger, so officials pay a reward for every dead cobra handed in. What happens next?",
+     "scenario": "Hanoi, 1902. Rats are spreading through the new sewers, so French officials pay a bounty for every rat tail handed in. What happens next?",
      "options": [
       {
-       "text": "The cobra problem shrinks",
-       "feedback": "That's the first-order guess, and it's what officials expected. The story has a twist."
+       "text": "The rat problem shrinks",
+       "feedback": "That's the first-order guess, and it's what officials expected. The records show a twist."
       },
       {
-       "text": "People start breeding cobras to cash in",
+       "text": "People cut off tails, let the rats go, and some breed them",
        "best": true,
-       "feedback": "Yes. In the story, people farmed cobras for the reward. When officials scrapped it, breeders let the snakes go: more cobras than before."
+       "feedback": "Yes. Tailless rats were soon seen in the streets, and officials later found rat farms. The bounty paid for tails, not for fewer rats."
       },
       {
-       "text": "Nobody bothers to hunt cobras",
-       "feedback": "The opposite. Plenty of dead cobras came in, just not in the way that helped."
+       "text": "Nobody bothers to catch rats",
+       "feedback": "The opposite. Tails poured in by the thousand, just not in a way that helped."
       }
      ]
     },
     {
-     "scenario": "A parent wants their kid to read more, so they plan to pay a coin for every book finished. Ask 'and then what?' twice. Best tweak?",
+     "scenario": "Your school gives a merit for every homework handed in on time. Ask 'and then what?' twice. What's the sneaky side effect?",
      "options": [
       {
-       "text": "Pay more per book",
-       "feedback": "More pressure on the same number. Expect thinner books and skimming: the count goes up, the reading may not."
+       "text": "Everyone learns more",
+       "feedback": "That's the first-order hope. Ask 'and then what?' once more: what does the merit actually reward?"
       },
       {
-       "text": "Read and chat about books together, and celebrate finishing a hard one",
+       "text": "People rush rubbish homework just to hit the deadline",
        "best": true,
-       "feedback": "Good. You reward the real goal (enjoying and understanding) and keep a human check, so gaming it is harder."
+       "feedback": "Yes. The merit counts 'on time', not 'good', so some people hand in fast, thin work. A quick quality check would keep the reward honest."
       },
       {
-       "text": "Never reward anything",
-       "feedback": "Understandable after the cobras! But rewards can work; just ask what the number will make people do."
+       "text": "Nobody hands anything in",
+       "feedback": "Unlikely. Rewards usually do change behaviour, just not always the way the rule-maker hoped."
       }
      ]
     }
    ]
   },
-  "insight": "First-order asks 'what now?' Second-order asks 'and then what?' Rewards shift behavior in unplanned ways. The cobra tale is a parable with thin records; Horst Siebert named the effect after it.",
+  "insight": "First-order asks 'what now?' Second-order asks 'and then what?' Historian Michael Vann documented Hanoi's 1902 rat-tail bounty; the famous Delhi cobra version has thin records.",
   "model": "Every fix creates new incentives. Ask 'and then what?' at least twice.",
-  "try_today": "Write 'and then what?' before your next rule, rule-change, or reward (for you, your kids, or a group), and answer it twice.",
+  "try_today": "Before you set yourself a rule or reward (screen time, streaks, revision points), write 'and then what?' and answer it twice.",
   "source": {
    "thinkers": [
     "Howard Marks",
     "Garrett Hardin",
-    "Horst Siebert"
+    "Horst Siebert",
+    "Michael Vann"
    ],
-   "work": "The Most Important Thing (2011); Der Kobra-Effekt (2001)"
+   "work": "The Most Important Thing (2011); Der Kobra-Effekt (2001); Vann, Of Rats, Rice, and Race (French Colonial History, 2003)"
   },
   "evidence": "moderate",
   "level": 2,
@@ -650,7 +654,7 @@
    "inversion",
    "fixes_that_fail"
   ],
-  "try_team": "Before rewarding a number (bugs fixed, sales calls, chores done), ask together: 'How could someone hit this number without helping?' Then adjust.",
+  "try_team": "Before your group sets a target (streaks, pages read, sales calls), ask: 'How could someone hit this number without actually doing the thing?'",
   "from_source": {
    "quote": "We can never do merely one thing.",
    "cite": "Garrett Hardin, 'The Cybernetics of Competition', Perspectives in Biology and Medicine (1963)",
@@ -713,10 +717,10 @@
     "Farmer"
    ],
    "answer": 1,
-   "reveal": "Librarian is the natural pick: the story fits. But Kahneman notes the US had over 20 male farmers for every male librarian. Even if Steve fits librarians far better, farmers still win on the count."
+   "reveal": "Librarian is the natural pick: the story fits. But Kahneman notes the US had over 20 male farmers for every male librarian. Unless that description is more than 20 times likelier for a librarian, which few descriptions are, farmer is the better bet."
   },
   "insight": "A vivid description makes us forget how common each option is. Kahneman and Tversky showed this in 1973. Thinking in counts ('out of 100 men like Steve…') makes the error shrink.",
-  "model": "The story says who fits. The count says who's likely. Ask the count first.",
+  "model": "The story says who fits. The count says who's common. Start from the count, then let the story adjust it.",
   "try_today": "Next time you judge someone or something from one detail, ask: 'How common is each option in general?' before you decide.",
   "try_team": "Before judging a new idea, person or rumour from one story, ask the group: 'How often does this usually happen?' Find one real number together.",
   "source": {
@@ -743,13 +747,13 @@
   "hook": "You watched for one minute. You're already sure who's smarter.",
   "title": "The Quizmaster Illusion",
   "game": {
-   "prompt": "A coin toss splits two people. One writes 10 hard trivia questions from their own odd knowledge. The other must answer them and gets about 4 right. Who seems more knowledgeable?",
+   "prompt": "A coin toss splits two people. One writes 10 hard trivia questions from their own odd knowledge. The other must answer them and gets about 4 right. Based on this, who is actually more knowledgeable?",
    "choices": [
     "The one asking",
-    "Can't tell: the coin set the roles"
+    "Can't tell from this"
    ],
    "answer": 1,
-   "reveal": "The coin decided it. Asking your own questions is easy; answering someone else's is hard. Yet in Ross's 1977 study, watchers rated the questioner more knowledgeable, and so did the people answering."
+   "reveal": "You can't tell: the coin set the roles. Asking your own questions is easy; answering someone else's is hard. Yet in Ross's 1977 study, watchers rated the questioner more knowledgeable, and so did the people answering."
   },
   "insight": "We see the person, not the setup that made them look good or bad. Even knowing the roles were random didn't stop the bias.",
   "model": "Before judging the player, look at the role they were handed.",
@@ -798,38 +802,38 @@
      ]
     },
     {
-     "scenario": "A usually reliable team member has missed two deadlines this month. As their manager, you…",
+     "scenario": "A close friend left you on read all evening, then you see them active online, posting a story. Before you message again, you tell yourself…",
      "options": [
       {
-       "text": "Note it in their review as a commitment problem.",
-       "feedback": "That locks in a character story before checking the setup. Two slips in a steady record often point to workload, unclear priorities or something at home."
+       "text": "'They're ignoring me. I must have annoyed them.'",
+       "feedback": "A painful leap, and a very common one. One dot on a screen, and a whole story. Posting takes five seconds; a real reply takes energy they might not have tonight."
       },
       {
-       "text": "Ask privately what changed and what's competing for their time.",
+       "text": "'Something's probably going on. I'll send something light tomorrow, no pressure to reply.'",
        "best": true,
-       "feedback": "Best pick. Look at the situation first: shifting priorities and overload often explain a sudden change better than 'they stopped caring'."
+       "feedback": "Best pick. You check the situation before judging the person, and you keep the door open without chasing."
       },
       {
-       "text": "Say nothing and hope it sorts itself out.",
-       "feedback": "Kind, but silence leaves both of you guessing. A curious question is kinder than a quiet verdict."
+       "text": "'Fine. I'll ignore them back.'",
+       "feedback": "Feels fair, but now you're both guessing and the gap grows. A light message answers it faster."
       }
      ]
     },
     {
-     "scenario": "Your grown-up son forgot to call on your birthday. Before you pick up the phone, you tell yourself…",
+     "scenario": "Someone close to you (a parent, a sibling, an old friend) forgot your birthday. Before you message them, you tell yourself…",
      "options": [
       {
-       "text": "'He doesn't care about me anymore.'",
-       "feedback": "A painful leap from one missed call. That turns a busy day into a story about the whole relationship."
+       "text": "'They don't care about me anymore.'",
+       "feedback": "A painful leap from one missed day, and a very human one. It turns a busy week into a story about the whole relationship."
       },
       {
-       "text": "'His week must be chaotic. I'll call and see how he is.'",
+       "text": "'Their week must be chaotic. I'll message and see how they are.'",
        "best": true,
-       "feedback": "Best pick. A hectic job, a sick child or simple overload can explain a missed call. Calling keeps the door open either way."
+       "feedback": "Best pick. Work, exams, illness or simple overload can explain a missed birthday. Reaching out keeps the door open either way."
       },
       {
-       "text": "'I'll wait and see how long it takes him.'",
-       "feedback": "A waiting game usually lets the hurt grow. A warm call answers the question faster."
+       "text": "'I'll wait and see how long it takes them.'",
+       "feedback": "Understandable, but a silent test usually lets the hurt grow on both sides. A warm message answers it faster."
       }
      ]
     }
@@ -838,7 +842,7 @@
   "insight": "Situations explain more than we think: in a 1973 study, hurried trainee ministers rarely stopped for a man slumped in a doorway. The flip side (excusing ourselves) is weaker than once claimed.",
   "model": "Others' slips: ask 'what's in their way?' before 'what's wrong with them?'",
   "try_today": "The next time someone annoys you, name two situations that could explain it before you decide what they're like.",
-  "try_team": "Take one recent mistake. Everyone lists three situation causes (time, information, tools) before anyone names a person. Fix one cause.",
+  "try_team": "Take one recent slip, like a teammate missing two deadlines. Everyone lists three situation causes (time, info, tools) before naming a person.",
   "source": {
    "thinkers": [
     "Lee Ross",
@@ -849,7 +853,7 @@
    "work": "The Intuitive Psychologist and His Shortcomings (Ross, 1977); From Jerusalem to Jericho (Darley & Batson, 1973); The Actor-Observer Asymmetry in Attribution: A (Surprising) Meta-Analysis (Malle, 2006)"
   },
   "evidence": "moderate",
-  "level": 1,
+  "level": 2,
   "related": [
    "confirmation_bias",
    "feedback_loops",
