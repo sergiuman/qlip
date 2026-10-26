@@ -27,19 +27,19 @@
           ]
         },
         {
-          "scenario": "You're revising. Every time you hit a hard question, your hand goes to your phone. The hard question (the cue) won't vanish. What helps most?",
+          "scenario": "You're working through something hard (a lesson, a form, a tricky message). Every time you hit a hard bit, your hand goes to your phone. The hard bit (the cue) won't vanish. What helps most?",
           "options": [
             {
               "text": "Delete the app forever.",
               "feedback": "Big promise, but the urge still has nowhere to go. It usually comes back."
             },
             {
-              "text": "When a question feels hard, write down the one bit you're stuck on, then try it for 2 minutes.",
+              "text": "When a bit feels hard, write down the one thing you're stuck on, then try it for 2 minutes.",
               "best": true,
               "feedback": "Yes. Same cue, new response. Swapping in a competing action is the core of habit reversal, a method well tested for tics and nail-biting, and a sensible thing to try here."
             },
             {
-              "text": "Revise when you feel more motivated.",
+              "text": "Go back to it when you feel more motivated.",
               "feedback": "Understandable, but the loop keeps practising meanwhile. A swap can start today."
             }
           ]
@@ -70,7 +70,8 @@
       "feedback_loops",
       "environment_design",
       "doomscroll_loop"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "habit-loop-66-days",
@@ -106,7 +107,8 @@
       "delays",
       "never_miss_twice",
       "grit"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "identity-habits-spectrum",
@@ -228,14 +230,15 @@
       "self_efficacy",
       "habit_loop",
       "small_wins"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "identity-habits-voter",
     "concept": "identity_habits",
     "domain": "habits",
     "type": "reveal",
-    "hook": "Can't vote yet? One tiny word might still change what you actually do.",
+    "hook": "One tiny word might change what you do. Or might not. Which is it?",
     "title": "The Voter Study That Didn't Hold",
     "game": {
       "prompt": "Before an election, researchers asked people one of two questions. Which did the FIRST study (2011) report worked better?",
@@ -248,7 +251,7 @@
     },
     "insight": "Describing an action as part of who you are ('a voter', 'a reader') may make it feel more meaningful. But the original finding did not reliably replicate, so hold it loosely.",
     "model": "A catchy finding is a hypothesis until it replicates. Identity labels may help some; test it on yourself.",
-    "try_today": "Swap \"I should revise\" for \"I'm someone who revises\", then revise for 10 minutes. Your own small experiment: does it feel different?",
+    "try_today": "Swap \"I should read more\" for \"I'm a reader\", then read for 10 minutes. Your own small experiment: does it feel different?",
     "try_team": "Rewrite one group rule as a noun: 'be on time' becomes 'we're people who start on time'. Try it for a week, then ask if it felt any different.",
     "source": {
       "thinkers": [
@@ -264,7 +267,8 @@
     "related": [
       "self_efficacy",
       "shared_fictions"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "one-percent-estimate",
@@ -304,7 +308,8 @@
       "feedback_loops",
       "delays",
       "small_wins"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "one-percent-doubling-reveal",
@@ -341,7 +346,8 @@
       "delays",
       "feedback_loops",
       "never_miss_twice"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "two-minute-rule-swipe",
@@ -368,7 +374,7 @@
         {
           "text": "Put on your trainers",
           "side": "right",
-          "why": "Starting is the hard part. Shoes on makes the walk or run likely."
+          "why": "Starting is the hard part. Shoes on makes the run easier to begin."
         },
         {
           "text": "Run 5 km every morning",
@@ -399,17 +405,17 @@
     "source": {
       "thinkers": [
         "James Clear",
-        "David Allen",
         "BJ Fogg"
       ],
-      "work": "Atomic Habits (2018); Getting Things Done (2001); Tiny Habits (2019)"
+      "work": "Clear, Atomic Habits (2018); Fogg, Tiny Habits (2019)"
     },
     "evidence": "philosophy",
     "level": 1,
     "related": [
       "small_wins",
       "procrastination_emotion"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "environment-design-radar",
@@ -484,7 +490,8 @@
       "attention_residue",
       "habit_loop",
       "deep_work"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "environment-design-defaults-estimate",
@@ -521,7 +528,8 @@
       "habit_loop",
       "system1_system2",
       "doomscroll_loop"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "never-miss-twice-choice",
@@ -594,7 +602,8 @@
       "self_compassion",
       "identity_habits",
       "mistake_alchemy"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "evening-reset-switch-off-choice",
@@ -661,7 +670,8 @@
       "doomscroll_loop",
       "sleep_memory",
       "habit_loop"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "evening-reset-wind-down-swipe",
@@ -725,7 +735,8 @@
       "sleep_memory",
       "habit_loop",
       "doomscroll_loop"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "never-miss-twice-reveal-reframing",
@@ -741,10 +752,10 @@
         "\"Missing once is an accident. A tiny version today.\"",
         "\"I'll do double tomorrow to make up for it.\""
       ],
-      "reveal": "The second. In Lally's 2010 habit study, missing a single day didn't measurably set people back; the long gap after is the real risk. 'Monday' turns one miss into four. Doubling up sounds keen, but it makes tomorrow feel heavier. Tiny today wins.",
+      "reveal": "The second. In a small 2010 study (Lally and colleagues), missing a single day didn't measurably slow habit forming. Longer gaps weren't tested, but waiting for 'Monday' can turn one miss into several, and doubling up makes tomorrow heavier. Tiny today is the safe bet.",
       "answer": 1
     },
-    "insight": "A miss is an event, not a verdict about you. Lally's 2010 study found one missed day barely slowed habit forming; the long gap after is the risk. 'Never miss twice' is Clear's rule of thumb.",
+    "insight": "A miss is an event, not a verdict about you. In Lally's small 2010 study, one missed day barely slowed habit forming; longer gaps weren't tested. 'Never miss twice' is Clear's rule of thumb.",
     "model": "Missing once is an accident. Come back the next day, even if it's tiny.",
     "try_today": "Missed something yesterday? Before bed tonight, do its 2-minute version: one page, ten push-ups or one scale. That's the whole task.",
     "source": {
@@ -762,7 +773,8 @@
       "identity_habits"
     ],
     "try_team": "When a shared habit slips (a weekly check-in, family dinner), agree a 'tiny version' everyone can do the very next day.",
-    "sensitive": true
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "habit-loop-work-swipe",
@@ -827,7 +839,8 @@
       "environment_design",
       "implementation_intentions",
       "fixes_that_fail"
-    ]
+    ],
+    "audience": "work"
   },
   {
     "id": "evening-reset-on-call-reveal",
@@ -865,7 +878,8 @@
       "attention_residue",
       "psychological_safety",
       "zeigarnik_effect"
-    ]
+    ],
+    "audience": "work"
   },
   {
     "id": "one-percent-spaced-revision-choice",
@@ -916,7 +930,7 @@
     },
     "insight": "Same hours, more stays. Spread-out sessions beat one big push across hundreds of experiments. That's the honest part of '1% a day': each small rep builds on the last.",
     "model": "Little and often beats a lot at once. If it feels a bit rusty, it's probably working.",
-    "try_today": "Pick one topic you'll be tested on. Spend 10 minutes on it now, then book two more 10-minute slots this week.",
+    "try_today": "Pick one thing you're learning (a test topic, a language, a song). Spend 10 minutes on it now, then book two more 10-minute slots this week.",
     "try_team": "Open a weekly meeting or class with 5 minutes: everyone writes what they recall from last week's topic, then checks. No marks, just a top-up.",
     "source": {
       "thinkers": [
@@ -933,6 +947,7 @@
       "deliberate_practice",
       "never_miss_twice",
       "small_wins"
-    ]
+    ],
+    "audience": "all"
   }
 ]

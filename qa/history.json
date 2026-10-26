@@ -584,12 +584,12 @@
  },
  {
   "session": 12,
-  "at": "2026-10-26T22:15:20+00:00",
+  "at": "2026-10-26T22:22:26+00:00",
   "automated": 49.01,
-  "panel": null,
-  "composite": 49.01,
-  "delta": -34.66,
-  "passed": false,
+  "panel": 35.0,
+  "composite": 84.01,
+  "delta": 0.34,
+  "passed": true,
   "breakdown": {
    "schema": 5,
    "playthrough": 8.0,
@@ -623,8 +623,61 @@
    "hook_distinct_rate": 1.0,
    "brief_reveal_rate": 1.0
   },
-  "panel_detail": {},
+  "panel_detail": {
+   "persona_avg_10": 7.0,
+   "by_dim": {
+    "hook": 6.83,
+    "clarity": 7.0,
+    "usefulness": 7.0,
+    "safety": 8.17,
+    "fun": 6.0
+   }
+  },
   "note": "sharper world tagging (+explicit audience field), opinion reveals neutral ('Your call.'), visible pause card every 8 in the feed, young-world reveals shorter, stronger domain variety, session-11 content fixes (99)"
+ },
+ {
+  "session": 13,
+  "at": "2026-10-26T22:31:20+00:00",
+  "automated": 49.01,
+  "panel": null,
+  "composite": 49.01,
+  "delta": -35.0,
+  "passed": false,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 8.0,
+   "console": 4,
+   "overflow": 3,
+   "a11y": 6.0,
+   "readability": 5,
+   "actionable": 2.98,
+   "sourced": 1.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.68,
+   "domain_balance": 2.0,
+   "depth": 2.35,
+   "hook_distinct": 2.0,
+   "brief_reveal": 1.0
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 191,
+   "played_ok": 191,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 0,
+   "flesch_avg": 75.6,
+   "try_today_verb_rate": 0.995,
+   "sensitive_cards": 54,
+   "first_card_ms": 340,
+   "edges": 369,
+   "concept_depth": 0.784,
+   "hook_distinct_rate": 1.0,
+   "brief_reveal_rate": 1.0
+  },
+  "panel_detail": {},
+  "note": "Next stays in your world, world cards ranked first, no same idea twice in a row, no grading marks on sensitive swipes, no research claim on philosophy cards, reward animation, map labels outside clusters, session-12 content fixes (331, explicit audience on every card)"
  },
  {
   "session": 1001,

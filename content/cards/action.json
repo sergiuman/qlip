@@ -5,9 +5,9 @@
   "domain": "action",
   "type": "venn",
   "hook": "Pick one thing you keep meaning to do. Let's see what makes it easier.",
-  "title": "Will, Skill, Opportunity",
+  "title": "Will, Skill, Open door",
   "game": {
-   "prompt": "Pick one goal (revising, an instrument, getting fitter, a work project). Answer every line for that one goal.",
+   "prompt": "Pick one goal (an exam, an instrument, a work project, a hard conversation, getting fitter). Answer every line for that one goal.",
    "axes": [
     {
      "key": "W",
@@ -57,15 +57,15 @@
    "results": {
     "W": {
      "name": "Fired Up, Building Up",
-     "text": "The want is strong today. Look at your lowest score above: if it's Skill, do one 5-minute practice rep; if it's the Open door, ask one person for the chance or the time this week. If they tie, start with the Open door: one ask is the cheapest move."
+     "text": "The want is strong today. Start with the cheapest move: ask one person for the time or the chance this week. If the door's already open, do one 5-minute practice rep."
     },
     "S": {
      "name": "Skilled, Looking for a Why",
-     "text": "Skill scores high today. Look at your lowest score above: if it's Will, ask what would make this matter to you; if it's the Open door, ask one person for the chance this week. If they tie, start with the Open door: one ask is the cheapest move."
+     "text": "Skill scores high today. Start with the cheapest move: ask one person for the chance this week. If the door's already open, write one sentence on why this matters to you."
     },
     "O": {
      "name": "The Open Door",
-     "text": "The door looks open today. Look at your lowest score above: if it's Will, look for what sparks your curiosity; if it's Skill, do one 5-minute practice rep. If they tie, start with the 5-minute rep."
+     "text": "The door looks open today. Start with one 5-minute practice rep. If the want feels flat, write one sentence on why this matters to you."
     },
     "SW": {
      "name": "Ready, Door Closed (for now)",
@@ -94,8 +94,8 @@
    }
   },
   "insight": "Action needs a want, an ability and an open door; Blumberg and Pringle (1982) said research kept forgetting the door. Pushing harder on strong pillars rarely fixes the weak one.",
-  "model": "Stuck? Don't push everywhere. Find the missing pillar: Will, Skill or Opportunity.",
-  "try_today": "In your notes app, type your goal and rate Will, Skill and Opportunity out of 10. Do one 5-minute move on the lowest one tonight.",
+  "model": "Stuck? Don't push everywhere. Find the missing pillar: Will, Skill or Open door.",
+  "try_today": "In your notes app, type your goal and rate Will, Skill and Open door out of 10. Do one 5-minute move on the lowest one tonight.",
   "source": {
    "thinkers": [
     "Melvin Blumberg & Charles Pringle",
@@ -111,7 +111,8 @@
    "goal_directed_perception",
    "start_with_why"
   ],
-  "try_team": "Each person scores one stuck goal on Will, Skill and Open door out of 10. Ask a teammate which pillar they'd help with first."
+  "try_team": "Each person scores one stuck goal on Will, Skill and Open door out of 10. Ask someone else in the group which pillar they'd help with first.",
+  "audience": "all"
  },
  {
   "id": "wso-triad-reveal",
@@ -151,7 +152,8 @@
    "quote": "Full many a flower is born to blush unseen, / And waste its sweetness on the desert air.",
    "cite": "Thomas Gray, Elegy Written in a Country Churchyard (1751), stanza 14",
    "next_read": "Stanzas 12-15, from 'Perhaps in this neglected spot is laid' to 'Some mute inglorious Milton'"
-  }
+  },
+  "audience": "all"
  },
  {
   "id": "two-thirds-rule-choice",
@@ -176,7 +178,7 @@
       {
        "text": "Asking the fair organiser you know if she can share a table",
        "best": true,
-       "feedback": "Yes. Will and Skill are lit; Opportunity is missing. One door does more than ten pep talks."
+       "feedback": "Yes. Will and Skill are lit; the Open door is missing. One door does more than ten pep talks."
       }
      ]
     },
@@ -216,7 +218,8 @@
    "leverage_points",
    "will_gap"
   ],
-  "try_team": "Each person shares one stuck goal. The group may only ask: 'Is it wanting, knowing how, or access?' Then offer one help aimed at that answer."
+  "try_team": "Each person shares one stuck goal. The group may only ask: 'Is it wanting, knowing how, or access?' Then offer one help aimed at that answer.",
+  "audience": "all"
  },
  {
   "id": "two-thirds-rule-swipe",
@@ -233,12 +236,12 @@
     {
      "text": "Mia wants to run a 5K, has never run, and there's a park next door.",
      "side": "right",
-     "why": "Will + Opportunity. Skill can be built on the way: start with walk-run intervals."
+     "why": "Will + Open door. Skill can be built on the way: start with walk-run intervals."
     },
     {
      "text": "Theo plays piano well and has one at home, but stopped enjoying it after his exams.",
      "side": "right",
-     "why": "Skill + Opportunity lit. Will is resting, normal after a hard stretch. Try one just-for-fun session."
+     "why": "Skill + Open door lit. Will is resting, normal after a hard stretch. Try one just-for-fun session."
     },
     {
      "text": "Jo dreams of acting, has never tried, and no theatre is nearby.",
@@ -253,7 +256,7 @@
     {
      "text": "Lee has a free gym pass but no interest and no idea how to train.",
      "side": "left",
-     "why": "Only Opportunity. An open door alone doesn't move anyone."
+     "why": "Only the Open door. An open door alone doesn't move anyone."
     }
    ]
   },
@@ -273,7 +276,8 @@
    "skill_gap",
    "small_wins"
   ],
-  "try_team": "Write five goals from the group on slips of paper. Sort them together by how many pillars are lit, then plan the first step of one 'two-lit' goal."
+  "try_team": "Write five goals from the group on slips of paper. Sort them together by how many pillars are lit, then plan the first step of one 'two-lit' goal.",
+  "audience": "all"
  },
  {
   "id": "will-gap-spectrum",
@@ -369,7 +373,7 @@
     {
      "upTo": 1,
      "label": "Real fire",
-     "text": "Today you rate your want high. If you're still stuck, look at Skill or Opportunity instead of blaming motivation."
+     "text": "Today you rate your want high. If you're still stuck, look at Skill or the Open door instead of blaming motivation."
     }
    ]
   },
@@ -391,7 +395,8 @@
    "wso_triad",
    "procrastination_emotion"
   ],
-  "try_team": "Each person says one goal as 'I have to…', then tries 'I get to… because…'. Goals nobody can rephrase may need a new reason, or a rethink."
+  "try_team": "Each person says one goal as 'I have to…', then tries 'I get to… because…'. Goals nobody can rephrase may need a new reason, or a rethink.",
+  "audience": "all"
  },
  {
   "id": "skill-gap-order",
@@ -433,7 +438,8 @@
    "quote": "…it is from playing the lyre that both good and bad lyre-players are produced.",
    "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (trans. W. D. Ross, 1925)",
    "next_read": "Nicomachean Ethics, Book II, chapters 1-2: how skills and virtues are built by practice"
-  }
+  },
+  "audience": "all"
  },
  {
   "id": "skill-gap-test-yourself-choice",
@@ -500,7 +506,8 @@
    "deliberate_practice",
    "self_efficacy",
    "growth_mindset"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "opportunity-gap-swipe",
@@ -515,9 +522,9 @@
    "right": "Something in the setup",
    "items": [
     {
-     "text": "The qualification you earned abroad isn't recognised where you live now.",
+     "text": "The art GCSE you want to take clashes with Triple Science on the timetable.",
      "side": "right",
-     "why": "A rule, not a flaw. Look for bridging courses or paths that don't need it."
+     "why": "A timetable rule, not a flaw. Ask your head of year about other options or a different block."
     },
     {
      "text": "You keep skipping guitar practice since you stopped caring about the songs.",
@@ -525,9 +532,9 @@
      "why": "That's Will, and it's allowed to change. Pick songs you love, or take a guilt-free break."
     },
     {
-     "text": "You can only study after 11pm because you look after family every evening.",
+     "text": "You can only revise after 10pm because you look after your little brother every evening.",
      "side": "right",
-     "why": "Time is Opportunity. Shrink the task or swap for a better slot, not more willpower."
+     "why": "Time is part of the Open door. Shrink the task or find a better slot, not more willpower."
     },
     {
      "text": "You don't know how to edit videos for the channel you want to start.",
@@ -535,9 +542,9 @@
      "why": "That's Skill, and it's learnable fast with free tutorials and feedback."
     },
     {
-     "text": "The club you want to join only takes people who know a member.",
+     "text": "The football team only trains at a ground two buses away and you've no lift.",
      "side": "right",
-     "why": "A gate. Build doors: show up at open events, ask for an intro."
+     "why": "That's access. Ask about lift shares or a closer team, not more willpower."
     }
    ]
   },
@@ -552,14 +559,15 @@
    "work": "Giddens, The Constitution of Society (1984); Bourdieu, The Forms of Capital (1986); applied in the Will-Skill-Opportunity framework"
   },
   "evidence": "philosophy",
-  "level": 2,
+  "level": 1,
   "related": [
    "environment_design",
    "circle_influence",
    "wso_triad"
   ],
   "sensitive": true,
-  "try_team": "List the walls your team, class or family keeps hitting. Mark each 'something we can build' or 'in the setup'. Pick one setup wall and name who could move it."
+  "try_team": "List the walls your class, team or family keeps hitting. Mark each 'something we can build' or 'in the setup'. Pick one setup wall and name who could move it.",
+  "audience": "young"
  },
  {
   "id": "opportunity-gap-lost-einsteins-estimate",
@@ -598,7 +606,8 @@
    "wso_triad",
    "circle_influence",
    "environment_design"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "self-efficacy-choice",
@@ -610,7 +619,7 @@
   "game": {
    "steps": [
     {
-     "scenario": "Your friend dreads speaking up in class or at family dinners and says 'I'm just not that kind of person.' You…",
+     "scenario": "Your friend dreads speaking up in groups, even at family dinners, and says 'I'm just not that kind of person.' You…",
      "options": [
       {
        "text": "Tell them they're amazing and will be fine",
@@ -653,8 +662,9 @@
   "from_source": {
    "quote": "…we become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.",
    "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (trans. W. D. Ross, 1925)",
-   "next_read": "Nicomachean Ethics, Book II, chapter 1"
-  }
+   "next_read": "Nicomachean Ethics, Book II, chapter 1. Aristotle means character, not confidence, but the mechanism rhymes: we become by doing."
+  },
+  "audience": "all"
  },
  {
   "id": "self-efficacy-radar",
@@ -715,7 +725,8 @@
    "stress_mindset",
    "growth_mindset"
   ],
-  "try_team": "Go round the group: each person names one recent small win they saw someone else in the room achieve. Everyone leaves with wins they didn't notice."
+  "try_team": "Go round the group: each person names one recent small win they saw someone else in the room achieve. Everyone leaves with wins they didn't notice.",
+  "audience": "all"
  },
  {
   "id": "implementation-intentions-estimate",
@@ -725,7 +736,7 @@
   "hook": "Same students, same leaflet. One extra sentence. Guess the gap.",
   "title": "The one-sentence plan",
   "game": {
-   "question": "Students wrote one line: 'During the next week, I will exercise on [day] at [time] at [place].' What % of them exercised that week?",
+   "question": "Students read a motivating leaflet and then wrote one line: 'During the next week, I will exercise on [day] at [time] at [place].' What % of them exercised that week?",
    "min": 0,
    "max": 100,
    "step": 1,
@@ -753,7 +764,8 @@
    "habit_loop",
    "procrastination_emotion"
   ],
-  "try_team": "Everyone writes one goal as 'On [day] at [time] in [place], I will…'. Swap with a partner, who checks: could a stranger tell exactly when it happens?"
+  "try_team": "Everyone writes one goal as 'On [day] at [time] in [place], I will…'. Swap with a partner, who checks: could a stranger tell exactly when it happens?",
+  "audience": "all"
  },
  {
   "id": "implementation-intentions-choice",
@@ -783,34 +795,34 @@
      ]
     },
     {
-     "scenario": "Sam, a manager, keeps meaning to praise good work but forgets by the end of the day. Pick the plan.",
+     "scenario": "Jay keeps meaning to reply to his mate's voice notes but forgets till midnight. Pick the plan.",
      "options": [
       {
-       "text": "\"I'll try to be more appreciative.\"",
+       "text": "\"I'll be a better mate.\"",
        "feedback": "Not quite. Good intent, but no moment to hook onto. Busy days swallow vague plans."
       },
       {
-       "text": "\"If a meeting ends, then before I leave the room I'll thank one person for one specific thing.\"",
+       "text": "\"When I get on the bus home, then I'll reply to one voice note before opening TikTok.\"",
        "best": true,
-       "feedback": "Yes. Meetings happen anyway, so the cue is built in, and 'one specific thing' is small enough to do."
+       "feedback": "Yes. The bus ride happens anyway, so the cue is built in, and 'one voice note' is small enough to do."
       }
      ]
     },
     {
-     "scenario": "Rosa, 68, plans a daily walk after lunch. What should she add to protect it?",
+     "scenario": "Your plan: revise 10 min when you put your bag down. What should you add to protect it?",
      "options": [
       {
-       "text": "\"If it rains, then I'll walk laps of the covered market instead.\"",
+       "text": "\"If I'm at my mate's after school, then I'll do the 10 minutes on the bus with flashcards.\"",
        "best": true,
        "feedback": "Yes. Planning for the obstacle in advance is the second half of the trick: the backup is ready before the excuse."
       },
       {
-       "text": "\"If I miss a day, I'll walk twice as far tomorrow.\"",
+       "text": "\"If I miss a day, I'll do 30 minutes tomorrow.\"",
        "feedback": "Not quite. Doubling up turns one missed day into a bigger hurdle. A backup for the same day works better."
       },
       {
        "text": "\"Nothing will stop me.\"",
-       "feedback": "Not quite. Lovely spirit, but rain will come. Plans that expect obstacles tend to beat plans that deny them."
+       "feedback": "Not quite. Lovely spirit, but plans change. Plans that expect obstacles tend to beat plans that deny them."
       }
      ]
     }
@@ -833,7 +845,8 @@
    "habit_loop",
    "procrastination_emotion"
   ],
-  "try_team": "Each person shares one goal and its likeliest obstacle. The group helps write one 'If [obstacle], then [backup]' plan for each person in 5 minutes."
+  "try_team": "Each person shares one goal and its likeliest obstacle. The class or group helps write one 'If [obstacle], then [backup]' plan for each person in 5 minutes.",
+  "audience": "young"
  },
  {
   "id": "wso-triad-one-to-one-choice",
@@ -916,7 +929,8 @@
    "skill_gap",
    "opportunity_gap"
   ],
-  "try_team": "Each person writes one stuck task on a sticky note and tags it Want, Know-how or Door. Pair up and agree one fix aimed only at that tag."
+  "try_team": "Each person writes one stuck task on a sticky note and tags it Want, Know-how or Door. Pair up and agree one fix aimed only at that tag.",
+  "audience": "work"
  },
  {
   "id": "self-efficacy-new-lead-swipe",
@@ -979,7 +993,8 @@
    "growth_mindset",
    "wso_triad"
   ],
-  "try_team": "Go round: each person names one work win from this week, however small, plus one tiny next rep. One minute each, no critique, just thanks."
+  "try_team": "Go round: each person names one work win from this week, however small, plus one tiny next rep. One minute each, no critique, just thanks.",
+  "audience": "work"
  },
  {
   "id": "self-efficacy-captain-swipe",
@@ -1042,7 +1057,8 @@
    "growth_mindset",
    "wso_triad"
   ],
-  "try_team": "Go round: each person names one small win from this week plus one tiny next step. One minute each, no critique, just thanks."
+  "try_team": "Go round: each person names one small win from this week plus one tiny next step. One minute each, no critique, just thanks.",
+  "audience": "all"
  },
  {
   "id": "will-gap-paid-to-play-reveal",
@@ -1052,16 +1068,16 @@
   "hook": "Someone starts paying you for the thing you'd do for free. Any catch?",
   "title": "When pay steals the fun",
   "game": {
-   "prompt": "You make video edits for fun. A mate's page pays you per edit for a month, then the money stops. On average, compared with people never paid, people in your position later make…",
+   "prompt": "You make video edits for fun. In a lab-style setup, you're paid per edit for a session, then the pay stops and you're left alone with free time. Compared with people never paid, people like you go on to make…",
    "choices": [
     "More edits in their free time",
     "About as many",
     "Fewer"
    ],
    "answer": 2,
-   "reveal": "Fewer than the unpaid group, on average. Across 128 experiments, expected rewards for an already-fun task lowered free-choice play after rewards ended, compared with people never rewarded. Surprise rewards didn't, and praise helped adults more than children. The average drop was modest (roughly a third of a standard deviation), and plenty of individuals kept going."
+   "reveal": "Fewer than the unpaid group, on average. Across 128 experiments, expected rewards for an already-fun task lowered free-choice play after rewards ended, compared with people never rewarded. Surprise rewards didn't, and praise raised later play in college students but not in children. The average drop was modest (roughly a third of a standard deviation), and plenty of individuals kept going."
   },
-  "insight": "Pay can quietly swap 'I want to' for 'I'm paid to'. When the pay stops, the want may not fully return. Some researchers say the effect is small outside the lab.",
+  "insight": "Pay can quietly swap 'I want to' for 'I'm paid to', and the want may not fully return. Most studies were short lab sessions; long-run effects at work are less clear.",
   "model": "A reason that's yours outlasts any reward. Guard the stuff you do for love.",
   "try_today": "Pick one thing you do just for fun. Do it for 10 minutes today: no posting, no streak, no score. Notice how it feels.",
   "source": {
@@ -1079,6 +1095,7 @@
    "wso_triad",
    "self_efficacy"
   ],
-  "try_team": "Each person lists one thing they'd do unpaid and unseen, and one they only do for a reward. Compare lists: which would you want to grow?"
+  "try_team": "Each person lists one thing they'd do unpaid and unseen, and one they only do for a reward. Compare lists: which would you want to grow?",
+  "audience": "all"
  }
 ]

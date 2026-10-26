@@ -62,7 +62,8 @@
    "emotion_naming",
    "emotional_contagion"
   ],
-  "try_team": "Read out 3 real messages (group chat, a note from school, a work email). Everyone votes: practical, emotional or social? Talk through the splits."
+  "try_team": "Read out 3 real messages (group chat, a note from school, a work email). Everyone votes: practical, emotional or social? Talk through the splits.",
+  "audience": "all"
  },
  {
   "id": "three-conversations-swipe",
@@ -128,7 +129,8 @@
   "related": [
    "looping",
    "emotion_naming"
-  ]
+  ],
+  "audience": "young"
  },
  {
   "id": "looping-choice",
@@ -195,7 +197,8 @@
    "quote": "The reason why we have two ears and only one mouth is that we may listen the more and talk the less.",
    "cite": "Zeno of Citium, in Diogenes Laertius, Lives of Eminent Philosophers, VII.23, trans. R. D. Hicks (1925)",
    "next_read": "Diogenes Laertius, Lives of Eminent Philosophers, Book VII, sections 1-38 (the life of Zeno)"
-  }
+  },
+  "audience": "all"
  },
  {
   "id": "looping-swipe",
@@ -257,7 +260,8 @@
   "related": [
    "steelmanning",
    "socratic_ignorance"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "introvert-energy-spectrum",
@@ -376,7 +380,8 @@
    "deep_work",
    "flow"
   ],
-  "try_team": "Planning a team, class or family day? Each person marks one moment they'd want quiet and one they'd want company. Build both in."
+  "try_team": "Planning a team, class or family day? Each person marks one moment they'd want quiet and one they'd want company. Build both in.",
+  "audience": "all"
  },
  {
   "id": "shared-fictions-swipe",
@@ -406,9 +411,9 @@
      "why": "Rivers are real; the line on the map is an agreement people keep."
     },
     {
-     "text": "A company like Peugeot (or Google)",
+     "text": "School uniform rules",
      "side": "left",
-     "why": "Harari's own example is Peugeot: the factories could burn down and the company would still exist, in law and in shared belief."
+     "why": "The blazer is real fabric. The rule that it must be worn exists because people agree to keep it, and it can be changed."
     },
     {
      "text": "Gravity",
@@ -419,6 +424,11 @@
      "text": "Your follower count meaning you matter",
      "side": "left",
      "why": "The number is real data. What it says about you is a story people agree to tell."
+    },
+    {
+     "text": "A TikTok trend",
+     "side": "left",
+     "why": "Only exists while people keep doing it."
     }
    ]
   },
@@ -437,7 +447,8 @@
    "map_territory",
    "reframing"
   ],
-  "try_team": "List 5 rules your team, class or family follows. Sort them: rock or agreement? Pick one agreement that no longer helps and redesign it together."
+  "try_team": "List 5 rules your team, class or family follows. Sort them: rock or agreement? Pick one agreement that no longer helps and redesign it together.",
+  "audience": "all"
  },
  {
   "id": "steelmanning-choice",
@@ -449,19 +460,19 @@
   "game": {
    "steps": [
     {
-     "scenario": "Your friend thinks phones should be banned in schools. You disagree. Which reply is a steelman?",
+     "scenario": "In a design review, a senior dev says: \"We should not migrate to microservices this year.\" You disagree. Which reply is a steelman?",
      "options": [
       {
-       "text": "So you think teens are too dumb to handle a phone?",
+       "text": "So you're just afraid of new tech?",
        "feedback": "That's a strawman — a weaker version that's easy to knock down. They'd likely just get annoyed."
       },
       {
-       "text": "You're worried phones pull kids' attention away from learning and from each other, and a clear rule is easier than constant fights. Fair?",
+       "text": "You're worried we'd spend a year on infrastructure instead of features, with a team that has never run distributed systems in production. Fair?",
        "best": true,
        "feedback": "Steelman. It's their best version, in words they'd agree with. Now your disagreement will actually be heard."
       },
       {
-       "text": "Whatever, people said the same about TV.",
+       "text": "Everyone said the same about the cloud.",
        "feedback": "Might be a real point later, but it skips their argument instead of meeting it."
       }
      ]
@@ -470,7 +481,7 @@
      "scenario": "They say: 'Yes, exactly.' Now you…",
      "options": [
       {
-       "text": "Say where you agree, then share your concern about emergencies and teaching phone skills.",
+       "text": "Say where you agree (the team has no ops experience), then share your concern about deploy times blocking three teams.",
        "best": true,
        "feedback": "Great. Agreement first, then disagreement. This is close to Rapoport's rules as Dennett describes them."
       },
@@ -499,12 +510,13 @@
    "looping",
    "socratic_ignorance"
   ],
-  "try_team": "Pick a topic people disagree on. In pairs, each states the other's view until they hear 'yes, exactly.' Only then debate. 5 minutes per pair.",
+  "try_team": "Pick the open technical decision your team argues about most. In pairs, each states the other's view until they hear 'yes, exactly.' Then debate.",
   "from_source": {
    "quote": "He who knows only his own side of the case, knows little of that.",
    "cite": "John Stuart Mill, On Liberty (1859), Chapter II",
    "next_read": "On Liberty, Chapter II, 'Of the Liberty of Thought and Discussion'"
-  }
+  },
+  "audience": "work"
  },
  {
   "id": "steelmanning-order",
@@ -538,7 +550,8 @@
    "looping",
    "confirmation_bias"
   ],
-  "try_team": "In your next group decision, nobody may criticize an idea until they've restated it and named one thing they agree with. Notice the mood."
+  "try_team": "In your next group decision, nobody may criticize an idea until they've restated it and named one thing they agree with. Notice the mood.",
+  "audience": "all"
  },
  {
   "id": "courage-kindness-reveal",
@@ -574,7 +587,8 @@
    "self_efficacy"
   ],
   "sensitive": true,
-  "try_team": "Go round: each person names one small thing they could use help with this week. Others offer only what's easy for them. Count the yeses."
+  "try_team": "Go round: each person names one small thing they could use help with this week. Others offer only what's easy for them. Count the yeses.",
+  "audience": "all"
  },
  {
   "id": "courage-kindness-choice",
@@ -651,7 +665,8 @@
    "self_compassion",
    "self_efficacy"
   ],
-  "sensitive": true
+  "sensitive": true,
+  "audience": "all"
  },
  {
   "id": "psychological-safety-reveal",
@@ -686,7 +701,8 @@
    "mistake_alchemy",
    "courage_kindness",
    "three_conversations"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "psychological-safety-choice",
@@ -698,7 +714,7 @@
   "game": {
    "steps": [
     {
-     "scenario": "Group project, two days to the deadline. A classmate admits they forgot to save last night's work. You say…",
+     "scenario": "Two days to a shared deadline. Someone in your group admits they forgot to save last night's work. You say…",
      "options": [
       {
        "text": "\"Seriously? That was your one job.\"",
@@ -765,7 +781,8 @@
    "courage_kindness",
    "three_conversations",
    "mistake_alchemy"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "trust-ledger-swipe",
@@ -785,7 +802,7 @@
      "why": "Tiny, but people learn that your words and the clock don't match."
     },
     {
-     "text": "Telling the class the winning idea was your groupmate's, not yours",
+     "text": "Telling everyone the winning idea was your teammate's, not yours",
      "side": "right",
      "why": "Naming who did the work is a deposit for them, and makes you safe to work with."
     },
@@ -795,7 +812,7 @@
      "why": "Boring reliability is the main deposit. It shows your word means something."
     },
     {
-     "text": "Telling the teacher the group idea was yours when it was your mate's",
+     "text": "Claiming a group idea as yours when a friend came up with it",
      "side": "left",
      "why": "Taking credit is a big withdrawal, and people remember it for a long time."
     },
@@ -827,7 +844,8 @@
    "psychological_safety",
    "one_percent",
    "shared_fictions"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "trust-ledger-reveal",
@@ -861,7 +879,8 @@
   "related": [
    "psychological_safety",
    "shared_fictions"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "psychological-safety-swipe-standup",
@@ -925,7 +944,8 @@
    "courage_kindness",
    "three_conversations",
    "mistake_alchemy"
-  ]
+  ],
+  "audience": "work"
  },
  {
   "id": "trust-ledger-choice-deadline",
@@ -991,7 +1011,8 @@
   "related": [
    "psychological_safety",
    "one_percent"
-  ]
+  ],
+  "audience": "work"
  },
  {
   "id": "courage-kindness-swipe-advice",
@@ -1050,6 +1071,7 @@
   "related": [
    "self_compassion",
    "psychological_safety"
-  ]
+  ],
+  "audience": "young"
  }
 ]

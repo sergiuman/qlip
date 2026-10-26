@@ -9,7 +9,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "You want your friends to start a Friday-night five-a-side (or a study group). In the group chat, your first message is…",
+          "scenario": "You want your friends to start a regular Friday kickabout (or a walking group, or a study group). In the group chat, your first message is…",
           "options": [
             {
               "text": "\"Pitch at 6, bring £3.\"",
@@ -21,7 +21,7 @@
               "feedback": "You gave a reason they can feel: wanting time together. Now the time and the £3 sound like a way in, not a chore."
             },
             {
-              "text": "\"It'll be the best thing anyone's doing this term.\"",
+              "text": "\"It'll be the best thing anyone's doing this month.\"",
               "feedback": "Hype can grab attention, but it doesn't say why it matters to them. A real reason travels further."
             }
           ]
@@ -62,7 +62,8 @@
       "responsibility_meaning",
       "three_conversations"
     ],
-    "try_team": "Open your next meeting, class project or family plan with one line each: 'This matters to me because…'. Only then talk times and tasks."
+    "try_team": "Open your next meeting, class project or family plan with one line each: 'This matters to me because…'. Only then talk times and tasks.",
+    "audience": "all"
   },
   {
     "id": "start-with-why-because-estimate",
@@ -99,7 +100,8 @@
       "system1_system2",
       "will_gap",
       "responsibility_meaning"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "responsibility-meaning-happy-vs-meaningful",
@@ -137,7 +139,8 @@
       "amor_fati"
     ],
     "sensitive": true,
-    "try_team": "Go round the table: each person names one thing others rely on them for that felt heavy but worth it. Notice how often effort and meaning show up together."
+    "try_team": "Go round the table: each person names one thing others rely on them for that felt heavy but worth it. Notice how often effort and meaning show up together.",
+    "audience": "all"
   },
   {
     "id": "responsibility-meaning-pick-your-load",
@@ -206,7 +209,8 @@
       "quote": "Of things, some are in our power, and others not.",
       "cite": "Epictetus, Enchiridion, ch. 1 (trans. Elizabeth Carter, 1758)",
       "next_read": "Enchiridion, chapters 1-5 (short; about 10 minutes)"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "order-chaos-border",
@@ -349,7 +353,8 @@
       "quote": "All things leave behind them the Obscurity (out of which they have come), and go forward to embrace the Brightness (into which they have emerged)…",
       "cite": "Laozi, Tao Te Ching, ch. 42 (James Legge trans., 1891)",
       "next_read": "Peterson, 12 Rules for Life (2018), Rule 2, the section on order and chaos; then Maps of Meaning (1999), ch. 2"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "aim-high-gorilla",
@@ -392,7 +397,8 @@
       "quote": "Shall we not, like archers who have a mark to aim at, be more likely to hit upon what is right?",
       "cite": "Aristotle, Nicomachean Ethics, Book I, ch. 2 (trans. W. D. Ross, 1925)",
       "next_read": "Nicomachean Ethics, Book I, chapters 1-2: the chief good as the target of a life"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "aim-high-clear-target-choice",
@@ -465,7 +471,8 @@
       "goal_directed_perception",
       "deliberate_practice",
       "begin_with_end"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "flow-challenge-skill-venn",
@@ -556,7 +563,8 @@
       "wso_triad",
       "skill_gap"
     ],
-    "try_team": "Before a group task, each person rates their part 'too easy', 'just right' or 'too hard'. Swap or split parts until most say 'just right'."
+    "try_team": "Before a group task, each person rates their part 'too easy', 'just right' or 'too hard'. Swap or split parts until most say 'just right'.",
+    "audience": "all"
   },
   {
     "id": "flow-conditions-radar",
@@ -613,7 +621,8 @@
       "deep_work",
       "deliberate_practice"
     ],
-    "try_team": "For one 25-minute group work block: agree what 'done' looks like, put all phones away, and check progress together at the end."
+    "try_team": "For one 25-minute group work block: agree what 'done' looks like, put all phones away, and check progress together at the end.",
+    "audience": "all"
   },
   {
     "id": "stockdale-paradox-christmas-reveal",
@@ -650,7 +659,8 @@
       "grit"
     ],
     "sensitive": true,
-    "try_team": "Facing a long slog together? List three honest facts on one side and one shared belief about getting through on the other. No promised dates."
+    "try_team": "Facing a long slog together? List three honest facts on one side and one shared belief about getting through on the other. No promised dates.",
+    "audience": "all"
   },
   {
     "id": "stockdale-paradox-dream-vs-obstacle-choice",
@@ -662,14 +672,14 @@
     "game": {
       "steps": [
         {
-          "scenario": "Your exam is in three weeks and you're behind. What do you tell yourself tonight?",
+          "scenario": "A big test you care about (an exam, a driving test, a work certificate) is three weeks away and you're behind. What do you tell yourself tonight?",
           "options": [
             {
-              "text": "\"I'll ace it. Just picture the grade and stay positive.\"",
+              "text": "\"I'll ace it. Just picture passing and stay positive.\"",
               "feedback": "Feels good, but research suggests pure daydreams can relax you before you've done the work."
             },
             {
-              "text": "\"I want a good grade. My obstacle is my phone, so at 8pm it goes in the kitchen.\"",
+              "text": "\"I want to pass. My obstacle is my phone, so at 8pm it goes in the kitchen.\"",
               "best": true,
               "feedback": "A clear wish, the real obstacle, and an if-then plan: hope plus facts."
             },
@@ -717,7 +727,8 @@
       "aim_high",
       "useful_truth"
     ],
-    "try_team": "Each person writes the group's goal, the single biggest obstacle, and one 'If..., then we...' plan. Pick the most common obstacle and adopt its plan."
+    "try_team": "Each person writes the group's goal, the single biggest obstacle, and one 'If..., then we...' plan. Pick the most common obstacle and adopt its plan.",
+    "audience": "all"
   },
   {
     "id": "aim-high-job-or-aim-spectrum",
@@ -831,7 +842,8 @@
       "start_with_why"
     ],
     "try_team": "At stand-up, each person finishes: 'This week's work helps ___ do ___.' Flag any task nobody can link to a person and ask if it still matters.",
-    "sensitive": true
+    "sensitive": true,
+    "audience": "work"
   },
   {
     "id": "start-with-why-meet-the-student-estimate",
@@ -867,7 +879,8 @@
       "responsibility_meaning",
       "aim_high"
     ],
-    "try_team": "Take 5 minutes: read one real user's message aloud. Each person names one task this week that touches that person, and one that doesn't."
+    "try_team": "Take 5 minutes: read one real user's message aloud. Each person names one task this week that touches that person, and one that doesn't.",
+    "audience": "work"
   },
   {
     "id": "flow-tune-the-task-choice",
@@ -952,6 +965,7 @@
       "order_chaos",
       "boredom_signal"
     ],
-    "try_team": "Revision pairs: each writes a 5-minute recall quiz on a topic for the other, then swap and mark. Make the next quiz harder if someone scored full marks."
+    "try_team": "Revision pairs: each writes a 5-minute recall quiz on a topic for the other, then swap and mark. Make the next quiz harder if someone scored full marks.",
+    "audience": "young"
   }
 ]

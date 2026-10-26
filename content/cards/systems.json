@@ -60,7 +60,8 @@
    "habit_loop",
    "delays"
   ],
-  "try_team": "With your team, class or family: each person names one loop in your shared life. Vote: snowball or thermostat? Pick one to feed or break this week."
+  "try_team": "With your team, class or family: each person names one loop in your shared life. Vote: snowball or thermostat? Pick one to feed or break this week.",
+  "audience": "all"
  },
  {
   "id": "feedback-loops-spiral",
@@ -122,7 +123,8 @@
    "small_wins",
    "doomscroll_loop"
   ],
-  "sensitive": true
+  "sensitive": true,
+  "audience": "all"
  },
  {
   "id": "delays-shower",
@@ -193,7 +195,8 @@
    "quote": "Faster is slower.",
    "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
    "next_read": "The Fifth Discipline, ch. 4, then ch. 5 'A Shift of Mind' on balancing loops and delays"
-  }
+  },
+  "audience": "all"
  },
  {
   "id": "delays-beer-game",
@@ -235,7 +238,8 @@
    "feedback_loops",
    "fixes_that_fail",
    "impulse_pause"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "leverage-points-order",
@@ -276,7 +280,8 @@
    "quote": "Give me a place to stand, and I will move the earth.",
    "cite": "Archimedes, as reported by Pappus of Alexandria, Collection, Book 8 (traditional English rendering)",
    "next_read": "Donella Meadows, Thinking in Systems (2008), ch. 6 'Leverage Points: Places to Intervene in a System', especially her warning that leverage points are counterintuitive"
-  }
+  },
+  "audience": "all"
  },
  {
   "id": "leverage-points-spectrum",
@@ -301,13 +306,13 @@
        "value": 1
       },
       {
-       "label": "Make savings move automatically on payday",
+       "label": "Move money to savings automatically whenever it comes in",
        "value": 2
       }
      ]
     },
     {
-     "q": "Your group project keeps missing deadlines. You…",
+     "q": "Your group or team project keeps missing deadlines. You…",
      "options": [
       {
        "label": "Ask everyone to work harder",
@@ -397,7 +402,8 @@
    "quote": "Small changes can produce big results",
    "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
    "next_read": "The Fifth Discipline, ch. 4; then Meadows, Thinking in Systems (2008), ch. 6"
-  }
+  },
+  "audience": "all"
  },
  {
   "id": "fixes-that-fail-rats",
@@ -438,7 +444,8 @@
    "quote": "Today's problems come from yesterday's \"solutions.\"",
    "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
    "next_read": "The Fifth Discipline, ch. 4; Meadows, Thinking in Systems (2008), ch. 5 'System Traps... and Opportunities'"
-  }
+  },
+  "audience": "all"
  },
  {
   "id": "fixes-that-fail-backfire",
@@ -464,14 +471,14 @@
      ]
     },
     {
-     "scenario": "Homework's due in an hour (or a work task you don't really get), so you copy a mate's answers. What grows?",
+     "scenario": "Something's due in an hour (homework, a report, a form) and you don't really get it, so you copy a friend's version. What grows?",
      "options": [
       {
        "text": "Nothing, it's handed in",
        "feedback": "Real relief tonight. But the gap in what you understand keeps growing underneath."
       },
       {
-       "text": "The bit you don't understand, which shows up in the test",
+       "text": "The bit you don't understand, which shows up next time you need it",
        "best": true,
        "feedback": "Yes. The fix ends tonight's panic and feeds next month's."
       }
@@ -520,7 +527,8 @@
    "delays",
    "shifting_burden",
    "second_order"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "shifting-burden-swipe",
@@ -560,7 +568,7 @@
      "why": "Harmless here. Not every crutch is bad; just know which muscle you're skipping."
     },
     {
-     "text": "Asking a teacher to explain the step you keep getting wrong",
+     "text": "Asking a teacher, colleague or coach to explain the step you keep getting wrong",
      "side": "right",
      "why": "Help that teaches is the opposite of a crutch: it shrinks your need for help."
     }
@@ -587,7 +595,8 @@
    "quote": "The easy way out usually leads back in.",
    "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
    "next_read": "Meadows, Thinking in Systems (2008), ch. 5, the trap 'Shifting the Burden to the Intervenor'"
-  }
+  },
+  "audience": "all"
  },
  {
   "id": "still-water-vision-hidden-clue",
@@ -624,7 +633,8 @@
    "introvert_energy",
    "leverage_points",
    "delays"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "still-water-vision-pause",
@@ -710,7 +720,8 @@
    "delays",
    "leverage_points",
    "introvert_energy"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "feedback-loops-set-up-to-fail",
@@ -746,7 +757,8 @@
    "fixes_that_fail",
    "self_efficacy",
    "psychological_safety"
-  ]
+  ],
+  "audience": "work"
  },
  {
   "id": "fixes-that-fail-six-weeks",
@@ -811,7 +823,8 @@
    "shifting_burden",
    "delays",
    "second_order"
-  ]
+  ],
+  "audience": "work"
  },
  {
   "id": "delays-friendship-hours",
@@ -846,6 +859,7 @@
    "small_wins",
    "spotlight_effect"
   ],
-  "sensitive": true
+  "sensitive": true,
+  "audience": "young"
  }
 ]

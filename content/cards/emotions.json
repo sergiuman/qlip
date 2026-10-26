@@ -61,7 +61,8 @@
    "procrastination_emotion",
    "system1_system2"
   ],
-  "try_team": "Go round the group: each person names today's mood in two exact words (not 'fine' or 'busy'). No fixing, just listening. Three minutes."
+  "try_team": "Go round the group: each person names today's mood in two exact words (not 'fine' or 'busy'). No fixing, just listening. Three minutes.",
+  "audience": "all"
  },
  {
   "id": "emotion-naming-label-reveal",
@@ -101,7 +102,8 @@
    "quote": "An emotion, which is a passion, ceases to be a passion, as soon as we form a clear and distinct idea thereof.",
    "cite": "Spinoza, Ethics (1677), Part V, Proposition 3, trans. R. H. M. Elwes (1883)",
    "next_read": "Spinoza, Ethics, Part V, Propositions 1-10 and their proofs (Elwes translation)"
-  }
+  },
+  "audience": "all"
  },
  {
   "id": "impulse-pause-swipe",
@@ -175,7 +177,8 @@
    "quote": "…not to be hurried away with the appearance. For if you once gain time and respite, you will more easily command yourself.",
    "cite": "Epictetus, Enchiridion, chapter 20, trans. Elizabeth Carter (1758)",
    "next_read": "Epictetus, Enchiridion, chapters 1, 5 and 20 (each under a page)"
-  }
+  },
+  "audience": "all"
  },
  {
   "id": "impulse-pause-choice",
@@ -243,7 +246,8 @@
    "map_territory"
   ],
   "sensitive": true,
-  "try_team": "Managers, teachers, parents: agree that no one sends a bare 'we need to talk'. Always add one line of context ('Nothing bad, just planning')."
+  "try_team": "Agree as a team, class or family: no one sends a bare 'we need to talk'. Always add one line of context ('Nothing bad, just planning').",
+  "audience": "all"
  },
  {
   "id": "self-compassion-spectrum",
@@ -260,16 +264,20 @@
      "q": "You make a silly mistake (a wrong answer, a missed bus, a typo everyone saw). Your first inner words are…",
      "options": [
       {
+       "label": "'Ugh, annoying. Moving on.'",
+       "value": 1
+      },
+      {
        "label": "'You idiot, you always do this.'",
        "value": -2
       },
       {
-       "label": "'Ugh. Annoying.'",
-       "value": 0
-      },
-      {
        "label": "'Oops. Anyone could do that. What's the fix?'",
        "value": 2
+      },
+      {
+       "label": "'Typical me.'",
+       "value": -1
       }
      ]
     },
@@ -277,16 +285,20 @@
      "q": "You're struggling and others seem fine. You think…",
      "options": [
       {
+       "label": "'Lots of people struggle with this, even if they don't show it.'",
+       "value": 2
+      },
+      {
+       "label": "'Maybe I'm just behind.'",
+       "value": -1
+      },
+      {
        "label": "'Something is wrong with me.'",
        "value": -2
       },
       {
-       "label": "'Maybe I'm just behind.'",
-       "value": 0
-      },
-      {
-       "label": "'Lots of people struggle with this, even if they don't show it.'",
-       "value": 2
+       "label": "'This is hard right now. That's allowed.'",
+       "value": 1
       }
      ]
     },
@@ -294,16 +306,20 @@
      "q": "When you feel low, you tend to…",
      "options": [
       {
-       "label": "Replay everything you did wrong",
-       "value": -2
-      },
-      {
-       "label": "Get busy so I don't dwell",
-       "value": 0
+       "label": "Tell myself to snap out of it",
+       "value": -1
       },
       {
        "label": "Notice it, then do one small thing I need",
        "value": 2
+      },
+      {
+       "label": "Go easy for a bit, then get going again",
+       "value": 1
+      },
+      {
+       "label": "Replay everything I did wrong",
+       "value": -2
       }
      ]
     },
@@ -311,12 +327,16 @@
      "q": "Being kind to yourself after failing feels like…",
      "options": [
       {
+       "label": "Fine, in small doses",
+       "value": 1
+      },
+      {
        "label": "Going soft on myself",
        "value": -2
       },
       {
-       "label": "Fine, in small doses",
-       "value": 0
+       "label": "Fine, but only once I've earned it",
+       "value": -1
       },
       {
        "label": "Fuel to try again",
@@ -362,14 +382,15 @@
    "procrastination_emotion"
   ],
   "sensitive": true,
-  "try_team": "In a class, team or family review, each person names one recent mistake and what a kind coach would say about it. The leader goes first."
+  "try_team": "In a class, team or family review, each person names one recent mistake and what a kind coach would say about it. The leader goes first.",
+  "audience": "all"
  },
  {
   "id": "self-compassion-lookalike-swipe",
   "concept": "self_compassion",
   "domain": "emotions",
   "type": "swipe",
-  "hook": "Is being kind to yourself just a nicer word for making excuses?",
+  "hook": "Kind to yourself after a fail: an excuse, or what gets you back up?",
   "title": "Kind, Not Soft",
   "game": {
    "prompt": "You just failed at something. Is this real self-compassion, or a look-alike?",
@@ -399,7 +420,7 @@
     {
      "text": "\"I'll skip practice for the rest of the month. I deserve it.\"",
      "side": "left",
-     "why": "Feels kind today. Real kindness asks what helps you in the long run."
+     "why": "Depends on the reason. If you're burnt out, a planned break is real care. If it's to avoid the sting, a short rest plus a restart date is kinder."
     },
     {
      "text": "\"I'm worn out. A short rest, then I'll try again.\"",
@@ -423,7 +444,7 @@
   "from_source": {
    "quote": "What progress, you ask, have I made? I have begun to be a friend to myself.",
    "cite": "Seneca (quoting Hecato), Moral Letters to Lucilius, Letter 6 'On Sharing Knowledge', trans. Richard M. Gummere (1917)",
-   "next_read": "Seneca, Moral Letters, Letter 6 'On Sharing Knowledge' (two pages)"
+   "next_read": "Seneca, Moral Letters, Letter 6 'On Sharing Knowledge' (two pages). For Seneca, being one's own friend meant living by reason, a sterner kindness than today's word."
   },
   "evidence": "moderate",
   "level": 1,
@@ -432,7 +453,8 @@
    "never_miss_twice",
    "courage_kindness"
   ],
-  "sensitive": true
+  "sensitive": true,
+  "audience": "all"
  },
  {
   "id": "procrastination-emotion-reveal",
@@ -476,7 +498,8 @@
    "quote": "Lay hold of to-day's task, and you will not need to depend so much upon to-morrow's.",
    "cite": "Seneca, Moral Letters to Lucilius, Letter 1 'On Saving Time', trans. Richard M. Gummere (1917)",
    "next_read": "Seneca, Moral Letters, Letter 1 'On Saving Time' (one page)"
-  }
+  },
+  "audience": "all"
  },
  {
   "id": "procrastination-emotion-future-self-choice",
@@ -548,7 +571,8 @@
    "self_compassion",
    "emotion_naming"
   ],
-  "sensitive": true
+  "sensitive": true,
+  "audience": "all"
  },
  {
   "id": "emotional-contagion-estimate",
@@ -586,7 +610,8 @@
    "environment_design"
   ],
   "try_team": "Before a meeting or class, everyone names their mood in one word. Leaders: your mood in the first 2 minutes is the weather. Check it first.",
-  "sensitive": true
+  "sensitive": true,
+  "audience": "all"
  },
  {
   "id": "gratitude-practice-letter-reveal",
@@ -622,7 +647,8 @@
   "related": [
    "emotion_naming",
    "hedonic_adaptation"
-  ]
+  ],
+  "audience": "all"
  },
  {
   "id": "gratitude-practice-three-good-things-choice",
@@ -690,7 +716,8 @@
    "goal_directed_perception",
    "emotion_naming"
   ],
-  "sensitive": true
+  "sensitive": true,
+  "audience": "all"
  },
  {
   "id": "emotion-naming-stressed-choice",
@@ -756,7 +783,8 @@
    "impulse_pause",
    "emotional_contagion"
   ],
-  "sensitive": true
+  "sensitive": true,
+  "audience": "work"
  },
  {
   "id": "procrastination-emotion-smart-wait-swipe",
@@ -815,14 +843,15 @@
    "emotion_naming",
    "self_compassion"
   ],
-  "sensitive": true
+  "sensitive": true,
+  "audience": "all"
  },
  {
   "id": "self-compassion-penalty-choice",
   "concept": "self_compassion",
   "domain": "emotions",
   "type": "choice",
-  "hook": "You blanked on stage. Will going easy on yourself make you lazy?",
+  "hook": "You blanked on stage. What does the voice on the ride home say?",
   "title": "The Ride-Home Voice",
   "game": {
    "steps": [
@@ -882,6 +911,7 @@
    "growth_mindset",
    "mistake_alchemy"
   ],
-  "sensitive": true
+  "sensitive": true,
+  "audience": "all"
  }
 ]

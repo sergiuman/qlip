@@ -4,26 +4,27 @@
     "concept": "map_territory",
     "domain": "perception",
     "type": "reveal",
-    "hook": "You're lost in London. Want the satellite photo or the tube map?",
+    "hook": "Crossing London by tube. Satellite photo or the famous tube map?",
     "title": "The Map Is Not the Territory",
     "game": {
-      "prompt": "You need to get across London fast. You can take one: a perfect satellite photo of every street, or the famous tube map that bends rivers and squashes distances. Which gets you there?",
+      "prompt": "You need to cross London by Underground, fast. You can take one: a perfect satellite photo of every street, or the famous tube map that bends rivers and squashes distances. Which gets you there?",
       "choices": [
         "The satellite photo",
         "The tube map"
       ],
-      "reveal": "For most trips, the tube map wins. It bends geography on purpose so you can act fast. If you picked the photo, you spotted the catch: studies of London riders found the map's distortions push some people onto slower routes, even riding between stops that are quicker to walk. A map is only good for the trip it was built for.",
+      "reveal": "For most trips, the tube map wins: it bends geography on purpose so you can act fast. But the bending has a cost. A study of London riders (Guo, 2011) found the distortions push some onto slower routes, even riding between stops that are quicker to walk. A map is only as good as the trip it was built for.",
       "answer": 1
     },
     "insight": "A more accurate map isn't always a better one. Your beliefs about people, money and yourself are maps too: simplified, useful for some trips, misleading on others.",
-    "model": "Every belief is a map. Ask 'useful for what?' before asking 'true or false?'",
+    "model": "Every belief is a map. Ask where it's accurate, and what trip it was drawn for.",
     "try_today": "Pick one firm belief about yourself. Write one situation where that map works and one where it would get you lost.",
     "source": {
       "thinkers": [
         "Alfred Korzybski",
-        "George Box"
+        "George Box",
+        "Zhan Guo"
       ],
-      "work": "Korzybski, Science and Sanity (1933); Box, Science and Statistics (1976) and Robustness in the Strategy of Scientific Model Building (1979)"
+      "work": "Korzybski, Science and Sanity (1933); Box, Science and Statistics (1976) and Robustness in the Strategy of Scientific Model Building (1979); Guo, 'Mind the map! The impact of transit maps on path choice in public transit', Transportation Research Part A (2011)"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -37,7 +38,8 @@
       "quote": "All models are wrong but some are useful.",
       "cite": "George E. P. Box, 'Robustness in the Strategy of Scientific Model Building' (1979)",
       "next_read": "Box, 'Science and Statistics', Journal of the American Statistical Association 71 (1976), sections 'Parsimony' and 'Worrying Selectively'"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "map-territory-swipe",
@@ -104,7 +106,8 @@
       "reframing",
       "confirmation_bias"
     ],
-    "try_team": "Put one number your group watches on the table (grades, likes, sales, steps). Everyone names one important thing it leaves out. Five minutes, no debate."
+    "try_team": "Put one number your group watches on the table (grades, likes, sales, steps). Everyone names one important thing it leaves out. Five minutes, no debate.",
+    "audience": "all"
   },
   {
     "id": "goal-directed-perception-gorilla",
@@ -146,7 +149,8 @@
       "quote": "My experience is what I agree to attend to. Only those items which I notice shape my mind.",
       "cite": "William James, The Principles of Psychology (1890), vol. 1, ch. XI 'Attention'",
       "next_read": "The Principles of Psychology, vol. 1, ch. XI 'Attention', opening pages (free online)"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "goal-directed-perception-door-swap-reveal",
@@ -182,7 +186,8 @@
       "map_territory",
       "confirmation_bias",
       "aim_high"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "reframing-late-text",
@@ -251,7 +256,8 @@
       "quote": "There are more things, Lucilius, likely to frighten us than there are to crush us; we suffer more often in imagination than in reality.",
       "cite": "Seneca, Moral Letters to Lucilius, Letter 13 'On Groundless Fears', trans. R. M. Gummere (1917)",
       "next_read": "Seneca, Moral Letters, Letter 13 'On Groundless Fears' (about 4 pages)"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "reframing-spin-or-reframe-swipe",
@@ -321,7 +327,8 @@
       "emotion_naming",
       "stress_mindset",
       "map_territory"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "stress-mindset-spectrum",
@@ -442,28 +449,29 @@
       "growth_mindset",
       "emotion_naming"
     ],
-    "try_team": "Before a match, exam or big deadline, everyone says one thing they care about in it. Then together: 'This buzz is energy for that.' One slow breath."
+    "try_team": "Before a match, exam or big deadline, everyone says one thing they care about in it. Then together: 'This buzz is energy for that.' One slow breath.",
+    "audience": "all"
   },
   {
     "id": "useful-truth-people-person",
     "concept": "useful_truth",
     "domain": "perception",
     "type": "reveal",
-    "hook": "'I'm just not a people person.' How would you prove that?",
+    "hook": "'I'm just not a people person.' How would you test that?",
     "title": "Pragmatic Truth",
     "game": {
       "prompt": "You reckon you're 'not a people person'. What's the best way to actually find out?",
       "choices": [
         "Think back over every awkward chat you've had",
         "Ask three friends whether they agree",
-        "For one week, start one short chat a day and see how each goes"
+        "For one week, try one tiny chat a day (even 'thanks, have a good one') and note one fact: did they chat back?"
       ],
-      "reveal": "Memories and friends' views are filtered through the belief itself, and beliefs like this steer you away from the moments that would test them. Peirce said an idea's meaning lies in its practical effects; James went further: its truth is worked out in experience. So act as if it might be false, and watch.",
+      "reveal": "Memory is selective, and the belief keeps you out of the moments that would test it. Friends help, but a small experiment with a clear check beats both. Peirce said an idea's meaning lies in its practical effects; James went further: its truth is worked out in experience. So act as if it might be false, and watch.",
       "answer": 2
     },
     "insight": "Pragmatism asks: what happens when you act on this idea? A lens, not a lab finding, and facts still matter. James's view of truth was hotly disputed (Russell among others); use it as a method.",
     "model": "Judge a belief by its consequences: run the experiment, then decide.",
-    "try_today": "Pick one limiting belief. Try one small, low-stakes action that only makes sense if it's false. Note what happened, no grading.",
+    "try_today": "Pick one limiting belief. Try the smallest action that only makes sense if it's false. Note what happened, no grading.",
     "source": {
       "thinkers": [
         "William James",
@@ -484,7 +492,9 @@
       "quote": "The truth of an idea is not a stagnant property inherent in it. Truth happens to an idea.",
       "cite": "William James, Pragmatism (1907), Lecture VI 'Pragmatism's Conception of Truth'",
       "next_read": "James, Pragmatism, Lecture II 'What Pragmatism Means', then Lecture VI (free online)"
-    }
+    },
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "mpc-loop-pcf-venn",
@@ -596,7 +606,8 @@
       "feedback_loops",
       "reframing"
     ],
-    "try_team": "Take one recent hiccup (a lost match, a missed deadline, a row). Spend 90 seconds each on: what did we see, what did it mean, what will we adjust?"
+    "try_team": "Take one recent hiccup (a lost match, a missed deadline, a row). Spend 90 seconds each on: what did we see, what did it mean, what will we adjust?",
+    "audience": "all"
   },
   {
     "id": "mpc-loop-thermostat-choice",
@@ -661,7 +672,8 @@
       "feedback_loops",
       "wso_triad",
       "useful_truth"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "spotlight-effect-tshirt-estimate",
@@ -700,7 +712,8 @@
       "procrastination_emotion"
     ],
     "try_team": "Everyone writes one moment this week they felt watched (a wrong answer, a typo, a stumble). Others say if they even noticed. Usually: barely.",
-    "sensitive": true
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "spotlight-effect-slip-choice",
@@ -712,16 +725,16 @@
     "game": {
       "steps": [
         {
-          "scenario": "In class you answer a question confidently, and it's wrong. A couple of people laugh. Next lesson, you…",
+          "scenario": "At a quiz night, in class or in a meeting, you answer a question confidently, and it's wrong. A couple of people laugh. Next time, you…",
           "options": [
             {
-              "text": "Say 'oops, mixed that up' if it comes up, and put your hand up again",
+              "text": "Say 'oops, mixed that up' if it comes up, and speak up again",
               "best": true,
               "feedback": "A light, quick fix tells people it's no big deal, and it usually isn't to them."
             },
             {
-              "text": "Stay silent for the rest of term so it can't happen again",
-              "feedback": "Understandable, it stung. But the silence costs you more than the slip did; most classmates likely moved on that day."
+              "text": "Stay quiet from now on so it can't happen again",
+              "feedback": "Understandable, it stung. But the silence costs you more than the slip did; most people there likely moved on that day."
             },
             {
               "text": "Explain at length why your answer was nearly right",
@@ -786,24 +799,25 @@
       "availability"
     ],
     "try_team": "Before a talk or meeting, agree a light line for slips ('let me try that again'). Use it once on purpose so it feels normal for everyone.",
-    "sensitive": true
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "hedonic-adaptation-lottery-reveal",
     "concept": "hedonic_adaptation",
     "domain": "perception",
     "type": "reveal",
-    "hook": "Lottery winners vs their neighbours. Who's happier a year on?",
+    "hook": "You win the lottery. Does breakfast taste better a year later?",
     "title": "The Thrill Wears Off",
     "game": {
-      "prompt": "Researchers asked big lottery winners, up to about 18 months after winning, how happy they felt day to day. Compared with their neighbours, they were…",
+      "prompt": "Lottery winners rated how much they enjoyed everyday moments (a chat, a joke, breakfast). Compared with their neighbours, the winners enjoyed them…",
       "choices": [
-        "Clearly happier",
-        "About the same",
-        "Less happy"
+        "More",
+        "About the same or a bit less",
+        "Much less"
       ],
       "answer": 1,
-      "reveal": "About the same, in a small 1978 study of 22 winners (Brickman et al.), and they enjoyed small things like a chat or a joke a bit less. Picked 'happier'? You're partly right: a large Swedish study found big winners stayed more satisfied with life for years, though not happier from moment to moment (Lindqvist et al., 2020)."
+      "reveal": "A bit less. In a small 1978 study of 22 winners (Brickman et al.), winners got slightly less pleasure from everyday moments than their neighbours, and weren't happier overall. The twist: a large Swedish study found big winners stayed more satisfied with life for years, though not happier moment to moment (Lindqvist et al., 2020)."
     },
     "insight": "New things quickly become your normal, so the daily glow fades even when the gain is real. How satisfied you feel with life can shift; the day-to-day buzz mostly settles back.",
     "model": "Gains turn into the new normal. Expect the glow to fade and plan for it.",
@@ -823,7 +837,8 @@
       "one_percent",
       "feedback_loops"
     ],
-    "try_team": "Each person names something they wanted badly that now feels ordinary. Then name one way to make it feel fresh again. Share the best idea."
+    "try_team": "Each person names something they wanted badly that now feels ordinary. Then name one way to make it feel fresh again. Share the best idea.",
+    "audience": "all"
   },
   {
     "id": "hedonic-adaptation-fade-swipe",
@@ -887,7 +902,8 @@
       "feedback_loops",
       "one_percent"
     ],
-    "try_team": "List the group's three biggest daily hassles and three recent 'upgrades'. Vote: which fix would still feel good in six months?"
+    "try_team": "List the group's three biggest daily hassles and three recent 'upgrades'. Vote: which fix would still feel good in six months?",
+    "audience": "all"
   },
   {
     "id": "stress-mindset-choice-fuel",
@@ -953,7 +969,8 @@
       "growth_mindset"
     ],
     "try_team": "Before a match, test or launch, each person names the part they're nervous about, adds 'and I'm excited about it', then you agree step one together.",
-    "sensitive": true
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "map-territory-green-dashboard-choice",
@@ -1002,7 +1019,7 @@
         }
       ]
     },
-    "insight": "Verdict: the dashboard was true and still misleading. A metric is a map of the work, not the work. Turn it into a target and people start steering the map.",
+    "insight": "Takeaway: the dashboard was true and still misleading. A metric is a map of the work, not the work. Turn it into a target and people start steering the map.",
     "model": "Every number is a map: ask what it can't see, and never let one number be the whole target.",
     "try_today": "Pick one metric you report. Write one thing it can't show, then ask one person on your team about exactly that.",
     "source": {
@@ -1021,7 +1038,8 @@
       "feedback_loops",
       "psychological_safety"
     ],
-    "try_team": "5 min: list your team's top 3 metrics. For each, everyone writes how they could hit it while making the work worse. Add one counter-check."
+    "try_team": "5 min: list your team's top 3 metrics. For each, everyone writes how they could hit it while making the work worse. Add one counter-check.",
+    "audience": "work"
   },
   {
     "id": "reframing-angry-client-reveal",
@@ -1040,7 +1058,7 @@
       "answer": 0,
       "reveal": "Pushing it down. In lab studies, people told to hide their feelings remembered fewer details of what they had just seen and heard. People who reframed did not pay that memory cost (Richards & Gross, 2000). Hiding takes effort, and the effort comes out of your attention."
     },
-    "insight": "Verdict: masking isn't free; it spends attention you need for the details. Reframing keeps your memory working. Lab evidence, not yet tested on real client calls.",
+    "insight": "Takeaway: masking isn't free; it spends attention you need for the details. Reframing keeps your memory working. Lab evidence, not yet tested on real client calls.",
     "model": "Don't just mask it, re-read it: 'What else could explain this?' keeps your head in the room.",
     "try_today": "Before your next tough meeting, write one generous reason for the hardest person's behaviour. Re-read it if things heat up.",
     "source": {
@@ -1058,7 +1076,8 @@
       "impulse_pause"
     ],
     "sensitive": true,
-    "try_team": "5 min: each person shares this week's spikiest client or stakeholder message. The team suggests two non-hostile reasons for it, then drafts the reply."
+    "try_team": "5 min: each person shares this week's spikiest client or stakeholder message. The team suggests two non-hostile reasons for it, then drafts the reply.",
+    "audience": "work"
   },
   {
     "id": "goal-directed-perception-burglar-choice",
@@ -1070,7 +1089,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "English class. Everyone reads the same short story: two boys skip school and hang out at one boy's house. Half the class is told to read it as a burglar, half as someone buying the house. Who remembers the coin collection and the TV?",
+          "scenario": "Two groups read the same short story: two boys skip school and hang out at one boy's house. One group reads it as a burglar, the other as someone buying the house. Who remembers the coin collection and the TV?",
           "options": [
             {
               "text": "The 'burglars'",
@@ -1107,7 +1126,7 @@
         }
       ]
     },
-    "insight": "Verdict: you never just read a page, you read it for something. Give your attention a job and it grabs the details that fit it, and skips the rest.",
+    "insight": "Takeaway: you never just read a page, you read it for something. Give your attention a job and it grabs the details that fit it, and skips the rest.",
     "model": "Your goal is a search filter: set it before you look, or something else will set it for you.",
     "try_today": "Before your next reading (revision notes, a report, a contract), write one question at the top of the page. Read only to answer it.",
     "source": {
@@ -1125,6 +1144,7 @@
       "confirmation_bias",
       "implementation_intentions"
     ],
-    "try_team": "Study group or team, 5 min: everyone reads the same page in a different role (examiner, sceptic, newcomer). Share what each role noticed."
+    "try_team": "Study group or team, 5 min: everyone reads the same page in a different role (examiner, sceptic, newcomer). Share what each role noticed.",
+    "audience": "all"
   }
 ]

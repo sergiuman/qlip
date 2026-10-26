@@ -79,7 +79,7 @@
       const prev = CARD[queue.concat(picks).slice(-1)[0]];
       for (const c of DB.cards) {
         if (inQueue.has(c.id) || picks.includes(c.id) || !inWorld(c)) continue;
-        if (prev && sameStory(prev, c)) continue;
+        if (prev && (sameStory(prev, c) || prev.concept === c.concept)) continue;
         let s = 0;
         if (S.done[c.id]) s -= 6;
         s -= (S.seen[c.id] || 0) * 1.5;
@@ -90,6 +90,7 @@
         s += (CONCEPT[c.concept]?.rank || 0) * 25;
         s += hash(c.id + SESSION) * 1.6;
         if (c.audience !== "all") s += Math.max(-2, Math.min(2, (S.aud?.[c.audience] || 0) * 0.5));
+        if (S.world && c.audience !== "all" && inWorld(c)) s += 1.5;
         if (s > bestScore) { bestScore = s; best = c; }
       }
       if (!best) break;
@@ -201,7 +202,8 @@
   // Reveal = punchline first: result, the model, one thing to try, one "next" button. Depth sits behind "Why?".
   function renderReveal(card, result, replay) {
     const wrap = h("div", { class: "reveal", "aria-live": "polite" });
-    if (result.name) wrap.append(h("p", { class: "result-name" }, result.profile ? h("small", {}, "Right now you lean") : null, result.name));
+    const win = /^(Spot on|Bullseye|Clean sweep|You'd coach)/.test(result.name || "");
+    if (result.name) wrap.append(h("p", { class: `result-name${win ? " win" : ""}` }, result.profile ? h("small", {}, "Right now you lean") : null, result.name));
     if (result.tally) wrap.append(h("p", { class: "small muted", style: "margin:0" }, result.tally));
     if (result.text) wrap.append(h("p", { style: "margin:0" }, result.text));
     if (result.profile) wrap.append(h("p", { class: "small muted", style: "margin:0" }, "A snapshot of today's answers, not a verdict on you. People move."));
@@ -216,7 +218,7 @@
     } });
     wrap.append(h("div", { class: "try" }, cb, h("label", { for: cbId }, h("b", {}, "Try today"), card.try_today)));
     if (card.try_team && S.world !== "young") wrap.append(h("p", { class: "team-line" }, h("b", {}, "👥 With others: "), card.try_team));
-    const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).filter((id) => !sameStory(card, CARD[id])).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || []).find((id) => !sameStory(card, CARD[id]))]).filter(([cid, t]) => t && CONCEPT[cid]);
+    const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).filter((id) => inWorld(CARD[id]) && !sameStory(card, CARD[id])).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || []).find((id) => inWorld(CARD[id]) && !sameStory(card, CARD[id]))]).filter(([cid, t]) => t && CONCEPT[cid]);
     const ev = { strong: "Strong evidence", moderate: "Moderate evidence", contested: "Contested — read critically", philosophy: "Philosophical lens" }[card.evidence];
     const more = h("details", { class: "why", open: S.world === "work" || S.world === "life" }, h("summary", {}, "Why? · 15-second read"),
       h("p", {}, card.insight),
@@ -449,7 +451,7 @@
             btns.remove(); stage.remove(); fb.remove();
             const n = g.items.length, misses = log.filter((x) => !x.ok);
             const recap = h("ul", { class: "recap" }, log.slice().sort((a, b) => a.ok - b.ok).map((x) =>
-              h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, x.ok ? "✓" : "✗"),
+              h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, card.sensitive ? "•" : x.ok ? "✓" : "✗"),
                 h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.ok ? "" : `Belongs in: ${x.label}. `}${x.it.why}`)))));
             score.replaceWith(recap);
             done({ name: right === n ? "Clean sweep." : right >= n * 0.75 ? `${right} of ${n}. Sharp sorting.` : `${right} of ${n}. Here's the pattern.`,
@@ -553,7 +555,7 @@
       const opts = h("div", { class: "opts" }, g.choices.map((c, k) => h("button", { class: "opt", onclick: (e) => {
         opts.querySelectorAll("button").forEach((b, j) => { b.disabled = true; if (has && j === g.answer) b.classList.add("best"); });
         e.currentTarget.classList.add(has ? "picked" : "chosen");
-        done({ name: !has ? "Your call." : k === g.answer ? "Spot on." : "Here's what the research found.", text: g.reveal });
+        done({ name: !has ? "Your call." : k === g.answer ? "Spot on." : card.evidence === "philosophy" ? "Here's another way to see it." : "Here's what the research found.", text: g.reveal });
       } }, c)));
       return h("div", { style: "display:flex;flex-direction:column;gap:12px" }, h("p", { class: "q-text" }, g.prompt), opts);
     },
@@ -661,8 +663,11 @@
     const placed = [];
     for (const d of DB.domains) {
       const ns = sim.hit.filter((n) => CONCEPT[n.id].domain === d.id); if (!ns.length) continue;
-      const cx = ns.reduce((a, n) => a + n.x, 0) / ns.length;
-      let cy = Math.max(10, Math.min(...ns.map((n) => n.y)) - 14);
+      const mx = ns.reduce((a, n) => a + n.x, 0) / ns.length, my = ns.reduce((a, n) => a + n.y, 0) / ns.length;
+      const ox = mx - W / 2, oy = my - H / 2, len = Math.hypot(ox, oy) || 1;
+      const reach = Math.max(...ns.map((n) => Math.hypot(n.x - mx, n.y - my))) + 18;
+      const cx = Math.min(W - 50, Math.max(50, mx + (ox / len) * reach));
+      let cy = Math.min(H - 10, Math.max(10, my + (oy / len) * reach));
       const w = ctx.measureText(d.name).width / 2 + 4;
       for (let tries = 0; tries < 6 && placed.some((b) => Math.abs(b[0] - cx) < b[2] + w && Math.abs(b[1] - cy) < 16); tries++) cy += 16;
       placed.push([cx, cy, w]);

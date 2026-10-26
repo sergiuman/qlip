@@ -71,7 +71,8 @@
       "quote": "Of things, some are in our power, and others not.",
       "cite": "Epictetus, Enchiridion, ch. 1 (trans. Elizabeth Carter, 1758)",
       "next_read": "Enchiridion, chapters 1-5 (about two pages)"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "dichotomy-of-control-delayed-flight",
@@ -141,7 +142,8 @@
       "quote": "Men are disturbed not by things, but by the principles and notions which they form concerning things.",
       "cite": "Epictetus, Enchiridion, ch. 5 (trans. Elizabeth Carter, 1758)",
       "next_read": "Enchiridion, chapters 5 and 8"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "circle-influence-spectrum",
@@ -267,7 +269,8 @@
       "quote": "What then? We must make the best use that we can of the things which are in our power, and use the rest according to their nature.",
       "cite": "Epictetus, Discourses, Book I, ch. 1 (trans. George Long, 1890)",
       "next_read": "Discourses, Book I, ch. 1 'Of the things which are in our power'"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "circle-influence-library-choice",
@@ -333,7 +336,8 @@
       "dichotomy_of_control",
       "self_efficacy",
       "opportunity_gap"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "golden-mean-courage-spectrum",
@@ -483,7 +487,8 @@
       "quote": "to feel them at the right times, with reference to the right objects, towards the right people... is what is both intermediate and best",
       "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 6 (trans. W. D. Ross, 1925)",
       "next_read": "Nicomachean Ethics, Book II, ch. 6-9; Book III, ch. 6-9 (on courage)"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "socratic-ignorance-drivers",
@@ -524,7 +529,8 @@
       "quote": "he knows nothing, and thinks that he knows; I neither know nor think that I know.",
       "cite": "Plato, Apology 21d (trans. Benjamin Jowett)",
       "next_read": "Plato, Apology 20e-23c (the oracle story)"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "socratic-ignorance-zip-reveal",
@@ -545,7 +551,7 @@
     "insight": "Familiar things feel understood until you try to explain them. Socrates found the same in Athens: people skilled at one craft assumed they knew far more. Explaining is the honesty test.",
     "model": "If you can't explain it step by step, you know less than it feels. Say it out loud to find out.",
     "try_today": "Explain something you rely on (a system at work, an app, a school topic) in 5 steps. Note where you said 'and then it just…'.",
-    "try_team": "In a retro or study group, each person explains one part of something they 'know' in 2 minutes. Others may ask 'how exactly?' once.",
+    "try_team": "In a group (friends, family, a study group or team), each person explains one thing they 'know' in 2 minutes. Others may ask 'how exactly?' once.",
     "source": {
       "thinkers": [
         "Socrates",
@@ -565,7 +571,8 @@
       "quote": "because they were good workmen they thought that they also knew all sorts of high matters",
       "cite": "Plato, Apology 22d (trans. Benjamin Jowett)",
       "next_read": "Plato, Apology 21b-23b (Socrates questions politicians, poets and craftsmen)"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "amor-fati-setback-reveal",
@@ -606,7 +613,8 @@
       "quote": "Amor fati: let that henceforth be my love!",
       "cite": "Nietzsche, The Gay Science, §276 (trans. Thomas Common, 1910)",
       "next_read": "The Gay Science §276; Marcus Aurelius, Meditations, Book 4.1 (the fire image)"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "impermanence-worry-reveal",
@@ -649,7 +657,8 @@
       "quote": "You cannot step twice into the same rivers; for fresh waters are ever flowing in upon you.",
       "cite": "Heraclitus, fragment 41, in John Burnet, Early Greek Philosophy (1920)",
       "next_read": "Burnet, Early Greek Philosophy, ch. III (Heraclitus), fragments 41-50"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "begin-with-end-eulogy-radar",
@@ -731,7 +740,8 @@
       "responsibility_meaning"
     ],
     "sensitive": true,
-    "try_team": "Each person writes three words they'd want said about the group in a year. Agree on the most neglected one and plan one step for it."
+    "try_team": "Each person writes three words they'd want said about the group in a year. Agree on the most neglected one and plan one step for it.",
+    "audience": "all"
   },
   {
     "id": "begin-with-end-four-thousand-weeks",
@@ -769,11 +779,12 @@
     ],
     "try_team": "Each person names the one thing this week they'd regret skipping. Share them, then help each other protect the time for it.",
     "from_source": {
-      "quote": "Life is long if you know how to use it.",
+      "quote": "life, if you know how to use it, is long.",
       "cite": "Seneca, On the Shortness of Life, 2.1 (trans. John W. Basore, 1932)",
       "next_read": "On the Shortness of Life, chapters 1-3"
     },
-    "sensitive": true
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "memento-mori-grudge-choice",
@@ -862,7 +873,8 @@
       "quote": "Do not act as if thou wert going to live ten thousand years. ... While thou livest, while it is in thy power, be good.",
       "cite": "Marcus Aurelius, Meditations, Book IV.17 (trans. George Long, 1862)",
       "next_read": "Meditations, Book II.11 and Book IV.17-19"
-    }
+    },
+    "audience": "work"
   },
   {
     "id": "memento-mori-moving-away-reveal",
@@ -904,7 +916,8 @@
       "quote": "Every day, therefore, should be regulated as if it closed the series, as if it rounded out and completed our existence.",
       "cite": "Seneca, Moral Letters to Lucilius, Letter 12 'On Old Age' (trans. R. M. Gummere, 1917)",
       "next_read": "Moral Letters, Letter 12 'On Old Age' and Letter 101 'On the Futility of Planning Ahead'"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "creative-truthful-courage-choice",
@@ -992,7 +1005,8 @@
       "quote": "Faithful are the wounds of a friend; but the kisses of an enemy are deceitful.",
       "cite": "Proverbs 27:6 (King James Version, 1611)",
       "next_read": "Plutarch, How to Tell a Flatterer from a Friend (Moralia)"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "dichotomy-of-control-pitch-goal-reveal",
@@ -1031,7 +1045,8 @@
       "opportunity_gap",
       "memento_mori"
     ],
-    "sensitive": true
+    "sensitive": true,
+    "audience": "work"
   },
   {
     "id": "impermanence-new-job-glow-choice",
@@ -1099,7 +1114,8 @@
       "hedonic_adaptation",
       "regret_minimization",
       "emotion_naming"
-    ]
+    ],
+    "audience": "work"
   },
   {
     "id": "memento-mori-school-days-estimate",
@@ -1115,7 +1131,7 @@
       "step": 10,
       "unit": " days",
       "answer": 380,
-      "explain": "About 380. A school year is roughly 190 days (UK; about 180 in the US), so two years is about 380. Together since age 11? Then you've already used around 70% of your school days together. Not a reason to panic, just a reason to say yes to Friday's plan."
+      "explain": "About 380. Not a countdown to panic over, a reason to say yes to Friday's plan. A school year is roughly 190 days (UK; about 180 in the US), so two years is about 380. Moving to college at 16 instead? Then it's this year that counts."
     },
     "insight": "Final-year students nudged to see graduation as close got happier and did more of what they'd miss (Kurtz, 2008; one small study). 'Last' can sharpen joy, not just dread.",
     "model": "Count what's left, not to panic but to notice: ordinary days become worth showing up for.",
@@ -1134,6 +1150,7 @@
       "impermanence",
       "begin_with_end",
       "regret_minimization"
-    ]
+    ],
+    "audience": "young"
   }
 ]

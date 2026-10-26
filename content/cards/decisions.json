@@ -59,7 +59,8 @@
       "premortem",
       "impulse_pause"
     ],
-    "try_team": "List 5 choices your team, class or family keeps putting off. Vote: one-way or two-way door? Decide every two-way door before you leave the room."
+    "try_team": "List 5 choices your team, class or family keeps putting off. Vote: one-way or two-way door? Decide every two-way door before you leave the room.",
+    "audience": "all"
   },
   {
     "id": "reversible-doors-spectrum",
@@ -70,7 +71,7 @@
     "title": "How You Weigh Small Choices",
     "game": {
       "left": "Every door feels locked",
-      "right": "Fast on small, slow on big",
+      "right": "Quick on undoable choices",
       "questions": [
         {
           "q": "Choosing a show to watch tonight, I usually…",
@@ -90,18 +91,18 @@
           ]
         },
         {
-          "q": "Picking a birthday card for a friend, I…",
+          "q": "Picking what to wear to a mate's party, I…",
           "options": [
             {
-              "label": "Read most of the rack and still doubt my pick",
+              "label": "Try on everything twice and still hate it",
               "value": -2
             },
             {
-              "label": "Check a few, then go with one",
+              "label": "Try two, pick one",
               "value": 0
             },
             {
-              "label": "Grab one that feels right and write a good message",
+              "label": "Grab something and go",
               "value": 2
             }
           ]
@@ -124,18 +125,18 @@
           ]
         },
         {
-          "q": "When buying something with free returns, I…",
+          "q": "Choosing a pic to post, I…",
           "options": [
             {
-              "label": "Compare every review anyway",
+              "label": "Edit 30 versions and still doubt it",
               "value": -2
             },
             {
-              "label": "Read a few reviews, then buy",
+              "label": "Pick from my top 3",
               "value": 0
             },
             {
-              "label": "Buy the good-enough one and test it",
+              "label": "Post one I like; I can delete it",
               "value": 2
             }
           ]
@@ -155,7 +156,7 @@
         {
           "upTo": 1,
           "label": "Today: sorting doors",
-          "text": "Your answers today move fast where it's safe and slow where it matters. Keep checking that 'fast' never sneaks onto a one-way door."
+          "text": "Today you move fast on choices you can undo. Nice. Before a big one-way choice (what to study, a job move, quitting a team), slow down on purpose."
         }
       ]
     },
@@ -176,7 +177,8 @@
       "regret_minimization",
       "opportunity_cost"
     ],
-    "try_team": "Before your next group choice (a film, a trip, a project name), ask: can we undo it? If yes, set a 3-minute limit, pick, and move on."
+    "try_team": "Before your next group choice (a film, a trip, a project name), ask: can we undo it? If yes, set a 3-minute limit, pick, and move on.",
+    "audience": "all"
   },
   {
     "id": "regret-minimization-80",
@@ -213,7 +215,8 @@
       "reversible_doors",
       "begin_with_end"
     ],
-    "try_team": "Each person finishes 'At 80, I'd regret our group never trying…' (club, class, family, team). Pick one and plan its first small step together."
+    "try_team": "Each person finishes 'At 80, I'd regret our group never trying…' (club, class, family, team). Pick one and plan its first small step together.",
+    "audience": "all"
   },
   {
     "id": "regret-minimization-hacked",
@@ -281,7 +284,8 @@
       "reversible_doors",
       "expected_value",
       "loss_aversion"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "premortem-order",
@@ -311,10 +315,10 @@
           ]
         },
         {
-          "scenario": "Your list: money ran out, someone's parents said no, tickets sold out, the tent broke. Which can you fix TODAY?",
+          "scenario": "Your list: money ran out, someone couldn't get the days free, tickets sold out, the tent broke. Which can you fix TODAY?",
           "options": [
             {
-              "text": "Someone's parents said no",
+              "text": "Someone couldn't get the days free",
               "best": true,
               "feedback": "One message tonight settles it. Fix the cheap, fast risks first."
             },
@@ -349,14 +353,15 @@
       "second_order",
       "reversible_doors"
     ],
-    "try_team": "Next planning meeting or family trip chat: 5 minutes, everyone silently writes 'It failed because…', then read them out. Fix the top two risks first."
+    "try_team": "Before your next big plan (a trip, an event, a project): 5 minutes, everyone silently writes 'It failed because…', then reads out. Fix the top two risks.",
+    "audience": "all"
   },
   {
     "id": "expected-value-coin",
     "concept": "expected_value",
     "domain": "decisions",
     "type": "estimate",
-    "hook": "Coin flip: win 100 or lose 60. Why do so many people say no?",
+    "hook": "A bet lots of people turn down. Is it secretly a good one?",
     "title": "Expected Value",
     "game": {
       "question": "Heads you win 100, tails you lose 60 (any currency). On average, how much is one flip worth?",
@@ -391,7 +396,8 @@
       "quote": "Let us weigh the gain and the loss in wagering that God is. Let us estimate these two chances.",
       "cite": "Blaise Pascal, Pensées, §233 (trans. W. F. Trotter, 1910)",
       "next_read": "Pensées §233, where Pascal applies the arithmetic of stakes to the question of God (read it as philosophy, not betting advice); then the 1654 Pascal–Fermat letters on fairly dividing an interrupted game."
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "expected-value-resulting",
@@ -403,7 +409,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "Your friend spent weeks choosing a second-hand laptop: read reviews, asked someone who knows tech, tested it in person. A month later it dies. They say: 'I'm so stupid for buying it.' You reply…",
+          "scenario": "Your friend spent weeks choosing a second-hand phone: read reviews, asked someone who knows tech, tested it in person. A month later it dies. They say: 'I'm so stupid for buying it.' You reply…",
           "options": [
             {
               "text": "\"You decided well with what you knew. The outcome was bad luck.\"",
@@ -421,29 +427,44 @@
           ]
         },
         {
-          "scenario": "Now flip it. Someone drives home after drinking and arrives safely. Good decision?",
+          "scenario": "Your mate doesn't revise at all for a big test, guesses most answers, and passes with a good grade. Good decision?",
           "options": [
             {
-              "text": "No. A good outcome doesn't fix a bad bet.",
+              "text": "No. A good grade doesn't fix a bad bet.",
               "best": true,
-              "feedback": "Right. The risk was real; they just got lucky. Luck doesn't make the decision wise."
+              "feedback": "Right. They got lucky on the questions. Try it again on the next test and the dice might not be so kind."
             },
             {
-              "text": "Yes, nothing bad happened.",
-              "feedback": "That's 'resulting': grading a choice by how it turned out. It teaches people to repeat lucky mistakes."
+              "text": "Yes, it worked.",
+              "feedback": "That's 'resulting': grading a choice by how it turned out. It teaches people to repeat lucky gambles."
+            }
+          ]
+        },
+        {
+          "scenario": "Your new phone: repair cover costs 3 (any currency). There's about a 10% chance you'll need a 50 repair this year. On average, which is the better bet?",
+          "options": [
+            {
+              "text": "Pay the 3: on average the risk costs 5",
+              "best": true,
+              "feedback": "Right: 10% × 50 = 5 expected loss, more than the 3 fee. Weigh chance times stakes, then decide."
+            },
+            {
+              "text": "Skip it: the 3 is wasted if nothing breaks",
+              "feedback": "Fair feeling, and skipping can make sense if you could easily pay 50. But on average the risk (10% × 50 = 5) costs more than the fee."
             }
           ]
         }
       ]
     },
-    "insight": "Poker player Annie Duke calls it 'resulting': judging a choice only by how it turned out. Good choices sometimes lose; bad ones sometimes win. Judge the process.",
+    "insight": "Annie Duke calls it 'resulting': judging a choice only by how it turned out. Good choices sometimes lose. Expected value is the tool: chance times stakes, summed.",
     "model": "Decision quality = what you knew and how you weighed it. Outcome = decision + luck.",
-    "try_today": "Pick one past choice you regret. Ask: given what I knew then, was it reasonable? Write one sentence answering.",
+    "try_today": "Pick one small past choice that still bugs you (not the biggest). Ask: given what I knew then, was it reasonable? Write one line, then stop.",
     "source": {
       "thinkers": [
-        "Annie Duke"
+        "Annie Duke",
+        "Blaise Pascal"
       ],
-      "work": "Thinking in Bets (2018)"
+      "work": "Thinking in Bets (2018); Pascal–Fermat letters (1654)"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -453,14 +474,15 @@
       "mistake_alchemy"
     ],
     "sensitive": true,
-    "try_team": "After a game, test or project, review one call in two columns: 'what we knew then' and 'what luck did'. Praise good process, even when it lost."
+    "try_team": "After a game, test or project, review one call in two columns: 'what we knew then' and 'what luck did'. Praise good process, even when it lost.",
+    "audience": "all"
   },
   {
     "id": "opportunity-cost-unseen",
     "concept": "opportunity_cost",
     "domain": "decisions",
     "type": "reveal",
-    "hook": "Every yes has a hidden price. Quick: would you buy these?",
+    "hook": "Every yes has a hidden price. Quick: would you buy them?",
     "title": "What Is Not Seen",
     "game": {
       "prompt": "New trainers you love cost £60. Option A: buy them. Option B: keep the £60 for other things you want (tickets, food with friends, saving). Which do you pick?",
@@ -472,7 +494,7 @@
     },
     "insight": "Every yes is a no to something else: money, time, attention. Our minds rarely show what we give up unless someone names it. Bastiat called it 'what is not seen'.",
     "model": "The real price of a yes is the best thing it pushes out. Name it before you agree.",
-    "try_today": "Before your next yes (a purchase, a meeting, an hour online), name what it pushes out. Then decide.",
+    "try_today": "Before your next yes (a purchase, a plan, an hour online), name what it pushes out. Then decide.",
     "source": {
       "thinkers": [
         "Frédéric Bastiat",
@@ -493,7 +515,8 @@
       "quote": "the first only is immediate; it manifests itself simultaneously with its cause—it is seen. The others unfold in succession—they are not seen",
       "cite": "Frédéric Bastiat, That Which Is Seen, and That Which Is Not Seen (1850), opening paragraph; 19th-century English translation",
       "next_read": "Bastiat, That Which Is Seen, and That Which Is Not Seen, introduction and ch. 1 'The Broken Window'"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "opportunity-cost-free-ticket",
@@ -529,7 +552,8 @@
       "expected_value",
       "deep_work",
       "regret_minimization"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "circle-competence-venn",
@@ -620,7 +644,8 @@
       "quote": "it is the mark of an educated man to look for precision in each class of things just so far as the nature of the subject admits",
       "cite": "Aristotle, Nicomachean Ethics I.3, 1094b (trans. W. D. Ross)",
       "next_read": "Aristotle, Nicomachean Ethics I.3"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "sunk-cost-two-trips",
@@ -655,7 +680,8 @@
       "opportunity_cost",
       "loss_aversion",
       "quitting_wisely"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "sunk-cost-three-lives",
@@ -667,12 +693,12 @@
     "game": {
       "steps": [
         {
-          "scenario": "You're 2 years into guitar lessons your parents paid for. You've stopped enjoying it and want to try drawing instead. The thought 'all that money' stops you. You…",
+          "scenario": "You're 2 years into paid guitar lessons. You've stopped enjoying it and want to try drawing instead. The thought 'all that money' stops you. You…",
           "options": [
             {
               "text": "Ask: if I were choosing a hobby today, which would I pick?",
               "best": true,
-              "feedback": "Yes. The lessons are paid either way. Talk it through with your parents: the skills you built aren't lost, and the next hour is what's up for grabs."
+              "feedback": "Yes. The lessons are paid either way. The skills you built aren't lost, and the next hour is what's up for grabs."
             },
             {
               "text": "Keep going so the money isn't wasted",
@@ -740,7 +766,8 @@
       "quitting_wisely",
       "opportunity_cost",
       "expected_value"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "sunk-cost-kill-or-keep",
@@ -786,7 +813,7 @@
         }
       ]
     },
-    "insight": "Verdict: count only what's still ahead. Spent time and fees are gone either way; lessons learned still count. A meta-analysis found feeling responsible for the first call makes digging in likelier.",
+    "insight": "Count only what's still ahead. Spent time and fees are gone either way; lessons learned still count. A meta-analysis found feeling responsible for the first call makes digging in likelier.",
     "model": "Ask: if we hadn't started, would we start this today, with what we know now?",
     "try_today": "Pick one project you own. Write what it still costs and what it still could earn. Ignore what's already spent. Then decide.",
     "try_team": "In 5 minutes: name one ongoing project. Each person silently answers 'Would we start this today?' yes or no. Reveal together, then discuss only future costs.",
@@ -805,7 +832,8 @@
       "opportunity_cost",
       "quitting_wisely",
       "premortem"
-    ]
+    ],
+    "audience": "work"
   },
   {
     "id": "opportunity-cost-yes-and",
@@ -854,7 +882,7 @@
         }
       ]
     },
-    "insight": "Verdict: every yes spends time some other work needed. People often ignore that hidden cost until someone names it, especially when time or money already feels tight.",
+    "insight": "Every yes spends time some other work needed. People often ignore that hidden cost until someone names it, especially when time or money already feels tight.",
     "model": "Before any yes, ask: what is the best thing this will push out?",
     "try_today": "Next time you're asked to take something on, reply: 'Yes, if we pause X. Does that work?' Pick X before you answer.",
     "try_team": "5 minutes: list everything the team is doing on a board. Each person marks one item they'd pause to make room for the next request. Compare marks.",
@@ -872,14 +900,15 @@
       "sunk_cost",
       "deep_work",
       "reversible_doors"
-    ]
+    ],
+    "audience": "work"
   },
   {
     "id": "regret-minimization-open-doors",
     "concept": "regret_minimization",
     "domain": "decisions",
     "type": "estimate",
-    "hook": "Adults' #1 life regret is about school. Guess how big a share it is.",
+    "hook": "What do adults regret most? Guess how big a share is about school.",
     "title": "Regret Lives Where Doors Were Open",
     "game": {
       "question": "Of all the life regrets adults named, what share were about school and education?",
@@ -889,9 +918,9 @@
       "unit": "%",
       "answer": 32,
       "anchor": null,
-      "explain": "About 1 in 3 (32%; Roese & Summerville, 2005). Career (22%) and romance (15%) come next. Their idea: we regret most where we saw a real chance to act, and many of those doors stay open longer than we think."
+      "explain": "About 1 in 3 (32%; Roese & Summerville, 2005). Career (22%) and romance (15%) come next. Their idea: we regret most where we saw a real chance to act, and many of those doors stay open longer than we think. If school already feels like a closed chapter, that's the hopeful part: courses, re-sits and late starts are common."
     },
-    "insight": "Verdict: regret follows open doors, at 16 or 46. Over time, people regret what they didn't do more than what they did (Gilovich & Medvec, 1995). Mostly US adults studied.",
+    "insight": "Takeaway: regret follows open doors, at 16 or 46, and education is a door that stays open long. Inaction tends to sting longer (Gilovich & Medvec, 1995). Mostly US adults studied.",
     "model": "Regret grows where chances were cheap. While a door is open, a small try costs less than a long 'what if'.",
     "try_today": "Pick one door still open for you: a course, a club, a role, a question, a message to an old friend. Do the smallest first bit this week.",
     "try_team": "Each person writes one 'I'd be gutted if I never tried…' for this year. Swap and suggest one tiny first step.",
@@ -910,6 +939,8 @@
       "reversible_doors",
       "sunk_cost",
       "opportunity_cost"
-    ]
+    ],
+    "sensitive": true,
+    "audience": "all"
   }
 ]

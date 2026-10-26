@@ -118,7 +118,8 @@
       "quote": "the faculty of voluntarily bringing back a wandering attention, over and over again, is the very root of judgment, character, and will.",
       "cite": "William James, The Principles of Psychology (1890), Vol. 1, Ch. XI 'Attention'",
       "next_read": "The Principles of Psychology, Vol. 1, Ch. XI 'Attention' (read the whole chapter; the passage is in the section 'The Varieties of Attention', in the discussion of voluntary attention)"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "deep-work-sort",
@@ -138,7 +139,7 @@
           "why": "Easy to do while distracted, and easy for anyone to do."
         },
         {
-          "text": "Writing the first draft of a tough essay",
+          "text": "Writing the first draft of a tough essay or letter",
           "side": "right",
           "why": "Needs you to hold many ideas at once. Interruptions wreck it."
         },
@@ -184,7 +185,8 @@
       "quote": "My experience is what I agree to attend to. Only those items which I notice shape my mind",
       "cite": "William James, The Principles of Psychology (1890), Vol. 1, Ch. XI 'Attention'",
       "next_read": "The Principles of Psychology, Vol. 1, Ch. XI 'Attention', opening pages"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "attention-residue-estimate",
@@ -218,7 +220,8 @@
       "deep_work",
       "environment_design"
     ],
-    "try_team": "Start your next meeting, lesson or family task with 60 seconds of silence: everyone writes where they left their last task. Then phones face-down."
+    "try_team": "Agree one 90-minute no-ping block each morning: status set to Focus, Slack notifications off, only on-call can interrupt. Review in two weeks: fewer spillovers?",
+    "audience": "work"
   },
   {
     "id": "sleep-memory-choice",
@@ -283,7 +286,8 @@
       "deliberate_practice",
       "deep_work"
     ],
-    "try_team": "Agree a team rule: no messages about tomorrow's deadline after 10 p.m. Try it for one release or project cycle and compare how the mornings go."
+    "try_team": "Agree a house, class or team rule: no messages about tomorrow's deadline after 10 p.m. Try it for a week and compare how the mornings go.",
+    "audience": "all"
   },
   {
     "id": "doomscroll-loop-order",
@@ -301,10 +305,10 @@
         "A short hit of relief or novelty",
         "The itch is still there, so you keep going"
       ],
-      "explain": "The feed works like a slot machine: you never know when the next good post comes, so you keep pulling. The relief is real but brief, and it doesn't fix the itch that started it."
+      "explain": "Like a slot machine, the feed pays out at random: you never know when the next good post comes, so it's easy to keep pulling. The relief is real but brief, and it doesn't fix the itch that started it."
     },
-    "insight": "Feeds reward you at random, the hardest kind of reward to stop chasing. You're not weak; the design is strong. Haidt links heavy phone use to harm in teens; researchers still debate how much.",
-    "model": "If the reward is random, the habit is sticky. Break the loop at the itch, not the thumb.",
+    "insight": "Random rewards are the hardest kind to stop chasing. You're not weak; the design is strong. Haidt links heavy phone use to harm in teens; researchers still debate how much.",
+    "model": "Random rewards are hard to stop chasing. Break the loop at the itch, not the thumb.",
     "try_today": "Next time you reach for your phone, pause and name the itch in one word (bored, tense, lonely). Then decide.",
     "source": {
       "thinkers": [
@@ -321,7 +325,8 @@
       "fixes_that_fail",
       "impulse_pause"
     ],
-    "try_team": "Each person names the itch that starts their scroll (bored, tense, lonely). Then everyone picks one swap for it, like a walk or texting a friend."
+    "try_team": "Each person names the itch that starts their scroll (bored, tense, lonely). Then everyone picks one swap for it, like a walk or texting a friend.",
+    "audience": "all"
   },
   {
     "id": "doomscroll-loop-pigeons",
@@ -331,17 +336,17 @@
     "hook": "Two pigeons. One gets food every peck, one at random. Who quits last?",
     "title": "Why Random Rewards Hook Us",
     "game": {
-      "prompt": "Two pigeons learn to peck a button for food. Pigeon A gets food every single peck. Pigeon B gets food at random, unpredictable pecks. Then the food stops completely. Which pigeon keeps pecking longer?",
+      "prompt": "Then the food stops completely. Which pigeon keeps pecking longer?",
       "choices": [
         "Pigeon A (always fed)",
         "Pigeon B (randomly fed)",
         "About the same"
       ],
-      "reveal": "Pigeon B, by a lot. If you picked A, that's the natural guess: more food should mean a stronger habit. But random rewards are much harder to give up (Ferster & Skinner). Feeds and slot machines pay out at random too.",
+      "reveal": "Pigeon B, by a lot. Picked A or \"same\"? Natural guess: more food should mean a stronger habit. But random rewards are much harder to give up (Ferster & Skinner). Some app features (pull to refresh, loot packs) borrow the same random-payout design, though how much they hook people is still studied.",
       "answer": 1
     },
-    "insight": "When rewards are predictable, you notice fast when they stop. When they're random, every empty pull feels like 'maybe next time.' That's why refresh-for-something-new apps are hard to put down.",
-    "model": "Random rewards build the stickiest habits. Make the good stuff predictable and the feed boring.",
+    "insight": "When rewards are predictable, you notice fast when they stop. When they're random, every empty pull feels like 'maybe next time.' Some feeds may tap that same pull.",
+    "model": "Random rewards make a habit hardest to quit once they stop. Make good stuff predictable, the feed boring.",
     "try_today": "Turn off notifications for one app that pings you at random, and check it at two set times instead.",
     "source": {
       "thinkers": [
@@ -356,7 +361,8 @@
       "habit_loop",
       "environment_design"
     ],
-    "try_team": "Agree two set times a day to check the family, class or team chat, instead of answering every ping. Try it for a week and compare notes."
+    "try_team": "Agree two set times a day to check the family, class or team chat, instead of answering every ping. Try it for a week and compare notes.",
+    "audience": "all"
   },
   {
     "id": "boredom-signal-estimate",
@@ -397,19 +403,20 @@
       "quote": "all the unhappiness of men arises from one single fact, that they cannot stay quietly in their own chamber.",
       "cite": "Blaise Pascal, Pensées (1670), §139, trans. W. F. Trotter",
       "next_read": "Pensées, Section II, §139 to §143 (on diversion), Trotter translation"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "attention-residue-clean-switch",
     "concept": "attention_residue",
     "domain": "attention",
     "type": "choice",
-    "hook": "Your phone buzzes mid-revision. \"Just a sec\" costs way more than that.",
+    "hook": "Your phone buzzes mid-task. \"Just a sec\" costs way more than that.",
     "title": "Leave Tasks Cleanly",
     "game": {
       "steps": [
         {
-          "scenario": "You're halfway through something that needs thought: revision, a TikTok edit, a hard level in a game. Your phone buzzes with the group chat. You…",
+          "scenario": "You're halfway through something that needs thought: revising for a test, a video edit, a tricky form. Your phone buzzes with the group chat. You…",
           "options": [
             {
               "text": "Check it now, then come back",
@@ -462,7 +469,8 @@
     "related": [
       "deep_work",
       "environment_design"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "sleep-memory-replay-reveal",
@@ -481,10 +489,10 @@
       "answer": 2,
       "reveal": "They replay the route, in the same order, often many times faster than the real run. If you guessed 'quiet', that's the common view: sleep looks like switching off. It isn't (Wilson & McNaughton, 1994; Lee & Wilson, 2002)."
     },
-    "insight": "Human studies suggest something similar: memories get reactivated and strengthened in deep sleep. The replay evidence is mostly from rats, but it's a big reason sleep after learning matters.",
+    "insight": "Human studies hint at the same: memories get replayed and strengthened in deep sleep. Most replay evidence is from rats. Still, a late push after a learning day may cost some of what you learned.",
     "model": "Sleep isn't switching off. It's when your brain rehearses what you learned today.",
     "try_today": "Tonight, spend two minutes before bed recalling one thing you learned today. Then put the screen away and sleep.",
-    "try_team": "End the day as a family or class: each person says one thing they learned. Recall it again at breakfast and see what stuck.",
+    "try_team": "After a training day or workshop, skip the late team call. Next morning at stand-up, each person says one thing they learned yesterday. See what stuck.",
     "source": {
       "thinkers": [
         "Matthew Wilson",
@@ -498,7 +506,8 @@
     "related": [
       "deliberate_practice",
       "deep_work"
-    ]
+    ],
+    "audience": "work"
   },
   {
     "id": "zeigarnik-effect-what-holds-up",
@@ -535,7 +544,8 @@
     "related": [
       "attention_residue",
       "deep_work"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "zeigarnik-effect-bedtime-list",
@@ -573,7 +583,8 @@
       "sleep_memory",
       "implementation_intentions",
       "evening_reset"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "deep-work-quiet-mornings",
@@ -657,7 +668,8 @@
       "attention_residue",
       "environment_design",
       "psychological_safety"
-    ]
+    ],
+    "audience": "work"
   },
   {
     "id": "attention-residue-quick-question",
@@ -694,7 +706,8 @@
     "related": [
       "deep_work",
       "zeigarnik_effect"
-    ]
+    ],
+    "audience": "work"
   },
   {
     "id": "doomscroll-loop-no-ending",
@@ -758,6 +771,7 @@
     "related": [
       "habit_loop",
       "environment_design"
-    ]
+    ],
+    "audience": "all"
   }
 ]

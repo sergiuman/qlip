@@ -14,24 +14,20 @@
           "q": "Your first try at something new (a tool, a skill, a subject) goes badly. Your first thought is…",
           "options": [
             {
-              "label": "I'm just bad at this kind of thing.",
-              "value": -2
-            },
-            {
-              "label": "Ugh. Maybe I'm not cut out for this.",
-              "value": -1
-            },
-            {
-              "label": "Depends what it is.",
-              "value": 0
-            },
-            {
               "label": "Annoying. Which part lost me?",
               "value": 1
             },
             {
+              "label": "I'm just bad at this kind of thing.",
+              "value": -2
+            },
+            {
               "label": "My method didn't work. Time for a new one.",
               "value": 2
+            },
+            {
+              "label": "Ugh. Maybe I'm not cut out for this.",
+              "value": -1
             }
           ]
         },
@@ -39,20 +35,20 @@
           "q": "A friend is way better than you at something you care about.",
           "options": [
             {
+              "label": "It stings, but I'm curious how they got there.",
+              "value": 1
+            },
+            {
+              "label": "I ask them what their practice looks like.",
+              "value": 2
+            },
+            {
               "label": "They're a natural. I'll never catch up.",
               "value": -2
             },
             {
               "label": "Some of it is talent, some is practice.",
-              "value": 0
-            },
-            {
-              "label": "It stings, but I'm curious how they got there.",
-              "value": 1
-            },
-            {
-              "label": "I wonder how they practise.",
-              "value": 2
+              "value": -1
             }
           ]
         },
@@ -60,37 +56,45 @@
           "q": "Someone gives you blunt feedback on something you made (an essay, a drawing, a dish).",
           "options": [
             {
+              "label": "I ask which part to fix first.",
+              "value": 1
+            },
+            {
               "label": "It feels like a verdict on me.",
               "value": -2
             },
             {
-              "label": "I get defensive first, then think.",
-              "value": 0
-            },
-            {
               "label": "It's free information about the work.",
               "value": 2
+            },
+            {
+              "label": "I nod, then quietly ignore it.",
+              "value": -1
+            },
+            {
+              "label": "I get defensive first, then think.",
+              "value": 0
             }
           ]
         },
         {
-          "q": "Picking between an easy task and a stretch task (a game level, a recipe, a project), you usually…",
+          "q": "Easy task or stretch task: which do you usually pick?",
           "options": [
+            {
+              "label": "Depends on who's watching.",
+              "value": -1
+            },
+            {
+              "label": "Easy when I'm drained, stretch when I have energy.",
+              "value": 2
+            },
             {
               "label": "The easy one.",
               "value": -2
             },
             {
-              "label": "Depends on who's watching.",
-              "value": 0
-            },
-            {
-              "label": "Easy when I'm drained, stretch when I have energy.",
+              "label": "The stretch, even when I'm tired.",
               "value": 1
-            },
-            {
-              "label": "Take the stretch. That's where I grow.",
-              "value": 2
             }
           ]
         }
@@ -98,8 +102,8 @@
       "zones": [
         {
           "upTo": -0.34,
-          "label": "Leaning fixed today (on these topics)",
-          "text": "Today's answers treat hard things as tests of who you are. That's tiring, and very common. Next time, try treating it as a test of your method instead."
+          "label": "Today, hard things feel personal",
+          "text": "Your answers treat hard things as tests of who you are. That's tiring, very common, and often what a rough patch does, not a fixed trait. Next time, test the method instead: 'which part lost me?'"
         },
         {
           "upTo": 0.34,
@@ -130,7 +134,8 @@
       "self_efficacy"
     ],
     "try_team": "Each person shares one 'I'm not a ___ person' belief. The group suggests one new method to try for it. Fix methods, not people.",
-    "sensitive": true
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "growth-mindset-praise-choice",
@@ -142,7 +147,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "Your 11-year-old cousin aces a tricky maths quiz and shows you, beaming. You say…",
+          "scenario": "An 11-year-old in your family (a cousin, niece or grandchild) aces a tricky maths quiz and shows you, beaming. You say…",
           "options": [
             {
               "text": "\"Wow, you're so smart!\"",
@@ -198,7 +203,8 @@
       "mistake_alchemy",
       "emotional_contagion"
     ],
-    "try_team": "At dinner, in class or at work (say, in a code review), go round once: each person names one specific thing someone else did well this week, and how."
+    "try_team": "At dinner, in class or at work (say, in a code review), go round once: each person names one specific thing someone else did well this week, and how.",
+    "audience": "all"
   },
   {
     "id": "power-of-yet-reveal",
@@ -266,8 +272,9 @@
     "from_source": {
       "quote": "Men become builders by building and lyre-players by playing the lyre.",
       "cite": "Aristotle, Nicomachean Ethics II.1, trans. W. D. Ross (1925)",
-      "next_read": "Nicomachean Ethics, Book II, chapters 1-4 (on how virtues are acquired by practice)"
-    }
+      "next_read": "Nicomachean Ethics, Book II, chapters 1-4. Aristotle means character, not mindset, but the mechanism rhymes: we become by doing."
+    },
+    "audience": "all"
   },
   {
     "id": "grit-west-point-reveal",
@@ -306,7 +313,8 @@
       "quitting_wisely",
       "one_percent"
     ],
-    "try_team": "Each person names one long goal and the boring part they keep skipping. Pair up and agree one 10-minute step on that part this week."
+    "try_team": "Each person names one long goal and the boring part they keep skipping. Pair up and agree one 10-minute step on that part this week.",
+    "audience": "all"
   },
   {
     "id": "grit-passion-perseverance-venn",
@@ -392,8 +400,9 @@
       "aim_high",
       "small_wins"
     ],
-    "try_team": "Everyone writes one goal for this term on a card and swaps with a partner, who checks in weekly: 'Still your goal? What's the next step?'",
-    "sensitive": true
+    "try_team": "Everyone writes one goal for the next month on a card and swaps with a partner, who checks in weekly: 'Still your goal? What's the next step?'",
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "deliberate-practice-order",
@@ -430,7 +439,8 @@
       "flow",
       "deep_work"
     ],
-    "try_team": "Pick one thing your team, class or family does often (a pitch, a dish, a match). Name its weakest part and run 3 quick rounds on just that, with feedback."
+    "try_team": "Pick one thing your team, class or family does often (a pitch, a dish, a match). Name its weakest part and run 3 quick rounds on just that, with feedback.",
+    "audience": "all"
   },
   {
     "id": "deliberate-practice-repetition-swipe",
@@ -505,7 +515,8 @@
       "skill_gap",
       "flow",
       "grit"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "mistake-alchemy-choice",
@@ -556,7 +567,7 @@
     },
     "insight": "A mistake shows exactly where your method breaks. Ray Dalio sums it up as pain plus reflection equals progress. The trick is to study the cause, not punish yourself.",
     "model": "Mistake → cause → new rule. Keep the lesson, drop the shame.",
-    "try_today": "Write down one recent mistake in 3 lines: what happened, why, and one rule you'll follow next time.",
+    "try_today": "Write one small recent mistake (not the biggest) in 3 lines: what happened, why, one rule for next time. Then close the note.",
     "source": {
       "thinkers": [
         "Ray Dalio",
@@ -574,10 +585,11 @@
     "sensitive": true,
     "try_team": "After a slip at work, school or home, hold a 5-minute no-blame review: what happened, why, and one rule you add. Talk about the process, not the person.",
     "from_source": {
-      "quote": "To have faults and not to reform them, this, indeed, should be pronounced having faults.",
-      "cite": "Confucius, Analects XV.29 (trans. James Legge, 1861)",
-      "next_read": "Analects, Book I.8 ('When you have faults, do not fear to abandon them') and Book XV"
-    }
+      "quote": "When you have faults, do not fear to abandon them.",
+      "cite": "Confucius, Analects I.8 (trans. James Legge, 1861)",
+      "next_read": "Analects, Book I.8 and XV.29"
+    },
+    "audience": "all"
   },
   {
     "id": "small-wins-estimate",
@@ -615,7 +627,8 @@
       "one_percent"
     ],
     "sensitive": true,
-    "try_team": "End a meeting, class or family dinner with one quick round: 'One small step forward I made this week.' 30 seconds each, no ranking."
+    "try_team": "End a meeting, class or family dinner with one quick round: 'One small step forward I made this week.' 30 seconds each, no ranking.",
+    "audience": "all"
   },
   {
     "id": "small-wins-setback-reveal",
@@ -653,7 +666,8 @@
       "never_miss_twice",
       "self_compassion"
     ],
-    "sensitive": true
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "quitting-wisely-swipe",
@@ -722,7 +736,8 @@
       "grit"
     ],
     "try_team": "Pick one shared project, club or family plan and agree its stop signals together: 'If ___ hasn't happened by ___, we stop or change course.'",
-    "sensitive": true
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "risky-play-roaming-estimate",
@@ -761,7 +776,8 @@
       "doomscroll_loop",
       "mistake_alchemy"
     ],
-    "sensitive": true
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "risky-play-risk-hazard-choice",
@@ -809,7 +825,7 @@
           ]
         },
         {
-          "scenario": "Your mate asks to lead the group presentation solo. It feels a bit early for them. You…",
+          "scenario": "Someone in your group (a club, a class, a team at work) asks to lead the next presentation solo. It feels a bit early for them. You…",
           "options": [
             {
               "text": "Say yes, run through it once together, and be ready to jump in.",
@@ -818,7 +834,7 @@
             },
             {
               "text": "Do it yourself. Too much is riding on it.",
-              "feedback": "Safe for this class, costly for growth. Without a first try, the next one stays scary."
+              "feedback": "Safe for this one, costly for growth. Without a first try, the next one stays scary."
             },
             {
               "text": "Let them wing it with no run-through.",
@@ -844,7 +860,8 @@
       "self_efficacy",
       "mistake_alchemy",
       "growth_mindset"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "mistake-alchemy-reveal",
@@ -880,7 +897,8 @@
       "premortem"
     ],
     "try_team": "List 3 recent slips as a team, class or family. Sort each: new ground (share the lesson) or known ground (add a check). No blame.",
-    "sensitive": true
+    "sensitive": true,
+    "audience": "all"
   },
   {
     "id": "self-reflection-loop-example",
@@ -952,7 +970,8 @@
       "quote": "What fault have you resisted? In what respect are you better?",
       "cite": "Seneca, On Anger III.36, quoting Sextius (trans. John W. Basore, 1928)",
       "next_read": "Seneca, On Anger, Book III, ch. 36 (one page)"
-    }
+    },
+    "audience": "all"
   },
   {
     "id": "growth-mindset-genius-culture-swipe",
@@ -998,7 +1017,7 @@
         }
       ]
     },
-    "insight": "Verdict: habits beat slogans. Staff at firms seen as 'talent is fixed' reported less trust and more corner-cutting. It's survey data, and mindset effects overall are contested.",
+    "insight": "Habits beat slogans. Staff at firms seen as 'talent is fixed' reported less trust and more corner-cutting. It's survey data, and mindset effects overall are contested.",
     "model": "Teams copy what leaders reward: praise 'naturals' and people hide gaps; praise progress and they share them.",
     "try_today": "In your next 1:1, ask 'What's one thing you're finding hard to learn right now?' and thank them for the honest answer.",
     "source": {
@@ -1016,7 +1035,8 @@
       "mistake_alchemy",
       "small_wins"
     ],
-    "try_team": "5-minute stand-up round: each person names one thing they got stuck on this week and what unstuck it. The manager goes first."
+    "try_team": "5-minute stand-up round: each person names one thing they got stuck on this week and what unstuck it. The manager goes first.",
+    "audience": "work"
   },
   {
     "id": "deliberate-practice-coaching-choice",
@@ -1065,7 +1085,7 @@
         }
       ]
     },
-    "insight": "Verdict: experience alone often plateaus. Rehearsing one weak spot with quick feedback beats more of the same. How much practice explains expertise is contested.",
+    "insight": "Experience alone often plateaus. Rehearsing one weak spot with quick feedback beats more of the same. How much practice explains expertise is contested.",
     "model": "Better comes from one weak spot, practised just past comfort, with feedback you can use on the next try.",
     "try_today": "Ask one person on your team which single part of their job they'd most like to improve, and book 15 minutes to rehearse it.",
     "source": {
@@ -1082,7 +1102,8 @@
       "grit",
       "self_reflection_loop"
     ],
-    "try_team": "5 min in pairs: pick one tricky moment (a client objection, a pushback email). Try it twice; your partner gives one specific note between tries."
+    "try_team": "5 min in pairs: pick one tricky moment (a client objection, a pushback email). Try it twice; your partner gives one specific note between tries.",
+    "audience": "work"
   },
   {
     "id": "grit-spelling-bee-choice",
@@ -1112,10 +1133,10 @@
           ]
         },
         {
-          "scenario": "Spanish speaking exam in a month. You always freeze on the past tense. Using the spelling bee result, you…",
+          "scenario": "You're learning Spanish, with a speaking test in a month. You always freeze on the past tense. Using the spelling bee result, you…",
           "options": [
             {
-              "text": "Chat on Duolingo with mates every evening",
+              "text": "Chat on a language app with friends every evening",
               "feedback": "Fun, so keep it. But you'll mostly dodge the past tense without noticing."
             },
             {
@@ -1124,14 +1145,14 @@
               "feedback": "That's it. Short, boring, aimed at the gap. The fun stuff is your reward and your test."
             },
             {
-              "text": "Watch Spanish TikToks for slang",
+              "text": "Watch Spanish shows and videos for everyday phrases",
               "feedback": "Inspiring, and you'll pick up phrases. Your weak spot still needs the reps, though."
             }
           ]
         }
       ]
     },
-    "insight": "Verdict: grit paid off through dull, focused solo practice. Grittier spellers did more of it, and that explained their edge. Grit's wider power is contested: effects are modest.",
+    "insight": "Grit paid off through dull, focused solo practice. Grittier spellers did more of it, and that explained their edge. Grit's wider power is contested: effects are modest.",
     "model": "Grit works by getting you to do the boring practice on your weak spot, not by looking busy.",
     "try_today": "Pick one weak spot (a topic, a skill, a tense you freeze on) and give it 15 focused minutes alone today, phone in another room.",
     "source": {
@@ -1148,6 +1169,7 @@
       "small_wins",
       "quitting_wisely"
     ],
-    "try_team": "Class or squad, 5 min: everyone writes their one weak spot on a card, does 3 focused minutes on just that, then shares one thing they noticed."
+    "try_team": "Class, team or family, 5 min: everyone writes their one weak spot on a card, does 3 focused minutes on just that, then shares one thing they noticed.",
+    "audience": "all"
   }
 ]

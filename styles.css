@@ -266,3 +266,12 @@ a { color: inherit; }
 .world-btns button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
 .world-card .hook { margin-top: 10vh; }
 .opt.chosen { border-color: var(--c); background: color-mix(in srgb, var(--c) 12%, var(--surface-2)); }
+
+/* session 12: reward moment and clearer picks */
+.result-name.win { animation: pop .5s cubic-bezier(.34,1.56,.64,1) both; }
+.result-name.win::after { content: " ✦"; color: var(--c); }
+@keyframes pop { from { transform: scale(.85); opacity: .3; } }
+.opt.best { animation: glow 1.2s ease 1; }
+@keyframes glow { 50% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--good) 35%, transparent); } }
+.opt.picked:not(.best) { border-style: dashed; border-width: 2px; }
+.opt.picked:not(.best)::after { content: "  · your pick"; color: var(--muted); font-size: var(--step--1); }
