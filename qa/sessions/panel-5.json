@@ -1,0 +1,588 @@
+{
+ "session": 5,
+ "personas": [
+  {
+   "persona": "Maya, 16, Manchester. Lives on TikTok, can't drive, doesn't lead anything, hates anything that smells like a worksheet. Played the 24 sampled cards and looked at 13 screenshots (wso-triad a/b, fixes-that-fail a/b, map-territory a, loss-aversion b, aim-high-gorilla a, stress-mindset b, reframing a, environment-design b, socratic a, view-feed-dark, view-tracks-light).",
+   "scores": {
+    "hook": 6,
+    "clarity": 7,
+    "usefulness": 6,
+    "safety": 9,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "fixes-that-fail-rats",
+     "severity": "high",
+     "problem": "I just played the Hanoi rat-tail card. The NEXT button then offers me 'A city paid people per rat tail. Guess what they...' (second-order-hanoi-rats). It's the same story with nearly the same hook, so I already know the answer. That makes the app feel broken and I'd scroll away. The feed also gives me the gorilla twice (aim-high-gorilla and goal-directed-perception-gorilla).",
+     "fix": "Give second-order-hanoi-rats a different story: change its hook and prompt to the Delhi cobra bounty ('A city paid people for every dead cobra. Guess what it got more of.'), or retire one of the two rat cards. In app.js, never pick a NEXT card or feed neighbour whose source story matches the card just played. Add a 'story' tag to cards (e.g. 'hanoi-rats', 'gorilla-video') and exclude matching tags. Do the same for aim-high-gorilla: rewrite its prompt around a different inattentional-blindness demo (e.g. 'You're texting while walking past a clown on a unicycle. Would you notice?' Hyman et al., 2010: most phone users missed it) so it no longer copies the goal-directed-perception gorilla."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "On almost every reveal (rats, mug, stress, environment) the app asks 'Do you lead a team, class or family?' with Yes/No. I'm 16, so obviously no. It reads like a workplace survey and makes me feel the app isn't for me. The 'No' button also wraps onto its own line under the text and looks broken.",
+     "fix": "Remove the 'Do you lead a team, class or family?' gate. Make 'Doing this with others? (optional)' a plain collapsible that shows try_team straight away. If a gate is kept, word it 'Got friends or a group to try this with?' with buttons 'Show me' / 'Skip', laid out in one flex row (flex-wrap: nowrap; gap: 8px) so both buttons sit beside the question."
+    },
+    {
+     "card_id": "socratic-ignorance-drivers",
+     "severity": "medium",
+     "problem": "The hook 'Are you an above-average driver?' means nothing to me because I can't drive. deliberate-practice-repetition-swipe also opens with '20 years of driving'. Two driving hooks in one session tells me this was made for my dad.",
+     "fix": "Change the socratic hook to: 'Are you funnier than most people your age? Guess how many people think they are.' Keep the Svenson data in the question, but add one line to explain: 'The same bias shows up everywhere: most people rate themselves above average at being kind, funny and smart.' For deliberate-practice, change the hook to: 'You've played the same game 500 hours. Are you actually getting better?' and swap the driving swipe item for 'Playing ranked matches every night without ever watching your replays' (left, why: 'Hours on autopilot keep your rank where it is. Replays show the exact mistake.')."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "medium",
+     "problem": "Six agree/disagree statements before anything happens feels like a school questionnaire. Then I got 'The Half-Lit Path' with Will 5/10, Skill 5/10, Opportunity 5/10 and a dot in the dead centre. That's a meh result after all that effort, and nothing about it feels like it's about me.",
+     "fix": "Cut the questions to 3 (one per axis: 'I actually want this', 'I could do a rough version today', 'Nothing outside me is stopping me'). Add a step 0 chip row so the goal feels personal: 'Pick your thing: revise for a test / start a side hustle / learn an instrument / get fitter / something else'. Then show the chosen goal in the result title, e.g. 'Learn guitar: The Half-Lit Path'."
+    },
+    {
+     "card_id": "responsibility-meaning-happy-vs-meaningful",
+     "severity": "medium",
+     "problem": "'No wrong pick here' and then a 2013 survey of US adults is a lecture. Week B ('helped a friend move and finished something people rely on') is an adult life, not mine. The sentence after the result is long and dry.",
+     "fix": "Change Week B to: 'Tiring, but you helped your mate revise for their resit and finished the group project everyone was counting on.' Shorten the reveal to: 'Most people pick B as more meaningful, even when A felt happier. Research says: happy = getting, meaningful = giving. Both count.' Move the Baumeister and Frankl detail to the Why? section."
+    },
+    {
+     "card_id": "start-with-why-pitch",
+     "severity": "low",
+     "problem": "A Saturday park clean-up with a neighbour is so wholesome it's cringe. I'd never be the one recruiting for this, so the 10-second-pitch hook loses me.",
+     "fix": "Change the scenario to: 'You want your friends to start a Friday-night five-a-side (or a study group). In the group chat, your first message is…' Options: 'Pitch at 6, bring £3' (logistics), 'I'm sick of us just scrolling on Fridays, let's actually do something' (best), 'It'll be the best thing anyone's doing this term' (hype). Step 2 'Sounds good but I'm busy' → best reply: 'Even one week, come for the first half.'"
+    },
+    {
+     "card_id": "loss-aversion-mug-price",
+     "severity": "low",
+     "problem": "A slider from 1 to 5 in steps of 0.1 with a × unit is fiddly on a phone. A mug isn't something I care about, and the dollar amounts (7.12 vs 2.87) read like a maths lesson.",
+     "fix": "Change step to 0.5 and the question to: 'Students got a free mug. Those who got one named a selling price; those who didn't named a buying price. How many times more did owners want?' Rewrite explain as: 'About 2.5×. Same mug. Owning it for 5 minutes made it feel worth more.' Change try_today to: 'Look at one thing you're selling on Vinted or keeping in your wardrobe: would you buy it today at that price?'"
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "The Tracks page intro 'Twelve rooms of the same house... models you can try on' is vague and slow. Each track card is huge, so I see only 4 before scrolling. Every card ends with three link rows (Doing this with others?, Why? · 15-second read, Play again) plus a helpline footer. That pile-up at the bottom makes it feel like homework.",
+     "fix": "Change the Tracks subtitle to: '12 topics. Each game takes under a minute.' Reduce track card height (smaller icon, put the progress text on the same row as the title) so 6+ fit on one phone screen. On the reveal, make the NEXT button the last element and fold 'Why?' and 'Play again' into a single small row above it."
+    }
+   ],
+   "best_cards": [
+    "fixes-that-fail-rats",
+    "reframing-boss-text",
+    "one-percent-doubling-reveal"
+   ],
+   "verdict": "Some of these are actually good. The rat-tail backfire is a story I'd retell, the 11pm 'We need to talk' text is literally my life, and the doubling pile made my brain go 'wait what'. It's kind too: no card made me feel stupid, and the 'not a verdict' lines are nice. But the app keeps showing it wasn't made for a 16-year-old. There are two driving hooks, a 'do you lead a team?' popup on every card, park clean-ups and helping-a-friend-move weeks. And then it gave me the rat story twice in a row and the gorilla twice, which made it feel lazy. The questionnaire cards (WSO, radar) are too long before the payoff. Fix the repeats, cut the adult framing and swap the examples for teen stuff (group chats, games, revision, Vinted), and I'd play 5 in a row. Right now it's more like 2."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj, non-native English speaker, tired and a bit burned out. Wants practical tools he can use tomorrow with his team and himself; impatient with fluff.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "For me the best part of each card is try_team, and it is hidden. In the screenshots (reframing-boss-text-b, loss-aversion-mug-price-b, aim-high-gorilla-b) the '👥 Doing this with others? (optional)' disclosure is collapsed. The 'Do you lead a team, class or family? Yes / No' question sits under it, the No button wraps alone onto its own line, and you can't tell how the question relates to the closed box above. It looks broken. The question also appears again on every card until you answer it.",
+     "fix": "In renderReveal (app.js ~line 194-200): put the leads-ask inside the <details class='team'> right after the summary, and render it with the details open, so the question and the team tip appear together. Keep Yes/No on one row (leads-ask: display:flex; flex-wrap:nowrap; gap:8px; align-items:center). Change the summary text to '👥 Use it with your team (1 min)'. If the user taps No, collapse the details and never show the ask again."
+    },
+    {
+     "card_id": "aim-high-gorilla",
+     "severity": "high",
+     "problem": "It's the same gorilla study twice in a row. aim-high-gorilla's 'Next' button goes straight to goal-directed-perception-gorilla ('A person in a gorilla suit walks past…'). I just learned the answer, so the second card is dead and feels like filler.",
+     "fix": "Change aim-high-gorilla.related to [\"begin_with_end\",\"map_territory\",\"goal_directed_perception\"] so Next points somewhere new. Also add a feed rule: never queue two cards that cite the same study (the Simons & Chabris 1999 source) within 10 cards of each other."
+    },
+    {
+     "card_id": "anchoring-africa-un",
+     "severity": "medium",
+     "problem": "The hook promises 'Watch it bend your guess', but the reveal never connects MY guess to the 65 I was shown. It only reports the 1974 study, so the lesson stays abstract. The try_today also mentions 'pocket money', which is useless for an adult negotiating salaries or vendor quotes.",
+     "fix": "explain: \"54 of the 193 UN members are African: about 28%. You saw 65 first. If your guess landed above 35%, that number probably pulled you up. In the 1974 study, people who saw a wheel land on 65 guessed a median of 45%; those who saw 10 guessed 25%.\" try_today: \"Before your next salary talk, vendor quote or estimate meeting, write your own number and one reason it's fair, before you hear theirs.\""
+    },
+    {
+     "card_id": "reframing-boss-text",
+     "severity": "medium",
+     "problem": "The card id says 'boss text', but the scenario is a friend, mum or partner. 'We need to talk' from a manager is the real 11pm panic for working adults, and it is the case I'd show my team. The try_team, about adding context before sending 'Can we talk?', is excellent, but it doesn't match the scenario.",
+     "fix": "Step 1 scenario: \"11pm. Your manager (or a close friend, or your partner) texts: 'We need to talk. Tomorrow?' No context. Your heart speeds up. What do you tell yourself?\" Step 2 best option text: \"Reply: 'Sure. Anything I should prepare? What time works?'\""
+    },
+    {
+     "card_id": "loss-aversion-mug-price",
+     "severity": "medium",
+     "problem": "The explain text says 'a median of about 7.12 … about 2.87' with no currency, so I paused to work out 7.12 of what. The slider runs from 1 to 5 and starts at 3, which is next to the 2.5 answer, so almost anyone gets 'Bullseye' and learns nothing about how big the gap is.",
+     "fix": "explain: \"In Kahneman, Knetsch & Thaler's 1990 study, owners asked a median of about $7.12 and buyers offered about $2.87: roughly 2.5× for the same mug. Giving it up felt like a loss.\" Set game.min to 0.5, game.max to 10, step 0.1, so the start value (5.25) sits away from the answer."
+    },
+    {
+     "card_id": "habit-loop-choice",
+     "severity": "medium",
+     "problem": "Many examples in this sample are for school kids: a friend biting nails before a test, 'homework, chores, bills' (stress-mindset-spectrum), 'teacher' (dichotomy-of-control-swipe), 'driving to school' (deliberate-practice). As a 44-year-old manager I feel I'm in the wrong app, and I can't reuse the examples with my team.",
+     "fix": "habit-loop-choice step 2 scenario: \"Whenever a meeting gets tense, a colleague grabs their phone and starts scrolling. The tension (the cue) won't vanish. What helps most?\" Options: \"Tell them to just stop.\" / best: \"When the urge comes, pick up a pen and write down the next question to ask.\" (keep the habit-reversal feedback) / \"Wait until the project calms down.\" stress-mindset-spectrum Q2: \"When things pile up (deadlines, chores, bills), I mostly try to…\". deliberate-practice item: \"Driving to work every day for 20 years.\""
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "The card is very useful, but the inverted lines read like double negatives for a non-native reader. 'If this goal got hard or boring, I'd happily drop it' left me unsure whether agreeing counts as good or bad. I answered neutrally and got 5/5/5.",
+     "fix": "Rewrite the inverted lines in plain words: W invert: \"If this got boring, I would probably stop.\" S invert: \"I don't know where to start.\" O invert: \"Something outside my control (money, rules, a person) blocks me.\""
+    },
+    {
+     "card_id": "start-with-why-because-estimate",
+     "severity": "low",
+     "problem": "'Everyone there had to make copies' is meant to show that the 'because' adds no real reason, but on first read it sounds like extra detail about the setup. I missed the point until the explain text.",
+     "fix": "question: \"1978 experiment: someone asks people at a library copier, 'May I go first, because I have to make copies?' (An empty reason: everyone in line has to make copies.) What % let them go first?\""
+    }
+   ],
+   "best_cards": [
+    "wso-triad-venn",
+    "fixes-that-fail-rats",
+    "dichotomy-of-control-swipe"
+   ],
+   "verdict": "Good material, and I'd steal a few for my team. WSO, the rat-tail bounty (Goodhart's law for our KPIs) and the control sort I can use in a 1:1 tomorrow. The try_team lines are the best value for a manager, but the UI hides them behind a collapsed box and a Yes/No question that looks broken. Too many examples are about school, homework and pocket money, so as an adult I sometimes feel I'm in the wrong app, and the gorilla twice in a row felt like filler. It is safe and kind throughout, with honest evidence caveats. Show the team version, use adult examples, and close the loop on the player's own guess (like anchoring), and I'd play every day."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher; reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader; dislikes pop-psych oversimplification.",
+   "scores": {
+    "hook": 6,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The primary-source passages (Seneca Letter 13, Epictetus Ench. 1, Plato Apology 21d, William James, Franklin) are the most valuable thing here for a reader like me, and you only see them if you open the collapsed 'Why? · 15-second read' at the very bottom. It sits below the Next button and the team prompt. In every reveal screenshot I looked at (dichotomy, socratic, aim-high-gorilla, fixes-that-fail), the old text was invisible. As it stands, the 'Academy' part of the app is hidden.",
+     "fix": "In app.js renderReveal, move the card.from_source blockquote out of the `more` <details> and append it directly after the model-line paragraph, before the Try today box: wrap.append(h('blockquote',{class:'primary'}, h('p',{}, `“${quote}”`), h('footer',{}, cite, ' · Read next: '+next_read))). Leave only the insight, the evidence chip and the source line inside 'Why?'."
+    },
+    {
+     "card_id": "useful-truth-people-person",
+     "severity": "high",
+     "problem": "The card dismisses reflection. Its rejected option is 'Thinking hard about whether it's really true', and the reveal says thinking 'mostly replays old memories'. That is unfair to the examined life (the Socratic card in this same feed praises it), and it turns James and Peirce into a behavioural experiment. The prompt is also muddled: the pragmatist asks two questions, and then the card asks 'Which test tells you more?'",
+     "fix": "Prompt: \"You believe 'I'm not a people person.' William James would ask: what difference does this belief make in practice? Which test adds something reflection alone can't?\" Choices: [\"Reflecting carefully on past evidence\", \"Reflecting, then living one week as if it might be false\"] (answer 1). Reveal: \"Reflection matters; it is where the question starts. But James and Peirce held that an idea's meaning shows in its practical consequences, so the test has to leave the armchair too. A belief that keeps you home alone 'proves itself' only because you never ran the experiment.\" Add to the insight: \"James's view of truth was hotly disputed (Russell among others); take it as a method, not the last word.\""
+    },
+    {
+     "card_id": "fixes-that-fail-rats",
+     "severity": "medium",
+     "problem": "In the reveal screenshot, the Next button leads to 'Second-order thinking: A city paid people per rat tail. Guess what they…', which is the same Hanoi rat story I just finished. Being served the same anecdote twice in a row feels careless and wastes my time.",
+     "fix": "Reorder related to [\"delays\", \"doomscroll_loop\", \"second_order\"] so the next card is new material. Better still, give the second_order card its own example: \"A school bans phones at lunch. What happens at 3:15?\" Or use Goodhart's law with Soviet nail-factory quotas, labelled as a classic parable."
+    },
+    {
+     "card_id": "aim-high-gorilla",
+     "severity": "medium",
+     "problem": "The invisible-gorilla study appears twice in one session (aim-high-gorilla and goal-directed-perception-gorilla), and aim-high-gorilla's Next button leads straight to the second gorilla card. The two cards also report the result differently ('about half' vs '46%'). Repeating the same experiment makes the curriculum feel thin.",
+     "fix": "Replace aim-high-gorilla's game with a different reveal tied to aiming. Prompt: \"Two walkers cross the same city. One is looking for a café to write in, the other for a pharmacy. Afterwards, who remembers more cafés?\" Choices: [\"The same\", \"The café-seeker\"], answer 1. Reveal: \"The café-seeker, almost always: aims filter what gets noticed and stored. The famous lab version is the invisible-gorilla study (see 'You See What You Aim At').\" At minimum, change 'about half of viewers' to '46% of viewers overall' and change related to [\"begin_with_end\", \"map_territory\", \"goal_directed_perception\"]."
+    },
+    {
+     "card_id": "aim-high-clear-target-choice",
+     "severity": "medium",
+     "problem": "The same Aristotle archer quote is attached to two cards (aim-high-gorilla and this one). Here it presents 'Run 5 km by the 30th' as if it were Aristotle's 'mark'. In Nicomachean Ethics I.2 the mark is the chief good of a whole life, not a goal-setting target. Using the quote this way flattens telos into something like a SMART goal.",
+     "fix": "Change this card's from_source to Seneca: quote \"When a man does not know what harbour he is making for, no wind is the right wind.\" cite \"Seneca, Moral Letters to Lucilius, Letter 71 (trans. R. M. Gummere, 1917)\" next_read \"Seneca, Letter 71, opening paragraphs\". Keep the Aristotle quote only on aim-high-gorilla, and add a sentence to that card's insight: \"Aristotle's mark was the good life itself; small targets serve it, they don't replace it.\""
+    },
+    {
+     "card_id": "map-territory-swipe",
+     "severity": "medium",
+     "problem": "The card classes 'The taste of the coffee in your mouth' as Territory, with the note 'Direct experience'. That contradicts Korzybski himself: in Science and Sanity, even sensation is an abstraction the nervous system makes from the event. A careful reader will catch the card misreading its own source.",
+     "fix": "Change that item's why to: \"Closer to the territory than the menu ever gets. Korzybski would add: even taste is your nervous system's summary. Fewer layers of map, not none.\" Or replace the item with {\"text\": \"The menu's 'rich, velvety notes'\", \"side\": \"left\", \"why\": \"Someone's words about a taste you haven't had yet.\"}"
+    },
+    {
+     "card_id": "dichotomy-of-control-swipe",
+     "severity": "medium",
+     "problem": "The hook 'Half of what you worried about today was never yours to fix' reads like a statistic, and it is invented. In the item notes, 'Epictetus put judgments and actions here' and 'Effort and attitude belong to you' misstate Enchiridion 1. Epictetus lists opinion, impulse, desire and aversion as up to us, and puts the body among the things that are not, so 'how hard you train' is only partly ours in his terms. The 'first jolt when insulted' item is excellent: that is Seneca's 'first movements' (De Ira II).",
+     "fix": "Hook: \"Epictetus sorted every worry into two piles. Can you?\" Change the why on 'How hard you train this week' to: \"Your decision to train is yours. Epictetus put our judgments, impulses, desires and aversions in this pile; even the body, he said, is only lent to us.\" Change the why on 'Your first emotional jolt' to: \"Seneca called these 'first movements': automatic, not chosen. What you do in the next minute is yours.\""
+    },
+    {
+     "card_id": "start-with-why-because-estimate",
+     "severity": "low",
+     "problem": "Langer's copier study is about mindlessness: for small requests people respond to the word 'because', not to the reason that follows it. The card's model, 'Small asks need a why', turns a finding about inattention into a persuasion tip, and filing it under 'Start with why / Meaning' muddies both ideas. The numbers themselves are accurate and honestly caveated, which I appreciated.",
+     "fix": "Insight: \"Langer's point was mindlessness: on small asks we react to the word 'because', not the reason. On bigger asks we wake up and weigh it. That's a tool and a warning: notice when an empty 'because' works on you.\" Model: \"On autopilot we hear 'because'; awake, we weigh the reason. Give a real one, and listen for real ones.\" Add 'mindfulness' or 'system1_system2' as the first related concept."
+    }
+   ],
+   "best_cards": [
+    "reframing-boss-text",
+    "responsibility-meaning-happy-vs-meaningful",
+    "start-with-why-because-estimate"
+   ],
+   "verdict": "This is better than I expected. Most cards are careful with evidence: they flag Sinek as contested, note that Crum's effect is modest, and admit the Langer study was small. The tone is kind, and the stress and meaning cards handle hard lives with real tact. The reframing card, with Seneca's Letter 13, is exactly what I would want to show a former student. But the depth this app promises is hidden. The primary-source passages sit in a collapsed panel below the fold. The philosophers are sometimes bent to fit a self-help point: Aristotle's telos turned into a 5 km goal, Korzybski misread, Epictetus's list paraphrased loosely, and reflection itself belittled in the pragmatism card. The same anecdotes also come back in one session: two gorilla cards and two rat-tail cards. The voice leans towards teenagers (pocket money, homework, 'your mum'), which makes the Academy promise feel younger than it is. It is a solid 6-7; with the sources made visible and the philosophy made accurate, it could reach 8."
+  },
+  {
+   "persona": "Sam, 24, graduate with anxiety and low self-worth after a rough year; sensitive to shaming, labels and pressure; needs it to feel safe and genuinely helpful.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "one-percent-doubling-reveal",
+     "severity": "medium",
+     "problem": "The hook 'Your brain is bad at one kind of maths' opens by labelling me as deficient. I've spent a year feeling like I'm bad at everything, so a card that starts by telling me my brain is bad makes me tense up before I even play. The reveal underneath is kind, which makes the harsh opening stand out more.",
+     "fix": "Change hook to: \"Most brains trip on one kind of maths. Want to see how yours handles it?\""
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Every reveal opens the 'Doing this with others? (optional)' section to a 'Do you lead a team, class or family?' question with Yes/No buttons. On a phone, 'No' wraps onto its own line. I'm an unemployed graduate, and being asked about my status on card after card stings. The repetition also adds clutter just above the Next button. Seen on map-territory, stress-mindset, feedback-loops, socratic and responsibility screenshots.",
+     "fix": "Remove the Yes/No gate. Keep the section collapsed and, when it is expanded, show the try_team text directly under a neutral label: 'Want a version to try with friends or a group?'. If the gate has to stay, ask it once per session (not per card) and put Yes and No on the same row."
+    },
+    {
+     "card_id": "stress-mindset-spectrum",
+     "severity": "medium",
+     "problem": "Q4 asks 'Feeling stressed is a sign that…' and the honest answer for me, 'I'm not coping', scores -2, the most negative value. The slider also runs from a pale 'harms' end to a bright 'fuel' end, so my honest answer feels like a fail. The result header reads 'RIGHT NOW YOU LEAN' and then 'Today: leaning stress harms', which repeats itself.",
+     "fix": "Change the Q4 option label from 'I'm not coping' to 'Something needs attention' (keep value -2). Drop the 'Today: ' prefix from the three zone labels (e.g. \"Leaning 'stress harms'\"), because the app header already says 'Right now you lean'. In app.js, use the same colour strength at both ends of the spectrum track instead of a gradient from faint to strong."
+    },
+    {
+     "card_id": "socratic-ignorance-drivers",
+     "severity": "medium",
+     "problem": "The lesson ('treat your confidence as a guess', 'I might be wrong') is aimed at overconfident people. Someone with low self-worth already doubts everything about themselves, and this card could push that further. Nothing says the bias also runs the other way.",
+     "fix": "Append to insight: \"It cuts both ways: if you usually rate yourself low, that's a guess too, and worth checking against evidence.\" Change model to: \"Treat your self-ratings, high or low, as guesses. 'I might be wrong' opens the door to learning.\""
+    },
+    {
+     "card_id": "useful-truth-people-person",
+     "severity": "medium",
+     "problem": "'I'm not a people person' is close to something I actually believe right now. The reveal line 'A belief that keeps you home alone \"proves itself\"' reads like a dig at people who stay in. It also marks the 'thinking hard' option as the lesser answer, and that is what anxious people do.",
+     "fix": "Replace the last reveal sentence with: \"Beliefs like this can quietly keep themselves alive, because they steer us away from the very moments that could test them. A small, low-stakes test is kinder and more informative than more thinking.\" Change try_today to: \"Pick one limiting belief. Try one small, low-stakes action that would only make sense if it were false, then note what actually happened, without grading yourself.\""
+    },
+    {
+     "card_id": "reframing-boss-text",
+     "severity": "low",
+     "problem": "The content is excellent, but the feedback on the first (catastrophising) option says 'it will cost you a night's sleep before you know anything'. For an anxious reader that adds a second worry: now they're also failing at sleep. The id also says 'boss' while the scenario is a friend, family member or partner.",
+     "fix": "Change option 1 feedback to: \"A very normal first reaction, especially if you're already on edge. It's just one story out of many, and you don't have to settle it tonight.\" Rename the id to reframing-late-text (update any related references)."
+    },
+    {
+     "card_id": "aim-high-clear-target-choice",
+     "severity": "low",
+     "problem": "The model 'Aim specific and a little scary' builds fear into the advice. For an anxious reader, 'scary' sounds like pressure, and the card's own evidence only supports 'stretching'.",
+     "fix": "Change model to: \"Aim specific and a little stretching. If the skill is new, aim to learn first.\""
+    },
+    {
+     "card_id": "responsibility-meaning-happy-vs-meaningful",
+     "severity": "low",
+     "problem": "try_today says 'do it a little better than needed', which is a perfectionist push for someone who is already depleted. The Next card it points to (amor fati: 'A setback you got through: would you delete it…') is heavy straight after this one for someone coming off a rough year.",
+     "fix": "Change try_today to: \"Pick one small thing someone relies on you for and do it with care today. Afterwards, notice how it felt.\" In feed sequencing, don't chain two sensitive meaning/adversity cards back to back; put a light card (e.g. two-minute-rule-swipe) in between."
+    }
+   ],
+   "best_cards": [
+    "feedback-loops-spiral",
+    "dichotomy-of-control-swipe",
+    "wso-triad-venn"
+   ],
+   "verdict": "Mostly felt safe. Results are framed as snapshots ('not a verdict', 'People move'), there's a helpline footer on the sensitive cards, and the wrong-answer feedback is gentle ('Understandable…', 'you're in good company'). Feedback-loops and WSO in particular gave me something small and doable on a bad day. What lets it down is the remaining labelling hooks ('Your brain is bad at…'), lessons tuned for overconfident people that a low-confidence reader could take the wrong way, and options that put an honest answer like 'I'm not coping' at the worst end of a scale. The repeated 'Do you lead a team?' question on every card is also a quiet status check. Two gorilla cards in one session made it feel repetitive. I'd keep playing, but carefully."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist. I check every claim, attribution and effect size, and I look for replication-crisis myths, overclaiming and weak survey design.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "goal-directed-perception-door-swap-reveal",
+     "severity": "high",
+     "problem": "The reveal states a mechanism the study never tested: \"Their aim was 'explain the route', so the face barely got stored.\" Simons & Levin (1998) explained the misses as people storing a coarse category ('a stranger', 'a construction worker'), not as goal-driven filtering. Their follow-up found that students mostly missed the swap when the stranger looked like an out-group worker. The model line 'You remember what you were aiming at' then generalises from 15 people.",
+     "fix": "Replace the last reveal sentence with: \"One likely reason: people stored a rough label ('a stranger with a map'), not the face. In a follow-up, students noticed a swap more often when the stranger looked like a fellow student.\" Change model to: \"We often store a label, not the person. Aim to notice the person and you'll see more of them.\""
+    },
+    {
+     "card_id": "aim-high-gorilla",
+     "severity": "high",
+     "problem": "This card duplicates goal-directed-perception-gorilla, and the feed plays them back to back (the NEXT tile on aim-high-gorilla-b.png is the other gorilla card). The second card is therefore spoiled. The scoring is also statistically backwards: in Simons & Chabris about 54% DID notice, yet 'Of course I would' is marked wrong and 'Maybe not' gets 'Spot on.' Finally, evidence 'strong' sits on a card whose actual claim (a worthy aim helps you spot chances) is an untested lens.",
+     "fix": "Do not let two cards with the same study (both gorilla cards) be adjacent or appear in the same session. Remove \"answer\":1 so both picks are accepted, or rewrite the choices as 'I'd definitely notice' / 'I might miss it' and open the reveal with: \"Both are reasonable: about half noticed, half didn't. What's surprising is how sure most people are they'd see it.\" Set evidence to \"moderate\", or split the badge to say the gorilla finding is strong and the aim lesson is philosophy."
+    },
+    {
+     "card_id": "environment-design-radar",
+     "severity": "medium",
+     "problem": "The insight says \"Willpower is tiring.\" That is the ego-depletion claim, which failed large preregistered replications (Hagger et al. 2016 multi-lab RRR, Vohs et al. 2021). Elsewhere the app is careful about replication. Separately, Hofmann et al. 2012 is correlational experience sampling, so 'fewer temptations' is an association, not proof that environment explains self-control. Item 5 is also double-barrelled (plate AND home screen).",
+     "fix": "Change the insight to: \"People who rated their self-control highly reported meeting fewer temptations, not resisting more (Hofmann et al., 2012, a correlational diary study). Resisting in the moment is unreliable; your surroundings work every day for free.\" Change item 5 to: \"The easiest option in front of me (food, apps, plans) is usually a good one.\""
+    },
+    {
+     "card_id": "stress-mindset-spectrum",
+     "severity": "medium",
+     "problem": "The scale design is inconsistent. Q3 is scored ±1 while the others are ±2, which quietly underweights an item. Q2 measures coping style (avoid / push through / treat as training), not stress mindset, and its 'bills' example brings in chronic financial stress, which reframing does not fix. Q4's poles ('I'm not coping' vs 'I care about this') are not opposites, since both can be true at once. 'Racing heart = body gearing up' comes from Jamieson's arousal-reappraisal work, not Crum, but only Crum is cited. 'Health' in the insight overstates self-reported symptoms.",
+     "fix": "Q2: change the text to \"When a stressful task looms (homework, a deadline), I mostly see it as…\" with options 'A threat to get through' -2 / 'Not sure' 0 / 'A chance to get stronger' +2. Q4: change the options to 'Something is going wrong' -2 / 'Hard to say' 0 / 'Something matters to me' +2. Leave Q3 at ±1, but add a line in the card notes that it is deliberately downweighted, and say so in the 'Why this' panel. Add 'Jeremy Jamieson' to thinkers and 'Jamieson et al., Journal of Experimental Psychology: General (2012)' to work. In the insight, change 'performance and health' to 'performance and fewer stress symptoms (self-reported)'."
+    },
+    {
+     "card_id": "one-percent-doubling-reveal",
+     "severity": "medium",
+     "problem": "The habit analogy runs against the habit data. Habit automaticity follows an ASYMPTOTIC curve: big gains early, then a plateau (Lally et al. 2010, median about 66 days). That is the opposite of exponential growth. 'Don't judge a habit in week one' is fine advice, but the compounding framing teaches a false model of habits. Separately, 'doubles for 30 days' is ambiguous (30 or 31 payments).",
+     "fix": "Change the prompt to: \"Pile B: you get 1 coin on day 1, 2 on day 2, 4 on day 3, doubling each day until day 30.\" Change the insight to: \"People reliably underestimate compound growth (Stango & Zinman, 2009). Habits don't compound like this. In one study, automaticity grew fast at first and then levelled off over about 66 days (Lally et al., 2010). The shared lesson: early days look unimpressive.\" Change the model to: \"Don't judge a slow start by week one. Give it about two months.\""
+    },
+    {
+     "card_id": "flow-challenge-skill-venn",
+     "severity": "medium",
+     "problem": "On flow-challenge-skill-venn-a.png, a 4/10 by 4/10 player's dot is drawn inside the Challenge-Skill overlap, which visually reads as the Flow Channel, while the text says 'Right on the fence'. The items also confound the two axes. 'There's a real chance I'll fall short' (Challenge) and 'I often feel lost about where to start' (inverted Skill) both tap the challenge-skill GAP, not each axis on its own. The first item buries the instruction inside the question text, and there is no game.prompt.",
+     "fix": "Add game.prompt: \"Think of your main task this week (school, work, a hobby). Answer every line for that task.\" Change Q1 to \"It stretches me.\" Replace Q3 with \"It asks more of me than my usual tasks.\" Replace Q5 with \"I'd need to learn new things to do it well.\" (axis S, invert:true). Add a 'mid' result, and render mid scores at the centre point outside both circles, or with a dashed outline, not inside the overlap."
+    },
+    {
+     "card_id": "deliberate-practice-repetition-swipe",
+     "severity": "medium",
+     "problem": "This card presents Ericsson's strong view without its main counter-evidence. Macnamara, Hambrick & Oswald (2014) found deliberate practice explained about 12% of performance variance on average, and under 1% in professions. The driving item ('mostly stops improving') is also shaky: crash risk keeps falling for years with experience.",
+     "fix": "Change the insight to: \"Ericsson argued that once a skill feels automatic, more hours add little; growth comes from narrow, slightly-too-hard work with feedback. Later reviews found practice matters but explains less than he claimed (Macnamara et al., 2014).\" Change the driving item's why to: \"Daily driving keeps you safe and fluent, but it rarely sharpens specific skills like skid control. That takes targeted practice.\" Add 'Brooke Macnamara' to thinkers."
+    },
+    {
+     "card_id": "dichotomy-of-control-swipe",
+     "severity": "low",
+     "problem": "The hook invents a statistic: \"Half of what you worried about today was never yours to fix.\" Nothing supports 'half'. In an otherwise excellent card (the 'first emotional jolt' item is a fine use of the Stoic doctrine of first movements), that is exactly the kind of overclaim a learner later repeats as fact.",
+     "fix": "Change the hook to: \"How much of today's worry is actually yours to fix? Swipe and sort.\""
+    }
+   ],
+   "best_cards": [
+    "start-with-why-because-estimate",
+    "aim-high-clear-target-choice",
+    "anchoring-africa-un"
+   ],
+   "verdict": "This session's sample is better sourced than most pop-psych products I review. The figures I checked are right: Langer 93/94/60 and 24/24/42, Tversky and Kahneman's medians of 25 and 45, the endowment-effect medians of 7.12 and 2.87, Svenson's 93%, Baumeister's N of about 400, and Vann on Hanoi. Hedges like 'Sinek's brain story isn't backed' and 'Dunning-Kruger is debated' are exactly right. The problems are the familiar ones. Several mechanism claims go beyond their studies (the door-swap explanation, aim-high's 'strong' badge). One replication-failed idea slipped in ('willpower is tiring'). The stress-mindset scale has uneven weights and items that measure coping rather than mindset. The two gorilla cards play back to back, so the second is spoiled. The doubling card pushes a compounding model of habits that the asymptotic habit data contradicts. Fix those and I would trust this enough to recommend it to students."
+  },
+  {
+   "persona": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments and shareability.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "goal-directed-perception-gorilla",
+     "severity": "high",
+     "problem": "The two gorilla cards point to each other. In the screenshots, aim-high-gorilla's NEXT button opens 'A person in a gorilla suit walks past. Would you...' and goal-directed-perception-gorilla's NEXT opens 'A gorilla walks through a video. Would you even...'. Both are in the same session. You play the same 1999 Simons & Chabris experiment twice in a row, so the second one has no surprise left and it feels like a bug. This is the worst hit to pacing in this session.",
+     "fix": "Keep only one gorilla card. Rebuild goal-directed-perception-gorilla around a different, fresh study: change type to estimate and set question = \"Radiologists searched lung scans for nodules. Researchers pasted in a gorilla 48 times the size of a typical nodule. What % of the radiologists missed it?\", answer = 83, explain = \"Drew, Vo & Wolfe (2013): 20 of 24 expert radiologists (83%) missed it, even though eye-tracking showed most of them looked right at it. Their aim was 'find nodules'.\", hook = \"Expert doctors scanned for one thing. Guess how many missed a gorilla.\" Also add a rule in the feed and next-card logic: two cards that cite the same experiment (same source.work) can never sit next to each other or link to each other through NEXT."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The estimate slider starts at the midpoint of its range (50% on 0-100 cards), so the slider's own starting value is an anchor. Players also seem to lock in without moving it much: four estimate screens in s5 show 'You: 40%'. On socratic-ignorance-drivers, the hidden 50 acts as an anchor while the lesson is about overconfidence. On anchoring-africa-un, the result never tells me how the shown 65 bent MY guess, even though the hook promises 'Watch it bend your guess.' That missing payoff is the moment I'd screenshot and share.",
+     "fix": "In app.js estimate(): when g.anchor is null, hide the value readout until the first input event, show 'Drag to guess', and place the thumb at a random position instead of the midpoint. When g.anchor is set, add a line after the verdict: `You saw ${fmt(g.anchor)} first. Your guess: ${fmt(guess)}. Real: ${fmt(g.answer)}.` If |guess-anchor| < |g.answer-anchor|, follow it with 'The anchor pulled you toward it, just like in the 1974 study.' Otherwise use 'You resisted the anchor. Most people don't.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The swipe result praises a coin-flip score. In two-minute-rule-swipe I got 3 of 6 and the headline says '3 of 6. Sharp sorting.' On a two-sided sort, 50% is chance, so the reward feels fake and cheapens the real 'Clean sweep.'",
+     "fix": "In app.js line ~431, change the tiers to: right === n -> 'Clean sweep.'; right >= n*0.75 -> `${right} of ${n}. Sharp sorting.`; right >= n/2 -> `${right} of ${n}. Halfway there: the ↻ ones are the lesson.`; else -> `${right} of ${n}. These ones are sneaky.`"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The verdict sits in different places on different card types. On estimate cards it comes first ('Plot twist: it's smaller.'). On reveal cards ('Spot on.', one-percent-doubling-reveal and aim-high-gorilla) it appears under a 6-line explanation, so the reward moment is buried and fades in late. On reframing-boss-text the 3-line headline 'Good guesses. Here's the move that works best:' pushes THE MODEL below the fold.",
+     "fix": "In reveal(), render the verdict ('Spot on.' / 'Not quite...') straight after the chosen option and before g.reveal, the same order estimate uses. For choice cards, shorten the summary headline to 'Best moves:' and keep it to one line."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Every reveal shows an inline 'Do you lead a team, class or family? Yes / No' prompt. At 390px the 'No' pill wraps onto its own line (seen on one-percent, aim-high-gorilla, goal-directed-perception-gorilla, stress-mindset). It's one more tap of noise between the reward and the NEXT button on every card.",
+     "fix": "Ask this once in onboarding or the first time someone opens 'Doing this with others?', store the answer, and don't render it again. If it has to stay, put the question on its own line and both pills in one row (flex-wrap: nowrap, gap 8px), and shorten the label to 'Lead a group?'"
+    },
+    {
+     "card_id": "start-with-why-because-estimate",
+     "severity": "low",
+     "problem": "This card and socratic-ignorance-drivers are both 0-100% estimates in the same session, and both answers are 93%. Back to back, the second big reveal feels like a repeat and the slider mechanic gets tired. The hook also asks a yes/no question ('Can a reason that says nothing still get strangers to say yes?') while the game asks for a percentage.",
+     "fix": "Make this card a reveal: prompt = \"Someone asks to cut the copier queue: 'May I go first, because I have to make copies?' (Everyone there has to make copies.) How many say yes?\", choices = [\"Barely anyone: that's no reason\", \"About as many as for a real reason\"], answer = 1, reveal = the current explain text. Also stop the feed from scheduling two estimate cards within 3 positions of each other."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "In dark mode the My Map legend uses colours that are hard to tell apart at node size: Growth vs Systems vs Decisions (three greens/teals), Thinking vs Attention & Rest (two blues), Habits vs Old Wisdom (yellow vs ochre). Labels like 'The Dreaming Sprint...' and 'Will · Skill · Oppo...' also overlap neighbouring nodes. The map is the screen people would share, and right now it reads as noise.",
+     "fix": "Reassign the domain colours so no two are within ~30° hue of each other: e.g. Systems #14B8A6 to #64748B (slate), Decisions to #F43F5E, Attention & Rest #6366F1 to #A3E635. Draw labels only for the 3 most recently played nodes, each on a semi-opaque pill background (rgba(0,0,0,.6), 4px radius) that is offset so it doesn't overlap nodes."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "A neutral 'all 5/10' run produces 'The Half-Lit Path', with the dot sitting dead centre in the triple overlap. The centre visually means 'all three strong', so the picture says the opposite of the text and the text has to explain it ('That's why the dot is in the centre: all medium, not all strong'). The heavy helpline footer also appears on what is a light goal-planning game.",
+     "fix": "For an all-medium result, place the dot on a small dashed ring outside the circles (or fade all three circles to 40% opacity) and change the text to: 'Today all three pillars sit in the middle. Pick the cheapest one to raise by a notch this week (often a 10-minute skill rep) and play again in 7 days.' Show the findahelpline footer only on cards marked sensitive (e.g. stress-mindset-spectrum), not on wso-triad-venn."
+    }
+   ],
+   "best_cards": [
+    "one-percent-doubling-reveal",
+    "fixes-that-fail-rats",
+    "reframing-boss-text"
+   ],
+   "verdict": "The writing is warm, kind and well sourced, and the hooks mostly make me stop: rat tails, the doubling pile and the 11pm text are strong. Every card ends with a concrete 'try today', so I always leave with something to do. Game feel is weaker than the content. Two cards replay the same gorilla study and link to each other. The estimate slider anchors me before I touch it, and the anchoring card never shows me my own bias, which is the moment I'd share. The rewards are uneven too: a 3/6 swipe gets 'Sharp sorting', and on reveal cards the 'Spot on' sits under the explanation. Repeated chrome (the team Yes/No prompt on every card) slows the scroll. Safety is excellent. Fix the duplicates, slider anchoring and verdict placement, and this is an 8."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "On almost every reveal (rats, mug, stress, environment) the app asks 'Do you lead a team, class or family?' with Yes/No. I'm 16, so obviously no. It reads like a workplace survey and makes me feel the app isn't for me. The 'No' button also wraps onto its own line under the text and looks broken.",
+   "fix": "Remove the 'Do you lead a team, class or family?' gate. Make 'Doing this with others? (optional)' a plain collapsible that shows try_team straight away. If a gate is kept, word it 'Got friends or a group to try this with?' with buttons 'Show me' / 'Skip', laid out in one flex row (flex-wrap: nowrap; gap: 8px) so both buttons sit beside the question.",
+   "from": "Maya, 16, Manchester. Lives on TikTok, can't drive, doesn't lead anything, hates anything that smells like a worksheet. Played the 24 sampled cards and looked at 13 screenshots (wso-triad a/b, fixes-that-fail a/b, map-territory a, loss-aversion b, aim-high-gorilla a, stress-mindset b, reframing a, environment-design b, socratic a, view-feed-dark, view-tracks-light)."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "The Tracks page intro 'Twelve rooms of the same house... models you can try on' is vague and slow. Each track card is huge, so I see only 4 before scrolling. Every card ends with three link rows (Doing this with others?, Why? · 15-second read, Play again) plus a helpline footer. That pile-up at the bottom makes it feel like homework.",
+   "fix": "Change the Tracks subtitle to: '12 topics. Each game takes under a minute.' Reduce track card height (smaller icon, put the progress text on the same row as the title) so 6+ fit on one phone screen. On the reveal, make the NEXT button the last element and fold 'Why?' and 'Play again' into a single small row above it.",
+   "from": "Maya, 16, Manchester. Lives on TikTok, can't drive, doesn't lead anything, hates anything that smells like a worksheet. Played the 24 sampled cards and looked at 13 screenshots (wso-triad a/b, fixes-that-fail a/b, map-territory a, loss-aversion b, aim-high-gorilla a, stress-mindset b, reframing a, environment-design b, socratic a, view-feed-dark, view-tracks-light)."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "For me the best part of each card is try_team, and it is hidden. In the screenshots (reframing-boss-text-b, loss-aversion-mug-price-b, aim-high-gorilla-b) the '👥 Doing this with others? (optional)' disclosure is collapsed. The 'Do you lead a team, class or family? Yes / No' question sits under it, the No button wraps alone onto its own line, and you can't tell how the question relates to the closed box above. It looks broken. The question also appears again on every card until you answer it.",
+   "fix": "In renderReveal (app.js ~line 194-200): put the leads-ask inside the <details class='team'> right after the summary, and render it with the details open, so the question and the team tip appear together. Keep Yes/No on one row (leads-ask: display:flex; flex-wrap:nowrap; gap:8px; align-items:center). Change the summary text to '👥 Use it with your team (1 min)'. If the user taps No, collapse the details and never show the ask again.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English speaker, tired and a bit burned out. Wants practical tools he can use tomorrow with his team and himself; impatient with fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The primary-source passages (Seneca Letter 13, Epictetus Ench. 1, Plato Apology 21d, William James, Franklin) are the most valuable thing here for a reader like me, and you only see them if you open the collapsed 'Why? · 15-second read' at the very bottom. It sits below the Next button and the team prompt. In every reveal screenshot I looked at (dichotomy, socratic, aim-high-gorilla, fixes-that-fail), the old text was invisible. As it stands, the 'Academy' part of the app is hidden.",
+   "fix": "In app.js renderReveal, move the card.from_source blockquote out of the `more` <details> and append it directly after the model-line paragraph, before the Try today box: wrap.append(h('blockquote',{class:'primary'}, h('p',{}, `“${quote}”`), h('footer',{}, cite, ' · Read next: '+next_read))). Leave only the insight, the evidence chip and the source line inside 'Why?'.",
+   "from": "Elena, 68, retired literature teacher; reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader; dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Every reveal opens the 'Doing this with others? (optional)' section to a 'Do you lead a team, class or family?' question with Yes/No buttons. On a phone, 'No' wraps onto its own line. I'm an unemployed graduate, and being asked about my status on card after card stings. The repetition also adds clutter just above the Next button. Seen on map-territory, stress-mindset, feedback-loops, socratic and responsibility screenshots.",
+   "fix": "Remove the Yes/No gate. Keep the section collapsed and, when it is expanded, show the try_team text directly under a neutral label: 'Want a version to try with friends or a group?'. If the gate has to stay, ask it once per session (not per card) and put Yes and No on the same row.",
+   "from": "Sam, 24, graduate with anxiety and low self-worth after a rough year; sensitive to shaming, labels and pressure; needs it to feel safe and genuinely helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The estimate slider starts at the midpoint of its range (50% on 0-100 cards), so the slider's own starting value is an anchor. Players also seem to lock in without moving it much: four estimate screens in s5 show 'You: 40%'. On socratic-ignorance-drivers, the hidden 50 acts as an anchor while the lesson is about overconfidence. On anchoring-africa-un, the result never tells me how the shown 65 bent MY guess, even though the hook promises 'Watch it bend your guess.' That missing payoff is the moment I'd screenshot and share.",
+   "fix": "In app.js estimate(): when g.anchor is null, hide the value readout until the first input event, show 'Drag to guess', and place the thumb at a random position instead of the midpoint. When g.anchor is set, add a line after the verdict: `You saw ${fmt(g.anchor)} first. Your guess: ${fmt(guess)}. Real: ${fmt(g.answer)}.` If |guess-anchor| < |g.answer-anchor|, follow it with 'The anchor pulled you toward it, just like in the 1974 study.' Otherwise use 'You resisted the anchor. Most people don't.'",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments and shareability."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The swipe result praises a coin-flip score. In two-minute-rule-swipe I got 3 of 6 and the headline says '3 of 6. Sharp sorting.' On a two-sided sort, 50% is chance, so the reward feels fake and cheapens the real 'Clean sweep.'",
+   "fix": "In app.js line ~431, change the tiers to: right === n -> 'Clean sweep.'; right >= n*0.75 -> `${right} of ${n}. Sharp sorting.`; right >= n/2 -> `${right} of ${n}. Halfway there: the ↻ ones are the lesson.`; else -> `${right} of ${n}. These ones are sneaky.`",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments and shareability."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The verdict sits in different places on different card types. On estimate cards it comes first ('Plot twist: it's smaller.'). On reveal cards ('Spot on.', one-percent-doubling-reveal and aim-high-gorilla) it appears under a 6-line explanation, so the reward moment is buried and fades in late. On reframing-boss-text the 3-line headline 'Good guesses. Here's the move that works best:' pushes THE MODEL below the fold.",
+   "fix": "In reveal(), render the verdict ('Spot on.' / 'Not quite...') straight after the chosen option and before g.reveal, the same order estimate uses. For choice cards, shorten the summary headline to 'Best moves:' and keep it to one line.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments and shareability."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Every reveal shows an inline 'Do you lead a team, class or family? Yes / No' prompt. At 390px the 'No' pill wraps onto its own line (seen on one-percent, aim-high-gorilla, goal-directed-perception-gorilla, stress-mindset). It's one more tap of noise between the reward and the NEXT button on every card.",
+   "fix": "Ask this once in onboarding or the first time someone opens 'Doing this with others?', store the answer, and don't render it again. If it has to stay, put the question on its own line and both pills in one row (flex-wrap: nowrap, gap 8px), and shorten the label to 'Lead a group?'",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments and shareability."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "In dark mode the My Map legend uses colours that are hard to tell apart at node size: Growth vs Systems vs Decisions (three greens/teals), Thinking vs Attention & Rest (two blues), Habits vs Old Wisdom (yellow vs ochre). Labels like 'The Dreaming Sprint...' and 'Will · Skill · Oppo...' also overlap neighbouring nodes. The map is the screen people would share, and right now it reads as noise.",
+   "fix": "Reassign the domain colours so no two are within ~30° hue of each other: e.g. Systems #14B8A6 to #64748B (slate), Decisions to #F43F5E, Attention & Rest #6366F1 to #A3E635. Draw labels only for the 3 most recently played nodes, each on a semi-opaque pill background (rgba(0,0,0,.6), 4px radius) that is offset so it doesn't overlap nodes.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, clarity of what to tap, reward moments and shareability."
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 4,
+   "skipped": [
+    "wso-triad-venn (Maya): a real step-0 chip row and showing the chosen goal in the result title need app.js/schema support. I put the goal choices into game.prompt text instead.",
+    "wso-triad-venn (Radu): no inverted lines left to rewrite in plain words, because the questions were cut to 3 non-inverted items (one per axis) as Maya's fix asked.",
+    "wso-triad-venn (Lina): putting the mid-result dot on a dashed ring outside the circles needs a change in app.js. Only the mid text was changed in the card. I removed sensitive:true so the helpline footer no longer shows on this card.",
+    "All other card_ids in the issue list are not in action.json, so they were ignored."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 9,
+   "skipped": [
+    "goal-directed-perception-gorilla: the feed/NEXT rule (same source.work never adjacent) lives in app.js, outside this file. The card itself is rebuilt around Drew, Vo & Wolfe 2013 (radiologists), its Simons & Chabris source is removed, and aim_high is moved to the last related slot.",
+    "stress-mindset-spectrum: the matching spectrum-track colour change is app.js (out of scope). The note that Q3 is downweighted was added as a card-level 'notes' field; showing it in the 'Why this' panel needs app work.",
+    "stress-mindset-spectrum Q4: used Okafor's wording ('Something is going wrong' / 'Something matters to me') instead of Sam's 'Something needs attention', because it fixes the non-opposite poles and also drops the self-blaming 'I'm not coping'.",
+    "stress-mindset-spectrum Q2: dropped 'bills' as Okafor asked, and used '(a deadline, an exam, a big job)' so the item fits both adults and teens (Radu).",
+    "reframing-boss-text renamed to reframing-late-text in perception.json only. The built data/qlip.json and qa/sessions/sample-5.txt still hold the old id; they need a rebuild, which was not done here.",
+    "map-territory-swipe: Elena's suggested 'why' text was over the 100-char limit, so a shortened Korzybski caveat was used. The 'rain' item also got a softened why for the same reason.",
+    "useful-truth-people-person: Sam's try_today shortened to fit 140 chars, and the card marked sensitive:true."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 4,
+   "skipped": [
+    "loss-aversion-mug-price: Maya asked for step 0.5 and Radu for step 0.1, which conflict. Used min 0.5, max 10, step 0.5 so the start value sits away from 2.5 and the slider is easier to use on a phone.",
+    "second-order-hanoi-rats: kept the id because data/qlip.json references it. Rewrote the story to the Delhi cobra bounty, labelled it a classic parable with thin historical records (Horst Siebert, Der Kobra-Effekt 2001), and reordered related so fixes_that_fail is last.",
+    "Feed and app.js rules (no same-story neighbours, story tags) are outside this file and were not applied."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 1,
+   "skipped": [
+    "fixes-that-fail-rats: rewriting second-order-hanoi-rats and adding story tags or app.js NEXT rules is outside systems.json (that card lives in another file, and the rule belongs in app.js)",
+    "All other issues concern cards that are not in systems.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 4,
+   "skipped": [
+    "one-percent-doubling-reveal (Sam): hook shortened to 'Most brains trip on one kind of maths. See how yours handles it?' to fit the 70-char limit",
+    "stress-mindset-spectrum Q2 / deliberate-practice driving item from the habit-loop-choice issue: those cards are not in habits.json",
+    "environment-design-radar: the Hofmann 'ego depletion' point was applied to the insight only; the advice texts and other cards in the file did not have the same problem"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 1,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 12,
+   "skipped": [
+    "aim-high-gorilla / start-with-why-because-estimate / responsibility-meaning: feed-sequencing rules (no same-study or same-story neighbours, no two estimate cards within 3, no back-to-back sensitive cards) belong in app.js, which is outside this file; related arrays were reordered instead",
+    "aim-high-gorilla: kept the id unchanged even though the card now uses the Hyman et al. 2010 unicycling-clown study rather than the gorilla, so references elsewhere don't break",
+    "aim-high-gorilla: used the sourced Hyman 2010 clown study (phone call, not texting as the issue suggested, to stay accurate) instead of the unsourced café-walker thought experiment",
+    "flow-challenge-skill-venn: drawing mid scores outside the overlap is app.js work; only the 'mid' result was added here"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 3,
+   "skipped": [
+    "Maya's request to swap the driving item for the gaming item was merged with Radu's request (driving item reworded to 'Driving to work every day for 20 years.'). The gaming ranked-replays item replaced the 'songs you already know' item instead, which keeps the card within the 7-item limit.",
+    "Okafor's driving 'why' was shortened to fit the 100-character limit, with the same meaning kept: 'Keeps you fluent, but rarely sharpens skills like skid control. That needs targeted practice.'",
+    "Maya's hook was shortened by one character to fit the 70-character limit: 'You've played one game for 500 hours. Are you actually getting better?'",
+    "Added a Macnamara, Hambrick & Oswald (2014) citation to source.work so it matches the new insight and the added thinker.",
+    "All other issues concern cards that are not in growth.json."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 4,
+   "skipped": [
+    "socratic-ignorance-drivers (Maya): I didn't use the exact hook 'Guess how many people think they are [funnier]', because the estimate is still Svenson's driving data. I used 'Are you funnier than most people your age? Most people think so.' instead, and added the 'kind, funny and smart' line to the explain.",
+    "socratic-ignorance-drivers (Sam): to add the 'cuts both ways' sentence and stay under the 320-character insight limit, I dropped the old line 'Overconfidence is well documented; Dunning-Kruger is debated.'",
+    "dichotomy-of-control-swipe: Elena and Okafor proposed different hooks, so I could only use one. I kept Elena's ('Epictetus sorted every worry into two piles. Can you?').",
+    "dichotomy-of-control-swipe (Elena): I shortened the new 'why' for 'How hard you train' to fit the 100-character limit. It keeps the point that the body is only lent to us, but not the full list of judgments, impulses, desires and aversions. I also added Seneca (On Anger II) to the source.",
+    "Every other issue was about cards that are not in wisdom.json. The feed and NEXT rules belong in app.js, which is outside this file."
+   ],
+   "validator_errors": 0
+  }
+ ]
+}

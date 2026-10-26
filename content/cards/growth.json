@@ -437,7 +437,7 @@
     "concept": "deliberate_practice",
     "domain": "growth",
     "type": "swipe",
-    "hook": "20 years of driving. Are you a better driver than in year three?",
+    "hook": "You've played one game for 500 hours. Are you actually getting better?",
     "title": "Practice or Just Repetition?",
     "game": {
       "prompt": "Does this grow the skill, or just keep it where it is?",
@@ -445,9 +445,9 @@
       "right": "Real practice",
       "items": [
         {
-          "text": "Playing the songs you already know, start to finish, every evening.",
+          "text": "Playing ranked matches every night without ever watching your replays.",
           "side": "left",
-          "why": "Fun and worth doing, but it rehearses what you have. Growth lives in the bit you can't play yet."
+          "why": "Hours on autopilot keep your rank where it is. Replays show the exact mistake."
         },
         {
           "text": "Replaying the 3 bars you always fumble, slowly, until they're clean.",
@@ -455,9 +455,9 @@
           "why": "One weak spot, just past your level, with instant feedback from your own ears. Textbook."
         },
         {
-          "text": "Driving to school or work every day for 20 years.",
+          "text": "Driving to work every day for 20 years.",
           "side": "left",
-          "why": "Once a skill feels automatic, it mostly stops improving. Experience isn't the same as practice."
+          "why": "Keeps you fluent, but rarely sharpens skills like skid control. That needs targeted practice."
         },
         {
           "text": "Going back over a chess game you lost to find the move where it went wrong.",
@@ -481,7 +481,7 @@
         }
       ]
     },
-    "insight": "Ericsson argued that once a skill feels automatic, more hours add little. Growth comes from narrow, slightly-too-hard work with feedback. Experience isn't the same as practice.",
+    "insight": "Ericsson argued that once a skill feels automatic, more hours add little; growth comes from narrow, slightly-too-hard work with feedback. Later reviews found practice matters but explains less than he claimed (Macnamara et al., 2014).",
     "model": "Hours keep a skill. Feedback on your weakest part grows it.",
     "try_today": "Pick a hobby where you've stopped improving. Find the one moment you always get wrong and practise only that for 10 minutes.",
     "try_team": "Pick one thing your class, team or family does on repeat. Ask: where are we just repeating? Choose one weak spot to practise, with feedback.",
@@ -489,9 +489,10 @@
       "thinkers": [
         "K. Anders Ericsson",
         "Robert Pool",
-        "Benjamin Franklin"
+        "Benjamin Franklin",
+        "Brooke Macnamara"
       ],
-      "work": "Peak (2016); The Autobiography of Benjamin Franklin (1791)"
+      "work": "Peak (2016); The Autobiography of Benjamin Franklin (1791); Macnamara, Hambrick & Oswald, Psychological Science (2014)"
     },
     "from_source": {
       "quote": "without looking at the book, try'd to compleat the papers again",
@@ -722,5 +723,127 @@
     ],
     "try_team": "Pick one shared project, club or family plan and agree its kill criteria together: 'If ___ hasn't happened by ___, we stop or change course.'",
     "sensitive": true
+  },
+  {
+    "id": "risky-play-roaming-estimate",
+    "concept": "risky_play",
+    "domain": "growth",
+    "type": "estimate",
+    "hook": "Kids once got around town alone. How fast did that freedom shrink?",
+    "title": "The Shrinking Roam",
+    "game": {
+      "question": "In 1971, 80% of English 7- and 8-year-olds got to school without an adult. By 1990, what share did?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 9,
+      "explain": "9%. In under 20 years, going to school alone fell from 8 in 10 young kids to fewer than 1 in 10 (Hillman, Adams & Whitelegg, 1990). Busier roads and parents' fears grew; kids' chances to handle small risks on their own shrank."
+    },
+    "insight": "The drop is real. Haidt and Gray argue it helped fuel rising teen anxiety; critics say that link is still mostly correlation. Small risks you choose do seem to build skill and nerve.",
+    "model": "Nerve grows from small risks you choose and can judge yourself, at any age.",
+    "try_today": "Pick one small thing you'd usually hand to someone else, a new route, a repair, a tricky call, and do it yourself today.",
+    "try_team": "Each person names one thing they did alone at 10 that kids rarely do now. Agree one safe-enough version to allow or try this month.",
+    "source": {
+      "thinkers": [
+        "Mayer Hillman",
+        "John Adams",
+        "John Whitelegg",
+        "Peter Gray",
+        "Jonathan Haidt"
+      ],
+      "work": "One False Move: A Study of Children's Independent Mobility (1990); Gray, The Decline of Play (2011); Haidt, The Anxious Generation (2024)"
+    },
+    "evidence": "contested",
+    "level": 1,
+    "related": [
+      "self_efficacy",
+      "doomscroll_loop",
+      "mistake_alchemy"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "risky-play-risk-hazard-choice",
+    "concept": "risky_play",
+    "domain": "growth",
+    "type": "choice",
+    "hook": "Is 'be careful!' keeping them safe, or teaching them to freeze?",
+    "title": "Keep the Risk, Fix the Hazard",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your 7-year-old grandchild is climbing a sturdy tree, a little higher than you'd like. You call up…",
+          "options": [
+            {
+              "text": "\"Do you feel steady? Where does your next foot go?\"",
+              "best": true,
+              "feedback": "Best pick. A question hands her the judgment. The height is a risk she can see and manage, the useful kind."
+            },
+            {
+              "text": "\"Get down now, that's too high!\"",
+              "feedback": "Understandable, and it ends the danger. It also ends the lesson: she never practises judging height herself."
+            },
+            {
+              "text": "Nothing. You look away and let her get on with it.",
+              "feedback": "Trust is good, but staying near and calm lets you spot what she can't, like a rotten branch."
+            }
+          ]
+        },
+        {
+          "scenario": "You're 16. Friends are jumping off a pier into water nobody has checked. Your move?",
+          "options": [
+            {
+              "text": "Check the depth first, then decide.",
+              "best": true,
+              "feedback": "Best pick. Unknown depth is a hazard: a danger you can't see. Make it visible, then the choice is really yours."
+            },
+            {
+              "text": "Jump. Hesitating is for cowards.",
+              "feedback": "Courage isn't skipping the check. Hidden rocks don't care how brave you are."
+            },
+            {
+              "text": "Never jump, from any pier, ever.",
+              "feedback": "Safe tonight, but avoiding every risk builds fear, not skill. Check first, then choose."
+            }
+          ]
+        },
+        {
+          "scenario": "A new teammate asks to lead next week's client call alone. It feels a little early. You…",
+          "options": [
+            {
+              "text": "Say yes, do a 15-minute prep, and stay on standby.",
+              "best": true,
+              "feedback": "Best pick. Real stakes, a safety net, and room to recover: that's risky play for grown-ups."
+            },
+            {
+              "text": "Run it yourself. Too much is at stake.",
+              "feedback": "Safe for this call, costly for growth. Without a first try, the next one stays scary."
+            },
+            {
+              "text": "Let them go in cold with no briefing.",
+              "feedback": "That's a hazard, not a stretch: missing facts they can't see. Give the map, then step back."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "A risk is a danger you can see and judge; a hazard is one you can't. Fix hazards, keep risks. A 2015 review tied risky outdoor play to more activity and social health; most studies were weak.",
+    "model": "Remove the hidden hazards, keep the visible risks. That's where skill and courage grow.",
+    "try_today": "Swap one 'Be careful!' for a question: 'What's your plan?' or 'Do you feel steady?' Try it on a kid, a colleague or yourself.",
+    "try_team": "List 3 things your team, class or family shields people from. Sort each: hidden hazard (fix it) or visible risk (allow it).",
+    "source": {
+      "thinkers": [
+        "Mariana Brussoni"
+      ],
+      "work": "Brussoni et al., Risky Play and Children's Safety (2012); Brussoni et al., risky outdoor play and health: a systematic review (2015)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "self_efficacy",
+      "mistake_alchemy",
+      "growth_mindset"
+    ]
   }
 ]

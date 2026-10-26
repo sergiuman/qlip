@@ -4,42 +4,42 @@
     "concept": "start_with_why",
     "domain": "meaning",
     "type": "choice",
-    "hook": "You get 10 seconds to recruit a stranger. What do you say first?",
+    "hook": "Your group chat is dead on Fridays. What's your first message?",
     "title": "Lead With the Why",
     "game": {
       "steps": [
         {
-          "scenario": "You're starting a Saturday park clean-up and need volunteers. A neighbour stops to listen. Your first sentence is…",
+          "scenario": "You want your friends to start a Friday-night five-a-side (or a study group). In the group chat, your first message is…",
           "options": [
             {
-              "text": "\"We meet at 9, bring gloves, it takes two hours.\"",
+              "text": "\"Pitch at 6, bring £3.\"",
               "feedback": "Useful details, but they answer a question nobody has asked yet. Logistics land better once people care."
             },
             {
-              "text": "\"Kids can't play in that park because of broken glass. I want to fix that.\"",
+              "text": "\"I'm sick of us just scrolling on Fridays, let's actually do something.\"",
               "best": true,
-              "feedback": "You gave a reason they can feel. Now the time and the gloves sound like a way to help, not a chore."
+              "feedback": "You gave a reason they can feel. Now the time and the £3 sound like a way in, not a chore."
             },
             {
-              "text": "\"We're the biggest clean-up group in the area.\"",
-              "feedback": "Size can impress, but it's about you. People join for what it means to them."
+              "text": "\"It'll be the best thing anyone's doing this term.\"",
+              "feedback": "Hype can grab attention, but it doesn't say why it matters to them. A real reason travels further."
             }
           ]
         },
         {
-          "scenario": "They say: \"Sounds good, but I'm busy.\" You reply…",
+          "scenario": "A friend replies: \"Sounds good but I'm busy.\" You reply…",
           "options": [
             {
-              "text": "\"Even 30 minutes helps. The playground corner is the worst bit.\"",
+              "text": "\"Even one week, come for the first half.\"",
               "best": true,
               "feedback": "You kept the why alive and made the ask smaller. Easy yes, no pressure."
             },
             {
-              "text": "\"Everyone's busy. It's only two hours.\"",
+              "text": "\"Everyone's busy. It's only an hour.\"",
               "feedback": "Understandable, but it brushes off their reason. People dig in when they feel unheard."
             },
             {
-              "text": "\"No worries.\" and walk off.",
+              "text": "\"No worries.\" and leave it there.",
               "feedback": "Kind and respectful. You could also leave a door open with a smaller, clear option."
             }
           ]
@@ -68,21 +68,20 @@
     "id": "start-with-why-because-estimate",
     "concept": "start_with_why",
     "domain": "meaning",
-    "type": "estimate",
+    "type": "reveal",
     "hook": "Can a reason that says nothing still get strangers to say yes?",
     "title": "The Power of 'Because'",
     "game": {
-      "question": "A 1978 experiment: someone asks people waiting at a library copier, \"May I go first, because I have to make copies?\" Everyone there had to make copies. What % let them go first?",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "answer": 93,
-      "explain": "93% said yes, almost as many as for a real reason (\"I'm in a rush\": 94%). No reason at all: 60%. But for a bigger ask (20 pages, not 5), the empty 'because' did nothing (24%, same as no reason). Only the real reason helped (42%).",
-      "anchor": null
+      "prompt": "1978 experiment: someone asks people at a library copier, \"May I go first, because I have to make copies?\" (An empty reason: everyone in line has to make copies.) How many say yes?",
+      "choices": [
+        "Barely anyone: that's no reason",
+        "About as many as for a real reason"
+      ],
+      "answer": 1,
+      "reveal": "About as many: 93% said yes, vs 94% for a real reason (\"I'm in a rush\") and 60% for no reason. But for a bigger ask (20 pages, not 5), the empty 'because' did nothing (24%, same as no reason). Only the real reason helped (42%)."
     },
-    "insight": "We listen for a why. For small asks, almost any 'because' works on autopilot. For bigger asks, people check, and only a real reason helps. One classic study with small groups.",
-    "model": "Small asks need a why. Big asks need a real, good why.",
+    "insight": "Langer's point was mindlessness: on small asks we react to the word 'because', not the reason. On bigger asks we wake up and weigh it. That's a tool and a warning: notice when an empty 'because' works on you. One classic study, small groups.",
+    "model": "On autopilot we hear 'because'; awake, we weigh the reason. Give a real one, and listen for real ones.",
     "try_today": "Next time you ask someone for something, add 'because…' with your honest reason. Notice how they respond.",
     "try_team": "Each person rewrites one request they'll make this week as 'Could we…, because…' with a real reason. Read them aloud: which ones make you want to say yes?",
     "source": {
@@ -97,8 +96,8 @@
     "evidence": "moderate",
     "level": 1,
     "related": [
-      "will_gap",
       "system1_system2",
+      "will_gap",
       "responsibility_meaning"
     ]
   },
@@ -110,17 +109,17 @@
     "hook": "Which week would you call more meaningful: easy or heavy?",
     "title": "Meaning Lives in the Load",
     "game": {
-      "prompt": "Week A: lie-ins, good food, nothing asked of you. Week B: tiring, but you helped a friend move and finished something people rely on. Which one would you call more meaningful?",
+      "prompt": "Week A: lie-ins, good food, nothing asked of you. Week B: tiring, but you helped your mate revise for their resit and finished the group project everyone was counting on. Which one would you call more meaningful?",
       "choices": [
         "Week A, the easy one",
         "Week B, the heavy one",
         "Honestly, both"
       ],
-      "reveal": "No wrong pick here. Many people call Week B more meaningful, even when Week A felt happier. In a 2013 survey of about 400 US adults, Baumeister and colleagues linked happiness more to getting what you want, and meaning more to giving and caring for others. Frankl argued something similar from his own life."
+      "reveal": "Many people pick B as more meaningful, even when A felt happier. Research says: happy = getting, meaningful = giving. Both count."
     },
-    "insight": "Happiness and meaning overlap, but they differ. Meaning tends to grow where you carry something for someone. Not piling on until you break: choosing a load that's yours and worth it.",
+    "insight": "In a 2013 survey of about 400 US adults, Baumeister and colleagues linked happiness to getting what you want, and meaning to giving and caring. Frankl argued similar from his own life. Meaning grows where you carry something worth it, not where you pile on until you break.",
     "model": "Happiness is often about receiving; meaning is often about carrying something worth it.",
-    "try_today": "Pick one small thing someone relies on you for and do it a little better than needed today, on purpose.",
+    "try_today": "Pick one small thing someone relies on you for and do it with care today. Afterwards, notice how it felt.",
     "source": {
       "thinkers": [
         "Viktor Frankl",
@@ -132,9 +131,9 @@
     "evidence": "moderate",
     "level": 1,
     "related": [
-      "amor_fati",
+      "small_wins",
       "start_with_why",
-      "small_wins"
+      "amor_fati"
     ],
     "sensitive": true,
     "try_team": "Go round the table: each person names one thing others rely on them for that felt heavy but worth it. Notice how often effort and meaning show up together."
@@ -348,35 +347,35 @@
     "concept": "aim_high",
     "domain": "meaning",
     "type": "reveal",
-    "hook": "A gorilla walks through a video. Would you even notice it?",
+    "hook": "A clown on a unicycle rides past you. Would you even notice?",
     "title": "Your Aim Decides What You See",
     "game": {
-      "prompt": "You watch a short clip and count how many times players in white pass a basketball. Halfway through, a person in a gorilla suit walks across the screen. Would you notice?",
+      "prompt": "You're crossing a campus square, talking on your phone. A clown in a bright costume rides past on a unicycle. Would you notice?",
       "choices": [
         "Of course I would",
-        "Maybe not"
+        "Probably not"
       ],
-      "reveal": "'Maybe not' is the safer bet. In Simons and Chabris's 1999 study, about half of viewers missed the gorilla. If you said 'of course', you're in good company: most people expect to see it. Counting passes filtered out the rest.",
-      "answer": 1
+      "answer": 1,
+      "reveal": "Probably not. In Hyman and colleagues' 2010 study, only about 25% of people on a phone call said they saw the clown, even when asked directly. About half of people walking alone without a phone (51%) did. Their aim, the call, decided what got through."
     },
-    "insight": "The missed gorilla is solid science. The life lesson is a lens, not a law: your aims steer what you notice, so a clear, worthy aim helps you spot chances you'd otherwise miss.",
+    "insight": "The missed clown is solid science. The life lesson is a lens, not a law: your aims steer what you notice. Aristotle's mark was the good life itself; small targets serve it, they don't replace it.",
     "model": "What you aim at shapes what you see. Choose the aim on purpose.",
     "try_today": "Write one aim for this week in a single line. Tonight, list three things you noticed today that could help it.",
     "source": {
       "thinkers": [
+        "Ira Hyman",
         "Daniel Simons",
-        "Christopher Chabris",
         "Aristotle",
         "Jordan Peterson"
       ],
-      "work": "Gorillas in our midst, Perception (1999); Nicomachean Ethics; 12 Rules for Life (2018)"
+      "work": "Hyman et al., Did you see the unicycling clown?, Applied Cognitive Psychology (2010); Nicomachean Ethics; 12 Rules for Life (2018)"
     },
-    "evidence": "strong",
+    "evidence": "moderate",
     "level": 1,
     "related": [
-      "goal_directed_perception",
       "begin_with_end",
-      "map_territory"
+      "map_territory",
+      "goal_directed_perception"
     ],
     "try_team": "Everyone writes this week's one aim and swaps papers. For a day, watch out for one thing that could help your partner's aim, then share it.",
     "from_source": {
@@ -433,22 +432,22 @@
       ]
     },
     "insight": "Clear, stretching aims beat 'do your best' in hundreds of studies. Two catches: for new, complex skills, aim to learn first; and over-tight targets can push people to cut corners.",
-    "model": "Aim specific and a little scary. If the skill is new, aim to learn first.",
+    "model": "Aim specific and a little stretching. If the skill is new, aim to learn first.",
     "try_today": "Rewrite one vague aim ('get better at X') as a clear target with a number and a date. Put it where you'll see it.",
     "try_team": "Swap 'let's do our best' for one shared target: your team, class or family picks a clear, stretching goal, a date, and how you'll check progress.",
     "from_source": {
-      "quote": "Shall we not, like archers who have a mark to aim at, be more likely to hit upon what is right?",
-      "cite": "Aristotle, Nicomachean Ethics, Book I, ch. 2 (trans. W. D. Ross, 1908)",
-      "next_read": "Nicomachean Ethics, Book I, chapters 1-2: the chief good as the target of a life"
+      "quote": "When a man does not know what harbour he is making for, no wind is the right wind.",
+      "cite": "Seneca, Moral Letters to Lucilius, Letter 71 (trans. R. M. Gummere, 1917)",
+      "next_read": "Seneca, Letter 71, opening paragraphs"
     },
     "source": {
       "thinkers": [
         "Edwin Locke",
         "Gary Latham",
         "Gerard Seijts",
-        "Aristotle"
+        "Seneca"
       ],
-      "work": "Locke & Latham, American Psychologist (2002); Seijts & Latham, Academy of Management Executive (2005); Nicomachean Ethics"
+      "work": "Locke & Latham, American Psychologist (2002); Seijts & Latham, Academy of Management Executive (2005); Seneca, Moral Letters, 71"
     },
     "evidence": "strong",
     "level": 1,
@@ -480,7 +479,7 @@
       ],
       "questions": [
         {
-          "q": "Think of your main task this week (school, work, a hobby). It stretches me.",
+          "q": "It stretches me.",
           "axis": "C"
         },
         {
@@ -489,7 +488,7 @@
           "invert": true
         },
         {
-          "q": "There's a real chance I'll fall short.",
+          "q": "It asks more of me than my usual tasks.",
           "axis": "C"
         },
         {
@@ -497,7 +496,7 @@
           "axis": "S"
         },
         {
-          "q": "I often feel lost about where to start.",
+          "q": "I'd need to learn new things to do it well.",
           "axis": "S",
           "invert": true
         },
@@ -523,8 +522,13 @@
         "CS": {
           "name": "Flow Channel",
           "text": "Today high challenge meets high skill. This is where time disappears. Protect it: phone away, one clear goal."
+        },
+        "mid": {
+          "name": "On the Fence",
+          "text": "Today this task sits in the middle on both challenge and skill: not clearly dull, stressful or absorbing. Nudge one side: make it a bit harder, or learn one small piece first."
         }
-      }
+      },
+      "prompt": "Think of your main task this week (school, work, a hobby). Answer every line for that task."
     },
     "insight": "People get most absorbed when a high challenge meets matching skill and a clear goal. Too easy is dull; too hard is stressful. Later studies back this, but find the link weaker.",
     "model": "Flow = challenge slightly above skill + clear goal + quick feedback.",
@@ -600,5 +604,123 @@
       "deliberate_practice"
     ],
     "try_team": "For one 25-minute group work block: agree what 'done' looks like, put all phones away, and check progress together at the end."
+  },
+  {
+    "id": "stockdale-paradox-christmas-reveal",
+    "concept": "stockdale_paradox",
+    "domain": "meaning",
+    "type": "reveal",
+    "hook": "Hope is supposed to keep you going. Does it always?",
+    "title": "Faith Without a Deadline",
+    "game": {
+      "prompt": "James Stockdale, a US pilot, was held prisoner in Vietnam for over 7 years. He was asked which fellow prisoners struggled most to hold on. Who did he name?",
+      "choices": [
+        "The pessimists",
+        "The optimists",
+        "The quiet loners"
+      ],
+      "answer": 1,
+      "reveal": "The optimists. In his telling, they kept picking dates: 'out by Christmas', then Easter. Each missed date hit them harder. Stockdale held two things at once: total faith he'd get home, and zero denial about how bad it was."
+    },
+    "insight": "This is one man's account to Jim Collins, not a study. Its lesson: hope tied to a date you don't control can break you. Keep faith in the ending; face today's facts.",
+    "model": "Never doubt the ending. Never deny the facts. Drop the deadline you don't control.",
+    "try_today": "Pick one hard thing you're waiting out. Write one line of brutal fact, then one line of faith. Cross out any date you can't control.",
+    "source": {
+      "thinkers": [
+        "James Stockdale",
+        "Jim Collins"
+      ],
+      "work": "Good to Great (2001), Jim Collins, ch. 4"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "dichotomy_of_control",
+      "useful_truth",
+      "grit"
+    ],
+    "sensitive": true,
+    "try_team": "Facing a long slog together? List three brutal facts on one side and one shared belief about the ending on the other. No promised dates."
+  },
+  {
+    "id": "stockdale-paradox-dream-vs-obstacle-choice",
+    "concept": "stockdale_paradox",
+    "domain": "meaning",
+    "type": "choice",
+    "hook": "Picturing success feels great. That might be the problem.",
+    "title": "Dream It, Then Find the Wall",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your big exam is in three weeks and you're behind. What's the best thing to tell yourself tonight?",
+          "options": [
+            {
+              "text": "\"I'll ace it. Just picture the grade and stay positive.\"",
+              "feedback": "Feels good, but research suggests pure daydreams can relax you before you've done the work."
+            },
+            {
+              "text": "\"I want a good grade. My biggest obstacle is my phone at night, so if it's 8pm, it goes in the kitchen.\"",
+              "best": true,
+              "feedback": "Best. A clear wish, the real obstacle, and an if-then plan: hope plus facts."
+            },
+            {
+              "text": "\"I'm too far behind. It's hopeless.\"",
+              "feedback": "Honest about the facts, but it drops the faith. Without it, there's no reason to start."
+            }
+          ]
+        },
+        {
+          "scenario": "You lead a project that's slipping. Your boss asks for an update. What do you say?",
+          "options": [
+            {
+              "text": "\"We'll catch up, the team is great.\"",
+              "feedback": "Upbeat, but it hides the facts. Collins found strong leaders faced bad news head-on."
+            },
+            {
+              "text": "\"We're two weeks behind because of X. Here's the plan to recover, and I'm confident we'll deliver.\"",
+              "best": true,
+              "feedback": "Best. Brutal fact first, then a plan, then confidence: the Stockdale mix."
+            }
+          ]
+        },
+        {
+          "scenario": "You're relearning to walk well after a knee operation. Progress is slow. Which thought helps most?",
+          "options": [
+            {
+              "text": "\"I'll be hiking by next month.\"",
+              "feedback": "A hopeful date, but if it slips, the letdown can sap your effort. Hope for the ending, not the date."
+            },
+            {
+              "text": "\"This will be slow and some days will hurt. I'll do my exercises daily, and I will get there.\"",
+              "best": true,
+              "feedback": "Best. You name the hard part and still expect to get there. That keeps you doing the exercises."
+            },
+            {
+              "text": "\"At my age, why bother?\"",
+              "feedback": "Understandable on a bad day, but it turns a slow fact into a final verdict."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "In Gabriele Oettingen's studies, people who only daydreamed about success often put in less effort than those who also pictured the obstacle. Pairing the wish with the wall helps, with modest but replicated effects.",
+    "model": "Wish, then obstacle, then if-then plan. Hope gives the why; facts give the how.",
+    "try_today": "Name one goal, the biggest inner obstacle, and write one plan: 'If [obstacle], then I will [action].'",
+    "source": {
+      "thinkers": [
+        "Gabriele Oettingen",
+        "James Stockdale",
+        "Jim Collins"
+      ],
+      "work": "Rethinking Positive Thinking (2014), Gabriele Oettingen"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "implementation_intentions",
+      "aim_high",
+      "useful_truth"
+    ],
+    "try_team": "Each person writes the group's goal, the single biggest obstacle, and one 'If..., then we...' plan. Pick the most common obstacle and adopt its plan."
   }
 ]

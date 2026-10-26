@@ -53,6 +53,12 @@
   // ---------- recommender (graph walk + novelty + balance) ----------
   const EDGE_WORD = { BUILDS_ON: "builds on", AMPLIFIES: "amplifies", CONTRASTS: "pulls against", REMEDIES: "is a fix for", PART_OF: "is part of", RELATED: "connects to" };
   const reasons = {};
+  const storyWords = (c) => new Set(`${c.hook} ${c.game.prompt || c.game.question || c.game.steps?.[0]?.scenario || ""}`.toLowerCase().match(/[a-z]{5,}/g) || []);
+  function sameStory(a, b) {
+    const A = storyWords(a), B = storyWords(b);
+    let n = 0; for (const w of A) if (B.has(w)) n++;
+    return n / Math.max(1, Math.min(A.size, B.size)) > 0.34;
+  }
   function recommend(queue, n) {
     const inQueue = new Set(queue);
     const played = Object.keys(S.done).length;
@@ -67,8 +73,10 @@
     for (let k = 0; k < n; k++) {
       const lastDomains = queue.concat(picks).slice(-4).map((id) => CARD[id].domain);
       let best = null, bestScore = -Infinity;
+      const prev = CARD[queue.concat(picks).slice(-1)[0]];
       for (const c of DB.cards) {
         if (inQueue.has(c.id) || picks.includes(c.id)) continue;
+        if (prev && sameStory(prev, c)) continue;
         let s = 0;
         if (S.done[c.id]) s -= 6;
         s -= (S.seen[c.id] || 0) * 1.5;
@@ -184,6 +192,8 @@
     if (result.text) wrap.append(h("p", { style: "margin:0" }, result.text));
     if (result.profile) wrap.append(h("p", { class: "small muted", style: "margin:0" }, "A snapshot of today's answers, not a verdict on you. People move."));
     wrap.append(h("p", { class: "model-line" }, h("small", {}, "The model"), card.model));
+    if (card.from_source) wrap.append(h("blockquote", { class: "primary" }, h("p", {}, `“${card.from_source.quote}”`),
+      h("footer", {}, card.from_source.cite, card.from_source.next_read ? h("span", {}, ` · Read next: ${card.from_source.next_read}`) : null)));
     const cbId = `try-${card.id}`;
     const cb = h("input", { type: "checkbox", id: cbId, checked: !!S.commits[card.id], onchange: (e) => {
       if (e.target.checked) { S.commits[card.id] = { text: card.try_today, at: Date.now() }; toast("Added to your map. Small steps count."); }
@@ -191,14 +201,8 @@
       save();
     } });
     wrap.append(h("div", { class: "try" }, cb, h("label", { for: cbId }, h("b", {}, "Try today"), card.try_today)));
-    if (card.try_team) wrap.append(h("details", { class: "why team", open: S.leads === true }, h("summary", {}, S.leads ? "👥 With your team" : "👥 Doing this with others? (optional)"), h("p", {}, card.try_team)));
-    if (card.try_team && S.leads == null && Object.keys(S.done).length >= 2) {
-      const ask = h("div", { class: "leads-ask" }, h("span", {}, "Do you lead a team, class or family?"),
-        h("button", { onclick: () => { S.leads = true; save(); ask.replaceWith(h("p", { class: "small muted" }, "Got it. Team versions will open by default.")); wrap.querySelector(".team")?.setAttribute("open", ""); } }, "Yes"),
-        h("button", { onclick: () => { S.leads = false; save(); ask.remove(); } }, "No"));
-      wrap.append(ask);
-    }
-    const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || [])[0]]).filter(([cid, t]) => t && CONCEPT[cid]);
+    if (card.try_team) wrap.append(h("p", { class: "team-line" }, h("b", {}, "👥 With others: "), card.try_team));
+    const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).filter((id) => !sameStory(card, CARD[id])).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || []).find((id) => !sameStory(card, CARD[id]))]).filter(([cid, t]) => t && CONCEPT[cid]);
     if (targets.length) {
       const [cid, t] = targets[0];
       const hook = CARD[t].hook.length > 52 ? CARD[t].hook.slice(0, 50).replace(/\s+\S*$/, "") + "…" : CARD[t].hook;
@@ -207,8 +211,7 @@
     const ev = { strong: "Strong evidence", moderate: "Moderate evidence", contested: "Contested — read critically", philosophy: "Philosophical lens" }[card.evidence];
     const more = h("details", { class: "why" }, h("summary", {}, "Why? · 15-second read"),
       h("p", {}, card.insight),
-      card.from_source ? h("blockquote", { class: "primary" }, h("p", {}, `“${card.from_source.quote}”`),
-        h("footer", {}, card.from_source.cite, card.from_source.next_read ? h("span", {}, ` · Read next: ${card.from_source.next_read}`) : null)) : null,
+
       h("div", { class: "meta-row" }, h("span", { class: `chip plain ev-${card.evidence}` }, ev),
         h("span", { class: "src" }, `${card.source.thinkers.join(", ")} · ${card.source.work}`)));
     if (targets.length > 1) more.append(h("div", { class: "related" }, targets.slice(1).map(([cid, t]) =>
@@ -428,7 +431,7 @@
               h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, x.ok ? "✓" : "↺"),
                 h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.label}${x.ok ? "" : " · " + x.it.why}`)))));
             score.replaceWith(recap);
-            done({ name: right === n ? "Clean sweep." : right >= n / 2 ? `${right} of ${n}. Sharp sorting.` : `${right} of ${n}. These ones are sneaky.`,
+            done({ name: right === n ? "Clean sweep." : right >= n * 0.75 ? `${right} of ${n}. Sharp sorting.` : `${right} of ${n}. These ones are sneaky.`,
               tally: misses.length ? "The ↺ ones are worth a second look." : "" });
           }
           else show();
@@ -492,8 +495,8 @@
       const g = card.game, box = h("div", { class: "est", style: "display:flex;flex-direction:column;gap:12px" });
       const fmt = (v) => `${Number(v).toLocaleString(undefined, { maximumFractionDigits: 1 })}${g.unit || ""}`;
       const slider = () => {
-        const mid = g.anchor != null ? g.anchor : (g.min + g.max) / 2;
-        const out = h("div", { class: "est-val" }, fmt(mid));
+        const mid = g.anchor != null ? g.anchor : g.min;
+        const out = h("div", { class: "est-val" }, "?");
         const rng = h("input", { type: "range", id: `est-${card.id}`, min: g.min, max: g.max, step: g.step || 1, value: mid, "aria-label": "Your estimate", oninput: (e) => { out.textContent = fmt(e.target.value); lock.disabled = false; lock.textContent = "Lock in my guess"; } });
         const lock = h("button", { class: "btn", disabled: true, onclick: () => {
           const guess = Number(rng.value), span = g.max - g.min || 1;
@@ -527,8 +530,7 @@
       const opts = h("div", { class: "opts" }, g.choices.map((c, k) => h("button", { class: "opt", onclick: (e) => {
         opts.querySelectorAll("button").forEach((b, j) => { b.disabled = true; if (has && j === g.answer) b.classList.add("best"); });
         e.currentTarget.classList.add("picked");
-        opts.after(h("p", { class: "feedback" }, g.reveal));
-        done({ name: !has ? "" : k === g.answer ? "Spot on." : `Not quite. The answer: ${g.choices[g.answer]}` });
+        done({ name: !has ? "" : k === g.answer ? "Spot on." : `Not quite. The answer: ${g.choices[g.answer]}`, text: g.reveal });
       } }, c)));
       return h("div", { style: "display:flex;flex-direction:column;gap:12px" }, h("p", { class: "q-text" }, g.prompt), opts);
     },

@@ -59,7 +59,7 @@
         {
           "text": "The rain falling on you right now",
           "side": "right",
-          "why": "That's the thing itself. You can't argue with it, only respond."
+          "why": "As close to the thing itself as you get. You can't argue with it, only respond."
         },
         {
           "text": "A friend's 5-star restaurant review",
@@ -74,7 +74,7 @@
         {
           "text": "The taste of the coffee in your mouth",
           "side": "right",
-          "why": "Direct experience. The menu description was the map."
+          "why": "Closer to the thing than any menu. Korzybski: even taste is your nerves' summary."
         },
         {
           "text": "Your exam grade or step count",
@@ -106,35 +106,36 @@
     "concept": "goal_directed_perception",
     "domain": "perception",
     "type": "estimate",
-    "hook": "A person in a gorilla suit walks past. Would you notice? Guess.",
+    "hook": "Expert doctors scanned for one thing. Guess how many missed a gorilla.",
     "title": "You See What You Aim At",
     "game": {
-      "question": "People watch a short video and count basketball passes. A person in a gorilla suit walks through the middle of the scene. Roughly what % of viewers never notice the gorilla?",
+      "question": "Radiologists searched lung scans for nodules. Researchers pasted in a gorilla 48 times the size of a typical nodule. What % of the radiologists missed it?",
       "min": 0,
       "max": 100,
       "step": 1,
       "unit": "%",
-      "answer": 46,
-      "explain": "In Simons & Chabris's 1999 study, 46% of viewers missed it overall (more in harder versions). Counting passes was the goal, so the gorilla went unseen.",
+      "answer": 83,
+      "explain": "Drew, Vo & Wolfe (2013): 20 of 24 expert radiologists (83%) missed it, even though eye-tracking showed most of those who missed it looked right at it. Their aim was 'find nodules'.",
       "anchor": null
     },
-    "insight": "Attention follows aims. Hunting for one thing, your brain filters out much of the rest, even a gorilla. That's how focus works, but it means your goals quietly shape what you see.",
+    "insight": "Attention follows aims. Even experts hunting for one thing filter out much of the rest, a gorilla included. That's how focus works, but it means your goals quietly shape what you see.",
     "model": "Your aim is a filter. Change what you're looking for and the world rearranges.",
     "try_today": "Before your next walk or meeting, set a new aim: 'notice three things that are going well.' Then count them.",
     "source": {
       "thinkers": [
-        "Daniel Simons",
-        "Christopher Chabris",
+        "Trafton Drew",
+        "Melissa Vo",
+        "Jeremy Wolfe",
         "Jordan Peterson"
       ],
-      "work": "Simons & Chabris, Gorillas in Our Midst (1999); Peterson, Maps of Meaning (1999)"
+      "work": "Drew, Vo & Wolfe, The invisible gorilla strikes again, Psychological Science (2013); Peterson, Maps of Meaning (1999)"
     },
     "evidence": "strong",
     "level": 1,
     "related": [
-      "aim_high",
       "map_territory",
-      "confirmation_bias"
+      "confirmation_bias",
+      "aim_high"
     ],
     "try_team": "Before a class, practice or meeting, give everyone a different 'look for' job: one good idea, one risk, one person who's quiet. Compare notes at the end.",
     "from_source": {
@@ -157,10 +158,10 @@
         "Quite possibly not"
       ],
       "answer": 1,
-      "reveal": "If you said yes, you're in good company: almost everyone does. But in Simons and Levin's 1998 street study, about half of the people kept giving directions to the new person without noticing. Their aim was 'explain the route', so the face barely got stored."
+      "reveal": "If you said yes, you're in good company: almost everyone does. But in Simons and Levin's 1998 street study, about half of the people kept giving directions to the new person without noticing. One likely reason: people stored a rough label ('a stranger with a map'), not the face. In a follow-up, students noticed a swap more often when the stranger looked like a fellow student."
     },
-    "insight": "Your aim decides what gets stored, not just what you see. A small study (15 people), but this 'change blindness' has been found many times.",
-    "model": "You remember what you were aiming at. Aim at the person, and you'll see the person.",
+    "insight": "We often store a rough label, not the details. A small study (15 people), but this 'change blindness' has been found many times.",
+    "model": "We often store a label, not the person. Aim to notice the person and you'll see more of them.",
     "try_today": "In your next chat, set a tiny aim: notice one thing about the person (their mood, their eyes, what they care about today).",
     "try_team": "Pair up for 60 seconds of chat, then turn back to back. Each changes one small thing (glasses, sleeve, hair). Turn round: who spots it? Then swap.",
     "source": {
@@ -179,7 +180,7 @@
     ]
   },
   {
-    "id": "reframing-boss-text",
+    "id": "reframing-late-text",
     "concept": "reframing",
     "domain": "perception",
     "type": "choice",
@@ -188,11 +189,11 @@
     "game": {
       "steps": [
         {
-          "scenario": "11pm. A close friend (or your mum, or your partner) texts: 'We need to talk. Tomorrow?' No context. Your heart speeds up. What do you tell yourself?",
+          "scenario": "11pm. Your manager (or a close friend, or your partner) texts: 'We need to talk. Tomorrow?' No context. Your heart speeds up. What do you tell yourself?",
           "options": [
             {
               "text": "'I've done something wrong. I should prepare for the worst.'",
-              "feedback": "A very normal first reaction. But it's one story out of many, and it will cost you a night's sleep before you know anything."
+              "feedback": "A very normal first reaction, especially if you're already on edge. It's just one story out of many, and you don't have to settle it tonight."
             },
             {
               "text": "'I don't know what this is yet. Could be news, a favour, a plan. I'll find out tomorrow.'",
@@ -209,7 +210,7 @@
           "scenario": "Next morning, still a bit nervous. What's a useful move?",
           "options": [
             {
-              "text": "Reply: 'Sure! Everything ok? What time works?'",
+              "text": "Reply: 'Sure. Anything I should prepare? What time works?'",
               "best": true,
               "feedback": "Turns a vague threat into a concrete plan. Often you'll get the context you were missing."
             },
@@ -346,18 +347,18 @@
           ]
         },
         {
-          "q": "When things pile up (homework, chores, bills), I mostly try to…",
+          "q": "When a stressful task looms (a deadline, an exam, a big job), I mostly see it as…",
           "options": [
             {
-              "label": "Avoid thinking about it",
+              "label": "A threat to get through",
               "value": -2
             },
             {
-              "label": "Push through grimly",
+              "label": "Not sure",
               "value": 0
             },
             {
-              "label": "Treat it as training",
+              "label": "A chance to get stronger",
               "value": 2
             }
           ]
@@ -383,7 +384,7 @@
           "q": "Feeling stressed is a sign that…",
           "options": [
             {
-              "label": "I'm not coping",
+              "label": "Something is going wrong",
               "value": -2
             },
             {
@@ -391,7 +392,7 @@
               "value": 0
             },
             {
-              "label": "I care about this",
+              "label": "Something matters to me",
               "value": 2
             }
           ]
@@ -400,22 +401,22 @@
       "zones": [
         {
           "upTo": -0.34,
-          "label": "Today: leaning 'stress harms'",
+          "label": "Leaning 'stress harms'",
           "text": "Today your answers read stress mostly as danger, and if you've had a hard time, that makes sense. For everyday nerves (a talk, an exam), try one more reading: my body is getting me ready. If stress feels constant or heavy, that's a reason to get support, not a mindset failure."
         },
         {
           "upTo": 0.34,
-          "label": "Today: a mixed lens",
+          "label": "A mixed lens",
           "text": "Today your answers see both sides. Next time, notice which story you pick in the moment. Sometimes you can pick which story to lean on."
         },
         {
           "upTo": 1,
-          "label": "Today: leaning 'stress can fuel'",
+          "label": "Leaning 'stress can fuel'",
           "text": "Today your answers read stress as energy. Keep that, and still watch for real overload: rest is part of the deal."
         }
       ]
     },
-    "insight": "In Alia Crum's studies, people shown stress as enhancing reported somewhat better performance and health. The effect is modest. Heavy or constant stress needs real support, not just a mindset.",
+    "insight": "In Alia Crum's studies, people shown stress as enhancing reported somewhat better performance and fewer stress symptoms. Jeremy Jamieson found reading a racing heart as 'gearing up' helped too. Effects are modest; heavy or constant stress needs real support.",
     "model": "Some stress is your body gearing up, not breaking. Reframe the everyday kind; get support for the heavy kind.",
     "try_today": "Before your next nervous moment, take one slow breath and tell yourself: 'This is energy for something I care about.'",
     "source": {
@@ -423,9 +424,10 @@
         "Alia Crum",
         "Peter Salovey",
         "Shawn Achor",
+        "Jeremy Jamieson",
         "Kelly McGonigal"
       ],
-      "work": "Crum, Salovey & Achor, Rethinking stress (2013); McGonigal, The Upside of Stress (2015)"
+      "work": "Crum, Salovey & Achor, Rethinking stress (2013); Jamieson et al., Journal of Experimental Psychology: General (2012); McGonigal, The Upside of Stress (2015)"
     },
     "evidence": "moderate",
     "level": 1,
@@ -435,7 +437,8 @@
       "growth_mindset",
       "emotion_naming"
     ],
-    "try_team": "Before a match, exam or big deadline, everyone says one thing they care about in it. Then together: 'This buzz is energy for that.' One slow breath."
+    "try_team": "Before a match, exam or big deadline, everyone says one thing they care about in it. Then together: 'This buzz is energy for that.' One slow breath.",
+    "notes": "Q3 is deliberately downweighted (values ±1) so a hard past isn't scored as harshly as present-day appraisals."
   },
   {
     "id": "useful-truth-people-person",
@@ -445,17 +448,17 @@
     "hook": "'I'm just not a people person.' How would you prove that?",
     "title": "Pragmatic Truth",
     "game": {
-      "prompt": "You believe 'I'm not a people person.' A pragmatist asks: what would you DO differently if it were true, and what happens when you live by it? Which test tells you more?",
+      "prompt": "You believe 'I'm not a people person.' William James would ask: what difference does this belief make in practice? Which test adds something reflection alone can't?",
       "choices": [
-        "Thinking hard about whether it's really true",
-        "Living one week as if it might be false, then checking"
+        "Reflecting carefully on past evidence",
+        "Reflecting, then living one week as if it might be false"
       ],
-      "reveal": "Thinking it over has its place, but it mostly replays old memories. William James and Charles Peirce argued an idea's meaning lies in its practical consequences: live by it, see what happens. A belief that keeps you home alone 'proves itself' only because you never ran the test.",
+      "reveal": "Reflection matters; it is where the question starts. But James and Peirce held that an idea's meaning shows in its practical consequences, so the test has to leave the armchair too. Beliefs like this can quietly keep themselves alive, because they steer us away from the very moments that could test them. A small, low-stakes test is kinder and more informative than reflection alone.",
       "answer": 1
     },
-    "insight": "Pragmatism asks: what happens when you act on this idea? Some beliefs make life bigger, some smaller. A philosophical lens, not a lab finding, and facts still matter.",
+    "insight": "Pragmatism asks: what happens when you act on this idea? A philosophical lens, not a lab finding, and facts still matter. James's view of truth was hotly disputed (Russell among others); take it as a method, not the last word.",
     "model": "Judge a belief by its consequences: run the experiment, then decide.",
-    "try_today": "Pick one limiting belief. Do one small action that would only make sense if it were false. Note what actually happened.",
+    "try_today": "Pick one limiting belief. Try one small, low-stakes action that only makes sense if it's false. Note what happened, no grading.",
     "source": {
       "thinkers": [
         "William James",
@@ -476,7 +479,8 @@
       "quote": "The truth of an idea is not a stagnant property inherent in it. Truth happens to an idea.",
       "cite": "William James, Pragmatism (1907), Lecture VI 'Pragmatism's Conception of Truth'",
       "next_read": "James, Pragmatism, Lecture II 'What Pragmatism Means', then Lecture VI (free online)"
-    }
+    },
+    "sensitive": true
   },
   {
     "id": "mpc-loop-pcf-venn",
@@ -650,5 +654,228 @@
       "wso_triad",
       "useful_truth"
     ]
+  },
+  {
+    "id": "spotlight-effect-tshirt-estimate",
+    "concept": "spotlight_effect",
+    "domain": "perception",
+    "type": "estimate",
+    "hook": "You walk in wearing something cringe. How many people clock it?",
+    "title": "Fewer People Notice Than You Think",
+    "game": {
+      "question": "Students put on a T-shirt with a big, uncool singer's face and walked into a room of peers. What % of the room later noticed who was on the shirt?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 23,
+      "explain": "About 23%. The shirt-wearers guessed close to half would notice (Gilovich, Medvec & Savitsky, 2000). Guessed high? So did they: you feel your own shirt all day; others mostly don't.",
+      "anchor": null,
+      "typical_miss": true
+    },
+    "insight": "We sit at the centre of our own story, so we guess others are watching us about twice as closely as they are. Small studies, but the pattern has held up.",
+    "model": "You're the star of your show, an extra in everyone else's. Halve your guess of who noticed.",
+    "try_today": "Next time you feel everyone saw your slip, ask one person if they noticed. Write down the guess first, then the answer.",
+    "source": {
+      "thinkers": [
+        "Thomas Gilovich",
+        "Victoria Husted Medvec",
+        "Kenneth Savitsky"
+      ],
+      "work": "Gilovich, Medvec & Savitsky, 'The Spotlight Effect in Social Judgment', JPSP (2000)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "map_territory",
+      "availability",
+      "procrastination_emotion"
+    ],
+    "try_team": "Everyone writes one moment this week they felt watched (a wrong answer, a typo, a stumble). Others say if they even noticed. Usually: barely."
+  },
+  {
+    "id": "spotlight-effect-slip-choice",
+    "concept": "spotlight_effect",
+    "domain": "perception",
+    "type": "choice",
+    "hook": "One awkward moment. How long will people remember it?",
+    "title": "The Slip Is Smaller Outside Your Head",
+    "game": {
+      "steps": [
+        {
+          "scenario": "In class you answer a question confidently, and it's wrong. A couple of people laugh. Next lesson, you…",
+          "options": [
+            {
+              "text": "Say 'oops, mixed that up' if it comes up, and put your hand up again",
+              "best": true,
+              "feedback": "Best move. A light, quick fix tells people it's no big deal, and it usually isn't to them."
+            },
+            {
+              "text": "Stay silent for the rest of term so it can't happen again",
+              "feedback": "Understandable, it stung. But the silence costs you more than the slip did; most classmates likely moved on that day."
+            },
+            {
+              "text": "Explain at length why your answer was nearly right",
+              "feedback": "Natural urge, but a long defence keeps the moment alive. Short and light lets it fade."
+            }
+          ]
+        },
+        {
+          "scenario": "You lose your words mid-sentence while speaking to a group at work or in a club meeting. Afterwards you…",
+          "options": [
+            {
+              "text": "Replay it all evening and plan to avoid speaking up",
+              "feedback": "Very common. But people judge our public mishaps less harshly than we expect (Savitsky, Epley & Gilovich, 2001)."
+            },
+            {
+              "text": "Note one thing to tweak next time, then let it go",
+              "best": true,
+              "feedback": "Yes. Others mostly remember your point, not the pause. One fix, then move on."
+            },
+            {
+              "text": "Send everyone a message apologising for the stumble",
+              "feedback": "Kind instinct, but it puts a spotlight on something few people noticed."
+            }
+          ]
+        },
+        {
+          "scenario": "At a family get-together you call a relative's partner by the wrong name. You…",
+          "options": [
+            {
+              "text": "Smile, say 'sorry, got my names muddled', and carry on",
+              "best": true,
+              "feedback": "Right. A warm one-line fix is what most people hope for, and then they move on."
+            },
+            {
+              "text": "Avoid them for the rest of the day",
+              "feedback": "Easy to feel that pull. But steering clear makes the moment bigger than the slip was."
+            },
+            {
+              "text": "Bring it up again later to apologise once more",
+              "feedback": "Caring, but one apology is enough; repeating it keeps the spotlight on."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Your slip feels huge because you see it from the inside. Others are busy with their own day, and judge it more gently than you predict. A quick, light fix is usually enough.",
+    "model": "A quick, light fix ends the moment for them; replaying it only keeps it going for you.",
+    "try_today": "Recall one recent cringe moment. Write how you think others saw it, then a kinder guess. Which is more likely?",
+    "source": {
+      "thinkers": [
+        "Kenneth Savitsky",
+        "Nicholas Epley",
+        "Thomas Gilovich"
+      ],
+      "work": "Savitsky, Epley & Gilovich, 'Do Others Judge Us as Harshly as We Think?', JPSP (2001)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "procrastination_emotion",
+      "reframing",
+      "availability"
+    ],
+    "try_team": "Before a talk or meeting, agree a light line for slips ('let me try that again'). Use it once on purpose so it feels normal for everyone.",
+    "sensitive": true
+  },
+  {
+    "id": "hedonic-adaptation-lottery-reveal",
+    "concept": "hedonic_adaptation",
+    "domain": "perception",
+    "type": "reveal",
+    "hook": "A huge win would change everything. For how long, though?",
+    "title": "The Thrill Wears Off",
+    "game": {
+      "prompt": "Researchers asked big lottery winners, up to about 18 months after winning, how happy they felt day to day. Compared with their neighbours, they were…",
+      "choices": [
+        "Clearly happier",
+        "About the same"
+      ],
+      "answer": 1,
+      "reveal": "About the same, in a small 1978 study of 22 winners (Brickman et al.), and they enjoyed small things like a chat or a joke a bit less. Picked 'happier'? You're partly right: a large Swedish study found big winners stayed more satisfied with life for years, though not happier from moment to moment (Lindqvist et al., 2020)."
+    },
+    "insight": "New things quickly become your normal, so the daily glow fades even when the gain is real. How satisfied you feel with life can shift; the day-to-day buzz mostly settles back.",
+    "model": "Gains turn into the new normal. Expect the glow to fade and plan for it.",
+    "try_today": "Pick one thing you were excited to get last year. Use it today as if it were new, and notice one detail you'd stopped seeing.",
+    "source": {
+      "thinkers": [
+        "Philip Brickman",
+        "Dan Coates",
+        "Ronnie Janoff-Bulman"
+      ],
+      "work": "Brickman, Coates & Janoff-Bulman, JPSP (1978); Lindqvist, Östling & Cesarini, Review of Economic Studies (2020)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "goal_directed_perception",
+      "one_percent",
+      "feedback_loops"
+    ],
+    "try_team": "Each person names something they wanted badly that now feels ordinary. Then name one way to make it feel fresh again. Share the best idea.",
+    "sensitive": true
+  },
+  {
+    "id": "hedonic-adaptation-fade-swipe",
+    "concept": "hedonic_adaptation",
+    "domain": "perception",
+    "type": "swipe",
+    "hook": "Some changes you get used to in weeks. Others never feel normal.",
+    "title": "What You Get Used To",
+    "game": {
+      "prompt": "Does the feeling fade, or does it stick around?",
+      "left": "Fades (you get used to it)",
+      "right": "Sticks (you don't fully adapt)",
+      "items": [
+        {
+          "text": "The buzz of a brand-new phone",
+          "side": "left",
+          "why": "Within weeks it's just your phone. Same features, far less thrill."
+        },
+        {
+          "text": "The lift from a pay rise or promotion",
+          "side": "left",
+          "why": "It helps, but soon it's the new baseline and your wants rise to match."
+        },
+        {
+          "text": "Retiring to a sunnier place for the weather",
+          "side": "left",
+          "why": "Sun matters less day to day than we expect (Schkade & Kahneman, 1998)."
+        },
+        {
+          "text": "The stress of a long daily commute",
+          "side": "right",
+          "why": "People don't seem to fully get used to it (Stutzer & Frey, 2008)."
+        },
+        {
+          "text": "Varied, regular time with people you like",
+          "side": "right",
+          "why": "Changing, surprising joys fade slower than fixed ones (Lyubomirsky, 2011)."
+        }
+      ]
+    },
+    "insight": "We adapt fast to stable gains, slowly to daily hassles and changing joys. So cutting daily friction and keeping good things varied tends to pay off longer than more stuff.",
+    "model": "Spend on variety and less friction. Sameness is what fades fastest.",
+    "try_today": "Name one daily hassle you've 'accepted'. Spend 10 minutes finding one way to shrink it this week.",
+    "source": {
+      "thinkers": [
+        "Sonja Lyubomirsky",
+        "Alois Stutzer",
+        "Bruno Frey",
+        "David Schkade",
+        "Daniel Kahneman"
+      ],
+      "work": "Lyubomirsky, 'Hedonic Adaptation to Positive and Negative Experiences' (2011); Stutzer & Frey (2008); Schkade & Kahneman (1998)"
+    },
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "goal_directed_perception",
+      "feedback_loops",
+      "one_percent"
+    ],
+    "try_team": "List the group's three biggest daily hassles and three recent 'upgrades'. Vote: which fix would still feel good in six months?",
+    "sensitive": true
   }
 ]

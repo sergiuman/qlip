@@ -27,19 +27,19 @@
           ]
         },
         {
-          "scenario": "Your friend bites their nails whenever they feel nervous before a test. The nerves (the cue) won't vanish. What helps most?",
+          "scenario": "Whenever a meeting gets tense, a colleague grabs their phone and starts scrolling. The tension (the cue) won't vanish. What helps most?",
           "options": [
             {
               "text": "Tell them to just stop.",
               "feedback": "Kindly meant, but 'just stop' leaves the urge with nowhere to go."
             },
             {
-              "text": "When the urge comes, press their hands flat on their legs for a minute.",
+              "text": "When the urge comes, pick up a pen and write down the next question to ask.",
               "best": true,
               "feedback": "Yes. Same cue, new response. Swapping in a competing action is the core of habit reversal training, a well-tested method."
             },
             {
-              "text": "Wait until the exams are over.",
+              "text": "Wait until the project calms down.",
               "feedback": "Understandable, but the loop keeps practising in the meantime. A swap can start today."
             }
           ]
@@ -311,10 +311,10 @@
     "concept": "one_percent",
     "domain": "habits",
     "type": "reveal",
-    "hook": "Your brain is bad at one kind of maths. Want to test yours?",
+    "hook": "Most brains trip on one kind of maths. See how yours handles it?",
     "title": "The Doubling Pile",
     "game": {
-      "prompt": "Pick a pile. Pile A: you get 1,000 coins every day for 30 days. Pile B: you get 1 coin today, and the daily amount doubles for 30 days. Which ends bigger?",
+      "prompt": "Pick a pile. Pile A: you get 1,000 coins every day for 30 days. Pile B: you get 1 coin on day 1, 2 on day 2, 4 on day 3, doubling each day until day 30. Which ends bigger?",
       "choices": [
         "Pile A: 1,000 coins a day",
         "Pile B: 1 coin, doubling daily"
@@ -322,17 +322,18 @@
       "answer": 1,
       "reveal": "Pile B, by a mile: over 1 billion coins vs 30,000. If you picked A, you're in good company, and here's why: A is ahead for the first 13 days. Doubling looks like nothing, then like everything."
     },
-    "insight": "People reliably underestimate compound growth (Stango & Zinman, 2009). Habits don't double daily, but the early phase feels similar: lots of effort, little to show yet.",
-    "model": "Compounding looks like nothing, then like everything. Don't judge a habit in week one.",
+    "insight": "People reliably underestimate compound growth (Stango & Zinman, 2009). Habits don't compound like this. In one study, automaticity grew fast at first and then levelled off over about 66 days (Lally et al., 2010). The shared lesson: early days look unimpressive.",
+    "model": "Don't judge a slow start by week one. Give it about two months.",
     "try_today": "Draw 30 boxes on paper. Tick one each day you do your tiny habit. Judge it at box 30, not box 3.",
     "try_team": "Everyone secretly picks Pile A or B, then reveal together. Then choose one small daily habit for the group and review it in 30 days.",
     "source": {
       "thinkers": [
         "Victor Stango",
         "Jonathan Zinman",
+        "Phillippa Lally",
         "James Clear"
       ],
-      "work": "Exponential growth bias and household finance (Journal of Finance, 2009); Atomic Habits (2018)"
+      "work": "Exponential growth bias and household finance (Journal of Finance, 2009); How are habits formed (European Journal of Social Psychology, 2010); Atomic Habits (2018)"
     },
     "evidence": "moderate",
     "level": 1,
@@ -443,7 +444,7 @@
           "axis": 2
         },
         {
-          "q": "My default options (what's on my plate, my home screen) are good ones.",
+          "q": "The easiest option in front of me (food, apps, plans) is usually a good one.",
           "axis": 3
         },
         {
@@ -459,7 +460,7 @@
         "4": "Today's lowest score: people. Find one person or group who already does the habit you want, and spend a little time there."
       }
     },
-    "insight": "People who rated their self-control highly reported meeting fewer temptations, not resisting more (Hofmann et al., 2012). Willpower is tiring. Your surroundings work every day for free.",
+    "insight": "People who rated their self-control highly reported meeting fewer temptations, not resisting more (Hofmann et al., 2012, a correlational diary study). Resisting in the moment is unreliable; your surroundings work every day for free.",
     "model": "Make good habits obvious and easy; make bad ones invisible and hard.",
     "try_today": "Move one temptation out of sight and put one good cue in plain view. It takes two minutes.",
     "try_team": "Walk your shared space (home, classroom, office) for 5 minutes. Each person hides one distraction and puts one good cue in sight.",
@@ -593,6 +594,136 @@
       "self_compassion",
       "identity_habits",
       "mistake_alchemy"
+    ]
+  },
+  {
+    "id": "evening-reset-switch-off-choice",
+    "concept": "evening_reset",
+    "domain": "habits",
+    "type": "choice",
+    "sensitive": true,
+    "hook": "You left school or work hours ago. Has your head left yet?",
+    "title": "Close the Day on Purpose",
+    "game": {
+      "steps": [
+        {
+          "scenario": "It's 10 pm. The class, team or family chat is still buzzing about tomorrow, and nothing can be done about it tonight. You...",
+          "options": [
+            {
+              "text": "Mute it until morning and pick a set time to catch up.",
+              "best": true,
+              "feedback": "Best move. Nothing changes overnight, and a set catch-up time tells your brain the topic has a place to land."
+            },
+            {
+              "text": "Keep checking so you don't miss anything.",
+              "feedback": "Very human, but each check reopens the topic right when you can't act on it. Muting usually costs you nothing."
+            },
+            {
+              "text": "Reply to every message so it's all done.",
+              "feedback": "Tidy in theory, but replies invite more replies. The chat rarely ends because you answered it."
+            }
+          ]
+        },
+        {
+          "scenario": "You have an hour before bed and feel drained. Which evening is most likely to leave you rested tomorrow?",
+          "options": [
+            {
+              "text": "Something absorbing and unrelated: cooking, a walk, a novel, a game with someone.",
+              "best": true,
+              "feedback": "Right. Studies of mentally 'switching off' after work or study link it to less fatigue the next day."
+            },
+            {
+              "text": "Catching up on the news so you're up to date.",
+              "feedback": "Understandable, but news is designed to grab attention, which keeps the mind alert, not settled."
+            },
+            {
+              "text": "Going over tomorrow in your head in bed.",
+              "feedback": "Planning is useful, just earlier and on paper. In bed it often turns into replaying, which keeps you awake."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Rest isn't only time off. It's your mind leaving the task too. People who switch off in the evening report less fatigue, though most of this evidence is correlational.",
+    "model": "An evening only rests you if your mind gets to leave the day too.",
+    "try_today": "Pick one closing signal for tonight, like muting chats at 9 pm or saying 'done for today' as you shut the bag or laptop.",
+    "try_team": "Agree on a quiet hour for the group chat (say 9 pm to 7 am), with a clear rule for what counts as truly urgent.",
+    "source": {
+      "thinkers": [
+        "Sabine Sonnentag",
+        "Cal Newport"
+      ],
+      "work": "Sonnentag & Fritz, Journal of Occupational Health Psychology (2007); Wendsche & Lohmann-Haislah, Frontiers in Psychology (2017); Deep Work (2016)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "doomscroll_loop",
+      "sleep_memory",
+      "habit_loop"
+    ]
+  },
+  {
+    "id": "evening-reset-wind-down-swipe",
+    "concept": "evening_reset",
+    "domain": "habits",
+    "type": "swipe",
+    "hook": "Some 'relaxing' habits wake your brain right up. Spot which.",
+    "title": "Wind Down or Rev Up?",
+    "game": {
+      "prompt": "What does this do to your brain before bed?",
+      "left": "Revs it up",
+      "right": "Winds it down",
+      "items": [
+        {
+          "text": "Laying out tomorrow's clothes or bag",
+          "side": "right",
+          "why": "One fewer thing waiting for you in the morning, so one fewer thing to hold in mind."
+        },
+        {
+          "text": "One last message check in bed",
+          "side": "left",
+          "why": "It opens new topics at the one moment you can't act on them."
+        },
+        {
+          "text": "Replaying an argument to win it this time",
+          "side": "left",
+          "why": "Going over it again keeps the body on alert. Writing it down earlier works better."
+        },
+        {
+          "text": "A warm shower or bath an hour or two before bed",
+          "side": "right",
+          "why": "A 2019 review found it helped people fall asleep about 10 minutes sooner."
+        },
+        {
+          "text": "Binge-watching a gripping finale until late",
+          "side": "left",
+          "why": "The excitement and the lost sleep time matter as much as the screen's light."
+        },
+        {
+          "text": "The same short routine in the same order each night",
+          "side": "right",
+          "why": "Repeated steps become cues: after a while the routine itself signals sleep."
+        }
+      ]
+    },
+    "insight": "Calm and familiar winds you down. New and exciting revs you up. Sleep helps lock in what you learned (strong evidence). The idea that it also softens bad moods is promising but still debated.",
+    "model": "Before bed, swap new and exciting for calm and familiar.",
+    "try_today": "Pick two calm steps (shower, lay out clothes, one page of a book) and do them in the same order tonight.",
+    "try_team": "As a family or team, swap ideas: each person shares one thing that winds them down and one that secretly revs them up.",
+    "source": {
+      "thinkers": [
+        "Matthew Walker",
+        "Shahab Haghayegh"
+      ],
+      "work": "Haghayegh et al., Sleep Medicine Reviews (2019); Walker, Why We Sleep (2017)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "sleep_memory",
+      "habit_loop",
+      "doomscroll_loop"
     ]
   }
 ]

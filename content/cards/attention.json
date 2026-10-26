@@ -499,5 +499,79 @@
       "deliberate_practice",
       "deep_work"
     ]
+  },
+  {
+    "id": "zeigarnik-effect-what-holds-up",
+    "concept": "zeigarnik_effect",
+    "domain": "attention",
+    "type": "reveal",
+    "hook": "Unfinished stuff nags at you. But the famous memory claim? Shaky.",
+    "title": "Open Loops Pull You Back",
+    "game": {
+      "prompt": "In 1927, Bluma Zeigarnik stopped people halfway through small puzzles and tasks. A century of follow-up studies later, which claim holds up best?",
+      "choices": [
+        "We remember unfinished tasks better",
+        "We feel an urge to go back and finish them",
+        "Both hold up equally well"
+      ],
+      "answer": 1,
+      "reveal": "The urge to finish. Zeigarnik's memory boost often failed to show up again; a 2025 meta-analysis found the pull to resume (first shown by Maria Ovsiankina, 1928) is the sturdier finding. If you picked memory, you picked the textbook version."
+    },
+    "insight": "Think of a half-read book, a half-done essay or a half-fixed shelf: they tug at you. The tug is real. The idea that it sharpens memory is contested.",
+    "model": "An open task doesn't just sit there; it pulls you back. Close it or park it on purpose.",
+    "try_today": "Pick one small task you left half-done (a reply, a form, a drawer) and finish it in 10 minutes. Notice the relief.",
+    "try_team": "Each person names one 'open loop' bugging them. Pair up: finish one now, or write down when it will get done.",
+    "source": {
+      "thinkers": [
+        "Bluma Zeigarnik",
+        "Maria Ovsiankina",
+        "Rebecca Ghibellini",
+        "Beat Meier"
+      ],
+      "work": "Zeigarnik, Psychologische Forschung (1927); Ovsiankina (1928); Ghibellini & Meier, meta-analysis (2025)"
+    },
+    "evidence": "contested",
+    "level": 1,
+    "related": [
+      "attention_residue",
+      "deep_work"
+    ]
+  },
+  {
+    "id": "zeigarnik-effect-bedtime-list",
+    "concept": "zeigarnik_effect",
+    "domain": "attention",
+    "type": "estimate",
+    "sensitive": true,
+    "hook": "Lying awake replaying tomorrow? Five minutes with a pen might help.",
+    "title": "Park It on Paper",
+    "game": {
+      "question": "In a sleep lab, one group spent 5 minutes before bed writing tomorrow's to-do list. Another wrote what they had already done. How many minutes sooner did the to-do group fall asleep?",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "min",
+      "answer": 9,
+      "explain": "About 9 minutes sooner, and longer, more specific lists went with faster sleep (Scullin et al., 2018). Writing down what's left seems to let the mind stop holding it."
+    },
+    "insight": "It was one small study of 57 young adults, so treat it as promising, not proven. Small studies of plan-making point the same way: a written next step quiets the nag.",
+    "model": "Your mind keeps holding open tasks until they're parked somewhere it trusts.",
+    "try_today": "Tonight, before bed, write tomorrow's to-do list on paper, as specific as you can. Then put the list and the screen away.",
+    "try_team": "End the week or the school day with a 'parking lot': everyone writes their open tasks and next steps on one shared sheet before leaving.",
+    "source": {
+      "thinkers": [
+        "Michael Scullin",
+        "E.J. Masicampo",
+        "Roy Baumeister"
+      ],
+      "work": "Scullin et al., Journal of Experimental Psychology: General (2018); Masicampo & Baumeister, JPSP (2011)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "sleep_memory",
+      "implementation_intentions",
+      "evening_reset"
+    ]
   }
 ]

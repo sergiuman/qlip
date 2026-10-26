@@ -1,0 +1,22 @@
+export const meta = {
+  name: 'qlip-grow-graph',
+  description: 'Grow the Qlip concept graph from library values, then author + review cards for the new concepts per domain',
+  phases: [{ title: 'Plan', detail: 'propose and wire new concepts' }, { title: 'Author', detail: 'cards per domain' }],
+}
+const ROOT = '/Users/sergiuman/Desktop/Gemini/Qumni Framework/qlip'
+const PLAN = { type: 'object', properties: { added: { type: 'array', items: { type: 'object', properties: { id: { type: 'string' }, domain: { type: 'string' }, from: { type: 'string' } }, required: ['id','domain','from'] } } }, required: ['added'] }
+phase('Plan')
+const plan = await agent(`You grow the concept graph for Qlip (30-second games teaching practical philosophy & psychology to anyone).
+Graph: ${ROOT}/content/concepts.json (12 domains, typed links). Library index: ${ROOT}/sources/corpus.json (28 values, 17 dilemmas, learned bridges from the owner's 17 book adaptations) and ${ROOT}/sources/qumni_wso.txt / qumni_pcf.txt (owner's frameworks). Gaps: ${ROOT}/data/gaps.json. Lessons: ${ROOT}/content/lessons.json.
+Propose 14 NEW concepts that (a) capture library values/dilemmas/bridges not yet covered (e.g. real-world play vs screens, quiet observation, cooperative trust, emotional naming at work, shared stories, nightly reset), (b) strengthen weakly-connected domains, (c) add well-established practical-philosophy/psychology models still missing (candidates: implementation intentions, the spotlight effect, hedonic adaptation, sunk cost, the Zeigarnik effect, gratitude practice, the Ben Franklin effect, Hanlon's razor, the fundamental attribution error, memento mori, the Stockdale paradox, psychological safety, self-determination's three needs, Pareto principle). Choose the best 14 for a broad audience; at least 1 per domain where possible, max 2 per domain.
+Append them to the "concepts" array in ${ROOT}/content/concepts.json in exactly the existing shape: {id (snake_case, new), domain, name (≤40 chars), line (≤110), thinkers [real], sources [corpus source ids like "book_06" where it truly comes from the library, else []], links: 2-3 to EXISTING ids with types BUILDS_ON|AMPLIFIES|CONTRASTS|REMEDIES|PART_OF}. Also add 1 link FROM an existing related concept TO each new one (edit that concept's links) so the graph stays well connected. Keep valid JSON. Then run python3 -c "import json;json.load(open('${ROOT}/content/concepts.json'))". Return the list of added ids with domain and what they came from.`, { label: 'planner', phase: 'Plan', schema: PLAN })
+const byDomain = {}
+for (const a of plan.added) (byDomain[a.domain] = byDomain[a.domain] || []).push(a.id)
+log(`planned ${plan.added.length} concepts across ${Object.keys(byDomain).length} domains`)
+const OUT = { type: 'object', properties: { domain: { type: 'string' }, new_card_ids: { type: 'array', items: { type: 'string' } }, validator_errors: { type: 'number' } }, required: ['domain','new_card_ids','validator_errors'] }
+phase('Author')
+const res = await parallel(Object.entries(byDomain).map(([d, ids]) => () => agent(`Write Qlip cards for NEW concepts ${ids.join(', ')} in domain "${d}". Edit ONLY ${ROOT}/content/cards/${d}.json (append).
+Read: ${ROOT}/docs/CARD_SCHEMA.md (full rules incl. optional try_team, from_source, reveal answer, venn mid, estimate typical_miss), ${ROOT}/content/lessons.json (obey every lesson), ${ROOT}/content/concepts.json (find your concepts), and look at 2-3 existing cards in your file for house style. Exemplars players loved: ids in ${ROOT}/data/learned.json "exemplars" (find them in ${ROOT}/data/qlip.json).
+For EACH new concept write 2 cards of different game types: honest science (mark disputed "contested"), verdict-first, scenarios that fit a 16-year-old AND a 44-year-old manager AND a 68-year-old reader (mix school/work/home), try_team on each, from_source only for public-domain classics with exact wording you are sure of, never repeat a story/study already used elsewhere (grep ${ROOT}/content/cards/ for the study name first). Sensitive topics: "sensitive": true.
+Then act as your own adversarial reviewer: re-read each new card as a research psychologist (accuracy) and as an anxious 24-year-old (safety), fix, and run python3 ${ROOT}/pipeline/validate.py ${ROOT}/content/cards/${d}.json until 0 errors.`, { label: `author:${d}`, phase: 'Author', schema: OUT })))
+return { plan, res: res.filter(Boolean) }

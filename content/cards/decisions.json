@@ -621,5 +621,125 @@
       "cite": "Plato, Apology 21d (trans. Benjamin Jowett, 1871)",
       "next_read": "Plato, Apology 20e–23c: the oracle at Delphi and Socrates' search for a wiser man"
     }
+  },
+  {
+    "id": "sunk-cost-two-trips",
+    "concept": "sunk_cost",
+    "domain": "decisions",
+    "type": "reveal",
+    "hook": "You paid double for the worse weekend. Do you still go?",
+    "title": "The Pricier, Worse Trip",
+    "game": {
+      "prompt": "You booked two weekend trips by mistake, same dates, no refunds. Trip A cost twice as much. Trip B is the one you'd enjoy more. You can only go on one. Which?",
+      "choices": [
+        "Trip A, the pricier one",
+        "Trip B, the one I'd enjoy more"
+      ],
+      "answer": 1,
+      "reveal": "Trip B. Both payments are gone whichever you pick, so only the weekend ahead counts. Yet when Arkes & Blumer (1985) gave students this puzzle, more than half chose the pricier trip they'd enjoy less."
+    },
+    "insight": "Money already spent can't be won back by suffering through the worse option. It just feels like waste if you don't 'use' it.",
+    "model": "Spent is spent. Choose as if you were starting fresh today.",
+    "try_today": "Pick one thing you keep only because it cost a lot (a gadget, a course, clothes). Ask: would I choose it today for free? Act on the answer.",
+    "try_team": "List one project, club or plan your group keeps 'because we've put so much in'. Ask together: starting fresh today, would we pick it? Decide openly.",
+    "source": {
+      "thinkers": [
+        "Hal Arkes",
+        "Catherine Blumer"
+      ],
+      "work": "The Psychology of Sunk Cost (Organizational Behavior and Human Decision Processes, 1985)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "opportunity_cost",
+      "loss_aversion",
+      "quitting_wisely"
+    ]
+  },
+  {
+    "id": "sunk-cost-three-lives",
+    "concept": "sunk_cost",
+    "domain": "decisions",
+    "type": "choice",
+    "hook": "Quitting feels like wasting it all. But is the waste already done?",
+    "title": "Past Cost, Future Choice",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You're 2 years into guitar lessons your parents paid for. You've stopped enjoying it and want to try drawing instead. The thought 'all that money' stops you. You…",
+          "options": [
+            {
+              "text": "Ask: if I were choosing a hobby today, which would I pick?",
+              "best": true,
+              "feedback": "Yes. The lessons are paid either way. Talk it through with your parents: the skills you built aren't lost, and the next hour is what's up for grabs."
+            },
+            {
+              "text": "Keep going so the money isn't wasted",
+              "feedback": "A very human pull. But the money is spent whether you continue or not. More unhappy hours don't bring it back."
+            },
+            {
+              "text": "Quit everything at once, today",
+              "feedback": "Clear-headed, but you can test it first: a month of drawing beside guitar shows what you actually prefer."
+            }
+          ]
+        },
+        {
+          "scenario": "At work, a project is 18 months in. New numbers say it will likely lose money even if finished. A colleague says: 'We can't stop now, look how much we've invested.' You…",
+          "options": [
+            {
+              "text": "Ask what it costs to finish versus what it's now likely to return",
+              "best": true,
+              "feedback": "Right. Only future costs and gains decide. The 18 months are gone; the next 6 aren't. Name it kindly: stopping isn't the same as admitting failure."
+            },
+            {
+              "text": "Agree. Stopping would waste 18 months",
+              "feedback": "Understandable, and common in organisations. But finishing a losing project adds to the loss rather than rescuing what's spent."
+            },
+            {
+              "text": "Blame whoever started it",
+              "feedback": "Tempting, but blame makes people defend past choices harder. In Staw's 1976 study, people who made the first call kept funding it more."
+            }
+          ]
+        },
+        {
+          "scenario": "Your 15-year-old car needs a big repair, the third this year. 'I've already spent so much fixing it,' you think. You…",
+          "options": [
+            {
+              "text": "Compare: cost of this repair and the next few, versus replacing it",
+              "best": true,
+              "feedback": "Yes. Past repairs don't count; they're paid. The question is which option costs less from here, for the reliability you need."
+            },
+            {
+              "text": "Fix it, or the earlier repairs were for nothing",
+              "feedback": "Those repairs gave you years of driving, so they weren't for nothing. They just can't vote on today's choice."
+            },
+            {
+              "text": "Scrap it right away",
+              "feedback": "Maybe, but past spending shouldn't push you out either. Sometimes one more repair really is the cheapest road ahead."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Past costs pull us to keep going. The pull is real but modest in studies. And staying is fine when the future says so.",
+    "model": "Ask 'From here, is this the best use of my next hour or next bit of money?' Ignore what's gone.",
+    "try_today": "Pick one thing you're sticking with. Write one line: 'If I hadn't started yet, would I start today?' Act if the answer is a clear no.",
+    "try_team": "Before your next review of a long project, ban the phrase 'we've already invested'. Discuss only remaining cost and likely payoff.",
+    "source": {
+      "thinkers": [
+        "Richard Thaler",
+        "Barry Staw",
+        "Hal Arkes"
+      ],
+      "work": "Toward a Positive Theory of Consumer Choice (1980); Knee-deep in the Big Muddy (1976)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "quitting_wisely",
+      "opportunity_cost",
+      "expected_value"
+    ]
   }
 ]

@@ -4,7 +4,7 @@
     "concept": "dichotomy_of_control",
     "domain": "wisdom",
     "type": "swipe",
-    "hook": "Half of what you worried about today was never yours to fix.",
+    "hook": "Epictetus sorted every worry into two piles. Can you?",
     "title": "Up to Me, or Not?",
     "game": {
       "prompt": "Is it up to you?",
@@ -39,12 +39,12 @@
         {
           "text": "How hard you train this week",
           "side": "right",
-          "why": "Effort and attitude belong to you. Epictetus put judgments and actions here."
+          "why": "Your decision to train is yours. Epictetus said even the body is only lent to us."
         },
         {
           "text": "Your first emotional jolt when insulted",
           "side": "left",
-          "why": "The flash is fast and automatic. What you do in the next minute is yours."
+          "why": "Seneca called these 'first movements': automatic, not chosen. The next minute is yours."
         }
       ]
     },
@@ -54,9 +54,10 @@
     "source": {
       "thinkers": [
         "Epictetus",
-        "Marcus Aurelius"
+        "Marcus Aurelius",
+        "Seneca"
       ],
-      "work": "Enchiridion (c. 125 CE)"
+      "work": "Epictetus, Enchiridion (c. 125 CE); Seneca, On Anger II"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -438,7 +439,7 @@
     "concept": "socratic_ignorance",
     "domain": "wisdom",
     "type": "estimate",
-    "hook": "Are you an above-average driver? Guess how many people say yes.",
+    "hook": "Are you funnier than most people your age? Most people think so.",
     "title": "Knowing You Don't Know",
     "game": {
       "question": "In a classic study, what % of US student drivers rated themselves more skilful than the median driver?",
@@ -447,11 +448,11 @@
       "step": 1,
       "unit": "%",
       "answer": 93,
-      "explain": "Svenson (1981) found about 93% of a small US student sample rated themselves more skilful than the median driver. At most 50% can be.",
+      "explain": "Svenson (1981) found about 93% of a small US student sample rated themselves more skilful than the median driver. At most 50% can be. The same bias shows up everywhere: most people rate themselves above average at being kind, funny and smart.",
       "anchor": null
     },
-    "insight": "Most of us rate ourselves above average, which can't all be true. Socrates thought wisdom starts with knowing what you don't know. Overconfidence is well documented; Dunning-Kruger is debated.",
-    "model": "Treat your confidence as a guess, not a fact. 'I might be wrong' opens the door to learning.",
+    "insight": "Most of us rate ourselves above average, which can't all be true. Socrates thought wisdom starts with knowing what you don't know. It cuts both ways: if you usually rate yourself low, that's a guess too, and worth checking against evidence.",
+    "model": "Treat your self-ratings, high or low, as guesses. 'I might be wrong' opens the door to learning.",
     "try_today": "Pick one opinion you hold strongly. Write the best reason someone could disagree with it, in their words, not yours.",
     "source": {
       "thinkers": [
@@ -721,6 +722,137 @@
       "quote": "It is not that we have a short space of time, but that we waste much of it.",
       "cite": "Seneca, On the Shortness of Life, 1.3 (trans. John W. Basore, 1932)",
       "next_read": "On the Shortness of Life, chapters 1-3"
+    }
+  },
+  {
+    "id": "memento-mori-grudge-choice",
+    "concept": "memento_mori",
+    "domain": "wisdom",
+    "type": "choice",
+    "hook": "That petty argument: would it survive one honest question?",
+    "title": "The Grudge-Shrinking Question",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You and your best friend argued. Then they posted a group photo you weren't in. They leave tomorrow for two weeks away. You…",
+          "options": [
+            {
+              "text": "Leave their messages on read until they apologise.",
+              "feedback": "Not the best move. Fair to be hurt, but two weeks of silence usually makes the hurt grow, not shrink."
+            },
+            {
+              "text": "Text: 'Still a bit annoyed, but have a great trip. Talk when you're back?'",
+              "best": true,
+              "feedback": "Best move. You stayed honest and kept the door open. If time felt short, this is the message you'd want sent."
+            },
+            {
+              "text": "Post a story about fake friends.",
+              "feedback": "Not the best move. It feels good for a minute, then becomes one more thing to repair."
+            }
+          ]
+        },
+        {
+          "scenario": "In a meeting, a teammate presents part of your idea as their own. You'll work together all next month. You…",
+          "options": [
+            {
+              "text": "Say nothing, and quietly hold it against them for months.",
+              "feedback": "Not the best move. Swallowed grudges leak out later and cost you months of easy teamwork."
+            },
+            {
+              "text": "Call it out in front of everyone at the next meeting.",
+              "feedback": "Not the best move. You're right to want credit, but public blame tends to start a feud."
+            },
+            {
+              "text": "Tell them privately, calmly, and agree how you'll credit each other's work.",
+              "best": true,
+              "feedback": "Best move. Memento mori doesn't mean swallowing it. It means fixing it without letting it eat your month."
+            }
+          ]
+        },
+        {
+          "scenario": "Your sister rings on your birthday. You haven't really spoken since a falling-out over a family holiday last year. You…",
+          "options": [
+            {
+              "text": "Thank her warmly and suggest lunch soon.",
+              "best": true,
+              "feedback": "Best move. She reached out; you met her. The old topic can wait for a calmer day, face to face."
+            },
+            {
+              "text": "Keep it short and cool. She knows what she did.",
+              "feedback": "Not the best move. Understandable, but a cool reply can turn one more year into five."
+            },
+            {
+              "text": "Raise the old disagreement right away to clear the air.",
+              "feedback": "Not the best move yet. Clearing the air matters, but a birthday call is rarely the moment."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Remembering time is limited didn't make you a doormat. It made the grudge smaller and the next kind, honest step clearer. That's what the Stoics used the thought for.",
+    "model": "Before you hold a grudge, ask: if time were short, how would I want this to end?",
+    "try_today": "Pick one small, stale grudge and send one warm, low-pressure message. You don't have to settle everything.",
+    "source": {
+      "thinkers": [
+        "Marcus Aurelius",
+        "Seneca"
+      ],
+      "work": "Meditations (c. 170 CE)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "impermanence",
+      "regret_minimization"
+    ],
+    "sensitive": true,
+    "try_team": "Before a tense meeting or family talk, each person writes: 'In a year, what will I wish I'd said here?' Share one line each, then begin.",
+    "from_source": {
+      "quote": "Do not act as if thou wert going to live ten thousand years. ... While thou livest, while it is in thy power, be good.",
+      "cite": "Marcus Aurelius, Meditations, Book IV.17 (trans. George Long, 1862)",
+      "next_read": "Meditations, Book II.11 and Book IV.17-19"
+    }
+  },
+  {
+    "id": "memento-mori-moving-away-reveal",
+    "concept": "memento_mori",
+    "domain": "wisdom",
+    "type": "reveal",
+    "hook": "Why do people about to move away choose like their grandparents?",
+    "title": "Short Time, Clear Choices",
+    "game": {
+      "prompt": "Imagine you're moving far away in a few weeks. You get one free half hour. Who do you spend it with?",
+      "choices": [
+        "A close friend or family member",
+        "A new acquaintance you really clicked with",
+        "The author of a book you just loved"
+      ],
+      "answer": 0,
+      "reveal": "The familiar face. In Fredrickson & Carstensen (1990), older adults mostly picked a close partner. Younger adults spread their picks, until they imagined an upcoming move. Then they chose the familiar face too."
+    },
+    "insight": "When time feels short, through age, a move, or illness, people turn toward who matters most (Carstensen's research). It tracks felt time, not age. Memento mori borrows that clarity early.",
+    "model": "A sense of limited time points you toward what matters. You can borrow it without waiting for an ending.",
+    "try_today": "Imagine you're moving away next month. Name the one person you'd make time for, and message them today.",
+    "source": {
+      "thinkers": [
+        "Laura Carstensen",
+        "Barbara Fredrickson",
+        "Seneca"
+      ],
+      "work": "Fredrickson & Carstensen, 'Choosing Social Partners', Psychology and Aging (1990)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "begin_with_end",
+      "regret_minimization"
+    ],
+    "sensitive": true,
+    "try_team": "Ask: 'If this were our last month together as a class, team or family, what would we stop, and what would we make time for?' Pick one of each.",
+    "from_source": {
+      "quote": "Every day, therefore, should be regulated as if it closed the series, as if it rounded out and completed our existence.",
+      "cite": "Seneca, Moral Letters to Lucilius, Letter 12 'On Old Age' (trans. R. M. Gummere, 1917)",
+      "next_read": "Moral Letters, Letter 12 'On Old Age' and Letter 101 'On the Futility of Planning Ahead'"
     }
   }
 ]

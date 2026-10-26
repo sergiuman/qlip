@@ -1,593 +1,716 @@
 [
-  {
-    "id": "feedback-loops-swipe",
-    "concept": "feedback_loops",
-    "domain": "systems",
-    "type": "swipe",
-    "hook": "Snowball or thermostat? Sort 6 everyday loops.",
-    "title": "Snowball or Thermostat?",
-    "game": {
-      "prompt": "Does this settle back like a thermostat (←) or keep growing like a snowball (→)?",
-      "left": "Thermostat (settles)",
-      "right": "Snowball (grows)",
-      "items": [
-        {
-          "text": "Short on sleep, you scroll late to unwind, then sleep even less",
-          "side": "right",
-          "why": "Tired leads to scrolling leads to more tired. Vicious circles are reinforcing too."
-        },
-        {
-          "text": "Money in savings earns interest, which earns more interest",
-          "side": "right",
-          "why": "Growth feeds more growth. Classic reinforcing loop."
-        },
-        {
-          "text": "You feel hungry, eat, and the hunger goes away",
-          "side": "left",
-          "why": "Your body pulls you back toward a set point. That's balancing."
-        },
-        {
-          "text": "A rumor spreads: the more people know, the more people tell",
-          "side": "right",
-          "why": "Each new teller makes more tellers, whether the rumor is true or false."
-        },
-        {
-          "text": "You speed up when late, slow down once you're on time",
-          "side": "left",
-          "why": "The gap to a goal drives the action, and the action closes the gap."
-        },
-        {
-          "text": "Practicing makes it easier, so you practice more",
-          "side": "right",
-          "why": "Virtuous circle: skill makes practice pleasant, practice builds skill."
-        }
-      ]
+ {
+  "id": "feedback-loops-swipe",
+  "concept": "feedback_loops",
+  "domain": "systems",
+  "type": "swipe",
+  "hook": "Snowball or thermostat? Sort 6 everyday loops.",
+  "title": "Snowball or Thermostat?",
+  "game": {
+   "prompt": "Does this settle back like a thermostat (←) or keep growing like a snowball (→)?",
+   "left": "Thermostat (settles)",
+   "right": "Snowball (grows)",
+   "items": [
+    {
+     "text": "Short on sleep, you scroll late to unwind, then sleep even less",
+     "side": "right",
+     "why": "Tired leads to scrolling leads to more tired. Vicious circles are reinforcing too."
     },
-    "insight": "Most things that change over time run on two loops. Reinforcing loops (snowballs) amplify, good or bad. Balancing loops (thermostats) pull back to a target. It's a thinking tool from systems science, not a lab finding. Know which loop you're in before you push.",
-    "model": "Reinforcing loops snowball; balancing loops hold a set point. Ask which one is running.",
-    "try_today": "Write one habit you want as a loop: 'A makes B, B makes more A.' Find the arrow you can strengthen today.",
-    "source": {
-      "thinkers": [
-        "Donella Meadows",
-        "Peter Senge"
-      ],
-      "work": "Thinking in Systems: A Primer (2008)"
+    {
+     "text": "Money in savings earns interest, which earns more interest",
+     "side": "right",
+     "why": "Growth feeds more growth. Classic reinforcing loop."
     },
-    "evidence": "philosophy",
-    "level": 1,
-    "related": [
-      "one_percent",
-      "habit_loop",
-      "delays"
-    ],
-    "try_team": "With your team, class or family: each person names one loop in your shared life. Vote: snowball or thermostat? Pick one to feed or break this week."
-  },
-  {
-    "id": "feedback-loops-spiral",
-    "concept": "feedback_loops",
-    "domain": "systems",
-    "type": "choice",
-    "hook": "One skipped walk can turn into a lost month. Where would you cut it?",
-    "title": "Cut the Vicious Circle",
-    "game": {
-      "steps": [
-        {
-          "scenario": "The loop: low energy, so you skip your walk. Moving less, you sleep a bit worse. Worse sleep, even less energy. Which link is easiest to cut today?",
-          "options": [
-            {
-              "text": "Fix my energy first, then start walking again",
-              "feedback": "Waiting to feel ready is how the loop keeps running. Energy often follows movement, not the other way round."
-            },
-            {
-              "text": "A 5-minute walk, even feeling flat",
-              "best": true,
-              "feedback": "Yes. Tiny and doable on a bad day. One small action can turn the same circle the other way."
-            },
-            {
-              "text": "Plan a full new fitness routine for Monday",
-              "feedback": "Big plans feel good, but they start later and ask for energy you don't have yet."
-            }
-          ]
-        },
-        {
-          "scenario": "A week later the loop is turning the good way, then you miss two days. You think…",
-          "options": [
-            {
-              "text": "\"Ruined. Back to square one.\"",
-              "feedback": "Understandable, but loops don't reset to zero. Calling it ruined is what restarts the downward lap."
-            },
-            {
-              "text": "\"Two days off. Short walk today and the loop keeps turning.\"",
-              "best": true,
-              "feedback": "Right. A loop is about direction, not a perfect streak. Nudge it back the good way."
-            }
-          ]
-        }
-      ]
+    {
+     "text": "You feel hungry, eat, and the hunger goes away",
+     "side": "left",
+     "why": "Your body pulls you back toward a set point. That's balancing."
     },
-    "insight": "Spirals can feel like bad luck or a flaw in you, but often they're just a loop. Draw the circle and you see each link. You don't fix it all, just one arrow.",
-    "model": "If it keeps getting worse (or better) on its own, look for the circle, then cut or feed one link.",
-    "try_today": "Sketch one loop in your life as 4 boxes and arrows. Circle the easiest link and change just that one today.",
-    "try_team": "Draw a loop your group keeps falling into (late starts, messy kitchen, missed homework). Everyone marks the easiest link. Change that one for a week.",
-    "source": {
-      "thinkers": [
-        "Peter Senge"
-      ],
-      "work": "The Fifth Discipline (1990)"
+    {
+     "text": "A rumor spreads: the more people know, the more people tell",
+     "side": "right",
+     "why": "Each new teller makes more tellers, whether the rumor is true or false."
     },
-    "evidence": "philosophy",
-    "level": 1,
-    "related": [
-      "habit_loop",
-      "small_wins",
-      "doomscroll_loop"
-    ],
-    "sensitive": true
-  },
-  {
-    "id": "delays-shower",
-    "concept": "delays",
-    "domain": "systems",
-    "type": "choice",
-    "hook": "Why do you always end up scalding, then freezing, in a new shower?",
-    "title": "The Shower Problem",
-    "game": {
-      "steps": [
-        {
-          "scenario": "Hotel shower. Water is cold. You turn the knob toward hot. Five seconds later it's still cold. You…",
-          "options": [
-            {
-              "text": "Crank it much hotter. It clearly isn't working.",
-              "feedback": "Very human, and exactly how you get scalded. The hot water was already in the pipe, on its way."
-            },
-            {
-              "text": "Wait a few more seconds before touching it again",
-              "best": true,
-              "feedback": "Yes. The pipe adds a delay. Give your last action time to show its result."
-            },
-            {
-              "text": "Give up and take a cold shower",
-              "feedback": "Brave, but the system was working. It was just slow to report back."
-            }
-          ]
-        },
-        {
-          "scenario": "Three weeks into a new workout plan, you don't feel much different yet. You…",
-          "options": [
-            {
-              "text": "Double the intensity to force results",
-              "feedback": "That's the shower move again. Overcorrecting raises the risk of injury or burnout."
-            },
-            {
-              "text": "Keep the plan and judge it again after 8 weeks",
-              "best": true,
-              "feedback": "Bodies, skills, and relationships all respond with a lag. Set a fair review date."
-            },
-            {
-              "text": "Switch to a totally different plan",
-              "feedback": "Switching resets the clock before the first plan could show anything."
-            }
-          ]
-        }
-      ]
+    {
+     "text": "You speed up when late, slow down once you're on time",
+     "side": "left",
+     "why": "The gap to a goal drives the action, and the action closes the gap."
     },
-    "insight": "When results lag behind actions, it feels like nothing works, so we push harder. Then the late results land and we overshoot. Many problems are delay problems, not effort problems.",
-    "model": "Slow feedback plus impatience equals overshoot. Act, wait for the lag, then adjust.",
-    "try_today": "Pick one thing you're trying to improve. Write how long it fairly takes to show results, and set a reminder for that date.",
-    "source": {
-      "thinkers": [
-        "Peter Senge",
-        "John Sterman"
-      ],
-      "work": "The Fifth Discipline (1990); Sterman, Business Dynamics (2000)"
-    },
-    "evidence": "moderate",
-    "level": 1,
-    "related": [
-      "feedback_loops",
-      "grit",
-      "impulse_pause"
-    ],
-    "try_team": "Before changing a plan, ask the group: how long should this take to show results? Agree a review date and don't touch the knob before it.",
-    "from_source": {
-      "quote": "Faster is slower.",
-      "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
-      "next_read": "The Fifth Discipline, ch. 4, then ch. 5 'A Shift of Mind' on balancing loops and delays"
+    {
+     "text": "Practicing makes it easier, so you practice more",
+     "side": "right",
+     "why": "Virtuous circle: skill makes practice pleasant, practice builds skill."
     }
+   ]
   },
-  {
-    "id": "delays-beer-game",
-    "concept": "delays",
-    "domain": "systems",
-    "type": "reveal",
-    "hook": "Smart people, one small change, total chaos. Who's to blame?",
-    "title": "The Beer Game",
-    "game": {
-      "prompt": "A shop, a wholesaler, a distributor and a factory pass orders up a chain. Each delivery takes weeks. Customers change once: from 4 cases a week to 8, then stay at 8. What happens up the chain?",
-      "choices": [
-        "Orders rise smoothly to 8 and stay there",
-        "Orders swing between huge and almost none",
-        "Orders barely change"
-      ],
-      "answer": 1,
-      "reveal": "They swing wildly. Stock is slow to arrive, so players keep ordering, then drown in it and stop. If you picked 'smoothly', that's what nearly everyone expects. Afterwards, many players blamed wild customer demand. It had changed once."
-    },
-    "insight": "In MIT's Beer Game, played since the 1960s, smart people make the same swings again and again. The cause isn't who plays. It's the delay built into the chain.",
-    "model": "When everyone overreacts, look for the delay before you look for someone to blame.",
-    "try_today": "Before you order, send, or ask again, check: is my last action still on its way? Wait one cycle first.",
-    "try_team": "When a problem in your group swings back and forth, draw the chain on paper and mark every delay. Agree to change one thing at a time.",
-    "source": {
-      "thinkers": [
-        "John Sterman",
-        "Jay Forrester",
-        "Peter Senge"
-      ],
-      "work": "Sterman, 'Modeling Managerial Behavior: Misperceptions of Feedback in a Dynamic Decision Making Experiment', Management Science (1989); Senge, The Fifth Discipline (1990)"
-    },
-    "from_source": {
-      "quote": "Structure influences behavior.",
-      "cite": "Peter Senge, The Fifth Discipline (1990), ch. 3 'Prisoners of the System, or Prisoners of Our Own Thinking?'",
-      "next_read": "The Fifth Discipline, ch. 3 (the full Beer Game story and its three lessons)"
-    },
-    "evidence": "strong",
-    "level": 1,
-    "related": [
-      "feedback_loops",
-      "fixes_that_fail",
-      "impulse_pause"
-    ]
+  "insight": "Most things that change over time run on two loops. Reinforcing loops (snowballs) amplify, good or bad. Balancing loops (thermostats) pull back to a target. It's a thinking tool from systems science, not a lab finding. Know which loop you're in before you push.",
+  "model": "Reinforcing loops snowball; balancing loops hold a set point. Ask which one is running.",
+  "try_today": "Write one habit you want as a loop: 'A makes B, B makes more A.' Find the arrow you can strengthen today.",
+  "source": {
+   "thinkers": [
+    "Donella Meadows",
+    "Peter Senge"
+   ],
+   "work": "Thinking in Systems: A Primer (2008)"
   },
-  {
-    "id": "leverage-points-order",
-    "concept": "leverage_points",
-    "domain": "systems",
-    "type": "order",
-    "hook": "Most people push where change is hardest. Can you find the lever?",
-    "title": "Where to Push",
-    "game": {
-      "prompt": "Rank these places to change a system, from weakest to strongest lever",
-      "items": [
-        "Numbers (budgets, targets, quantities)",
-        "Feedback loops (how strongly the system self-corrects)",
-        "Information (who sees what, when)",
-        "Rules (incentives, permissions, punishments)",
-        "Goals (what the system is actually trying to do)",
-        "Mindset (the shared beliefs the whole system grows from)"
-      ],
-      "explain": "Donella Meadows ranked 12 places to intervene. Tweaking numbers is the easiest and usually the weakest. Changing goals and mindsets is harder, but it changes everything downstream."
+  "evidence": "philosophy",
+  "level": 1,
+  "related": [
+   "one_percent",
+   "habit_loop",
+   "delays"
+  ],
+  "try_team": "With your team, class or family: each person names one loop in your shared life. Vote: snowball or thermostat? Pick one to feed or break this week."
+ },
+ {
+  "id": "feedback-loops-spiral",
+  "concept": "feedback_loops",
+  "domain": "systems",
+  "type": "choice",
+  "hook": "One skipped walk can turn into a lost month. Where would you cut it?",
+  "title": "Cut the Vicious Circle",
+  "game": {
+   "steps": [
+    {
+     "scenario": "The loop: low energy, so you skip your walk. Moving less, you sleep a bit worse. Worse sleep, even less energy. Which link is easiest to cut today?",
+     "options": [
+      {
+       "text": "Fix my energy first, then start walking again",
+       "feedback": "Waiting to feel ready is how the loop keeps running. Energy often follows movement, not the other way round."
+      },
+      {
+       "text": "A 5-minute walk, even feeling flat",
+       "best": true,
+       "feedback": "Yes. Tiny and doable on a bad day. One small action can turn the same circle the other way."
+      },
+      {
+       "text": "Plan a full new fitness routine for Monday",
+       "feedback": "Big plans feel good, but they start later and ask for energy you don't have yet."
+      }
+     ]
     },
-    "insight": "Adjusting numbers rarely changes how a system behaves. Changing who sees what, the rules, or the goal moves more with less force. Meadows called her list a draft, not a law.",
-    "model": "Numbers are easy and weak. Information, rules, and goals are harder and strong.",
-    "try_today": "Pick one stuck problem. Instead of 'more' or 'less' of something, write one change to its rules, information, or goal.",
-    "source": {
-      "thinkers": [
-        "Donella Meadows"
-      ],
-      "work": "Leverage Points: Places to Intervene in a System (1999)"
-    },
-    "evidence": "philosophy",
-    "level": 2,
-    "related": [
-      "feedback_loops",
-      "environment_design",
-      "begin_with_end"
-    ],
-    "try_team": "At your next meeting, class council or family talk, ask 'what are we actually rewarded for?' before asking anyone to try harder.",
-    "from_source": {
-      "quote": "Give me a place to stand, and I will move the earth.",
-      "cite": "Archimedes, as reported by Pappus of Alexandria, Collection, Book 8 (traditional English rendering)",
-      "next_read": "Donella Meadows, Thinking in Systems (2008), ch. 6 'Leverage Points: Places to Intervene in a System'"
+    {
+     "scenario": "A week later the loop is turning the good way, then you miss two days. You think…",
+     "options": [
+      {
+       "text": "\"Ruined. Back to square one.\"",
+       "feedback": "Understandable, but loops don't reset to zero. Calling it ruined is what restarts the downward lap."
+      },
+      {
+       "text": "\"Two days off. Short walk today and the loop keeps turning.\"",
+       "best": true,
+       "feedback": "Right. A loop is about direction, not a perfect streak. Nudge it back the good way."
+      }
+     ]
     }
+   ]
   },
-  {
-    "id": "leverage-points-spectrum",
-    "concept": "leverage_points",
-    "domain": "systems",
-    "type": "spectrum",
-    "hook": "When stuck, do you try harder or change the game? Find out.",
-    "title": "Tweaker or Redesigner?",
-    "game": {
-      "left": "Tweaker",
-      "right": "Redesigner",
-      "questions": [
-        {
-          "q": "You keep spending too much. Your first move is…",
-          "options": [
-            {
-              "label": "Promise to be stricter with myself",
-              "value": -2
-            },
-            {
-              "label": "Track every purchase for a month",
-              "value": 1
-            },
-            {
-              "label": "Make savings move automatically on payday",
-              "value": 2
-            }
-          ]
-        },
-        {
-          "q": "Your group project keeps missing deadlines. You…",
-          "options": [
-            {
-              "label": "Ask everyone to work harder",
-              "value": -2
-            },
-            {
-              "label": "Make progress visible to everyone each week",
-              "value": 1
-            },
-            {
-              "label": "Ask what each person is really rewarded for",
-              "value": 2
-            }
-          ]
-        },
-        {
-          "q": "You want to read more. You…",
-          "options": [
-            {
-              "label": "Set a bigger reading goal",
-              "value": -1
-            },
-            {
-              "label": "Put a book where your phone usually sits",
-              "value": 2
-            },
-            {
-              "label": "Just try to remember to read",
-              "value": -2
-            }
-          ]
-        },
-        {
-          "q": "The same argument with a friend, sibling or partner keeps coming back. You…",
-          "options": [
-            {
-              "label": "Prepare my points better for next time",
-              "value": -2
-            },
-            {
-              "label": "Agree a pause rule when it starts",
-              "value": 0
-            },
-            {
-              "label": "Ask what each of you is actually trying to protect",
-              "value": 2
-            }
-          ]
-        }
-      ],
-      "zones": [
-        {
-          "upTo": -0.34,
-          "label": "Tweaker",
-          "text": "Today's answers reach for effort and numbers first. Honest work, but tiring. Next time, ask: what rule, information, or goal is producing this?"
-        },
-        {
-          "upTo": 0.34,
-          "label": "Switch-hitter",
-          "text": "Today's answers switch between pushing harder and redesigning. Notice which one you grab under stress, and try the redesign first once this week."
-        },
-        {
-          "upTo": 1,
-          "label": "Redesigner",
-          "text": "Today's answers look for the structure behind the problem. Keep going, and give redesigns time: their results also arrive late."
-        }
-      ]
+  "insight": "Spirals can feel like bad luck or a flaw in you, but often they're just a loop. Draw the circle and you see each link. You don't fix it all, just one arrow.",
+  "model": "If it keeps getting worse (or better) on its own, look for the circle, then cut or feed one link.",
+  "try_today": "Sketch one loop in your life as 4 boxes and arrows. Circle the easiest link and change just that one today.",
+  "try_team": "Draw a loop your group keeps falling into (late starts, messy kitchen, missed homework). Everyone marks the easiest link. Change that one for a week.",
+  "source": {
+   "thinkers": [
+    "Peter Senge"
+   ],
+   "work": "The Fifth Discipline (1990)"
+  },
+  "evidence": "philosophy",
+  "level": 1,
+  "related": [
+   "habit_loop",
+   "small_wins",
+   "doomscroll_loop"
+  ],
+  "sensitive": true
+ },
+ {
+  "id": "delays-shower",
+  "concept": "delays",
+  "domain": "systems",
+  "type": "choice",
+  "hook": "Why do you always end up scalding, then freezing, in a new shower?",
+  "title": "The Shower Problem",
+  "game": {
+   "steps": [
+    {
+     "scenario": "Hotel shower. Water is cold. You turn the knob toward hot. Five seconds later it's still cold. You…",
+     "options": [
+      {
+       "text": "Crank it much hotter. It clearly isn't working.",
+       "feedback": "Very human, and exactly how you get scalded. The hot water was already in the pipe, on its way."
+      },
+      {
+       "text": "Wait a few more seconds before touching it again",
+       "best": true,
+       "feedback": "Yes. The pipe adds a delay. Give your last action time to show its result."
+      },
+      {
+       "text": "Give up and take a cold shower",
+       "feedback": "Brave, but the system was working. It was just slow to report back."
+      }
+     ]
     },
-    "insight": "Meadows ranked 'numbers' (targets, budgets) among the weakest levers; we add willpower to that list. Changing what people see, what's rewarded, or the goal tends to work with less strain.",
-    "model": "Before pushing harder, ask what structure is producing the result.",
-    "try_today": "Take one 'I should try harder' and rewrite it as a change to your surroundings, rules, or reminders. Do that change now.",
-    "source": {
-      "thinkers": [
-        "Donella Meadows"
-      ],
-      "work": "Thinking in Systems: A Primer (2008)"
-    },
-    "evidence": "philosophy",
-    "level": 1,
-    "related": [
-      "environment_design",
-      "begin_with_end",
-      "circle_influence"
-    ],
-    "try_team": "Next time your team or class is stuck, ban 'try harder' for 5 minutes. List changes to what people see, what's rewarded, or the goal.",
-    "from_source": {
-      "quote": "Small changes can produce big results",
-      "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
-      "next_read": "The Fifth Discipline, ch. 4; then Meadows, Thinking in Systems (2008), ch. 6"
+    {
+     "scenario": "Three weeks into a new workout plan, you don't feel much different yet. You…",
+     "options": [
+      {
+       "text": "Double the intensity to force results",
+       "feedback": "That's the shower move again. Overcorrecting raises the risk of injury or burnout."
+      },
+      {
+       "text": "Keep the plan and judge it again after 8 weeks",
+       "best": true,
+       "feedback": "Bodies, skills, and relationships all respond with a lag. Set a fair review date."
+      },
+      {
+       "text": "Switch to a totally different plan",
+       "feedback": "Switching resets the clock before the first plan could show anything."
+      }
+     ]
     }
+   ]
   },
-  {
-    "id": "fixes-that-fail-rats",
-    "concept": "fixes_that_fail",
-    "domain": "systems",
-    "type": "reveal",
-    "hook": "A city paid people per rat tail. Guess what it got more of.",
-    "title": "The Rat Tail Bounty",
-    "game": {
-      "prompt": "Hanoi, 1902. Rats are spreading through the new sewers, so officials pay a small bounty for every rat tail handed in. What happens next?",
-      "choices": [
-        "Rats disappear within months",
-        "Nothing much changes",
-        "The plan backfires"
-      ],
-      "reveal": "It backfired. People were seen with live rats missing only their tails, so the rats kept breeding, and there were reports of rats being farmed for tails. Historian Michael Vann documented it. If you guessed 'rats disappear', that's what the officials expected too: the fix rewarded tails, not fewer rats.",
-      "answer": 2
-    },
-    "insight": "A quick fix eases the symptom today, while its side effect quietly feeds the problem. The side effect is late, so the fix looks like it works, and we repeat it.",
-    "model": "Ask of every fix: what does this reward, and what will it feed in three months?",
-    "try_today": "Name one quick fix you use often (snacking, cramming, avoiding). Write what it might be feeding in the long run.",
-    "source": {
-      "thinkers": [
-        "Peter Senge",
-        "Michael G. Vann"
-      ],
-      "work": "The Fifth Discipline (1990); Vann, 'Of Rats, Rice, and Race' (2003)"
-    },
-    "evidence": "moderate",
-    "level": 1,
-    "related": [
-      "second_order",
-      "delays",
-      "doomscroll_loop"
-    ],
-    "try_team": "Pick one rule or reward your group uses (points, chores, targets). Spend 5 minutes asking: how could someone game this, and what would that feed?",
-    "from_source": {
-      "quote": "Today's problems come from yesterday's \"solutions.\"",
-      "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
-      "next_read": "The Fifth Discipline, ch. 4; Meadows, Thinking in Systems (2008), ch. 5 'System Traps... and Opportunities'"
-    }
+  "insight": "When results lag behind actions, it feels like nothing works, so we push harder. Then the late results land and we overshoot. Many problems are delay problems, not effort problems.",
+  "model": "Slow feedback plus impatience equals overshoot. Act, wait for the lag, then adjust.",
+  "try_today": "Pick one thing you're trying to improve. Write how long it fairly takes to show results, and set a reminder for that date.",
+  "source": {
+   "thinkers": [
+    "Peter Senge",
+    "John Sterman"
+   ],
+   "work": "The Fifth Discipline (1990); Sterman, Business Dynamics (2000)"
   },
-  {
-    "id": "fixes-that-fail-backfire",
-    "concept": "fixes_that_fail",
-    "domain": "systems",
-    "type": "choice",
-    "hook": "The fix worked on Monday. Why is the problem bigger by Friday?",
-    "title": "Spot the Backfire",
-    "game": {
-      "steps": [
-        {
-          "scenario": "Mexico City, 1989. To cut smog, each car is banned from driving one weekday, based on its number plate. What did many families do?",
-          "options": [
-            {
-              "text": "Took the bus on their banned day",
-              "feedback": "That was the plan. But a cheaper way round it was sitting in the used-car market."
-            },
-            {
-              "text": "Bought a second car, often an older one",
-              "best": true,
-              "feedback": "Yes. Car numbers rose, many extra cars were old and dirtier, and economist Lucas Davis found no clear drop in air pollution."
-            },
-            {
-              "text": "Drove less on every day of the week",
-              "feedback": "A hopeful guess. The rule only touched one day, so it changed which car, not how much driving."
-            }
-          ]
-        },
-        {
-          "scenario": "You sleep until noon on Sunday to catch up after a late Saturday. What's the hidden side effect?",
-          "options": [
-            {
-              "text": "None, you've paid back the sleep",
-              "feedback": "You do get rest. But your body clock also shifts later, and that bill arrives on Sunday night."
-            },
-            {
-              "text": "Sunday night you can't fall asleep, so Monday hurts",
-              "best": true,
-              "feedback": "Right. The lie-in eases today's tiredness and pushes your clock later. Researchers call the mismatch 'social jet lag'."
-            }
-          ]
-        },
-        {
-          "scenario": "Money is tight, so you pay only the minimum on a card or loan each month. What grows?",
-          "options": [
-            {
-              "text": "Nothing, the minimum keeps it under control",
-              "feedback": "It keeps the letters away, which is real relief. Underneath, interest keeps adding to the balance."
-            },
-            {
-              "text": "The total you owe, because interest keeps piling up",
-              "best": true,
-              "feedback": "Yes. The minimum fixes this month and feeds the debt, so next month needs the same fix again."
-            }
-          ]
-        }
-      ]
-    },
-    "insight": "Every fix has a main effect and a side effect. The main effect shows up fast; the side effect arrives later and often feeds the problem you were fixing.",
-    "model": "Before a quick fix, ask: what will this feed when no one is watching?",
-    "try_today": "Take one fix you used this week (lie-in, snack, cramming). Write its side effect and one tweak that keeps the relief.",
-    "try_team": "Before agreeing a new rule at home, school or work, take 5 minutes: each person imagines how a clever lazy person would get round it.",
-    "source": {
-      "thinkers": [
-        "Peter Senge",
-        "Lucas W. Davis",
-        "Till Roenneberg"
-      ],
-      "work": "The Fifth Discipline (1990); Davis, 'The Effect of Driving Restrictions on Air Quality in Mexico City', Journal of Political Economy (2008); Wittmann, Dinich, Merrow & Roenneberg, 'Social Jetlag', Chronobiology International (2006)"
-    },
-    "from_source": {
-      "quote": "Behavior grows better before it grows worse.",
-      "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
-      "next_read": "The Fifth Discipline, ch. 4, then Appendix 2 on the 'Fixes That Fail' archetype"
-    },
-    "evidence": "moderate",
-    "level": 1,
-    "related": [
-      "delays",
-      "shifting_burden",
-      "second_order"
-    ]
-  },
-  {
-    "id": "shifting-burden-swipe",
-    "concept": "shifting_burden",
-    "domain": "systems",
-    "type": "swipe",
-    "hook": "What's your crutch quietly doing to the muscle underneath?",
-    "title": "Crutch or Muscle?",
-    "game": {
-      "prompt": "Does this treat the symptom, or build the real capacity?",
-      "left": "Crutch",
-      "right": "Muscle",
-      "items": [
-        {
-          "text": "A third coffee every afternoon to get through the slump",
-          "side": "left",
-          "why": "It works today, but it can hurt tonight's sleep, which deepens tomorrow's slump."
-        },
-        {
-          "text": "Moving bedtime 20 minutes earlier",
-          "side": "right",
-          "why": "If short sleep is behind the slump, this goes after the cause, not the feeling."
-        },
-        {
-          "text": "Always getting a parent or friend to make your awkward phone calls",
-          "side": "left",
-          "why": "Relief now, but your own skill and confidence never get the reps."
-        },
-        {
-          "text": "Making the awkward call yourself, with them nearby for backup",
-          "side": "right",
-          "why": "Uncomfortable, but each try builds the skill you were avoiding."
-        },
-        {
-          "text": "Using autocorrect for a word you never learn to spell",
-          "side": "left",
-          "why": "Harmless here. Not every crutch is bad; just know which muscle you're skipping."
-        },
-        {
-          "text": "Asking a teacher to explain the step you keep getting wrong",
-          "side": "right",
-          "why": "Help that teaches is the opposite of a crutch: it shrinks your need for help."
-        }
-      ]
-    },
-    "insight": "When a quick fix keeps solving a problem for you, your own ability can weaken, so you need the fix more. Help isn't the issue; help that replaces learning is.",
-    "model": "Use help that teaches. Watch for fixes you need more each month.",
-    "try_today": "Pick one thing you always outsource or avoid. Do one small piece of it yourself today, with support nearby if you need it.",
-    "source": {
-      "thinkers": [
-        "Peter Senge"
-      ],
-      "work": "The Fifth Discipline (1990)"
-    },
-    "evidence": "philosophy",
-    "level": 1,
-    "related": [
-      "fixes_that_fail",
-      "self_efficacy",
-      "deliberate_practice"
-    ],
-    "try_team": "Each person names one task they always hand to the same helper. Pair up: the helper coaches, the other does it, once this week.",
-    "from_source": {
-      "quote": "The easy way out usually leads back in.",
-      "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
-      "next_read": "Meadows, Thinking in Systems (2008), ch. 5, the trap 'Shifting the Burden to the Intervenor'"
-    }
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "feedback_loops",
+   "grit",
+   "impulse_pause"
+  ],
+  "try_team": "Before changing a plan, ask the group: how long should this take to show results? Agree a review date and don't touch the knob before it.",
+  "from_source": {
+   "quote": "Faster is slower.",
+   "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
+   "next_read": "The Fifth Discipline, ch. 4, then ch. 5 'A Shift of Mind' on balancing loops and delays"
   }
+ },
+ {
+  "id": "delays-beer-game",
+  "concept": "delays",
+  "domain": "systems",
+  "type": "reveal",
+  "hook": "Smart people, one small change, total chaos. Who's to blame?",
+  "title": "The Beer Game",
+  "game": {
+   "prompt": "A shop, a wholesaler, a distributor and a factory pass orders up a chain. Each delivery takes weeks. Customers change once: from 4 cases a week to 8, then stay at 8. What happens up the chain?",
+   "choices": [
+    "Orders rise smoothly to 8 and stay there",
+    "Orders swing between huge and almost none",
+    "Orders barely change"
+   ],
+   "answer": 1,
+   "reveal": "They swing wildly. Stock is slow to arrive, so players keep ordering, then drown in it and stop. If you picked 'smoothly', that's what nearly everyone expects. Afterwards, many players blamed wild customer demand. It had changed once."
+  },
+  "insight": "In MIT's Beer Game, played since the 1960s, smart people make the same swings again and again. The cause isn't who plays. It's the delay built into the chain.",
+  "model": "When everyone overreacts, look for the delay before you look for someone to blame.",
+  "try_today": "Before you order, send, or ask again, check: is my last action still on its way? Wait one cycle first.",
+  "try_team": "When a problem in your group swings back and forth, draw the chain on paper and mark every delay. Agree to change one thing at a time.",
+  "source": {
+   "thinkers": [
+    "John Sterman",
+    "Jay Forrester",
+    "Peter Senge"
+   ],
+   "work": "Sterman, 'Modeling Managerial Behavior: Misperceptions of Feedback in a Dynamic Decision Making Experiment', Management Science (1989); Senge, The Fifth Discipline (1990)"
+  },
+  "from_source": {
+   "quote": "Structure influences behavior.",
+   "cite": "Peter Senge, The Fifth Discipline (1990), ch. 3 'Prisoners of the System, or Prisoners of Our Own Thinking?'",
+   "next_read": "The Fifth Discipline, ch. 3 (the full Beer Game story and its three lessons)"
+  },
+  "evidence": "strong",
+  "level": 1,
+  "related": [
+   "feedback_loops",
+   "fixes_that_fail",
+   "impulse_pause"
+  ]
+ },
+ {
+  "id": "leverage-points-order",
+  "concept": "leverage_points",
+  "domain": "systems",
+  "type": "order",
+  "hook": "Most people push where change is hardest. Can you find the lever?",
+  "title": "Where to Push",
+  "game": {
+   "prompt": "Rank these places to change a system, from weakest to strongest lever",
+   "items": [
+    "Numbers (budgets, targets, quantities)",
+    "Feedback loops (how strongly the system self-corrects)",
+    "Information (who sees what, when)",
+    "Rules (incentives, permissions, punishments)",
+    "Goals (what the system is actually trying to do)",
+    "Mindset (the shared beliefs the whole system grows from)"
+   ],
+   "explain": "Donella Meadows ranked 12 places to intervene. Tweaking numbers is the easiest and usually the weakest. Changing goals and mindsets is harder, but it changes everything downstream."
+  },
+  "insight": "Adjusting numbers rarely changes how a system behaves. Changing who sees what, the rules, or the goal moves more with less force. Meadows called her list a draft, not a law.",
+  "model": "Numbers are easy and weak. Information, rules, and goals are harder and strong.",
+  "try_today": "Pick one stuck problem. Instead of 'more' or 'less' of something, write one change to its rules, information, or goal.",
+  "source": {
+   "thinkers": [
+    "Donella Meadows"
+   ],
+   "work": "Leverage Points: Places to Intervene in a System (1999)"
+  },
+  "evidence": "philosophy",
+  "level": 2,
+  "related": [
+   "feedback_loops",
+   "environment_design",
+   "begin_with_end"
+  ],
+  "try_team": "At your next meeting, class council or family talk, ask 'what are we actually rewarded for?' before asking anyone to try harder.",
+  "from_source": {
+   "quote": "Give me a place to stand, and I will move the earth.",
+   "cite": "Archimedes, as reported by Pappus of Alexandria, Collection, Book 8 (traditional English rendering)",
+   "next_read": "Donella Meadows, Thinking in Systems (2008), ch. 6 'Leverage Points: Places to Intervene in a System'"
+  }
+ },
+ {
+  "id": "leverage-points-spectrum",
+  "concept": "leverage_points",
+  "domain": "systems",
+  "type": "spectrum",
+  "hook": "When stuck, do you try harder or change the game? Find out.",
+  "title": "Tweaker or Redesigner?",
+  "game": {
+   "left": "Tweaker",
+   "right": "Redesigner",
+   "questions": [
+    {
+     "q": "You keep spending too much. Your first move is…",
+     "options": [
+      {
+       "label": "Promise to be stricter with myself",
+       "value": -2
+      },
+      {
+       "label": "Track every purchase for a month",
+       "value": 1
+      },
+      {
+       "label": "Make savings move automatically on payday",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "q": "Your group project keeps missing deadlines. You…",
+     "options": [
+      {
+       "label": "Ask everyone to work harder",
+       "value": -2
+      },
+      {
+       "label": "Make progress visible to everyone each week",
+       "value": 1
+      },
+      {
+       "label": "Ask what each person is really rewarded for",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "q": "You want to read more. You…",
+     "options": [
+      {
+       "label": "Set a bigger reading goal",
+       "value": -1
+      },
+      {
+       "label": "Put a book where your phone usually sits",
+       "value": 2
+      },
+      {
+       "label": "Just try to remember to read",
+       "value": -2
+      }
+     ]
+    },
+    {
+     "q": "The same argument with a friend, sibling or partner keeps coming back. You…",
+     "options": [
+      {
+       "label": "Prepare my points better for next time",
+       "value": -2
+      },
+      {
+       "label": "Agree a pause rule when it starts",
+       "value": 0
+      },
+      {
+       "label": "Ask what each of you is actually trying to protect",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "zones": [
+    {
+     "upTo": -0.34,
+     "label": "Tweaker",
+     "text": "Today's answers reach for effort and numbers first. Honest work, but tiring. Next time, ask: what rule, information, or goal is producing this?"
+    },
+    {
+     "upTo": 0.34,
+     "label": "Switch-hitter",
+     "text": "Today's answers switch between pushing harder and redesigning. Notice which one you grab under stress, and try the redesign first once this week."
+    },
+    {
+     "upTo": 1,
+     "label": "Redesigner",
+     "text": "Today's answers look for the structure behind the problem. Keep going, and give redesigns time: their results also arrive late."
+    }
+   ]
+  },
+  "insight": "Meadows ranked 'numbers' (targets, budgets) among the weakest levers; we add willpower to that list. Changing what people see, what's rewarded, or the goal tends to work with less strain.",
+  "model": "Before pushing harder, ask what structure is producing the result.",
+  "try_today": "Take one 'I should try harder' and rewrite it as a change to your surroundings, rules, or reminders. Do that change now.",
+  "source": {
+   "thinkers": [
+    "Donella Meadows"
+   ],
+   "work": "Thinking in Systems: A Primer (2008)"
+  },
+  "evidence": "philosophy",
+  "level": 1,
+  "related": [
+   "environment_design",
+   "begin_with_end",
+   "circle_influence"
+  ],
+  "try_team": "Next time your team or class is stuck, ban 'try harder' for 5 minutes. List changes to what people see, what's rewarded, or the goal.",
+  "from_source": {
+   "quote": "Small changes can produce big results",
+   "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
+   "next_read": "The Fifth Discipline, ch. 4; then Meadows, Thinking in Systems (2008), ch. 6"
+  }
+ },
+ {
+  "id": "fixes-that-fail-rats",
+  "concept": "fixes_that_fail",
+  "domain": "systems",
+  "type": "reveal",
+  "hook": "A city paid people per rat tail. Guess what it got more of.",
+  "title": "The Rat Tail Bounty",
+  "game": {
+   "prompt": "Hanoi, 1902. Rats are spreading through the new sewers, so officials pay a small bounty for every rat tail handed in. What happens next?",
+   "choices": [
+    "Rats disappear within months",
+    "Nothing much changes",
+    "The plan backfires"
+   ],
+   "reveal": "It backfired. People were seen with live rats missing only their tails, so the rats kept breeding, and there were reports of rats being farmed for tails. Historian Michael Vann documented it. If you guessed 'rats disappear', that's what the officials expected too: the fix rewarded tails, not fewer rats.",
+   "answer": 2
+  },
+  "insight": "A quick fix eases the symptom today, while its side effect quietly feeds the problem. The side effect is late, so the fix looks like it works, and we repeat it.",
+  "model": "Ask of every fix: what does this reward, and what will it feed in three months?",
+  "try_today": "Name one quick fix you use often (snacking, cramming, avoiding). Write what it might be feeding in the long run.",
+  "source": {
+   "thinkers": [
+    "Peter Senge",
+    "Michael G. Vann"
+   ],
+   "work": "The Fifth Discipline (1990); Vann, 'Of Rats, Rice, and Race' (2003)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "delays",
+   "doomscroll_loop",
+   "second_order"
+  ],
+  "try_team": "Pick one rule or reward your group uses (points, chores, targets). Spend 5 minutes asking: how could someone game this, and what would that feed?",
+  "from_source": {
+   "quote": "Today's problems come from yesterday's \"solutions.\"",
+   "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
+   "next_read": "The Fifth Discipline, ch. 4; Meadows, Thinking in Systems (2008), ch. 5 'System Traps... and Opportunities'"
+  }
+ },
+ {
+  "id": "fixes-that-fail-backfire",
+  "concept": "fixes_that_fail",
+  "domain": "systems",
+  "type": "choice",
+  "hook": "The fix worked on Monday. Why is the problem bigger by Friday?",
+  "title": "Spot the Backfire",
+  "game": {
+   "steps": [
+    {
+     "scenario": "Mexico City, 1989. To cut smog, each car is banned from driving one weekday, based on its number plate. What did many families do?",
+     "options": [
+      {
+       "text": "Took the bus on their banned day",
+       "feedback": "That was the plan. But a cheaper way round it was sitting in the used-car market."
+      },
+      {
+       "text": "Bought a second car, often an older one",
+       "best": true,
+       "feedback": "Yes. Car numbers rose, many extra cars were old and dirtier, and economist Lucas Davis found no clear drop in air pollution."
+      },
+      {
+       "text": "Drove less on every day of the week",
+       "feedback": "A hopeful guess. The rule only touched one day, so it changed which car, not how much driving."
+      }
+     ]
+    },
+    {
+     "scenario": "You sleep until noon on Sunday to catch up after a late Saturday. What's the hidden side effect?",
+     "options": [
+      {
+       "text": "None, you've paid back the sleep",
+       "feedback": "You do get rest. But your body clock also shifts later, and that bill arrives on Sunday night."
+      },
+      {
+       "text": "Sunday night you can't fall asleep, so Monday hurts",
+       "best": true,
+       "feedback": "Right. The lie-in eases today's tiredness and pushes your clock later. Researchers call the mismatch 'social jet lag'."
+      }
+     ]
+    },
+    {
+     "scenario": "Money is tight, so you pay only the minimum on a card or loan each month. What grows?",
+     "options": [
+      {
+       "text": "Nothing, the minimum keeps it under control",
+       "feedback": "It keeps the letters away, which is real relief. Underneath, interest keeps adding to the balance."
+      },
+      {
+       "text": "The total you owe, because interest keeps piling up",
+       "best": true,
+       "feedback": "Yes. The minimum fixes this month and feeds the debt, so next month needs the same fix again."
+      }
+     ]
+    }
+   ]
+  },
+  "insight": "Every fix has a main effect and a side effect. The main effect shows up fast; the side effect arrives later and often feeds the problem you were fixing.",
+  "model": "Before a quick fix, ask: what will this feed when no one is watching?",
+  "try_today": "Take one fix you used this week (lie-in, snack, cramming). Write its side effect and one tweak that keeps the relief.",
+  "try_team": "Before agreeing a new rule at home, school or work, take 5 minutes: each person imagines how a clever lazy person would get round it.",
+  "source": {
+   "thinkers": [
+    "Peter Senge",
+    "Lucas W. Davis",
+    "Till Roenneberg"
+   ],
+   "work": "The Fifth Discipline (1990); Davis, 'The Effect of Driving Restrictions on Air Quality in Mexico City', Journal of Political Economy (2008); Wittmann, Dinich, Merrow & Roenneberg, 'Social Jetlag', Chronobiology International (2006)"
+  },
+  "from_source": {
+   "quote": "Behavior grows better before it grows worse.",
+   "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
+   "next_read": "The Fifth Discipline, ch. 4, then Appendix 2 on the 'Fixes That Fail' archetype"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "delays",
+   "shifting_burden",
+   "second_order"
+  ]
+ },
+ {
+  "id": "shifting-burden-swipe",
+  "concept": "shifting_burden",
+  "domain": "systems",
+  "type": "swipe",
+  "hook": "What's your crutch quietly doing to the muscle underneath?",
+  "title": "Crutch or Muscle?",
+  "game": {
+   "prompt": "Does this treat the symptom, or build the real capacity?",
+   "left": "Crutch",
+   "right": "Muscle",
+   "items": [
+    {
+     "text": "A third coffee every afternoon to get through the slump",
+     "side": "left",
+     "why": "It works today, but it can hurt tonight's sleep, which deepens tomorrow's slump."
+    },
+    {
+     "text": "Moving bedtime 20 minutes earlier",
+     "side": "right",
+     "why": "If short sleep is behind the slump, this goes after the cause, not the feeling."
+    },
+    {
+     "text": "Always getting a parent or friend to make your awkward phone calls",
+     "side": "left",
+     "why": "Relief now, but your own skill and confidence never get the reps."
+    },
+    {
+     "text": "Making the awkward call yourself, with them nearby for backup",
+     "side": "right",
+     "why": "Uncomfortable, but each try builds the skill you were avoiding."
+    },
+    {
+     "text": "Using autocorrect for a word you never learn to spell",
+     "side": "left",
+     "why": "Harmless here. Not every crutch is bad; just know which muscle you're skipping."
+    },
+    {
+     "text": "Asking a teacher to explain the step you keep getting wrong",
+     "side": "right",
+     "why": "Help that teaches is the opposite of a crutch: it shrinks your need for help."
+    }
+   ]
+  },
+  "insight": "When a quick fix keeps solving a problem for you, your own ability can weaken, so you need the fix more. Help isn't the issue; help that replaces learning is.",
+  "model": "Use help that teaches. Watch for fixes you need more each month.",
+  "try_today": "Pick one thing you always outsource or avoid. Do one small piece of it yourself today, with support nearby if you need it.",
+  "source": {
+   "thinkers": [
+    "Peter Senge"
+   ],
+   "work": "The Fifth Discipline (1990)"
+  },
+  "evidence": "philosophy",
+  "level": 1,
+  "related": [
+   "fixes_that_fail",
+   "self_efficacy",
+   "deliberate_practice"
+  ],
+  "try_team": "Each person names one task they always hand to the same helper. Pair up: the helper coaches, the other does it, once this week.",
+  "from_source": {
+   "quote": "The easy way out usually leads back in.",
+   "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
+   "next_read": "Meadows, Thinking in Systems (2008), ch. 5, the trap 'Shifting the Burden to the Intervenor'"
+  }
+ },
+ {
+  "id": "still-water-vision-hidden-clue",
+  "concept": "still_water_vision",
+  "domain": "systems",
+  "type": "reveal",
+  "hook": "A group can know more than any member. Does it use what it knows?",
+  "title": "The Clue Nobody Said",
+  "game": {
+   "prompt": "Researchers gave small groups facts about three candidates in a student election. Together each group knew enough to spot the strongest one, but the key facts were split up, a piece per person. What did most groups do?",
+   "choices": [
+    "Pooled the clues and picked the best",
+    "Talked about what they all already knew",
+    "Asked the quietest member first"
+   ],
+   "answer": 1,
+   "reveal": "They mostly talked about what they all already knew. In Stasser and Titus's 1985 study, shared facts got far more airtime than facts only one person held, so few groups picked the best candidate. When everyone got all the facts up front, most did. If you guessed 'pooled the clues', so did the groups."
+  },
+  "insight": "Groups drift to facts everyone already holds, so the clue only one person has can go unsaid. Being quiet isn't the fix on its own; asking for unshared facts is.",
+  "model": "Before a group decides, ask: what does only one of us know?",
+  "try_today": "In your next family, class or work chat about a decision, ask: 'Has anyone noticed something the rest of us haven't?' Then wait.",
+  "try_team": "Before deciding, each person writes one fact they think only they know. Read them all aloud first, then discuss. Five minutes.",
+  "source": {
+   "thinkers": [
+    "Garold Stasser",
+    "William Titus",
+    "Susan Cain"
+   ],
+   "work": "Stasser & Titus, 'Pooling of Unshared Information in Group Decision Making', Journal of Personality and Social Psychology (1985); Cain, Quiet (2012)"
+  },
+  "evidence": "strong",
+  "level": 1,
+  "related": [
+   "introvert_energy",
+   "leverage_points",
+   "delays"
+  ]
+ },
+ {
+  "id": "still-water-vision-pause",
+  "concept": "still_water_vision",
+  "domain": "systems",
+  "type": "choice",
+  "hook": "The first voice sets the room. How do you hear the slower ones?",
+  "title": "Make Room for Slow Thinking",
+  "game": {
+   "steps": [
+    {
+     "scenario": "A teacher asks the class a hard question. Three hands shoot up within a second. What gets more thoughtful answers from more students?",
+     "options": [
+      {
+       "text": "Call on the first hand to keep things moving",
+       "feedback": "Quick and natural. But then the fastest few do the thinking, and the rest learn they needn't."
+      },
+      {
+       "text": "Wait about three silent seconds before calling on anyone",
+       "best": true,
+       "feedback": "Yes. In Mary Budd Rowe's classroom studies, waiting about 3 seconds led to longer answers and more students joining in."
+      },
+      {
+       "text": "Give the answer so nobody feels stuck",
+       "feedback": "Kind, but it skips the thinking. A few seconds of quiet is often all people need."
+      }
+     ]
+    },
+    {
+     "scenario": "Your team or club needs ideas to stop wasting time. The usual way is everyone talking at once. What tends to give more ideas?",
+     "options": [
+      {
+       "text": "An open brainstorm, loudest ideas first",
+       "feedback": "Lively, but people wait their turn and drop ideas while others talk."
+      },
+      {
+       "text": "Everyone writes ideas alone for 5 minutes, then shares",
+       "best": true,
+       "feedback": "Yes. Diehl and Stroebe (1987) found people working alone, then pooling, had more ideas than groups brainstorming aloud. Waiting your turn blocks ideas."
+      },
+      {
+       "text": "Let the most senior person decide quickly",
+       "feedback": "Fast, but you get one view of a problem everyone sees a part of."
+      }
+     ]
+    },
+    {
+     "scenario": "At home, the energy bill has crept up all year. Over dinner, everyone has a quick theory. What finds the real cause?",
+     "options": [
+      {
+       "text": "Go with the most confident theory",
+       "feedback": "Confidence is loud, not proof. A slow creep needs the record more than a debate."
+      },
+      {
+       "text": "Lay the last 12 bills side by side and look first",
+       "best": true,
+       "feedback": "Yes. A slow trend hides in any single month and shows up in a timeline. Looking together turns an argument into a shared view."
+      },
+      {
+       "text": "Cut everything at once and see what happens",
+       "feedback": "Bold, but if you change everything, you won't learn what was driving it."
+      }
+     ]
+    }
+   ]
+  },
+  "insight": "Loud, fast rooms reward the first idea. A short pause, silent writing or a timeline lets slower clues surface. That helps everyone think, not just quiet people.",
+  "model": "Pause before the talk: silence, paper or a timeline lets slow patterns show.",
+  "try_today": "Next time you ask someone a question, count three seconds in your head before you fill the silence.",
+  "try_team": "Open your next meeting, class or family plan with 3 minutes of silent writing. Go round, one idea each, before open talk.",
+  "source": {
+   "thinkers": [
+    "Mary Budd Rowe",
+    "Michael Diehl",
+    "Wolfgang Stroebe",
+    "Susan Cain"
+   ],
+   "work": "Rowe, 'Wait Time: Slowing Down May Be a Way of Speeding Up!', Journal of Teacher Education (1986); Diehl & Stroebe, 'Productivity Loss in Brainstorming Groups: Toward the Solution of a Riddle', JPSP (1987); Cain, Quiet (2012)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "delays",
+   "leverage_points",
+   "introvert_energy"
+  ]
+ }
 ]

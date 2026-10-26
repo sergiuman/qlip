@@ -20,6 +20,7 @@ LAST=$(python3 -c "import json,os;print(json.load(open('$STATE')).get('last','')
 
 echo "\n## Day $DAY — $TODAY\n" >> "$LOG"
 git pull -q --rebase 2>>"$LOG"
+[ -d tests/node_modules/axe-core ] || npm install --prefix tests --silent >> "$LOG" 2>&1
 BEFORE=$(python3 -c "import json;h=json.load(open('qa/history.json'));print(h[-1]['automated'])" 2>/dev/null || echo 0)
 
 python3 pipeline/ingest.py >> "$LOG" 2>&1

@@ -253,3 +253,9 @@ a { color: inherit; }
 .recap small { color: var(--muted); }
 .leads-ask { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: var(--step--1); color: var(--muted); }
 .leads-ask button { border: 1px solid var(--line); background: var(--surface-2); border-radius: 999px; padding: 6px 14px; font-weight: 700; }
+
+/* session 5 */
+.team-line { margin: 0; font-size: var(--step--1); color: var(--muted); }
+.team-line b { color: var(--fg); }
+.track { min-height: 0; padding: 12px 14px; }
+.track-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
