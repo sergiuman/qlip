@@ -179,7 +179,7 @@
         }
       ]
     },
-    "insight": "A famous 1998 study found kids praised for being smart later picked easier tasks. A large 2019 replication (Li & Bates) didn't find that effect. Praising what someone did is still low-risk and gives them something to repeat.",
+    "insight": "A famous 1998 study found kids praised for being smart later picked easier tasks; a large 2019 replication (Li & Bates) didn't. Praising what someone did is still low-risk.",
     "model": "Praise what someone did (strategy, effort, choices), not what they are.",
     "try_today": "Give one person a compliment today that names a specific thing they did, not a trait they have.",
     "source": {
@@ -247,7 +247,7 @@
         }
       ]
     },
-    "insight": "No lab study here, just a story: Carol Dweck describes a Chicago school that graded unfinished courses 'Not Yet' instead of 'Fail'. 'Yet' doesn't change your skill; it changes the story about time, so the next try feels worth making.",
+    "insight": "Not a lab study, a story: Dweck describes a Chicago school grading unfinished courses 'Not Yet', not 'Fail'. 'Yet' doesn't change your skill; it makes the next try feel worth it.",
     "model": "Add 'yet': it turns a verdict into a stage on a path.",
     "try_today": "Catch one 'I can't…' you say today and finish it out loud with '…yet, and my next step is ___'.",
     "source": {
@@ -400,7 +400,7 @@
     "concept": "deliberate_practice",
     "domain": "growth",
     "type": "order",
-    "hook": "Played guitar for 10 years? Why might you be no better than year 2?",
+    "hook": "Played guitar for 10 years? Why might year 10 feel like year 2?",
     "title": "Deliberate Practice",
     "game": {
       "prompt": "You've got 10 minutes with your guitar. What order levels you up?",
@@ -409,10 +409,10 @@
         "Do just that bit, slightly too hard",
         "Check what went wrong, then go again"
       ],
-      "explain": "Playing songs you know = staying still. Drilling the bit you fumble = getting better."
+      "explain": "Pick the bit you always mess up → do just that bit, slightly too hard → check what went wrong, then go again. Songs you know keep your skill and your joy, but mostly hold you where you are."
     },
     "insight": "Hours alone don't make experts; focused work on weak spots helps far more. The '10,000-hour rule' oversimplifies Ericsson, and a 2014 meta-analysis found practice explains only part of skill gaps.",
-    "model": "Not more practice: harder, narrower practice with feedback.",
+    "model": "For growth, not more practice: narrower, slightly too hard, with feedback. Keep playing for joy too.",
     "try_today": "Pick a skill you use often, name its weakest sub-part, and drill only that for 10 focused minutes.",
     "source": {
       "thinkers": [
@@ -481,7 +481,7 @@
         }
       ]
     },
-    "insight": "Ericsson argued that once a skill feels automatic, more hours add little; growth comes from narrow, slightly-too-hard work with feedback. Later reviews found practice matters but explains less than he claimed (Macnamara et al., 2014).",
+    "insight": "Ericsson argued extra hours add little once a skill feels automatic; growth needs narrow, slightly-too-hard work with feedback. Practice matters, but less than he claimed (Macnamara, 2014).",
     "model": "Hours keep a skill. Feedback on your weakest part grows it.",
     "try_today": "Pick a hobby where you've stopped improving. Find the one moment you always get wrong and practise only that for 10 minutes.",
     "try_team": "Pick one thing your class, team or family does on repeat. Ask: where are we just repeating? Choose one weak spot to practise, with feedback.",
@@ -685,7 +685,7 @@
         {
           "text": "You had a terrible week and feel like giving up tonight.",
           "side": "right",
-          "why": "A bad night is a feeling, not data. Rest, set a calm review date, and decide then."
+          "why": "Your feeling is real and worth hearing. One bad night just isn't enough to decide on. Rest first."
         },
         {
           "text": "Your goal changed and this no longer leads anywhere you want.",
@@ -700,13 +700,13 @@
         {
           "text": "You're stuck, but you haven't tried a new method yet.",
           "side": "right",
-          "why": "Not a quit signal yet: change the approach before the goal. Stuck is often a method problem."
+          "why": "Change the approach before the goal. Stuck is often a method problem."
         }
       ]
     },
     "insight": "Quitting isn't failure; it frees time for better bets. Seth Godin separates a dip worth pushing through from a dead end. Annie Duke adds: we usually quit too late, held by sunk costs.",
     "model": "Quit what you wouldn't start today. Dips that still show progress aren't quit signals.",
-    "try_today": "Write one commitment you're unsure about and set a 'kill criterion': the one signal that would tell you to stop.",
+    "try_today": "Write one commitment you're unsure about and set a 'stop signal': the one sign that would tell you to stop.",
     "source": {
       "thinkers": [
         "Annie Duke",
@@ -721,7 +721,7 @@
       "loss_aversion",
       "grit"
     ],
-    "try_team": "Pick one shared project, club or family plan and agree its kill criteria together: 'If ___ hasn't happened by ___, we stop or change course.'",
+    "try_team": "Pick one shared project, club or family plan and agree its stop signals together: 'If ___ hasn't happened by ___, we stop or change course.'",
     "sensitive": true
   },
   {
@@ -740,7 +740,7 @@
       "answer": 9,
       "explain": "9%. In under 20 years, going to school alone fell from 8 in 10 young kids to fewer than 1 in 10 (Hillman, Adams & Whitelegg, 1990). Busier roads and parents' fears grew; kids' chances to handle small risks on their own shrank."
     },
-    "insight": "The drop is real. Haidt and Gray argue it helped fuel rising teen anxiety; critics say that link is still mostly correlation. Small risks you choose do seem to build skill and nerve.",
+    "insight": "The drop is real. Haidt and Gray link it to rising teen anxiety; critics say the evidence is mostly correlation. Either way, small risks you choose seem to build skill and nerve.",
     "model": "Nerve grows from small risks you choose and can judge yourself, at any age.",
     "try_today": "Pick one small thing you'd usually hand to someone else, a new route, a repair, a tricky call, and do it yourself today.",
     "try_team": "Each person names one thing they did alone at 10 that kids rarely do now. Agree one safe-enough version to allow or try this month.",
@@ -768,30 +768,12 @@
     "concept": "risky_play",
     "domain": "growth",
     "type": "choice",
-    "hook": "Is 'be careful!' keeping them safe, or teaching them to freeze?",
+    "hook": "Mates jumping off a pier. Brave or daft? There's a third option.",
     "title": "Keep the Risk, Fix the Hazard",
     "game": {
       "steps": [
         {
-          "scenario": "Your 7-year-old grandchild is climbing a sturdy tree, a little higher than you'd like. You call up…",
-          "options": [
-            {
-              "text": "\"Do you feel steady? Where does your next foot go?\"",
-              "best": true,
-              "feedback": "Best pick. A question hands her the judgment. The height is a risk she can see and manage, the useful kind."
-            },
-            {
-              "text": "\"Get down now, that's too high!\"",
-              "feedback": "Understandable, and it ends the danger. It also ends the lesson: she never practises judging height herself."
-            },
-            {
-              "text": "Nothing. You look away and let her get on with it.",
-              "feedback": "Trust is good, but staying near and calm lets you spot what she can't, like a rotten branch."
-            }
-          ]
-        },
-        {
-          "scenario": "You're 16. Friends are jumping off a pier into water nobody has checked. Your move?",
+          "scenario": "Your friends are jumping off a pier into water nobody has checked. Your move?",
           "options": [
             {
               "text": "Check the depth first, then decide.",
@@ -809,19 +791,37 @@
           ]
         },
         {
-          "scenario": "A new teammate asks to lead next week's client call alone. It feels a little early. You…",
+          "scenario": "Your 7-year-old cousin is climbing a sturdy tree, a little higher than you'd like. You call up…",
           "options": [
             {
-              "text": "Say yes, do a 15-minute prep, and stay on standby.",
+              "text": "\"Do you feel steady? Where does your next foot go?\"",
               "best": true,
-              "feedback": "Best pick. Real stakes, a safety net, and room to recover: that's risky play for grown-ups."
+              "feedback": "Best pick. A question hands her the judgment. The height is a risk she can see and manage, the useful kind."
             },
             {
-              "text": "Run it yourself. Too much is at stake.",
-              "feedback": "Safe for this call, costly for growth. Without a first try, the next one stays scary."
+              "text": "\"Get down now, that's too high!\"",
+              "feedback": "Understandable, and it ends the danger. It also ends the lesson: she never practises judging height herself."
             },
             {
-              "text": "Let them go in cold with no briefing.",
+              "text": "Nothing. You look away and let her get on with it.",
+              "feedback": "Trust is good, but staying near and calm lets you spot what she can't, like a rotten branch."
+            }
+          ]
+        },
+        {
+          "scenario": "Your mate asks to lead the group presentation solo. It feels a bit early for them. You…",
+          "options": [
+            {
+              "text": "Say yes, run through it once together, and be ready to jump in.",
+              "best": true,
+              "feedback": "Best pick. Real stakes, a safety net, and room to recover: that's risky play at any age."
+            },
+            {
+              "text": "Do it yourself. Too much is riding on it.",
+              "feedback": "Safe for this class, costly for growth. Without a first try, the next one stays scary."
+            },
+            {
+              "text": "Let them wing it with no run-through.",
               "feedback": "That's a hazard, not a stretch: missing facts they can't see. Give the map, then step back."
             }
           ]
@@ -831,7 +831,7 @@
     "insight": "A risk is a danger you can see and judge; a hazard is one you can't. Fix hazards, keep risks. A 2015 review tied risky outdoor play to more activity and social health; most studies were weak.",
     "model": "Remove the hidden hazards, keep the visible risks. That's where skill and courage grow.",
     "try_today": "Swap one 'Be careful!' for a question: 'What's your plan?' or 'Do you feel steady?' Try it on a kid, a colleague or yourself.",
-    "try_team": "List 3 things your team, class or family shields people from. Sort each: hidden hazard (fix it) or visible risk (allow it).",
+    "try_team": "At work, class or home, list 3 things you shield people from (a first client call, a solo trip). Sort each: hidden hazard (fix it) or visible risk (allow it).",
     "source": {
       "thinkers": [
         "Mariana Brussoni"
@@ -851,95 +851,101 @@
     "concept": "mistake_alchemy",
     "domain": "growth",
     "type": "reveal",
-    "hook": "New project, new mistakes. Clues or roadblocks?",
-    "title": "Mistakes are Data Points",
+    "hook": "Some mistakes are worth making. Can you spot which?",
+    "title": "The Useful Kind of Mistake",
     "game": {
-      "prompt": "Imagine your project is like baking a cake: What's more helpful – finding the recipe wrong OR having it burn in the oven?",
+      "prompt": "Two friends each burn dinner. Ana tried a new recipe, in a small batch, noting what she changed. Ben made his usual dish but forgot the timer. Whose mistake teaches more?",
       "choices": [
-        {
-          "text": "The recipe being wrong (I'd fix that first)",
-          "answer": 0
-        },
-        {
-          "text": "The cake burning (it tells me what NOT to do next time)",
-          "answer": 1
-        }
+        "Ana's",
+        "Ben's",
+        "Both the same"
       ],
-      "reveal": "Many people jump to fixing the 'recipe' - their plans. But a mistake, like burnt cake, is real-time feedback. It tells you *what actually happened* so you can adjust your process. Carol Dweck calls this 'growth mindset': seeing mistakes as data, not failures.",
-      "answer": 1
+      "answer": 0,
+      "reveal": "Ana's. Amy Edmondson calls it an intelligent failure: new ground, small stakes, a real question answered. Ben's is a basic failure: worth a quick fix (set a timer), but it holds no new lesson."
     },
-    "insight": "Mistakes aren't the opposite of success, they're part of the journey. They highlight what works and what doesn't.",
-    "model": "Every mistake is a data point guiding you towards success. Learn from it, adjust, and keep going!",
-    "try_today": "Think of your last 'failed' attempt at something. What did you learn that you wouldn't have known otherwise?",
+    "insight": "Mistakes on new ground show you what nobody knew yet. Mistakes on known ground just need a better system. Sort them, and stop feeling equally bad about both.",
+    "model": "New ground: make small, smart mistakes. Known ground: add a check.",
+    "try_today": "Think of your last slip. New ground or known ground? Write one small experiment to try, or one check to add.",
     "source": {
       "thinkers": [
-        "Carol Dweck"
+        "Amy Edmondson"
       ],
-      "work": "Mindset: The New Psychology of Success (2006)"
+      "work": "Right Kind of Wrong: The Science of Failing Well (2023)"
     },
-    "evidence": "strong",
+    "evidence": "philosophy",
     "level": 1,
     "related": [
       "growth_mindset",
-      "deliberate_practice"
+      "deliberate_practice",
+      "premortem"
     ],
-    "try_team": "Share a recent 'failed' project with your team. Focus on ONE thing you learned from it that helped you improve."
+    "try_team": "List 3 recent slips as a team, class or family. Sort each: new ground (share the lesson) or known ground (add a check). No blame.",
+    "sensitive": true
   },
   {
     "id": "self-reflection-loop-example",
     "concept": "self_reflection_loop",
     "domain": "growth",
     "type": "choice",
-    "hook": "Presentation ace? Bask or level up?",
-    "title": "The Loop of Growth",
+    "hook": "It went fine. Is that the end of the lesson?",
+    "title": "The Reflection Loop",
     "game": {
       "steps": [
         {
-          "scenario": "You just delivered a successful presentation. How do you feel?",
+          "scenario": "Your team won 3-1, but you missed two easy passes. On the way home you…",
           "options": [
             {
-              "text": "Relief! I nailed it, time to celebrate.",
-              "feedback": "Totally deserved! But the best learners keep going. Celebrating is great, but so is learning from the win."
+              "text": "Enjoy the win and forget the rest.",
+              "feedback": "Enjoy it, you earned it. But the misses hold the lesson, and they fade fast."
             },
             {
-              "text": "Proud and excited, but also wanting to know what worked well and what could be even better next time.",
+              "text": "Enjoy the win, then name one thing that worked and one pass to practise.",
               "best": true,
-              "feedback": "Yes! That's the loop: enjoy the success, then analyze it. Your future self will thank you."
+              "feedback": "That's the loop: notice, pick one change, try it next time. Wins teach too."
+            },
+            {
+              "text": "Replay the two misses all evening.",
+              "feedback": "Caring is good, but replaying isn't reviewing. Name the fix, then let it go."
             }
           ]
         },
         {
-          "scenario": "You want to learn from your presentation. What do you focus on?",
+          "scenario": "You gave a talk at school or work. It went OK but felt flat. The most useful question afterwards is…",
           "options": [
             {
-              "text": "My awesome slides and witty jokes! They were the stars, right?",
-              "feedback": "Humor is good, but remember what helped YOU deliver it: clear structure, confident voice? Those are the real wins."
+              "text": "\"Was I good or bad?\"",
+              "feedback": "That's a verdict, not a lesson. It gives you nothing to change."
             },
             {
-              "text": "How I managed my nerves, how the audience responded, and where I could have explained things more clearly.",
+              "text": "\"What's one thing I'll do differently next time?\"",
               "best": true,
-              "feedback": "Spot on! Focus on your delivery, audience engagement, and content clarity. You're building a system for success, not just one-off wins."
+              "feedback": "Yes. Specific and forward. One change you'll actually try beats ten you won't."
+            },
+            {
+              "text": "\"Why am I always so boring?\"",
+              "feedback": "Harsh and too broad. Swap 'always' for one moment you can fix."
             }
           ]
         }
       ]
     },
-    "insight": "The self-reflection loop is powerful: learn from successes AND failures. Analyze what worked, what didn't, and use that to improve next time.",
-    "model": "Learn, adjust, repeat. The self-reflection loop fuels continuous growth.",
-    "try_today": "After a challenging task today, take 5 minutes to reflect: What went well? What could you do differently next time?",
+    "insight": "Looking back pays when it ends in one change you'll try next time. Review wins as well as misses, and judge the method, not yourself.",
+    "model": "Do it, look back, pick one change, try again.",
+    "try_today": "Tonight, write two lines about today: one thing that worked, and one small thing you'll do differently tomorrow.",
     "source": {
       "thinkers": [
         "Richard Boyatzis",
         "Annie McKee"
       ],
-      "work": "Resonant Leadership (2014)"
+      "work": "Resonant Leadership (2005)"
     },
-    "evidence": "strong",
+    "evidence": "philosophy",
     "level": 1,
     "related": [
       "growth_mindset",
       "deliberate_practice",
       "self_efficacy"
-    ]
+    ],
+    "try_team": "End your next team, class or family task with 5 minutes: what worked, what didn't, one change to try next time. No blame."
   }
 ]

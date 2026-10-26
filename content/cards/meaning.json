@@ -80,7 +80,7 @@
       "answer": 1,
       "reveal": "About as many: 93% said yes, vs 94% for a real reason (\"I'm in a rush\") and 60% for no reason. But for a bigger ask (20 pages, not 5), the empty 'because' did nothing (24%, same as no reason). Only the real reason helped (42%)."
     },
-    "insight": "Langer's point was mindlessness: on small asks we react to the word 'because', not the reason. On bigger asks we wake up and weigh it. That's a tool and a warning: notice when an empty 'because' works on you. One classic study, small groups.",
+    "insight": "Langer's point was mindlessness: on small asks we react to the word 'because', not the reason. On bigger asks we weigh it. Notice when an empty 'because' works on you. One classic, small study.",
     "model": "On autopilot we hear 'because'; awake, we weigh the reason. Give a real one, and listen for real ones.",
     "try_today": "Next time you ask someone for something, add 'because…' with your honest reason. Notice how they respond.",
     "try_team": "Each person rewrites one request they'll make this week as 'Could we…, because…' with a real reason. Read them aloud: which ones make you want to say yes?",
@@ -106,18 +106,19 @@
     "concept": "responsibility_meaning",
     "domain": "meaning",
     "type": "reveal",
-    "hook": "Which week would you call more meaningful: easy or heavy?",
+    "hook": "A happy week and a meaningful week: are they the same week?",
     "title": "Meaning Lives in the Load",
     "game": {
-      "prompt": "Week A: lie-ins, good food, nothing asked of you. Week B: tiring, but you helped your mate revise for their resit and finished the group project everyone was counting on. Which one would you call more meaningful?",
+      "prompt": "Week A: lie-ins, good food, a film with friends. Week B: tiring, but you helped a friend get ready for a big interview and finished the group project everyone was counting on. Which feels happier, and which more meaningful?",
       "choices": [
-        "Week A, the easy one",
-        "Week B, the heavy one",
-        "Honestly, both"
+        "A happier, B more meaningful",
+        "Same week for both",
+        "B for both",
+        "A for both"
       ],
-      "reveal": "Many people pick B as more meaningful, even when A felt happier. Research says: happy = getting, meaningful = giving. Both count."
+      "reveal": "No wrong answer here. In Baumeister's 2013 survey of ~400 US adults, happiness and meaning overlapped a lot. Where they split, happiness went with getting what you need, meaning with giving and caring. A correlation, not a rule, and both count."
     },
-    "insight": "In a 2013 survey of about 400 US adults, Baumeister and colleagues linked happiness to getting what you want, and meaning to giving and caring. Frankl argued similar from his own life. Meaning grows where you carry something worth it, not where you pile on until you break.",
+    "insight": "Frankl found meaning in what we carry for others. Peterson: pursue what is meaningful, not what is expedient (Rule 7). A heavy week only means something if you can recover from it.",
     "model": "Happiness is often about receiving; meaning is often about carrying something worth it.",
     "try_today": "Pick one small thing someone relies on you for and do it with care today. Afterwards, notice how it felt.",
     "source": {
@@ -126,7 +127,7 @@
         "Roy Baumeister",
         "Jordan Peterson"
       ],
-      "work": "Man's Search for Meaning (1946); Baumeister et al., Journal of Positive Psychology (2013)"
+      "work": "Man's Search for Meaning (1946); Baumeister et al., Journal of Positive Psychology (2013); Peterson, 12 Rules for Life (2018)"
     },
     "evidence": "moderate",
     "level": 1,
@@ -182,7 +183,7 @@
         }
       ]
     },
-    "insight": "Peterson argues meaning is found in the responsibility you choose to shoulder: pick up the heaviest load you can actually carry. Epictetus adds the filter: carry what is in your power, not what isn't. Sort first, then lift as much of your own as you can.",
+    "insight": "Peterson argues meaning lies in the responsibility you choose: pick up the heaviest load you can actually carry. Epictetus adds the filter: carry only what is in your power. Sort first, then lift.",
     "model": "Put down what isn't yours, then pick up as much of what is yours as you can bear.",
     "try_today": "Write down three things weighing on you. Circle the one you can act on, and take one 5-minute step on it.",
     "source": {
@@ -323,7 +324,7 @@
         }
       ]
     },
-    "insight": "Peterson (Maps of Meaning) pictures life on a border between order, the known, and chaos, the unknown, an idea he links to the Taoist yin and yang. Too much order goes stale; too much chaos overwhelms. Grow by facing the unknown voluntarily.",
+    "insight": "Peterson (Maps of Meaning) pictures life on the border of order, the known, and chaos, the unknown, like yin and yang. Too much order goes stale; too much chaos overwhelms. Face the unknown by choice.",
     "model": "Stand on order, step willingly into chaos. Growth happens at the edge you choose to face.",
     "try_today": "If you lean Order, try one new thing today. If you lean Chaos, fix one anchor: same bedtime tonight.",
     "source": {
@@ -496,7 +497,7 @@
           "axis": "S"
         },
         {
-          "q": "I'd need to learn new things to do it well.",
+          "q": "I've had little practice at this kind of task.",
           "axis": "S",
           "invert": true
         },
@@ -530,8 +531,8 @@
       },
       "prompt": "Think of your main task this week (school, work, a hobby). Answer every line for that task."
     },
-    "insight": "People get most absorbed when a high challenge meets matching skill and a clear goal. Too easy is dull; too hard is stressful. Later studies back this, but find the link weaker.",
-    "model": "Flow = challenge slightly above skill + clear goal + quick feedback.",
+    "insight": "People get most absorbed when a high challenge is matched by high skill, a clear goal and quick feedback (Csikszentmihalyi). Too easy bores; too hard stresses. Later studies find the link weaker.",
+    "model": "Flow = high challenge matched by high skill, a clear goal and quick feedback.",
     "try_today": "Pick one task and tweak it: a bit harder if bored, smaller if stressed. Then do 10 minutes with your phone away.",
     "source": {
       "thinkers": [
@@ -703,7 +704,7 @@
         }
       ]
     },
-    "insight": "In Gabriele Oettingen's studies, people who only daydreamed about success often put in less effort than those who also pictured the obstacle. Pairing the wish with the wall helps, with modest but replicated effects.",
+    "insight": "In Gabriele Oettingen's studies, people who only daydreamed about success often tried less than those who also pictured the obstacle. Pairing wish and wall helps, with modest but replicated effects.",
     "model": "Wish, then obstacle, then if-then plan. Hope gives the why; facts give the how.",
     "try_today": "Name one goal, the biggest inner obstacle, and write one plan: 'If [obstacle], then I will [action].'",
     "source": {

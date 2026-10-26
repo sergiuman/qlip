@@ -552,9 +552,9 @@
       "step": 1,
       "unit": "min",
       "answer": 9,
-      "explain": "About 9 minutes sooner, and longer, more specific lists went with faster sleep (Scullin et al., 2018). Writing down what's left seems to let the mind stop holding it."
+      "explain": "About 9 minutes sooner in one lab study of 57 young adults (Scullin et al., 2018); longer, more specific lists went with faster sleep. It needs replicating."
     },
-    "insight": "It was one small study of 57 young adults, so treat it as promising, not proven. Small studies of plan-making point the same way: a written next step quiets the nag.",
+    "insight": "Promising, not proven: it was one small study. One earlier lab study suggested a written plan reduces intrusive thoughts. Writing down what's left seems to let the mind stop holding it.",
     "model": "Your mind keeps holding open tasks until they're parked somewhere it trusts.",
     "try_today": "Tonight, before bed, write tomorrow's to-do list on paper, as specific as you can. Then put the list and the screen away.",
     "try_team": "End the week or the school day with a 'parking lot': everyone writes their open tasks and next steps on one shared sheet before leaving.",
@@ -566,7 +566,7 @@
       ],
       "work": "Scullin et al., Journal of Experimental Psychology: General (2018); Masicampo & Baumeister, JPSP (2011)"
     },
-    "evidence": "moderate",
+    "evidence": "contested",
     "level": 1,
     "related": [
       "sleep_memory",

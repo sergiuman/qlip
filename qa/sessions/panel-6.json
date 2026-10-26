@@ -1,0 +1,599 @@
+{
+ "session": 6,
+ "personas": [
+  {
+   "persona": "Maya, 16, Manchester. Lives on TikTok. Leaves anything that feels like school or a lecture, and stays only if it's fast, surprising and about her.",
+   "scores": {
+    "hook": 6,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "On every choice card, the end screen says 'Good guesses. Here's the move that works best:' even when I got it wrong (in the sunk-cost screenshot I picked the orange wrong answer). Then it pastes ALL the best answers from every step into one paragraph joined with ' · ' (for example 'Ask: if I were choosing a hobby today... · Ask what it costs...'). On a phone that's a wall of grey text that repeats what I just read, and it feels like a teacher marking me.",
+     "fix": "Replace the recap block with a score line plus the model only. Use 'X/Y. Nice.' when X equals Y, otherwise 'X/Y. Here's the trick:', then card.model. Drop the joined list of best options entirely: each step's feedback already showed it. Never print 'Good guesses' when the player picked a non-best option."
+    },
+    {
+     "card_id": "habit-loop-choice",
+     "severity": "high",
+     "problem": "The hook is literally about me ('stop scrolling in bed'), and step 1 is great. Then step 2 jumps to a colleague scrolling in a tense work meeting, which isn't my life. I'd swipe away there.",
+     "fix": "Replace step 2 scenario with: 'You're revising. Every time you hit a hard question, your hand goes to TikTok. The hard question (the cue) won't vanish. What helps most?' Options: 'Delete TikTok forever.' (feedback: 'Big promise, but the urge still has nowhere to go. It usually comes back.'); best: 'When a question feels hard, write down the one bit you're stuck on, then try it for 2 minutes.' (keep the existing habit-reversal feedback); 'Revise when you feel more motivated.' (feedback: 'Understandable, but the loop keeps practising meanwhile. A swap can start today.')."
+    },
+    {
+     "card_id": "risky-play-risk-hazard-choice",
+     "severity": "medium",
+     "problem": "Two of the three scenarios are about a grandchild and a client call. Only the pier one is mine. The hook 'teaching them to freeze' talks about other people, not me.",
+     "fix": "Change the hook to 'Your mates are jumping off the pier. Brave or daft? There's a third option.' Make the pier the step 1 scenario. Replace the client-call step with: 'Your mate asks to lead the group presentation solo. It feels a bit early for them. You...' Options: best 'Say yes, run through it once together, and be ready to jump in.'; 'Do it yourself. Too much is riding on it.'; 'Let them wing it with no run-through.' Keep the existing feedback texts, with 'client' changed to 'class'."
+    },
+    {
+     "card_id": "map-territory-swipe",
+     "severity": "medium",
+     "problem": "The coffee item is marked Territory, but its explanation says 'Korzybski: even taste is your nerves' summary'. That sounds like it's a Map, so I got marked wrong and then the card argued against its own answer. Confusing.",
+     "fix": "Replace the item with {\"text\":\"The burn in your legs after running for the bus\",\"side\":\"right\",\"why\":\"That's the thing itself, happening in you. Any number or label about it is the map.\"}. Optionally add an item that hits teens: {\"text\":\"The like count on your post\",\"side\":\"left\",\"why\":\"A tiny slice of who saw it and tapped. It leaves out everyone who smiled and scrolled on.\"}."
+    },
+    {
+     "card_id": "sunk-cost-three-lives",
+     "severity": "medium",
+     "problem": "Step 1 (guitar) is relatable, but steps 2 and 3 are an 18-month work project and a 15-year-old car repair. Adult problems. The hook works, but the game loses me by step 2.",
+     "fix": "Replace step 3 with: 'You've spent £40 on skins in a game you're now bored of. A new season pass is £8. \"I've already spent so much on it,\" you think. You...' Best: 'Ask: if I'd never played, would I pay £8 for this today?' (feedback: 'Yes. The £40 is gone either way. Only the next £8 is up for grabs.'); 'Buy it so the skins aren't wasted' (feedback: 'The skins already gave you fun. They can't vote on today's choice.'); 'Uninstall in a rage right now' (feedback: 'Maybe, but test it: a week off shows whether you miss it.'). Keep the work step as step 2, or drop it so the card is 2 steps."
+    },
+    {
+     "card_id": "one-percent-doubling-reveal",
+     "severity": "medium",
+     "problem": "The hook 'Most brains trip on one kind of maths' is the most school-sounding sentence in the feed. I see 'maths' and I'm gone. The puzzle itself is genuinely surprising, so the hook is wasting it.",
+     "fix": "Change the hook to: '£1,000 a day for a month, or 1p that doubles daily? Pick fast.' Change the prompt to use money: 'Pile A: £1,000 every day for 30 days. Pile B: 1p on day 1, 2p on day 2, 4p on day 3, doubling until day 30.' Update the reveal: 'Pile B: over £5 million vs £30,000. A is ahead for the first 22 days...' (recompute the crossover day for pence)."
+    },
+    {
+     "card_id": "trust-ledger-swipe",
+     "severity": "low",
+     "problem": "The items 'Picking up your grandkid' and 'Presenting a teammate's analysis to the boss' are adult-world, which breaks the 'about me' feeling in an otherwise quick, good swipe.",
+     "fix": "Replace the grandkid item with {\"text\":\"Turning up to your mate's match exactly when you said\",\"side\":\"right\",\"why\":\"Boring reliability is the main deposit. It shows your word means something.\"}. Replace the boss item with {\"text\":\"Telling the teacher the group idea was yours when it was your mate's\",\"side\":\"left\",\"why\":\"Taking credit is a big withdrawal, and people remember it for a long time.\"}."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "With only 3 questions, middle answers give 'The Half-Lit Path' at 5/5/5. That result reads like 'meh, come back in 7 days'. Then the try-today is 'Write your goal at the top of a page...', which is literally homework.",
+     "fix": "Change try_today to: 'In your notes app, type your goal and rate W, S, O from 1 to 5. Do one 5-minute move on the lowest one tonight.' Change the 'mid' result text to: 'All three are half-lit today. Pick the easiest to bump: watch one 5-minute how-to (Skill), or ask someone for access (Opportunity). Then come back.'"
+    }
+   ],
+   "best_cards": [
+    "evening-reset-switch-off-choice",
+    "implementation-intentions-choice",
+    "zeigarnik-effect-bedtime-list"
+   ],
+   "verdict": "As Maya, the cards that are about my actual life land. Muting the group chat at 10pm, the bag-down revision plan, the bedtime to-do list and the phone across the room are things I'd really try, and they never shame me. The problem is that most choice cards switch to grandkids, clients, bosses and 15-year-old cars by step 2 or 3, and that's when I swipe away. The end-of-game recap is the other big turn-off. It's a grey wall that says 'Good guesses' even when I was wrong, then repeats every answer, like a teacher marking me. Hooks are good about half the time; 'maths' and adult-world hooks kill the rest. It's safe and useful, but not yet sticky enough to make me binge or share."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj, non-native English speaker, tired and a bit burned out. Wants tools he can use tomorrow with his team and with himself. No patience for fluff.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 8,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "map-territory-swipe",
+     "severity": "high",
+     "problem": "The coffee item contradicts itself. I swipe 'Territory', which the game marks correct, and then the explanation says 'Korzybski: even taste is your nerves' summary', which makes it a map. So which is it? I came out more confused than I went in, and I could not explain this to my team.",
+     "fix": "Replace the item with one that is clearly territory: text 'Your colleague's actual code in the pull request', side 'right', why 'The real thing. The status update about it is the map. When they disagree, read the code.' If the coffee item stays, change its why to: 'As close to the thing as you get. The menu description is the map.' and drop the Korzybski clause."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "In the dark feed screenshot, an 'Old Wisdom · Quick one' card ('You've been asked to give a presentation... Do you...') marks 'Stick to the safe, pre-approved slides' with 'it stifles your creativity and prevents real impact'. At my company the slides are sometimes pre-approved for a good reason, like legal or client rules. This is generic LinkedIn advice with no source, and it shames the careful person. It is weaker than every card in this sample.",
+     "fix": "Rewrite the feedback for the safe option: 'Sometimes right, when the content is fixed for a reason. But if your idea matters, ask first: \"Can I add 2 minutes on X?\" Safe and heard can go together.' Replace the best option with 'Ask the owner of the slides for 2 minutes to add your point, then open it with one concrete example.' Then add a named source, or remove the card from the feed until it meets the evidence standard of the other cards."
+    },
+    {
+     "card_id": "psychological-safety-choice",
+     "severity": "medium",
+     "problem": "This is the best card for me, but the summary under step 3 says '2 sharp calls. Here's the other move:' and quotes \"I'm glad you told me. Are you OK?...\". That answer belongs to step 2 (the teenager and the car), but it appears right under the meeting question with no context. For a moment I thought it was the right meeting answer.",
+     "fix": "In app.js, show the scenario before each missed best answer in the summary, e.g. 'Teen scraped the car → \"I'm glad you told me. Are you OK? Let's look at it together.\"' (truncate the scenario to about 6 words)."
+    },
+    {
+     "card_id": "sunk-cost-three-lives",
+     "severity": "medium",
+     "problem": "The summary at the end lists all three best answers joined with '·' in one long paragraph. 'Ask: if I were choosing a hobby today... · Ask what it costs to finish... · Compare: cost of this repair...' is a wall of text that is hard to read on a phone, especially in a second language. The content itself is very good for me: the 18-month project step is exactly my life.",
+     "fix": "Render the multi-step summary as a short list with one line per step, and prefix each with its scenario word: 'Guitar: ...', 'Project: ...', 'Car: ...'. Also shorten the step 2 best option to: 'Compare the cost to finish with what it will likely earn.'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "medium",
+     "problem": "There is only one question per pillar, so the result rests on 3 taps, and the 'mid' result I got was vague. Also, 'Pick the cheapest one to raise' made me stop: cheapest in money? For a non-native reader, 'cheapest' sounds like money. The team exercise (pair helps only on the lowest score) is excellent, and I will use it.",
+     "fix": "Add a second question per axis: W 'I think about this even when nobody asks me.', S 'I know the first three steps.', O 'I have the time and tools this week.' In the 'mid' and '' results, replace 'cheapest' with 'easiest' and 'raise by a notch' with 'improve a little'."
+    },
+    {
+     "card_id": "deliberate-practice-order",
+     "severity": "low",
+     "problem": "The ordering game is too thin: three steps, and only one sensible order. The result says '1 of 3 in place. Now you know the rest.', which feels a little like a teacher. Then the NEXT card is 'Practised for hours. Why aren't you better? Order...', the same idea and the same game type, straight after. That made me want to scroll away.",
+     "fix": "Add a fourth, tempting item, 'Play the full song once to warm up', which goes first or is excluded per the explain text. Change the partial-score header to '1 of 3 right. Here's the order that works.' Make the related NEXT card point to a different concept (e.g. 'flow' or 'skill_gap'), not another deliberate-practice order card."
+    },
+    {
+     "card_id": "responsibility-meaning-happy-vs-meaningful",
+     "severity": "low",
+     "problem": "The reveal 'Research says: happy = getting, meaningful = giving' is stated as a law, but the insight says it is one survey of about 400 US adults. For a burned-out person, 'meaning lives in the load' can also read as 'carry more'. The insight's last line handles this, but the reveal does not.",
+     "fix": "Change the reveal to: 'Many people pick B as more meaningful, even when A felt happier. One US survey linked happiness more to getting and meaning more to giving. Both count, and a heavy week only means something if you can recover from it.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "On My map (dark), the node labels overlap the nodes and each other ('Will · Skill · Oppo...', 'The 2/3 Rule' sits on top of a node). After 88 ideas the map looks like noise. It shows nothing I can use.",
+     "fix": "Show labels only for the 3 most recently played nodes, with a background pill and collision offset. Below the graph, add a plain list, 'Your 3 most-used models this week', that links to each card's Try today."
+    }
+   ],
+   "best_cards": [
+    "psychological-safety-choice",
+    "implementation-intentions-choice",
+    "sunk-cost-three-lives"
+   ],
+   "verdict": "Honestly, this batch is better than I expected. I could take psychological safety ('Thanks for telling me', 'What am I missing?'), if-then plans, the sunk-cost project review and the WSO pairing straight to my team on Monday. The sources are named and the study sizes are stated honestly, which I respect. The weak points: map-territory contradicts itself on coffee, end summaries become walls of text, and some order and reveal games are too thin to be fun. Also, an unsourced 'Old Wisdom' presentation card in the feed shames the careful option and lowers the trust the good cards build. Useful, mostly safe, but not yet something I would share without being asked."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "map-territory-swipe",
+     "severity": "high",
+     "problem": "The card contradicts itself, and it penalises the more careful reader. 'The taste of the coffee' is graded as Territory, yet its own explanation quotes Korzybski saying that 'even taste is your nerves' summary', which makes it a map. In the screenshot, a thoughtful player who put both rain and coffee under Map was marked wrong on both and told 'These ones are sneaky.' Korzybski's point is that every perception is already an abstraction, so the card teaches the opposite of its source.",
+     "fix": "Change the prompt to 'Closer to the thing itself, or a description of it?' and the right label to 'Closer to the thing'. Replace the coffee item with {\"text\": \"Your friend's actual face across the table\", \"side\": \"right\", \"why\": \"Closer to the person than any photo or profile, though even your eyes are summarising. Korzybski: the map is never the territory.\"}. Change the rain 'why' to 'As close as you get: you can't argue with it, only respond. Even so, what you feel is your senses' report on it.'"
+    },
+    {
+     "card_id": "one-percent-doubling-reveal",
+     "severity": "high",
+     "problem": "Bait and switch. The game teaches exponential growth (a billion coins), then the insight admits that 'habits don't compound like this', and the model ('Give it about two months') has nothing to do with what was just played. The reader is left with a dramatic picture the card itself disowns. Lally's 66 days is also a median with a range of 18 to 254 days, so 'about two months' is presented too firmly.",
+     "fix": "Let the card teach one thing. Change the model to: 'Growth that doubles looks like nothing for a long time, then like everything. Don't judge a doubling curve by its first week.' Change the insight to: 'People reliably underestimate compound growth (Stango & Zinman, 2009). It is real for money and spreading ideas. Habits are different: in Lally et al. (2010), automaticity rose fast and then levelled off, after anywhere from 18 to 254 days (median 66).' Keep try_today, but replace 'Judge it at box 30, not box 3' with 'Judge it at box 30, not box 3; for some habits it takes longer.'"
+    },
+    {
+     "card_id": "responsibility-meaning-happy-vs-meaningful",
+     "severity": "high",
+     "problem": "The reveal overstates one correlational survey as a law ('Research says: happy = getting, meaningful = giving'). Jordan Peterson is listed as a source, but nothing from him appears on the card. A Peterson reader sees name-dropping instead of his actual idea. There is also no 'answer', so 'Honestly, both' gets the same text and no acknowledgement.",
+     "fix": "Change the reveal to: 'Many people pick B as more meaningful, even when A felt happier. In one survey, happiness went more with getting what you need, and meaning more with giving and caring. The two overlap a lot, and both count.' Add to the insight: 'Peterson's version is a choice you face daily: pursue what is meaningful, not what is expedient (12 Rules for Life, Rule 7).' Add '12 Rules for Life (2018)' to source.work."
+    },
+    {
+     "card_id": "flow-challenge-skill-venn",
+     "severity": "medium",
+     "problem": "The card is inconsistent about the formula. The model says 'challenge slightly above skill', the insight says 'matching skill', and the result says 'high challenge meets high skill'. A careful reader notices and loses trust.",
+     "fix": "Change the model to: 'Flow = high challenge matched by high skill, a clear goal and quick feedback. If anything, let the challenge sit just above your skill.' Change the insight's first sentence to: 'People get most absorbed when a high challenge is matched by high skill, with a clear goal and quick feedback (Csikszentmihalyi).'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "medium",
+     "problem": "The card hands out a named type ('Full Agency', 'Skilled, Looking for a Why') based on one item per pillar. That is the horoscope-style typology I distrust. The source line 'adapted as the original QUMNI WSO framework' reads as self-citation presented as scholarship.",
+     "fix": "Add a second question per axis: W: 'I'd still do it if nobody ever knew.'; S: 'I know the first three steps.'; O: 'I have the time, tools and permission this week.'. Change source.work to: 'Blumberg & Pringle, The missing opportunity in organizational research (Academy of Management Review, 1982). Qlip's three-question version is a simplified teaching tool, not a validated scale.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The 'Next' suggestion often repeats what I just played. After Deliberate Practice ('Played guitar for 10 years? Why…') it offers 'The Dreaming Sprinter: Practised for hours. Why aren't you better? Order…', which has the same hook and the same game type. On reveal cards, the large heading 'Not quite. The answer: Trip B, the one I'd enjoy more' is repeated almost word for word by the first line of the body ('Trip B. Both payments…'). The deliberate-practice-b screen also has a large blank gap between the explanation and '1 of 3 in place'.",
+     "fix": "In the Next picker, exclude cards that share the current card's concept and type, and prefer a 'related' concept from a different domain. In the reveal body, strip a leading restatement of the answer when it matches the heading, or shorten the heading to 'Not quite: it's B.' Remove the extra bottom margin under the order-game explanation block."
+    },
+    {
+     "card_id": "deliberate-practice-order",
+     "severity": "low",
+     "problem": "'Playing songs you know = staying still' is a slogan, and it is false. Playing for joy and keeping up what you have learned are legitimate, and an old guitarist made to feel guilty about pleasure is not helped. The hook also implies that ten years of play is wasted.",
+     "fix": "Change explain to: 'Playing songs you know keeps your skill and your joy, which is worth doing. But it mostly holds you where you are. Drilling the bit you fumble is what moves you forward.' Change the model to: 'For growth, not more practice: narrower, slightly too hard, with feedback. Keep playing for joy too.'"
+    },
+    {
+     "card_id": "trust-ledger-swipe",
+     "severity": "low",
+     "problem": "The item 'Telling the class whose idea won your group the project' is hard to parse on a first read. The model 'Every overpromise is a loan you may not repay' mixes metaphors in a card that is built on deposits and withdrawals.",
+     "fix": "Change the item text to 'Telling the class the winning idea was your groupmate's, not yours'. Change the model to: 'Every kept word is a deposit. Every overpromise is a withdrawal you made before you had the funds.'"
+    }
+   ],
+   "best_cards": [
+    "gratitude-practice-letter-reveal",
+    "zeigarnik-effect-what-holds-up",
+    "habit-loop-choice"
+   ],
+   "verdict": "This set is more honest than most of what calls itself psychology. It names its studies, admits small samples ('treat 91% as a best case'), and corrects textbook myths, as with Zeigarnik. The gratitude-letter and psychological-safety cards are kind and accurate, and William James's habit quote with a 'read next' pointer is exactly the bridge to real books I want. It still slips into slogans in places: 'happy = getting, meaningful = giving' and 'songs you know = staying still'. Some cards contradict their own sources: Korzybski's taste, the inconsistent flow formula, and a doubling game whose lesson the card itself retracts. Peterson is named as a thinker without being heard. The safety footers and the 'snapshot, not verdict' framing are respectful. I would keep playing, but I would want each card's single claim made as precise as its citations."
+  },
+  {
+   "persona": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. Sensitive to shaming, labels and pressure; needs the app to feel safe and actually useful.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 8,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "quitting-wisely-swipe",
+     "severity": "high",
+     "problem": "Two things hit hard after a rough year. First, the 'terrible week' item tells me 'A bad night is a feeling, not data.' That reads as 'your feelings don't count' and marks me wrong for taking them seriously. Second, the try_today asks me to set a 'kill criterion', which is harsh wording to see on a card flagged sensitive. The screenshot also shows the doubled label 'Not a quit signal · Not a quit signal yet:'.",
+     "fix": "Item 4 'why' becomes: \"Your feeling is real and worth listening to. One bad night just isn't enough to decide on. Rest, set a calm review date, and decide then.\" In try_today and try_team, change \"kill criterion\" / \"kill criteria\" to \"stop signal\" / \"stop signals\". Item 7 'why' becomes: \"Change the approach before the goal. Stuck is often a method problem.\" (this removes the repeated 'Not a quit signal yet:')."
+    },
+    {
+     "card_id": "gratitude-practice-letter-reveal",
+     "severity": "medium",
+     "problem": "The reveal asks \"Picked 'overrated'?\" but options 1 and 2 both contain the word 'overrated'. I picked option 2, which was correct, and still couldn't tell if that line was about me. A moment of 'did I get it wrong?' is exactly what I don't need.",
+     "fix": "Change the reveal sentence \"Picked 'overrated'? Many of us fear thanks will seem over the top.\" to \"Picked the first answer? Many of us fear thanks will seem over the top.\" Or reword option 1 to \"They expected the reader to be happier than they were\"."
+    },
+    {
+     "card_id": "trust-ledger-reveal",
+     "severity": "medium",
+     "problem": "The hook \"You've kept 20 promises. How much can one broken one cost?\" feeds catastrophising. For an anxious person it reads as 'one slip ruins everything'. The insight softens it later, but the scary line is what I see first in the feed.",
+     "fix": "Hook becomes: \"Why does one bad moment feel louder than twenty good ones?\" Add to insight: \"One slip rarely erases a track record; owning it quickly wins much of it back.\""
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The 'Next' teasers on sensitive cards can drop me straight into a stressful scene. Stress Mindset (sensitive) ends with 'NEXT · REFRAMING: 11pm. A text: \"We need to talk.\"' and the Zeigarnik bedtime card points to '1 a.m. before a big day'. Those scenes spike my anxiety right after a card that was meant to calm it.",
+     "fix": "In app.js next-card selection: when the current card has sensitive:true, choose a next card whose hook doesn't describe an alarming late-night or confrontation scene. Simplest version: skip candidates with sensitive:true, or add a 'calm_next' allowlist. Also soften the reframing hook to: \"A vague text lands late at night. How many stories can you read into it?\""
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The Old Wisdom presentation card in view-feed-dark tells me choosing the safe slides 'stifles your creativity and prevents real impact'. For someone with low self-worth, the cautious choice is the one I'd make, and the feedback reads as a judgement on my character.",
+     "fix": "Rewrite that option's feedback to: \"Totally understandable when it feels risky, and it will get you through. Adding one small personal touch, like a single story, lets your ideas land more without the full leap.\""
+    },
+    {
+     "card_id": "responsibility-meaning-happy-vs-meaningful",
+     "severity": "low",
+     "problem": "Week B uses 'helped your mate revise for their resit'. A graduate who has had a rough year may have had resits themselves, and the reveal gives no feedback on my choice. 'Honestly, both' gets no acknowledgement, so it feels like I didn't answer properly.",
+     "fix": "Change the Week B text to \"...helped a friend get ready for a big interview and finished the group project everyone was counting on.\" Start the reveal with: \"No wrong answer here. Many people pick B as more meaningful, even when A felt happier...\""
+    },
+    {
+     "card_id": "risky-play-roaming-estimate",
+     "severity": "low",
+     "problem": "The insight \"Haidt and Gray argue it helped fuel rising teen anxiety\" lands on an anxious reader as 'your anxiety comes from being coddled'. The card says the evidence is contested, but the line still stings.",
+     "fix": "Insight becomes: \"The drop is real. Haidt and Gray link it to rising teen anxiety; critics say the evidence is mostly correlation. Whatever the cause, small risks you choose seem to build skill and nerve, and it's never too late to start.\""
+    },
+    {
+     "card_id": "habit-loop-choice",
+     "severity": "low",
+     "problem": "The insight repeats the step-1 answer ('Best move: charge your phone across the room') after I've already seen it. 'Most people pick willpower first' feels a bit like a gotcha.",
+     "fix": "Insight becomes: \"Willpower is the hardest link to win, especially late at night. Easier wins: remove the cue, or swap the response. Clear's loop has four links (Duhigg's had three).\""
+    }
+   ],
+   "best_cards": [
+    "gratitude-practice-three-good-things-choice",
+    "stress-mindset-spectrum",
+    "zeigarnik-effect-bedtime-list"
+   ],
+   "verdict": "Mostly a kind, useful experience for me. Many cards say 'that's structural, not a flaw in you', avoid labels, add a helpline footer on sensitive cards, and give small try-today steps I could actually do. The gratitude and stress cards felt protective. A few lines still caught me: 'a feeling, not data' on the quitting swipe, 'kill criterion', the one-broken-promise hook, and the alarming next-card teasers placed right after calming cards. These made me tense up and stopped me feeling that the app was looking out for me. Fixing those would lift safety to an 8 or 9. Fun is moderate because a lot of the rounds are reading-heavy, though the reveal-style surprises (doubling pile, hospital errors) are memorable."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist. I check every claim, attribution and effect size, and every item that pretends to measure something.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "responsibility-meaning-happy-vs-meaningful",
+     "severity": "high",
+     "problem": "The scenario is leading. Week B is written as virtue (helping a mate, a project 'everyone was counting on') and Week A as idleness ('nothing asked of you'), so nearly everyone picks B. There is no answer key, so the same reveal shows for every choice. It says 'Many people pick B... even when A felt happier', but the player was never asked which week felt happier, so the result does not follow from the answer. 'Research says: happy = getting, meaningful = giving' squashes a correlational survey of about 400 US adults into a law. Peterson is listed as a thinker, but no claim on the card comes from him.",
+     "fix": "Ask two questions instead of one: 'Which week would feel HAPPIER?' and then 'Which would you call more MEANINGFUL?' (or one prompt: 'Which feels happier, and which more meaningful? Pick the pair:' with options 'A happier, B more meaningful' / 'Same week for both' / 'B for both'). Make Week A less pejorative: 'Week A: lie-ins, good food, a film with friends.' Rewrite the reveal: 'In Baumeister et al.'s 2013 survey of ~400 US adults, happiness and meaning overlapped, but where they split, happiness went with getting what you need and meaning went with giving and caring for others. It's a correlation, not a rule, and both count.' Remove 'Jordan Peterson' from source.thinkers, or add a specific attributed claim from him."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "In venn games, a mid-range result puts the dot in the visual overlap, which contradicts the result text. On flow-challenge-skill-venn (Challenge 5/10, Skill 5/10) the dot sits in the Challenge-Skill intersection, the area that means 'Flow Channel', while the text says 'On the Fence'. On wso-triad-venn (5/10 x3) the dot sits dead centre of the triple overlap, which reads as 'Full Agency', while the text says 'Half-Lit Path'. The picture tells players something the scoring does not.",
+     "fix": "In app.js venn rendering, when the result key is 'mid', place the dot on a neutral spot (for example the outer boundary midpoint or just outside all circles) and draw it hollow/grey. Alternatively map each axis score so that 0.5 lands on the circle's edge, not inside the overlap, and only scores >= threshold enter a circle's interior."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "medium",
+     "problem": "Each pillar rests on a single item, so the result is a three-item profile with no reliability. The Opportunity item 'Nothing outside me is stopping me' is an absolute negative and hard to agree with honestly; almost anyone with a real goal faces some outside constraint, so O will be systematically low. The 'S' result text ('Ask whether this goal is truly yours, or borrowed') reads more into one low Will item than it can support.",
+     "fix": "Add a second item per axis: W 'I'd be disappointed if I let this go.'; S 'I know what the first step looks like.'; O 'I have the time, tools or access to start this week.' Replace 'Nothing outside me is stopping me.' with 'Outside things (time, money, access, permission) mostly allow this right now.' Soften result S to: 'Today your answers show skill, but less want and a narrower door. Worth asking what would make this matter to you.'"
+    },
+    {
+     "card_id": "flow-challenge-skill-venn",
+     "severity": "medium",
+     "problem": "Two psychometric problems. (1) The inverted Skill item 'I'd need to learn new things to do it well' also measures Challenge, so it lowers Skill exactly when Challenge is high and biases results toward 'Anxiety Zone'. (2) The model line 'challenge slightly above skill' is the pop version (the '4% rule'). Csikszentmihalyi's channel is high challenge balanced with high skill, which is also what this card's own results say.",
+     "fix": "Replace the inverted Skill item with 'I've had little practice at this kind of task.' (invert: true). Rewrite the model to: 'Flow = high challenge matched by high skill + a clear goal + quick feedback.' Keep the insight's caveat that later studies find the link weaker."
+    },
+    {
+     "card_id": "stress-mindset-spectrum",
+     "severity": "medium",
+     "problem": "The items are leading. Every right-pole option is framed warmly ('A chance to get stronger', 'Something matters to me'), and every left-pole option is framed as catastrophe ('Something's wrong', 'Something is going wrong'), so social desirability pushes answers rightward. 'A chance to get stronger' blends challenge appraisal with a growth claim. Q2 and Q4 are near-duplicates.",
+     "fix": "Neutralise the poles. Q1 left: 'A sign I'm not coping'. Q2 options: 'Mostly a threat' / 'Not sure' / 'Mostly a challenge I can meet'. Replace Q4 with a behavioural item: 'When I notice stress building, I usually…' options 'Try to make it go away' (-2) / 'Depends' (0) / 'Use the energy on the task' (2). Keep Q3's down-weighting."
+    },
+    {
+     "card_id": "zeigarnik-effect-bedtime-list",
+     "severity": "medium",
+     "problem": "The evidence label is 'moderate', but the card itself says the basis is 'one small study of 57 young adults... promising, not proven'. The label overclaims compared with the card's own text. Masicampo & Baumeister (2011) is cited as support, but it belongs to the ego-depletion-era lab and has not been robustly replicated, so 'Small studies... point the same way' leans on shaky ground.",
+     "fix": "Set evidence to 'preliminary' (or the schema's lowest empirical tier). Change the explain line to: 'About 9 minutes sooner in one lab study of 57 young adults (Scullin et al., 2018); longer, more specific lists went with faster sleep. It needs replicating.' Delete the Masicampo & Baumeister clause from the insight, or rephrase it to 'One earlier lab study suggested a written plan reduces intrusive thoughts.'"
+    },
+    {
+     "card_id": "habit-loop-choice",
+     "severity": "low",
+     "problem": "The insight states an unsupported empirical claim, 'Most people pick willpower first', and partly repeats the step-1 answer verbatim. The second step frames 'habit reversal training' around a colleague's phone-checking. HRT is validated for tics and body-focused repetitive behaviours, so calling it 'well-tested' for scrolling stretches the evidence.",
+     "fix": "Insight: 'Fighting the craving late at night is the hardest link to win. Moving the cue avoids the fight. Clear's loop has four links (Duhigg's had three): remove the cue or swap the response.' Step-2 feedback: 'Yes. Same cue, new response. Swapping in a competing action is the core of habit reversal, a method well tested for tics and nail-biting, and a sensible thing to try here.'"
+    },
+    {
+     "card_id": "map-territory-swipe",
+     "severity": "low",
+     "problem": "'The taste of the coffee in your mouth' is scored as Territory, but its own explanation says 'even taste is your nerves' summary', which makes it a map. The item contradicts itself, so a careful player who answers 'Map' is marked wrong for following Korzybski. 'Your exam grade or step count' puts two different things in one item.",
+     "fix": "Replace the coffee item with 'The ankle you just twisted' (side: right, why: 'Pain is the body itself talking. Any label you give it comes after.'). Split the double item to 'Your exam grade' (left)."
+    }
+   ],
+   "best_cards": [
+    "zeigarnik-effect-what-holds-up",
+    "implementation-intentions-estimate",
+    "gratitude-practice-letter-reveal"
+   ],
+   "verdict": "The attributions in this batch are unusually careful. I checked Milne et al. 91/35/38%, Hillman 80% to 9%, Arkes & Blumer, Slovic 1993, Edmondson 1996, Kumar & Epley 2018, the cumulative doubling crossover at day 13, and Lally's 66 days. All are accurate, and most cards flag small-n studies honestly. The Zeigarnik card that names the textbook myth is exactly what I want to see. The weak points are measurement, not facts. The happy-vs-meaningful reveal is leading and does not follow from the answer. Some venn and spectrum items cross-load or invite the socially desirable answer. And the venn graphic puts 'mid' scores inside the overlap that means 'flow' or 'full agency'. Fix the item wording and the dot placement and this is a 7 to 8 experience for a sceptical scientist."
+  },
+  {
+   "persona": "Lina, 31, product designer for mobile games and learning apps. Looked at 14 screenshots: wso-triad-venn a/b, deliberate-practice-order a/b, one-percent-doubling-reveal a/b, map-territory-swipe-a, responsibility-meaning-happy-vs-meaningful-b, implementation-intentions-estimate-b, stress-mindset-spectrum-a, quitting-wisely-swipe-a, sunk-cost-two-trips-a, zeigarnik-effect-bedtime-list-a, flow-challenge-skill-venn-a, plus view-feed-dark and view-map-dark. Read all 24 card JSONs.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "In the Venn games the picture says one thing and the text says another. In wso-triad-venn-a the dot sits in the middle of all three circles, which anyone reads as 'all three'. The result underneath is 'The Half-Lit Path' (5/10 each). flow-challenge-skill-venn-a does the same: the dot is in the Challenge-Skill overlap, which looks like the Flow Channel, but the result is 'On the Fence'. The most visual moment of the card contradicts the verdict.",
+     "fix": "Draw a dashed neutral ring (radius about 12% of a circle) at the centre and label it 'middle'. Place 'mid' results inside that ring and grey out all circle fills. Only draw the dot inside a coloured overlap when that overlap's result is the one shown. Better still, map score to position so 5/10 on every axis sits at the exact centroid with the overlaps desaturated."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The headline after a wrong answer says the same thing three times: 'Not quite. The answer: Trip B, the one I'd enjoy more' (three lines), then the body opens 'Trip B. Both payments...'. one-percent-doubling-reveal does the same. It's a long, flat 'you lose' message where the payoff should be, and it pushes the model and the reward below the fold.",
+     "fix": "When the card has reveal_title, use that as the headline. Otherwise show a short state line ('Not quite.' / 'Nailed it.') and let the reveal text name the answer. Don't put choices[answer] into the headline. Add reveal_title values, e.g. sunk-cost-two-trips: 'Spent is spent.'; one-percent-doubling-reveal: 'Doubling sneaks up on you.'"
+    },
+    {
+     "card_id": "map-territory-swipe",
+     "severity": "medium",
+     "problem": "The coffee item marks 'Territory' as correct, then its own explanation says 'even taste is your nerves' summary', which argues for Map. Players who pick Map (I did) are marked wrong by a line that supports them. The 'These ones are sneaky' headline then feels unfair.",
+     "fix": "Change the item to {\"text\": \"Stubbing your toe on the bed frame\", \"side\": \"right\", \"why\": \"The thing itself. Your story about it ('I'm so clumsy') is the map.\"}. Or keep coffee and change its why to: \"As close as you get: the taste itself, not the menu's description of it.\" and drop the Korzybski aside."
+    },
+    {
+     "card_id": "zeigarnik-effect-bedtime-list",
+     "severity": "medium",
+     "problem": "I guessed 12 on a 0–30 slider and the answer was 9. The game called it 'Plot twist: it's smaller.' A 3-minute miss is a near hit, and calling it a twist punishes a good guess and wastes the reward moment.",
+     "fix": "In the estimate result logic, if |guess - answer| <= 15% of (max - min), show 'So close!' with a small confetti burst instead of 'Plot twist'. Here 15% of 30 is 4.5, so 12 vs 9 counts. Keep 'Plot twist' for misses over 30% of the range."
+    },
+    {
+     "card_id": "deliberate-practice-order",
+     "severity": "medium",
+     "problem": "The end screen reads '1 of 3 in place. Now you know the rest.' It's flat, a bit smug, and is the only reward line. The NEXT card is 'The Dreaming Sprinter: Practised for hours. Why aren't you better? Order...', which is the same concept and the same order mechanic. It feels like a loop, not a feed.",
+     "fix": "Change the partial-score line to '1 of 3. The trick is step 2: aim slightly too hard.' Change the explain text to: 'Pick the bit you always mess up → do just that bit, slightly too hard → check what went wrong, then go again. Songs you already know feel good but keep you where you are.' In the 'Next' picker, skip cards whose concept equals the current concept or whose type and hook theme match (deliberate_practice / 'Practised for hours')."
+    },
+    {
+     "card_id": "responsibility-meaning-happy-vs-meaningful",
+     "severity": "medium",
+     "problem": "The card has no 'answer', so there's no win or lose moment. The reveal also says more than the evidence supports: 'Many people pick B' has no source, and 'Research says: happy = getting, meaningful = giving' is too strong for one correlational survey. The idea is shareable, but the payoff is mushy.",
+     "fix": "Set reveal to: \"Most of us call B more meaningful, even if A sounds nicer. In a 2013 survey, Baumeister's team found happiness went with getting what you want, and meaning went with giving and caring. Neither is the 'right' week; they're different goods.\" Add \"reveal_title\": \"Happy and meaningful aren't the same week.\" Then show a one-line 'You picked X' echo so the tap pays off."
+    },
+    {
+     "card_id": "one-percent-doubling-reveal",
+     "severity": "low",
+     "problem": "The pacing has a bait-and-switch. The hook and game are about a striking doubling-maths result, then the insight says 'Habits don't compound like this' and the model jumps to 'give it two months'. The shareable moment (1 billion coins) and the lesson don't connect, so it reads as a trick question.",
+     "fix": "Change model to: \"Early days always look unimpressive. Judge a new habit at day 60, not day 6.\" Change the insight's first two sentences to: \"Our brains reliably underestimate doubling (Stango & Zinman, 2009). Habits don't double, but they share the shape: slow, slow, then suddenly automatic, around 66 days on average (Lally et al., 2010).\""
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "My map shows 'You've lit up 88 of 88 ideas' as a dense hairball. Node labels overlap ('Will · Skill · Oppo...' runs into 'Reframing' and 'The 2/3 Rule'), and the top-right diamond counter still says 1. Finishing everything gives no reward and leaves no next goal. The 'Challenge' label in the flow Venn is also clipped by the circle stroke.",
+     "fix": "On the map, show labels only for the 5 most recently played nodes plus the tapped node, with a 6px collision offset. At 100% replace the headline with 'All 88 lit. Next: replay your 3 oldest' and add three buttons for those cards. Define what the diamond counts (streak days) and add a tooltip on tap. In the Venn renderer, place axis labels at least 16px inside the circle or outside the stroke."
+    }
+   ],
+   "best_cards": [
+    "sunk-cost-two-trips",
+    "psychological-safety-choice",
+    "risky-play-risk-hazard-choice"
+   ],
+   "verdict": "Strong content, and the game feel lets it down. Hooks are mostly scroll-stoppers ('You paid double for the worse weekend', 'Your next sentence decides whether they ever tell you again'). The choice cards with kind 'Not quite, but...' feedback are the best thing here and feel safe. Try-today lines are concrete and usable. The weak spots all sit at the payoff: Venn dots contradict their own results, wrong-answer headlines repeat the option three times, near-miss estimates are framed as failures, and the 'Next' suggestion can serve the same concept again. I'd play the next one, but I wouldn't share most of these until the reveal feels like a reward rather than a correction."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "On every choice card, the end screen says 'Good guesses. Here's the move that works best:' even when I got it wrong (in the sunk-cost screenshot I picked the orange wrong answer). Then it pastes ALL the best answers from every step into one paragraph joined with ' · ' (for example 'Ask: if I were choosing a hobby today... · Ask what it costs...'). On a phone that's a wall of grey text that repeats what I just read, and it feels like a teacher marking me.",
+   "fix": "Replace the recap block with a score line plus the model only. Use 'X/Y. Nice.' when X equals Y, otherwise 'X/Y. Here's the trick:', then card.model. Drop the joined list of best options entirely: each step's feedback already showed it. Never print 'Good guesses' when the player picked a non-best option.",
+   "from": "Maya, 16, Manchester. Lives on TikTok. Leaves anything that feels like school or a lecture, and stays only if it's fast, surprising and about her."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "In the dark feed screenshot, an 'Old Wisdom · Quick one' card ('You've been asked to give a presentation... Do you...') marks 'Stick to the safe, pre-approved slides' with 'it stifles your creativity and prevents real impact'. At my company the slides are sometimes pre-approved for a good reason, like legal or client rules. This is generic LinkedIn advice with no source, and it shames the careful person. It is weaker than every card in this sample.",
+   "fix": "Rewrite the feedback for the safe option: 'Sometimes right, when the content is fixed for a reason. But if your idea matters, ask first: \"Can I add 2 minutes on X?\" Safe and heard can go together.' Replace the best option with 'Ask the owner of the slides for 2 minutes to add your point, then open it with one concrete example.' Then add a named source, or remove the card from the feed until it meets the evidence standard of the other cards.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English speaker, tired and a bit burned out. Wants tools he can use tomorrow with his team and with himself. No patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "On My map (dark), the node labels overlap the nodes and each other ('Will · Skill · Oppo...', 'The 2/3 Rule' sits on top of a node). After 88 ideas the map looks like noise. It shows nothing I can use.",
+   "fix": "Show labels only for the 3 most recently played nodes, with a background pill and collision offset. Below the graph, add a plain list, 'Your 3 most-used models this week', that links to each card's Try today.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English speaker, tired and a bit burned out. Wants tools he can use tomorrow with his team and with himself. No patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The 'Next' suggestion often repeats what I just played. After Deliberate Practice ('Played guitar for 10 years? Why…') it offers 'The Dreaming Sprinter: Practised for hours. Why aren't you better? Order…', which has the same hook and the same game type. On reveal cards, the large heading 'Not quite. The answer: Trip B, the one I'd enjoy more' is repeated almost word for word by the first line of the body ('Trip B. Both payments…'). The deliberate-practice-b screen also has a large blank gap between the explanation and '1 of 3 in place'.",
+   "fix": "In the Next picker, exclude cards that share the current card's concept and type, and prefer a 'related' concept from a different domain. In the reveal body, strip a leading restatement of the answer when it matches the heading, or shorten the heading to 'Not quite: it's B.' Remove the extra bottom margin under the order-game explanation block.",
+   "from": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The 'Next' teasers on sensitive cards can drop me straight into a stressful scene. Stress Mindset (sensitive) ends with 'NEXT · REFRAMING: 11pm. A text: \"We need to talk.\"' and the Zeigarnik bedtime card points to '1 a.m. before a big day'. Those scenes spike my anxiety right after a card that was meant to calm it.",
+   "fix": "In app.js next-card selection: when the current card has sensitive:true, choose a next card whose hook doesn't describe an alarming late-night or confrontation scene. Simplest version: skip candidates with sensitive:true, or add a 'calm_next' allowlist. Also soften the reframing hook to: \"A vague text lands late at night. How many stories can you read into it?\"",
+   "from": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. Sensitive to shaming, labels and pressure; needs the app to feel safe and actually useful."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The Old Wisdom presentation card in view-feed-dark tells me choosing the safe slides 'stifles your creativity and prevents real impact'. For someone with low self-worth, the cautious choice is the one I'd make, and the feedback reads as a judgement on my character.",
+   "fix": "Rewrite that option's feedback to: \"Totally understandable when it feels risky, and it will get you through. Adding one small personal touch, like a single story, lets your ideas land more without the full leap.\"",
+   "from": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. Sensitive to shaming, labels and pressure; needs the app to feel safe and actually useful."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "In venn games, a mid-range result puts the dot in the visual overlap, which contradicts the result text. On flow-challenge-skill-venn (Challenge 5/10, Skill 5/10) the dot sits in the Challenge-Skill intersection, the area that means 'Flow Channel', while the text says 'On the Fence'. On wso-triad-venn (5/10 x3) the dot sits dead centre of the triple overlap, which reads as 'Full Agency', while the text says 'Half-Lit Path'. The picture tells players something the scoring does not.",
+   "fix": "In app.js venn rendering, when the result key is 'mid', place the dot on a neutral spot (for example the outer boundary midpoint or just outside all circles) and draw it hollow/grey. Alternatively map each axis score so that 0.5 lands on the circle's edge, not inside the overlap, and only scores >= threshold enter a circle's interior.",
+   "from": "Dr. Okafor, 51, research psychologist. I check every claim, attribution and effect size, and every item that pretends to measure something."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "In the Venn games the picture says one thing and the text says another. In wso-triad-venn-a the dot sits in the middle of all three circles, which anyone reads as 'all three'. The result underneath is 'The Half-Lit Path' (5/10 each). flow-challenge-skill-venn-a does the same: the dot is in the Challenge-Skill overlap, which looks like the Flow Channel, but the result is 'On the Fence'. The most visual moment of the card contradicts the verdict.",
+   "fix": "Draw a dashed neutral ring (radius about 12% of a circle) at the centre and label it 'middle'. Place 'mid' results inside that ring and grey out all circle fills. Only draw the dot inside a coloured overlap when that overlap's result is the one shown. Better still, map score to position so 5/10 on every axis sits at the exact centroid with the overlaps desaturated.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. Looked at 14 screenshots: wso-triad-venn a/b, deliberate-practice-order a/b, one-percent-doubling-reveal a/b, map-territory-swipe-a, responsibility-meaning-happy-vs-meaningful-b, implementation-intentions-estimate-b, stress-mindset-spectrum-a, quitting-wisely-swipe-a, sunk-cost-two-trips-a, zeigarnik-effect-bedtime-list-a, flow-challenge-skill-venn-a, plus view-feed-dark and view-map-dark. Read all 24 card JSONs."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The headline after a wrong answer says the same thing three times: 'Not quite. The answer: Trip B, the one I'd enjoy more' (three lines), then the body opens 'Trip B. Both payments...'. one-percent-doubling-reveal does the same. It's a long, flat 'you lose' message where the payoff should be, and it pushes the model and the reward below the fold.",
+   "fix": "When the card has reveal_title, use that as the headline. Otherwise show a short state line ('Not quite.' / 'Nailed it.') and let the reveal text name the answer. Don't put choices[answer] into the headline. Add reveal_title values, e.g. sunk-cost-two-trips: 'Spent is spent.'; one-percent-doubling-reveal: 'Doubling sneaks up on you.'",
+   "from": "Lina, 31, product designer for mobile games and learning apps. Looked at 14 screenshots: wso-triad-venn a/b, deliberate-practice-order a/b, one-percent-doubling-reveal a/b, map-territory-swipe-a, responsibility-meaning-happy-vs-meaningful-b, implementation-intentions-estimate-b, stress-mindset-spectrum-a, quitting-wisely-swipe-a, sunk-cost-two-trips-a, zeigarnik-effect-bedtime-list-a, flow-challenge-skill-venn-a, plus view-feed-dark and view-map-dark. Read all 24 card JSONs."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "My map shows 'You've lit up 88 of 88 ideas' as a dense hairball. Node labels overlap ('Will · Skill · Oppo...' runs into 'Reframing' and 'The 2/3 Rule'), and the top-right diamond counter still says 1. Finishing everything gives no reward and leaves no next goal. The 'Challenge' label in the flow Venn is also clipped by the circle stroke.",
+   "fix": "On the map, show labels only for the 5 most recently played nodes plus the tapped node, with a 6px collision offset. At 100% replace the headline with 'All 88 lit. Next: replay your 3 oldest' and add three buttons for those cards. Define what the diamond counts (streak days) and add a tooltip on tap. In the Venn renderer, place axis labels at least 16px inside the circle or outside the stroke.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. Looked at 14 screenshots: wso-triad-venn a/b, deliberate-practice-order a/b, one-percent-doubling-reveal a/b, map-territory-swipe-a, responsibility-meaning-happy-vs-meaningful-b, implementation-intentions-estimate-b, stress-mindset-spectrum-a, quitting-wisely-swipe-a, sunk-cost-two-trips-a, zeigarnik-effect-bedtime-list-a, flow-challenge-skill-venn-a, plus view-feed-dark and view-map-dark. Read all 24 card JSONs."
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 11,
+   "skipped": [
+    "All non-wso-triad-venn issues: their card_ids are not in action.json",
+    "needs_review.json cards: none are in action.json",
+    "Elena's alternate W/O second-item wording merged with Radu/Okafor versions (one consistent item set per axis)"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 14,
+   "skipped": [
+    "Issues for cards not in perception.json (habit-loop-choice, risky-play-*, sunk-cost-*, one-percent-*, trust-ledger-*, wso-triad-venn, psychological-safety-choice, deliberate-practice-order, responsibility-meaning-*, flow-*, quitting-wisely-swipe, gratitude-*, zeigarnik-*, self-reflection-loop-example, mistake-alchemy-reveal, never-miss-twice-reveal-reframing)",
+    "map-territory-swipe: Radu's pull-request item, the twisted-ankle item and the stubbed-toe item were not used, because they overlap with the coffee fix already applied (replaced by Maya's 'burn in your legs' item)",
+    "map-territory-swipe: Elena's 'friend's face' item was not used for the same reason; her prompt, label and rain-why changes were applied",
+    "stress-mindset-choice-fuel: the old deadline/snag game was fully replaced, not patched (it was machine-generated: its source year was wrong (2019 instead of 2015), it used 'growth' slogans, it was office-only and had no caveats)"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 1,
+   "skipped": [
+    "All 41 persona/fact-check issues: none of their card_ids (habit-loop-choice, map-territory-swipe, wso-triad-venn, etc.) exist in thinking.json",
+    "needs_review.json cards (mistake-alchemy-reveal, stress-mindset-choice-fuel, never-miss-twice-reveal-reframing, creative-truthful-courage-choice, self-reflection-loop-example): none are in thinking.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 1,
+   "skipped": [
+    "All persona/fact-check issues: none of their card_ids are in systems.json",
+    "needs_review.json: none of the listed ids are in systems.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 18,
+   "skipped": [
+    "one-percent-doubling-reveal (Maya): kept coins instead of £/pence because house lessons say to use currency-neutral amounts; hook still reworded to the fast money-style pick, and the existing coin maths (A ahead 13 days) is correct",
+    "habit-loop-choice (Maya): used 'your phone'/'Delete the app' instead of naming TikTok, per the lesson to avoid platform names that date a card",
+    "never-miss-twice-reveal-reframing: rebuilt to house standard (needs_review) with evidence philosophy and the exact fact-check try_today; did not add an `answer` because the prompt is not factual, so the reveal carries the punchline instead",
+    "All issues for cards not in habits.json (map-territory-swipe, sunk-cost-three-lives, wso-triad-venn, etc.) were ignored as out of scope; the needs_review ids mistake-alchemy-reveal, stress-mindset-choice-fuel, creative-truthful-courage-choice and self-reflection-loop-example are not in this file"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 2,
+   "skipped": [
+    "All issues for cards not in emotions.json (habit-loop-choice, risky-play-*, map-territory-swipe, sunk-cost-three-lives, one-percent-doubling-reveal, trust-ledger-*, wso-triad-venn, psychological-safety-choice, deliberate-practice-order, responsibility-meaning-happy-vs-meaningful, quitting-wisely-swipe, flow-challenge-skill-venn, stress-mindset-spectrum, zeigarnik-effect-bedtime-list, self-reflection-loop-example, mistake-alchemy-reveal, never-miss-twice-reveal-reframing)",
+    "No needs_review.json cards are in emotions.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 14,
+   "skipped": [
+    "responsibility-meaning-happy-vs-meaningful: 'You picked X' echo and reveal_title need app.js support (not in my file); the paired choices make the tap meaningful instead",
+    "flow-challenge-skill-venn: did not add 'let challenge sit just above skill' (Elena); used Dr. Okafor's matched-skill wording, which is closer to Csikszentmihalyi",
+    "All other card_ids are not in meaning.json; no needs_review cards are in meaning.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 18,
+   "skipped": [
+    "deliberate-practice-order: did not add the 4th item 'Play the full song once to warm up'. It could sensibly go before or after 'pick the bit', so careful players would be marked wrong. Its point now sits in the explain text instead.",
+    "deliberate-practice-order: the partial-score header ('1 of 3 right...') and the rule that keeps Next from showing a same-concept card both live in app.js, outside this file. related already points to skill_gap/flow/deep_work.",
+    "deliberate-practice-order: also merged Lina's explain rewrite, verdict first, with Elena's 'keeps your skill and your joy' wording.",
+    "quitting-wisely-swipe item 4: the suggested 'why' was over the 100-character limit, so it is shortened to 'Your feeling is real and worth hearing. One bad night just isn't enough to decide on. Rest first.'",
+    "risky-play-risk-hazard-choice: the suggested hook was 75 chars (limit 70), so it is now 'Mates jumping off a pier. Brave or daft? There's a third option.' The grandchild step became a 7-year-old cousin so it fits teens and adults. The workplace angle moved to try_team.",
+    "mistake-alchemy-reveal (needs_review): fully rebuilt as a reveal on Edmondson's intelligent vs basic failure, Right Kind of Wrong (2023), evidence philosophy, with answer set. The old Dweck framing and malformed choices objects are gone.",
+    "self-reflection-loop-example (needs_review): fully rebuilt with a non-office scenario first (a match), then school/work. Source is Resonant Leadership (2005), evidence philosophy, and try_team was added.",
+    "never-miss-twice-reveal-reframing and all other issue card_ids are not in growth.json, so they were ignored"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 7,
+   "skipped": [
+    "psychological-safety-choice: fix requires app.js summary rendering change, outside connection.json",
+    "needs_review cards: none are in connection.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 3,
+   "skipped": [
+    "zeigarnik-effect-bedtime-list (Lina): 'So close!' near-miss logic for estimate results lives in app.js, outside this file",
+    "zeigarnik-effect-bedtime-list evidence: schema has no 'preliminary' tier, so it was set to 'contested' (the lowest empirical tier), and the insight says the result is unproven",
+    "All other issue card_ids are not in attention.json",
+    "No needs_review.json cards are in attention.json",
+    "No insight was over 200 chars"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 3,
+   "skipped": [
+    "sunk-cost-three-lives: summary rendered as list with scenario-word prefixes (app.js change, outside this file)",
+    "All other issue card_ids are not in decisions.json",
+    "No needs_review.json cards are in decisions.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 2,
+   "skipped": [
+    "All 41 persona/fact-check issues skipped: none of their card_ids (habit-loop-choice, risky-play-*, map-territory-swipe, sunk-cost-three-lives, one-percent-doubling-reveal, trust-ledger-*, wso-triad-venn, psychological-safety-choice, deliberate-practice-order, responsibility-meaning-happy-vs-meaningful, flow-challenge-skill-venn, quitting-wisely-swipe, gratitude-practice-letter-reveal, stress-mindset-spectrum, zeigarnik-effect-bedtime-list, self-reflection-loop-example, mistake-alchemy-reveal, never-miss-twice-reveal-reframing) are in wisdom.json",
+    "needs_review ids mistake-alchemy-reveal, stress-mindset-choice-fuel, never-miss-twice-reveal-reframing, self-reflection-loop-example are not in wisdom.json"
+   ],
+   "validator_errors": 0
+  }
+ ]
+}

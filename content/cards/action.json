@@ -31,11 +31,23 @@
      "axis": "W"
     },
     {
+     "q": "I'd still do it if nobody ever knew.",
+     "axis": "W"
+    },
+    {
      "q": "I could do a rough version today.",
      "axis": "S"
     },
     {
-     "q": "Nothing outside me is stopping me.",
+     "q": "I know the first three steps.",
+     "axis": "S"
+    },
+    {
+     "q": "Outside things (time, money, access, permission) mostly allow this right now.",
+     "axis": "O"
+    },
+    {
+     "q": "I have the time and tools to start this week.",
      "axis": "O"
     }
    ],
@@ -43,11 +55,11 @@
    "results": {
     "W": {
      "name": "Fired Up, Building Up",
-     "text": "Today the want is strong, but skill and access score low. Don't wait for both: build the cheaper one first, usually a small skill."
+     "text": "Today the want is strong, but skill and access score low. Don't wait for both: build the easier one first, usually a small skill."
     },
     "S": {
      "name": "Skilled, Looking for a Why",
-     "text": "Today your answers show skill, but little want and no open door. Ask whether this goal is truly yours, or borrowed from someone else."
+     "text": "Today your answers show skill, but less want and a narrower door. Worth asking what would make this matter to you."
     },
     "O": {
      "name": "The Open Door",
@@ -71,24 +83,24 @@
     },
     "": {
      "name": "The Starting Line",
-     "text": "No pillar scored strong today, which is common, especially after a hard stretch. It's a starting point, not a verdict. Raise the easiest one this week (often a tiny skill rep) and play again in 7 days."
+     "text": "No pillar scored strong today, which is common, especially after a hard stretch. It's a starting point, not a verdict. Improve the easiest one a little this week (often a tiny skill rep) and play again in 7 days."
     },
     "mid": {
      "name": "The Half-Lit Path",
-     "text": "Today all three pillars sit in the middle. Pick the cheapest one to raise by a notch this week (often a 10-minute skill rep) and play again in 7 days."
+     "text": "All three are half-lit today. Pick the easiest to bump: watch one 5-minute how-to (Skill), or ask someone for access (Opportunity). Then come back."
     }
    }
   },
-  "insight": "Action needs a want, an ability and an open door; Blumberg and Pringle argued in 1982 that research kept forgetting the third. Most stuck goals miss one, and pushing harder on the strong ones may not fix the weak one.",
+  "insight": "Action needs a want, an ability and an open door; Blumberg and Pringle (1982) said research kept forgetting the door. Pushing harder on strong pillars rarely fixes the weak one.",
   "model": "Stuck? Don't push everywhere. Find the missing pillar: Will, Skill or Opportunity.",
-  "try_today": "Write your goal at the top of a page, then one line each for W, S and O. Circle the weakest and take one step on it.",
+  "try_today": "In your notes app, type your goal and rate W, S, O from 1 to 5. Do one 5-minute move on the lowest one tonight.",
   "source": {
    "thinkers": [
     "Melvin Blumberg & Charles Pringle",
     "Deci & Ryan",
     "Albert Bandura"
    ],
-   "work": "Blumberg & Pringle, The missing opportunity in organizational research (Academy of Management Review, 1982); adapted as the original QUMNI WSO framework, drawing on Self-Determination Theory and self-efficacy research"
+   "work": "Blumberg & Pringle, The missing opportunity in organizational research (Academy of Management Review, 1982). Qlip's short version is a simplified teaching tool, not a validated scale."
   },
   "evidence": "philosophy",
   "level": 1,
@@ -186,7 +198,7 @@
     }
    ]
   },
-  "insight": "A QUMNI rule of thumb, not a research finding: two pillars are often enough to take a first step, and help on the third pays off most. People tend to push the pillar that's already strong because it feels comfortable.",
+  "insight": "A QUMNI rule of thumb, not a research finding: two pillars are often enough for a first step, and help on the third pays off most. People tend to push the pillar that's already strong.",
   "model": "Push the one weak pillar, not all three. Small help in the right spot beats big help elsewhere.",
   "try_today": "Ask someone stuck: 'Is it wanting, knowing how, or access?' Then offer help only on the answer they give.",
   "source": {
@@ -243,7 +255,7 @@
     }
    ]
   },
-  "insight": "A QUMNI rule of thumb, not a research finding: with two pillars lit, a first step is often possible and the third can grow on the way. Will is the exception: without a reason that's yours, the others rarely carry you.",
+  "insight": "A QUMNI rule of thumb, not a research finding: with two pillars lit, a first step is often possible. Will is the exception: without a reason that's yours, the others rarely carry you.",
   "model": "Two pillars often make motion possible; if the missing one is Will, start there.",
   "try_today": "List three goals. Count the lit pillars for each. Start the one with the most lit today.",
   "source": {

@@ -47,9 +47,9 @@
     "hook": "Your bathroom scale tells the truth, right? Swipe and see.",
     "title": "Map or Territory?",
     "game": {
-      "prompt": "Is this the thing itself, or a description of it?",
+      "prompt": "Closer to the thing itself, or a description of it?",
       "left": "Map",
-      "right": "Territory",
+      "right": "Closer to the thing",
       "items": [
         {
           "text": "The number on your bathroom scale",
@@ -59,7 +59,7 @@
         {
           "text": "The rain falling on you right now",
           "side": "right",
-          "why": "As close to the thing itself as you get. You can't argue with it, only respond."
+          "why": "As close as you get: you can't argue with it, only respond. Even so, you feel your senses' report."
         },
         {
           "text": "A friend's 5-star restaurant review",
@@ -72,14 +72,19 @@
           "why": "A summary of some past moments, not a fact about every future one."
         },
         {
-          "text": "The taste of the coffee in your mouth",
+          "text": "The burn in your legs after running for the bus",
           "side": "right",
-          "why": "Closer to the thing than any menu. Korzybski: even taste is your nerves' summary."
+          "why": "Closer to the thing itself, happening in you. Any number or label about it is the map."
         },
         {
-          "text": "Your exam grade or step count",
+          "text": "Your exam grade",
           "side": "left",
           "why": "A useful number that leaves out most of what you actually did."
+        },
+        {
+          "text": "The like count on your post",
+          "side": "left",
+          "why": "A tiny slice of who saw it and tapped. It leaves out everyone who smiled and scrolled on."
         }
       ]
     },
@@ -333,7 +338,7 @@
           "q": "Before an exam or big moment, my racing heart means…",
           "options": [
             {
-              "label": "Something's wrong",
+              "label": "A sign I'm not coping",
               "value": -2
             },
             {
@@ -350,7 +355,7 @@
           "q": "When a stressful task looms (a deadline, an exam, a big job), I mostly see it as…",
           "options": [
             {
-              "label": "A threat to get through",
+              "label": "Mostly a threat",
               "value": -2
             },
             {
@@ -358,7 +363,7 @@
               "value": 0
             },
             {
-              "label": "A chance to get stronger",
+              "label": "Mostly a challenge I can meet",
               "value": 2
             }
           ]
@@ -381,18 +386,18 @@
           ]
         },
         {
-          "q": "Feeling stressed is a sign that…",
+          "q": "When I notice stress building, I usually…",
           "options": [
             {
-              "label": "Something is going wrong",
+              "label": "Try to make it go away",
               "value": -2
             },
             {
-              "label": "Hard to say",
+              "label": "Depends",
               "value": 0
             },
             {
-              "label": "Something matters to me",
+              "label": "Use the energy on the task",
               "value": 2
             }
           ]
@@ -416,7 +421,7 @@
         }
       ]
     },
-    "insight": "In Alia Crum's studies, people shown stress as enhancing reported somewhat better performance and fewer stress symptoms. Jeremy Jamieson found reading a racing heart as 'gearing up' helped too. Effects are modest; heavy or constant stress needs real support.",
+    "insight": "In Alia Crum's studies, seeing stress as enhancing went with somewhat better work and fewer symptoms. Reading a racing heart as 'gearing up' helped too. Effects are modest; heavy stress needs support.",
     "model": "Some stress is your body gearing up, not breaking. Reframe the everyday kind; get support for the heavy kind.",
     "try_today": "Before your next nervous moment, take one slow breath and tell yourself: 'This is energy for something I care about.'",
     "source": {
@@ -456,7 +461,7 @@
       "reveal": "Reflection matters; it is where the question starts. But James and Peirce held that an idea's meaning shows in its practical consequences, so the test has to leave the armchair too. Beliefs like this can quietly keep themselves alive, because they steer us away from the very moments that could test them. A small, low-stakes test is kinder and more informative than reflection alone.",
       "answer": 1
     },
-    "insight": "Pragmatism asks: what happens when you act on this idea? A philosophical lens, not a lab finding, and facts still matter. James's view of truth was hotly disputed (Russell among others); take it as a method, not the last word.",
+    "insight": "Pragmatism asks: what happens when you act on this idea? A lens, not a lab finding, and facts still matter. James's view of truth was hotly disputed (Russell among others); use it as a method.",
     "model": "Judge a belief by its consequences: run the experiment, then decide.",
     "try_today": "Pick one limiting belief. Try one small, low-stakes action that only makes sense if it's false. Note what happened, no grading.",
     "source": {
@@ -883,55 +888,65 @@
     "concept": "stress_mindset",
     "domain": "perception",
     "type": "choice",
-    "hook": "A big deadline looms. Do you brace for impact or gear up?",
-    "title": "Stress: A Choice, Not a Curse",
+    "hook": "Butterflies before you go on. Calm down, or call it excitement?",
+    "title": "Call It Excitement",
     "game": {
       "steps": [
         {
-          "scenario": "You're facing a tough project with a short deadline. How do you approach it?",
+          "scenario": "Five minutes before you sing at a friend's party (or give a toast, or take a penalty), your stomach is flipping. What do you tell yourself?",
           "options": [
             {
-              "text": "Focus on avoiding mistakes and staying calm, hoping for the best.",
-              "feedback": "It's natural to want things to go smoothly, but this mindset can make stress feel heavier. You might miss opportunities to push yourself."
+              "text": "'Calm down. Just calm down.'",
+              "feedback": "Very natural. But buzzing to calm is a big jump, and it often doesn't stick. There's a shorter one."
             },
             {
-              "text": "Embrace the challenge! See it as a chance to learn and grow, even if it gets intense.",
+              "text": "'I'm excited.'",
               "best": true,
-              "feedback": "That's the power of a stress mindset! Viewing stress as fuel can actually help you perform better. You're more likely to be engaged and creative."
+              "feedback": "Yes. Nerves and excitement feel alike in the body. Calling it excitement is a smaller jump, and in small studies it helped people perform."
+            },
+            {
+              "text": "'Don't think about it.'",
+              "feedback": "Understandable. Pushing a feeling away tends to keep it buzzing underneath."
             }
           ]
         },
         {
-          "scenario": "Your project hits a snag. How do you react?",
+          "scenario": "A deadline is tomorrow (homework, a form, a work report) and you've hit a snag. Your chest is tight. What's the useful next move?",
           "options": [
             {
-              "text": "Panic sets in, and you feel overwhelmed. It's going to fail.",
-              "feedback": "This mindset can create a self-fulfilling prophecy. Remember, setbacks are part of the process."
+              "text": "Name it ('this is pressure, it means I care'), then pick one step you can do in 20 minutes.",
+              "best": true,
+              "feedback": "Yes. The feeling stays, but now it's pointed at a task, not at you."
             },
             {
-              "text": "You see this as a problem to solve. You brainstorm solutions and adjust your approach.",
-              "best": true,
-              "feedback": "That's resilience! Viewing challenges as opportunities for growth helps you stay focused and find creative solutions."
+              "text": "Tell yourself you're useless under pressure.",
+              "feedback": "A harsh story on top of a hard moment. It's one reading, not a fact, and it drains energy you need."
+            },
+            {
+              "text": "Push through all night with no break.",
+              "feedback": "Sometimes needed, but even fuel needs rest. Running on empty tends to make snags bigger."
             }
           ]
         }
       ]
     },
-    "insight": "Changing how you view stress can change its effect on you. A 'stress mindset' sees it as fuel, not a foe, leading to greater engagement and resilience.",
-    "model": "See stress as growth fuel! Learn from setbacks and unleash your inner drive.",
-    "try_today": "Next time you feel stressed, pause and ask yourself: What can I learn from this? How can I use this energy to my advantage?",
+    "insight": "Nervous and excited feel alike in the body. In Alison Wood Brooks's small studies, saying 'I'm excited' helped singing and speaking more than 'calm down'. Effects were modest.",
+    "model": "Don't fight the buzz. Rename it: 'I'm excited' points the energy at the task.",
+    "try_today": "Before your next nervous moment, say 'I'm excited' out loud, then name the first small thing you'll do.",
     "source": {
       "thinkers": [
-        "Alia Crum",
-        "Kelly McGonigal"
+        "Alison Wood Brooks"
       ],
-      "work": "The Upside of Stress (2019)"
+      "work": "Brooks, Get excited: Reappraising pre-performance anxiety as excitement, Journal of Experimental Psychology: General (2014)"
     },
     "evidence": "moderate",
     "level": 1,
     "related": [
+      "reframing",
+      "emotion_naming",
       "growth_mindset"
     ],
-    "try_team": "Team challenges: 'What's the most stressful part of this project? How can we turn that into a growth opportunity?'"
+    "try_team": "Before a match, test or launch, each person names the part they're nervous about, adds 'and I'm excited about it', then you agree step one together.",
+    "sensitive": true
   }
 ]

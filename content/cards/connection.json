@@ -113,7 +113,7 @@
     }
    ]
   },
-  "insight": "Duhigg describes three kinds of talk: practical, emotional and social. Here we fold emotional and social talks together as \"hear me first\". Many sentences sound practical but carry a feeling or a question of belonging underneath. Clues: 'again', 'everyone', 'except me', big changes. Not sure? Ask.",
+  "insight": "Duhigg names three kinds of talk: practical, emotional, social. Here the last two are \"hear me first\". Practical-sounding lines often hide a feeling. Clues: 'again', 'everyone', 'except me'.",
   "model": "Before you solve it, check the need: 'Do you want ideas, or just to vent?'",
   "try_today": "Next time someone shares a problem, ask 'Do you want ideas, or do you just need to vent?' before you answer.",
   "try_team": "Each person writes one thing they said this week. Others guess: did they want a fix, a listener, or to belong? The writer reveals.",
@@ -782,17 +782,17 @@
      "why": "Tiny, but people learn that your words and the clock don't match."
     },
     {
-     "text": "Telling the class whose idea won your group the project",
+     "text": "Telling the class the winning idea was your groupmate's, not yours",
      "side": "right",
      "why": "Naming who did the work is a deposit for them, and makes you safe to work with."
     },
     {
-     "text": "Picking up your grandkid exactly when you said you would",
+     "text": "Turning up to your mate's match exactly when you said",
      "side": "right",
      "why": "Boring reliability is the main deposit. It shows your word means something."
     },
     {
-     "text": "Presenting a teammate's analysis to the boss as 'what I found'",
+     "text": "Telling the teacher the group idea was yours when it was your mate's",
      "side": "left",
      "why": "Taking credit is a big withdrawal, and people remember it for a long time."
     },
@@ -809,7 +809,7 @@
    ]
   },
   "insight": "Trust grows from small, plain things: words that match deeds, and credit given where it's due. Covey's 'emotional bank account' is a metaphor, not a measurement, but a handy one.",
-  "model": "Every kept word is a deposit. Every overpromise is a loan you may not repay.",
+  "model": "Every kept word is a deposit. Every overpromise is a withdrawal you made before you had the funds.",
   "try_today": "Check your last three 'I'll…' messages. Keep one you forgot, or send an honest update about it.",
   "try_team": "At your next meeting or family meal, each person thanks someone else by name for one specific thing they did this week.",
   "source": {
@@ -831,7 +831,7 @@
   "concept": "trust_ledger",
   "domain": "connection",
   "type": "reveal",
-  "hook": "You've kept 20 promises. How much can one broken one cost?",
+  "hook": "Why does one bad moment feel louder than twenty good ones?",
   "title": "Trust Builds Slow, Breaks Fast",
   "game": {
    "prompt": "People read 45 bits of news about a local power plant, good and bad, and rated how each would change their trust in it. Which moved trust more?",
@@ -843,7 +843,7 @@
    "answer": 2,
    "reveal": "The bad news, by a wide margin. Paul Slovic (1993) found negative events cut trust far more than matching positive events raised it. His study was about a power plant, not friends, but it fits a wider pattern: bad tends to weigh more than good."
   },
-  "insight": "Trust climbs in small steps and can fall in one big one. That's why kept promises matter: they're the slow savings that cushion the day you slip.",
+  "insight": "Trust climbs in small steps and can fall in one big one. Kept promises are the savings that cushion a slip. One slip rarely erases a track record; owning it quickly wins much of it back.",
   "model": "Trust is slow to build and quick to lose. Promise small, keep it, repeat.",
   "try_today": "Make one promise today small enough to keep for sure, then keep it on time.",
   "try_team": "Each person lists one promise they made the group this month: kept, late or dropped. No blame; renegotiate the dropped ones out loud.",

@@ -266,12 +266,12 @@
  },
  {
   "session": 6,
-  "at": "2026-10-26T12:21:04+00:00",
+  "at": "2026-10-26T12:25:11+00:00",
   "automated": 48.77,
-  "panel": null,
-  "composite": 48.77,
-  "delta": -34.76,
-  "passed": false,
+  "panel": 35.0,
+  "composite": 83.77,
+  "delta": 0.24,
+  "passed": true,
   "breakdown": {
    "schema": 5,
    "playthrough": 8.0,
@@ -305,8 +305,61 @@
    "hook_distinct_rate": 0.994,
    "brief_reveal_rate": 0.838
   },
-  "panel_detail": {},
+  "panel_detail": {
+   "persona_avg_10": 7.0,
+   "by_dim": {
+    "hook": 6.83,
+    "clarity": 6.83,
+    "usefulness": 7.33,
+    "safety": 8.17,
+    "fun": 5.83
+   }
+  },
   "note": "graph growth to 88 concepts/154 cards (14 by Claude agents + 2 by the Ollama daily loop); team gate removed; quotes visible; unanchored slider; honest swipe praise; verdict-first reveals; no repeated stories"
+ },
+ {
+  "session": 7,
+  "at": "2026-10-26T12:31:50+00:00",
+  "automated": 48.93,
+  "panel": null,
+  "composite": 48.93,
+  "delta": -34.84,
+  "passed": false,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 8.0,
+   "console": 4,
+   "overflow": 3,
+   "a11y": 6.0,
+   "readability": 5,
+   "actionable": 2.98,
+   "sourced": 1.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.72,
+   "domain_balance": 1.99,
+   "depth": 2.25,
+   "hook_distinct": 1.99,
+   "brief_reveal": 1.0
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 154,
+   "played_ok": 154,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 0,
+   "flesch_avg": 76.0,
+   "try_today_verb_rate": 0.994,
+   "sensitive_cards": 43,
+   "first_card_ms": 335,
+   "edges": 328,
+   "concept_depth": 0.75,
+   "hook_distinct_rate": 0.994,
+   "brief_reveal_rate": 1.0
+  },
+  "panel_detail": {},
+  "note": "venn dot always agrees with result, short honest end screens, calm Next after sensitive cards, stricter duplicate filter, map labels avoid nodes, 94 content fixes incl. review of Ollama cards"
  },
  {
   "session": 1001,

@@ -53,11 +53,11 @@
   // ---------- recommender (graph walk + novelty + balance) ----------
   const EDGE_WORD = { BUILDS_ON: "builds on", AMPLIFIES: "amplifies", CONTRASTS: "pulls against", REMEDIES: "is a fix for", PART_OF: "is part of", RELATED: "connects to" };
   const reasons = {};
-  const storyWords = (c) => new Set(`${c.hook} ${c.game.prompt || c.game.question || c.game.steps?.[0]?.scenario || ""}`.toLowerCase().match(/[a-z]{5,}/g) || []);
+  const storyWords = (c) => new Set(`${c.hook} ${c.title} ${c.game.prompt || c.game.question || c.game.steps?.[0]?.scenario || ""}`.toLowerCase().match(/[a-z]{5,}/g) || []);
   function sameStory(a, b) {
     const A = storyWords(a), B = storyWords(b);
     let n = 0; for (const w of A) if (B.has(w)) n++;
-    return n / Math.max(1, Math.min(A.size, B.size)) > 0.34;
+    return n / Math.max(1, Math.min(A.size, B.size)) > 0.25;
   }
   function recommend(queue, n) {
     const inQueue = new Set(queue);
@@ -205,7 +205,7 @@
     const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).filter((id) => !sameStory(card, CARD[id])).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || []).find((id) => !sameStory(card, CARD[id]))]).filter(([cid, t]) => t && CONCEPT[cid]);
     if (targets.length) {
       const [cid, t] = targets[0];
-      const hook = CARD[t].hook.length > 52 ? CARD[t].hook.slice(0, 50).replace(/\s+\S*$/, "") + "…" : CARD[t].hook;
+      const hook = card.sensitive || CARD[t].sensitive ? CONCEPT[cid].line : CARD[t].hook.length > 52 ? CARD[t].hook.slice(0, 50).replace(/\s+\S*$/, "") + "…" : CARD[t].hook;
       wrap.append(h("button", { class: "btn next-up", onclick: () => jumpTo(t) }, h("small", {}, `Next · ${CONCEPT[cid].name}`), `${hook}\u00a0→`));
     }
     const ev = { strong: "Strong evidence", moderate: "Moderate evidence", contested: "Contested — read critically", philosophy: "Philosophical lens" }[card.evidence];
@@ -301,7 +301,7 @@
     const anchors = { "": [36, 262] };
     for (const [k, a] of Object.entries(acc)) anchors[k] = [a[0] / a[2], a[1] / a[2]];
     const g = keys.reduce((p, k) => [p[0] + centers[k][0] / keys.length, p[1] + centers[k][1] / keys.length], [0, 0]);
-    return { r, centers, anchors, g };
+    return { r, centers, anchors, g, regionAt: inside };
   }
 
   const GAMES = {
@@ -326,6 +326,7 @@
         const sc = scores(), reg = regionOf(sc);
         let [x, y] = geo.anchors[reg] || geo.anchors[""];
         keys.forEach((k) => { if (sc[k] == null) return; const [cx, cy] = geo.centers[k]; x += (cx - geo.g[0]) * (sc[k] - 0.5) * 0.18; y += (cy - geo.g[1]) * (sc[k] - 0.5) * 0.18; });
+        if (geo.regionAt(x, y) !== reg) [x, y] = geo.anchors[reg] || geo.anchors[""];
         dot.setAttribute("cx", x.toFixed(1)); dot.setAttribute("cy", y.toFixed(1)); dot.setAttribute("opacity", 1);
         const r = g.results[reg]; if (r) live.textContent = `Right now: ${r.name}`;
       };
@@ -338,7 +339,7 @@
         const r = undecided
           ? g.results.mid || { name: "Right on the fence", text: "Every answer landed in the middle, so the map can't find your gap yet. Pick one specific goal (\"run 5 km\", \"learn 3 guitar chords\") and play again with that in mind." }
           : g.results[reg] || { name: "", text: "" };
-        if (undecided) { dot.setAttribute("cx", geo.g[0].toFixed(1)); dot.setAttribute("cy", geo.g[1].toFixed(1)); }
+        if (undecided) { const [ax, ay] = geo.anchors[""]; dot.setAttribute("cx", ax); dot.setAttribute("cy", ay); }
         const bars = keys.map((k) => `${g.axes.find((a) => a.key === k).label} ${Math.round((sc[k] ?? 0) * 10)}/10`).join(" · ");
         live.textContent = bars;
         done({ name: r.name, text: r.text, profile: !undecided });
@@ -449,9 +450,8 @@
         const fb = h("p", { class: "feedback", hidden: true });
         const next = h("button", { class: "btn next-q", hidden: true, onclick: () => { i++; if (i < g.steps.length) step(); else { next.remove(); const total = g.steps.length;
             done(total < 2 ? { name: "" }
-              : best === total ? { name: `${total} for ${total}. You'd coach this.` }
-              : { name: best === 0 ? "Good guesses. Here's the move that works best:" : `${best} sharp call${best > 1 ? "s" : ""}. Here's the other move:`,
-                  text: bestMoves.join(" · ") });
+              : best === total ? { name: `${total}/${total}. You'd coach this.` }
+              : { name: `${best}/${total}. The trick is below.` });
           } } },
           i + 1 < g.steps.length ? "Next" : "See the model");
         const opts = h("div", { class: "opts" }, s.options.map((o) => h("button", { class: "opt", onclick: (e) => {
@@ -530,7 +530,7 @@
       const opts = h("div", { class: "opts" }, g.choices.map((c, k) => h("button", { class: "opt", onclick: (e) => {
         opts.querySelectorAll("button").forEach((b, j) => { b.disabled = true; if (has && j === g.answer) b.classList.add("best"); });
         e.currentTarget.classList.add("picked");
-        done({ name: !has ? "" : k === g.answer ? "Spot on." : `Not quite. The answer: ${g.choices[g.answer]}`, text: g.reveal });
+        done({ name: !has ? "" : k === g.answer ? "Spot on." : "Not quite. The green one.", text: g.reveal });
       } }, c)));
       return h("div", { style: "display:flex;flex-direction:column;gap:12px" }, h("p", { class: "q-text" }, g.prompt), opts);
     },
@@ -617,7 +617,7 @@
     }
     sim.topPlayed = new Set(sim.hit.filter((n) => n.p).sort((a, b) => b.p - a.p).slice(0, 8).map((n) => n.id));
     // Labels last, skipping any that would collide with one already drawn.
-    const boxes = [];
+    const boxes = sim.hit.map((n) => [n.x - n.r * 0.6, n.y - n.r * 0.6, n.x + n.r * 0.6, n.y + n.r * 0.6]);
     ctx.textBaseline = "middle";
     for (const n of sim.hit.slice().sort((a, b) => b.p - a.p)) {
       if (n.p ? !sim.topPlayed.has(n.id) : !sim.labelled.has(n.id)) continue;
@@ -625,7 +625,7 @@
       const text = n.label.length > 20 ? n.label.slice(0, 19) + "…" : n.label, w = ctx.measureText(text).width;
       let lx = n.x + n.r * 0.6 + 4; if (lx + w > W - 4) lx = n.x - n.r * 0.6 - 4 - w;
       const box = [lx - 2, n.y - 8, lx + w + 2, n.y + 8];
-      if (boxes.some((b) => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) continue;
+      if (boxes.some((b, k) => (k >= sim.hit.length || sim.hit[k].id !== n.id) && box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) continue;
       boxes.push(box);
       ctx.lineWidth = 4; ctx.lineJoin = "round"; ctx.strokeStyle = css.getPropertyValue("--surface");
       ctx.strokeText(text, lx, n.y);
@@ -637,7 +637,8 @@
     for (const [cid, n] of Object.entries(plays)) domPlays[CONCEPT[cid].domain] = (domPlays[CONCEPT[cid].domain] || 0) + n;
     const top = Object.entries(domPlays).sort((a, b) => b[1] - a[1])[0];
     $("#map-summary").textContent = lit
-      ? `You've lit up ${lit} of ${DB.concepts.length} ideas.${top ? ` Most explored: ${DOMAIN[top[0]].name}.` : ""}`
+      ? lit >= DB.concepts.length ? `You've explored all ${lit} ideas. New ones grow into the graph every day.`
+      : `You've lit up ${lit} of ${DB.concepts.length} ideas.${top ? ` Most explored: ${DOMAIN[top[0]].name}.` : ""}`
       : `${DB.concepts.length} ideas are waiting. Play any game to light up your first one.`;
     $("#map-legend").replaceChildren(...DB.domains.map((d) => h("span", {}, h("i", { style: `background:${d.color}` }), d.name)));
     const prof = Object.entries(S.profile).sort((a, b) => b[1].at - a[1].at);

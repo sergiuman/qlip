@@ -451,7 +451,7 @@
       "explain": "Svenson (1981) found about 93% of a small US student sample rated themselves more skilful than the median driver. At most 50% can be. The same bias shows up everywhere: most people rate themselves above average at being kind, funny and smart.",
       "anchor": null
     },
-    "insight": "Most of us rate ourselves above average, which can't all be true. Socrates thought wisdom starts with knowing what you don't know. It cuts both ways: if you usually rate yourself low, that's a guess too, and worth checking against evidence.",
+    "insight": "Most of us rate ourselves above average, which can't all be true. Socrates said wisdom starts with knowing what you don't know. Rating yourself low is a guess too, so check it.",
     "model": "Treat your self-ratings, high or low, as guesses. 'I might be wrong' opens the door to learning.",
     "try_today": "Pick one opinion you hold strongly. Write the best reason someone could disagree with it, in their words, not yours.",
     "source": {
@@ -860,47 +860,81 @@
     "concept": "truthful_courage",
     "domain": "wisdom",
     "type": "choice",
-    "hook": "You've been asked to give a presentation. Do you…",
-    "title": "Speak Your Truth, Create Impact",
+    "hook": "Nodding along keeps the peace. Does it keep the friendship?",
+    "title": "Honest and Kind at Once",
     "game": {
       "steps": [
         {
-          "scenario": "You've been asked to give a presentation at work. You know your ideas are valuable but sharing them feels risky. Do you…",
+          "scenario": "Your friend sends you a song they wrote and asks, 'Be honest, should I post it?' The verses are great. The chorus drags. You…",
           "options": [
             {
-              "text": "Stick to the safe, pre-approved slides. It's easier and less likely to ruffle feathers.",
-              "feedback": "Playing it safe might get you through this time, but it stifles your creativity and prevents real impact."
+              "text": "'It's amazing, post it now!'",
+              "feedback": "Not the best move. Kind in the moment, but they asked for honesty and won't get the chance to make it better."
             },
             {
-              "text": "Inject your unique perspective into the presentation, even if it means stepping outside the script. Start with a personal story or a surprising statistic.",
+              "text": "Name the part you love, then say the chorus could be tighter, and ask if they want ideas.",
               "best": true,
-              "feedback": "Creative truthful courage! Sharing your authentic self builds trust and makes your ideas more memorable."
+              "feedback": "Best move. True and warm. They hear what works, what to fix, and that you're on their side."
             },
             {
-              "text": "Practice the presentation until you know it word-for-word, then deliver it flawlessly but without any personal touch.",
-              "feedback": "While preparation is key, delivering a memorized speech lacks connection. Your truth can make the difference."
+              "text": "'Honestly? The chorus is boring.'",
+              "feedback": "Not the best move. It's true, but with nothing kind next to it, it's hard to hear and easy to resent."
+            }
+          ]
+        },
+        {
+          "scenario": "Your family is planning the same holiday as every year. You'd love to try something different, but nobody's asked you. You…",
+          "options": [
+            {
+              "text": "Go along, then quietly sulk the whole week.",
+              "feedback": "Not the best move. Staying quiet feels safe, but the feeling leaks out anyway and nobody knows why."
+            },
+            {
+              "text": "Say, 'Can I suggest something different this year? Here's why it matters to me.'",
+              "best": true,
+              "feedback": "Best move. You said what you want without attacking the old plan. Now there's something real to talk about."
+            },
+            {
+              "text": "Announce you're not coming this year.",
+              "feedback": "Not the best move yet. It's honest, but it skips the conversation that might get you what you want."
+            }
+          ]
+        },
+        {
+          "scenario": "In a group project or team meeting, everyone loves a plan. You can see a real flaw, but speaking up feels awkward. You…",
+          "options": [
+            {
+              "text": "Stay quiet and hope it works out.",
+              "feedback": "Not the best move. If the flaw is real, it shows up later, when it's harder and costlier to fix."
+            },
+            {
+              "text": "Say, 'I like where this is going. One worry: here's the gap. Can we test it first?'",
+              "best": true,
+              "feedback": "Best move. You named the problem, credited the idea and offered a next step. That's easy to say yes to."
+            },
+            {
+              "text": "Message someone afterwards that it's going to fail.",
+              "feedback": "Not the best move. The worry is fair, but said behind the group it can't help the plan and costs trust."
             }
           ]
         }
       ]
     },
-    "insight": "True courage isn't just about bravery; it's about using your creativity to express your authentic self and create meaningful impact.",
-    "model": "Speak your truth with kindness, measure progress against yourself, not others.",
-    "try_today": "Share your unique view or story today! Small acts of courage build big confidence 💪",
+    "insight": "Each best move said the true thing and kept the relationship. Silence and bluntness both feel easier, but cost more later. Brené Brown sums it up as 'clear is kind'.",
+    "model": "Clear is kind: say the true thing, with care, to the person who needs to hear it.",
+    "try_today": "Pick one thing you've only been hinting at. Say it plainly and kindly in one sentence, starting with what you value.",
     "source": {
       "thinkers": [
-        "Brené Brown",
-        "Parker J. Palmer"
+        "Brené Brown"
       ],
-      "work": "The Gifts of Imperfection (2010)",
-      "next_read": "Chapter 6: Cultivating Authenticity"
+      "work": "Dare to Lead (2018); The Gifts of Imperfection (2010)"
     },
-    "evidence": "moderate",
+    "evidence": "philosophy",
     "level": 1,
     "related": [
       "courage_kindness",
-      "growth_mindset"
+      "psychological_safety"
     ],
-    "sensitive": true
+    "try_team": "Before deciding on a plan, everyone writes one honest worry on a card. Read them out without names, then pick one to test together."
   }
 ]

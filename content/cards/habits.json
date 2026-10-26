@@ -27,29 +27,29 @@
           ]
         },
         {
-          "scenario": "Whenever a meeting gets tense, a colleague grabs their phone and starts scrolling. The tension (the cue) won't vanish. What helps most?",
+          "scenario": "You're revising. Every time you hit a hard question, your hand goes to your phone. The hard question (the cue) won't vanish. What helps most?",
           "options": [
             {
-              "text": "Tell them to just stop.",
-              "feedback": "Kindly meant, but 'just stop' leaves the urge with nowhere to go."
+              "text": "Delete the app forever.",
+              "feedback": "Big promise, but the urge still has nowhere to go. It usually comes back."
             },
             {
-              "text": "When the urge comes, pick up a pen and write down the next question to ask.",
+              "text": "When a question feels hard, write down the one bit you're stuck on, then try it for 2 minutes.",
               "best": true,
-              "feedback": "Yes. Same cue, new response. Swapping in a competing action is the core of habit reversal training, a well-tested method."
+              "feedback": "Yes. Same cue, new response. Swapping in a competing action is the core of habit reversal, a method well tested for tics and nail-biting, and a sensible thing to try here."
             },
             {
-              "text": "Wait until the project calms down.",
-              "feedback": "Understandable, but the loop keeps practising in the meantime. A swap can start today."
+              "text": "Revise when you feel more motivated.",
+              "feedback": "Understandable, but the loop keeps practising meanwhile. A swap can start today."
             }
           ]
         }
       ]
     },
-    "insight": "Most people pick willpower first. The trick is the cue. Best move: charge your phone across the room, so there's no cue and no fight. Clear's loop has four links (Duhigg's had three): remove the cue or swap the response.",
+    "insight": "Fighting the craving late at night is the hardest link to win. Moving the cue avoids the fight. Clear's loop has four links (Duhigg's had three): remove the cue or swap the response.",
     "model": "Cue, craving, response, reward. Change one link and the habit starts to change.",
     "try_today": "Pick one habit you want to change and write down its cue. Then move that cue out of sight or out of reach.",
-    "try_team": "Each person names one group habit (late starts, phones at dinner). Together, name its cue and pick one link to change for a week.",
+    "try_team": "Each person names one group habit (late starts, phones out in meetings or at dinner). Together, name its cue and pick one link to change for a week.",
     "from_source": {
       "quote": "Could the young but realize how soon they will become mere walking bundles of habits, they would give more heed to their conduct...",
       "cite": "William James, The Principles of Psychology (1890), vol. 1, ch. IV 'Habit'",
@@ -206,7 +206,7 @@
         }
       ]
     },
-    "insight": "Goals say where to go; identity can help you keep going. Each small action is a vote for a type of person, and you need a majority, not every vote. Clear argues identity outlasts goals; it is a useful lens with little direct testing. Aristotle said it first: we become what we repeatedly do.",
+    "insight": "Each small action is a vote for a type of person; you need a majority, not every vote. Clear's idea is a useful lens with little direct testing. Aristotle: we become what we repeatedly do.",
     "model": "Every action is a vote for the person you're becoming. Win the majority, not every vote.",
     "try_today": "Finish this sentence on paper: 'I am the kind of person who...' Then do one 2-minute action that proves it.",
     "try_team": "Each person finishes 'We're the kind of team (or family) that...' Pick the line you like most and one 2-minute action that proves it this week.",
@@ -311,7 +311,7 @@
     "concept": "one_percent",
     "domain": "habits",
     "type": "reveal",
-    "hook": "Most brains trip on one kind of maths. See how yours handles it?",
+    "hook": "1,000 coins a day for a month, or 1 coin doubling daily? Pick fast.",
     "title": "The Doubling Pile",
     "game": {
       "prompt": "Pick a pile. Pile A: you get 1,000 coins every day for 30 days. Pile B: you get 1 coin on day 1, 2 on day 2, 4 on day 3, doubling each day until day 30. Which ends bigger?",
@@ -320,11 +320,11 @@
         "Pile B: 1 coin, doubling daily"
       ],
       "answer": 1,
-      "reveal": "Pile B, by a mile: over 1 billion coins vs 30,000. If you picked A, you're in good company, and here's why: A is ahead for the first 13 days. Doubling looks like nothing, then like everything."
+      "reveal": "Pile B, by a mile: over 1 billion coins vs 30,000. If you picked A, you're in good company: A is ahead for the first 13 days. Doubling looks like nothing, then like everything."
     },
-    "insight": "People reliably underestimate compound growth (Stango & Zinman, 2009). Habits don't compound like this. In one study, automaticity grew fast at first and then levelled off over about 66 days (Lally et al., 2010). The shared lesson: early days look unimpressive.",
-    "model": "Don't judge a slow start by week one. Give it about two months.",
-    "try_today": "Draw 30 boxes on paper. Tick one each day you do your tiny habit. Judge it at box 30, not box 3.",
+    "insight": "People reliably underestimate doubling (Stango & Zinman, 2009). Habits don't double: they grow fast, then level off, after 18 to 254 days (median 66; Lally et al., 2010).",
+    "model": "Growth that doubles looks like nothing for a long time, then like everything. Don't judge it by week one.",
+    "try_today": "Draw 30 boxes on paper. Tick one each day you do your tiny habit. Judge it at box 30, not box 3; some habits take longer.",
     "try_team": "Everyone secretly picks Pile A or B, then reveal together. Then choose one small daily habit for the group and review it in 30 days.",
     "source": {
       "thinkers": [
@@ -460,7 +460,7 @@
         "4": "Today's lowest score: people. Find one person or group who already does the habit you want, and spend a little time there."
       }
     },
-    "insight": "People who rated their self-control highly reported meeting fewer temptations, not resisting more (Hofmann et al., 2012, a correlational diary study). Resisting in the moment is unreliable; your surroundings work every day for free.",
+    "insight": "People rating their self-control high reported fewer temptations, not more resisting (Hofmann et al., 2012, correlational). Your surroundings work every day, for free.",
     "model": "Make good habits obvious and easy; make bad ones invisible and hard.",
     "try_today": "Move one temptation out of sight and put one good cue in plain view. It takes two minutes.",
     "try_team": "Walk your shared space (home, classroom, office) for 5 minutes. Each person hides one distraction and puts one good cue in sight.",
@@ -502,7 +502,7 @@
       "answer": 100,
       "explain": "About 99.98%, effectively everyone (Johnson & Goldstein, 2003). Same kind of choice, different starting setting, and almost nobody changed it. Actual donations differed far less than sign-ups, but opt-out countries still did better."
     },
-    "insight": "Most of us keep whatever option is already set, because choosing takes effort. So set your own defaults on purpose: your home screen, your plate, your bedside table. Defaults can be used on you as well as by you: ask who set this one, and for whose benefit.",
+    "insight": "Most of us keep whatever is already set, because choosing takes effort. So set your own defaults on purpose, and ask who set the others, and for whose benefit.",
     "model": "Whatever is already set tends to win. Choose your defaults before they choose for you.",
     "try_today": "Change one default now: move one app off your home screen, or leave a book where your phone usually sits.",
     "try_team": "List your group's defaults (meeting length, who speaks first, what's in the fridge). Change one this week and see what shifts.",
@@ -570,7 +570,7 @@
         }
       ]
     },
-    "insight": "William James warned: 'Never suffer an exception to occur' till a habit is rooted. Lally's 2010 data was gentler: one missed day barely slowed habit formation. Treat a miss as an accident, not a collapse.",
+    "insight": "William James warned: 'Never suffer an exception to occur' till a habit is rooted. Lally's 2010 data was gentler: one missed day barely slowed habit forming. A miss is an accident.",
     "model": "Missing once is an accident. Clear's rule of thumb: come back soon and small, even after two misses or ten.",
     "try_today": "If you missed something this week, do a tiny version of it today and tell yourself: 'One miss doesn't define me.'",
     "try_team": "Agree on a 'come back small' version of your shared habit (a one-line update instead of the full check-in) for days that fall apart.",
@@ -731,37 +731,32 @@
     "concept": "never_miss_twice",
     "domain": "habits",
     "type": "reveal",
-    "hook": "You missed your workout today. Is it a setback or a chance to reset?",
-    "title": "Turning Missed Chances into Power",
+    "hook": "One missed day. Does the next thought matter more than the miss?",
+    "title": "Restart Small, Not Monday",
     "game": {
-      "prompt": "You missed your planned workout today. Which thought feels truer?\n1. 'I'm falling behind, I'll never get back on track!'\n2. 'This is a chance to start fresh tomorrow, with even more energy.'",
+      "prompt": "You planned to practise (a sport, an instrument, revision, a run) and skipped it yesterday. Which thought gets you moving again today?",
       "choices": [
-        {
-          "text": "1. 'I'm falling behind, I'll never get back on track!'",
-          "value": 0
-        },
-        {
-          "text": "2. 'This is a chance to start fresh tomorrow, with even more energy.'",
-          "value": 1
-        }
+        "\"I've blown it. I'll start properly on Monday.\"",
+        "\"Missing once is an accident. A tiny version today.\""
       ],
-      "reveal": "Choice 2 unlocks the power of reframing. James Clear says missing once is an accident, but missing twice becomes a habit. Reframing your miss as a new start can break that cycle. It's about choosing intention over inertia.",
-      "answer": 1
+      "reveal": "Most people find the second one gets them moving. 'Monday' turns one miss into four. Clear's rule of thumb: missing once is an accident, missing twice starts a new habit. Ten push-ups or one page tonight keeps the thread."
     },
-    "insight": "Missing something doesn't have to derail you. Reframing it as a chance to begin anew empowers you to get back on track.",
-    "model": "Reframing missed opportunities as fresh starts helps build resilience and avoid the trap of habitual setbacks.",
-    "try_today": "Small setbacks?  💪 Pause & reframe: 'Chance to learn & improve!'}",
+    "insight": "A miss is an event, not a verdict about you. The risk is the long gap that follows. Clear's 'never miss twice' is a rule of thumb from experience, not a tested law.",
+    "model": "Missing once is an accident. Come back the next day, even if it's tiny.",
+    "try_today": "Small setback? Pause and reframe it: 'A chance to learn and improve.'",
     "source": {
       "thinkers": [
         "James Clear"
       ],
       "work": "Atomic Habits (2018)"
     },
-    "evidence": "strong",
+    "evidence": "philosophy",
     "level": 1,
     "related": [
       "self_compassion",
       "identity_habits"
-    ]
+    ],
+    "try_team": "When a shared habit slips (a weekly check-in, family dinner), agree a 'tiny version' everyone can do the very next day.",
+    "sensitive": true
   }
 ]

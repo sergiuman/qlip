@@ -368,7 +368,7 @@
       "anchor": null,
       "explain": "Expected value = chance × payoff, added up. 0.5 × 100 + 0.5 × (−60) = 50 − 30 = 20. Over many flips you'd average about +20 a flip."
     },
-    "insight": "Losses tend to feel about 1.5–2× bigger than equal gains, so many people refuse bets like this one even though they pay on average. Expected value shows the math under the feeling. One flip can still lose.",
+    "insight": "Losses tend to feel about 1.5–2× bigger than equal gains, so many people refuse bets like this that pay on average. Expected value shows the math under the feeling. One flip can still lose.",
     "model": "Odds × payoff, added up. Take bets with positive value that you can afford to lose.",
     "try_today": "Write two outcomes for one choice today, each with a rough chance and payoff. Multiply each pair and compare.",
     "source": {
@@ -688,7 +688,7 @@
           "scenario": "At work, a project is 18 months in. New numbers say it will likely lose money even if finished. A colleague says: 'We can't stop now, look how much we've invested.' You…",
           "options": [
             {
-              "text": "Ask what it costs to finish versus what it's now likely to return",
+              "text": "Compare the cost to finish with what it will likely earn",
               "best": true,
               "feedback": "Right. Only future costs and gains decide. The 18 months are gone; the next 6 aren't. Name it kindly: stopping isn't the same as admitting failure."
             },
@@ -703,20 +703,20 @@
           ]
         },
         {
-          "scenario": "Your 15-year-old car needs a big repair, the third this year. 'I've already spent so much fixing it,' you think. You…",
+          "scenario": "You've spent £40 on skins in a game you're now bored of. A new season pass is £8. 'I've already spent so much on it,' you think. You…",
           "options": [
             {
-              "text": "Compare: cost of this repair and the next few, versus replacing it",
+              "text": "Ask: if I'd never played, would I pay £8 for this today?",
               "best": true,
-              "feedback": "Yes. Past repairs don't count; they're paid. The question is which option costs less from here, for the reliability you need."
+              "feedback": "Yes. The £40 is gone either way. Only the next £8 is up for grabs."
             },
             {
-              "text": "Fix it, or the earlier repairs were for nothing",
-              "feedback": "Those repairs gave you years of driving, so they weren't for nothing. They just can't vote on today's choice."
+              "text": "Buy it so the skins aren't wasted",
+              "feedback": "The skins already gave you fun. They can't vote on today's choice."
             },
             {
-              "text": "Scrap it right away",
-              "feedback": "Maybe, but past spending shouldn't push you out either. Sometimes one more repair really is the cheapest road ahead."
+              "text": "Uninstall in a rage right now",
+              "feedback": "Maybe, but test it: a week off shows whether you miss it."
             }
           ]
         }
