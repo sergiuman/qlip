@@ -182,7 +182,7 @@ a { color: inherit; }
 .result-name { font-family: var(--font-display); font-weight: 800; font-size: var(--step-2); letter-spacing: -0.02em; line-height: 1.1; margin: 0; color: var(--fg);
   text-decoration: underline; text-decoration-color: var(--c); text-decoration-thickness: 4px; text-underline-offset: 6px; }
 .next-up { align-self: stretch; padding: 12px 18px; font-size: var(--step-0); text-align: left; display: flex; flex-direction: column; gap: 2px; border-radius: 16px; }
-.next-up small { font-family: var(--font-mono); font-weight: 500; font-size: 0.68rem; letter-spacing: .08em; text-transform: uppercase; opacity: .75; }
+.next-up small { font-family: var(--font-mono); font-weight: 500; font-size: 0.68rem; letter-spacing: .08em; text-transform: uppercase; }
 .why { border-top: 1px solid var(--line); padding-top: 8px; }
 .why summary { cursor: pointer; color: var(--muted); font-size: var(--step--1); font-weight: 700; padding: 6px 0; }
 .why[open] summary { color: var(--fg); }
