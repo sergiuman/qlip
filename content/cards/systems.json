@@ -245,15 +245,15 @@
   "hook": "Most people push where change is hardest. Can you find the lever?",
   "title": "Where to Push",
   "game": {
-   "prompt": "Your class or team wants fewer phones out. Rank these fixes from weakest to strongest lever. Hint: the easiest to change is usually the weakest.",
+   "prompt": "You want to stop doomscrolling at night. Rank these fixes from weakest to strongest lever.",
    "items": [
-    "Numbers: one extra detention or fine per phone seen",
-    "Information: show everyone how phone-free sessions went vs phone-on ones",
-    "Rules: phones go in a box at the door",
-    "Goals: sessions are judged on focus, not just quiet",
-    "Mindset: phones out stops feeling normal to anyone"
+    "Numbers: 10 fewer minutes a night",
+    "Information: a screen-time report of your real hours",
+    "Rules: phone charges outside your bedroom",
+    "Goals: judge nights by how rested you feel",
+    "Mindset: scrolling stops feeling like rest"
    ],
-   "explain": "Donella Meadows ranked 12 places to intervene. Numbers are easiest to change and usually weakest. Goals and mindsets are harder to move but reshape what follows. She also warned people often push high levers the wrong way."
+   "explain": "1 Numbers: easy to change, rarely sticks. 2 Information: you see the real cost. 3 Rules: the setup does the work. 4 Goals: redefine a good night. 5 Mindset: changes what you want. Meadows ranked 12 such levers."
   },
   "insight": "Adjusting numbers rarely changes how a system behaves. Changing who sees what, the rules, or the goal moves more with less force. Meadows called her list a draft, not a law.",
   "model": "Numbers are easy and weak. Information, rules, and goals are harder and strong.",
@@ -711,5 +711,141 @@
    "leverage_points",
    "introvert_energy"
   ]
+ },
+ {
+  "id": "feedback-loops-set-up-to-fail",
+  "concept": "feedback_loops",
+  "domain": "systems",
+  "type": "reveal",
+  "hook": "You're helping a struggling hire. Could the help be the problem?",
+  "title": "The Set-Up-to-Fail Loop",
+  "game": {
+   "prompt": "A new hire misses one deadline. You start checking their work and ask for daily updates. Six weeks on, what tends to happen?",
+   "choices": [
+    "They tighten up and improve",
+    "They play it safe, take less initiative, and slip more",
+    "Nothing much changes"
+   ],
+   "answer": 1,
+   "reveal": "Often the second. Manzoni & Barsoux called it the set-up-to-fail syndrome: close checking signals doubt, the person pulls back, and the boss reads that as proof. If you picked 'improve', that's the hope behind most checking. Both sides feed the loop, usually with good intentions."
+  },
+  "insight": "Your doubt and their doubt feed each other in a snowball loop. Neither person is the villain; the circle is. Cut one arrow: name the worry and agree a clear way back.",
+  "model": "Treating someone like they'll fail can help them fail. Look for the loop before you judge the person.",
+  "try_today": "Pick the person you worry about most. In your next 1:1, ask 'What would help you own this?' and agree a date to stop checking in.",
+  "try_team": "In stand-up, each person names one task where they'd like less checking and one where they'd like more. Agree one change each; review in two weeks.",
+  "source": {
+   "thinkers": [
+    "Jean-François Manzoni",
+    "Jean-Louis Barsoux"
+   ],
+   "work": "Manzoni & Barsoux, 'The Set-Up-to-Fail Syndrome', Harvard Business Review (1998)"
+  },
+  "evidence": "moderate",
+  "level": 2,
+  "related": [
+   "fixes_that_fail",
+   "self_efficacy",
+   "psychological_safety"
+  ]
+ },
+ {
+  "id": "fixes-that-fail-six-weeks",
+  "concept": "fixes_that_fail",
+  "domain": "systems",
+  "type": "swipe",
+  "hook": "Your team hit the deadline. Will next month pay for it?",
+  "title": "The Six-Week Bill",
+  "game": {
+   "prompt": "Six weeks later, does this fix hold or bite back?",
+   "left": "Holds up",
+   "right": "Bites back",
+   "items": [
+    {
+     "text": "The whole team works weekends to hit a launch date",
+     "side": "right",
+     "why": "Bites back as a habit: tired people make more errors, and fixing them eats next month. Once is fine."
+    },
+    {
+     "text": "Adding two new people to a project that's already late",
+     "side": "right",
+     "why": "Bites back: veterans stop to train them. Brooks saw this make late projects later."
+    },
+    {
+     "text": "Muting an alert that keeps going off",
+     "side": "right",
+     "why": "Bites back: quiet today, surprise later. The cause is still there, now unwatched."
+    },
+    {
+     "text": "A big discount to hit this quarter's sales target",
+     "side": "right",
+     "why": "Bites back: clients learn to wait for the discount, so next quarter starts weaker."
+    },
+    {
+     "text": "Spending a day finding why the same handover keeps failing",
+     "side": "left",
+     "why": "Holds: slower this week, but the problem stops coming back."
+    },
+    {
+     "text": "A one-page checklist for the step everyone forgets",
+     "side": "left",
+     "why": "Holds: cheap, and it fixes the cause (memory) rather than the symptom."
+    }
+   ]
+  },
+  "insight": "Four of six bite back. Quick fixes ease the symptom now; the bill lands weeks later, so no one links the two. Repenning & Sterman saw whole teams stuck firefighting this way.",
+  "model": "Before a quick fix, ask: what will this cost in six weeks, and who will pay?",
+  "try_today": "Pick one fix your team keeps repeating. Spend 20 minutes asking 'why does this keep happening?' until you hit a cause you can change.",
+  "try_team": "List three fixes from last month on a whiteboard. Everyone writes what each one cost later. Pick one to swap for a root-cause fix this sprint.",
+  "source": {
+   "thinkers": [
+    "Peter Senge",
+    "Nelson Repenning",
+    "John Sterman",
+    "Fred Brooks"
+   ],
+   "work": "The Fifth Discipline (1990); Repenning & Sterman, 'Nobody Ever Gets Credit for Fixing Problems that Never Happened', California Management Review (2001); Brooks, The Mythical Man-Month (1975)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "shifting_burden",
+   "delays",
+   "second_order"
+  ]
+ },
+ {
+  "id": "delays-friendship-hours",
+  "concept": "delays",
+  "domain": "systems",
+  "type": "estimate",
+  "hook": "New school, two months in, no real mate yet. Broken, or just early?",
+  "title": "Friendship Runs on a Delay",
+  "game": {
+   "question": "Roughly how many hours of hanging out does it take to turn someone you know into an actual friend?",
+   "min": 1,
+   "max": 300,
+   "step": 1,
+   "unit": " hours",
+   "answer": 90,
+   "explain": "About 90 hours, by one study's estimate: around 50 for a casual friend, 200+ for a close one (Hall, 2019, surveys of adults and university students). Time chatting and joking counted more than sitting in the same lesson."
+  },
+  "insight": "Two months of lessons might be only 10 hours of real talk. Friendship has a long delay, so 'nothing's happening' usually means 'not enough hours yet', not 'something's wrong with me'.",
+  "model": "When results lag effort, count the hours you've put in, not the weeks on the calendar.",
+  "try_today": "Pick one person you get on with and add 20 minutes of real hanging out: walk home together, share lunch, or play one game.",
+  "try_team": "Class or club: pair up with someone you barely know and swap three fun questions for 5 minutes. Repeat weekly so the hours add up.",
+  "source": {
+   "thinkers": [
+    "Jeffrey A. Hall"
+   ],
+   "work": "Hall, 'How many hours does it take to make a friend?', Journal of Social and Personal Relationships (2019)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "feedback_loops",
+   "small_wins",
+   "spotlight_effect"
+  ],
+  "sensitive": true
  }
 ]

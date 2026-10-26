@@ -92,7 +92,7 @@
             {
               "text": "Open the airline app and rebook while you stand in line.",
               "best": true,
-              "feedback": "You spotted the part that's yours: options, timing, your next move. The queue stays a backup."
+              "feedback": "You spotted what's yours: your next choice. Whether a seat appears isn't; the queue stays a backup."
             },
             {
               "text": "Sit down and wait for someone to announce a plan.",
@@ -114,14 +114,14 @@
             },
             {
               "text": "Say nothing and walk off fuming.",
-              "feedback": "You protected the agent, which is kind. Try naming one thing you can still do tonight."
+              "feedback": "Better than blaming the agent, but you left without the one thing you could still get: your options for tonight. Ask first, fume later."
             }
           ]
         }
       ]
     },
-    "insight": "You didn't stop caring about getting home. You moved your effort from the cancelled plane to your phone and your next question. That shift is the Stoic dichotomy of control.",
-    "model": "When something goes wrong, ask: what's the next move that is fully mine?",
+    "insight": "You didn't stop caring about getting home. Even the rebooking might fail; what stays yours is how you judge it and what you choose next. That's Epictetus's dichotomy of control.",
+    "model": "When things go wrong, separate what's yours (judgment, choice, next action) from what isn't (the outcome).",
     "try_today": "Next time something annoys you, say out loud \"What's mine here?\" and do that one thing first.",
     "source": {
       "thinkers": [
@@ -158,11 +158,15 @@
           "q": "When the news is bad (prices, jobs, the world), I mostly…",
           "options": [
             {
-              "label": "Read more about it and feel worse",
+              "label": "Keep reading about it and feel worse",
               "value": -2
             },
             {
-              "label": "Look for one thing I can do in my own life",
+              "label": "Read a bit, then try to step away",
+              "value": 0
+            },
+            {
+              "label": "Ask what, if anything, changes for me this month",
               "value": 2
             }
           ]
@@ -171,7 +175,7 @@
           "q": "When someone in my group project, team or family keeps letting things slide, I…",
           "options": [
             {
-              "label": "Complain about them to others",
+              "label": "Vent about it to someone else",
               "value": -2
             },
             {
@@ -192,6 +196,10 @@
               "value": -2
             },
             {
+              "label": "\"I'll see what happens…\"",
+              "value": 0
+            },
+            {
               "label": "\"I can…\" or \"I'll try…\"",
               "value": 2
             }
@@ -205,6 +213,14 @@
               "value": -2
             },
             {
+              "label": "Whatever I did wrong",
+              "value": -1
+            },
+            {
+              "label": "The person who knows most about it",
+              "value": 0
+            },
+            {
               "label": "The smallest thing I could change",
               "value": 2
             }
@@ -215,7 +231,7 @@
         {
           "upTo": -0.34,
           "label": "Concern-heavy today",
-          "text": "Today's answers put a lot of energy into things you can't move. That's tiring, not a flaw. Pick one worry and find the piece of it that is yours."
+          "text": "Today a lot of energy went to things you can't move. That's tiring, and common when you're stressed, not a flaw. Pick one worry and find the smallest piece of it that's yours."
         },
         {
           "upTo": 0.34,
@@ -234,9 +250,10 @@
     "try_today": "Swap one \"If only they…\" sentence today for \"I can…\" and finish it with a real action.",
     "source": {
       "thinkers": [
-        "Stephen Covey"
+        "Stephen Covey",
+        "Epictetus"
       ],
-      "work": "The 7 Habits of Highly Effective People (1989)"
+      "work": "The 7 Habits of Highly Effective People (1989); Epictetus, Discourses I.1 (c. 108 CE)"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -245,7 +262,12 @@
       "self_efficacy",
       "opportunity_gap"
     ],
-    "try_team": "Draw two circles on a board. List the group's frustrations, place each one, then pick one item inside 'influence' to act on this week."
+    "try_team": "Draw two circles on a board. List the group's frustrations, place each one, then pick one item inside 'influence' to act on this week.",
+    "from_source": {
+      "quote": "What then is to be done? To make the best of what is in our power, and take the rest according to its nature.",
+      "cite": "Epictetus, Discourses, Book I, ch. 1 (trans. George Long, 1890)",
+      "next_read": "Discourses, Book I, ch. 1 'Of the things which are in our power'"
+    }
   },
   {
     "id": "circle-influence-library-choice",
@@ -318,7 +340,7 @@
     "concept": "golden_mean",
     "domain": "wisdom",
     "type": "spectrum",
-    "hook": "Too timid or too reckless? Four answers will place your courage.",
+    "hook": "Too timid or too reckless? Five calls will place your courage.",
     "title": "The Golden Mean",
     "game": {
       "left": "Too cautious",
@@ -328,11 +350,15 @@
           "q": "Someone in your group (class, family, team) says something you think is wrong. You…",
           "options": [
             {
+              "label": "Wait, then ask a calm question in private",
+              "value": -1
+            },
+            {
               "label": "Stay quiet, it's not worth it",
               "value": -2
             },
             {
-              "label": "Ask a calm question about it",
+              "label": "Say calmly, in front of everyone, that you see it differently",
               "value": 0
             },
             {
@@ -342,19 +368,40 @@
           ]
         },
         {
-          "q": "A friend invites you on a hard hike you've never done. You…",
+          "q": "A friend invites you on a hard hike, longer than any you've done. You…",
           "options": [
             {
-              "label": "Decline without even looking at the route",
-              "value": -2
-            },
-            {
-              "label": "Say yes and check the route and weather",
+              "label": "Say yes, then check the route and weather",
               "value": 0
             },
             {
-              "label": "Go in trainers, no water, figure it out",
+              "label": "Decline; you've never done one that long",
+              "value": -2
+            },
+            {
+              "label": "Say yes and pick the harder route to push yourself",
               "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Someone in your class or team is cheating (a test, a report) in a way that hurts others. You…",
+          "options": [
+            {
+              "label": "Drop a vague hint that people might notice",
+              "value": -1
+            },
+            {
+              "label": "Confront them in front of everyone",
+              "value": 2
+            },
+            {
+              "label": "Ignore it, it's not your business",
+              "value": -2
+            },
+            {
+              "label": "Tell the teacher or manager privately",
+              "value": 0
             }
           ]
         },
@@ -362,16 +409,16 @@
           "q": "You want to start something of your own (a channel, a club, a small business). You…",
           "options": [
             {
+              "label": "Put your savings and every free hour in from day one",
+              "value": 2
+            },
+            {
               "label": "Keep it in a notebook for 'someday'",
               "value": -2
             },
             {
               "label": "Try a small version on weekends",
               "value": 0
-            },
-            {
-              "label": "Drop school, work or savings tomorrow to do it",
-              "value": 2
             }
           ]
         },
@@ -379,15 +426,19 @@
           "q": "Someone is being mocked in a group chat. You…",
           "options": [
             {
+              "label": "Message them privately only",
+              "value": -1
+            },
+            {
+              "label": "Say \"not cool, stop\" in the chat right away, then message them privately",
+              "value": 0
+            },
+            {
               "label": "Say nothing",
               "value": -2
             },
             {
-              "label": "Message them privately, then say 'not cool' in the chat",
-              "value": 0
-            },
-            {
-              "label": "Post a long public rant at the mocker",
+              "label": "Screenshot it and post it publicly to call the mocker out",
               "value": 2
             }
           ]
@@ -402,7 +453,7 @@
         {
           "upTo": 0.34,
           "label": "Near the mean today",
-          "text": "Today's answers sit near the mean in these cases. Aristotle would add: the real test is doing it when fear is real and the situation is new."
+          "text": "Today's answers sit near the mean in these cases. Notice the mean was sometimes the bolder answer: Aristotle's mean is what the situation asks for, not the halfway point."
         },
         {
           "upTo": 1,
@@ -480,17 +531,16 @@
     "concept": "socratic_ignorance",
     "domain": "wisdom",
     "type": "reveal",
-    "hook": "You use a zip every day. Could you explain how it works?",
+    "hook": "You use it every day. Bet you can't explain it in 3 steps.",
     "title": "The Zip Test",
     "game": {
-      "prompt": "In your head, rate how well you understand how a zip works. Now explain, step by step, how the teeth lock and unlock. In studies like this, what happened to people's ratings after they tried to explain?",
+      "prompt": "Rate yourself 1-10: how well do you get how a zip works? Now explain it, out loud, in 3 steps. Go. Done? Did your rating just drop?",
       "choices": [
-        "They went up",
-        "They stayed about the same",
-        "They dropped"
+        "Yep",
+        "Kinda",
+        "Nope, I'm an engineer"
       ],
-      "answer": 2,
-      "reveal": "They dropped. Rozenblit and Keil (2002) called it the illusion of explanatory depth: feeling familiar with something isn't the same as understanding it. If you guessed otherwise, you've just felt the illusion yourself."
+      "reveal": "In Rozenblit & Keil (2002), most people's ratings dropped after they tried to explain. Feeling familiar isn't understanding."
     },
     "insight": "Familiar things feel understood until you try to explain them. Socrates found the same in Athens: people skilled at one craft assumed they knew far more. Explaining is the honesty test.",
     "model": "If you can't explain it step by step, you know less than it feels. Say it out loud to find out.",
@@ -531,9 +581,9 @@
         "No, keep it",
         "I'm not sure"
       ],
-      "reveal": "There's no wrong answer, and some pain is never 'worth it'. But many people find a setback also taught them a skill, a friend, or a direction. Nietzsche called embracing your whole story, hard parts included, amor fati."
+      "reveal": "There's no wrong answer, and some pain is never 'worth it'. But many people find a setback also taught them a skill, a friend, or a direction. Nietzsche called embracing your whole story, hard parts included, amor fati. If you chose erase, that is honest too: some losses teach nothing worth their price."
     },
-    "insight": "Amor fati isn't pretending bad things were good. Nietzsche wanted nothing to be different; you can start smaller, by asking what a hard chapter gave you.",
+    "insight": "Amor fati isn't pretending bad things were good. In Ecce Homo Nietzsche wanted nothing different; you can start smaller: ask what a hard chapter gave you, or simply that you survived it.",
     "model": "You can't change what happened. You can choose what it becomes part of.",
     "try_today": "Write one setback and finish this line: \"Because of it, I can now…\". Keep it to one sentence.",
     "source": {
@@ -541,7 +591,7 @@
         "Friedrich Nietzsche",
         "Marcus Aurelius"
       ],
-      "work": "The Gay Science (1882); Meditations (c. 170 CE)"
+      "work": "The Gay Science (1882); Ecce Homo (1888), \"Why I Am So Clever\" §10; Meditations (c. 170 CE)"
     },
     "evidence": "philosophy",
     "level": 2,
@@ -572,9 +622,9 @@
         "Vaguely",
         "No idea"
       ],
-      "reveal": "Many people can't. Research on 'affective forecasting' shows we tend to overestimate how long bad events will hurt. Feelings are weather: real, sometimes heavy, but they move. If a heavy mood isn't lifting for weeks, talk to someone you trust."
+      "reveal": "Whatever you answered, notice how today's weight compares. Wilson and Gilbert found we often predict bad events will hurt longer than they do, though the gap is smaller than first thought. Feelings are weather: real, sometimes heavy, but they move. If a heavy mood isn't lifting for weeks, talk to someone you trust."
     },
-    "insight": "We tend to overestimate how long bad events will hurt (Wilson & Gilbert). The Buddha and Heraclitus taught that everything changes. Today's pain is real; it just isn't permanent.",
+    "insight": "We often overestimate how long bad events will hurt (Wilson & Gilbert). Heraclitus saw a world in flux; the Buddha taught that clinging to what changes brings suffering.",
     "model": "Feelings and fortunes are weather, not climate. Ask how much this will matter in a year.",
     "try_today": "When something stings today, write it down with the date. Set a reminder to reread it in 3 months.",
     "source": {
@@ -584,7 +634,7 @@
         "Daniel Gilbert",
         "Timothy Wilson"
       ],
-      "work": "Wilson & Gilbert, 'Affective Forecasting' (2005)"
+      "work": "Wilson & Gilbert, 'Affective Forecasting' (2005); Levine et al., 'Accuracy in affective forecasting' (2012)"
     },
     "evidence": "moderate",
     "level": 1,
@@ -688,21 +738,21 @@
     "concept": "begin_with_end",
     "domain": "wisdom",
     "type": "estimate",
-    "hook": "How many weeks are in an 80-year life? Guess before you scroll.",
+    "hook": "Your whole life, counted in weeks. Bigger or smaller than you think?",
     "title": "Your Life in Weeks",
     "game": {
       "question": "How many weeks are there in an 80-year life?",
-      "min": 500,
-      "max": 50000,
+      "min": 1000,
+      "max": 20000,
       "step": 2,
       "unit": " weeks",
       "answer": 4174,
-      "explain": "80 years × about 52.18 weeks ≈ 4,174. Oliver Burkeman built a whole book around this small number.",
+      "explain": "80 years × about 52.18 weeks ≈ 4,174. At 16 you've used about 835; at 40, about 2,090. Burkeman built a book on this number: the point isn't to rush, it's to choose a few things that matter.",
       "anchor": null
     },
-    "insight": "Many people guess far higher. About 4,000 weeks feels short, and that's the point: not to scare you, but to sharpen you. Seneca said life is long enough if used well.",
+    "insight": "About 4,000 weeks feels short, and if that feels heavy, that's normal. The point isn't to scare you but to sharpen you. Seneca said life is long enough if used well.",
     "model": "Time is finite and countable. Spend weeks the way you'd spend something precious.",
-    "try_today": "Pick this week's one most important thing, the one you'd regret skipping, and schedule it before anything else.",
+    "try_today": "Pick one thing this week you'd be glad you made time for, even 20 minutes, and put it in your calendar first.",
     "source": {
       "thinkers": [
         "Oliver Burkeman",
@@ -722,7 +772,8 @@
       "quote": "It is not that we have a short space of time, but that we waste much of it.",
       "cite": "Seneca, On the Shortness of Life, 1.3 (trans. John W. Basore, 1932)",
       "next_read": "On the Shortness of Life, chapters 1-3"
-    }
+    },
+    "sensitive": true
   },
   {
     "id": "memento-mori-grudge-choice",
@@ -738,16 +789,16 @@
           "options": [
             {
               "text": "Leave their messages on read until they apologise.",
-              "feedback": "Not the best move. Fair to be hurt, but two weeks of silence usually makes the hurt grow, not shrink."
+              "feedback": "Fair to be hurt, but two weeks of silence usually makes the hurt grow, not shrink."
             },
             {
               "text": "Text: 'Still a bit annoyed, but have a great trip. Talk when you're back?'",
               "best": true,
-              "feedback": "Best move. You stayed honest and kept the door open. If time felt short, this is the message you'd want sent."
+              "feedback": "You stayed honest and kept the door open. If this were your last message to them, you'd be glad it was this one."
             },
             {
               "text": "Post a story about fake friends.",
-              "feedback": "Not the best move. It feels good for a minute, then becomes one more thing to repair."
+              "feedback": "It feels good for a minute, then becomes one more thing to repair."
             }
           ]
         },
@@ -756,16 +807,16 @@
           "options": [
             {
               "text": "Say nothing, and quietly hold it against them for months.",
-              "feedback": "Not the best move. Swallowed grudges leak out later and cost you months of easy teamwork."
+              "feedback": "Swallowed grudges leak out later and cost you months of easy teamwork."
             },
             {
               "text": "Call it out in front of everyone at the next meeting.",
-              "feedback": "Not the best move. You're right to want credit, but public blame tends to start a feud."
+              "feedback": "You're right to want credit, but public blame tends to start a feud."
             },
             {
               "text": "Tell them privately, calmly, and agree how you'll credit each other's work.",
               "best": true,
-              "feedback": "Best move. Memento mori doesn't mean swallowing it. It means fixing it without letting it eat your month."
+              "feedback": "Memento mori doesn't mean swallowing it. It means fixing it without letting it eat your month."
             }
           ]
         },
@@ -775,22 +826,22 @@
             {
               "text": "Thank her warmly and suggest lunch soon.",
               "best": true,
-              "feedback": "Best move. She reached out; you met her. The old topic can wait for a calmer day, face to face."
+              "feedback": "She reached out; you met her. The old topic can wait for a calmer day, face to face."
             },
             {
               "text": "Keep it short and cool. She knows what she did.",
-              "feedback": "Not the best move. Understandable, but a cool reply can turn one more year into five."
+              "feedback": "Understandable, but a cool reply can turn one more year into five."
             },
             {
               "text": "Raise the old disagreement right away to clear the air.",
-              "feedback": "Not the best move yet. Clearing the air matters, but a birthday call is rarely the moment."
+              "feedback": "Clearing the air matters, but a birthday call is rarely the moment."
             }
           ]
         }
       ]
     },
-    "insight": "Remembering time is limited didn't make you a doormat. It made the grudge smaller and the next kind, honest step clearer. That's what the Stoics used the thought for.",
-    "model": "Before you hold a grudge, ask: if time were short, how would I want this to end?",
+    "insight": "Memento mori means 'remember you will die'. The Stoics used it not to frighten but to shrink the petty: which grudges matter at the end? It made the honest, kind step clearer.",
+    "model": "Before you hold a grudge, ask: if this were our last talk, how would I want it to end?",
     "try_today": "Pick one small, stale grudge and send one warm, low-pressure message. You don't have to settle everything.",
     "source": {
       "thinkers": [
@@ -818,21 +869,21 @@
     "concept": "memento_mori",
     "domain": "wisdom",
     "type": "reveal",
-    "hook": "Why do people about to move away choose like their grandparents?",
+    "hook": "Moving away next month. Who gets your last free half hour?",
     "title": "Short Time, Clear Choices",
     "game": {
-      "prompt": "Imagine you're moving far away in a few weeks. You get one free half hour. Who do you spend it with?",
+      "prompt": "In a classic study, younger adults imagined moving far away in a few weeks, with one free half hour. Who did most of them pick to spend it with?",
       "choices": [
         "A close friend or family member",
         "A new acquaintance you really clicked with",
         "The author of a book you just loved"
       ],
       "answer": 0,
-      "reveal": "The familiar face. In Fredrickson & Carstensen (1990), older adults mostly picked a close partner. Younger adults spread their picks, until they imagined an upcoming move. Then they chose the familiar face too."
+      "reveal": "The familiar face. Older adults in Fredrickson & Carstensen (1990) mostly chose a close partner; younger adults spread their picks until they imagined a move. There's no wrong personal choice here; this is about what most people did."
     },
     "insight": "When time feels short, through age, a move, or illness, people turn toward who matters most (Carstensen's research). It tracks felt time, not age. Memento mori borrows that clarity early.",
     "model": "A sense of limited time points you toward what matters. You can borrow it without waiting for an ending.",
-    "try_today": "Imagine you're moving away next month. Name the one person you'd make time for, and message them today.",
+    "try_today": "Name one person you'd make time for if you moved next month, or someone you'd like to know better. Send a short hello today.",
     "source": {
       "thinkers": [
         "Laura Carstensen",
@@ -869,16 +920,16 @@
           "options": [
             {
               "text": "'It's amazing, post it now!'",
-              "feedback": "Not the best move. Kind in the moment, but they asked for honesty and won't get the chance to make it better."
+              "feedback": "Kind in the moment, but they asked for honesty and won't get the chance to make it better."
             },
             {
-              "text": "Name the part you love, then say the chorus could be tighter, and ask if they want ideas.",
+              "text": "'The verses are great. The chorus could be tighter. Want ideas?'",
               "best": true,
-              "feedback": "Best move. True and warm. They hear what works, what to fix, and that you're on their side."
+              "feedback": "True and warm. They hear what works, what to fix, and that you're on their side."
             },
             {
               "text": "'Honestly? The chorus is boring.'",
-              "feedback": "Not the best move. It's true, but with nothing kind next to it, it's hard to hear and easy to resent."
+              "feedback": "It's true, but with nothing kind next to it, it's hard to hear and easy to resent."
             }
           ]
         },
@@ -887,16 +938,16 @@
           "options": [
             {
               "text": "Go along, then quietly sulk the whole week.",
-              "feedback": "Not the best move. Staying quiet feels safe, but the feeling leaks out anyway and nobody knows why."
+              "feedback": "Staying quiet feels safe, but the feeling leaks out anyway and nobody knows why."
             },
             {
               "text": "Say, 'Can I suggest something different this year? Here's why it matters to me.'",
               "best": true,
-              "feedback": "Best move. You said what you want without attacking the old plan. Now there's something real to talk about."
+              "feedback": "You said what you want without attacking the old plan. Now there's something real to talk about."
             },
             {
               "text": "Announce you're not coming this year.",
-              "feedback": "Not the best move yet. It's honest, but it skips the conversation that might get you what you want."
+              "feedback": "It's honest, but it skips the conversation that might get you what you want."
             }
           ]
         },
@@ -905,27 +956,28 @@
           "options": [
             {
               "text": "Stay quiet and hope it works out.",
-              "feedback": "Not the best move. If the flaw is real, it shows up later, when it's harder and costlier to fix."
+              "feedback": "If the flaw is real, it shows up later, when it's harder and costlier to fix."
             },
             {
-              "text": "Say, 'I like where this is going. One worry: here's the gap. Can we test it first?'",
+              "text": "'I like this. One worry: here's the gap. Can we test it first?'",
               "best": true,
-              "feedback": "Best move. You named the problem, credited the idea and offered a next step. That's easy to say yes to."
+              "feedback": "You named the problem, credited the idea and offered a next step. That's easy to say yes to."
             },
             {
               "text": "Message someone afterwards that it's going to fail.",
-              "feedback": "Not the best move. The worry is fair, but said behind the group it can't help the plan and costs trust."
+              "feedback": "The worry is fair, but said behind the group it can't help the plan and costs trust."
             }
           ]
         }
       ]
     },
-    "insight": "Each best move said the true thing and kept the relationship. Silence and bluntness both feel easier, but cost more later. Brené Brown sums it up as 'clear is kind'.",
+    "insight": "Each best move said the true thing and kept the relationship. Silence and bluntness feel easier but cost more later. Proverbs and Plutarch said it long before Brené Brown's 'clear is kind'.",
     "model": "Clear is kind: say the true thing, with care, to the person who needs to hear it.",
     "try_today": "Pick one thing you've only been hinting at. Say it plainly and kindly in one sentence, starting with what you value.",
     "source": {
       "thinkers": [
-        "Brené Brown"
+        "Brené Brown",
+        "Plutarch"
       ],
       "work": "Dare to Lead (2018); The Gifts of Imperfection (2010)"
     },
@@ -935,6 +987,153 @@
       "courage_kindness",
       "psychological_safety"
     ],
-    "try_team": "Before deciding on a plan, everyone writes one honest worry on a card. Read them out without names, then pick one to test together."
+    "try_team": "Before deciding on a plan, everyone writes one honest worry on a card. Read them out without names, then pick one to test together.",
+    "from_source": {
+      "quote": "Faithful are the wounds of a friend; but the kisses of an enemy are deceitful.",
+      "cite": "Proverbs 27:6 (King James Version, 1611)",
+      "next_read": "Plutarch, How to Tell a Flatterer from a Friend (Moralia)"
+    }
+  },
+  {
+    "id": "dichotomy-of-control-pitch-goal-reveal",
+    "concept": "dichotomy_of_control",
+    "domain": "wisdom",
+    "type": "reveal",
+    "hook": "Big client pitch tomorrow. Is 'win it' the goal making you worse?",
+    "title": "Aim at What's Yours",
+    "game": {
+      "prompt": "Two managers pitch the same client tomorrow. Ana's goal: 'Win the contract.' Ben's: 'Open with their problem, ask three sharp questions, make our case clearly.' Who's likelier to walk in steadier?",
+      "choices": [
+        "Ana: a big goal fires you up",
+        "Ben: his goal is fully in his hands",
+        "No real difference"
+      ],
+      "answer": 1,
+      "reveal": "Ben, most likely. In a golf study, players trained on process goals ('smooth tempo') kept nerves and focus steadier than those chasing a score (Kingston & Hardy, 1997). Ana still wants a fair thing; she's just aiming at something the client controls. Evidence is from small sport studies, not boardrooms: a strong hint, not a law."
+    },
+    "insight": "Wanting the win is fine. Aiming only at it is the trap: the client decides that, not you. Aim at moves you control and let the outcome be a hope.",
+    "model": "Keep the outcome as a hope; make the goal something you fully control.",
+    "try_today": "Rewrite tomorrow's scariest goal as actions: not 'get the yes' but 'open with their problem, ask three questions'.",
+    "try_team": "Stand-up, 5 min: each person splits their top goal into 'what we'll do' and 'what we hope happens'. Tomorrow, report only on the first.",
+    "source": {
+      "thinkers": [
+        "Epictetus",
+        "Cicero",
+        "Christopher Kingston",
+        "Lew Hardy"
+      ],
+      "work": "Cicero, De Finibus III (45 BCE), the archer image; Kingston & Hardy, 'Effects of different types of goals', The Sport Psychologist (1997)"
+    },
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "circle_influence",
+      "opportunity_gap",
+      "memento_mori"
+    ],
+    "sensitive": true
+  },
+  {
+    "id": "impermanence-new-job-glow-choice",
+    "concept": "impermanence",
+    "domain": "wisdom",
+    "type": "choice",
+    "hook": "A bad quarter makes every job ad look like an escape hatch.",
+    "title": "The New-Job Glow Fades",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Rough quarter: a project slipped and your boss is tense. A recruiter offers a similar role for a bit more pay. Your gut says 'anywhere but here'. You…",
+          "options": [
+            {
+              "text": "Say yes this week, before the feeling fades.",
+              "feedback": "The urge is real, and sometimes it's right. But a call made at the bottom of a bad quarter judges the climate by one storm."
+            },
+            {
+              "text": "Make two lists: what's been bad for 6+ months, and what's only this quarter.",
+              "best": true,
+              "feedback": "Weather vs climate. Long-running problems are good reasons to move; this quarter's storm may pass by itself."
+            },
+            {
+              "text": "Turn it down without looking: leaving feels disloyal.",
+              "feedback": "Loyalty is a fair value. Still, ruling it out unseen lets today's mood decide for you, just in the other direction."
+            }
+          ]
+        },
+        {
+          "scenario": "Months later you hire someone great. Week 3, they beam: 'Best job I've ever had.' When do you book a proper 'how's it really going?' 1:1?",
+          "options": [
+            {
+              "text": "At their annual review.",
+              "feedback": "A common default. By then the glow has often faded and quiet doubts have had months to grow unasked."
+            },
+            {
+              "text": "Around months 6 to 12, when the new-job glow tends to dip.",
+              "best": true,
+              "feedback": "Right. Managers who switched jobs reported a satisfaction spike that slid back within about a year (Boswell et al., 2005)."
+            },
+            {
+              "text": "No need: they're clearly happy.",
+              "feedback": "Their joy is real; enjoy it. It's also a honeymoon, so plan the check-in before the dip, not after."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "New jobs bring a 'honeymoon' high, then a 'hangover' within about a year (Boswell et al., 2005). Good and bad patches at work pass. Judge the pattern, not the patch.",
+    "model": "Before a big work decision, ask: is this weather (a patch) or climate (a pattern)?",
+    "try_today": "List what's frustrating you at work and tag each item 'weeks' or 'months'. Tackle one from the months list first.",
+    "try_team": "Retro, 5 min: everyone puts this sprint's pain points on stickies. Sort into 'one-off storm' and 'keeps coming back'. Fix one that keeps coming back.",
+    "source": {
+      "thinkers": [
+        "The Buddha",
+        "Wendy Boswell",
+        "John Boudreau",
+        "Jan Tichy"
+      ],
+      "work": "Boswell, Boudreau & Tichy, 'The relationship between employee job change and job satisfaction: the honeymoon-hangover effect', Journal of Applied Psychology (2005)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "hedonic_adaptation",
+      "regret_minimization",
+      "emotion_naming"
+    ]
+  },
+  {
+    "id": "memento-mori-school-days-estimate",
+    "concept": "memento_mori",
+    "domain": "wisdom",
+    "type": "estimate",
+    "hook": "Your mates feel permanent. Want the actual number?",
+    "title": "The School-Days Countdown",
+    "game": {
+      "question": "You're 16 and you all leave school at 18. Roughly how many school days do you have left with your mates?",
+      "min": 50,
+      "max": 2000,
+      "step": 10,
+      "unit": " days",
+      "answer": 380,
+      "explain": "About 380. A school year is roughly 190 days (UK; about 180 in the US), so two years is about 380. Together since age 11? Then you've already used around 70% of your school days together. Not a reason to panic, just a reason to say yes to Friday's plan."
+    },
+    "insight": "Final-year students nudged to see graduation as close got happier and did more of what they'd miss (Kurtz, 2008; one small study). 'Last' can sharpen joy, not just dread.",
+    "model": "Count what's left, not to panic but to notice: ordinary days become worth showing up for.",
+    "try_today": "Text one mate a plan for this week: chips after school, a kickabout, revision at yours. Name the day now.",
+    "try_team": "Class or family, 5 min: each person names one thing they'd regret not doing together before this year ends. Pick one and put it in the diary.",
+    "source": {
+      "thinkers": [
+        "Seneca",
+        "Jaime Kurtz"
+      ],
+      "work": "Kurtz, 'Looking to the future to appreciate the present', Psychological Science (2008); Seneca, On the Shortness of Life (c. 49 CE)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "impermanence",
+      "begin_with_end",
+      "regret_minimization"
+    ]
   }
 ]

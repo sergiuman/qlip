@@ -859,5 +859,194 @@
    "psychological_safety",
    "shared_fictions"
   ]
+ },
+ {
+  "id": "psychological-safety-swipe-standup",
+  "concept": "psychological_safety",
+  "domain": "connection",
+  "type": "swipe",
+  "hook": "Quiet stand-ups often start with tiny reactions you barely notice.",
+  "title": "Small Moves That Open Mouths",
+  "game": {
+   "prompt": "You lead the stand-up. What does this move do to speaking up?",
+   "left": "Shuts people up",
+   "right": "Opens people up",
+   "items": [
+    {
+     "text": "Closing with 'Any concerns? No? Great, let's go.'",
+     "side": "left",
+     "why": "A fast yes/no question makes silence the easy answer. Silence isn't agreement."
+    },
+    {
+     "text": "Opening with a mistake you made this week and what you changed",
+     "side": "right",
+     "why": "When the boss goes first, owning up stops looking like a career risk."
+    },
+    {
+     "text": "Sighing when someone says the deadline will slip",
+     "side": "left",
+     "why": "A sigh says 'bad news costs you'. People learn to bring only good news, and late."
+    },
+    {
+     "text": "Thanking someone whose risk warning turned out to be a false alarm",
+     "side": "right",
+     "why": "Reward the flag, not just the hits, or the next real warning stays unsaid."
+    },
+    {
+     "text": "Telling the team which idea you acted on and who raised it",
+     "side": "right",
+     "why": "Seeing voice lead to action is what makes people speak again."
+    },
+    {
+     "text": "Jumping in with the fix before they finish the problem",
+     "side": "left",
+     "why": "Well meant, but it signals 'I already know'. Let them finish, then ask one question."
+    }
+   ]
+  },
+  "insight": "Speaking up is decided in small reactions, not policies. In a study of restaurant staff, people spoke up more to managers they saw as open and acting on ideas (Detert & Burris, 2007).",
+  "model": "People repeat what your face rewards. Thank the warning, then act on it.",
+  "try_today": "In your next 1:1, ask 'What's one thing slowing you down that I could fix?' Then fix one small part this week.",
+  "try_team": "5 minutes: everyone writes one worry about this week's work on a note, unsigned. Read each aloud, thank it, pick one to act on today.",
+  "source": {
+   "thinkers": [
+    "Amy Edmondson",
+    "James Detert",
+    "Ethan Burris"
+   ],
+   "work": "Detert & Burris, 'Leadership Behavior and Employee Voice: Is the Door Really Open?' (Academy of Management Journal, 2007); Edmondson, The Fearless Organization (2018)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "courage_kindness",
+   "three_conversations",
+   "mistake_alchemy"
+  ]
+ },
+ {
+  "id": "trust-ledger-choice-deadline",
+  "concept": "trust_ledger",
+  "domain": "connection",
+  "type": "choice",
+  "hook": "A missed deadline dents trust. What you do next decides if it breaks.",
+  "title": "Late Is Fixable. Hidden Isn't.",
+  "game": {
+   "steps": [
+    {
+     "scenario": "Wednesday. You realise the client report due Friday won't be ready until Tuesday. You…",
+     "options": [
+      {
+       "text": "Work late every night and hope you make Friday",
+       "feedback": "A brave push, and sometimes it works. The trade-off: if it fails, the client hears on Friday with no time to adjust."
+      },
+      {
+       "text": "Call today: 'It'll be Tuesday. Here's what's done and why.'",
+       "best": true,
+       "feedback": "Yes. Early, specific bad news is still a deposit: it shows your word tracks reality."
+      },
+      {
+       "text": "On Friday, say another team held you up",
+       "feedback": "Tempting under pressure. But in trust research, lies did lasting damage that apologies couldn't fully repair."
+      }
+     ]
+    },
+    {
+     "scenario": "In your 1:1, a team member asks if you can get them onto the new project. You're not sure you can. You say…",
+     "options": [
+      {
+       "text": "\"Leave it with me, I'll sort it.\"",
+       "feedback": "Kind in the moment. But it's a promise you can't control, and a quiet 'no' later costs more than a maybe now."
+      },
+      {
+       "text": "\"Probably not, sorry.\"",
+       "feedback": "Honest, and it spares them false hope. It may close a door that one quick ask could open."
+      },
+      {
+       "text": "\"I can't promise. I'll ask by Thursday and tell you either way.\"",
+       "best": true,
+       "feedback": "Yes. You promise only what you control: the ask and the update. Then keep that small promise."
+      }
+     ]
+    }
+   ]
+  },
+  "insight": "Trust survives a missed deadline; it struggles to survive a cover-up. In lab trust games, apology plus reliable follow-up repaired trust, but lies left lasting damage.",
+  "model": "Promise what you control. Tell bad news early. Never cover it.",
+  "try_today": "Find one deadline you're likely to miss. Send the honest update today with a new date you can keep.",
+  "try_team": "5 minutes: each person lists this week's promises to others and marks each 'sure' or 'maybe'. Reword every 'maybe' as an honest maybe and send it.",
+  "source": {
+   "thinkers": [
+    "Maurice Schweitzer",
+    "John Hershey",
+    "Eric Bradlow"
+   ],
+   "work": "Schweitzer, Hershey & Bradlow, 'Promises and Lies: Restoring Violated Trust' (Organizational Behavior and Human Decision Processes, 2006)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "psychological_safety",
+   "one_percent"
+  ]
+ },
+ {
+  "id": "courage-kindness-swipe-advice",
+  "concept": "courage_kindness",
+  "domain": "connection",
+  "type": "swipe",
+  "hook": "Scared that asking makes you look slow? Researchers tested it.",
+  "title": "Asking Can Make You Look Smarter",
+  "game": {
+   "prompt": "Does asking this make you look smarter?",
+   "left": "No real boost",
+   "right": "Looks smarter",
+   "items": [
+    {
+     "text": "Asking your mate who aced chemistry how they'd do the hardest past-paper question",
+     "side": "right",
+     "why": "Hard task, asked of someone good at it. That's when askers were rated more capable."
+    },
+    {
+     "text": "Asking in the group chat when the essay's due, when it's pinned at the top",
+     "side": "left",
+     "why": "Asking about easy stuff didn't give the boost. No shame, just no bonus."
+    },
+    {
+     "text": "Asking your coach how they'd fix your serve",
+     "side": "right",
+     "why": "Asking for someone's expertise flatters them, and they tend to rate the asker as more capable."
+    },
+    {
+     "text": "Asking your shift lead how they handle a customer who's shouting",
+     "side": "right",
+     "why": "A genuinely tricky problem. Asking reads as wanting to do it well, not as weakness."
+    },
+    {
+     "text": "Asking a classmate to explain the one-line instructions on the worksheet",
+     "side": "left",
+     "why": "Fine to ask, it just doesn't earn the 'smart' bonus. Re-reading first often answers it."
+    }
+   ]
+  },
+  "insight": "Asking for advice on something hard made people look more capable, not less, in lab studies (Brooks, Gino & Schweitzer, 2015). On easy tasks the boost disappeared.",
+  "model": "Ask about the hard stuff, ask someone who knows, and ask specifically.",
+  "try_today": "Pick the hardest thing on your revision list. Message one person who's good at it: 'How would you tackle this?'",
+  "try_team": "In class, a team or at home: each person names one thing they're stuck on. Everyone else gives one idea in a sentence. Five minutes, no fixing.",
+  "source": {
+   "thinkers": [
+    "Alison Wood Brooks",
+    "Francesca Gino",
+    "Maurice Schweitzer"
+   ],
+   "work": "Brooks, Gino & Schweitzer, 'Smart People Ask for (Good) Advice: Perceptions of Competence and Advice Seeking' (Management Science, 2015)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "sensitive": true,
+  "related": [
+   "self_compassion",
+   "psychological_safety"
+  ]
  }
 ]

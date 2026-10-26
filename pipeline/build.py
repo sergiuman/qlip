@@ -7,6 +7,7 @@ concepts.json + cards/*.json  →  data/qlip.json   (what the website loads)
 Invalid cards are skipped (and reported), so a bad generation can never break the site.
 """
 import json
+import re
 import sys
 from collections import Counter
 from datetime import datetime, timezone
@@ -19,6 +20,17 @@ from validate import load_cards, load_concepts, validate_card  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
+
+
+YOUNG = r"\b(school|teacher|class(mate)?s?|revis\w*|exam|homework|mates?|best friend|parents?|mum|dad|group chat|snap\w*|tiktok|gcse|sixth form|college|uni|coursework|football|trainers|saturday job|bedroom)\b"
+WORK = r"\b(manager|boss|colleague|salary|raise|meeting|client|team ?lead|stand-?up|1:1|one-to-one|project|deadline|career|hiring|office|mortgage|retire\w*|grandkid\w*|commute|pull request|code review)\b"
+
+
+def audience(card):
+    """Which life-world a card's scenarios live in, so the feed can learn what each player relates to."""
+    text = json.dumps(card["game"], ensure_ascii=False).lower() + " " + card["hook"].lower()
+    y, w = len(re.findall(YOUNG, text)), len(re.findall(WORK, text))
+    return "young" if y > w + 1 else "work" if w > y + 1 else "all"
 
 
 def build_graph(concepts, cards):
@@ -93,7 +105,7 @@ def main():
                      {"links": [l for l in c.get("links", []) if l["to"] in concepts],
                       "rank": st["pagerank"].get(c["id"], 0)}
                      for c in concepts.values()],
-        "cards": good,
+        "cards": [dict(c, audience=audience(c)) for c in good],
     }
     DATA.mkdir(exist_ok=True)
     (DATA / "qlip.json").write_text(json.dumps(bundle, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

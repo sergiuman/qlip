@@ -1,0 +1,601 @@
+{
+ "session": 9,
+ "personas": [
+  {
+   "persona": "Maya, 16, Manchester. I live on TikTok and I bail on anything that feels like homework or a lecture. I stay if it's fast, surprising and about me.",
+   "scores": {
+    "hook": 6,
+    "clarity": 6,
+    "usefulness": 6,
+    "safety": 8,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "leverage-points-order",
+     "severity": "high",
+     "problem": "This one is literally a teacher's phone policy, and I'm meant to rank detentions and a phone box. My answer came back as five pills, each marked 'step N', plus a long 'Order: ...' sentence. I couldn't tell at a glance what I got wrong. The text in the pill boxes also wraps badly: the step number drops to its own line and the words crash into the curved edges. The prompt is so long I had to scroll before I could even play.",
+     "fix": "Change the scenario so the player is the one being changed: prompt -> \"You want to stop doomscrolling at night. Rank these fixes from weakest to strongest lever.\" Items -> [\"Numbers: allow yourself 10 fewer minutes a night\", \"Information: turn on a screen-time report that shows your real hours\", \"Rules: phone charges outside your bedroom\", \"Goals: judge your night by how rested you feel, not by what you caught up on\", \"Mindset: scrolling stops feeling like 'relaxing'\"]. Keep the same correct order. In app.js, for order cards with items over 40 characters, use rounded rectangles instead of pills (border-radius 16px). Put the correct position on each wrong row as a small badge (green tick, or a red badge reading 'should be #2'), and drop the 'Order: ...' sentence."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Too many cards in this batch are about adults. Flight cancellations, a teammate taking credit in a meeting, a sister and a falling-out over a family holiday, 'after school or work', a work report. Each time I think 'not me' and swipe away. Hooks like 'Begin with the end' ask about my 80th birthday and a weekly calendar, and I don't keep one.",
+     "fix": "For every card with \"level\": 1, make the first step a teen or student scenario and move adult ones to step 2 or 3. Concrete rewrites: dichotomy-of-control-delayed-flight step 1 scenario -> \"Your train to the concert is cancelled. 200 angry people on the platform. You...\" (options: rant in the group chat / check the app for the next train or a bus while you queue / wait for an announcement). memento-mori-grudge-choice step 2 -> \"In a group project, someone presents your idea to the teacher as theirs...\". begin-with-end-eulogy-radar hook -> \"Would the people you love recognise you from how you spent this week?\""
+    },
+    {
+     "card_id": "begin-with-end-four-thousand-weeks",
+     "severity": "medium",
+     "problem": "The slider goes from 500 to 50,000 and starts in the middle, so I just dragged it somewhere random (20,300). It felt like a maths worksheet. 'Plot twist: it's smaller' was fun. But nothing ever connects the number to me, and at 16 '4,174 weeks' doesn't land.",
+     "fix": "Set min 1000, max 20000 and start the handle at 10000. Add a personal line to explain: \"80 years x 52.18 ≈ 4,174. At 16 you've used about 835 of them; school's left takes about 100 more. Roughly 3,300 are still yours.\" Change try_today to: \"Count your weekends until summer. Pick one and plan it for the thing you'd regret skipping.\""
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "medium",
+     "problem": "There are six statements and then a wall of result text. The result screen begins mid-paragraph and still has three more blocks under it. It's the most quiz-from-school card here. 'Opportunity' with 'permission' in brackets is a dull word for something real: my mum literally not letting me.",
+     "fix": "Cut to 3 questions, one per pillar: W \"I'd do this even if no one saw.\", S \"I could do a rough version today.\", O \"I'm actually allowed and have the time and stuff to start this week.\" Rename the axis label 'Opportunity' to 'Open door'. Shorten each result text to 1 sentence, e.g. the '' result -> \"Nothing's lit yet, which is normal. Do one 5-minute rep this week and replay in 7 days.\""
+    },
+    {
+     "card_id": "self-efficacy-radar",
+     "severity": "medium",
+     "problem": "Eight agree/disagree lines is too much for one swipe. The result has no headline about me, just 'the model', a try-today box and a helpline. The NEXT card's 'proof of what you've survived' sounds heavy straight after a low score.",
+     "fix": "Cut to 4 questions (one per axis): keep \"I can remember recent times I did something hard and it worked.\", \"I know someone like me who has done what I want to do.\", \"People I trust tell me they think I can do it.\", \"Butterflies before a challenge usually help me more than they hurt.\" Above the model, add a one-line result headline driven by the highest axis, e.g. \"Your strongest fuel: Wins.\" Change the cookie-jar teaser to \"Keep proof of your wins. Reach in when it gets hard.\""
+    },
+    {
+     "card_id": "availability-feels-common",
+     "severity": "medium",
+     "problem": "Two of the six items (older adults dying after a fall, heart disease) are about old people, and I've never thought about them. The reveal tells me my 'wrong' swipes were wrong but never says the surprising number for the ones I got right. That's what I'd screenshot and share.",
+     "fix": "Replace 'Older adults dying after a fall' with {\"text\": \"Getting hurt cycling or walking near traffic\", \"side\": \"right\", \"why\": \"Road injuries are the top killer of 5 to 29-year-olds worldwide (WHO). So routine they're rarely news.\"}. Change the shark why to: \"About 5 to 10 a year worldwide. You're more likely to be hurt by a falling coconut, or by a selfie, than by a shark.\" Only keep the selfie claim if the fact-checker can source it; otherwise end the sentence after 'a year worldwide.' Show the why line for right answers too."
+    },
+    {
+     "card_id": "fae-why-late",
+     "severity": "low",
+     "problem": "This one is good and very me (being left on read while they post a story). But it's tagged 'Bit deeper', and the parent and old-friend birthday step is weaker. The end screen 'Here's another way to play it.' feels like I failed even though I picked a reasonable option.",
+     "fix": "Reorder the steps so the left-on-read scenario comes first, since it's the strongest hook. Change the end headline for 2/3 to \"2/3. You already think like a detective.\" so a near-perfect run never reads like a correction."
+    },
+    {
+     "card_id": "socratic-ignorance-zip-reveal",
+     "severity": "low",
+     "problem": "Fun idea, but the prompt is 4 sentences and it gives the game away ('In studies like this, what happened...'). I never actually try to explain the zip. I just tap 'They dropped' because the wording makes it obvious.",
+     "fix": "Split it into two beats. Prompt -> \"Rate yourself: how well do you get how a zip works? Now explain it, out loud, in 3 steps. Go.\" After a 5-second pause, ask \"Did your rating just drop?\" with choices [\"Yep\", \"Nope, I'm an engineer\", \"Kinda\"]. Reveal -> \"Same for most people (Rozenblit & Keil, 2002). Feeling familiar isn't understanding.\""
+    }
+   ],
+   "best_cards": [
+    "fae-why-late",
+    "reframing-late-text",
+    "stress-mindset-choice-fuel"
+   ],
+   "verdict": "Some of these I'd honestly stop for. The 11pm 'we need to talk' text, being left on read while they post a story, and calling nerves excitement are all things that actually happen to me, and they never make me feel stupid. Kind tone throughout, nothing shamed me. But half the batch is about adults: flights, meetings, a sister and a holiday fight, my 80th birthday. Those are the ones I swipe past. The quiz-style cards (Will/Skill, the self-efficacy radar, ranking the phone rules) feel like a PSHE worksheet: too many questions and walls of result text. The leverage ranking also shows its answer in a way I can't read. Fewer questions, more 'this is you' scenarios and one shareable stat per card would keep me scrolling."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, non-native English. I want tools I can use tomorrow in my 1:1s and stand-ups, and for my own head. I played 23 cards and looked at 14 screenshots (venn, order, estimate, choice, reveal, radar, spectrum, swipe, map, feed dark).",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "leverage-points-order",
+     "severity": "high",
+     "problem": "This is the most useful model in the sample for a manager, but it is framed for school ('detention', 'class'). The hint 'the easiest to change is usually the weakest' gives the answer away. The result is one long 'Order: X -> Y -> Z...' paragraph that I cannot read on a phone (see -a.png), so I never saw why my order was wrong.",
+     "fix": "Change the prompt to: 'Your team keeps missing sprint deadlines. Rank these fixes from weakest to strongest lever.' Replace the items with: 'Numbers: add one extra buffer day to every estimate', 'Information: show the whole team the real cycle-time chart every week', 'Rules: no new work enters the sprint after planning', 'Goals: the team is judged on finished work, not started work', 'Mindset: \"done\" means in users' hands, not \"code written\"'. Delete the hint sentence from the prompt. In the result, show the correct order as a numbered list with one 4-6 word reason per line instead of the arrow string."
+    },
+    {
+     "card_id": "memento-mori-moving-away-reveal",
+     "severity": "high",
+     "problem": "The prompt asks a personal question ('Who do you spend it with?'). Then the app marks 'the author of a book' orange, as if it were wrong. It feels like being graded on my own values. I also had to read the hook ('choose like their grandparents') twice to understand it.",
+     "fix": "Remove \"answer\": 0 so no choice is marked right or wrong. Change the prompt to: 'Imagine you're moving far away in a few weeks. You get one free half hour. Who do you think most people pick?' Change the hook to: 'Moving away in a month. Who gets your last free half hour?' Start the reveal with: 'Most people pick the familiar face, and so did researchers' young participants once they imagined a move.'"
+    },
+    {
+     "card_id": "fae-why-late",
+     "severity": "medium",
+     "problem": "Step 1 says 'Your first thought should be…', which reads like a lecture. The card also skips the case a manager faces: someone misses deadlines again and again. Then 'always assume the situation' is naive, and the card gives me no line between being kind and accepting a pattern.",
+     "fix": "Change step 1 from 'Your first thought should be…' to 'What goes through your head first?'. Add a 4th step. Scenario: 'A teammate has missed the last three deadlines. Your 1:1 is tomorrow. You open with…'. Options: 'You're unreliable, this has to stop.' with feedback 'A verdict on character. They will defend themselves, not fix it.'; 'Nothing. Maybe it sorts itself out.' with feedback 'Kind for a week, costly for months. Patterns need a talk.'; best: 'Three misses in a row. What's getting in the way, and what do we change?' with feedback 'Situation first, but you name the pattern. That's not blame, it's the job.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "On My map (view-map-light.png) the cluster labels overlap: 'Growth' sits under 'Connection' and 'Action' under 'Thinking'. The map also says 'You've explored all 88 ideas' while my streak is 1, so I do not trust the map.",
+     "fix": "Use collision avoidance for the domain labels. Either nudge each label vertically until its bounding box does not cross another label, or put the label at the cluster's top-most node with an 8px offset. Change the progress line so it counts only cards actually finished, e.g. 'You've played N of 88 ideas.' Show 'all 88' only when N = 88."
+    },
+    {
+     "card_id": "circle-influence-spectrum",
+     "severity": "medium",
+     "problem": "Questions 1, 3 and 4 offer only two options: a 'bad' one (-2) and a 'good' one (+2). Anyone can see which one is right, so the result tells me nothing. In real life I am 'wait and see' most days, and that option is missing.",
+     "fix": "Add a middle option with value 0 to each of Q1, Q3 and Q4. Q1: 'Skim it, then move on'. Q3: '\"I'll see what happens…\"'. Q4: 'The person who knows most about it'. Rewrite the +2 option of Q1 to sound less virtuous: 'Ask what, if anything, changes for me this month'."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "When all scores are 0/10, the 'you' dot is drawn outside all three circles, bottom-left (wso-triad-venn-a.png). It looks like a rendering bug, or like 'you are nowhere', which is a bad feeling for a tired person. This is otherwise one of the best cards for my team.",
+     "fix": "In app.js, when all axes score below threshold, put the dot at the centre of the three circles at 40% opacity with the label 'Starting point'. Do not compute a position outside the circles. Also add the try_team line to the result text: 'Ask a teammate which pillar they would help with first.'"
+    },
+    {
+     "card_id": "dichotomy-of-control-delayed-flight",
+     "severity": "low",
+     "problem": "Step 2, option 'Say nothing and walk off fuming' has the feedback 'You protected the agent, which is kind.' This praises walking off angry, which is odd, and it blurs what the card teaches.",
+     "fix": "Change that feedback to: 'Better than blaming the agent, but you left without the one thing you could still get: your options for tonight. Ask first, fume later.'"
+    },
+    {
+     "card_id": "stockdale-paradox-dream-vs-obstacle-choice",
+     "severity": "low",
+     "problem": "All three scenarios are exams, trials and a sprained ankle. Nothing is close to adult work life. The best option in step 1 is also very long and is the only option with a concrete plan, so it is obvious.",
+     "fix": "Replace step 1 with: 'Your team's release is in three weeks and you're behind. What do you tell the team tonight?' Options: '\"We'll make it, stay positive.\"'; best: '\"We want to ship on the 14th. Biggest risk is the API review, so if it isn't done by Friday, we cut feature X.\"'; '\"We're too far behind, it's hopeless.\"'. Shorten the best option of the old step 1 to the same length as the others."
+    }
+   ],
+   "best_cards": [
+    "creative-truthful-courage-choice",
+    "still-water-vision-hidden-clue",
+    "wso-triad-venn"
+   ],
+   "verdict": "Better than I expected. Honest about evidence, never shaming, and the 'try today' and 'with others' lines are often things I can really use in tomorrow's stand-up: the hidden-clue question, 'clear is kind' in a meeting, and the WSO lowest-score pairing. But too many cards are written for teenagers (exams, detention, group projects), so as a manager I translate everything myself. Some 'choice' games have an obvious right answer, so I don't learn much. Personal-value reveals should not be graded right or wrong. Usable for 10 minutes of commute. To make me share it with my team, it needs more workplace scenarios and less obvious options."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher. Reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader; impatient with pop-psych shortcuts.",
+   "scores": {
+    "hook": 7,
+    "clarity": 8,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "golden-mean-courage-spectrum",
+     "severity": "high",
+     "problem": "The insight says the mean is 'relative to us, not the midpoint', but the game scores the middle option as 0, 'the mean', in all four questions. So the card teaches the opposite of Aristotle: the mean becomes the midpoint, and the right answer is always the middle button. It also gives the answer away.",
+     "fix": "In Q4 (mocking in a group chat), make the bold public option the virtuous one: change it to 'Say \"not cool, stop\" in the chat right away, then message them privately', value 0. Change the current middle option to 'Message them privately only', value -1. Change the rant option to 'Post a long public rant at the mocker', value 2. In Q1, change the middle label to 'Wait, then ask a calm question in private', value -1, and add 'Say calmly, in front of everyone, that you see it differently', value 0. Then rewrite the 'Near the mean today' zone text to: 'Near the mean in these cases. Notice the mean was sometimes the bolder answer: Aristotle's mean is what this situation asks for, not the halfway point.'"
+    },
+    {
+     "card_id": "creative-truthful-courage-choice",
+     "severity": "high",
+     "problem": "This card shows the 'Old Wisdom' badge, yet its only source is Brené Brown (2018). The Covey cards (circle-influence-spectrum, begin-with-end-eulogy-radar) carry the same badge. Calling 2010s self-help 'Old Wisdom' cheapens the label and misleads younger readers about where these ideas come from.",
+     "fix": "Either change this card's domain from 'wisdom' to 'connection', or keep it and give it a real classical root by adding from_source: {quote: 'Faithful are the wounds of a friend; but the kisses of an enemy are deceitful.', cite: 'Proverbs 27:6 (King James Version, 1611)', next_read: 'Plutarch, How to Tell a Flatterer from a Friend (Moralia)'} and adding 'Plutarch' to source.thinkers. For the Covey cards, add Seneca, On the Shortness of Life, to circle-influence-spectrum, or move them to domain 'meaning'."
+    },
+    {
+     "card_id": "dichotomy-of-control-delayed-flight",
+     "severity": "medium",
+     "problem": "The card reduces Epictetus to a rebooking tip. The model calls rebooking 'fully mine', but a seat on the next plane is exactly the kind of thing Epictetus would call not up to us. What is ours is judgment, assent and choice. The Carter quote on the card says as much, but the game ignores it.",
+     "fix": "Change model to: 'When something goes wrong, separate what is yours (your judgment, your choice, your next action) from what is not (the plane, the outcome).' Change the insight's last sentence to: 'Even the rebooking might fail; what stays yours is how you judge it and what you choose next. That is Epictetus's dichotomy of control.' Change the step-1 best feedback to: 'You spotted what's yours: your next choice. Whether a seat appears isn't; the queue stays a backup.'"
+    },
+    {
+     "card_id": "impermanence-worry-reveal",
+     "severity": "medium",
+     "problem": "Not remembering a worry from three years ago is a memory effect, not affective forecasting, which is about predicting future feelings. The reveal links the two as if one proved the other. Separately, the line 'The Buddha and Heraclitus taught that everything changes' flattens two very different doctrines into one slogan.",
+     "fix": "Change the reveal to: 'Many people can't. That fading is itself a clue. In separate studies, Wilson and Gilbert found we predict bad events will hurt longer than they actually do (they call it durability bias). Feelings are weather: real, sometimes heavy, but they move. If a heavy mood isn't lifting for weeks, talk to someone you trust.' Change the insight's second sentence to: 'Heraclitus saw a world in flux; the Buddha taught that clinging to what changes brings suffering.'"
+    },
+    {
+     "card_id": "memento-mori-grudge-choice",
+     "severity": "medium",
+     "problem": "'Memento mori' means remember you will die, but the card never says death. It turns the idea into 'if time felt short' and applies it to a friend going away for two weeks. That is euphemism, not Stoicism, and an adult reader will notice the dodge. Also, 'Not the best move.' opens six feedback lines in a row and reads like a stamp.",
+     "fix": "Rewrite the insight as: 'Memento mori means remember you will die. The Stoics didn't use the thought to frighten, but to shrink the petty: Marcus asked which grudges would matter at the end. It didn't make you a doormat; it made the honest, kind step clearer.' Take 'Not the best move.' off the start of every feedback line and let each line begin with its own reason, e.g. 'Fair to be hurt, but two weeks of silence usually makes the hurt grow.'"
+    },
+    {
+     "card_id": "amor-fati-setback-reveal",
+     "severity": "medium",
+     "problem": "The insight's line 'Nietzsche wanted nothing to be different' paraphrases Ecce Homo, but the card cites only The Gay Science. There is also no space to say a setback was simply bad, so 'No, keep it' reads as the approved answer even after 'There's no wrong answer'.",
+     "fix": "Add 'Ecce Homo (1888), \"Why I Am So Clever\" §10' to source.work, and change the insight to: 'Amor fati isn't pretending bad things were good. In Ecce Homo Nietzsche wanted nothing to be different; you can start smaller, by asking what a hard chapter gave you, or simply that you survived it.' Add to the end of the reveal: 'If you chose erase, that is honest too: some losses teach nothing worth their price.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The depth is hidden. 'Why? · 15-second read' is a collapsed line under the big orange NEXT button, so the reflective reader is pushed on to the next card before the reasoning. The excellent classical quotes and 'Read next' lines appear in small grey type. Separately, labels on the My map graph overlap: 'Growth' is under 'Connection' and 'Action' under 'Thinking'.",
+     "fix": "In app.js, render the Why section open by default on cards that have from_source or evidence 'philosophy', and place it above the NEXT button. Raise the citation and 'Read next' text in the quote block to the body text color and at least 15px. In the map renderer, offset domain labels with simple collision avoidance (if two label boxes intersect, shift the later one 18px down), or move the labels into the legend only."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "The Tracks page says 'Each game takes under a minute', while the product promises 30 seconds. The three-step choice cards (memento-mori-grudge-choice, creative-truthful-courage-choice, fae-why-late) take a careful reader well over a minute. The 'Quick one' and 'Bit deeper' badges don't match how long the cards actually take.",
+     "fix": "Badge any card with 3 or more steps, or with a radar of 8 or more questions, as 'Bit deeper' (e.g. in app.js: steps.length >= 3 || questions.length >= 8). Change the Tracks subtitle to: '12 topics. Most games take 30 seconds; deeper ones take two minutes.'"
+    }
+   ],
+   "best_cards": [
+    "socratic-ignorance-zip-reveal",
+    "reframing-late-text",
+    "stockdale-paradox-dream-vs-obstacle-choice"
+   ],
+   "verdict": "This is more respectful than I feared. The citations are mostly real and well chosen: the Jowett Apology, Seneca's Letter 13, Aristotle on the lyre-player. The tone is kind and doesn't shame, and the zip test and the late-night text card actually made me think. But in a few places the philosophy gets bent to fit the format. The Golden Mean game always makes the middle answer the mean, which contradicts its own text. Epictetus becomes an app tip. 'Memento mori' never mentions death. 2010s self-help wears an 'Old Wisdom' badge. The good material (the reasoning and the 'Read next' lines) sits collapsed or in small grey type under a loud NEXT button. Fix those and I would recommend it to my former students. As it stands, it is good, not yet wise."
+  },
+  {
+   "persona": "Sam, 24, graduate with anxiety and low self-worth after a rough year; sensitive to shaming, labels and pressure; needs it to feel safe and actually helpful.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "memento-mori-moving-away-reveal",
+     "severity": "high",
+     "problem": "This asks a personal-values question ('Who do you spend it with?') and then grades it. In the screenshot my pick (the author) gets an orange 'wrong' border and the close friend is marked correct. After a lonely year, being told my answer about who I'd spend time with is wrong stings. The try_today also assumes I have 'the one person' to message.",
+     "fix": "Make it a guess about the study, not a judgement of me. Change prompt to: 'In a study, people imagined moving far away in a few weeks with one free half hour. Who did most of them choose to spend it with?' Keep choices and answer:0. Then rewrite try_today to: 'Imagine you're moving away next month. Name one person you'd make time for (friend, relative, old classmate, even someone online) and send them a short hello today. If no one comes to mind right now, that's common after a hard stretch: message someone you'd like to know better.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The headlines on choice and estimate results read like grades: 'You'd coach this one.', '3/3 best calls', 'Plot twist: it's smaller.', and on the swipe card 'Plot twist: this one is …'. Together with the diamond counter, I keep checking my score. When I get one wrong I feel caught out, even though the feedback text underneath is kind.",
+     "fix": "In app.js line 460, drop the tally for sensitive cards (card.sensitive === true), or show it as 'You picked the research-backed move 2 of 3 times'. On line 515, replace 'Plot twist: it's bigger./smaller.' with 'Most people guess higher.' / 'Most people guess lower.' (or use g.typical_miss when it is set). On line 432, replace 'Plot twist: this one is' with 'Surprising one: it's'."
+    },
+    {
+     "card_id": "fae-why-late",
+     "severity": "medium",
+     "problem": "Step 1 says 'Your first thought should be…'. My anxious brain can't choose its first thought, so 'should' makes me feel like I'm already failing. Step 2's wrong option ('I must have annoyed them') is self-blame, not judging the other person's character, so the lesson gets muddled. The 'wrong' label lands on the most anxious, most human reaction.",
+     "fix": "Step 1 scenario: replace 'Your first thought should be…' with 'Which thought helps most?'. Step 2 option 1 feedback: change to 'A painful leap, and a very common one, especially when you're already on edge. Notice it's a story about you made from one dot on a screen. Posting takes five seconds; a real reply takes energy they might not have tonight.'"
+    },
+    {
+     "card_id": "begin-with-end-four-thousand-weeks",
+     "severity": "medium",
+     "problem": "'Plot twist: it's smaller.' plus a bar showing about 4,000 weeks gave me a jolt of dread about running out of time. The reassurance ('not to scare you, but to sharpen you') is buried in the Why section, and this card has no sensitive flag or support footer, unlike the other mortality cards.",
+     "fix": "Add \"sensitive\": true. Change explain to: '80 years × about 52.18 weeks ≈ 4,174. Oliver Burkeman built a whole book around this number. If it feels heavy, that's normal: the point isn't to rush, it's to stop trying to do everything and choose a few things that matter.' Change try_today to: 'Pick one thing this week you'd be glad you made time for, even 20 minutes, and put it in your calendar first.'"
+    },
+    {
+     "card_id": "circle-influence-spectrum",
+     "severity": "medium",
+     "problem": "Q1, Q3 and Q4 force a choice between two extremes. Q1's option 'Read more about it and feel worse' describes how anxiety doomscrolling actually feels, and it is scored -2. Honest anxious players get pushed straight into 'Concern-heavy today'.",
+     "fix": "Add middle options. Q1: insert {\"label\": \"Read a bit, then try to step away\", \"value\": 0}. Q3: insert {\"label\": \"\\\"I wish…\\\"\", \"value\": 0}. Q4: insert {\"label\": \"Whatever I did wrong\", \"value\": -1}. Change zone 1 text to: 'Today a lot of energy went to things you can't move. That's tiring, and common when you're stressed, not a flaw. Pick one worry and find the smallest piece of it that's yours.'"
+    },
+    {
+     "card_id": "memento-mori-grudge-choice",
+     "severity": "low",
+     "problem": "Every non-best feedback opens with 'Not the best move.', six times in one card. It feels like being marked over and over. The same pattern appears in creative-truthful-courage-choice.",
+     "fix": "Delete the leading 'Not the best move.' / 'Not the best move yet.' from all non-best feedback in memento-mori-grudge-choice and creative-truthful-courage-choice, and start with the acknowledging clause instead (e.g. 'Fair to be hurt, but two weeks of silence usually makes the hurt grow, not shrink.'). Also delete the leading 'Best move.' so it matches the gentler cards."
+    },
+    {
+     "card_id": "self-efficacy-radar",
+     "severity": "low",
+     "problem": "Try today asks for 'three things you did well in the past month'. After a rough year I can't think of any, so the exercise turns into proof that I'm failing, which is the opposite of its aim.",
+     "fix": "Rewrite try_today: 'Write down three things you got through or did in the past month, however small (replied to a hard message, cooked a meal, showed up on a bad day). Read the list before your next hard task.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "On My map (dark), the domain labels overlap: 'Growth' sits under 'Connection' and 'Action' is hidden behind 'Thinking'. That makes the map I'm meant to be proud of look broken.",
+     "fix": "In the map renderer, add label collision avoidance: nudge each domain label vertically by ±18px until its bounding box doesn't intersect an already-placed label, or put the labels in the legend only."
+    }
+   ],
+   "best_cards": [
+    "reframing-late-text",
+    "stress-mindset-choice-fuel",
+    "wso-triad-venn"
+   ],
+   "verdict": "This felt mostly safe, and some of it actually helped me. The 'We need to talk' card was exactly my 11pm spiral, and the 'I'm excited' card gave me a script I'll use this week. The WSO 'Starting Line' result ('a starting point, not a verdict') felt kind. The snapshot disclaimers, the helpline footers and the gentle wrong-answer feedback show real care. What pulls it down is the leftover grading: a values question scored right or wrong, 'Plot twist' and 'x/3 best calls' headlines, a 'should' about my first thought, and a weeks-left number with no softening. Fix those and it would feel like a friend, not a test."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist. I check every claim, attribution and effect size, and I look for replication-crisis myths, overclaiming and weak survey design.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "inversion-guarantee-failure",
+     "severity": "high",
+     "problem": "The insight cites a study for something it did not test. Mitchell, Russo & Pennington (1989) studied temporal perspective: imagining that an outcome had already happened. They did not compare picturing failure with picturing success. The ~30% figure is Klein's popular paraphrase of their result. The card is also tagged evidence 'philosophy' while it makes an empirical claim.",
+     "fix": "Replace insight with: \"Picturing success gives vague answers; picturing failure gives a checklist. In one study, imagining an outcome had already happened helped people come up with more reasons for it (Mitchell et al., 1989). Klein's 'premortem' builds on this.\" Remove '~30%'. Change evidence to \"moderate\", or keep \"philosophy\" and drop the study claim completely."
+    },
+    {
+     "card_id": "stockdale-paradox-dream-vs-obstacle-choice",
+     "severity": "high",
+     "problem": "It leaves out Oettingen's key condition. Mental contrasting raises effort only when people already expect they can succeed. When expectations are low, it lowers commitment, which is by design: it helps people disengage. 'Modest but replicated' also overstates a mixed replication record. The Stockdale story comes second-hand through Collins and is not evidence, yet it shares the insight's first line with the research.",
+     "fix": "Rewrite insight: \"Oettingen found that pairing a wish with its main obstacle boosted effort when success felt possible, and helped people let go when it didn't. Stockdale's story (via Jim Collins) is an anecdote that points the same way.\" Change step 1 option 3 feedback to: \"Honest about today. If success truly feels out of reach, it's worth asking whether this goal, or a smaller one, is the right fight.\""
+    },
+    {
+     "card_id": "memento-mori-moving-away-reveal",
+     "severity": "high",
+     "problem": "Survey-design error. The prompt asks a personal-preference question ('Who do you spend it with?') and then grades it with answer: 0. A player who honestly picks the book author is marked wrong for their own value. Fredrickson & Carstensen measured how often groups chose each option, not which choice was correct.",
+     "fix": "Change prompt to: \"In a classic study, people imagined moving far away in a few weeks with one free half hour. Which person did most of them choose to spend it with?\" Keep answer: 0. Add to reveal: \"There's no wrong personal choice here; this is about what most people did.\""
+    },
+    {
+     "card_id": "impermanence-worry-reveal",
+     "severity": "medium",
+     "problem": "The reveal starts 'Many people can't' with no data behind it. It then cites affective forecasting, which concerns predicting future feelings (the impact or durability bias), not forgetting past worries, so the conclusion does not follow from the question. The impact bias is also partly a measurement artifact (Levine et al., 2012), so it needs a hedge. The three answer choices get no different feedback.",
+     "fix": "Change reveal to: \"Whatever you answered, notice how today's weight compares. Research on affective forecasting (Wilson & Gilbert) finds we often predict bad events will hurt longer than they do, though the gap is smaller than first thought. Feelings are weather: real, sometimes heavy, but they move. If a heavy mood isn't lifting for weeks, talk to someone you trust.\" In insight, change 'We tend to overestimate' to 'We often overestimate'."
+    },
+    {
+     "card_id": "availability-feels-common",
+     "severity": "medium",
+     "problem": "The 'Car crashes = more common than it feels' item conflicts with the classic data. In Lichtenstein et al. (1978), people overestimated accident deaths, motor vehicles included, relative to disease. The prompt 'Compared to how often it feels like it happens' is also ambiguous: feels to whom? Players are left guessing what the experimenter thinks. 'Strong' evidence for availability as the cause of risk misestimates also overstates it, because part of the pattern is regression toward the mean.",
+     "fix": "Replace the Car crashes item with {\"text\":\"Diabetes as a cause of death\",\"side\":\"right\",\"why\":\"It kills over a million people a year worldwide (WHO), quietly and with little coverage.\"}. Change prompt to: \"Most people's gut sense of how often this happens is…\" with left \"Too high (it's rarer)\" and right \"Too low (it's more common)\". Change evidence to \"moderate\"."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "medium",
+     "problem": "All six items are worded positively, so a tired or agreeable player who taps 'agree' everywhere lands in 'All Lights On' (acquiescence bias). The schema already supports invert:true but the card does not use it. 'I could do a rough version today' (Skill) also depends on time and access today, which is the Opportunity axis.",
+     "fix": "Replace \"I'd still do it if nobody ever knew.\" with {\"q\":\"I'd drop this if it got boring for a week.\",\"axis\":\"W\",\"invert\":true}. Replace \"I could do a rough version today.\" with {\"q\":\"If I had a free hour, I wouldn't know where to begin.\",\"axis\":\"S\",\"invert\":true}. Replace \"I have the time and tools to start this week.\" with {\"q\":\"Something outside my control (money, rules, someone's permission) is blocking this.\",\"axis\":\"O\",\"invert\":true}."
+    },
+    {
+     "card_id": "self-efficacy-radar",
+     "severity": "medium",
+     "problem": "Bandura was clear that self-efficacy is task-specific, but the items refer to 'what I want to do' and 'this' without ever asking the player to pick a task, so the answers mix several domains. All 8 items are positively keyed. 'Evidence: strong' fits the four-source model, but the Body axis is really Jamieson's arousal reappraisal, which has more modest support.",
+     "fix": "Add game.prompt: \"Pick one specific thing you want to get better at (a subject, a sport, speaking up). Answer every line for that one thing.\" Change item 2 to {\"q\":\"I often give up on this before I finish.\",\"axis\":0,\"invert\":true}. Change item 8 to {\"q\":\"When my heart races before this, I take it as a sign I'll fail.\",\"axis\":3,\"invert\":true}. In insight, add: \"Own wins count most (Usher & Pajares, 2008).\""
+    },
+    {
+     "card_id": "golden-mean-courage-spectrum",
+     "severity": "low",
+     "problem": "In all four items the moderate option is the obvious 'correct' middle (value 0) and the extremes are caricatures ('Go in trainers, no water'), so anyone can score 'near the mean' by picking the middle every time. The spectrum measures social desirability, not calibration. That works against the card's own point that the mean is not the midpoint. circle-influence-spectrum has the same problem: its labels are value-laden ('Complain about them to others').",
+     "fix": "Make the extremes plausible and break the pattern. Item 2 options become \"Decline; I've never done one that long\" (-2), \"Say yes, then check the route and weather\" (0), \"Say yes and pick the harder route to push myself\" (2). Item 4 middle becomes \"Reply 'not cool' in the chat and message them privately\" (0), and the bold option becomes \"Screenshot it and post it publicly to call them out\" (2). Add one item where the brave option scores 0 and the hedging option scores -1, e.g. \"You saw a classmate cheat on a test that's graded on a curve\" with options \"Ignore it\" (-2), \"Tell the teacher privately\" (0), \"Confront them in front of the class\" (2)."
+    }
+   ],
+   "best_cards": [
+    "still-water-vision-hidden-clue",
+    "socratic-ignorance-zip-reveal",
+    "fae-why-late"
+   ],
+   "verdict": "Better sourcing than most pop-psych apps. The skill-gap card debunks the 10,000-hour rule and fae-why-late cites Malle's meta-analysis on the actor-observer effect. Stress-mindset says Brooks's effects were small, and the safety footers are good. The weak spots are on the measurement side. One reveal grades a personal preference as a right answer (moving-away). Every questionnaire item is positively keyed even though invert:true exists. The spectrums let you score well by picking the middle every time. Some citations are used for claims they did not test: Mitchell 1989 for failure-framing, affective forecasting for forgetting old worries, and Oettingen without her expectancy condition. Fix those and this becomes a trustworthy 8. For now it's a solid 7 with a few overclaims."
+  },
+  {
+   "persona": "Lina, 31, product designer for mobile games and learning apps. I look at hook strength, pacing, game feel, how clear the tap targets are, reward moments, and whether people would share it.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Estimate cards start the slider at the midpoint of the range (20,300 weeks on four-thousand-weeks, 123 sec on attention-residue). If I just tap through without dragging, I still get a 'Plot twist: it's smaller.' reveal I didn't earn. The default position also leaks the direction: on both cards the answer sits far left. On the weeks card a linear 500 to 50,000 range means the real answer (4,174) sits in the first 7% of the track, so landing near it with a thumb is basically impossible, and step:2 is pointless at that scale.",
+     "fix": "Disable the reveal until the slider has been moved at least once (show 'Drag to guess' in place of the number), and start the thumb at a random position or at 25%. For begin-with-end-four-thousand-weeks set min 1000, max 30000, step 100. For attention-residue-estimate set min 5, max 300, step 5. Or use a log-scaled slider for any estimate whose max/min ratio is above 20."
+    },
+    {
+     "card_id": "leverage-points-order",
+     "severity": "high",
+     "problem": "After ordering, every placed chip turns the same teal whether it was right or wrong. The only feedback is a tiny orange monospace '→ step 4' that wraps onto its own line. Then the explain block repeats all five full item strings joined by arrows, which is a wall of text. The reward moment doesn't land and I can't see at a glance what I got wrong.",
+     "fix": "Colour each chip green when it's in the correct slot and orange when it isn't, and show the correct step as a right-aligned badge ('✓' or 'was 4'). Shorten the items to label plus a few words so they fit on 2 lines: 'Numbers: extra fine per phone', 'Information: show phone-free vs phone-on results', 'Rules: phones in a box at the door', 'Goals: judge sessions on focus', 'Mindset: phones out stops feeling normal'. Render the order line using the labels only: 'Numbers → Information → Rules → Goals → Mindset'."
+    },
+    {
+     "card_id": "memento-mori-grudge-choice",
+     "severity": "medium",
+     "problem": "Every feedback line opens with 'Not the best move.' or 'Best move.' In the 3/3 screenshot that is already shown by the green and orange option borders, so it reads as a scolding stamp, 9 times in one card. The end banner 'Good instincts. One more trick below.' on 1/3 also doesn't match what happened.",
+     "fix": "Delete the leading 'Not the best move.' / 'Not the best move yet.' / 'Best move.' from all 9 feedback strings and start from the second sentence (e.g. 'Understandable, but a cool reply can turn one more year into five.'). Do the same on creative-truthful-courage-choice. For a 1/3 result, change the banner to 'Honest instincts. Here's the move that keeps the door open.'"
+    },
+    {
+     "card_id": "memento-mori-moving-away-reveal",
+     "severity": "medium",
+     "problem": "The prompt asks a personal preference ('Who do you spend it with?') but then grades it with answer:0. Anyone who picks the author they loved gets marked wrong for an honest choice. The hook 'choose like their grandparents' is also hard to parse on first read.",
+     "fix": "Reword the prompt to: 'Researchers asked young adults to imagine moving far away in a few weeks, with one free half hour. Who did most pick to spend it with?' Keep the same choices and answer:0. Change the hook to: 'Imagine you're moving away next month. Who gets your last free half hour?'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "medium",
+     "problem": "The result shows 'Will 0/10 · Skill 0/10 · Opportunity 0/10' and a lone black dot floating outside all three circles at bottom left. It looks like a rendering bug, not a placement. Getting 0/0/0 on a goal I chose also feels deflating, even with the kind copy.",
+     "fix": "When no axis passes the threshold, put the dot just below the Opportunity circle with a small label 'You: starting line'. Show scores as filled bars, not '0/10' text. Add one more lenient Skill question such as 'I've done something a bit like this before.' so a beginner rarely scores a flat 0."
+    },
+    {
+     "card_id": "golden-mean-courage-spectrum",
+     "severity": "medium",
+     "problem": "In all 4 questions the middle option is the reasonable one and the extremes are caricatures ('Go in trainers, no water'). It's a 'pick the middle' pattern that's solved after question 1, so there's no tension. circle-influence-spectrum has the same problem: the 'good' answer is obvious every time.",
+     "fix": "Rewrite at least two questions so the mean isn't the middle answer. For example, for the group chat mocking question use options 'Say nothing' (-2), 'Post \"not cool\" in the chat right away' (0), 'Message them privately and leave the chat alone' (-1), and 'Screenshot it and post it publicly' (2). Shuffle option order per question so the middle slot isn't always the right one."
+    },
+    {
+     "card_id": "stockdale-paradox-dream-vs-obstacle-choice",
+     "severity": "low",
+     "problem": "The title and concept are Stockdale, but all 3 steps are Oettingen's wish-obstacle-plan. Stockdale's story never shows up in play, only in the insight. The tension in the hook ('Picturing success... might be the problem') pays off well, but the label doesn't match what you play.",
+     "fix": "Rename the title to 'Hope Plus the Wall: Wish, Obstacle, Plan'. Rewrite step 1's scenario to include one line about Stockdale: 'A prisoner of war said the optimists who expected release by Christmas broke first. Your exam is in three weeks and you're behind. What do you tell yourself tonight?'"
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "On My map (light), cluster labels collide: 'Growth' sits under 'Connection', and 'Action' is cut off by 'Thinking'. On swipe results (availability-feels-common), wrong items show a circular-arrow icon that reads as 'retry', not 'you missed this'.",
+     "fix": "Add label collision avoidance on the map: offset overlapping labels vertically by at least one line height, or draw labels at the cluster centroid with a white halo. On swipe results, replace the circular-arrow icon for wrong items with an orange '×' and add 'You said: rarer' before the correct side."
+    }
+   ],
+   "best_cards": [
+    "still-water-vision-hidden-clue",
+    "dichotomy-of-control-delayed-flight",
+    "begin-with-end-four-thousand-weeks"
+   ],
+   "verdict": "The writing is solid and kind. Hooks like the cancelled flight, the zip test and 4,000 weeks would make me stop scrolling, and the try-today lines are concrete enough to use. Safety is strong: every result says 'snapshot, not a verdict', sensitive cards carry a helpline, and the evidence is hedged honestly. Game feel is the weak spot. Estimate sliders hand you the reveal without a real guess. Order and choice results don't celebrate or clearly mark right versus wrong. Several spectrum cards are solved by 'pick the middle'. Repeated 'Not the best move.' prefixes feel like grading, not playing. Fix the reward moments and remove the obvious answers, and this goes from a nice reading app to something I'd send to a friend."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Too many cards in this batch are about adults. Flight cancellations, a teammate taking credit in a meeting, a sister and a falling-out over a family holiday, 'after school or work', a work report. Each time I think 'not me' and swipe away. Hooks like 'Begin with the end' ask about my 80th birthday and a weekly calendar, and I don't keep one.",
+   "fix": "For every card with \"level\": 1, make the first step a teen or student scenario and move adult ones to step 2 or 3. Concrete rewrites: dichotomy-of-control-delayed-flight step 1 scenario -> \"Your train to the concert is cancelled. 200 angry people on the platform. You...\" (options: rant in the group chat / check the app for the next train or a bus while you queue / wait for an announcement). memento-mori-grudge-choice step 2 -> \"In a group project, someone presents your idea to the teacher as theirs...\". begin-with-end-eulogy-radar hook -> \"Would the people you love recognise you from how you spent this week?\"",
+   "from": "Maya, 16, Manchester. I live on TikTok and I bail on anything that feels like homework or a lecture. I stay if it's fast, surprising and about me."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "On My map (view-map-light.png) the cluster labels overlap: 'Growth' sits under 'Connection' and 'Action' under 'Thinking'. The map also says 'You've explored all 88 ideas' while my streak is 1, so I do not trust the map.",
+   "fix": "Use collision avoidance for the domain labels. Either nudge each label vertically until its bounding box does not cross another label, or put the label at the cluster's top-most node with an 8px offset. Change the progress line so it counts only cards actually finished, e.g. 'You've played N of 88 ideas.' Show 'all 88' only when N = 88.",
+   "from": "Radu, 44, engineering manager in Cluj. Tired, a bit burned out, non-native English. I want tools I can use tomorrow in my 1:1s and stand-ups, and for my own head. I played 23 cards and looked at 14 screenshots (venn, order, estimate, choice, reveal, radar, spectrum, swipe, map, feed dark)."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The depth is hidden. 'Why? · 15-second read' is a collapsed line under the big orange NEXT button, so the reflective reader is pushed on to the next card before the reasoning. The excellent classical quotes and 'Read next' lines appear in small grey type. Separately, labels on the My map graph overlap: 'Growth' is under 'Connection' and 'Action' under 'Thinking'.",
+   "fix": "In app.js, render the Why section open by default on cards that have from_source or evidence 'philosophy', and place it above the NEXT button. Raise the citation and 'Read next' text in the quote block to the body text color and at least 15px. In the map renderer, offset domain labels with simple collision avoidance (if two label boxes intersect, shift the later one 18px down), or move the labels into the legend only.",
+   "from": "Elena, 68, retired literature teacher. Reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader; impatient with pop-psych shortcuts."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "The Tracks page says 'Each game takes under a minute', while the product promises 30 seconds. The three-step choice cards (memento-mori-grudge-choice, creative-truthful-courage-choice, fae-why-late) take a careful reader well over a minute. The 'Quick one' and 'Bit deeper' badges don't match how long the cards actually take.",
+   "fix": "Badge any card with 3 or more steps, or with a radar of 8 or more questions, as 'Bit deeper' (e.g. in app.js: steps.length >= 3 || questions.length >= 8). Change the Tracks subtitle to: '12 topics. Most games take 30 seconds; deeper ones take two minutes.'",
+   "from": "Elena, 68, retired literature teacher. Reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader; impatient with pop-psych shortcuts."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The headlines on choice and estimate results read like grades: 'You'd coach this one.', '3/3 best calls', 'Plot twist: it's smaller.', and on the swipe card 'Plot twist: this one is …'. Together with the diamond counter, I keep checking my score. When I get one wrong I feel caught out, even though the feedback text underneath is kind.",
+   "fix": "In app.js line 460, drop the tally for sensitive cards (card.sensitive === true), or show it as 'You picked the research-backed move 2 of 3 times'. On line 515, replace 'Plot twist: it's bigger./smaller.' with 'Most people guess higher.' / 'Most people guess lower.' (or use g.typical_miss when it is set). On line 432, replace 'Plot twist: this one is' with 'Surprising one: it's'.",
+   "from": "Sam, 24, graduate with anxiety and low self-worth after a rough year; sensitive to shaming, labels and pressure; needs it to feel safe and actually helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "On My map (dark), the domain labels overlap: 'Growth' sits under 'Connection' and 'Action' is hidden behind 'Thinking'. That makes the map I'm meant to be proud of look broken.",
+   "fix": "In the map renderer, add label collision avoidance: nudge each domain label vertically by ±18px until its bounding box doesn't intersect an already-placed label, or put the labels in the legend only.",
+   "from": "Sam, 24, graduate with anxiety and low self-worth after a rough year; sensitive to shaming, labels and pressure; needs it to feel safe and actually helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Estimate cards start the slider at the midpoint of the range (20,300 weeks on four-thousand-weeks, 123 sec on attention-residue). If I just tap through without dragging, I still get a 'Plot twist: it's smaller.' reveal I didn't earn. The default position also leaks the direction: on both cards the answer sits far left. On the weeks card a linear 500 to 50,000 range means the real answer (4,174) sits in the first 7% of the track, so landing near it with a thumb is basically impossible, and step:2 is pointless at that scale.",
+   "fix": "Disable the reveal until the slider has been moved at least once (show 'Drag to guess' in place of the number), and start the thumb at a random position or at 25%. For begin-with-end-four-thousand-weeks set min 1000, max 30000, step 100. For attention-residue-estimate set min 5, max 300, step 5. Or use a log-scaled slider for any estimate whose max/min ratio is above 20.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I look at hook strength, pacing, game feel, how clear the tap targets are, reward moments, and whether people would share it."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "On My map (light), cluster labels collide: 'Growth' sits under 'Connection', and 'Action' is cut off by 'Thinking'. On swipe results (availability-feels-common), wrong items show a circular-arrow icon that reads as 'retry', not 'you missed this'.",
+   "fix": "Add label collision avoidance on the map: offset overlapping labels vertically by at least one line height, or draw labels at the cluster centroid with a white halo. On swipe results, replace the circular-arrow icon for wrong items with an orange '×' and add 'You said: rarer' before the correct side.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I look at hook strength, pacing, game feel, how clear the tap targets are, reward moments, and whether people would share it."
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 11,
+   "skipped": [
+    "wso-triad-venn (Radu, Lina): the fixes to dot placement, the 'Starting point' label and score bars need app.js changes, which are outside this file. I added the try_team teammate line to try_team rather than to the result text.",
+    "wso-triad-venn (Okafor): I used only two of the three inverted items (the S and O ones). This balances the keying against the 3-4 question limit Maya and lessons.json set. The W item uses Maya's wording.",
+    "self-efficacy-radar (Okafor): I did not add inverted items 2 and 8. The radar renderer in app.js ignores 'invert', so those items would score backwards. I made the closest safe change: a task-specific game.prompt and the Usher & Pajares citation.",
+    "self-efficacy-radar (Maya): the result headline based on the highest axis already comes from app.js ('Strongest: X'). The cookie-jar teaser is not in action.json.",
+    "All other card_ids are in other domain files. No insight in the file was over 200 characters. needs_review.json is empty."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 1,
+   "skipped": [
+    "All 39 listed issues: none of their card_ids are in perception.json (ignored per instructions)",
+    "Insight length: all 15 insights already <= 200 chars (max is stress-mindset-spectrum at exactly 200)",
+    "needs_review.json lists no cards, so no machine-generated cards needed upgrading"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 15,
+   "skipped": [
+    "availability-feels-common: selfie and falling-coconut comparisons left out because I couldn't source them. Shark line now ends after 'a year worldwide'.",
+    "availability-feels-common: showing the 'why' line for correct swipes is an app.js change, outside this file",
+    "fae-why-late: a 4th step isn't possible because the schema and validator cap choice cards at 3 steps. I replaced the weaker birthday step with the repeated-missed-deadlines step instead.",
+    "fae-why-late: the '2/3. You already think like a detective.' end headline is app.js copy, outside this file",
+    "fae-why-late: Radu's 'What goes through your head first?' not used. Sam's 'Which thought helps most?' was used because the step has a best answer.",
+    "Issues for cards not in thinking.json were ignored (leverage-points-order, wso-triad-venn, self-efficacy-radar, memento-mori-*, golden-mean, circle-influence, stockdale, dichotomy, impermanence, amor-fati, creative-truthful, begin-with-end, socratic, order-chaos, etc.)",
+    "needs_review.json lists no cards, so there was nothing to bring up to standard"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 4,
+   "skipped": [
+    "leverage-points-order: app.js rendering changes (rounded rectangles, per-row correct/'should be #N' badges, green/orange chip colouring) are outside this file's scope; only the content edits were made",
+    "leverage-points-order: Radu's sprint-deadline scenario was not used. Maya's doomscrolling scenario was chosen because it fits teens and adults, and its items were shortened following Lina's fix",
+    "All other issue card_ids are not in systems.json",
+    "Insight length: all 11 insights were already 200 characters or fewer",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 1,
+   "skipped": [
+    "All 41 listed issues target card_ids not present in habits.json (leverage-points-order, wso-triad-venn, fae-why-late, memento-mori-*, golden-mean-*, etc.)",
+    "No insight exceeds 200 characters (max 197)",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 0,
+   "skipped": [
+    "All 41 issues target card_ids not in emotions.json (leverage-points-order, begin-with-end-four-thousand-weeks, wso-triad-venn, self-efficacy-radar, availability-feels-common, fae-why-late, socratic-ignorance-zip-reveal, memento-mori-moving-away-reveal, circle-influence-spectrum, dichotomy-of-control-delayed-flight, stockdale-paradox-dream-vs-obstacle-choice, golden-mean-courage-spectrum, creative-truthful-courage-choice, impermanence-worry-reveal, memento-mori-grudge-choice, amor-fati-setback-reveal, inversion-guarantee-failure, order-chaos-border, loss-aversion-coin-flip)",
+    "No insight over 200 chars (max 186)",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 7,
+   "skipped": [
+    "order-chaos-border: the Legge quote is 33 words and the validator caps quotes at 30, so it was cut with an ellipsis after 'have emerged)'. The cite was changed exactly as asked.",
+    "stockdale-paradox-dream-vs-obstacle-choice: Radu's sprint-release scenario went into step 2, replacing the trials step, instead of step 1. Step 1 stayed an exam scenario, now with Lina's Stockdale line and a shortened best option, so the card fits both teens and adults.",
+    "stockdale-paradox-dream-vs-obstacle-choice: Okafor's insight wording was trimmed slightly to stay under 200 characters (195).",
+    "Every other issue was skipped because its card_id is not in meaning.json (leverage-points-order, wso-triad-venn, memento-mori-*, fae-why-late, golden-mean-*, availability-feels-common, loss-aversion-coin-flip, and the rest).",
+    "No insights were over 200 characters, and needs_review.json lists no cards, so no further edits were needed."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 0,
+   "skipped": [
+    "All 39 issues target cards not in growth.json (e.g. leverage-points-order, wso-triad-venn, memento-mori-*, golden-mean-courage-spectrum); no matching ids",
+    "needs_review.json has no cards",
+    "All insights already <=200 chars",
+    "No sibling pattern phrases (\"Not the best move.\", \"should be\") found in growth.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 0,
+   "skipped": [
+    "All 41 panel and fact-check issues target cards that are not in connection.json (leverage-points-order, begin-with-end-four-thousand-weeks, wso-triad-venn, self-efficacy-radar, availability-feels-common, fae-why-late, socratic-ignorance-zip-reveal, memento-mori-moving-away-reveal, circle-influence-spectrum, dichotomy-of-control-delayed-flight, stockdale-paradox-dream-vs-obstacle-choice, golden-mean-courage-spectrum, creative-truthful-courage-choice, impermanence-worry-reveal, memento-mori-grudge-choice, amor-fati-setback-reveal, inversion-guarantee-failure, order-chaos-border, loss-aversion-coin-flip)",
+    "Pattern check found nothing to change: no feedback starts with 'Not the best move', no 'should' lecture lines, every reveal is a factual guess rather than a graded personal choice, and the one order card (steelmanning-order) has short items",
+    "Insight length: all 14 insights are already 200 characters or fewer (longest is 193)",
+    "needs_review.json lists no cards, so there were no machine-generated cards to rework"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 0,
+   "skipped": [
+    "None of the issue card_ids are in attention.json, so all panel issues were ignored",
+    "No insight is over 200 chars (max 193)",
+    "needs_review.json is empty, so no machine-generated cards to fix",
+    "Pattern scan found nothing to fix: no 'Not the best move' stamps, no hint that gives away an answer, and order items are short"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 1,
+   "skipped": [
+    "None of the QA issue card_ids are in decisions.json (all belong to other domain files); no direct fixes applicable",
+    "All insights already <=200 chars",
+    "needs_review.json is empty; no machine-generated cards to fix",
+    "Sibling-pattern fix applied: regret-minimization-80 prompt reframed from personal-value question to 'what most people report' so answer:1 no longer grades the player's own values (same pattern as memento-mori-moving-away-reveal)"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 39,
+   "skipped": [
+    "begin-with-end-four-thousand-weeks: start handle at 10000 - app.js starts the slider at min (or anchor, which would mean an anchoring demo), so no card field for it; min/max set to 1000/20000",
+    "memento-mori-grudge-choice: 1/3 end-banner text lives in app.js, not the card",
+    "socratic-ignorance-zip-reveal: 5-second pause between beats needs app.js; folded both beats into one prompt and removed the graded answer",
+    "memento-mori-moving-away-reveal (Radu): remove answer:0 - conflicts with Sam/Okafor/Lina fix; reframed the prompt as a guess about the study and kept answer:0, with a 'no wrong personal choice' line in the reveal",
+    "creative-truthful-courage-choice: domain change to 'connection' is not allowed (the concept truthful_courage is in domain wisdom); added the Proverbs 27:6 KJV from_source and Plutarch instead",
+    "circle-influence-spectrum: added Epictetus, Discourses I.1 (Long) as the classical root instead of Seneca's On the Shortness of Life, which is not about the circle of influence",
+    "golden-mean-courage-spectrum: shuffled option order by hand; per-render shuffling would need app.js",
+    "leverage-points-order, wso-triad-venn, self-efficacy-radar, availability-feels-common, fae-why-late, stockdale-paradox-dream-vs-obstacle-choice, inversion-guarantee-failure, order-chaos-border, loss-aversion-coin-flip: not in wisdom.json",
+    "needs_review.json: card list is empty, so no machine-generated cards to bring up to standard"
+   ],
+   "validator_errors": 0
+  }
+ ]
+}

@@ -5,7 +5,7 @@
 
   // ---------- state ----------
   const KEY = "qlip.v1";
-  const blank = () => ({ seen: {}, done: {}, liked: {}, profile: {}, commits: {}, streak: { last: "", n: 0 }, trail: [] });
+  const blank = () => ({ seen: {}, done: {}, liked: {}, profile: {}, commits: {}, streak: { last: "", n: 0 }, trail: [], aud: { young: 0, work: 0 } });
   const S = (() => {
     try { return Object.assign(blank(), JSON.parse(localStorage.getItem(KEY) || "{}")); } catch { return blank(); }
   })();
@@ -87,6 +87,7 @@
         s -= Math.max(0, c.level - (1 + played / 6)) * 1.5;
         s += (CONCEPT[c.concept]?.rank || 0) * 25;
         s += hash(c.id + SESSION) * 1.6;
+        if (c.audience !== "all") s += Math.max(-2, Math.min(2, (S.aud?.[c.audience] || 0) * 0.5));
         if (s > bestScore) { bestScore = s; best = c; }
       }
       if (!best) break;
@@ -108,6 +109,7 @@
   const feed = $("#view-feed");
   let queue = [];
   let activeEl = null;
+  const skipped = new Set();
 
   function appendCards(ids) {
     for (const id of ids) { queue.push(id); feed.append(renderCard(CARD[id])); }
@@ -123,6 +125,11 @@
       if (!id) continue;
       if (!el.dataset.counted) { el.dataset.counted = "1"; S.seen[id] = (S.seen[id] || 0) + 1; save(); }
       const idx = queue.indexOf(id);
+      // the card above was scrolled past without playing: a soft "not for me" signal
+      const prevId = queue[idx - 1];
+      if (prevId && !S.done[prevId] && CARD[prevId]?.audience !== "all" && !skipped.has(prevId)) {
+        skipped.add(prevId); S.aud = S.aud || { young: 0, work: 0 }; S.aud[CARD[prevId].audience] -= 1; save();
+      }
       if (idx >= queue.length - 3) appendCards(recommend(queue, 4));
     }
   }, { root: feed, threshold: [0.6] });
@@ -161,6 +168,7 @@
     function finish(result = {}) {
       S.done[card.id] = Date.now();
       S.trail = S.trail.concat(card.concept).slice(-20);
+      if (card.audience !== "all") { S.aud = S.aud || { young: 0, work: 0 }; S.aud[card.audience] += 1; }
       lastResult[card.id] = result.name;
       if (result.profile) S.profile[card.id] = { label: result.name, title: card.title, concept: card.concept, at: Date.now() };
       bumpStreak(); save();
@@ -205,11 +213,6 @@
     wrap.append(h("div", { class: "try" }, cb, h("label", { for: cbId }, h("b", {}, "Try today"), card.try_today)));
     if (card.try_team) wrap.append(h("p", { class: "team-line" }, h("b", {}, "👥 With others: "), card.try_team));
     const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).filter((id) => !sameStory(card, CARD[id])).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || []).find((id) => !sameStory(card, CARD[id]))]).filter(([cid, t]) => t && CONCEPT[cid]);
-    if (targets.length) {
-      const [cid, t] = targets[0];
-      const hook = card.sensitive || CARD[t].sensitive ? CONCEPT[cid].line : CARD[t].hook.length > 52 ? CARD[t].hook.slice(0, 50).replace(/\s+\S*$/, "") + "…" : CARD[t].hook;
-      wrap.append(h("button", { class: "btn next-up", onclick: () => jumpTo(t) }, h("small", {}, `Next · ${CONCEPT[cid].name}`), `${hook}\u00a0→`));
-    }
     const ev = { strong: "Strong evidence", moderate: "Moderate evidence", contested: "Contested — read critically", philosophy: "Philosophical lens" }[card.evidence];
     const more = h("details", { class: "why" }, h("summary", {}, "Why? · 15-second read"),
       h("p", {}, card.insight),
@@ -219,6 +222,11 @@
     if (targets.length > 1) more.append(h("div", { class: "related" }, targets.slice(1).map(([cid, t]) =>
       h("button", { onclick: () => jumpTo(t) }, h("span", {}, DOMAIN[CONCEPT[cid].domain].name), CONCEPT[cid].name))));
     wrap.append(more);
+    if (targets.length) {
+      const [cid, t] = targets[0];
+      const hook = card.sensitive || CARD[t].sensitive ? CONCEPT[cid].line : CARD[t].hook.length > 52 ? CARD[t].hook.slice(0, 50).replace(/\s+\S*$/, "") + "…" : CARD[t].hook;
+      wrap.append(h("button", { class: "btn next-up", onclick: () => jumpTo(t) }, h("small", {}, `Next · ${CONCEPT[cid].name}`), `${hook}\u00a0→`));
+    }
     if (card.sensitive) wrap.append(h("p", { class: "sens" }, "This is for reflection, not diagnosis. If things feel heavy, talk to someone you trust or find free support at ",
       h("a", { href: "https://findahelpline.com", target: "_blank", rel: "noopener" }, "findahelpline.com"), "."));
     wrap.append(h("button", { class: "replay", onclick: replay }, "Play again"));
@@ -269,7 +277,7 @@
     S.streak.n = S.streak.last === y ? S.streak.n + 1 : 1;
     S.streak.last = t;
     $("#streak-n").textContent = S.streak.n;
-    if (S.streak.n > 1) toast(`${S.streak.n}-day streak`);
+
   }
 
   // ---------- games ----------
@@ -436,11 +444,11 @@
             btns.remove(); stage.remove(); fb.remove();
             const n = g.items.length, misses = log.filter((x) => !x.ok);
             const recap = h("ul", { class: "recap" }, log.slice().sort((a, b) => a.ok - b.ok).map((x) =>
-              h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, x.ok ? "✓" : "↺"),
+              h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, x.ok ? "✓" : "→"),
                 h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.label}${x.ok ? "" : " · " + x.it.why}`)))));
             score.replaceWith(recap);
             done({ name: right === n ? "Clean sweep." : right >= n * 0.75 ? `${right} of ${n}. Sharp sorting.` : `${right} of ${n}. Here's the pattern.`,
-              tally: misses.length ? "The ↺ ones are worth a second look." : "" });
+              tally: misses.length ? "The → ones show where each really belongs." : "" });
           }
           else show();
         }, 1100);
@@ -628,11 +636,16 @@
     sim.topPlayed = new Set(sim.hit.filter((n) => n.p).sort((a, b) => b.p - a.p).slice(0, 8).map((n) => n.id));
     ctx.save(); ctx.textAlign = "center"; ctx.textBaseline = "middle";
     ctx.font = `800 13px ${css.getPropertyValue("--font-display")}`;
+    const placed = [];
     for (const d of DB.domains) {
       const ns = sim.hit.filter((n) => CONCEPT[n.id].domain === d.id); if (!ns.length) continue;
-      const cx = ns.reduce((a, n) => a + n.x, 0) / ns.length, cy = Math.min(...ns.map((n) => n.y)) - 14;
-      ctx.lineWidth = 4; ctx.strokeStyle = css.getPropertyValue("--surface"); ctx.strokeText(d.name, cx, Math.max(10, cy));
-      ctx.fillStyle = d.color; ctx.fillText(d.name, cx, Math.max(10, cy));
+      const cx = ns.reduce((a, n) => a + n.x, 0) / ns.length;
+      let cy = Math.max(10, Math.min(...ns.map((n) => n.y)) - 14);
+      const w = ctx.measureText(d.name).width / 2 + 4;
+      for (let tries = 0; tries < 6 && placed.some((b) => Math.abs(b[0] - cx) < b[2] + w && Math.abs(b[1] - cy) < 16); tries++) cy += 16;
+      placed.push([cx, cy, w]);
+      ctx.lineWidth = 4; ctx.strokeStyle = css.getPropertyValue("--surface"); ctx.strokeText(d.name, cx, cy);
+      ctx.fillStyle = d.color; ctx.fillText(d.name, cx, cy);
     }
     ctx.restore();
     // Labels last, skipping any that would collide with one already drawn.
@@ -655,10 +668,10 @@
     const domPlays = {};
     for (const [cid, n] of Object.entries(plays)) domPlays[CONCEPT[cid].domain] = (domPlays[CONCEPT[cid].domain] || 0) + n;
     const top = Object.entries(domPlays).sort((a, b) => b[1] - a[1])[0];
-    $("#map-summary").textContent = lit
+    $("#map-summary").textContent = (S.streak.n > 1 ? `${S.streak.n}-day streak. ` : "") + (lit
       ? lit >= DB.concepts.length ? `You've explored all ${lit} ideas. New ones grow into the graph every day.`
       : `You've lit up ${lit} of ${DB.concepts.length} ideas.${top ? ` Most explored: ${DOMAIN[top[0]].name}.` : ""}`
-      : `${DB.concepts.length} ideas are waiting. Play any game to light up your first one.`;
+      : `${DB.concepts.length} ideas are waiting. Play any game to light up your first one.`);
     $("#map-legend").replaceChildren(...DB.domains.map((d) => h("span", {}, h("i", { style: `background:${d.color}` }), d.name)));
     const prof = Object.entries(S.profile).sort((a, b) => b[1].at - a[1].at);
     $("#profile-list").replaceChildren(...(prof.length ? prof.map(([id, p]) => h("li", {}, h("b", {}, p.label), h("span", {}, `${p.title} · `, h("a", { href: `#${id}`, onclick: (e) => { e.preventDefault(); jumpTo(id); } }, "play again"))))
@@ -685,7 +698,7 @@
   }
   document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => showView(b.dataset.view)));
   $("#brand").addEventListener("click", () => { showView("feed"); feed.scrollTo({ top: 0, behavior: "smooth" }); });
-  $("#streak").addEventListener("click", () => toast(S.streak.n ? `${S.streak.n}-day streak. One game a day keeps it alive.` : "Finish a game to start your streak."));
+  $("#streak").addEventListener("click", () => $("#about").showModal());
   $("#share-map").addEventListener("click", () => {
     $("#map-canvas").toBlob(async (blob) => {
       const file = new File([blob], "my-qlip-map.png", { type: "image/png" });

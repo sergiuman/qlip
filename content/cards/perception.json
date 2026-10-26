@@ -717,7 +717,7 @@
             {
               "text": "Say 'oops, mixed that up' if it comes up, and put your hand up again",
               "best": true,
-              "feedback": "Best move. A light, quick fix tells people it's no big deal, and it usually isn't to them."
+              "feedback": "A light, quick fix tells people it's no big deal, and it usually isn't to them."
             },
             {
               "text": "Stay silent for the rest of term so it can't happen again",
@@ -955,5 +955,177 @@
     ],
     "try_team": "Before a match, test or launch, each person names the part they're nervous about, adds 'and I'm excited about it', then you agree step one together.",
     "sensitive": true
+  },
+  {
+    "id": "map-territory-green-dashboard-choice",
+    "concept": "map_territory",
+    "domain": "perception",
+    "type": "choice",
+    "hook": "Every status report says green. So why is your best engineer so quiet?",
+    "title": "The Dashboard Is a Map",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Friday dashboard: every ticket closed on time, sprint all green. In your 1:1, Priya, your strongest engineer, says she's 'fine', but she's stopped speaking up in stand-ups. What do you trust?",
+          "options": [
+            {
+              "text": "The dashboard. Numbers don't have moods.",
+              "feedback": "Not quite. Numbers feel solid after a long week, but this one only counts tickets. It was never built to see energy, doubts or workarounds."
+            },
+            {
+              "text": "Neither yet. Ask her: 'What isn't the dashboard showing me this week?'",
+              "best": true,
+              "feedback": "Yes. The report is the map; Priya is standing in the territory. Ask her what's missing from it, then decide."
+            },
+            {
+              "text": "Priya. Dashboards always lie.",
+              "feedback": "Close, but too far. The numbers are true about what they count. The fix is to add a second view, not to bin the map."
+            }
+          ]
+        },
+        {
+          "scenario": "Your director wants a new target: 15 tickets closed per person per week, reviewed monthly. What's the most likely side effect?",
+          "options": [
+            {
+              "text": "Tickets get split smaller and the hard, messy work gets pushed back.",
+              "best": true,
+              "feedback": "Right. That's Goodhart's law: once a measure becomes a target, people steer the number, not the work. Pair it with a check on quality."
+            },
+            {
+              "text": "Output rises across the board.",
+              "feedback": "Possible for a while, and a fair hope. But when praise rides on a count, people learn to move the count, often faster than the work."
+            },
+            {
+              "text": "Nothing changes; it's just a number.",
+              "feedback": "Understandable, but targets exist to change behaviour. The real question is which behaviour they reward."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Verdict: the dashboard was true and still misleading. A metric is a map of the work, not the work. Turn it into a target and people start steering the map.",
+    "model": "Every number is a map: ask what it can't see, and never let one number be the whole target.",
+    "try_today": "Pick one metric you report. Write one thing it can't show, then ask one person on your team about exactly that.",
+    "source": {
+      "thinkers": [
+        "Charles Goodhart",
+        "Donald T. Campbell",
+        "Marilyn Strathern",
+        "Alfred Korzybski"
+      ],
+      "work": "Goodhart, Problems of Monetary Management: The U.K. Experience (1975); Campbell, Assessing the Impact of Planned Social Change (1979); Strathern, 'Improving ratings' (1997)"
+    },
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "fixes_that_fail",
+      "feedback_loops",
+      "psychological_safety"
+    ],
+    "try_team": "5 min: list your team's top 3 metrics. For each, everyone writes how they could hit it while making the work worse. Add one counter-check."
+  },
+  {
+    "id": "reframing-angry-client-reveal",
+    "concept": "reframing",
+    "domain": "perception",
+    "type": "reveal",
+    "hook": "Angry client, live call. Your calm poker face may be costing you.",
+    "title": "Reframe, Don't Just Mask",
+    "game": {
+      "prompt": "A client spends ten minutes tearing apart your team's work on a video call. You can (a) keep a straight face and push the anger down, or (b) tell yourself 'they're under launch pressure, this is fear talking'. Which leaves you remembering less of what they actually asked for?",
+      "choices": [
+        "Pushing it down",
+        "Reframing it",
+        "No difference"
+      ],
+      "answer": 0,
+      "reveal": "Pushing it down. In lab studies, people told to hide their feelings remembered fewer details of what they had just seen and heard. People who reframed did not pay that memory cost (Richards & Gross, 2000). Hiding takes effort, and the effort comes out of your attention."
+    },
+    "insight": "Verdict: masking isn't free; it spends attention you need for the details. Reframing keeps your memory working. Lab evidence, not yet tested on real client calls.",
+    "model": "Don't just mask it, re-read it: 'What else could explain this?' keeps your head in the room.",
+    "try_today": "Before your next tough meeting, write one generous reason for the hardest person's behaviour. Re-read it if things heat up.",
+    "source": {
+      "thinkers": [
+        "Jane Richards",
+        "James Gross"
+      ],
+      "work": "Richards & Gross, Emotion regulation and memory: The cognitive costs of keeping one's cool, Journal of Personality and Social Psychology (2000)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "emotion_naming",
+      "fundamental_attribution_error",
+      "impulse_pause"
+    ],
+    "sensitive": true,
+    "try_team": "5 min: each person shares this week's spikiest client or stakeholder message. The team suggests two non-hostile reasons for it, then drafts the reply."
+  },
+  {
+    "id": "goal-directed-perception-burglar-choice",
+    "concept": "goal_directed_perception",
+    "domain": "perception",
+    "type": "choice",
+    "hook": "Same page, same night. Your mate remembers stuff you never even saw.",
+    "title": "Read Like a Burglar",
+    "game": {
+      "steps": [
+        {
+          "scenario": "English class. Everyone reads the same short story: two boys skip school and hang out at one boy's house. Half the class is told to read it as a burglar, half as someone buying the house. Who remembers the coin collection and the TV?",
+          "options": [
+            {
+              "text": "The 'burglars'",
+              "best": true,
+              "feedback": "Yes. In the original study, readers recalled more of the details that mattered to their role. Your goal quietly decides what sticks."
+            },
+            {
+              "text": "Everyone the same. It's the same words.",
+              "feedback": "Fair guess, it literally is the same text. But goals changed what stuck: burglars kept the valuables, buyers kept the house's faults."
+            },
+            {
+              "text": "The buyers, they'd read more carefully",
+              "feedback": "Nice thinking, but no. Buyers remembered buyer stuff, like a leaky roof, and let more of the valuables slip."
+            }
+          ]
+        },
+        {
+          "scenario": "Thursday night, biology test tomorrow. You've got 20 minutes and your notes. Which is the burglar move?",
+          "options": [
+            {
+              "text": "Read the notes twice and highlight the important bits.",
+              "feedback": "Not the strongest move, though most of us do it. 'Important' isn't a goal, so everything starts looking highlightable."
+            },
+            {
+              "text": "Write 3 questions you think will come up, then read hunting for the answers.",
+              "best": true,
+              "feedback": "Yes. You've given your eyes a job. Research on pre-questions suggests it mostly boosts what you asked about, so pick good ones."
+            },
+            {
+              "text": "Watch a summary video at double speed.",
+              "feedback": "Quick, and sometimes useful. But watching without a question is browsing: you catch what's loud, not what's tested."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Verdict: you never just read a page, you read it for something. Give your attention a job and it grabs the details that fit it, and skips the rest.",
+    "model": "Your goal is a search filter: set it before you look, or something else will set it for you.",
+    "try_today": "Before your next reading or revision, write one question at the top of the page. Read only to answer it.",
+    "source": {
+      "thinkers": [
+        "James Pichert",
+        "Richard C. Anderson",
+        "Shana Carpenter"
+      ],
+      "work": "Pichert & Anderson, Taking different perspectives on a story, Journal of Educational Psychology (1977); Carpenter & Toftness, The effect of prequestions on learning from video presentations, JARMAC (2017)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deep_work",
+      "confirmation_bias",
+      "implementation_intentions"
+    ],
+    "try_team": "Study group, 5 min: everyone reads the same page in a different role (examiner, sceptic, younger sibling). Share what each role noticed."
   }
 ]

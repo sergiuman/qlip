@@ -7,7 +7,7 @@
   "hook": "Pick one thing you keep meaning to do. Let's see what makes it easier.",
   "title": "Will, Skill, Opportunity",
   "game": {
-   "prompt": "Pick your thing: revise for a test, a side hustle, an instrument, getting fitter, or something else. Answer every line for that one goal.",
+   "prompt": "Pick one goal (revising, an instrument, getting fitter, a work project). Answer every line for that one goal.",
    "axes": [
     {
      "key": "W",
@@ -21,73 +21,67 @@
     },
     {
      "key": "O",
-     "label": "Opportunity",
+     "label": "Open door",
      "color": "#10B981"
     }
    ],
    "questions": [
     {
-     "q": "I actually want this.",
+     "q": "I'd do this even if no one saw.",
      "axis": "W"
     },
     {
-     "q": "I'd still do it if nobody ever knew.",
-     "axis": "W"
-    },
-    {
-     "q": "I could do a rough version today.",
+     "q": "I've done something a bit like this before.",
      "axis": "S"
     },
     {
-     "q": "I know the first three steps.",
-     "axis": "S"
+     "q": "If I had a free hour, I wouldn't know where to begin.",
+     "axis": "S",
+     "invert": true
     },
     {
-     "q": "Outside things (time, money, access, permission) mostly allow this right now.",
-     "axis": "O"
-    },
-    {
-     "q": "I have the time and tools to start this week.",
-     "axis": "O"
+     "q": "Something outside my control (money, rules, someone's permission) is blocking this.",
+     "axis": "O",
+     "invert": true
     }
    ],
    "threshold": 0.6,
    "results": {
     "W": {
      "name": "Fired Up, Building Up",
-     "text": "Today the want is strong, but skill and access score low. Don't wait for both: build the easier one first, usually a small skill."
+     "text": "The want is strong today; build the easier missing piece first, usually a tiny skill rep."
     },
     "S": {
      "name": "Skilled, Looking for a Why",
-     "text": "Today you rate your skill high, but want and the door lower. Worth asking what would make this matter to you."
+     "text": "Skill scores high today but want and the door lower, so ask what would make this matter to you."
     },
     "O": {
      "name": "The Open Door",
-     "text": "Today the door looks open, but want and know-how score low. Check whether anything behind that door sparks your curiosity."
+     "text": "The door looks open today; check whether anything behind it sparks your curiosity."
     },
     "SW": {
      "name": "Ready, Door Closed (for now)",
-     "text": "Today you want it and can do it, but the door scores shut. That's structural, not a flaw in you. Find another door, or build one with others."
+     "text": "You want it and can do it, but the door scores shut today: that's structural, not a flaw, so find or build another door."
     },
     "OW": {
      "name": "Eager, Door Open",
-     "text": "Want plus an open door today: a great place to learn anything. Your next move is practice, in small, honest reps with feedback."
+     "text": "Want plus an open door today is a great place to learn: practise in small, honest reps with feedback."
     },
     "OS": {
      "name": "Ready, Waiting for a Why",
-     "text": "Everything scores high today except the fire. No productivity trick fixes a missing why. Look for the reason that would make this matter to you."
+     "text": "Everything scores high today except the fire, and no trick fixes a missing why, so look for your reason."
     },
     "OSW": {
      "name": "All Lights On (for this goal)",
-     "text": "For this goal, all three pillars score high today. The only thing left is to start. Put the first 10 minutes in your calendar."
+     "text": "All three pillars score high today, so put the first 10 minutes in your calendar."
     },
     "": {
      "name": "The Starting Line",
-     "text": "No pillar scored strong today, which is common, especially after a hard stretch. It's a starting point, not a verdict. Improve the easiest one a little this week (often a tiny skill rep) and play again in 7 days."
+     "text": "Nothing's lit yet, which is normal and not a verdict: do one 5-minute rep this week and replay in 7 days."
     },
     "mid": {
      "name": "The Half-Lit Path",
-     "text": "All three are half-lit today. Pick the easiest to bump: do one 5-minute practice rep (Skill), or send one message asking for access or time (Opportunity). Then come back in a week."
+     "text": "All three are half-lit today: do one 5-minute practice rep or ask for one free hour, then replay in a week."
     }
    }
   },
@@ -109,7 +103,7 @@
    "goal_directed_perception",
    "start_with_why"
   ],
-  "try_team": "Each person writes one stuck goal and scores Will, Skill and Opportunity out of 10. In pairs, the helper may only offer help on the lowest score."
+  "try_team": "Each person scores one stuck goal on Will, Skill and Open door out of 10. Ask a teammate which pillar they'd help with first."
  },
  {
   "id": "wso-triad-reveal",
@@ -674,28 +668,12 @@
      "axis": 0
     },
     {
-     "q": "I often finish small things I start.",
-     "axis": 0
-    },
-    {
      "q": "I know someone like me who has done what I want to do.",
-     "axis": 1
-    },
-    {
-     "q": "I've watched someone at my level learn this and get better.",
      "axis": 1
     },
     {
      "q": "People I trust tell me they think I can do it.",
      "axis": 2
-    },
-    {
-     "q": "Someone has given me specific, honest feedback that I'm improving.",
-     "axis": 2
-    },
-    {
-     "q": "When I'm nervous, I read it as my body getting ready, not as a sign I'll fail.",
-     "axis": 3
     },
     {
      "q": "Butterflies before a challenge usually help me more than they hurt.",
@@ -707,17 +685,19 @@
     "1": "Role models scored lowest today? Find one person a step or two ahead of you, not a superstar, and learn how they started.",
     "2": "Support scored lowest today? Tell one supportive person your goal and ask them to check in with you in a week.",
     "3": "Reading your body scored lowest today? Before a hard task, notice the racing heart and tell yourself: 'This is my body getting ready, not a sign I'll fail.'"
-   }
+   },
+   "prompt": "Pick one specific thing you want to get better at (a subject, a sport, speaking up in meetings). Answer every line for that one thing."
   },
-  "insight": "Bandura named four sources of 'I can': your own wins, seeing people like you succeed, encouragement, and how you read your body. Own wins count most; the others fill gaps.",
+  "insight": "Bandura named four sources of 'I can': your own wins, people like you succeeding, encouragement, and how you read your body. Own wins count most (Usher & Pajares, 2008).",
   "model": "Belief in yourself is built from four sources. Find the one that feels lowest for you and feed it.",
-  "try_today": "Write down three things you did well in the past month. Read the list right before your next hard task.",
+  "try_today": "Write three things you got through this month, however small (a hard message, a meal cooked). Read them before your next hard task.",
   "source": {
    "thinkers": [
     "Albert Bandura",
-    "Jeremy Jamieson"
+    "Jeremy Jamieson",
+    "Ellen Usher & Frank Pajares"
    ],
-   "work": "Bandura, Self-Efficacy: The Exercise of Control (1997); Jamieson et al., arousal reappraisal studies (2010)"
+   "work": "Bandura, Self-Efficacy: The Exercise of Control (1997); Jamieson et al., arousal reappraisal studies (2010); Usher & Pajares, review of sources of self-efficacy (Review of Educational Research, 2008)"
   },
   "evidence": "strong",
   "level": 2,
@@ -846,5 +826,188 @@
    "procrastination_emotion"
   ],
   "try_team": "Each person shares one goal and its likeliest obstacle. The group helps write one 'If [obstacle], then [backup]' plan for each person in 5 minutes."
+ },
+ {
+  "id": "wso-triad-one-to-one-choice",
+  "concept": "wso_triad",
+  "domain": "action",
+  "type": "choice",
+  "hook": "Three people on your team are stuck. Same pep talk for all three?",
+  "title": "Diagnose the stall",
+  "game": {
+   "steps": [
+    {
+     "scenario": "1:1 with Dana, your best analyst. She's trained on the new reporting tool and has a login, but still sends everything from her old spreadsheet. You say…",
+     "options": [
+      {
+       "text": "\"What would make the new tool worth it for you?\"",
+       "best": true,
+       "feedback": "Right. Skill and access are there, so the gap is the want. Her answer may also show you the tool really is slower for her job."
+      },
+      {
+       "text": "\"Let's book you a refresher course.\"",
+       "feedback": "Kind, but she already knows how. Extra training aims at a skill that isn't missing."
+      },
+      {
+       "text": "\"The switch is mandatory from Friday.\"",
+       "feedback": "A deadline can get the switch done, which is sometimes enough. It won't give her a reason to like it, so expect workarounds."
+      }
+     ]
+    },
+    {
+     "scenario": "Raj keeps saying he wants to lead client calls, and he's great in front of people. But another lead books every call and never adds him. You…",
+     "options": [
+      {
+       "text": "Send him a presentation-skills course",
+       "feedback": "His skill isn't the problem. A course can feel like a hint that he isn't good enough."
+      },
+      {
+       "text": "Tell him to show more initiative",
+       "feedback": "His will is already loud. Pushing harder at a door someone else holds shut wears people out."
+      },
+      {
+       "text": "Ask the other lead to put Raj on next week's call",
+       "best": true,
+       "feedback": "Yes. Want and skill are lit; the door is closed. Opening it is your job, not his."
+      }
+     ]
+    },
+    {
+     "scenario": "Mo is keen and has every tool he needs, but freezes when asked for a timeline estimate. He's never done one. With a deadline next week, you…",
+     "options": [
+      {
+       "text": "Do his next estimate together, then let him do one alone",
+       "best": true,
+       "feedback": "Yes. Will and access are there; skill is the gap. One guided rep, then a solo rep, builds it fast."
+      },
+      {
+       "text": "Take estimates off his plate for now",
+       "feedback": "A fair call under deadline pressure. Just plan a practice rep later, or the gap stays put."
+      },
+      {
+       "text": "Tell him you believe in him",
+       "feedback": "Nice to hear, but he already wants to. Without a first rep, the freeze comes back."
+      }
+     ]
+    }
+   ]
+  },
+  "insight": "Three stalls, three different missing pieces. One fix for everyone misses two of them. Blumberg and Pringle (1982) argued work needs ability, willingness and opportunity.",
+  "model": "Before you fix a stall, name the missing pillar: the want, the know-how or the open door.",
+  "try_today": "In your next 1:1, ask: 'What's hardest here: wanting it, knowing how, or getting the chance?' Fix only that one.",
+  "source": {
+   "thinkers": [
+    "Melvin Blumberg & Charles Pringle"
+   ],
+   "work": "Blumberg & Pringle, The missing opportunity in organizational research (Academy of Management Review, 1982). A conceptual model, not a tested diagnostic."
+  },
+  "evidence": "philosophy",
+  "level": 1,
+  "related": [
+   "will_gap",
+   "skill_gap",
+   "opportunity_gap"
+  ],
+  "try_team": "Each person writes one stuck task on a sticky note and tags it Want, Know-how or Door. Pair up and agree one fix aimed only at that tag."
+ },
+ {
+  "id": "self-efficacy-new-lead-swipe",
+  "concept": "self_efficacy",
+  "domain": "action",
+  "type": "swipe",
+  "hook": "New to leading a team? Some confidence boosts last. Some evaporate.",
+  "title": "Where real 'I can' comes from",
+  "game": {
+   "prompt": "You've just been made team lead. How much 'I can do this' does each one build?",
+   "left": "Small boost, fades alone",
+   "right": "Big boost, it sticks",
+   "items": [
+    {
+     "text": "You run Monday's stand-up yourself and it goes fine",
+     "side": "right",
+     "why": "Your own success is the strongest source of belief. You have proof, not just hope."
+    },
+    {
+     "text": "Your boss says 'You're a natural leader'",
+     "side": "left",
+     "why": "Praise helps, but words alone fade at the first hard moment. Pair it with a win."
+    },
+    {
+     "text": "A peer at your level handles a tough client well",
+     "side": "right",
+     "why": "Seeing someone like you succeed says 'so could I'. It's the second-strongest source."
+    },
+    {
+     "text": "You watch a famous CEO's flawless keynote",
+     "side": "left",
+     "why": "Models work best when they feel similar. A star can make the gap look bigger."
+    },
+    {
+     "text": "You read three books on leadership",
+     "side": "left",
+     "why": "Useful knowledge, but knowing isn't the same as having done it. Belief needs a rep."
+    },
+    {
+     "text": "You cut a dreaded 1:1 down to one question and ask it",
+     "side": "right",
+     "why": "A shrunk task you actually finish still counts as mastery. Small wins are designable."
+    }
+   ]
+  },
+  "insight": "Bandura ranked your own wins first, then seeing someone like you succeed. Praise and reading help less on their own. Reviews mostly agree, though the order varies by person.",
+  "model": "Belief follows wins you can point to. Design small ones on purpose.",
+  "try_today": "Pick the task you dread most this week. Do a 10-minute slice of it before lunch and mark it done somewhere you'll see it.",
+  "source": {
+   "thinkers": [
+    "Albert Bandura"
+   ],
+   "work": "Bandura, Self-Efficacy: The Exercise of Control (1997)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "sensitive": true,
+  "related": [
+   "small_wins",
+   "growth_mindset",
+   "wso_triad"
+  ],
+  "try_team": "Go round: each person names one work win from this week, however small, plus one tiny next rep. One minute each, no critique, just thanks."
+ },
+ {
+  "id": "will-gap-paid-to-play-reveal",
+  "concept": "will_gap",
+  "domain": "action",
+  "type": "reveal",
+  "hook": "Someone starts paying you for the thing you'd do for free. Any catch?",
+  "title": "When pay steals the fun",
+  "game": {
+   "prompt": "You make video edits for fun. A mate's page pays you per edit for a month, then the money stops. In your free time after that, you'll probably make…",
+   "choices": [
+    "More edits than before",
+    "About the same",
+    "Fewer edits than before"
+   ],
+   "answer": 2,
+   "reveal": "Fewer, on average. Across 128 experiments, expected rewards for an already-fun task cut how much people chose to do it once rewards ended. Surprise rewards didn't, and praise tended to help."
+  },
+  "insight": "Pay can quietly swap 'I want to' for 'I'm paid to'. When the pay stops, the want may not fully return. Some researchers say the effect is small outside the lab.",
+  "model": "A reason that's yours outlasts any reward. Guard the stuff you do for love.",
+  "try_today": "Pick one thing you do just for fun. Do it for 10 minutes today: no posting, no streak, no score. Notice how it feels.",
+  "source": {
+   "thinkers": [
+    "Edward Deci",
+    "Richard Koestner",
+    "Richard Ryan"
+   ],
+   "work": "Deci, Koestner & Ryan, A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation (Psychological Bulletin, 1999); critique: Cameron & Pierce (Review of Educational Research, 1994)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "start_with_why",
+   "wso_triad",
+   "self_efficacy"
+  ],
+  "try_team": "Each person lists one thing they'd do unpaid and unseen, and one they only do for a reward. Compare lists: which would you want to grow?"
  }
 ]

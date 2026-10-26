@@ -186,7 +186,7 @@
     "hook": "You're 80, in a rocking chair. Which choice still stings?",
     "title": "The 80-Year-Old Test",
     "game": {
-      "prompt": "Look back from age 80. Which hurts more over the years: the risks you took that failed, or the chances you never took?",
+      "prompt": "Imagine looking back from age 80. In studies of regret, which do most people say hurts longer: the risks they took that failed, or the chances they never took?",
       "choices": [
         "The risks that failed",
         "The chances I never took"
@@ -740,6 +740,173 @@
       "quitting_wisely",
       "opportunity_cost",
       "expected_value"
+    ]
+  },
+  {
+    "id": "sunk-cost-kill-or-keep",
+    "concept": "sunk_cost",
+    "domain": "decisions",
+    "type": "swipe",
+    "hook": "Your project is 8 months in and wobbling. What may you count?",
+    "title": "Kill or Keep: What Counts",
+    "game": {
+      "prompt": "Deciding whether to keep the project going. Should this count?",
+      "left": "Ignore it (already spent)",
+      "right": "Count it (still ahead)",
+      "items": [
+        {
+          "text": "The 8 months the team has already put in",
+          "side": "left",
+          "why": "Gone whether you stop or go on. It feels heavy, but it can't change what happens next."
+        },
+        {
+          "text": "The 3 more months it needs to ship",
+          "side": "right",
+          "why": "Future cost. You pay it only if you keep going, so it belongs in the decision."
+        },
+        {
+          "text": "The setup fee you paid the vendor (no refunds)",
+          "side": "left",
+          "why": "Paid either way. Counting it is the classic sunk-cost slip."
+        },
+        {
+          "text": "The penalty for ending the contract early",
+          "side": "right",
+          "why": "You'd pay it only if you stop. A real future cost of quitting."
+        },
+        {
+          "text": "What testing taught you: clients skip the main feature",
+          "side": "right",
+          "why": "The money is sunk, but the lesson is live evidence about the future. Use it."
+        },
+        {
+          "text": "You backed this project hard in last quarter's review",
+          "side": "left",
+          "why": "Past pride, not future value. Wanting your first call to look right is a known driver of digging in."
+        }
+      ]
+    },
+    "insight": "Verdict: count only what's still ahead. Spent time and fees are gone either way; lessons learned still count. A meta-analysis found feeling responsible for the first call makes digging in likelier.",
+    "model": "Ask: if we hadn't started, would we start this today, with what we know now?",
+    "try_today": "Pick one project you own. Write what it still costs and what it still could earn. Ignore what's already spent. Then decide.",
+    "try_team": "In 5 minutes: name one ongoing project. Each person silently answers 'Would we start this today?' yes or no. Reveal together, then discuss only future costs.",
+    "source": {
+      "thinkers": [
+        "Brian Sleesman",
+        "Donald Conlon",
+        "Gerry McNamara",
+        "Jonathan Miles"
+      ],
+      "work": "Cleaning up the big muddy: A meta-analytic review of the determinants of escalation of commitment (Academy of Management Journal, 2012)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "opportunity_cost",
+      "quitting_wisely",
+      "premortem"
+    ]
+  },
+  {
+    "id": "opportunity-cost-yes-and",
+    "concept": "opportunity_cost",
+    "domain": "decisions",
+    "type": "choice",
+    "hook": "Your team is full. A new 'quick' request lands. Who pays for it?",
+    "title": "Every Yes Needs a 'Which No?'",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your director asks your team to pilot a new reporting tool 'on the side'. The team is already at capacity. You reply…",
+          "options": [
+            {
+              "text": "\"Happy to. Which of our current three priorities should slow down?\"",
+              "best": true,
+              "feedback": "Yes. You said yes and named the price. Now the trade-off is a choice made in the open, by the person who owns the priorities."
+            },
+            {
+              "text": "\"Sure, we'll squeeze it in.\"",
+              "feedback": "Kind and very common. The cost still gets paid, just quietly: late work, rushed quality or evenings. Nobody chose which."
+            },
+            {
+              "text": "\"No, we're too busy.\"",
+              "feedback": "It protects the team, which matters. But it can shut a good idea out. Naming the trade lets your director weigh it with you."
+            }
+          ]
+        },
+        {
+          "scenario": "In your 1:1, a strong report asks to join a big client project. They'd have to drop mentoring two new starters. You…",
+          "options": [
+            {
+              "text": "Back the move, but first plan who takes over the mentoring",
+              "best": true,
+              "feedback": "Right. Growth for them is real value. So is the mentoring. Seeing what drops lets you cover it instead of losing it."
+            },
+            {
+              "text": "Say yes straight away: it's great for their career",
+              "feedback": "Generous, and the career boost is real. The hidden cost is two new starters losing support without anyone deciding that."
+            },
+            {
+              "text": "Say no: the mentoring matters too much",
+              "feedback": "Protecting new starters is a fair worry. But the 'no' has a price as well: a keen person's growth. Weigh both sides."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Verdict: every yes spends time some other work needed. Studies find people weigh that hidden cost more when someone names it out loud.",
+    "model": "Before any yes, ask: what is the best thing this will push out?",
+    "try_today": "Next time you're asked to take something on, reply: 'Yes, if we pause X. Does that work?' Pick X before you answer.",
+    "try_team": "5 minutes: list everything the team is doing on a board. Each person marks one item they'd pause to make room for the next request. Compare marks.",
+    "source": {
+      "thinkers": [
+        "James Buchanan",
+        "Stephen Spiller"
+      ],
+      "work": "Cost and Choice (1969); Opportunity Cost Consideration (Journal of Consumer Research, 2011)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "sunk_cost",
+      "deep_work",
+      "reversible_doors"
+    ]
+  },
+  {
+    "id": "regret-minimization-open-doors",
+    "concept": "regret_minimization",
+    "domain": "decisions",
+    "type": "estimate",
+    "hook": "Ask adults about their biggest regret. One topic wins. Guess it.",
+    "title": "Regret Lives Where Doors Were Open",
+    "game": {
+      "question": "Researchers pooled studies asking adults for their biggest life regret. School and education came top. What share of regrets was it?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 32,
+      "anchor": null,
+      "explain": "About 32% (Roese & Summerville, 2005). Next: career (22%) and romance (15%). Their idea: we regret most where we had the most chances. In school years, doors are wide open."
+    },
+    "insight": "Verdict: regret follows open doors, not just grades. Trying a club, a subject or a tryout costs little now, so skipped chances tend to linger. Mostly US adults studied.",
+    "model": "Regret grows where chances were cheap. While a door is open, a small try costs less than a long 'what if'.",
+    "try_today": "Pick one open door this week: a tryout, a club, a question to a teacher, a message to a mate. Do the smallest first bit.",
+    "try_team": "With friends or class: each person writes one 'I'd be gutted if I never tried…' for this year. Swap papers and suggest one tiny first step.",
+    "source": {
+      "thinkers": [
+        "Neal Roese",
+        "Amy Summerville"
+      ],
+      "work": "What we regret most... and why (Personality and Social Psychology Bulletin, 2005)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "reversible_doors",
+      "sunk_cost",
+      "opportunity_cost"
     ]
   }
 ]

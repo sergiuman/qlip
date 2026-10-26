@@ -612,7 +612,7 @@
             {
               "text": "Mute it until morning and pick a set time to catch up.",
               "best": true,
-              "feedback": "Best move. Nothing changes overnight, and a set catch-up time tells your brain the topic has a place to land."
+              "feedback": "Nothing changes overnight, and a set catch-up time tells your brain the topic has a place to land."
             },
             {
               "text": "Keep checking so you don't miss anything.",
@@ -763,5 +763,176 @@
     ],
     "try_team": "When a shared habit slips (a weekly check-in, family dinner), agree a 'tiny version' everyone can do the very next day.",
     "sensitive": true
+  },
+  {
+    "id": "habit-loop-work-swipe",
+    "concept": "habit_loop",
+    "domain": "habits",
+    "type": "swipe",
+    "hook": "Your resolution died by Tuesday's 1:1. The cue is still alive.",
+    "title": "Fix the Loop, Not Yourself",
+    "game": {
+      "prompt": "Six fixes for meeting habits a manager wants to drop. What is each one relying on?",
+      "left": "Trying harder",
+      "right": "Changing the loop",
+      "items": [
+        {
+          "text": "Promising yourself you'll stop glancing at messages during 1:1s.",
+          "side": "left",
+          "why": "Trying harder. The buzz still comes and still pays off. Only your effort changed."
+        },
+        {
+          "text": "Closing the laptop and putting your phone face down before every 1:1.",
+          "side": "right",
+          "why": "Changing the loop. No buzz in sight means no cue, so there's no urge left to fight."
+        },
+        {
+          "text": "Telling yourself to stop jumping in with the answer at stand-up.",
+          "side": "left",
+          "why": "Trying harder. Someone raises a problem (cue) and the old reply fires before you think."
+        },
+        {
+          "text": "A stand-up rule for you: ask one question before giving any answer.",
+          "side": "right",
+          "why": "Changing the loop. Same cue, new response. Swapping the action beats trying to block it."
+        },
+        {
+          "text": "Vowing to stop answering email at 11 pm.",
+          "side": "left",
+          "why": "Trying harder, at the hour when you're most tired and least likely to stick to it."
+        },
+        {
+          "text": "Mail alerts off after 7 pm, and late replies scheduled to send at 8 am.",
+          "side": "right",
+          "why": "Changing the loop. Your cue goes, and your team's 11 pm cue goes with it."
+        }
+      ]
+    },
+    "insight": "Every right-hand fix hides a cue or swaps a response. The left-hand ones leave the loop intact and rely on effort, which tends to lose on tired, busy days.",
+    "model": "Don't fight a habit with effort. Find its cue and change one link of the loop.",
+    "try_today": "Pick the habit that bugs you most in meetings. Write down its cue, then move or hide that cue before your next meeting.",
+    "try_team": "At stand-up, each person names one team habit to drop (late starts, laptops open). Vote for one, name its cue, change that link for two weeks.",
+    "source": {
+      "thinkers": [
+        "Wendy Wood",
+        "David Neal",
+        "Charles Duhigg",
+        "James Clear"
+      ],
+      "work": "Wood & Neal, A new look at habits and the habit-goal interface (Psychological Review, 2007); The Power of Habit (2012); Atomic Habits (2018)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "environment_design",
+      "implementation_intentions",
+      "fixes_that_fail"
+    ]
+  },
+  {
+    "id": "evening-reset-on-call-reveal",
+    "concept": "evening_reset",
+    "domain": "habits",
+    "type": "reveal",
+    "sensitive": true,
+    "hook": "Nobody on your team emails after 7. Are they really off, though?",
+    "title": "The Invisible On-Call",
+    "game": {
+      "prompt": "Your team rarely gets evening emails. But everyone knows one could arrive, and that they'd be expected to see it. Does that expectation alone affect them?",
+      "choices": [
+        "Not really. No emails, no strain.",
+        "Yes. The 'might' alone weighs on them."
+      ],
+      "answer": 1,
+      "reveal": "Yes. In a 2021 study, simply expecting to monitor work email after hours was linked to more anxiety for staff, not just the time they spent on it, and to lower relationship satisfaction for their partners (Becker et al., Journal of Management)."
+    },
+    "insight": "A quiet inbox isn't a closed day. If the rule is 'you might be needed', minds stay on call. Saying when 'off' starts is the team version of a nightly reset.",
+    "model": "An evening only resets you if 'off' is official. 'Might be needed' keeps everyone on call.",
+    "try_today": "Tell your team in one line when you won't expect replies. Then shut your own laptop at that time tonight.",
+    "try_team": "Spend 5 minutes listing what truly can't wait until morning. Agree those get a phone call; everything else waits. Write the list down.",
+    "source": {
+      "thinkers": [
+        "William Becker",
+        "Liuba Belkin",
+        "Samantha Conroy",
+        "Sarah Tuskey"
+      ],
+      "work": "Killing me softly: Organizational e-mail monitoring expectations' impact on employee and significant other well-being (Journal of Management, 2021)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "attention_residue",
+      "psychological_safety",
+      "zeigarnik_effect"
+    ]
+  },
+  {
+    "id": "one-percent-spaced-revision-choice",
+    "concept": "one_percent",
+    "domain": "habits",
+    "type": "choice",
+    "hook": "The study plan that feels worse is often the one that works.",
+    "title": "Small Sessions Stack Up",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Biology mock in three weeks. You can give it about six hours in total. Which plan leaves the most in your head on the day?",
+          "options": [
+            {
+              "text": "One big six-hour session the weekend before.",
+              "feedback": "Not the strongest. It feels solid that night, but a lot fades within days. The same hours spread out usually stick better."
+            },
+            {
+              "text": "Twenty-ish minutes every couple of days, starting now.",
+              "best": true,
+              "feedback": "Yes. Spacing is one of the best-replicated findings in learning: each short session tops up what's fading, so it builds on the last."
+            },
+            {
+              "text": "Two hours a night for the last three nights.",
+              "feedback": "Better than one marathon, and very common. It's still squeezed late, so there's little time for memories to settle between goes."
+            }
+          ]
+        },
+        {
+          "scenario": "Night before the mock. You did the spread-out plan. Your mate crammed all evening and feels sure. You feel shakier. What's most likely?",
+          "options": [
+            {
+              "text": "You know more than it feels like. Spacing feels harder but tends to last longer.",
+              "best": true,
+              "feedback": "Right. In one study (learning painters' styles), most people judged cramming as good or better, even though spacing won in their own scores."
+            },
+            {
+              "text": "Your mate's way works better after all.",
+              "feedback": "Easy to think, and cramming can get you through tomorrow. But the feeling of 'I know it' is a poor guide to what stays."
+            },
+            {
+              "text": "You must have done the plan wrong.",
+              "feedback": "Probably not. Spaced study often feels rusty because you keep meeting things just as you start to forget. That struggle is part of why it works."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Same hours, more stays. Spread-out sessions beat one big push across hundreds of experiments. That's the honest part of '1% a day': each small rep builds on the last.",
+    "model": "Little and often beats a lot at once. If it feels a bit rusty, it's probably working.",
+    "try_today": "Pick one topic you'll be tested on. Spend 10 minutes on it now, then book two more 10-minute slots this week.",
+    "try_team": "Start a class or family evening with 5 minutes: everyone writes what they recall from last week's topic, then checks. No marks, just a top-up.",
+    "source": {
+      "thinkers": [
+        "Nicholas Cepeda",
+        "Harold Pashler",
+        "Nate Kornell",
+        "Robert Bjork"
+      ],
+      "work": "Cepeda et al., Distributed practice in verbal recall tasks (Psychological Bulletin, 2006); Kornell & Bjork, Learning concepts and categories (Psychological Science, 2008)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "deliberate_practice",
+      "never_miss_twice",
+      "small_wins"
+    ]
   }
 ]

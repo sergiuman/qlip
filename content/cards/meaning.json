@@ -346,8 +346,8 @@
     ],
     "try_team": "Ask the group: which routine keeps us steady, and what one new thing could we try this month? Keep one of each and check back in a week.",
     "from_source": {
-      "quote": "The ten thousand things carry yin and embrace yang.",
-      "cite": "Laozi, Tao Te Ching, ch. 42 (public domain)",
+      "quote": "All things leave behind them the Obscurity (out of which they have come), and go forward to embrace the Brightness (into which they have emerged)…",
+      "cite": "Laozi, Tao Te Ching, ch. 42 (James Legge trans., 1891)",
       "next_read": "Peterson, 12 Rules for Life (2018), Rule 2, the section on order and chaos; then Maps of Meaning (1999), ch. 2"
     }
   },
@@ -656,42 +656,42 @@
     "domain": "meaning",
     "type": "choice",
     "hook": "Picturing success feels great. That might be the problem.",
-    "title": "Hope Plus the Wall",
+    "title": "Hope Plus the Wall: Wish, Obstacle, Plan",
     "game": {
       "steps": [
         {
-          "scenario": "Your big exam is in three weeks and you're behind. What's the best thing to tell yourself tonight?",
+          "scenario": "A prisoner of war said the optimists who expected release by Christmas broke first. Your exam is in three weeks and you're behind. What do you tell yourself tonight?",
           "options": [
             {
               "text": "\"I'll ace it. Just picture the grade and stay positive.\"",
               "feedback": "Feels good, but research suggests pure daydreams can relax you before you've done the work."
             },
             {
-              "text": "\"I want a good grade. My biggest obstacle is my phone at night, so if it's 8pm, it goes in the kitchen.\"",
+              "text": "\"I want a good grade. If it's 8pm, my phone goes in the kitchen.\"",
               "best": true,
-              "feedback": "Best. A clear wish, the real obstacle, and an if-then plan: hope plus facts."
+              "feedback": "A clear wish, the real obstacle, and an if-then plan: hope plus facts."
             },
             {
               "text": "\"I'm too far behind. It's hopeless.\"",
-              "feedback": "Honest about today, but it drops the faith. Without it, there's no reason to start."
+              "feedback": "Honest about today. If success truly feels out of reach, it's worth asking whether this goal, or a smaller one, is the right fight."
             }
           ]
         },
         {
-          "scenario": "You've got trials (team, audition or a work assessment) in four weeks and you're behind the rest. What do you tell yourself?",
+          "scenario": "Your team's release is in three weeks and you're behind. What do you tell the team tonight?",
           "options": [
             {
-              "text": "\"I'll smash it, I just need to believe.\"",
-              "feedback": "Feels good, but belief on its own can let you relax before the work is done."
+              "text": "\"We'll make it, stay positive.\"",
+              "feedback": "Kind, but it hides the risk. When the date slips, trust slips with it."
             },
             {
-              "text": "\"I'm behind right now. Every Tuesday and Thursday after school or work, I put in an extra session. I'll get there.\"",
+              "text": "\"We want to ship on the 14th. Biggest risk is the API review, so if it isn't done by Friday, we cut feature X.\"",
               "best": true,
-              "feedback": "Best. Honest fact, a plan, and faith in the ending."
+              "feedback": "Wish, obstacle, if-then plan. The team knows the goal and what happens if the wall is real."
             },
             {
-              "text": "\"I'm just not good enough, no point.\"",
-              "feedback": "Honest about today, but it turns a fact into a verdict."
+              "text": "\"We're too far behind, it's hopeless.\"",
+              "feedback": "Honest about the gap, but it gives the team no next move. Name the risk and a plan instead."
             }
           ]
         },
@@ -705,7 +705,7 @@
             {
               "text": "\"It'll be slow and some days it'll ache. I'll do my physio daily, and I'll get back.\"",
               "best": true,
-              "feedback": "Best. You name the hard part and still expect to get there. That keeps you doing the physio."
+              "feedback": "You name the hard part and still expect to get there. That keeps you doing the physio."
             },
             {
               "text": "\"It's all ruined, why bother?\"",
@@ -715,7 +715,7 @@
         }
       ]
     },
-    "insight": "Stockdale's lesson (one man's account) and Oettingen's studies point the same way: people who paired a wish with its obstacle tried harder than pure daydreamers. Modest but replicated effects.",
+    "insight": "Oettingen found pairing a wish with its main obstacle boosted effort when success felt possible, and helped people let go when it didn't. Stockdale's story (via Collins) is an anecdote, not data.",
     "model": "Wish, then obstacle, then if-then plan. Hope gives the why; facts give the how.",
     "try_today": "Name one goal, the biggest inner obstacle, and write one plan: 'If [obstacle], then I will [action].'",
     "source": {
@@ -734,5 +734,240 @@
       "useful_truth"
     ],
     "try_team": "Each person writes the group's goal, the single biggest obstacle, and one 'If..., then we...' plan. Pick the most common obstacle and adopt its plan."
+  },
+  {
+    "id": "aim-high-job-or-aim-spectrum",
+    "concept": "aim_high",
+    "domain": "meaning",
+    "type": "spectrum",
+    "hook": "Two people do your exact job. Only one goes home drained. Why?",
+    "title": "Same Job, Different Aim",
+    "game": {
+      "left": "Just a job",
+      "right": "Aimed at something",
+      "prompt": "Think about your work this week. Pick the answer closest to the truth.",
+      "questions": [
+        {
+          "q": "Sunday evening, thinking about Monday, I mostly feel…",
+          "options": [
+            {
+              "label": "Here we go again",
+              "value": -2
+            },
+            {
+              "label": "Depends on the meetings",
+              "value": 0
+            },
+            {
+              "label": "Curious what this week moves forward",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "If a new hire asked what my team is for, I'd say…",
+          "options": [
+            {
+              "label": "Hitting the numbers we're given",
+              "value": -2
+            },
+            {
+              "label": "Making something easier for specific people",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "My 1:1s mostly cover…",
+          "options": [
+            {
+              "label": "Task status",
+              "value": -2
+            },
+            {
+              "label": "A mix",
+              "value": 0
+            },
+            {
+              "label": "Where the work is heading and why",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When a dull task lands on my desk, I…",
+          "options": [
+            {
+              "label": "Clear it and move on",
+              "value": -1
+            },
+            {
+              "label": "Link it to something it makes possible",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Job-leaning today",
+          "text": "Today your answers lean 'just a job'. That's a fair deal, not a failing. If the week feels heavy, try naming who one task actually helps."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Mixed today",
+          "text": "Today some of your work points somewhere and some doesn't. Pick the part with no aim and ask your manager, or yourself, what it's for."
+        },
+        {
+          "upTo": 1,
+          "label": "Aim-leaning today",
+          "text": "Today your work points at something. Share the aim in your next 1:1 so the team can borrow it, and keep your boundaries: a strong 'why' makes overwork easier to accept."
+        }
+      ]
+    },
+    "insight": "Even admin assistants with near-identical jobs split into job, career and calling views (Wrzesniewski, 1997). Calling views went with higher satisfaction; correlation, not cause.",
+    "model": "The task stays the same; the aim you attach to it changes what you notice and what you can endure.",
+    "try_today": "Write one line above tomorrow's to-do list: 'This matters because it helps ___.' Fill the blank with real people.",
+    "source": {
+      "thinkers": [
+        "Amy Wrzesniewski",
+        "Clark McCauley",
+        "Paul Rozin",
+        "Barry Schwartz",
+        "Jordan Peterson"
+      ],
+      "work": "Wrzesniewski et al., Jobs, Careers, and Callings, Journal of Research in Personality (1997); Peterson, 12 Rules for Life (2018)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "goal_directed_perception",
+      "responsibility_meaning",
+      "start_with_why"
+    ],
+    "try_team": "At stand-up, each person finishes: 'This week's work helps ___ do ___.' Flag any task nobody can link to a person and ask if it still matters.",
+    "sensitive": true
+  },
+  {
+    "id": "start-with-why-meet-the-student-estimate",
+    "concept": "start_with_why",
+    "domain": "meaning",
+    "type": "estimate",
+    "hook": "Your team has heard the targets ten times. What's still missing?",
+    "title": "A Face Beats a Slogan",
+    "game": {
+      "question": "Fundraising callers spent 5 minutes meeting one student their calls had funded. A month later, how much more money did they raise than callers who didn't?",
+      "min": 0,
+      "max": 300,
+      "step": 1,
+      "unit": "% more",
+      "answer": 171,
+      "explain": "171% more money and 142% more time on the phone (Grant et al., 2007). Callers who only read a letter from a student didn't improve. Meeting a real person did.",
+      "anchor": null
+    },
+    "insight": "The why that moved callers wasn't a mission statement; it was one person they'd helped. Samples were small, so treat the size as rough. The direction held in Grant's follow-ups.",
+    "model": "People commit to a why they can picture: a real person helped, not a slogan on a slide.",
+    "try_today": "Before your next team meeting, find one real message from a customer or user your work helped. Open the meeting with it.",
+    "source": {
+      "thinkers": [
+        "Adam Grant",
+        "Simon Sinek"
+      ],
+      "work": "Grant et al., Organizational Behavior and Human Decision Processes (2007); Sinek, Start With Why (2009)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "will_gap",
+      "responsibility_meaning",
+      "aim_high"
+    ],
+    "try_team": "Take 5 minutes: read one real user's message aloud. Each person names one task this week that touches that person, and one that doesn't."
+  },
+  {
+    "id": "flow-tune-the-task-choice",
+    "concept": "flow",
+    "domain": "meaning",
+    "type": "choice",
+    "hook": "Revision feels like chewing cardboard. Is the fix more willpower?",
+    "title": "Tune the Task, Not Yourself",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Sunday revision. You've read the same biology notes three times and your brain has left the room. What helps most?",
+          "options": [
+            {
+              "text": "Read them a fourth time, slower.",
+              "feedback": "Rereading feels productive, but it's too easy to hold your focus. The task is the problem, not you."
+            },
+            {
+              "text": "Close the notes and write the 5 key points from memory in 10 minutes.",
+              "best": true,
+              "feedback": "Now there's a clear goal, a deadline and instant feedback when you check. That's the flow recipe."
+            },
+            {
+              "text": "Put a video on in the background to make it less boring.",
+              "feedback": "Fair instinct, boredom is real. But split attention keeps the task too shallow to pull you in."
+            }
+          ]
+        },
+        {
+          "scenario": "Football training. The passing drill is so easy you're half-asleep and start messing about. What now?",
+          "options": [
+            {
+              "text": "Ask to do it weaker foot only, or one touch.",
+              "best": true,
+              "feedback": "Raising the challenge to meet your skill is how boredom turns into focus."
+            },
+            {
+              "text": "Keep messing about, it's only a drill.",
+              "feedback": "Understandable. You're just spending the session in the boredom zone, where nobody improves much."
+            },
+            {
+              "text": "Skip training next week.",
+              "feedback": "The drill isn't the problem forever; its level is. Change the difficulty before you drop it."
+            }
+          ]
+        },
+        {
+          "scenario": "Maths homework. Three questions in, you're totally stuck, and the group chat is buzzing. What helps?",
+          "options": [
+            {
+              "text": "Force your way through question 4 anyway.",
+              "feedback": "Brave, but too hard with no feedback feels like stress, not flow. A smaller step gets you further."
+            },
+            {
+              "text": "Copy one worked example from the textbook, then try a question just like it.",
+              "best": true,
+              "feedback": "Shrinking the challenge back to your skill level gets you moving again."
+            },
+            {
+              "text": "Answer the chat until you feel like it.",
+              "feedback": "Totally human. The stuck feeling usually waits for you, though; shrinking the task shrinks it."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "When 526 US high-schoolers were paged at random through the day, they were most engaged when challenge and skill were both high (Shernoff et al., 2003). Bored isn't lazy; it's a dial.",
+    "model": "Bored? Make it harder. Stressed? Make it smaller. Then add a clear goal and a quick way to check.",
+    "try_today": "Turn one dull task into a 10-minute challenge: set a timer, a target number, and a way to check if you hit it.",
+    "source": {
+      "thinkers": [
+        "David Shernoff",
+        "Mihaly Csikszentmihalyi",
+        "Barbara Schneider"
+      ],
+      "work": "Shernoff, Csikszentmihalyi, Schneider & Shernoff, School Psychology Quarterly (2003); Csikszentmihalyi, Flow (1990)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deep_work",
+      "order_chaos",
+      "boredom_signal"
+    ],
+    "try_team": "Revision pairs: each writes a 5-minute recall quiz on a topic for the other, then swap and mark. Make the next quiz harder if someone scored full marks."
   }
 ]

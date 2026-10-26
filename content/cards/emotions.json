@@ -691,5 +691,196 @@
    "emotion_naming"
   ],
   "sensitive": true
+ },
+ {
+  "id": "emotion-naming-stressed-choice",
+  "concept": "emotion_naming",
+  "domain": "emotions",
+  "type": "choice",
+  "hook": "Your team says they're 'stressed'. Do you know which fix they need?",
+  "title": "Swap 'Stressed' for a Sharper Word",
+  "game": {
+   "steps": [
+    {
+     "scenario": "The client just pulled the deadline in by a week. Stand-up starts in five minutes and your chest is tight. Before you speak, you…",
+     "options": [
+      {
+       "text": "Name it exactly, to yourself: 'anxious about time, annoyed at the client.'",
+       "best": true,
+       "feedback": "Best move. One fog became two problems: time (re-plan) and the client (one honest call). Each has its own next step."
+      },
+      {
+       "text": "Push it down and say 'All fine, let's just go faster.'",
+       "feedback": "Common, and sometimes needed to get through the meeting. But teams read tension anyway, and an unnamed mood gets guessed at."
+      },
+      {
+       "text": "Vent about the client to a colleague first, to get it out.",
+       "feedback": "Understandable, it feels like release. But retelling the anger tends to keep it warm. A calm label cools it without the fuel."
+      }
+     ]
+    },
+    {
+     "scenario": "In your 1:1, Sam says 'I'm fine, just a bit stressed.' Third week running. You…",
+     "options": [
+      {
+       "text": "Say 'Everyone's stretched right now, hang in there.'",
+       "feedback": "Warm, and true. It also closes the topic, and 'stressed' can hide very different problems."
+      },
+      {
+       "text": "Jump to a fix: 'Let's move two of your tasks.'",
+       "feedback": "Kind instinct, and it might be right. Without a sharper word you're guessing which fix Sam needs."
+      },
+      {
+       "text": "Ask: 'If stressed had a more exact name this week: overloaded, stuck, worried?'",
+       "best": true,
+       "feedback": "Yes. A short menu makes it easy to answer. Overloaded needs fewer tasks, stuck needs help, worried needs information."
+      }
+     ]
+    }
+   ]
+  },
+  "insight": "Different feelings need different fixes. People who tell their bad feelings apart more finely use more ways to handle them (Barrett et al., 2001). Vague 'stress' gets vague help.",
+  "model": "Exact feeling words point to exact fixes. 'Stressed' only gets you a guess.",
+  "try_today": "Before your next meeting, write two exact words for how you feel (like 'rushed, doubtful') and one small action for each.",
+  "try_team": "Stand-up opener: each person gives one exact word for their week ('swamped', 'blocked', 'curious'). Anyone 'blocked' gets 5 minutes of help after.",
+  "source": {
+   "thinkers": [
+    "Lisa Feldman Barrett",
+    "James Gross"
+   ],
+   "work": "Barrett, Gross, Christensen & Benvenuto, 'Knowing what you're feeling and knowing what to do about it', Cognition and Emotion (2001)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "impulse_pause",
+   "emotional_contagion"
+  ],
+  "sensitive": true
+ },
+ {
+  "id": "procrastination-emotion-smart-wait-swipe",
+  "concept": "procrastination_emotion",
+  "domain": "emotions",
+  "type": "swipe",
+  "hook": "Not every 'later' is procrastination. Can you spot the ones that are?",
+  "title": "Smart Wait or Feeling Dodge?",
+  "game": {
+   "prompt": "Why is this work waiting?",
+   "left": "Dodging a feeling",
+   "right": "Smart wait",
+   "items": [
+    {
+     "text": "You've tidied your inbox three times instead of starting the performance review you dread.",
+     "side": "left",
+     "why": "Busy, but dread is steering. Tidying feels useful and keeps the hard part away."
+    },
+    {
+     "text": "You hold your reply to an angry client until the engineer confirms what broke, by 3pm.",
+     "side": "right",
+     "why": "A reason and an end time. That's a plan, not avoidance."
+    },
+    {
+     "text": "The strategy deck is due Friday. It's Wednesday, and you're still 'thinking about it' with the file unopened.",
+     "side": "left",
+     "why": "Thinking with no output as the deadline nears usually means the blank page feels bad."
+    },
+    {
+     "text": "You've put off asking your boss about a promotion for months, unsure how to ask.",
+     "side": "left",
+     "why": "Fear of a 'no' is the feeling. The delay protects you from it, for now."
+    },
+    {
+     "text": "You park a low-value report because two urgent client tasks just landed.",
+     "side": "right",
+     "why": "Choosing an order you'd still back tomorrow is prioritising, not dodging."
+    }
+   ]
+  },
+  "insight": "Delay isn't the problem; avoidance is. Steel's review defines procrastination as putting things off even though you expect to be worse off. A smart wait has a reason and a date.",
+  "model": "A smart wait has a reason and a date. A dodge has a feeling and a vague 'later'.",
+  "try_today": "Pick one thing you're delaying. Write its reason and a date. No reason? Name the feeling in one word and do 10 minutes now.",
+  "try_team": "Each person lists one delayed task and tags it 'reason + date' or 'feeling'. Pair up: for each 'feeling' task, agree a 10-minute first step.",
+  "source": {
+   "thinkers": [
+    "Piers Steel",
+    "Tim Pychyl"
+   ],
+   "work": "Steel, 'The Nature of Procrastination', Psychological Bulletin (2007)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "emotion_naming",
+   "self_compassion"
+  ],
+  "sensitive": true
+ },
+ {
+  "id": "self-compassion-penalty-choice",
+  "concept": "self_compassion",
+  "domain": "emotions",
+  "type": "choice",
+  "hook": "You missed the penalty. Will going easy on yourself make you lazy?",
+  "title": "The Ride-Home Voice",
+  "game": {
+   "steps": [
+    {
+     "scenario": "You miss the penalty. Cup run over. On the ride home, the voice in your head says…",
+     "options": [
+      {
+       "text": "'You choked. You always choke.'",
+       "feedback": "That voice thinks it's helping. But 'always' turns one miss into who you are, and that makes practice feel pointless."
+      },
+      {
+       "text": "'That hurts. Pros miss these too. What would I say to a mate?'",
+       "best": true,
+       "feedback": "That's self-compassion in three moves: notice the sting, remember everyone misses, talk like a friend. Honest, not brutal."
+      },
+      {
+       "text": "'Whatever, football's stupid anyway.'",
+       "feedback": "A fair shield: it stops the sting fast. It can also stop you caring enough to practise penalties."
+      }
+     ]
+    },
+    {
+     "scenario": "Real study: students who got a disappointing exam grade. The ones who were kinder to themselves were more likely to…",
+     "options": [
+      {
+       "text": "Stop trying. They felt fine anyway.",
+       "feedback": "That's the classic worry, but no: they weren't the ones avoiding. Kindness didn't switch off caring."
+      },
+      {
+       "text": "Accept the disappointment and look for what to learn, not avoid it.",
+       "best": true,
+       "feedback": "Right (Neff et al., 2005): self-kindness went with accepting and reframing, and less avoiding. It's a correlation, not proof of cause."
+      },
+      {
+       "text": "Blame the teacher instead.",
+       "feedback": "Good guess at an excuse, but no: self-kindness went with facing the result, not dodging it."
+      }
+     ]
+    }
+   ]
+  },
+  "insight": "Being kind to yourself after a miss isn't going soft. Self-kind students feared failure less and kept wanting to learn. Harshness feels motivating, but fear of failing feeds dodging.",
+  "model": "After a miss, talk to yourself like your best mate would: honest, not brutal.",
+  "try_today": "Next time you mess up, say in your head: 'That stings. Everyone gets this wrong sometimes. What's my next small try?'",
+  "try_team": "Team or class huddle: each person names one miss this week; a partner answers like a good friend would. Then everyone names one next try.",
+  "source": {
+   "thinkers": [
+    "Kristin Neff",
+    "Ya-Ping Hsieh",
+    "Kullaya Dejitterat"
+   ],
+   "work": "Neff, Hsieh & Dejitterat, 'Self-compassion, achievement goals, and coping with academic failure', Self and Identity (2005)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "growth_mindset",
+   "mistake_alchemy"
+  ],
+  "sensitive": true
  }
 ]

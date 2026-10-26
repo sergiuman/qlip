@@ -573,5 +573,189 @@
       "implementation_intentions",
       "evening_reset"
     ]
+  },
+  {
+    "id": "deep-work-quiet-mornings",
+    "concept": "deep_work",
+    "domain": "attention",
+    "type": "choice",
+    "hook": "Your team is busy all day. So why does nothing hard get finished?",
+    "title": "Quiet Hours Are a Team Rule",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your team's big piece of work, a proposal or a redesign, keeps slipping. Chat pings fly all day and everyone replies within minutes. As their manager, you first…",
+          "options": [
+            {
+              "text": "Ask everyone to put in extra hours to catch up",
+              "feedback": "Understandable under pressure, but it adds more of the same chopped-up time. The problem is the pings, not the hours."
+            },
+            {
+              "text": "Block two mornings a week as no-ping, no-meeting time for the whole team",
+              "best": true,
+              "feedback": "Yes. Leslie Perlow tried 'quiet time' mornings with a team of software engineers. Most reported above-average productivity on those mornings."
+            },
+            {
+              "text": "Suggest each person mutes notifications when they need focus",
+              "feedback": "Good instinct, but it rarely holds alone. If the norm is instant replies, whoever goes quiet looks slow. Perlow's fix worked because it was shared."
+            }
+          ]
+        },
+        {
+          "scenario": "In your 1:1, a strong report says: 'I can't finish the strategy doc. I only ever get 20 minutes at a time.' You…",
+          "options": [
+            {
+              "text": "Suggest evenings, when it's quiet",
+              "feedback": "It works for a week, and it's kindly meant. The cost: it teaches that hard thinking is overtime. Tired evenings rarely get your best work."
+            },
+            {
+              "text": "Look at her calendar together, drop or move one meeting, and book a 90-minute block",
+              "best": true,
+              "feedback": "Yes. You just turned 'find time' into a slot that exists. Defending it is your job, not hers."
+            },
+            {
+              "text": "Tell her to push through: everyone's stretched",
+              "feedback": "Honest, and often true. But 20-minute slices can't hold a whole strategy in mind. It's the setup that's failing, not her."
+            }
+          ]
+        },
+        {
+          "scenario": "First quiet morning. A client emails a non-urgent question at 9:15. Your team asks if they must answer now. You say…",
+          "options": [
+            {
+              "text": "Clients always come first: reply within the hour",
+              "feedback": "Caring about clients is right. But if every email beats quiet time, quiet time is gone by day two."
+            },
+            {
+              "text": "Real emergencies come by phone; everything else gets answered after 11",
+              "best": true,
+              "feedback": "Yes. A clear emergency route is what makes quiet time safe. Most 'urgent' emails can wait two hours."
+            },
+            {
+              "text": "Ignore all clients during quiet time, no exceptions",
+              "feedback": "Bold, and it protects focus. The risk: one true emergency goes unanswered and the rule gets scrapped. Give urgency a narrow door."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Deep work rarely fails for lack of willpower. It fails because the team expects instant replies. Perlow's quiet time worked as a shared rule and faded once it stopped being backed.",
+    "model": "Focus is a team rule, not a personal virtue. Protect the hours together.",
+    "try_today": "Block 90 minutes tomorrow morning, label it 'deep work', and tell your team the one way to reach you if it's urgent.",
+    "try_team": "Take 5 minutes: agree two quiet mornings a week, no pings or meetings till 11, and one emergency route. Review it together in two weeks.",
+    "source": {
+      "thinkers": [
+        "Leslie Perlow",
+        "Cal Newport"
+      ],
+      "work": "Perlow, The time famine, Administrative Science Quarterly (1999); Newport, Deep Work (2016)"
+    },
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "attention_residue",
+      "environment_design",
+      "psychological_safety"
+    ]
+  },
+  {
+    "id": "attention-residue-quick-question",
+    "concept": "attention_residue",
+    "domain": "attention",
+    "type": "reveal",
+    "hook": "Your 'quick question' takes 3 seconds. The bill arrives later.",
+    "title": "The Three-Second Tax",
+    "game": {
+      "prompt": "You're halfway through a step-by-step job, like checking a forecast or a contract. A colleague leans over: 'Quick q, which file?' Three seconds, then you're back. In a lab test of interruptions about this short, what happened to people's mistakes afterwards?",
+      "choices": [
+        "No real change",
+        "Roughly doubled",
+        "Ten times more"
+      ],
+      "answer": 1,
+      "reveal": "Roughly doubled. In Altmann and colleagues' study, interruptions of about 2.8 seconds doubled step-skipping errors; about 4.4 seconds tripled them. If you picked 'no change', that's the natural guess: 3 seconds feels free. The cost is losing your place."
+    },
+    "insight": "Tiny interruptions knock you off your place, so mistakes jump when you return. It's a lab task, so office effects may differ in size. Batch the quick questions.",
+    "model": "An interruption's cost isn't its length. It's losing your place.",
+    "try_today": "Start a 'quick qs' note for the colleague you interrupt most. Save questions there and ask them all at once at a set time.",
+    "try_team": "Take 5 minutes: each person counts yesterday's 'quick qs'. Agree two daily ask-me-anything slots and one word that means 'truly urgent'.",
+    "source": {
+      "thinkers": [
+        "Erik Altmann",
+        "J. Gregory Trafton",
+        "David Hambrick"
+      ],
+      "work": "Altmann, Trafton & Hambrick, Momentary interruptions can derail the train of thought, Journal of Experimental Psychology: General (2014)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deep_work",
+      "zeigarnik_effect"
+    ]
+  },
+  {
+    "id": "doomscroll-loop-no-ending",
+    "concept": "doomscroll_loop",
+    "domain": "attention",
+    "type": "swipe",
+    "hook": "Some apps let you finish. Others are built so you never hit bottom.",
+    "title": "Find the Missing Stop",
+    "game": {
+      "prompt": "Does it stop on its own?",
+      "left": "Stops by itself",
+      "right": "Never stops",
+      "items": [
+        {
+          "text": "Short videos in bed at midnight",
+          "side": "right",
+          "why": "No last video. The next one is one swipe away and might be the good one."
+        },
+        {
+          "text": "Today's daily word puzzle",
+          "side": "left",
+          "why": "One a day, then it's done. The designers built the stop in for you."
+        },
+        {
+          "text": "A series episode with autoplay on",
+          "side": "right",
+          "why": "Plot twist: the episode ends, but autoplay deletes the ending. Switch it off and it stops."
+        },
+        {
+          "text": "Refreshing the group chat, waiting for one reply",
+          "side": "right",
+          "why": "Each refresh might be the one. Random payoffs are among the hardest habits to quit."
+        },
+        {
+          "text": "Checking the match score at full time",
+          "side": "left",
+          "why": "The game's over, the score is final. One look and you're done."
+        },
+        {
+          "text": "Opening card packs in a game",
+          "side": "right",
+          "why": "Rare cards drop at random, like a slot machine. There's always one more pack."
+        }
+      ]
+    },
+    "insight": "Loops grip hardest when rewards are random and nothing says 'the end'. Feeds and autoplay remove the stop. How much harm feeds do is still debated.",
+    "model": "If it never ends, you build the ending yourself.",
+    "try_today": "Turn off autoplay on one app tonight, and pick your stop before you start: 'three videos, then lights off.'",
+    "try_team": "With your family or mates: everyone names one app that never stops and picks one stop rule for it. Compare how it went after a week.",
+    "source": {
+      "thinkers": [
+        "Adam Alter",
+        "B.F. Skinner",
+        "Amy Orben",
+        "Andrew Przybylski"
+      ],
+      "work": "Alter, Irresistible (2017); Orben & Przybylski, Nature Human Behaviour (2019)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "habit_loop",
+      "environment_design"
+    ]
   }
 ]

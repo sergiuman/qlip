@@ -953,5 +953,201 @@
       "cite": "Seneca, On Anger III.36, quoting Sextius (trans. John W. Basore, 1928)",
       "next_read": "Seneca, On Anger, Book III, ch. 36 (one page)"
     }
+  },
+  {
+    "id": "growth-mindset-genius-culture-swipe",
+    "concept": "growth_mindset",
+    "domain": "growth",
+    "type": "swipe",
+    "hook": "Your team has a mindset too. Your habits tell people which one.",
+    "title": "Team Mindset Signals",
+    "game": {
+      "prompt": "What does this manager habit teach the team?",
+      "left": "Talent is fixed (hide gaps)",
+      "right": "Talent grows (share gaps)",
+      "items": [
+        {
+          "text": "Praising the 'naturals' in every team meeting",
+          "side": "left",
+          "why": "It says ability is handed out, not built. Others stop showing what they can't do yet."
+        },
+        {
+          "text": "Asking in stand-up: 'Where did you get stuck?'",
+          "side": "right",
+          "why": "Getting stuck becomes normal and visible, so help arrives before the deadline does."
+        },
+        {
+          "text": "Hiring only 'rock stars' who need no training",
+          "side": "left",
+          "why": "It signals that needing to learn is a weakness, even for people already on the team."
+        },
+        {
+          "text": "Handing someone a stretch project with weekly check-ins",
+          "side": "right",
+          "why": "Hard work plus support says 'you can grow into this', not 'sink or swim'."
+        },
+        {
+          "text": "Writing someone off after one weak quarter",
+          "side": "left",
+          "why": "One rough patch gets treated as a verdict on ability instead of a problem to solve."
+        },
+        {
+          "text": "Telling your team about a mistake you made last month",
+          "side": "right",
+          "why": "When the boss admits a gap, everyone else can too. Learning starts at the top."
+        }
+      ]
+    },
+    "insight": "Verdict: habits beat slogans. Staff at firms seen as 'talent is fixed' reported less trust and more corner-cutting. It's survey data, and mindset effects overall are contested.",
+    "model": "Teams copy what leaders reward: praise 'naturals' and people hide gaps; praise progress and they share them.",
+    "try_today": "In your next 1:1, ask 'What's one thing you're finding hard to learn right now?' and thank them for the honest answer.",
+    "source": {
+      "thinkers": [
+        "Elizabeth Canning",
+        "Mary Murphy",
+        "Carol Dweck"
+      ],
+      "work": "Canning et al., Cultures of genius at work, Personality and Social Psychology Bulletin (2020); Sisk et al., Psychological Science (2018)"
+    },
+    "evidence": "contested",
+    "level": 2,
+    "related": [
+      "psychological_safety",
+      "mistake_alchemy",
+      "small_wins"
+    ],
+    "try_team": "5-minute stand-up round: each person names one thing they got stuck on this week and what unstuck it. The manager goes first."
+  },
+  {
+    "id": "deliberate-practice-coaching-choice",
+    "concept": "deliberate_practice",
+    "domain": "growth",
+    "type": "choice",
+    "hook": "Someone on your team asks how to get better. 'Do more' is the trap.",
+    "title": "Coach the Weak Spot",
+    "game": {
+      "steps": [
+        {
+          "scenario": "In your 1:1, Sam says: 'I want to get better at client pitches.' Sam has done dozens. You suggest…",
+          "options": [
+            {
+              "text": "Take every pitch going. Reps make you sharp.",
+              "feedback": "Reps help early on. After that, people often repeat what they already do well. Reps need a target."
+            },
+            {
+              "text": "Pick one weak part, like handling price pushback, and rehearse just that with me this week.",
+              "best": true,
+              "feedback": "Yes. One narrow skill, just past comfort, with fast feedback. That's deliberate practice."
+            },
+            {
+              "text": "Shadow our best seller and copy their style.",
+              "feedback": "Good for seeing what great looks like. But Sam won't learn what to change in their own pitch."
+            }
+          ]
+        },
+        {
+          "scenario": "Friday's rehearsal: Sam answers three mock objections from you. Your feedback is…",
+          "options": [
+            {
+              "text": "\"Great job, you sounded really confident!\"",
+              "feedback": "Kind, and confidence matters. But Sam leaves with nothing specific to try next time."
+            },
+            {
+              "text": "\"Your second answer landed because you named their worry first. Try that on the other two, now.\"",
+              "best": true,
+              "feedback": "Specific, tied to one move, and retried straight away. That's the loop that builds skill."
+            },
+            {
+              "text": "A full list of twelve things to fix.",
+              "feedback": "Thorough and well meant, but too much to act on. One or two changes at a time actually stick."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Verdict: experience alone often plateaus. Rehearsing one weak spot with quick feedback beats more of the same. How much practice explains expertise is contested.",
+    "model": "Better comes from one weak spot, practised just past comfort, with feedback you can use on the next try.",
+    "try_today": "Ask one person on your team which single part of their job they'd most like to improve, and book 15 minutes to rehearse it.",
+    "source": {
+      "thinkers": [
+        "K. Anders Ericsson",
+        "Brooke Macnamara"
+      ],
+      "work": "Ericsson, Krampe & Tesch-Römer, Psychological Review (1993); Macnamara & Maitra, Royal Society Open Science (2019)"
+    },
+    "evidence": "contested",
+    "level": 1,
+    "related": [
+      "skill_gap",
+      "grit",
+      "self_reflection_loop"
+    ],
+    "try_team": "5 min in pairs: pick one tricky moment (a client objection, a pushback email). Try it twice; your partner gives one specific note between tries."
+  },
+  {
+    "id": "grit-spelling-bee-choice",
+    "concept": "grit",
+    "domain": "growth",
+    "type": "choice",
+    "hook": "Grittier kids went further. Not by trying hard at everything, though.",
+    "title": "Grit's Secret Weapon",
+    "game": {
+      "steps": [
+        {
+          "scenario": "National spelling bee finalists, aged 7 to 15, prepared three ways. Which one best predicted how far they got?",
+          "options": [
+            {
+              "text": "Reading books for fun",
+              "feedback": "Great for vocab, and fun matters. But it didn't predict who went further in the bee."
+            },
+            {
+              "text": "Being quizzed by family and friends",
+              "feedback": "Fair guess: it's active and social. It predicted progress less well than the option nobody enjoyed."
+            },
+            {
+              "text": "Studying hard words alone, on their own weak spots",
+              "best": true,
+              "feedback": "Yes. Spellers rated it the least fun and most effortful, and it was the best predictor of success."
+            }
+          ]
+        },
+        {
+          "scenario": "Football trials in a month. Your weak foot is your left. Using the spelling bee result, you…",
+          "options": [
+            {
+              "text": "Play matches with mates every evening",
+              "feedback": "Fun and keeps you fit, so keep it. But in matches you'll mostly use your strong foot."
+            },
+            {
+              "text": "Do 15 minutes alone on left-foot passes, then join the match",
+              "best": true,
+              "feedback": "That's it. Short, boring, aimed at the gap. The match is your reward and your test."
+            },
+            {
+              "text": "Watch pro highlights for tricks",
+              "feedback": "Fun and inspiring, and you'll spot ideas. Your left foot still needs the reps, though."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Verdict: grit paid off through dull, focused solo practice. Grittier spellers did more of it, and that explained their edge. Grit's wider power is contested: effects are modest.",
+    "model": "Grit works by getting you to do the boring practice on your weak spot, not by looking busy.",
+    "try_today": "Pick one weak spot (a topic, a skill, your weak foot) and give it 15 focused minutes alone today, phone in another room.",
+    "source": {
+      "thinkers": [
+        "Angela Duckworth",
+        "K. Anders Ericsson"
+      ],
+      "work": "Duckworth et al., Deliberate practice spells success, Social Psychological and Personality Science (2011)"
+    },
+    "evidence": "contested",
+    "level": 1,
+    "related": [
+      "deliberate_practice",
+      "small_wins",
+      "quitting_wisely"
+    ],
+    "try_team": "Class or squad, 5 min: everyone writes their one weak spot on a card, does 3 focused minutes on just that, then shares one thing they noticed."
   }
 ]

@@ -194,9 +194,9 @@
   "hook": "Your brain ranks dangers by how easily they come to mind. Test it.",
   "title": "Availability Bias",
   "game": {
-   "prompt": "Compared to how often it feels like it happens…",
-   "left": "Rarer than it feels",
-   "right": "More common than it feels",
+   "prompt": "Most people's gut sense of how often this happens is…",
+   "left": "Too high (it's rarer)",
+   "right": "Too low (it's more common)",
    "items": [
     {
      "text": "Dying in a plane crash",
@@ -206,12 +206,12 @@
     {
      "text": "Being killed by a shark",
      "side": "left",
-     "why": "Worldwide, unprovoked shark deaths are usually in single digits per year."
+     "why": "About 5 to 10 unprovoked shark deaths a year worldwide."
     },
     {
-     "text": "Older adults dying after a fall",
+     "text": "Getting hurt cycling or walking near traffic",
      "side": "right",
-     "why": "Falls are a leading cause of injury death for people over 65. Quiet, rarely in the news."
+     "why": "Road injuries are the top killer of 5 to 29-year-olds worldwide (WHO). So routine they're rarely news."
     },
     {
      "text": "A child taken by a total stranger",
@@ -224,13 +224,13 @@
      "why": "It's the top cause of death worldwide (WHO), yet rarely makes headlines."
     },
     {
-     "text": "Car crashes",
+     "text": "Diabetes as a cause of death",
      "side": "right",
-     "why": "About 1.2 million road deaths a year worldwide (WHO). So routine they're barely news."
+     "why": "It kills over a million people a year worldwide (WHO), quietly and with little coverage."
     }
    ]
   },
-  "insight": "Vivid, recent, dramatic events are easy to recall, so they feel common. Slow, ordinary risks hide. Your feed is a highlight reel of rare events, not a map of risk.",
+  "insight": "Vivid, dramatic events are easy to recall, so they feel common; slow, ordinary risks hide. Guesses also drift toward the middle. Your feed is a highlight reel, not a map of risk.",
   "model": "Easy to imagine is not the same as likely. Ask for the count, not the story.",
   "try_today": "Look up one number the next time a scary story grabs you: how many times a year does this actually happen?",
   "source": {
@@ -240,7 +240,7 @@
    ],
    "work": "Availability: A Heuristic for Judging Frequency and Probability (1973)"
   },
-  "evidence": "strong",
+  "evidence": "moderate",
   "level": 1,
   "related": [
    "base_rates",
@@ -474,7 +474,7 @@
   "try_team": "Each person writes one small risk they've avoided. Swap papers, estimate the realistic worst case for each other, then ask: what would help if it happened?",
   "from_source": {
    "quote": "We suffer more ... when we fall from a better to a worse situation, than we ever enjoy when we rise ...",
-   "cite": "Adam Smith, The Theory of Moral Sentiments (1759), Part VI, Section I",
+   "cite": "Adam Smith, The Theory of Moral Sentiments (6th ed., 1790), Part VI, Section I",
    "next_read": "The Theory of Moral Sentiments, Part VI, Section I, 'Of the Character of the Individual, so far as it affects his own Happiness'"
   }
  },
@@ -562,7 +562,7 @@
     }
    ]
   },
-  "insight": "Failure is often easier to picture in concrete detail than success. Imagining an outcome had already happened helped people list ~30% more reasons for it (Mitchell et al., 1989).",
+  "insight": "Picturing failure gives a checklist; success stays vague. Imagining an outcome had already happened helped people find more reasons for it (Mitchell et al., 1989). Klein's premortem builds on it.",
   "model": "Ask what would guarantee failure, then don't do that.",
   "try_today": "Pick one goal. Write 3 ways it could go wrong. Circle the easiest to avoid and skip it today. It's a checklist, not a verdict on you.",
   "source": {
@@ -571,11 +571,12 @@
     "Charlie Munger",
     "Deborah Mitchell",
     "J. Edward Russo",
-    "Nancy Pennington"
+    "Nancy Pennington",
+    "Gary Klein"
    ],
    "work": "Poor Charlie's Almanack (2005); Mitchell, Russo & Pennington, Back to the Future: Temporal Perspective in the Explanation of Events (1989)"
   },
-  "evidence": "philosophy",
+  "evidence": "moderate",
   "level": 1,
   "related": [
    "premortem",
@@ -784,34 +785,16 @@
   "game": {
    "steps": [
     {
-     "scenario": "Your group project partner hasn't sent their part, and it's due tomorrow. Your first thought should be…",
-     "options": [
-      {
-       "text": "'They're lazy. Typical.'",
-       "feedback": "Understandable when you're stressed, but it's a guess about character from one moment. You don't yet know what's going on for them."
-      },
-      {
-       "text": "'Something's probably in the way. I'll ask what's up and what they still need.'",
-       "best": true,
-       "feedback": "Best pick. You stay open to the situation (illness, a shift at work, a crashed laptop) and you still chase the deadline."
-      },
-      {
-       "text": "'Not my problem. I'll just do it all myself.'",
-       "feedback": "It fixes tonight but skips finding out why. If the cause is fixable, it'll happen again."
-      }
-     ]
-    },
-    {
      "scenario": "A close friend left you on read all evening, then you see them active online, posting a story. Before you message again, you tell yourself…",
      "options": [
       {
        "text": "'They're ignoring me. I must have annoyed them.'",
-       "feedback": "A painful leap, and a very common one. One dot on a screen, and a whole story. Posting takes five seconds; a real reply takes energy they might not have tonight."
+       "feedback": "A painful leap, and a very common one, especially when you're already on edge. Notice it's a story about you made from one dot on a screen. Posting takes five seconds; a real reply takes energy they might not have tonight."
       },
       {
        "text": "'Something's probably going on. I'll send something light tomorrow, no pressure to reply.'",
        "best": true,
-       "feedback": "Best pick. You check the situation before judging the person, and you keep the door open without chasing."
+       "feedback": "You check the situation before judging the person, and you keep the door open without chasing."
       },
       {
        "text": "'Fine. I'll ignore them back.'",
@@ -820,20 +803,38 @@
      ]
     },
     {
-     "scenario": "Someone close to you (a parent, a sibling, an old friend) forgot your birthday. Before you message them, you tell yourself…",
+     "scenario": "Your group project partner hasn't sent their part, and it's due tomorrow. Which thought helps most?",
      "options": [
       {
-       "text": "'They don't care about me anymore.'",
-       "feedback": "A painful leap from one missed day, and a very human one. It turns a busy week into a story about the whole relationship."
+       "text": "'They're lazy. Typical.'",
+       "feedback": "Understandable when you're stressed, but it's a guess about character from one moment. You don't yet know what's going on for them."
       },
       {
-       "text": "'Their week must be chaotic. I'll message and see how they are.'",
+       "text": "'Something's probably in the way. I'll ask what's up and what they still need.'",
        "best": true,
-       "feedback": "Best pick. Work, exams, illness or simple overload can explain a missed birthday. Reaching out keeps the door open either way."
+       "feedback": "You stay open to the situation (illness, a shift at work, a crashed laptop) and you still chase the deadline."
       },
       {
-       "text": "'I'll wait and see how long it takes them.'",
-       "feedback": "Understandable, but a silent test usually lets the hurt grow on both sides. A warm message answers it faster."
+       "text": "'Not my problem. I'll just do it all myself.'",
+       "feedback": "It fixes tonight but skips finding out why. If the cause is fixable, it'll happen again."
+      }
+     ]
+    },
+    {
+     "scenario": "A teammate (at work, or on a school project) has missed the last three deadlines. You talk tomorrow. You open with…",
+     "options": [
+      {
+       "text": "'You're unreliable, this has to stop.'",
+       "feedback": "A verdict on character. They'll defend themselves, not fix it."
+      },
+      {
+       "text": "Nothing. Maybe it sorts itself out.",
+       "feedback": "Kind for a week, costly for months. Patterns need a talk."
+      },
+      {
+       "text": "'Three misses in a row. What's getting in the way, and what do we change?'",
+       "best": true,
+       "feedback": "Situation first, but you name the pattern. That's not blame, it's the job."
       }
      ]
     }
@@ -858,6 +859,191 @@
    "confirmation_bias",
    "feedback_loops",
    "system1_system2"
+  ]
+ },
+ {
+  "id": "system1-system2-trust-gut-work",
+  "concept": "system1_system2",
+  "domain": "thinking",
+  "type": "choice",
+  "hook": "Your gut has been right for years. On which calls is it guessing?",
+  "title": "When to Trust Your Gut at Work",
+  "game": {
+   "steps": [
+    {
+     "scenario": "You've interviewed a candidate for 30 minutes. Great chat, shared jokes, and your gut says hire. Before the debrief, you…",
+     "options": [
+      {
+       "text": "Go with it. You've hired plenty of people.",
+       "feedback": "Understandable: a warm chat feels like data. But unstructured interviews predict job performance far more weakly than structured ones (Sackett et al., 2022). Rapport mostly measures the chat."
+      },
+      {
+       "text": "Score them 1–5 on the 3–4 skills the job needs, then write your gut call last.",
+       "best": true,
+       "feedback": "Right call. It's the method Kahneman built for army interviews: rate set traits first, intuition last. Your gut still gets a vote, just after the evidence."
+      },
+      {
+       "text": "Ask two colleagues what they made of the vibe.",
+       "feedback": "More voices help, but asking about vibe repeats the same shortcut three times. Ask them to score the same skills on their own first."
+      }
+     ]
+    },
+    {
+     "scenario": "Your support lead, 12 years in the role, glances at a ticket: 'This smells like a bigger outage.' The dashboard looks fine. You…",
+     "options": [
+      {
+       "text": "Take it seriously and check now.",
+       "best": true,
+       "feedback": "Yes. Her gut was trained in a regular world with fast feedback: thousands of tickets, quick proof of whether she was right. That's when intuition earns trust."
+      },
+      {
+       "text": "Wait for the dashboard to confirm it.",
+       "feedback": "Careful, and dashboards matter. The trade-off: you give up the head start her years of pattern-spotting offer. A quick check costs little."
+      },
+      {
+       "text": "Ask her for a written case before acting.",
+       "feedback": "Thorough, but expert hunches are often hard to put into words quickly. Check first, write it up after."
+      }
+     ]
+    },
+    {
+     "scenario": "In planning, a senior peer says: 'My gut says the new product hits target in year one.' You reply…",
+     "options": [
+      {
+       "text": "'You know this market. Let's go with that.'",
+       "feedback": "Respectful, but first-year forecasts for new things get slow, rare feedback. Nobody's gut has been trained on that, however senior."
+      },
+      {
+       "text": "'Before we commit: how did similar launches here actually do?'",
+       "best": true,
+       "feedback": "Exactly. Where the gut never got feedback, start from the track record of similar cases, then adjust."
+      },
+      {
+       "text": "'Gut feelings have no place in planning.'",
+       "feedback": "Too far the other way. Some guts are well trained. The useful question is whether this one ever got feedback."
+      }
+     ]
+    }
+   ]
+  },
+  "insight": "Gut calls earn trust where the world is regular and feedback fast, like reading tickets. In hiring and forecasts feedback is slow, so confidence outruns accuracy.",
+  "model": "Trust a gut trained by fast, honest feedback. Everywhere else, score first, feel second.",
+  "try_today": "Before your next hire or big call, write 3 criteria and score them before you let yourself decide.",
+  "try_team": "Take one decision your team makes often. In 5 minutes, ask: do we get fast, clear feedback on it? If not, agree 3 criteria to score first.",
+  "source": {
+   "thinkers": [
+    "Daniel Kahneman",
+    "Gary Klein",
+    "Paul Sackett"
+   ],
+   "work": "Conditions for Intuitive Expertise: A Failure to Disagree (Kahneman & Klein, 2009); Thinking, Fast and Slow (2011), ch. 21; Revisiting Meta-Analytic Estimates of Validity in Personnel Selection (Sackett et al., 2022)"
+  },
+  "evidence": "moderate",
+  "level": 2,
+  "related": [
+   "base_rates",
+   "confirmation_bias"
+  ]
+ },
+ {
+  "id": "confirmation-bias-test-questions",
+  "concept": "confirmation_bias",
+  "domain": "thinking",
+  "type": "swipe",
+  "hook": "Your questions in a 1:1 can quietly rig the answer you get.",
+  "title": "Questions That Test, Not Confirm",
+  "game": {
+   "prompt": "You have a hunch at work. What does this question do?",
+   "left": "Fishes for a yes",
+   "right": "Could prove you wrong",
+   "items": [
+    {
+     "text": "Hunch: the launch is on track. You ask: 'We're good for Friday, right?'",
+     "side": "left",
+     "why": "A yes-shaped question. Few people contradict their manager in one word."
+    },
+    {
+     "text": "Hunch: the launch is on track. You ask: 'What would make us miss Friday?'",
+     "side": "right",
+     "why": "It invites exactly the bad news that would show your hunch is wrong."
+    },
+    {
+     "text": "Hunch: the client loves your proposal. You ask: 'Which parts work best for you?'",
+     "side": "left",
+     "why": "Even a lukewarm client can name a favourite part. You learn little."
+    },
+    {
+     "text": "Hunch: the client loves it. You ask: 'If budget forced one cut, what goes first?'",
+     "side": "right",
+     "why": "Now they must rank. A weak spot shows up fast."
+    },
+    {
+     "text": "Hunch: a quiet team member is checked out. You ask: 'Is the workload getting you down?'",
+     "side": "left",
+     "why": "It assumes the problem. They can only agree or push back."
+    },
+    {
+     "text": "Hunch: they're checked out. You ask: 'Which part of your week would you keep if you could?'",
+     "side": "right",
+     "why": "Open question. An eager answer would count against your hunch."
+    }
+   ]
+  },
+  "insight": "Asked to check if someone was outgoing, people chose questions that make anyone sound outgoing (Snyder & Swann, 1978). Given better questions, people do pick them.",
+  "model": "To test a hunch, ask the question whose answer could prove you wrong.",
+  "try_today": "Before your next 1:1, rewrite one 'right?' question as 'What would make this go wrong?'",
+  "try_team": "At stand-up, each person names one hunch about the project and one question that could disprove it. Pick one to answer by Friday.",
+  "source": {
+   "thinkers": [
+    "Mark Snyder",
+    "William Swann",
+    "Yaacov Trope"
+   ],
+   "work": "Hypothesis-Testing Processes in Social Interaction (Snyder & Swann, 1978); Confirmatory and Diagnosing Strategies in Social Information Gathering (Trope & Bassok, 1982)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "fundamental_attribution_error",
+   "system1_system2"
+  ]
+ },
+ {
+  "id": "availability-group-project-shares",
+  "concept": "availability",
+  "domain": "thinking",
+  "type": "reveal",
+  "hook": "Everyone in your group thinks they carried it. Can they all be right?",
+  "title": "Why You Feel You Did the Most",
+  "game": {
+   "prompt": "Your group of four finishes a project. Each of you secretly writes what % of the work you did. Add up the four numbers. You get…",
+   "choices": [
+    "About 100%",
+    "Well over 100%",
+    "Under 100%"
+   ],
+   "answer": 1,
+   "reveal": "Well over 100%. Couples' claimed shares of chores often summed past 100% (Ross & Sicoly, 1979), and overclaiming grew with group size (Schroeder, Caruso & Epley, 2016). Nobody had to be lying."
+  },
+  "insight": "You saw every hour of your own work; theirs happened out of sight. What's easy to recall feels bigger. Memory is lopsided, not your mates.",
+  "model": "You remember your work in full and theirs in clips. Count theirs before you claim yours.",
+  "try_today": "Before you complain about who did what, list three things a groupmate or sibling did that you didn't see happen.",
+  "try_team": "Everyone privately writes their % share of a shared task (a project, the chores). Add them up out loud, then each name one thing someone else did.",
+  "source": {
+   "thinkers": [
+    "Michael Ross",
+    "Fiore Sicoly",
+    "Juliana Schroeder",
+    "Eugene Caruso",
+    "Nicholas Epley"
+   ],
+   "work": "Egocentric Biases in Availability and Attribution (Ross & Sicoly, 1979); Many Hands Make Overlooked Work: Over-Claiming of Responsibility Increases with Group Size (Schroeder, Caruso & Epley, 2016)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "fundamental_attribution_error",
+   "confirmation_bias"
   ]
  }
 ]
