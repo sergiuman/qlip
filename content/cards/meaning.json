@@ -16,9 +16,9 @@
               "feedback": "Useful details, but they answer a question nobody has asked yet. Logistics land better once people care."
             },
             {
-              "text": "\"I'm sick of us just scrolling on Fridays, let's actually do something.\"",
+              "text": "\"I miss us actually hanging out. Fancy a kickabout on Fridays?\"",
               "best": true,
-              "feedback": "You gave a reason they can feel. Now the time and the £3 sound like a way in, not a chore."
+              "feedback": "You gave a reason they can feel: wanting time together. Now the time and the £3 sound like a way in, not a chore."
             },
             {
               "text": "\"It'll be the best thing anyone's doing this term.\"",
@@ -356,27 +356,29 @@
     "concept": "aim_high",
     "domain": "meaning",
     "type": "reveal",
-    "hook": "A clown on a unicycle rides past you. Would you even notice?",
-    "title": "Your Aim Decides What You See",
+    "hook": "A clown on a unicycle rides past. How many people even notice?",
+    "title": "What You Focus On Is What You See",
     "game": {
-      "prompt": "You're crossing a campus square, talking on your phone. A clown in a bright costume rides past on a unicycle. Would you notice?",
+      "prompt": "You're crossing a campus square, no phone, just walking. A clown in a bright costume rides past on a unicycle. Of people like you, how many noticed?",
       "choices": [
-        "Of course I would",
-        "Probably not"
+        "Almost all (90%)",
+        "About half (51%)",
+        "Few (25%)"
       ],
       "answer": 1,
-      "reveal": "Probably not. In Hyman and colleagues' 2010 study, only about 25% of people on a phone call said they saw the clown, even when asked directly. About half of people walking alone without a phone (51%) did. Their aim, the call, decided what got through."
+      "reveal": "About half (51%). And of people on a phone call, only about 25% saw the clown, even when asked directly (Hyman et al., 2010). What held their attention, the call, decided what got through."
     },
-    "insight": "The missed clown is solid science. The life lesson is a lens, not a law: your aims steer what you notice. Aristotle's mark was the good life itself; small targets serve it, they don't replace it.",
+    "insight": "The missed clown is solid attention science. Peterson's next step, that your aims shape what you notice, is a lens, not a finding. Aristotle's target was the good life; small aims serve it.",
     "model": "Your aim is a filter. Change what you're looking for and you'll notice a different world.",
     "try_today": "Write one aim for this week in a single line. Tonight, list three things you noticed today that could help it.",
     "source": {
       "thinkers": [
         "Ira Hyman",
         "Daniel Simons",
-        "Aristotle"
+        "Aristotle",
+        "Jordan Peterson"
       ],
-      "work": "Hyman et al., Did you see the unicycling clown?, Applied Cognitive Psychology (2010); Aristotle, Nicomachean Ethics, Book I"
+      "work": "Hyman et al., Did you see the unicycling clown?, Applied Cognitive Psychology (2010); Aristotle, Nicomachean Ethics, Book I; Peterson, 12 Rules for Life (2018), Rule 4"
     },
     "evidence": "moderate",
     "level": 1,
@@ -656,42 +658,24 @@
     "domain": "meaning",
     "type": "choice",
     "hook": "Picturing success feels great. That might be the problem.",
-    "title": "Hope Plus the Wall: Wish, Obstacle, Plan",
+    "title": "Hope Plus the Wall",
     "game": {
       "steps": [
         {
-          "scenario": "A prisoner of war said the optimists who expected release by Christmas broke first. Your exam is in three weeks and you're behind. What do you tell yourself tonight?",
+          "scenario": "Your exam is in three weeks and you're behind. What do you tell yourself tonight?",
           "options": [
             {
               "text": "\"I'll ace it. Just picture the grade and stay positive.\"",
               "feedback": "Feels good, but research suggests pure daydreams can relax you before you've done the work."
             },
             {
-              "text": "\"I want a good grade. If it's 8pm, my phone goes in the kitchen.\"",
+              "text": "\"I want a good grade. My obstacle is my phone, so at 8pm it goes in the kitchen.\"",
               "best": true,
               "feedback": "A clear wish, the real obstacle, and an if-then plan: hope plus facts."
             },
             {
               "text": "\"I'm too far behind. It's hopeless.\"",
               "feedback": "Honest about today. If success truly feels out of reach, it's worth asking whether this goal, or a smaller one, is the right fight."
-            }
-          ]
-        },
-        {
-          "scenario": "Your team's release is in three weeks and you're behind. What do you tell the team tonight?",
-          "options": [
-            {
-              "text": "\"We'll make it, stay positive.\"",
-              "feedback": "Kind, but it hides the risk. When the date slips, trust slips with it."
-            },
-            {
-              "text": "\"We want to ship on the 14th. Biggest risk is the API review, so if it isn't done by Friday, we cut feature X.\"",
-              "best": true,
-              "feedback": "Wish, obstacle, if-then plan. The team knows the goal and what happens if the wall is real."
-            },
-            {
-              "text": "\"We're too far behind, it's hopeless.\"",
-              "feedback": "Honest about the gap, but it gives the team no next move. Name the risk and a plan instead."
             }
           ]
         },
@@ -715,7 +699,7 @@
         }
       ]
     },
-    "insight": "Oettingen found pairing a wish with its main obstacle boosted effort when success felt possible, and helped people let go when it didn't. Stockdale's story (via Collins) is an anecdote, not data.",
+    "insight": "Oettingen's lab work: pairing a wish with its obstacle lifts effort when success feels possible. A related idea: Stockdale, a POW for 7+ years, kept faith yet faced facts (anecdote, via Collins).",
     "model": "Wish, then obstacle, then if-then plan. Hope gives the why; facts give the how.",
     "try_today": "Name one goal, the biggest inner obstacle, and write one plan: 'If [obstacle], then I will [action].'",
     "source": {

@@ -747,12 +747,12 @@
     "concept": "sunk_cost",
     "domain": "decisions",
     "type": "swipe",
-    "hook": "Your project is 8 months in and wobbling. What may you count?",
+    "hook": "Your project is 8 months in and wobbling. What should actually count?",
     "title": "Kill or Keep: What Counts",
     "game": {
       "prompt": "Deciding whether to keep the project going. Should this count?",
-      "left": "Ignore it (already spent)",
-      "right": "Count it (still ahead)",
+      "left": "Already spent",
+      "right": "Still ahead",
       "items": [
         {
           "text": "The 8 months the team has already put in",
@@ -854,16 +854,17 @@
         }
       ]
     },
-    "insight": "Verdict: every yes spends time some other work needed. Studies find people weigh that hidden cost more when someone names it out loud.",
+    "insight": "Verdict: every yes spends time some other work needed. People often ignore that hidden cost until someone names it, especially when time or money already feels tight.",
     "model": "Before any yes, ask: what is the best thing this will push out?",
     "try_today": "Next time you're asked to take something on, reply: 'Yes, if we pause X. Does that work?' Pick X before you answer.",
     "try_team": "5 minutes: list everything the team is doing on a board. Each person marks one item they'd pause to make room for the next request. Compare marks.",
     "source": {
       "thinkers": [
         "James Buchanan",
+        "Shane Frederick",
         "Stephen Spiller"
       ],
-      "work": "Cost and Choice (1969); Opportunity Cost Consideration (Journal of Consumer Research, 2011)"
+      "work": "Buchanan, Cost and Choice (1969); Frederick et al., 'Opportunity Cost Neglect', Journal of Consumer Research (2009); Spiller, 'Opportunity Cost Consideration', Journal of Consumer Research (2011)"
     },
     "evidence": "moderate",
     "level": 1,
@@ -878,28 +879,30 @@
     "concept": "regret_minimization",
     "domain": "decisions",
     "type": "estimate",
-    "hook": "Ask adults about their biggest regret. One topic wins. Guess it.",
+    "hook": "Adults' #1 life regret is about school. Guess how big a share it is.",
     "title": "Regret Lives Where Doors Were Open",
     "game": {
-      "question": "Researchers pooled studies asking adults for their biggest life regret. School and education came top. What share of regrets was it?",
+      "question": "Of all the life regrets adults named, what share were about school and education?",
       "min": 0,
       "max": 100,
       "step": 1,
       "unit": "%",
       "answer": 32,
       "anchor": null,
-      "explain": "About 32% (Roese & Summerville, 2005). Next: career (22%) and romance (15%). Their idea: we regret most where we had the most chances. In school years, doors are wide open."
+      "explain": "About 1 in 3 (32%; Roese & Summerville, 2005). Career (22%) and romance (15%) come next. Their idea: we regret most where we saw a real chance to act, and many of those doors stay open longer than we think."
     },
-    "insight": "Verdict: regret follows open doors, not just grades. Trying a club, a subject or a tryout costs little now, so skipped chances tend to linger. Mostly US adults studied.",
+    "insight": "Verdict: regret follows open doors, at 16 or 46. Over time, people regret what they didn't do more than what they did (Gilovich & Medvec, 1995). Mostly US adults studied.",
     "model": "Regret grows where chances were cheap. While a door is open, a small try costs less than a long 'what if'.",
-    "try_today": "Pick one open door this week: a tryout, a club, a question to a teacher, a message to a mate. Do the smallest first bit.",
-    "try_team": "With friends or class: each person writes one 'I'd be gutted if I never tried…' for this year. Swap papers and suggest one tiny first step.",
+    "try_today": "Pick one door still open for you: a course, a club, a role, a question, a message to an old friend. Do the smallest first bit this week.",
+    "try_team": "Each person writes one 'I'd be gutted if I never tried…' for this year. Swap and suggest one tiny first step.",
     "source": {
       "thinkers": [
         "Neal Roese",
-        "Amy Summerville"
+        "Amy Summerville",
+        "Thomas Gilovich",
+        "Victoria Husted Medvec"
       ],
-      "work": "What we regret most... and why (Personality and Social Psychology Bulletin, 2005)"
+      "work": "Roese & Summerville, What we regret most... and why (Personality and Social Psychology Bulletin, 2005); Gilovich & Medvec, The experience of regret (Psychological Review, 1995)"
     },
     "evidence": "moderate",
     "level": 1,

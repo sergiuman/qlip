@@ -203,18 +203,18 @@
   "hook": "Smart people, one small change, total chaos. Who's to blame?",
   "title": "The Beer Game",
   "game": {
-   "prompt": "A shop, a wholesaler, a distributor and a factory pass orders up a chain. Each delivery takes weeks. Customers change once: from 4 cases a week to 8, then stay at 8. What happens up the chain?",
+   "prompt": "Shop → wholesaler → distributor → factory. Deliveries take weeks. Shoppers go from 4 cases a week to 8, then stay at 8. What do the orders do?",
    "choices": [
     "Orders rise smoothly to 8 and stay there",
     "Orders swing between huge and almost none",
     "Orders barely change"
    ],
    "answer": 1,
-   "reveal": "They swing wildly. Stock is slow to arrive, so players keep ordering, then drown in it and stop. If you picked 'smoothly', that's what nearly everyone expects. Afterwards, many players blamed wild customer demand. It had changed once."
+   "reveal": "They swing wildly. Stock is slow to arrive, so players keep ordering, then drown in it and stop. If you picked 'smoothly', that's what nearly everyone expects. Afterwards, many players blamed wild customer demand. It had changed once. Your version: texting \"??\" three times before the first reply has even landed, then getting four replies at once."
   },
   "insight": "In MIT's Beer Game, played since the 1960s, smart people make the same swings again and again. The cause isn't who plays. It's the delay built into the chain.",
   "model": "When everyone overreacts, look for the delay before you look for someone to blame.",
-  "try_today": "Before you order, send, or ask again, check: is my last action still on its way? Wait one cycle first.",
+  "try_today": "Sent a message or made a request? Wait for it to land before you send it again.",
   "try_team": "When a problem in your group swings back and forth, draw the chain on paper and mark every delay. Agree to change one thing at a time.",
   "source": {
    "thinkers": [

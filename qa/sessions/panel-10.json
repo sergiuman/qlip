@@ -1,0 +1,655 @@
+{
+ "session": 10,
+ "personas": [
+  {
+   "persona": "Maya, 16, Manchester sixth-former. Lives on TikTok and leaves anything that feels like school, a lecture or my mum's LinkedIn.",
+   "scores": {
+    "hook": 6,
+    "clarity": 7,
+    "usefulness": 6,
+    "safety": 9,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "10 of the 24 cards in this session are about managing a team (wso-triad-one-to-one-choice, self-efficacy-new-lead-swipe, deep-work-quiet-mornings, psychological-safety-swipe-standup, trust-ledger-choice-deadline, sunk-cost-kill-or-keep, opportunity-cost-yes-and, emotion-naming-stressed-choice, procrastination-emotion-smart-wait-swipe, reframing-angry-client-reveal). They are full of stand-ups, 1:1s, clients and 'your report'. I'm 16 and I don't have a report. The feed only learns my audience after I skip cards (app.js lines 130-131), so before it adapts I've seen loads of boss content and left. Each skip only moves the score by 1, and it is capped at ±2.",
+     "fix": "Show a one-tap chip on the first card: 'Mostly about: [School & mates] [Work]'. Make it set S.aud = {young: 2, work: -2} or the opposite. If the viewer hasn't picked yet, cap audience:'work' cards at 1 in every 6 in the feed. Also raise the skip penalty in app.js line 131 from -1 to -2 so the feed adapts after one skip, not two."
+    },
+    {
+     "card_id": "procrastination-emotion-smart-wait-swipe",
+     "severity": "high",
+     "problem": "Procrastination is literally my biggest problem, but every item is office stuff (performance review, strategy deck, promotion, angry client). It's marked 'work', so the topic teens need most is buried.",
+     "fix": "Add a young twin card or change audience to 'all' and rewrite items: 1) 'You've reorganised your revision timetable three times instead of opening the chemistry paper' (left). 2) 'You wait to start the essay until your teacher answers your question about the title, due back tomorrow' (right). 3) 'Coursework is due Friday. It's Wednesday and the doc is still blank, you're just \"thinking about it\"' (left). 4) 'You've put off asking your mate why she's been off with you for weeks' (left). 5) 'You park your reading log because two assignments are due tomorrow' (right)."
+    },
+    {
+     "card_id": "self-efficacy-new-lead-swipe",
+     "severity": "medium",
+     "problem": "The idea (confidence comes from small wins) is gold for me, but the hook 'New to leading a team?' makes me scroll straight past. Also, the 'a' screenshot shows the correct answers grouped at the top under orange arrows, so the reveal reads like a lecture list.",
+     "fix": "Create a young version: hook 'Some confidence boosts last. Some vanish by Monday.' Prompt: 'You've just been made captain / group-project lead. How much \"I can do this\" does each one build?' Items: 'You run the first warm-up yourself and it goes fine' (right); 'Your coach says \"you're a natural\"' (left); 'A mate in your year nails a presentation' (right); 'You watch a famous YouTuber's perfect speech' (left); 'You watch three videos on leadership' (left); 'You cut a scary task down to one message and send it' (right)."
+    },
+    {
+     "card_id": "map-territory-swipe",
+     "severity": "medium",
+     "problem": "The reveal shows 'Closer to the thing · Closer to the thing itself, happening in you' because the label and the explanation repeat each other. The rain explanation ('you feel your senses' report') is confusing philosophy-speak. The like-count and 'I'm bad at maths' items are brilliant and deserve better company.",
+     "fix": "Burn in legs, why: 'Happening in your body right now. The second you say \"my legs are dying\", that's already the map.' Rain, why: 'Real and right now: you can't argue with it, only grab a hood.' Move the like-count item to first place so the strongest teen item opens the game."
+    },
+    {
+     "card_id": "stockdale-paradox-dream-vs-obstacle-choice",
+     "severity": "medium",
+     "problem": "Step 1 opens with 'A prisoner of war said the optimists ... broke first' and then asks about my exam. It's grim, confusing, and feels like a history lesson in the middle of a game.",
+     "fix": "Scenario 1 rewrite: 'Exam in three weeks and you're behind. What do you tell yourself tonight?' Move the Stockdale line to the insight only: 'Admiral Stockdale said the prisoners who just expected rescue by Christmas struggled most (an anecdote, via Collins).'"
+    },
+    {
+     "card_id": "delays-beer-game",
+     "severity": "medium",
+     "problem": "'A shop, a wholesaler, a distributor and a factory pass orders up a chain' is pure Business Studies homework. I got the answer right but felt nothing, and nothing connects it to my life.",
+     "fix": "Add a last line to the reveal: 'Your version: texting \"??\" three times before the first reply has even landed, then getting four replies at once.' Change try_today to: 'Sent a message or made a request? Wait for it to land before you send it again.' Shorten the prompt to: 'Shop → wholesaler → distributor → factory. Deliveries take weeks. Shoppers go from 4 cases a week to 8, then stay at 8. What do the orders do?'"
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "After a swipe game, the result is just '4 of 6. Here's the pattern.' plus a long text stack. There's no moment I'd screenshot or send to my mates, so the Share button has nothing to share.",
+     "fix": "Under the score, add a one-line, shareable verdict made from the score, e.g. '4/6: you spot endless loops better than most' (6/6: 'Loop detector: elite'; ≤2: 'The feed wins this round. Rematch?'). Make the Share button pre-fill that line plus the card hook."
+    },
+    {
+     "card_id": "regret-minimization-open-doors",
+     "severity": "low",
+     "problem": "The idea is honestly one of the best for my age, but the prompt reads like an exam question ('Researchers pooled studies asking adults...'), and the reveal has three percentages in a row.",
+     "fix": "Prompt rewrite: 'Adults' number 1 life regret? School. What % of all regrets is it?' Reveal rewrite: 'About 1 in 3 (32%). Career and love come next. Regret piles up where chances were easy, and right now yours are wide open.'"
+    }
+   ],
+   "best_cards": [
+    "doomscroll-loop-no-ending",
+    "aim-high-gorilla",
+    "spotlight-effect-slip-choice"
+   ],
+   "verdict": "When it's about me, it slaps. The doomscroll swipe called me out, the clown one was a 'wait what' moment, and the spotlight one made my cringe memory smaller. will-gap and start-with-why also felt like my life. It's never mean, and the helpline and 'snapshot, not a verdict' lines are nice. But almost half this session was manager stuff (stand-ups, 1:1s, clients), and the feed only stops showing it after I've skipped a few, by which point I've gone back to TikTok. Several reveals are walls of text with study names. Ask whether I'm at school from the start, give procrastination and confidence teen versions, and add one shareable line after each game. Then I'd keep going."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself; no patience for fluff.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The feed mixes teenager content into my manager feed. In this session I got 'You're 16 and you all leave school at 18' (Old Wisdom, view-feed-dark), a £3 five-a-side group chat (start-with-why-pitch), revision lists and chemistry mates (courage-kindness-swipe-advice), getting parents to make phone calls (shifting-burden-swipe) and exam stress (stress-mindset-spectrum). About a quarter of my scrolling was not for me. I would close the app after the second school card.",
+     "fix": "On first open, ask one question: 'Where will you use this? School / Work / Life'. Store it and filter by card.audience: 'work' users never see audience 'young' cards, and 'young' users never see 'work' cards. 'all' cards show for everyone. Show the choice in the '?' menu so people can change it."
+    },
+    {
+     "card_id": "regret-minimization-open-doors",
+     "severity": "medium",
+     "problem": "The card is tagged audience 'all', but the insight, try_today and try_team only talk about school: clubs, tryouts, a teacher, 'with friends or class'. At 44 the result (education is the biggest regret) mostly makes me feel the door is closed. I get no adult action.",
+     "fix": "Rewrite insight: 'Verdict: regret follows open doors. Where a try is cheap, a skipped chance tends to linger, at 16 or at 46. Mostly US adults studied.' Rewrite try_today: 'Pick one door that is still open: a course, a role you'd like, a question to your boss, a message to an old friend. Do the smallest first bit this week.' Rewrite try_team: 'Each person writes one \"I'd be gutted if I never tried…\" for this year. Swap and suggest one tiny first step.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "On the swipe reveal (psychological-safety-swipe-standup-b), the line 'The → ones show where each really belongs' plus orange arrows and green ticks is hard to decode. I could not tell quickly which ones I got wrong and which side was correct. Non-native readers struggle with 'really belongs'.",
+     "fix": "On each missed item, replace the arrow with a red cross and the text 'You said: Opens people up. Answer: Shuts people up.' On each correct item, show a green tick and 'Correct: Opens people up'. Change the subline to 'Red = you missed it. Green = you got it.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "My map (view-map-dark) is a hairball. Domain labels sit on top of nodes ('Old Wisdom' and 'Thinking' are cut through by dots), 88 nodes with crossing lines, and nothing I can act on. It looks nice but tells me nothing.",
+     "fix": "Draw labels on a background pill with z-index above the nodes and push them away from nodes (label collision offset). Under the graph, add a 'Your 3 tools for this week' list built from saved cards and ticked try_today items. That is the part a user comes back for."
+    },
+    {
+     "card_id": "stockdale-paradox-dream-vs-obstacle-choice",
+     "severity": "medium",
+     "problem": "Step 1 jumps from a prisoner of war to 'your exam'. That is heavy and a strange jump. The 'best' answer ('If it's 8pm, my phone goes in the kitchen') never names the obstacle, though the feedback says 'wish, the real obstacle, and an if-then plan'. The title is too long for a phone.",
+     "fix": "Step 1 scenario: 'Your exam is in three weeks and you're behind. What do you tell yourself tonight?' (drop the POW sentence; Stockdale stays in the insight). Best option text: '\"I want a good grade. My obstacle is my phone. If it's 8pm, it goes in the kitchen.\"' Title: 'Hope Plus the Wall'."
+    },
+    {
+     "card_id": "reframing-angry-client-reveal",
+     "severity": "medium",
+     "problem": "The question 'Which leaves you remembering less of what they actually asked for?' is a reversed question. I had to read it three times in English. The prompt is also long: two options inside the prompt plus three choices.",
+     "fix": "Prompt: 'A client tears apart your team's work for ten minutes on a call. Option A: keep a straight face and push the anger down. Option B: tell yourself \"they're under launch pressure, this is fear talking\". Which one makes you forget more of what they asked for?' Keep choices ['A: pushing it down', 'B: reframing it', 'No difference'], answer 0."
+    },
+    {
+     "card_id": "self-efficacy-new-lead-swipe",
+     "severity": "low",
+     "problem": "The swipe labels 'Small boost, fades alone' and 'Big boost, it sticks' are clumsy English. They also put 'a peer handles a tough client well' in 'it sticks', while the why calls it only second-strongest. As a new-ish lead I want the ranking to be clear.",
+     "fix": "left: 'Weak on its own'. right: 'Strong source of belief'. Peer item why: 'Seeing someone like you succeed says \"so could I\". Second only to your own wins.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "Several insights start with a 'Verdict:' prefix (sunk-cost-kill-or-keep, opportunity-cost-yes-and, regret-minimization-open-doors, reframing-angry-client-reveal). It reads like a court and adds nothing. Next-card buttons are also cut off mid-sentence ('Could the help...'), which looks broken, not teasing.",
+     "fix": "Remove 'Verdict: ' from the start of every insight field. In the next-card button, show the full hook up to 2 lines, or cut at a word boundary with the arrow on its own line, never mid-question."
+    }
+   ],
+   "best_cards": [
+    "opportunity-cost-yes-and",
+    "deep-work-quiet-mornings",
+    "trust-ledger-choice-deadline"
+   ],
+   "verdict": "The work cards are good. Opportunity cost ('Yes, if we pause X'), quiet mornings with an emergency route, trust ledger, sunk cost, the WSO 1:1 diagnosis and the psych-safety stand-up all gave me sentences I can use in tomorrow's 1:1 and stand-up. The feedback is kind, and no wrong answer makes you feel stupid. But about a quarter of my feed was written for 16-year-olds (school days left, revision, £3 football, exam nerves). For a tired manager that kills the session. Some reveals and labels are still hard work for non-native English. Filter by audience and fix the swipe-reveal readability, and this goes from 'nice' to something I would give my team."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and has little patience for pop-psych oversimplification.",
+   "scores": {
+    "hook": 6,
+    "clarity": 7,
+    "usefulness": 6,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The part I come for is hidden. The insight, the thinkers, the cited work and the evidence label ('Moderate evidence', 'Philosophical lens') all sit inside a collapsed 'Why? · 15-second read' toggle below Try Today, and none of my screenshots show it opened. Meanwhile the loudest element is the bright 'Next' button. A careful reader sees advice with no visible provenance, which feels like pop-psych even when the card is well sourced.",
+     "fix": "In app.js renderResult, take the evidence chip and the one-line source (`${card.source.thinkers.join(', ')} · ${card.source.work}`) out of the <details> and render them as a visible small line straight after the model box. Keep only card.insight and the related buttons inside the toggle, and rename the summary to 'The reasoning · 15 seconds'."
+    },
+    {
+     "card_id": "stockdale-paradox-dream-vs-obstacle-choice",
+     "severity": "high",
+     "problem": "Step 1 puts a prisoner of war's survival straight beside 'your exam is in three weeks'. That trivialises Stockdale's ordeal and reads as glib. The card also fuses two separate ideas without saying so. Stockdale's paradox (unwavering faith in the end combined with facing brutal facts) is not Oettingen's mental contrasting / WOOP. The best answer in step 1 never names the obstacle as an obstacle either.",
+     "fix": "Rewrite the step 1 scenario as: \"Your exam is in three weeks and you're behind. What do you tell yourself tonight?\" Move the POW line into the insight as: \"Admiral Stockdale, held captive for over seven years, said the prisoners who expected release 'by Christmas' broke first; he kept faith in the ending while facing the facts (via Collins, an anecdote). Oettingen's lab work points the same way: pair a wish with its obstacle.\" Change the step 1 best option to: \"I want a good grade. My obstacle is my phone, so at 8pm it goes in the kitchen.\""
+    },
+    {
+     "card_id": "aim-high-gorilla",
+     "severity": "medium",
+     "problem": "The leap from science to philosophy is too quick. In Hyman et al. the phone call divides attention; it is not an 'aim' in Aristotle's sense. Aristotle's archer is about knowing the chief good, not about perception filtering what you see. The reveal ('Their aim, the call, decided what got through') states the bridge as fact. The insight then calls it 'a lens, not a law', which contradicts the reveal. The bridge is Peterson's, and he gets no credit. The id says 'gorilla', but the card is about a clown.",
+     "fix": "Change the end of the reveal to: \"What held their attention, the call, decided what got through.\" Change the insight to: \"The missed clown is solid science about attention. Peterson builds on it: what you aim at shapes what you notice. That step is a lens, not a finding. Aristotle's target was the good life itself; small aims serve it, they don't replace it.\" Add \"Jordan Peterson\" to source.thinkers and \"Peterson, 12 Rules for Life (2018), Rule 10\" to source.work. Rename the id to aim-high-clown, with a redirect if ids are stored in saves."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The 'Philosophical lens' evidence label is applied loosely. In this sample it appears on Blumberg & Pringle's WSO triad (an organisational-research model), Senge's 'shifting the burden' (a systems archetype) and Korzybski (general semantics). Not one of them is philosophy. Meanwhile the real philosophy (Aristotle) appears once, as a quote, on a card rated 'moderate'. The label looks like a polite word for 'unproven'.",
+     "fix": "Add an evidence value 'model' labelled \"Thinking model — useful, not tested as a whole\" in the ev map in app.js and in CARD_SCHEMA.md. Set evidence:'model' on wso-triad-venn, wso-triad-one-to-one-choice, shifting-burden-swipe and map-territory-swipe. Reserve 'philosophy' for cards whose source is an actual philosopher (Aristotle, Seneca, Epictetus and so on)."
+    },
+    {
+     "card_id": "map-territory-swipe",
+     "severity": "medium",
+     "problem": "The binary is philosophically muddled. Korzybski's point is that every perception, sensation included, is already an abstraction. The card asks me to sort 'rain falling on you' and 'the burn in your legs' to the 'thing itself' side, then concedes in the 'why' text that 'you feel your senses' report'. The labels are asymmetric ('Map' vs 'Closer to the thing'), so the right answers feel arbitrary.",
+     "fix": "Change the prompt to \"Is this a description, or something you're experiencing directly (still filtered by your senses)?\". Set left to \"Description (map)\" and right to \"Direct experience\". Rewrite the rain item's why as: \"Direct experience, but even this is your senses' report, a first, thin map. Korzybski said every level of knowing is an abstraction; the question is how many layers sit between you and the thing.\""
+    },
+    {
+     "card_id": "start-with-why-pitch",
+     "severity": "medium",
+     "problem": "The 'best' opening message, \"I'm sick of us just scrolling on Fridays\", is a complaint that implicitly shames the friends. It isn't a purpose. It teaches that a 'why' means criticising people, the opposite of Sinek's point and not kind.",
+     "fix": "Change the best option text to: \"I miss us actually hanging out. Fancy a kickabout on Fridays?\" Change its feedback to: \"You gave a reason they can feel: wanting time together. Now the time and the £3 sound like a way in, not a chore.\""
+    },
+    {
+     "card_id": "regret-minimization-open-doors",
+     "severity": "low",
+     "problem": "The audience is 'all', but the lesson and Try Today are written only for teenagers ('In school years, doors are wide open', 'a tryout, a club, a question to a teacher'). For an adult, and certainly a retiree, the card closes with 'that ship sailed', which is the opposite of 'always leaves the player better off'. It also skips the most useful related finding, that regrets of inaction last longer than regrets of action (Gilovich & Medvec, 1995).",
+     "fix": "Change try_today to: \"Pick one door that's open for you now, at any age: a class, a call to an old friend, a question you've never asked. Do the smallest first bit this week.\" Add to the insight: \"Over the long run, people regret what they didn't do more than what they did (Gilovich & Medvec, 1995).\" Add that citation to source.work."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "The feed mix is heavily slanted to a manager's office. Ten of 24 cards in this sample are stand-ups, 1:1s, clients and direct reports (deep-work, trust-ledger, psych-safety, opportunity-cost, emotion-naming, procrastination, reframing, sunk-cost, self-efficacy, WSO 1:1). For a reader who wanted a 'practical Peterson Academy', it starts to feel like corporate training rather than practical philosophy.",
+     "fix": "In the feed ordering, cap audience:'work' cards at 1 in every 4 for users who haven't chosen a work focus. Give each work card a 'life' twin, e.g. an emotion-naming scenario set at a family dinner or with an ageing parent instead of a stand-up."
+    }
+   ],
+   "best_cards": [
+    "delays-beer-game",
+    "will-gap-paid-to-play-reveal",
+    "spotlight-effect-slip-choice"
+   ],
+   "verdict": "This is honest, careful work. The cards hedge their evidence, cite real studies (Altmann, Deci/Koestner/Ryan with the Cameron & Pierce critique, Roese & Summerville, Sterman), and the wrong-answer feedback is generous instead of shaming. The Beer Game card, with Senge's 'Structure influences behavior', is the closest thing here to a real lesson. Still, as a reader of Seneca and Aristotle I came away under-fed. The philosophy is mostly decoration, sometimes stretched: the archer quote fitted to a phone-call study, Stockdale's captivity set beside exam revision. The 'Philosophical lens' label covers models that aren't philosophy. The sources and reasoning hide behind a collapsed toggle while a bright 'Next' button calls me onward. The office scenarios start to feel like a management course. It is good and kind, but not yet deep. Show the sources, tighten the bridges between science and philosophy, and give the philosophers whole cards of their own, not just epigraphs."
+  },
+  {
+   "persona": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures; needs the experience to feel safe and genuinely helpful.",
+   "scores": {
+    "hook": 6,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "regret-minimization-open-doors",
+     "severity": "high",
+     "problem": "For someone who has already left education after a hard year, the reveal ('In school years, doors are wide open') and insight ('skipped chances tend to linger') read as: your best doors have closed and you will regret it. I came away with less hope, not more. The try_today items (tryout, club, question to a teacher) also assume I'm still at school, even though the card is audience 'all'.",
+     "fix": "Rewrite game.explain: \"About 32% (Roese & Summerville, 2005). Next: career (22%) and romance (15%). Their idea: we regret most where we had the most chances, and many of those doors stay open longer than we think: a course, a career switch, a first message.\" Rewrite insight: \"Verdict: regret follows open doors, not just grades. Most doors don't shut at 18 or 22, and a small try now costs less than a long 'what if'. Mostly US adults studied.\" Rewrite try_today: \"Pick one door that's still open this week: a course page, a club, a question to someone who knows, a message to a mate. Do the smallest first bit.\""
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "8 of the 24 cards in this session (deep-work-quiet-mornings, wso-triad-one-to-one-choice, self-efficacy-new-lead-swipe, psychological-safety-swipe-standup, trust-ledger-choice-deadline, opportunity-cost-yes-and, emotion-naming-stressed-choice, sunk-cost-kill-or-keep) cast me as a manager running 1:1s. Other cards cast me as a 16-year-old: the feed screenshot shows 'You're 16 and you all leave school at 18'. As a graduate who may be job-hunting, I fit neither, and each one quietly reminds me where I'm 'supposed' to be by now.",
+     "fix": "Add a one-tap onboarding question: 'Right now I'm mostly… studying / working / between things', and use it to weight the 'work' and 'young' audiences in the feed. Do not put two manager-framed cards back to back. In each manager card, rewrite one step from the team member's side. Example for emotion-naming-stressed-choice step 2: scenario \"Your manager asks how you are. You've said 'fine, just a bit stressed' three weeks running. This time you…\", with best option \"Pick a sharper word: 'Honestly, more overloaded than stressed.'\""
+    },
+    {
+     "card_id": "stress-mindset-spectrum",
+     "severity": "medium",
+     "problem": "Q4 gives 'Try to make it go away' the harshest score (-2), yet try_today tells me to take a slow breath, which is a way of calming stress. For someone with anxiety, calming down is a valid skill, so this scoring feels like being marked wrong for coping. Q1's 'A sign I'm not coping' is also a self-label I'd have to pick out loud.",
+     "fix": "Q4 options: {\"label\": \"Avoid the task until it passes\", \"value\": -2}, {\"label\": \"Depends\", \"value\": 0}, {\"label\": \"Calm it a little, then use the energy on the task\", \"value\": 2}. Q1 option 1 label: \"A sign something's wrong\" (keep -2)."
+    },
+    {
+     "card_id": "spotlight-effect-slip-choice",
+     "severity": "medium",
+     "problem": "try_today asks me to deliberately 'Recall one recent cringe moment'. For an anxious ruminator, that is an invitation to replay the very thing the card says to stop replaying.",
+     "fix": "Rewrite try_today: \"Next time a cringe moment starts replaying, write one line: how a kind friend who was there would probably describe it. Then close the note and move on.\""
+    },
+    {
+     "card_id": "procrastination-emotion-smart-wait-swipe",
+     "severity": "medium",
+     "problem": "Three of five items are 'dodging', and the insight defines procrastination as putting things off 'even though you expect to be worse off'. There is no line saying dodging is a normal self-protective move, so I end up sorting my own habits into a guilt pile. 'Do 10 minutes now' in try_today adds pressure.",
+     "fix": "Append to insight: \"Dodging is a normal way to protect yourself from a bad feeling, not laziness, and forgiving yourself for past delays made people procrastinate less next time (Wohl, Pychyl & Bennett, 2010).\" Change the try_today ending to: \"No reason? Name the feeling in one word, be kind about it, and do 10 minutes when you're ready today.\" Add 'Wohl, Pychyl & Bennett, Personality and Individual Differences (2010)' to source.work."
+    },
+    {
+     "card_id": "stockdale-paradox-dream-vs-obstacle-choice",
+     "severity": "low",
+     "problem": "The card is badged 'Quick one' but has 3 steps, and it opens with a prisoner-of-war story about optimists 'breaking', which is heavier than a 30-second game needs. In step 1, the 'best' answer never actually names the obstacle, so the wish-obstacle-plan pattern is hard to see.",
+     "fix": "Step 1 scenario: \"Your exam is in three weeks and you're behind. What do you tell yourself tonight?\" (move the Stockdale line to the insight only). Best option text: \"I want a good grade. My phone is what pulls me away, so at 8pm it goes in the kitchen.\" Drop step 2 (the team release) so the card really is quick, or remove the 'Quick one' badge for 3-step choice cards."
+    },
+    {
+     "card_id": "courage-kindness-swipe-advice",
+     "severity": "low",
+     "problem": "The worksheet item says 'Re-reading first often answers it.' To an anxious reader this sounds like 'you should have known', which works against the card's message that asking is fine.",
+     "fix": "Change that item's why to: \"Totally fine to ask; it just doesn't earn the 'smart' bonus. Asking about the hard stuff does.\""
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "The reflection-not-diagnosis footer with findahelpline.com appears on sensitive cards such as stress-mindset and spotlight, which feels safe. Regret-minimization is not flagged sensitive, so this card about life regrets has no footer, even though it is the card most likely to stir up low mood for me.",
+     "fix": "Set \"sensitive\": true on regret-minimization-open-doors (and on any card whose topic is regret, loss or failure) so the support footer shows."
+    }
+   ],
+   "best_cards": [
+    "spotlight-effect-slip-choice",
+    "map-territory-swipe",
+    "courage-kindness-swipe-advice"
+   ],
+   "verdict": "Mostly safe and often kind. Wrong answers get 'Here's another way to play it' and 'Understandable on a bad day', results say 'a snapshot, not a verdict on you', and the support footer on sensitive cards made me feel looked after. Spotlight, map-territory ('Your I'm bad at maths story is a map') and asking-for-advice gave me something I can actually use with my anxiety. But the feed rarely seems to know who I am. A third of the cards cast me as a manager and others as a 16-year-old. The regret card told me, a graduate, that the open doors were in school, which hit hard. A few small wordings ('make it go away' marked as the harmful end, 'recall a cringe moment', 'do 10 minutes now') work against the gentleness. Good, not yet great: I'd keep playing, but carefully."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist: checks every attribution and effect size, hunts replication-crisis myths, overclaiming and bad survey design.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "The result does not follow from the answers. In the screenshot the scores are Will 10/10, Skill 5/10, Open door 0/10, and the result 'Fired Up, Building Up' says 'build the easier missing piece first, usually a tiny skill rep'. The door is the weakest pillar here, so the advice points at the wrong one and contradicts the card's own model ('find the missing pillar'). The measurement is also thin: Will and Open door each rest on one item, so one neutral tap flips the result. The Will item ('I'd do this even if no one saw') measures intrinsic motivation, not will in general.",
+     "fix": "Rewrite results.W.text to: 'The want is strong today, and the other two lag. Look at the scores above: do one 5-minute move on whichever of Skill or Open door is lower.' Add a second Will item {\"q\":\"I'd still want this if it took twice as long.\",\"axis\":\"W\"} and a second Open door item {\"q\":\"I can get the time, tools or permission I need for this within a week.\",\"axis\":\"O\"}, so each axis has two items. Check every other single-pillar result text (S, O) the same way, so none of them names a specific pillar as the fix."
+    },
+    {
+     "card_id": "will-gap-paid-to-play-reveal",
+     "severity": "high",
+     "problem": "The question does not match the design of the research. Deci, Koestner & Ryan (1999) compared rewarded people with an unrewarded control group. They did not compare people with their own earlier behaviour. So 'Fewer edits than before' is not what the meta-analysis shows, and players learn the wrong claim. The finding that praise helped held for college students but not for children, which matters for a card aimed at all ages.",
+     "fix": "Change the prompt ending to: '…In your free time after that, compared with a friend who did the same edits but was never paid, you'll probably make…' Change choices to [\"More than them\",\"About the same\",\"Fewer than them\"] and keep answer 2. Rewrite the reveal: 'Fewer than the unpaid group, on average. Across 128 experiments, expected rewards for an already-fun task lowered free-choice play after rewards ended, compared with people never rewarded. Surprise rewards didn't, and praise helped adults more than children.'"
+    },
+    {
+     "card_id": "stress-mindset-spectrum",
+     "severity": "high",
+     "problem": "The survey has construct and scoring problems. Q2 (threat versus challenge) measures appraisal, a different construct from Crum's stress mindset (beliefs about what stress does to you). Q3 scores a person's hard past toward 'Stress harms me', so someone with real adversity gets moved to the 'harms' pole for having had it. Q4 scores 'Try to make it go away' at -2, which penalises healthy stress reduction such as rest or breathing, and that clashes with the card's own advice to 'get support for the heavy kind'. Three items lean on socially undesirable left poles ('A sign I'm not coping'), so the answers are leading.",
+     "fix": "Replace Q3 with a Crum-style belief item: {\"q\":\"In general, the effect of stress on me is…\",\"options\":[{\"label\":\"Mostly draining\",\"value\":-2},{\"label\":\"Mixed\",\"value\":0},{\"label\":\"It can sharpen me too\",\"value\":2}]}. Rewrite Q4's options as [{\"label\":\"Take it as a sign something's going wrong\",\"value\":-2},{\"label\":\"Depends\",\"value\":0},{\"label\":\"Use the energy, then rest after\",\"value\":2}]. Change Q1's left label to 'A warning sign' (neutral wording). Replace Q2 with {\"q\":\"Feeling stressed before something important…\",\"options\":[{\"label\":\"Gets in the way of doing well\",\"value\":-2},{\"label\":\"Not sure\",\"value\":0},{\"label\":\"Can help me do well\",\"value\":2}]}. Delete the 'notes' line about Q3."
+    },
+    {
+     "card_id": "opportunity-cost-yes-and",
+     "severity": "medium",
+     "problem": "The citation does not match the claim. The insight says people weigh the hidden cost more 'when someone names it out loud'. That is Frederick, Novemsky, Wang, Dhar & Nowlis (2009, Journal of Consumer Research, 'Opportunity Cost Neglect'). Spiller (2011) showed that people consider opportunity costs more when budgets feel constrained. The source.work field also gives titles without authors.",
+     "fix": "Set source.thinkers to [\"James Buchanan\",\"Shane Frederick\",\"Stephen Spiller\"]. Set source.work to \"Buchanan, Cost and Choice (1969); Frederick et al., 'Opportunity Cost Neglect', Journal of Consumer Research (2009); Spiller, 'Opportunity Cost Consideration', Journal of Consumer Research (2011)\". Rewrite the insight's second sentence: 'People often ignore that hidden cost until someone names it, especially when time or money already feels tight.'"
+    },
+    {
+     "card_id": "self-efficacy-new-lead-swipe",
+     "severity": "medium",
+     "problem": "The card overclaims vicarious experience. Bandura holds that vicarious experience is weaker and less durable than mastery, yet 'A peer at your level handles a tough client well' goes in the 'Big boost, it sticks' pile, next to your own wins. The poles also mix two things, size of the boost and how long it lasts. 'Reading three books' is not one of Bandura's four sources, so its placement cannot be tested against the theory.",
+     "fix": "Rename the poles to left 'Weaker on its own' and right 'Strong source'. Keep the peer item on the right, but rewrite its why: 'Strong, especially from someone like you, though it fades faster than your own win.' Replace the books item with Bandura's fourth source: {\"text\":\"Before the meeting, you read your racing heart as 'I'm ready', not 'I'm failing'\",\"side\":\"left\",\"why\":\"How you read your body helps a bit, but alone it rarely holds up the way a real win does.\"}."
+    },
+    {
+     "card_id": "aim-high-gorilla",
+     "severity": "medium",
+     "problem": "The card stretches the evidence. Hyman et al. (2010) shows divided attention (inattentional blindness from a phone call), not goal-directed aim, but the reveal says 'Their aim, the call, decided what got through'. The hook leaves out the phone condition, and walkers without a phone noticed 51% of the time, a coin flip, so 'Would you even notice?' implies a stronger effect than the data. The id says 'gorilla' but the card is about a clown.",
+     "fix": "Rewrite the hook: 'On a phone call, a clown on a unicycle rides past. Would you notice?' Change the reveal's last sentence to: 'The call took their attention, so the clown never got through.' Change the insight's second sentence to: 'Focused attention crowds out the rest. Applying this to life aims is a lens, not a finding.' Rename the id to aim-high-unicycling-clown."
+    },
+    {
+     "card_id": "regret-minimization-open-doors",
+     "severity": "medium",
+     "problem": "The hook and the game do not match: the hook says 'One topic wins. Guess it.', then the prompt gives the topic away and asks for a percentage. The reveal also misstates Roese & Summerville's opportunity principle. They argue regret is strongest where people see a chance to take corrective action, not simply where they 'had the most chances'.",
+     "fix": "Rewrite the hook to: 'Ask adults their biggest regret. One topic tops the list. How big a share?' Rewrite the explain text: 'About 32% (Roese & Summerville, 2005). Next: career (22%) and romance (15%). Their idea: we regret most where we saw a real chance to act and change things, and education feels like a door that's still open.'"
+    },
+    {
+     "card_id": "attention-residue-quick-question",
+     "severity": "low",
+     "problem": "The concept label is wrong. Altmann, Trafton & Hambrick (2014) studied place-keeping (losing your step in a sequence), not 'attention residue', which is Sophie Leroy's (2009) term for thoughts that stay on the previous task. A reader who follows the label to the literature will find a different phenomenon.",
+     "fix": "Add one sentence to the insight: 'Researchers call this losing your place; a related idea, attention residue (Leroy, 2009), is part of your mind staying on the last task.' Then trim 'It's a lab task, so office effects may differ in size' to 'Lab task; office effects may differ.' to stay under 320 characters. Alternatively, move the card under a 'place_keeping' or 'interruptions' concept."
+    }
+   ],
+   "best_cards": [
+    "delays-beer-game",
+    "trust-ledger-choice-deadline",
+    "reframing-angry-client-reveal"
+   ],
+   "verdict": "Sourcing is better than most pop-psychology I review. Most claims are named, dated and hedged ('lab evidence', 'anecdote, not data', 'Sinek's brain story isn't backed'), and I checked these numbers against the papers: 32/22/15% regret, 2.8s doubles errors, 25% vs 51% clown, 128 experiments. The weak spot is the self-report games. The WSO venn gave advice that contradicts the shown scores (door 0/10, told to do a skill rep). The stress-mindset spectrum mixes in appraisal and coping, and it scores past adversity as a mindset. The pay-to-play reveal asks a 'than before' question that the study design cannot answer. Fix the scoring and the comparison groups, and this becomes a feed I would recommend to students."
+  },
+  {
+   "persona": "Lina, 31, product designer for mobile games and learning apps. Looks at hook strength, pacing, game feel, how clear it is what to tap, reward moments and whether people would share it.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 8,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "The result screenshot shows 'Will 10/10 · Skill 5/10 · Open door 0/10', and the result says 'build the easier missing piece first, usually a tiny skill rep.' The door is the pillar at zero, so the advice points at the wrong gap. The result also ignores the score the player just saw. There is a visual bug too: the player dot sits on top of the 'Will' label, so the circle reads as '•l'.",
+     "fix": "Rewrite results.W.text as: \"The want is strong today. Look at your lowest score below: if it's Skill, do one 5-minute practice rep; if it's the Open door, ask one person for the chance or the time this week.\" In app.js, offset the Venn result dot so it never overlaps the axis label, for example by placing the label above the circle or nudging the dot 24px toward the centre."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "In the swipe results (doomscroll, map-territory, sunk-cost), only the items I got wrong show their 'why' line. Items I got right show just the label ('Never stops', 'Map'). The best writing on these cards is hidden from players who do well, such as the autoplay 'Plot twist' line and the slot-machine card-pack line. Getting things right is punished with less content. The legend 'The → ones show where each really belongs' is also hard to decode, because an orange arrow doesn't read as 'you missed this'.",
+     "fix": "Show the 'why' text under every swipe result item, both correct and missed, at the same size. Swap the orange → for an orange '✕ You said: <side>' tag on missed items. Change the legend to: \"Orange = the ones you sorted the other way. Every card shows why.\""
+    },
+    {
+     "card_id": "regret-minimization-open-doors",
+     "severity": "high",
+     "problem": "The hook promises 'One topic wins. Guess it.', but the question gives the topic away ('School and education came top') and then asks for a percentage. The best guessing moment is spoiled, and the hook feels like bait-and-switch.",
+     "fix": "Change the hook to: \"Adults' #1 life regret is about school. Guess how big a share it is.\" Alternatively, keep the hook and make this a reveal with the choices [\"Career\", \"Romance\", \"Education\", \"Health\"], answer 2, and the current explain text as the reveal."
+    },
+    {
+     "card_id": "map-territory-swipe",
+     "severity": "medium",
+     "problem": "The 'why' copy for the two 'closer to the thing' items is muddled. The burn item's why starts 'Closer to the thing itself', which repeats the label printed just before it, so it reads 'Closer to the thing · Closer to the thing itself'. The rain line 'Even so, you feel your senses' report' is unclear and weakens the answer. Both are the items players are most likely to get wrong, so they need the clearest copy.",
+     "fix": "Burn why: \"It's happening in you right now. Any number or label you put on it (\\\"7/10 pain\\\", \\\"unfit\\\") is the map.\" Rain why: \"You can't argue with it, only respond. That's as close to the territory as it gets.\""
+    },
+    {
+     "card_id": "aim-high-gorilla",
+     "severity": "medium",
+     "problem": "This is a two-option reveal where the hook ('Would you even notice?') already gives away 'Probably not'. Nearly everyone gets 'Spot on' with no tension, so the reward feels cheap. The genuinely surprising fact, that half of people without a phone ALSO missed the clown, comes too late to be the punchline.",
+     "fix": "Change it to a three-choice prompt: \"Of people walking alone with no phone, how many noticed the clown?\" with choices [\"Almost all (90%)\", \"About half (51%)\", \"Few (25%)\"] and answer 1. Rewrite the reveal as: \"About half. And on a phone call, only about 25% did. Your aim, even just 'get across the square', filters what you see.\""
+    },
+    {
+     "card_id": "stockdale-paradox-dream-vs-obstacle-choice",
+     "severity": "medium",
+     "problem": "Step 1 puts a prisoner-of-war anecdote in front of a teen exam scenario. The tone jump is jarring and slows the first tap. The 'best' option ('If it's 8pm, my phone goes in the kitchen') never names the obstacle, so it doesn't model the wish-obstacle-plan structure the card teaches. Three steps spanning exam, work release and injury also feels long for a 30-second card.",
+     "fix": "Step 1 scenario: \"Your exam is in three weeks and you're behind. What do you tell yourself tonight?\" (move the Stockdale line into insight). Best option text: \"I want a good grade. My obstacle is my phone at night, so if it's 8pm, it goes in the kitchen.\" Cut step 2 (the team release) so the card is 2 steps."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Every card in the feed shows the same pill ('<Track> · Quick one') and the same result scaffold: model box, Try today, With others, Why?, Next. After a few cards the rhythm goes flat, with no escalation, streak or surprise beat. The Map view is an unlabelled hairball where track labels overlap nodes, so it doesn't work as a reward screen.",
+     "fix": "Vary the pill by game type (e.g. 'Sort 6 · 20s', 'Guess · 10s', '3 calls · 40s'). Add a one-line streak beat after each result ('3 in a row today'). On the Map, place labels at cluster centroids with a white halo and lay out nodes by track instead of a random force layout."
+    },
+    {
+     "card_id": "sunk-cost-kill-or-keep",
+     "severity": "low",
+     "problem": "The hook 'What may you count?' sounds stilted, and the swipe labels 'Ignore it (already spent)' / 'Count it (still ahead)' are long for thumb-swipe chips. The result headline '3 of 6. Here's the pattern.' is the same neutral line at any score, so it isn't much of a reward moment.",
+     "fix": "Hook: \"Your project is 8 months in and wobbling. What should actually count?\" Labels: left \"Already spent\", right \"Still ahead\". Make the result headline depend on the score: 6/6 \"Clean decision-maker.\", 4-5 \"Nearly clear-eyed.\", 0-3 \"The past pulled on you. Here's how.\""
+    }
+   ],
+   "best_cards": [
+    "delays-beer-game",
+    "doomscroll-loop-no-ending",
+    "will-gap-paid-to-play-reveal"
+   ],
+   "verdict": "The content is kind, well-sourced and useful. Try-today steps like 'Yes, if we pause X' and the 5-minute team rituals are things I'd actually use. As a game, though, it is under-tuned. Several hooks give away their own answer (gorilla, regret). The swipe results hide the best explanations from players who get things right. One Venn result gives advice that contradicts the score shown on screen. The beer-game and doomscroll cards have the snappy surprise I'd share. Fix the result-screen rewards and the spoiled hooks and this moves from 'good' to 'replayable'."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "10 of the 24 cards in this session are about managing a team (wso-triad-one-to-one-choice, self-efficacy-new-lead-swipe, deep-work-quiet-mornings, psychological-safety-swipe-standup, trust-ledger-choice-deadline, sunk-cost-kill-or-keep, opportunity-cost-yes-and, emotion-naming-stressed-choice, procrastination-emotion-smart-wait-swipe, reframing-angry-client-reveal). They are full of stand-ups, 1:1s, clients and 'your report'. I'm 16 and I don't have a report. The feed only learns my audience after I skip cards (app.js lines 130-131), so before it adapts I've seen loads of boss content and left. Each skip only moves the score by 1, and it is capped at ±2.",
+   "fix": "Show a one-tap chip on the first card: 'Mostly about: [School & mates] [Work]'. Make it set S.aud = {young: 2, work: -2} or the opposite. If the viewer hasn't picked yet, cap audience:'work' cards at 1 in every 6 in the feed. Also raise the skip penalty in app.js line 131 from -1 to -2 so the feed adapts after one skip, not two.",
+   "from": "Maya, 16, Manchester sixth-former. Lives on TikTok and leaves anything that feels like school, a lecture or my mum's LinkedIn."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "After a swipe game, the result is just '4 of 6. Here's the pattern.' plus a long text stack. There's no moment I'd screenshot or send to my mates, so the Share button has nothing to share.",
+   "fix": "Under the score, add a one-line, shareable verdict made from the score, e.g. '4/6: you spot endless loops better than most' (6/6: 'Loop detector: elite'; ≤2: 'The feed wins this round. Rematch?'). Make the Share button pre-fill that line plus the card hook.",
+   "from": "Maya, 16, Manchester sixth-former. Lives on TikTok and leaves anything that feels like school, a lecture or my mum's LinkedIn."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The feed mixes teenager content into my manager feed. In this session I got 'You're 16 and you all leave school at 18' (Old Wisdom, view-feed-dark), a £3 five-a-side group chat (start-with-why-pitch), revision lists and chemistry mates (courage-kindness-swipe-advice), getting parents to make phone calls (shifting-burden-swipe) and exam stress (stress-mindset-spectrum). About a quarter of my scrolling was not for me. I would close the app after the second school card.",
+   "fix": "On first open, ask one question: 'Where will you use this? School / Work / Life'. Store it and filter by card.audience: 'work' users never see audience 'young' cards, and 'young' users never see 'work' cards. 'all' cards show for everyone. Show the choice in the '?' menu so people can change it.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself; no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "On the swipe reveal (psychological-safety-swipe-standup-b), the line 'The → ones show where each really belongs' plus orange arrows and green ticks is hard to decode. I could not tell quickly which ones I got wrong and which side was correct. Non-native readers struggle with 'really belongs'.",
+   "fix": "On each missed item, replace the arrow with a red cross and the text 'You said: Opens people up. Answer: Shuts people up.' On each correct item, show a green tick and 'Correct: Opens people up'. Change the subline to 'Red = you missed it. Green = you got it.'",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself; no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "My map (view-map-dark) is a hairball. Domain labels sit on top of nodes ('Old Wisdom' and 'Thinking' are cut through by dots), 88 nodes with crossing lines, and nothing I can act on. It looks nice but tells me nothing.",
+   "fix": "Draw labels on a background pill with z-index above the nodes and push them away from nodes (label collision offset). Under the graph, add a 'Your 3 tools for this week' list built from saved cards and ticked try_today items. That is the part a user comes back for.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself; no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "Several insights start with a 'Verdict:' prefix (sunk-cost-kill-or-keep, opportunity-cost-yes-and, regret-minimization-open-doors, reframing-angry-client-reveal). It reads like a court and adds nothing. Next-card buttons are also cut off mid-sentence ('Could the help...'), which looks broken, not teasing.",
+   "fix": "Remove 'Verdict: ' from the start of every insight field. In the next-card button, show the full hook up to 2 lines, or cut at a word boundary with the arrow on its own line, never mid-question.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself; no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The part I come for is hidden. The insight, the thinkers, the cited work and the evidence label ('Moderate evidence', 'Philosophical lens') all sit inside a collapsed 'Why? · 15-second read' toggle below Try Today, and none of my screenshots show it opened. Meanwhile the loudest element is the bright 'Next' button. A careful reader sees advice with no visible provenance, which feels like pop-psych even when the card is well sourced.",
+   "fix": "In app.js renderResult, take the evidence chip and the one-line source (`${card.source.thinkers.join(', ')} · ${card.source.work}`) out of the <details> and render them as a visible small line straight after the model box. Keep only card.insight and the related buttons inside the toggle, and rename the summary to 'The reasoning · 15 seconds'.",
+   "from": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and has little patience for pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The 'Philosophical lens' evidence label is applied loosely. In this sample it appears on Blumberg & Pringle's WSO triad (an organisational-research model), Senge's 'shifting the burden' (a systems archetype) and Korzybski (general semantics). Not one of them is philosophy. Meanwhile the real philosophy (Aristotle) appears once, as a quote, on a card rated 'moderate'. The label looks like a polite word for 'unproven'.",
+   "fix": "Add an evidence value 'model' labelled \"Thinking model — useful, not tested as a whole\" in the ev map in app.js and in CARD_SCHEMA.md. Set evidence:'model' on wso-triad-venn, wso-triad-one-to-one-choice, shifting-burden-swipe and map-territory-swipe. Reserve 'philosophy' for cards whose source is an actual philosopher (Aristotle, Seneca, Epictetus and so on).",
+   "from": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and has little patience for pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "The feed mix is heavily slanted to a manager's office. Ten of 24 cards in this sample are stand-ups, 1:1s, clients and direct reports (deep-work, trust-ledger, psych-safety, opportunity-cost, emotion-naming, procrastination, reframing, sunk-cost, self-efficacy, WSO 1:1). For a reader who wanted a 'practical Peterson Academy', it starts to feel like corporate training rather than practical philosophy.",
+   "fix": "In the feed ordering, cap audience:'work' cards at 1 in every 4 for users who haven't chosen a work focus. Give each work card a 'life' twin, e.g. an emotion-naming scenario set at a family dinner or with an ageing parent instead of a stand-up.",
+   "from": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and has little patience for pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "8 of the 24 cards in this session (deep-work-quiet-mornings, wso-triad-one-to-one-choice, self-efficacy-new-lead-swipe, psychological-safety-swipe-standup, trust-ledger-choice-deadline, opportunity-cost-yes-and, emotion-naming-stressed-choice, sunk-cost-kill-or-keep) cast me as a manager running 1:1s. Other cards cast me as a 16-year-old: the feed screenshot shows 'You're 16 and you all leave school at 18'. As a graduate who may be job-hunting, I fit neither, and each one quietly reminds me where I'm 'supposed' to be by now.",
+   "fix": "Add a one-tap onboarding question: 'Right now I'm mostly… studying / working / between things', and use it to weight the 'work' and 'young' audiences in the feed. Do not put two manager-framed cards back to back. In each manager card, rewrite one step from the team member's side. Example for emotion-naming-stressed-choice step 2: scenario \"Your manager asks how you are. You've said 'fine, just a bit stressed' three weeks running. This time you…\", with best option \"Pick a sharper word: 'Honestly, more overloaded than stressed.'\"",
+   "from": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures; needs the experience to feel safe and genuinely helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "The reflection-not-diagnosis footer with findahelpline.com appears on sensitive cards such as stress-mindset and spotlight, which feels safe. Regret-minimization is not flagged sensitive, so this card about life regrets has no footer, even though it is the card most likely to stir up low mood for me.",
+   "fix": "Set \"sensitive\": true on regret-minimization-open-doors (and on any card whose topic is regret, loss or failure) so the support footer shows.",
+   "from": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures; needs the experience to feel safe and genuinely helpful."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "In the swipe results (doomscroll, map-territory, sunk-cost), only the items I got wrong show their 'why' line. Items I got right show just the label ('Never stops', 'Map'). The best writing on these cards is hidden from players who do well, such as the autoplay 'Plot twist' line and the slot-machine card-pack line. Getting things right is punished with less content. The legend 'The → ones show where each really belongs' is also hard to decode, because an orange arrow doesn't read as 'you missed this'.",
+   "fix": "Show the 'why' text under every swipe result item, both correct and missed, at the same size. Swap the orange → for an orange '✕ You said: <side>' tag on missed items. Change the legend to: \"Orange = the ones you sorted the other way. Every card shows why.\"",
+   "from": "Lina, 31, product designer for mobile games and learning apps. Looks at hook strength, pacing, game feel, how clear it is what to tap, reward moments and whether people would share it."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Every card in the feed shows the same pill ('<Track> · Quick one') and the same result scaffold: model box, Try today, With others, Why?, Next. After a few cards the rhythm goes flat, with no escalation, streak or surprise beat. The Map view is an unlabelled hairball where track labels overlap nodes, so it doesn't work as a reward screen.",
+   "fix": "Vary the pill by game type (e.g. 'Sort 6 · 20s', 'Guess · 10s', '3 calls · 40s'). Add a one-line streak beat after each result ('3 in a row today'). On the Map, place labels at cluster centroids with a white halo and lay out nodes by track instead of a random force layout.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. Looks at hook strength, pacing, game feel, how clear it is what to tap, reward moments and whether people would share it."
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 13,
+   "skipped": [
+    "wso-triad-venn: Venn result dot overlapping the axis label is an app.js fix, outside action.json",
+    "self-efficacy-new-lead-swipe: answers grouped at the top of the reveal screenshot is app UI, outside action.json",
+    "Insight shortening: every insight in action.json was already 200 characters or less",
+    "needs_review.json lists no cards, so there were no machine-generated cards to rework"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 13,
+   "skipped": [
+    "procrastination-emotion-smart-wait-swipe (not in file)",
+    "self-efficacy-new-lead-swipe (not in file)",
+    "stockdale-paradox-dream-vs-obstacle-choice (not in file)",
+    "delays-beer-game (not in file)",
+    "regret-minimization-open-doors (not in file)",
+    "start-with-why-pitch (not in file)",
+    "aim-high-gorilla (not in file)",
+    "courage-kindness-swipe-advice (not in file)",
+    "wso-triad-venn (not in file)",
+    "will-gap-paid-to-play-reveal (not in file)",
+    "opportunity-cost-yes-and (not in file)",
+    "attention-residue-quick-question (not in file)",
+    "sunk-cost-kill-or-keep (not in file)",
+    "circle-influence-spectrum (not in file)",
+    "map-territory-swipe rain why: merged Maya/Lina/Elena wording and shortened to fit the 100-char why limit",
+    "stress-mindset-spectrum Q4 -2 option: used Sam's 'Avoid the task until it passes' instead of Okafor's wording, which repeated Q1",
+    "insight length: all insights were already 200 chars or less",
+    "needs_review.json: empty, so no machine-generated cards to fix"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 0,
+   "skipped": [
+    "All 34 QA issues skipped: none of their card_ids (procrastination-emotion-smart-wait-swipe, self-efficacy-new-lead-swipe, map-territory-swipe, stockdale-paradox-dream-vs-obstacle-choice, delays-beer-game, regret-minimization-open-doors, reframing-angry-client-reveal, aim-high-gorilla, start-with-why-pitch, stress-mindset-spectrum, spotlight-effect-slip-choice, courage-kindness-swipe-advice, wso-triad-venn, will-gap-paid-to-play-reveal, opportunity-cost-yes-and, attention-residue-quick-question, sunk-cost-kill-or-keep, circle-influence-spectrum) exist in thinking.json",
+    "Insight length: all 17 insights already <=200 chars (max 195), no change needed",
+    "needs_review.json has an empty cards list, so no machine-generated cards to upgrade",
+    "Pattern sweep of the 17 sibling cards (hooks, inverted questions, labels): no clear instance of the flagged patterns, so nothing changed"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 3,
+   "skipped": [
+    "All issues for cards not in systems.json (only delays-beer-game is in this file)",
+    "Insight shortening: all 14 insights already <=200 chars",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 0,
+   "skipped": [
+    "All 34 panel issues target card ids not present in habits.json (procrastination, self-efficacy, map-territory, stockdale, delays-beer-game, regret-minimization, reframing, aim-high, start-with-why, stress-mindset, spotlight, courage-kindness, wso-triad, will-gap, opportunity-cost, attention-residue, sunk-cost, circle-influence); none applied",
+    "No insight over 200 chars in habits.json (max 197); nothing to shorten",
+    "needs_review.json lists no cards; nothing to upgrade or delete",
+    "Pattern scan of habits.json hooks, prompts, swipe labels and try_today found no instances of the flagged patterns (reversed questions, hook giving the answer away, shaming wording, POW-style tone jumps)"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 10,
+   "skipped": [
+    "self-efficacy-new-lead-swipe (not in file)",
+    "map-territory-swipe (not in file)",
+    "stockdale-paradox-dream-vs-obstacle-choice (not in file)",
+    "delays-beer-game (not in file)",
+    "regret-minimization-open-doors (not in file)",
+    "reframing-angry-client-reveal (not in file)",
+    "aim-high-gorilla (not in file)",
+    "start-with-why-pitch (not in file)",
+    "stress-mindset-spectrum (not in file)",
+    "spotlight-effect-slip-choice (not in file)",
+    "courage-kindness-swipe-advice (not in file)",
+    "wso-triad-venn (not in file)",
+    "will-gap-paid-to-play-reveal (not in file)",
+    "opportunity-cost-yes-and (not in file)",
+    "attention-residue-quick-question (not in file)",
+    "sunk-cost-kill-or-keep (not in file)",
+    "circle-influence-spectrum (not in file)",
+    "procrastination-emotion-smart-wait-swipe: no audience field exists in schema, so swapped office items for the five school/friend items instead of changing audience",
+    "Sam's insight append condensed to fit the 200-char cap",
+    "No insights over 200 chars; needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 15,
+   "skipped": [
+    "aim-high-gorilla: id rename to aim-high-clown / aim-high-unicycling-clown skipped; the id is referenced in data/learned.json, data/qlip.json and QA sessions, and there is no redirect mechanism, so renaming would break saves",
+    "aim-high-gorilla: Peterson citation given as 12 Rules for Life, Rule 4 (where he discusses aim and inattentional blindness), not Rule 10 as suggested, to avoid a miscitation",
+    "aim-high-gorilla: Lina's reveal line 'Your aim, even just get across the square, filters what you see' not used because it overclaims; used Elena/Okafor's 'What held their attention, the call, decided what got through' instead",
+    "stockdale-paradox-dream-vs-obstacle-choice: 'Quick one' badge change is app-side; dropped step 2 (team release) instead so the card is 2 steps",
+    "All issues for cards not in meaning.json ignored (procrastination, self-efficacy, map-territory, delays, regret, reframing, stress-mindset, spotlight, courage-kindness, wso-triad, will-gap, opportunity-cost, attention-residue, sunk-cost, circle-influence)",
+    "Insight length pass: all 14 insights already <=200 chars; needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 0,
+   "skipped": [
+    "All 33 issues target card_ids not present in growth.json (procrastination-emotion-smart-wait-swipe, self-efficacy-new-lead-swipe, map-territory-swipe, stockdale-paradox-dream-vs-obstacle-choice, delays-beer-game, regret-minimization-open-doors, reframing-angry-client-reveal, aim-high-gorilla, start-with-why-pitch, stress-mindset-spectrum, spotlight-effect-slip-choice, courage-kindness-swipe-advice, wso-triad-venn, will-gap-paid-to-play-reveal, opportunity-cost-yes-and, attention-residue-quick-question, sunk-cost-kill-or-keep, circle-influence-spectrum)",
+    "No insight over 200 chars in growth.json (max 196)",
+    "needs_review.json cards list is empty; no machine-generated cards to fix",
+    "Reviewed sibling hooks/prompts/try_today for the flagged patterns (hook repeating question, inverted questions, school-only try_today, rumination prompts); none found needing change"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 1,
+   "skipped": [
+    "All other issues: card_ids not in connection.json",
+    "Insight shortening: all insights already <=200 chars",
+    "needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 2,
+   "skipped": [
+    "All other issues target cards not in attention.json",
+    "No insights over 200 chars; needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 12,
+   "skipped": [
+    "sunk-cost-kill-or-keep: score-dependent result headline (swipe result headline is app-level, no card schema field)",
+    "regret-minimization-open-doors: alternative 'convert to reveal with Career/Romance/Education/Health' not used (hook rewritten instead)",
+    "regret-minimization-open-doors: 'where we had the most chances' wording replaced per Okafor's opportunity-principle correction rather than Sam's version",
+    "All other issues target cards not in decisions.json; no insights >200 chars; needs_review.json is empty"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 1,
+   "skipped": [
+    "Not in wisdom.json (other files): procrastination-emotion-smart-wait-swipe, self-efficacy-new-lead-swipe, map-territory-swipe, stockdale-paradox-dream-vs-obstacle-choice, delays-beer-game, regret-minimization-open-doors, reframing-angry-client-reveal, aim-high-gorilla, start-with-why-pitch, stress-mindset-spectrum, spotlight-effect-slip-choice, courage-kindness-swipe-advice, wso-triad-venn, will-gap-paid-to-play-reveal, opportunity-cost-yes-and, attention-residue-quick-question, sunk-cost-kill-or-keep",
+    "Insight shortening: no-op, all 17 wisdom insights already <=200 chars",
+    "needs_review: no-op, data/needs_review.json lists no cards"
+   ],
+   "validator_errors": 0
+  }
+ ]
+}

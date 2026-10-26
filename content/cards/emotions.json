@@ -766,47 +766,48 @@
   "hook": "Not every 'later' is procrastination. Can you spot the ones that are?",
   "title": "Smart Wait or Feeling Dodge?",
   "game": {
-   "prompt": "Why is this work waiting?",
+   "prompt": "Why is this waiting?",
    "left": "Dodging a feeling",
    "right": "Smart wait",
    "items": [
     {
-     "text": "You've tidied your inbox three times instead of starting the performance review you dread.",
+     "text": "You've reorganised your revision timetable three times instead of opening the chemistry paper.",
      "side": "left",
-     "why": "Busy, but dread is steering. Tidying feels useful and keeps the hard part away."
+     "why": "Busy, but dread is steering. Planning feels useful and keeps the hard part away."
     },
     {
-     "text": "You hold your reply to an angry client until the engineer confirms what broke, by 3pm.",
+     "text": "You wait to start the essay until your teacher answers your question about the title, due back tomorrow.",
      "side": "right",
      "why": "A reason and an end time. That's a plan, not avoidance."
     },
     {
-     "text": "The strategy deck is due Friday. It's Wednesday, and you're still 'thinking about it' with the file unopened.",
+     "text": "Coursework is due Friday. It's Wednesday and the doc is still blank; you're just 'thinking about it'.",
      "side": "left",
      "why": "Thinking with no output as the deadline nears usually means the blank page feels bad."
     },
     {
-     "text": "You've put off asking your boss about a promotion for months, unsure how to ask.",
+     "text": "You've put off asking your mate why she's been off with you for weeks.",
      "side": "left",
-     "why": "Fear of a 'no' is the feeling. The delay protects you from it, for now."
+     "why": "Fear of the answer is the feeling. The delay protects you from it, for now."
     },
     {
-     "text": "You park a low-value report because two urgent client tasks just landed.",
+     "text": "You park your reading log because two assignments are due tomorrow.",
      "side": "right",
      "why": "Choosing an order you'd still back tomorrow is prioritising, not dodging."
     }
    ]
   },
-  "insight": "Delay isn't the problem; avoidance is. Steel's review defines procrastination as putting things off even though you expect to be worse off. A smart wait has a reason and a date.",
+  "insight": "Delay isn't the problem; avoidance is. Dodging is a normal way to protect yourself from a bad feeling, not laziness. Forgiving past delays cut later delay (Wohl et al., 2010).",
   "model": "A smart wait has a reason and a date. A dodge has a feeling and a vague 'later'.",
-  "try_today": "Pick one thing you're delaying. Write its reason and a date. No reason? Name the feeling in one word and do 10 minutes now.",
+  "try_today": "Pick one thing you're delaying. Write its reason and a date. No reason? Name the feeling kindly and do 10 minutes when ready today.",
   "try_team": "Each person lists one delayed task and tags it 'reason + date' or 'feeling'. Pair up: for each 'feeling' task, agree a 10-minute first step.",
   "source": {
    "thinkers": [
     "Piers Steel",
-    "Tim Pychyl"
+    "Tim Pychyl",
+    "Michael Wohl"
    ],
-   "work": "Steel, 'The Nature of Procrastination', Psychological Bulletin (2007)"
+   "work": "Steel, 'The Nature of Procrastination', Psychological Bulletin (2007); Wohl, Pychyl & Bennett, Personality and Individual Differences (2010)"
   },
   "evidence": "moderate",
   "level": 1,

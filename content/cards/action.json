@@ -31,6 +31,10 @@
      "axis": "W"
     },
     {
+     "q": "I'd still want this if it took twice as long.",
+     "axis": "W"
+    },
+    {
      "q": "I've done something a bit like this before.",
      "axis": "S"
     },
@@ -43,21 +47,25 @@
      "q": "Something outside my control (money, rules, someone's permission) is blocking this.",
      "axis": "O",
      "invert": true
+    },
+    {
+     "q": "I can get the time, tools or permission I need for this within a week.",
+     "axis": "O"
     }
    ],
    "threshold": 0.6,
    "results": {
     "W": {
      "name": "Fired Up, Building Up",
-     "text": "The want is strong today; build the easier missing piece first, usually a tiny skill rep."
+     "text": "The want is strong today. Look at your lowest score below: if it's Skill, do one 5-minute practice rep; if it's the Open door, ask one person for the chance or the time this week."
     },
     "S": {
      "name": "Skilled, Looking for a Why",
-     "text": "Skill scores high today but want and the door lower, so ask what would make this matter to you."
+     "text": "Skill scores high today. Look at your lowest score below: if it's Will, ask what would make this matter to you; if it's the Open door, ask one person for the chance this week."
     },
     "O": {
      "name": "The Open Door",
-     "text": "The door looks open today; check whether anything behind it sparks your curiosity."
+     "text": "The door looks open today. Look at your lowest score below: if it's Will, look for what sparks your curiosity; if it's Skill, do one 5-minute practice rep."
     },
     "SW": {
      "name": "Ready, Door Closed (for now)",
@@ -919,8 +927,8 @@
   "title": "Where real 'I can' comes from",
   "game": {
    "prompt": "You've just been made team lead. How much 'I can do this' does each one build?",
-   "left": "Small boost, fades alone",
-   "right": "Big boost, it sticks",
+   "left": "Weaker on its own",
+   "right": "Strong source",
    "items": [
     {
      "text": "You run Monday's stand-up yourself and it goes fine",
@@ -935,7 +943,7 @@
     {
      "text": "A peer at your level handles a tough client well",
      "side": "right",
-     "why": "Seeing someone like you succeed says 'so could I'. It's the second-strongest source."
+     "why": "Strong, especially from someone like you, though it fades faster than your own win."
     },
     {
      "text": "You watch a famous CEO's flawless keynote",
@@ -943,9 +951,9 @@
      "why": "Models work best when they feel similar. A star can make the gap look bigger."
     },
     {
-     "text": "You read three books on leadership",
+     "text": "Before the meeting, you read your racing heart as 'I'm ready', not 'I'm failing'",
      "side": "left",
-     "why": "Useful knowledge, but knowing isn't the same as having done it. Belief needs a rep."
+     "why": "How you read your body helps a bit, but alone it rarely holds up the way a real win does."
     },
     {
      "text": "You cut a dreaded 1:1 down to one question and ask it",
@@ -954,7 +962,7 @@
     }
    ]
   },
-  "insight": "Bandura ranked your own wins first, then seeing someone like you succeed. Praise and reading help less on their own. Reviews mostly agree, though the order varies by person.",
+  "insight": "Bandura ranked your own wins first, then seeing someone like you succeed. Praise and how you read your body help less on their own. Reviews mostly agree, though the order varies.",
   "model": "Belief follows wins you can point to. Design small ones on purpose.",
   "try_today": "Pick the task you dread most this week. Do a 10-minute slice of it before lunch and mark it done somewhere you'll see it.",
   "source": {
@@ -974,6 +982,69 @@
   "try_team": "Go round: each person names one work win from this week, however small, plus one tiny next rep. One minute each, no critique, just thanks."
  },
  {
+  "id": "self-efficacy-captain-swipe",
+  "concept": "self_efficacy",
+  "domain": "action",
+  "type": "swipe",
+  "hook": "Some confidence boosts last. Some vanish by Monday.",
+  "title": "Where real 'I can' comes from",
+  "game": {
+   "prompt": "You've just been made captain or group-project lead. How much 'I can do this' does each one build?",
+   "left": "Weaker on its own",
+   "right": "Strong source",
+   "items": [
+    {
+     "text": "A mate in your year nails a presentation",
+     "side": "right",
+     "why": "Strong, especially from someone like you, though it fades faster than your own win."
+    },
+    {
+     "text": "Your coach says 'You're a natural'",
+     "side": "left",
+     "why": "Praise helps, but words alone fade at the first hard moment. Pair it with a win."
+    },
+    {
+     "text": "You run the first warm-up yourself and it goes fine",
+     "side": "right",
+     "why": "Your own success is the strongest source of belief. You have proof, not just hope."
+    },
+    {
+     "text": "You watch a famous YouTuber's perfect speech",
+     "side": "left",
+     "why": "Models work best when they feel similar. A star can make the gap look bigger."
+    },
+    {
+     "text": "You watch three videos on leadership",
+     "side": "left",
+     "why": "Useful tips, but knowing isn't the same as having done it. Belief needs a rep."
+    },
+    {
+     "text": "You cut a scary task down to one message and send it",
+     "side": "right",
+     "why": "A shrunk task you actually finish still counts as a win. Small wins are designable."
+    }
+   ]
+  },
+  "insight": "Bandura ranked your own wins first, then seeing someone like you succeed. Praise and watching stars help less on their own. Reviews mostly agree, though the order varies.",
+  "model": "Belief follows wins you can point to. Design small ones on purpose.",
+  "try_today": "Pick the task you dread most this week. Do a 10-minute slice of it today and tick it off somewhere you'll see it.",
+  "source": {
+   "thinkers": [
+    "Albert Bandura"
+   ],
+   "work": "Bandura, Self-Efficacy: The Exercise of Control (1997)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "sensitive": true,
+  "related": [
+   "small_wins",
+   "growth_mindset",
+   "wso_triad"
+  ],
+  "try_team": "Go round: each person names one small win from this week plus one tiny next step. One minute each, no critique, just thanks."
+ },
+ {
   "id": "will-gap-paid-to-play-reveal",
   "concept": "will_gap",
   "domain": "action",
@@ -981,14 +1052,14 @@
   "hook": "Someone starts paying you for the thing you'd do for free. Any catch?",
   "title": "When pay steals the fun",
   "game": {
-   "prompt": "You make video edits for fun. A mate's page pays you per edit for a month, then the money stops. In your free time after that, you'll probably make…",
+   "prompt": "You make video edits for fun. A mate's page pays you per edit for a month, then the money stops. In your free time after that, compared with a friend who did the same edits but was never paid, you'll probably make…",
    "choices": [
-    "More edits than before",
+    "More than them",
     "About the same",
-    "Fewer edits than before"
+    "Fewer than them"
    ],
    "answer": 2,
-   "reveal": "Fewer, on average. Across 128 experiments, expected rewards for an already-fun task cut how much people chose to do it once rewards ended. Surprise rewards didn't, and praise tended to help."
+   "reveal": "Fewer than the unpaid group, on average. Across 128 experiments, expected rewards for an already-fun task lowered free-choice play after rewards ended, compared with people never rewarded. Surprise rewards didn't, and praise helped adults more than children."
   },
   "insight": "Pay can quietly swap 'I want to' for 'I'm paid to'. When the pay stops, the want may not fully return. Some researchers say the effect is small outside the lab.",
   "model": "A reason that's yours outlasts any reward. Guard the stuff you do for love.",

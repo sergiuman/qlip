@@ -675,7 +675,7 @@
       "answer": 1,
       "reveal": "Roughly doubled. In Altmann and colleagues' study, interruptions of about 2.8 seconds doubled step-skipping errors; about 4.4 seconds tripled them. If you picked 'no change', that's the natural guess: 3 seconds feels free. The cost is losing your place."
     },
-    "insight": "Tiny interruptions knock you off your place, so mistakes jump when you return. It's a lab task, so office effects may differ in size. Batch the quick questions.",
+    "insight": "Tiny interruptions make you lose your place, so mistakes jump when you return. Related: attention residue (Leroy, 2009), part of your mind staying on the last task. Lab task; office effects may vary.",
     "model": "An interruption's cost isn't its length. It's losing your place.",
     "try_today": "Start a 'quick qs' note for the colleague you interrupt most. Save questions there and ask them all at once at a set time.",
     "try_team": "Take 5 minutes: each person counts yesterday's 'quick qs'. Agree two daily ask-me-anything slots and one word that means 'truly urgent'.",
@@ -683,9 +683,10 @@
       "thinkers": [
         "Erik Altmann",
         "J. Gregory Trafton",
-        "David Hambrick"
+        "David Hambrick",
+        "Sophie Leroy"
       ],
-      "work": "Altmann, Trafton & Hambrick, Momentary interruptions can derail the train of thought, Journal of Experimental Psychology: General (2014)"
+      "work": "Altmann, Trafton & Hambrick, Momentary interruptions can derail the train of thought, Journal of Experimental Psychology: General (2014); Leroy, Why is it so hard to do my work?, Organizational Behavior and Human Decision Processes (2009)"
     },
     "evidence": "moderate",
     "level": 1,

@@ -53,6 +53,8 @@
   // ---------- recommender (graph walk + novelty + balance) ----------
   const EDGE_WORD = { BUILDS_ON: "builds on", AMPLIFIES: "amplifies", CONTRASTS: "pulls against", REMEDIES: "is a fix for", PART_OF: "is part of", RELATED: "connects to" };
   const reasons = {};
+  // A player's chosen world hides cards written for the other one; "everyday" shows only cards for anyone.
+  const inWorld = (c) => !S.world || c.audience === "all" || c.audience === (S.world === "young" ? "young" : S.world === "work" ? "work" : "none");
   const FILLER = new Set("your that with what this have from they them when will just about would could there their more than been into does like make most only some then time want were".split(" "));
   const storyWords = (c) => new Set((`${c.hook} ${c.title} ${c.game.prompt || c.game.question || c.game.steps?.[0]?.scenario || ""}`.toLowerCase().match(/[a-z]{4,}/g) || []).filter((w) => !FILLER.has(w)));
   function sameStory(a, b) {
@@ -76,7 +78,7 @@
       let best = null, bestScore = -Infinity;
       const prev = CARD[queue.concat(picks).slice(-1)[0]];
       for (const c of DB.cards) {
-        if (inQueue.has(c.id) || picks.includes(c.id)) continue;
+        if (inQueue.has(c.id) || picks.includes(c.id) || !inWorld(c)) continue;
         if (prev && sameStory(prev, c)) continue;
         let s = 0;
         if (S.done[c.id]) s -= 6;
@@ -214,7 +216,7 @@
     if (card.try_team) wrap.append(h("p", { class: "team-line" }, h("b", {}, "👥 With others: "), card.try_team));
     const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).filter((id) => !sameStory(card, CARD[id])).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || []).find((id) => !sameStory(card, CARD[id]))]).filter(([cid, t]) => t && CONCEPT[cid]);
     const ev = { strong: "Strong evidence", moderate: "Moderate evidence", contested: "Contested — read critically", philosophy: "Philosophical lens" }[card.evidence];
-    const more = h("details", { class: "why" }, h("summary", {}, "Why? · 15-second read"),
+    const more = h("details", { class: "why", open: S.world === "work" || S.world === "life" }, h("summary", {}, "Why? · 15-second read"),
       h("p", {}, card.insight),
 
       h("div", { class: "meta-row" }, h("span", { class: `chip plain ev-${card.evidence}` }, ev),
@@ -444,11 +446,11 @@
             btns.remove(); stage.remove(); fb.remove();
             const n = g.items.length, misses = log.filter((x) => !x.ok);
             const recap = h("ul", { class: "recap" }, log.slice().sort((a, b) => a.ok - b.ok).map((x) =>
-              h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, x.ok ? "✓" : "→"),
-                h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.label}${x.ok ? "" : " · " + x.it.why}`)))));
+              h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, x.ok ? "✓" : "✗"),
+                h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.ok ? "" : `Belongs in: ${x.label}. `}${x.it.why}`)))));
             score.replaceWith(recap);
             done({ name: right === n ? "Clean sweep." : right >= n * 0.75 ? `${right} of ${n}. Sharp sorting.` : `${right} of ${n}. Here's the pattern.`,
-              tally: misses.length ? "The → ones show where each really belongs." : "" });
+              tally: "" });
           }
           else show();
         }, 1100);
@@ -567,13 +569,30 @@
     }));
   }
   function startTrack(domainId) {
-    const ids = DB.cards.filter((c) => c.domain === domainId).sort((a, b) => (!!S.done[a.id] - !!S.done[b.id]) || a.level - b.level).map((c) => c.id);
+    const ids = DB.cards.filter((c) => c.domain === domainId && inWorld(c)).sort((a, b) => (!!S.done[a.id] - !!S.done[b.id]) || a.level - b.level).map((c) => c.id);
     ids.forEach((id) => (reasons[id] = `Track: ${DOMAIN[domainId].name}`));
     resetFeed(ids);
     showView("feed");
   }
   function resetFeed(ids) {
-    queue = []; feed.replaceChildren(); appendCards(ids); feed.scrollTop = 0;
+    queue = []; feed.replaceChildren(); if (!S.world) feed.append(renderWorldPicker()); appendCards(ids); feed.scrollTop = 0;
+  }
+  const WORLDS = [["young", "School & mates"], ["work", "Work"], ["life", "Everyday life"]];
+  function worldButtons(onPick) {
+    return h("div", { class: "world-btns" }, WORLDS.map(([k, label]) => h("button", { "aria-pressed": String(S.world === k), onclick: () => onPick(k) }, label)));
+  }
+  function setWorld(k) {
+    S.world = k; save();
+    resetFeed(firstQueue());
+    toast(`Examples from ${WORLDS.find((w) => w[0] === k)[1].toLowerCase()}. Change it any time under ?`);
+  }
+  function renderWorldPicker() {
+    return h("section", { class: "qlip world-card", style: "--c:var(--accent)", "aria-label": "Pick your world" },
+      h("div", { class: "qlip-body" },
+        h("h2", { class: "hook" }, "Same ideas, your life."),
+        h("p", { class: "concept-line" }, "Where should the examples come from? One tap, and you can change it later."),
+        worldButtons(setWorld),
+        h("p", { class: "small muted" }, "Or just swipe up to start with a mix.")));
   }
 
   // ---------- map (force-directed graph on canvas) ----------
@@ -698,7 +717,10 @@
   }
   document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => showView(b.dataset.view)));
   $("#brand").addEventListener("click", () => { showView("feed"); feed.scrollTo({ top: 0, behavior: "smooth" }); });
-  $("#streak").addEventListener("click", () => $("#about").showModal());
+  $("#streak").addEventListener("click", () => {
+    $("#world-pref").replaceChildren(worldButtons((k) => { $("#about").close(); setWorld(k); }));
+    $("#about").showModal();
+  });
   $("#share-map").addEventListener("click", () => {
     $("#map-canvas").toBlob(async (blob) => {
       const file = new File([blob], "my-qlip-map.png", { type: "image/png" });
@@ -731,7 +753,7 @@
   }
   function firstQueue() {
     // New players open on the flagship "where are you" game; returning players get the graph's next steps.
-    const start = Object.keys(S.done).length ? [] : ["boredom-signal-estimate", "wso-triad-venn"].filter((id) => CARD[id]);
+    const start = Object.keys(S.done).length ? [] : ["boredom-signal-estimate", "wso-triad-venn"].filter((id) => CARD[id] && inWorld(CARD[id]));
     return start.concat(recommend(start, 5 - start.length));
   }
   boot().catch((err) => {

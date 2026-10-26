@@ -1,10 +1,10 @@
 {
- "cards": 190,
+ "cards": 191,
  "failed": [],
  "console_errors": [],
  "overflow": [],
- "first_card_ms": 326,
- "first_card": "boredom-signal-estimate",
+ "first_card_ms": 312,
+ "first_card": null,
  "a11y": [],
- "played_ok": 190
+ "played_ok": 191
 }

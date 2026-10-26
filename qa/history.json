@@ -478,11 +478,11 @@
  },
  {
   "session": 10,
-  "at": "2026-10-26T17:24:40+00:00",
+  "at": "2026-10-26T21:53:00+00:00",
   "automated": 49.0,
-  "panel": null,
-  "composite": 49.0,
-  "delta": -34.41,
+  "panel": 34.0,
+  "composite": 83.0,
+  "delta": -0.41,
   "passed": false,
   "breakdown": {
    "schema": 5,
@@ -517,8 +517,61 @@
    "hook_distinct_rate": 0.995,
    "brief_reveal_rate": 1.0
   },
-  "panel_detail": {},
+  "panel_detail": {
+   "persona_avg_10": 6.8,
+   "by_dim": {
+    "hook": 6.5,
+    "clarity": 6.83,
+    "usefulness": 6.83,
+    "safety": 8.0,
+    "fun": 5.83
+   }
+  },
   "note": "feed learns your life-world (school/work/everyday) from plays and skips; +36 single-world cards (190 total); depth before Next; streak off the header; map label collisions; session-9 content fixes (79)"
+ },
+ {
+  "session": 11,
+  "at": "2026-10-26T22:01:22+00:00",
+  "automated": 49.0,
+  "panel": null,
+  "composite": 49.0,
+  "delta": -34.0,
+  "passed": false,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 8.0,
+   "console": 4,
+   "overflow": 3,
+   "a11y": 6.0,
+   "readability": 5,
+   "actionable": 2.98,
+   "sourced": 1.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.68,
+   "domain_balance": 2.0,
+   "depth": 2.35,
+   "hook_distinct": 1.99,
+   "brief_reveal": 1.0
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 191,
+   "played_ok": 191,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 0,
+   "flesch_avg": 75.7,
+   "try_today_verb_rate": 0.995,
+   "sensitive_cards": 55,
+   "first_card_ms": 312,
+   "edges": 369,
+   "concept_depth": 0.784,
+   "hook_distinct_rate": 0.995,
+   "brief_reveal_rate": 1.0
+  },
+  "panel_detail": {},
+  "note": "one-tap world picker (School/Work/Everyday) filters the feed; Why? open for adults; swipe recap explains every item; session-10 content fixes. METHOD CHANGE: personas now review the feed their chosen world serves."
  },
  {
   "session": 1001,

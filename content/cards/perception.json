@@ -47,10 +47,15 @@
     "hook": "Your bathroom scale tells the truth, right? Swipe and see.",
     "title": "Map or Territory?",
     "game": {
-      "prompt": "Closer to the thing itself, or a description of it?",
-      "left": "Map",
-      "right": "Closer to the thing",
+      "prompt": "Is this a description, or something you're experiencing directly (still filtered by your senses)?",
+      "left": "Description (map)",
+      "right": "Direct experience",
       "items": [
+        {
+          "text": "The like count on your post",
+          "side": "left",
+          "why": "A tiny slice of who saw it and tapped. It leaves out everyone who smiled and scrolled on."
+        },
         {
           "text": "The number on your bathroom scale",
           "side": "left",
@@ -59,7 +64,7 @@
         {
           "text": "The rain falling on you right now",
           "side": "right",
-          "why": "As close as you get: you can't argue with it, only respond. Even so, you feel your senses' report."
+          "why": "Direct: you can't argue with it, only grab a hood. Even this is your senses' first, thin map."
         },
         {
           "text": "A friend's 5-star restaurant review",
@@ -74,17 +79,12 @@
         {
           "text": "The burn in your legs after running for the bus",
           "side": "right",
-          "why": "Closer to the thing itself, happening in you. Any number or label about it is the map."
+          "why": "Happening in your body right now. The second you say \"my legs are dying\", that's already the map."
         },
         {
           "text": "Your exam grade",
           "side": "left",
           "why": "A useful number that leaves out most of what you actually did."
-        },
-        {
-          "text": "The like count on your post",
-          "side": "left",
-          "why": "A tiny slice of who saw it and tapped. It leaves out everyone who smiled and scrolled on."
         }
       ]
     },
@@ -337,7 +337,7 @@
           "q": "Before an exam or big moment, my racing heart means…",
           "options": [
             {
-              "label": "A sign I'm not coping",
+              "label": "A warning sign",
               "value": -2
             },
             {
@@ -351,10 +351,10 @@
           ]
         },
         {
-          "q": "When a stressful task looms (a deadline, an exam, a big job), I mostly see it as…",
+          "q": "Feeling stressed before something important…",
           "options": [
             {
-              "label": "Mostly a threat",
+              "label": "Gets in the way of doing well",
               "value": -2
             },
             {
@@ -362,25 +362,25 @@
               "value": 0
             },
             {
-              "label": "Mostly a challenge I can meet",
+              "label": "Can help me do well",
               "value": 2
             }
           ]
         },
         {
-          "q": "Looking back, stressful times in my life…",
+          "q": "In general, the effect of stress on me is…",
           "options": [
             {
-              "label": "Mostly hurt me (and that's real)",
-              "value": -1
+              "label": "Mostly draining",
+              "value": -2
             },
             {
-              "label": "Were mixed",
+              "label": "Mixed",
               "value": 0
             },
             {
-              "label": "Also helped me grow",
-              "value": 1
+              "label": "It can sharpen me too",
+              "value": 2
             }
           ]
         },
@@ -388,7 +388,7 @@
           "q": "When I notice stress building, I usually…",
           "options": [
             {
-              "label": "Try to make it go away",
+              "label": "Avoid the task until it passes",
               "value": -2
             },
             {
@@ -396,7 +396,7 @@
               "value": 0
             },
             {
-              "label": "Use the energy on the task",
+              "label": "Calm it a little, then use the energy on the task",
               "value": 2
             }
           ]
@@ -441,8 +441,7 @@
       "growth_mindset",
       "emotion_naming"
     ],
-    "try_team": "Before a match, exam or big deadline, everyone says one thing they care about in it. Then together: 'This buzz is energy for that.' One slow breath.",
-    "notes": "Q3 is deliberately downweighted (values ±1) so a hard past isn't scored as harshly as present-day appraisals."
+    "try_team": "Before a match, exam or big deadline, everyone says one thing they care about in it. Then together: 'This buzz is energy for that.' One slow breath."
   },
   {
     "id": "useful-truth-people-person",
@@ -769,7 +768,7 @@
     },
     "insight": "Your slip feels huge because you see it from the inside. Others are busy with their own day, and judge it more gently than you predict. A quick, light fix is usually enough.",
     "model": "A quick, light fix ends the moment for them; replaying it only keeps it going for you.",
-    "try_today": "Recall one recent cringe moment. Write how you think others saw it, then a kinder guess. Which is more likely?",
+    "try_today": "Next time a cringe moment replays, write one line: how a kind friend who was there would describe it. Then close the note.",
     "source": {
       "thinkers": [
         "Kenneth Savitsky",
@@ -1032,10 +1031,10 @@
     "hook": "Angry client, live call. Your calm poker face may be costing you.",
     "title": "Reframe, Don't Just Mask",
     "game": {
-      "prompt": "A client spends ten minutes tearing apart your team's work on a video call. You can (a) keep a straight face and push the anger down, or (b) tell yourself 'they're under launch pressure, this is fear talking'. Which leaves you remembering less of what they actually asked for?",
+      "prompt": "A client tears apart your team's work for ten minutes on a call. Option A: keep a straight face and push the anger down. Option B: tell yourself \"they're under launch pressure, this is fear talking\". Which one makes you forget more of what they asked for?",
       "choices": [
-        "Pushing it down",
-        "Reframing it",
+        "A: pushing it down",
+        "B: reframing it",
         "No difference"
       ],
       "answer": 0,

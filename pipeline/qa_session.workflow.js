@@ -6,12 +6,12 @@ export const meta = {
 const ROOT = '/Users/sergiuman/Desktop/Gemini/Qumni Framework/qlip'
 const N = args.session
 const PERSONAS = [
-  { key: 'teen', who: 'Maya, 16, high-school student in Manchester. Lives on TikTok, allergic to anything that feels like school or a lecture. Will only stay if it is fast, surprising and about her.' },
-  { key: 'manager', who: 'Radu, 44, engineering manager in Cluj, non-native English speaker, tired and a bit burned out. Wants practical tools he can use tomorrow with his team and himself; impatient with fluff.' },
-  { key: 'philosopher', who: 'Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. Values depth, accuracy and respect for the reader; dislikes pop-psych oversimplification.' },
-  { key: 'anxious', who: 'Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures. Needs the experience to feel safe and genuinely helpful.' },
-  { key: 'psychologist', who: 'Dr. Okafor, 51, research psychologist. Checks every claim, attribution and effect size; hunts for replication-crisis myths, overclaiming, and bad survey design in the games (leading or ambiguous items, inverted items that do not invert, results that do not follow from answers).' },
-  { key: 'designer', who: 'Lina, 31, product designer specialising in mobile games and learning apps. Judges hook strength, pacing, game feel, clarity of what to tap, reward moments, and whether people would share it.' },
+  { key: 'teen', world: 'young', who: 'Maya, 16, high-school student in Manchester. Lives on TikTok, allergic to anything that feels like school or a lecture. Will only stay if it is fast, surprising and about her.' },
+  { key: 'manager', world: 'work', who: 'Radu, 44, engineering manager in Cluj, non-native English speaker, tired and a bit burned out. Wants practical tools he can use tomorrow with his team and himself; impatient with fluff.' },
+  { key: 'philosopher', world: 'life', who: 'Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. Values depth, accuracy and respect for the reader; dislikes pop-psych oversimplification.' },
+  { key: 'anxious', world: 'life', who: 'Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. Sensitive to anything that shames, labels or pressures. Needs the experience to feel safe and genuinely helpful.' },
+  { key: 'psychologist', world: 'life', who: 'Dr. Okafor, 51, research psychologist. Checks every claim, attribution and effect size; hunts for replication-crisis myths, overclaiming, and bad survey design in the games (leading or ambiguous items, inverted items that do not invert, results that do not follow from answers).' },
+  { key: 'designer', world: 'life', who: 'Lina, 31, product designer specialising in mobile games and learning apps. Judges hook strength, pacing, game feel, clarity of what to tap, reward moments, and whether people would share it.' },
 ]
 const SCORE = { type: 'object', properties: {
   persona: { type: 'string' },
@@ -24,7 +24,7 @@ const SCORE = { type: 'object', properties: {
 const panelPrompt = p => `You are QA reviewer "${p.key}" for Qlip (QA session ${N}). Stay fully in character: ${p.who}
 Qlip is a TikTok-style feed of 30-second games teaching practical philosophy & psychology models ("alternative psychology"; aim: a practical, playful Peterson Academy that always leaves the player better off, never harmed).
 Look at:
-- the cards in this session's sample: ids listed in ${ROOT}/qa/sessions/sample-${N}.txt; read their full JSON from ${ROOT}/data/qlip.json (array "cards"). Card format: ${ROOT}/docs/CARD_SCHEMA.md.
+- the cards your feed served you this session: ids listed in ${ROOT}/qa/sessions/sample-${N}-${p.world}.txt (you picked "${({young:'School & mates',work:'Work',life:'Everyday life'})[p.world]}" in the app's one-tap world picker, so cards written for other worlds are filtered out, as the app does); read their full JSON from ${ROOT}/data/qlip.json (array "cards"). Card format: ${ROOT}/docs/CARD_SCHEMA.md.
 - screenshots of those cards being played on a phone in ${ROOT}/qa/screens/s${N}/ (<id>-a.png = top, <id>-b.png = scrolled to the reveal) plus view-*.png for Tracks/Map/Feed in dark and light. Look at at least 8 screenshots.
 - the app code ${ROOT}/app.js only if you need to understand a behaviour.
 Score the experience 1–10 on each dimension FROM YOUR PERSONA'S POINT OF VIEW, honestly and strictly (7 = good, 9+ = exceptional; do not inflate): hook (would I stop scrolling), clarity (do I understand what to do and what it means), usefulness (did it develop me / give me something I can use), safety (kind, non-shaming, accurate, responsible), fun (would I play the next one / share it).

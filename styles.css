@@ -259,3 +259,9 @@ a { color: inherit; }
 .team-line b { color: var(--fg); }
 .track { min-height: 0; padding: 12px 14px; }
 .track-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+
+/* session 10: world picker */
+.world-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.world-btns button { border: 1px solid var(--line); background: var(--surface-2); border-radius: 999px; padding: 12px 18px; font-weight: 700; font-size: var(--step-0); }
+.world-btns button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.world-card .hook { margin-top: 10vh; }
