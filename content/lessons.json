@@ -18,5 +18,6 @@
  "Session 4: reveal games without a factual answer need a punchline in the reveal text itself (a real-life example), not 'no study exists'.",
  "Session 5: never repeat a story (same study or anecdote) across two cards; each card owns its example.",
  "Session 5: questionnaires (venn/radar) must earn their length: 3-4 questions and a personal frame (pick your goal first) beat 6 abstract items.",
- "Session 5: put the verdict before the explanation on every game type."
+ "Session 5: put the verdict before the explanation on every game type.",
+ "Daily day 1 (Ollama): generated cards defaulted to office presentations; every new card needs a non-work scenario first."
 ]

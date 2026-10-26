@@ -147,6 +147,8 @@ def validate_card(card, concepts):
         return [f"{cid}: {e}" for e in errs]
     if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", card["id"]):
         errs.append("id must be kebab-case")
+    if card["concept"] in ("snake_case", "id"):
+        errs.append("concept id is a placeholder")
     c = concepts.get(card["concept"])
     if not c:
         errs.append(f"unknown concept {card['concept']!r}")

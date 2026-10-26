@@ -857,7 +857,7 @@
   },
   {
     "id": "creative-truthful-courage-choice",
-    "concept": "snake_case",
+    "concept": "truthful_courage",
     "domain": "wisdom",
     "type": "choice",
     "hook": "You've been asked to give a presentation. Do you…",
