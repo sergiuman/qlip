@@ -26,7 +26,7 @@ def play_card(page, cid):
         game = sec.locator(".game")
         rng = game.locator("input[type=range]:not([disabled])")
         if rng.count():
-            rng.first.evaluate("el => { el.value = el.min; el.dispatchEvent(new Event('input', {bubbles: true})); }")
+            rng.first.evaluate("el => { el.value = Number(el.min) + (Number(el.max) - Number(el.min)) * 0.4; el.dispatchEvent(new Event('input', {bubbles: true})); }")
         for sel in [".scale button", ".opts .opt:not([disabled])", ".swipe-btns button", ".order-pool button",
                     "button.btn:not([hidden])"]:
             loc = game.locator(sel)

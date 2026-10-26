@@ -196,7 +196,7 @@
             {
               "text": "Notice the dread, name it ('I'm scared I upset them'), and breathe before doing anything.",
               "best": true,
-              "feedback": "Yes. You felt the jolt and didn't let it drive. Naming the fear already shrinks it a little."
+              "feedback": "Yes. You felt the jolt and didn't let it drive. Naming the fear can take a little of its edge off (affect labelling)."
             },
             {
               "text": "Lie awake replaying everything you said to them this month.",
@@ -230,9 +230,10 @@
     "source": {
       "thinkers": [
         "Daniel Goleman",
-        "Daniel Kahneman"
+        "Daniel Kahneman",
+        "Matthew Lieberman"
       ],
-      "work": "Emotional Intelligence (1995); Thinking, Fast and Slow (2011)"
+      "work": "Emotional Intelligence (1995); Thinking, Fast and Slow (2011); Lieberman et al., Putting feelings into words (Psychological Science, 2007)"
     },
     "evidence": "moderate",
     "level": 1,
@@ -553,21 +554,21 @@
     "concept": "emotional_contagion",
     "domain": "emotions",
     "type": "estimate",
-    "hook": "Can a news feed change your mood? Guess how many got tested.",
+    "hook": "A week of sadder posts. How much sadder did people write?",
     "title": "Moods Are Contagious",
     "game": {
-      "question": "In 2012, Facebook quietly showed fewer happy or fewer sad posts to some users to see if moods spread. How many people were in the study?",
+      "question": "In 2012, Facebook showed 689,003 users fewer positive posts for a week. By how much did the share of positive words in their own posts drop?",
       "min": 0,
-      "max": 2000000,
-      "step": 1000,
-      "unit": " people",
-      "answer": 689003,
-      "explain": "689,003 users, for one week (Kramer, Guillory & Hancock, 2014). People who saw fewer positive posts wrote slightly fewer positive words themselves, and the reverse held too. It measured words, not felt mood, the effect was tiny, and users never agreed to take part.",
+      "max": 10,
+      "step": 0.1,
+      "unit": " percentage points",
+      "answer": 0.1,
+      "explain": "About 0.1 percentage points (Kramer, Guillory & Hancock, 2014). Real, but tiny, and measured in words, not felt mood. Users never agreed to take part.",
       "anchor": null
     },
-    "insight": "Moods spread through faces, voices and even text. The effect here was tiny per person, but small nudges add up over a day of scrolling or a room full of people.",
+    "insight": "Moods can spread, but in this famous study the effect was tiny: big crowds make tiny effects detectable, not important. If a feed leaves you heavier, that's information, not weakness. Notice the mood you bring, without blaming yourself.",
     "model": "Moods are weather. Notice what front you walked into, and what front you bring with you.",
-    "try_today": "Before your next call, class, or group chat, take one breath and pick the mood you want to bring into it.",
+    "try_today": "Mute or unfollow one account that reliably drags your mood, then notice how your next scroll feels.",
     "source": {
       "thinkers": [
         "Elaine Hatfield",
@@ -583,6 +584,7 @@
       "doomscroll_loop",
       "environment_design"
     ],
-    "try_team": "Before a meeting, class or family meal, everyone names the mood they're bringing in, in one word. Notice how the first mood shifts the room."
+    "try_team": "Before a meeting or class, everyone names their mood in one word. Leaders: your mood in the first 2 minutes is the weather. Check it first.",
+    "sensitive": true
   }
 ]

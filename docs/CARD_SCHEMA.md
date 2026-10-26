@@ -39,7 +39,7 @@ Each question is rated on a 5-step scale (0–4). The player's dot moves live be
  "threshold": 0.55,
  "results": {"W":{"name":"The Dreamer","text":"..."}, "WS":{...}, "WSO":{...}, "":{...}}}
 ```
-`results` keys = sorted axis keys at or above threshold ("" = none). Provide every combination.
+`results` keys = sorted axis keys at or above threshold ("" = none). Provide every combination. Optional `"mid"` result is shown when every answer sits in the middle. Axis labels: one or two words.
 
 ### `spectrum` — a marker slides between two poles
 ```json
@@ -81,7 +81,7 @@ Questions rated 0–4. `advice` keyed by axis index — shown for the weakest ax
 ```json
 {"question":"1% better every day for a year makes you how many times better?","min":1,"max":100,"step":1,"unit":"×","answer":37.8,"explain":"1.01^365 ≈ 37.8","anchor":null}
 ```
-Use only numbers you can source. `anchor` (optional) shows a number first to demonstrate anchoring.
+Use only numbers you can source. `anchor` (optional) shows a number first to demonstrate anchoring. `typical_miss: true` (optional) lets the app say "Most people miss this one" — only when `explain` cites how people usually guess.
 
 ### `reveal` — a thought experiment, then a flip
 ```json

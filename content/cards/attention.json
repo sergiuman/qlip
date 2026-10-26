@@ -404,19 +404,19 @@
     "concept": "attention_residue",
     "domain": "attention",
     "type": "choice",
-    "hook": "Mid-task, your phone buzzes. Is checking it really 'just a second'?",
+    "hook": "Your phone buzzes mid-revision. \"Just a sec\" costs way more than that.",
     "title": "Leave Tasks Cleanly",
     "game": {
       "steps": [
         {
-          "scenario": "You're halfway through something that needs thought: homework, a tax form, a tricky knitting pattern. Your phone buzzes with a group chat. You…",
+          "scenario": "You're halfway through something that needs thought: revision, a TikTok edit, a hard level in a game. Your phone buzzes with the group chat. You…",
           "options": [
             {
               "text": "Check it now, then come back",
               "feedback": "Very normal. The catch: the task you left keeps tugging at you while you read, and the chat tugs once you're back. Both get less of you."
             },
             {
-              "text": "Finish the sentence or row, jot the next step, then check",
+              "text": "Finish the sentence or step, jot the next move, then check",
               "best": true,
               "feedback": "Yes. Leroy and Glomb found a quick 'ready-to-resume' note helps people let go of the unfinished task, so the next one gets more of their mind."
             },

@@ -157,14 +157,14 @@
           "why": "Your reliability is fully yours. It's where meaning starts."
         },
         {
-          "text": "Making everyone at school, work or online like you",
+          "text": "Making everyone like you",
           "side": "left",
           "why": "Their feelings aren't yours to control. Your fairness and effort are."
         },
         {
           "text": "The mess in your room that's been bugging you",
           "side": "right",
-          "why": "Small, concrete, yours. Sorting it is a quick win that steadies you."
+          "why": "Peterson's famous starting point: put your own house in order before you try to fix the world. Start small, then take on more."
         },
         {
           "text": "Fixing a friend's life for them",
@@ -183,8 +183,8 @@
         }
       ]
     },
-    "insight": "Meaning comes from responsibility you can act on. Loads that are yours make you stronger; loads that belong to others, or the whole world, mostly bring worry. Sorting them comes first.",
-    "model": "Carry what's yours, fully. Put down what isn't, kindly.",
+    "insight": "Peterson argues meaning is found in the responsibility you choose to shoulder: pick up the heaviest load you can actually carry. Epictetus adds the filter: carry what is in your power, not what isn't. Sort first, then lift as much of your own as you can.",
+    "model": "Put down what isn't yours, then pick up as much of what is yours as you can bear.",
     "try_today": "Write down three things weighing on you. Circle the one you can act on, and take one 5-minute step on it.",
     "source": {
       "thinkers": [
@@ -204,7 +204,7 @@
     "sensitive": true,
     "try_team": "Everyone writes three worries on sticky notes. Sort them together: 'ours to act on' vs 'not ours'. Pick one 'ours' and agree a first step.",
     "from_source": {
-      "quote": "Some things are in our control and others not.",
+      "quote": "Some things are in our power, and others are not.",
       "cite": "Epictetus, Enchiridion, ch. 1 (trans. Elizabeth Carter, 1758)",
       "next_read": "Enchiridion, chapters 1-5 (short; about 10 minutes)"
     }
@@ -560,23 +560,19 @@
       ],
       "questions": [
         {
-          "q": "When I start a task (homework, a hobby, a job), I know exactly what 'done' looks like.",
+          "q": "In my last focus session, I knew exactly what 'done' looked like.",
           "axis": 0
         },
         {
-          "q": "I can tell within minutes if I'm on the right track.",
+          "q": "In my last focus session, I could tell within minutes if I was on track.",
           "axis": 1
         },
         {
-          "q": "My usual tasks feel neither too easy nor too hard.",
+          "q": "In my last focus session, the task felt neither too easy nor too hard.",
           "axis": 2
         },
         {
-          "q": "I can work 25 minutes without checking my phone or messages.",
-          "axis": 3
-        },
-        {
-          "q": "People or alerts rarely break my focus.",
+          "q": "In my last focus session, I went 25 minutes without checking my phone.",
           "axis": 3
         }
       ],
@@ -587,7 +583,7 @@
         "3": "Interruptions scored lowest today. Put your phone in another room for one 25-minute block. Switching leaves part of your mind elsewhere."
       }
     },
-    "insight": "Flow isn't luck. Csikszentmihalyi's research points to conditions that make it likely: a clear goal, fast feedback, the right difficulty, few interruptions. Fix the weakest one first.",
+    "insight": "Csikszentmihalyi found flow is more likely with a clear goal, fast feedback and a task just above your skill. Protecting focus from interruptions helps all three. Fix the weakest one first.",
     "model": "Don't chase flow. Set up its conditions and let it arrive.",
     "try_today": "Fix your weakest ingredient, then work for 10 focused minutes and notice how it felt.",
     "source": {

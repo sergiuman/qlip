@@ -1,0 +1,589 @@
+{
+ "session": 3,
+ "personas": [
+  {
+   "persona": "teen: Maya, 16, Manchester. Lives on TikTok and bails on anything that feels like school. Played 24 cards and looked at 13 screenshots (feed, Tracks dark, Map light, and card tops and reveals).",
+   "scores": {
+    "hook": 6,
+    "clarity": 6,
+    "usefulness": 6,
+    "safety": 8,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Estimate cards show a big underlined 'Most people miss this one' headline even when I never touched the slider. Screens show 'Your guess: 0 people' and 'Your guess: 0'. I didn't guess, so it feels like I failed a test, and that's when I close the app.",
+     "fix": "In app.js, in the estimate renderer, keep the submit/reveal button disabled until the slider fires its first input event. Change the label to 'Drag to guess'. Change the far-off headline at app.js:487 from `Most people miss this one. The real number: ${fmt(g.answer)}.` to `Plot twist: it's ${fmt(g.answer)}.`, and keep 'Bullseye.' and 'Close.' as they are."
+    },
+    {
+     "card_id": "emotional-contagion-estimate",
+     "severity": "high",
+     "problem": "The hook is the best idea in the set (your feed secretly changing your mood), but the game is guessing a sample size on a 0 to 2,000,000 slider. That's pub-quiz trivia, not about me, and 'Facebook' already sounds like my mum's app. The reveal is also a 9-line wall of text.",
+     "fix": "Change type to 'reveal'. hook: 'Your feed got secretly edited to make you sadder. Would you even notice?' game.prompt: 'In 2012, Facebook quietly hid happy posts from 689,003 people for a week. What happened to their OWN posts?' choices: ['Nothing changed', 'They posted slightly less happy stuff', 'They quit the app']. answer: 1. reveal: 'They posted slightly fewer happy words, and nobody had agreed to be tested. The effect was tiny, but your feed does leak into you (Kramer et al., 2014).'"
+    },
+    {
+     "card_id": "attention-residue-clean-switch",
+     "severity": "medium",
+     "problem": "The scenario says 'homework, a tax form, a tricky knitting pattern'. Tax forms and knitting tell me straight away this wasn't made for me. The hook is also a bit flat.",
+     "fix": "steps[0].scenario: 'You're halfway through something that needs thought: revision, a TikTok edit, a hard level in a game. Your phone buzzes with the group chat. You…'. hook: 'Your phone buzzes mid-revision. \"Just a sec\" costs way more than a sec.'"
+    },
+    {
+     "card_id": "three-conversations-swipe",
+     "severity": "medium",
+     "problem": "The 'retired' and 'bus to the hospital' items are adult life, not my life. The hook 'Same calm sentence, two different needs' doesn't match the game, which shows 7 different sentences.",
+     "fix": "Replace the item 'I've retired and I don't know what to do with my days.' with 'I didn't get into the sixth form I wanted and now I don't know what I'm doing.' (side left, why: 'Sounds like a planning problem, but it's about who you are now. Ask before you suggest options.'). Replace 'Which bus gets me to the hospital by 10?' with 'Which bus gets me to the Trafford Centre by 10?' (side right, why unchanged). hook: 'Your mate texts you a problem. Advice or a hug? Get 7 right in a row.'"
+    },
+    {
+     "card_id": "shared-fictions-swipe",
+     "severity": "medium",
+     "problem": "The prompt 'Would it still exist if no human believed in it?' maps 'no' onto the left label 'Shared story', so it's a double negative and I scored 2/6 from confusion, not from misunderstanding the idea. 'Your birthday being your day' is arguable either way.",
+     "fix": "prompt: 'Rock or agreement?'. left: 'Agreement (needs believers)'. right: 'Rock (exists anyway)'. Replace the birthday item with {text: 'Your follower count meaning you matter', side: 'left', why: 'The number is real data. What it says about you is a story people agree to tell.'}."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "flow-conditions-radar with all-low answers shows an empty radar and the text 'Start tiny: Clear goal scored lowest today', but nothing scored lowest because everything tied at zero, so the 'lowest' pick is fake. The WSO 'Right on the fence' fallback (app.js:332) uses 'ask for a raise' as its example and overrides the card's own 'mid' result ('The Half-Lit Path').",
+     "fix": "app.js:385: when low is true, use the text 'That happens after a hard stretch, and it passes. Start tiny: before your next task, write one line: \"Done means…\".' Do not splice in g.advice. app.js:332: if g.results.mid exists, use it instead of the hard-coded object. Otherwise change the examples to '\"run 5 km\", \"learn 3 guitar chords\"'."
+    },
+    {
+     "card_id": "identity-habits-voter",
+     "severity": "low",
+     "problem": "I'm 16 and can't vote, and the reveal ends with 'it didn't replicate'. Honest, but I came for a surprise and left with a shrug.",
+     "fix": "Keep the reveal as it is and make the takeaway land for my age. hook: 'You can't vote yet. But one tiny word might change what you actually do.' try_today: 'Swap \"I should revise\" for \"I'm someone who revises\", then do 10 minutes of it today and notice if it feels different.'"
+    },
+    {
+     "card_id": "opportunity-cost-unseen",
+     "severity": "low",
+     "problem": "Trainers cost €60, but I'm in Manchester and it's pounds. The coin and ticket cards say 'any currency', which looks like nobody localised it. Small thing, but it breaks the 'this is about me' feeling.",
+     "fix": "In prompt and choices, replace '€60' with '£60', or have the app pick the currency symbol from the locale. Change choices[1] to 'Keep the £60 for other stuff'."
+    }
+   ],
+   "best_cards": [
+    "sleep-memory-replay-reveal",
+    "reversible-doors-swipe",
+    "regret-minimization-hacked"
+   ],
+   "verdict": "Some of these I'd stop for: rats replaying the maze in their sleep was proper eerie, a face tattoo as a one-way door made me laugh, and the mate pushing crypto with the regret test felt like something that actually happens. Too many cards are written for my mum, though: tax forms, knitting, retirement, asking for a raise, Facebook, voting. The estimate games call me a fail when I didn't even guess. The reveals are kind and never preachy, and the safety framing is good ('snapshot, not a verdict'). But walls of citations and a cluttered map make some cards feel like homework. Fix the fail headlines and the adult examples, cut each reveal to about 2 lines, and I'd scroll a lot longer."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself, and has no patience for fluff.",
+   "scores": {
+    "hook": 6,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The radar result contradicts itself. With all answers low it says 'Low on all of them today' and then 'Clear goal scored lowest today'. In the screenshot every axis is 0, so 'lowest' just means index 0 won a tie. I read this and I think the tool is not listening to me. Same family of bug in the venn: the screenshot of wso-triad-venn shows 'Right on the fence' with text that is not in the card JSON (the card has 'mid' = 'The Half-Lit Path'), so the editor's text is being overridden.",
+     "fix": "In app.js radar result: when all axis scores are equal (or all below threshold), skip the per-axis advice and show one line instead: 'All four scored low today. Start with the cheapest: put your phone in another room for one 25-minute block.' Only show advice[i] when that axis is strictly lowest. For venn: when the card has a 'mid' result, use it instead of the generic 'Right on the fence' fallback."
+    },
+    {
+     "card_id": "grit-passion-perseverance-venn",
+     "severity": "high",
+     "problem": "The axis labels inside the circles get cut off and run into each other: 'ission (stable inte[dot]erseverance (staying pc'. On a phone this looks broken in the first second.",
+     "fix": "Shorten axis labels to 'Passion' and 'Perseverance' and move the explanation into the score line: 'Passion (stable interest) 7/10 · Perseverance (staying power) 7/10'. Or in app.js, put venn labels outside the circles and wrap them at about 12 characters."
+    },
+    {
+     "card_id": "environment-design-defaults-estimate",
+     "severity": "medium",
+     "problem": "The answer is 99.98 but step is 1, so the reveal headline says 'The real number: 100%'. That is wrong, and 100% sounds like everybody, which the explanation then contradicts. I lose trust in the numbers.",
+     "fix": "Set step to 0.01, or set answer to 99.98 and have the headline print the explain value. The simplest version: change the question to '...What % were donors there? (round to the nearest whole number)' with answer 99 and explain starting 'About 99.98%, so practically everyone.'"
+    },
+    {
+     "card_id": "emotional-contagion-estimate",
+     "severity": "medium",
+     "problem": "Guessing the number of Facebook users (0 to 2,000,000, step 1000) is trivia. It teaches me nothing about moods, the slider is too long to hit anything useful, and the hook asks 'Can a feed change your mood?' but the game never asks that. For a manager this is the most useful model in the set (my mood sets the room in standup), and it is wasted on a headcount.",
+     "fix": "Change the question to the effect size: 'People who saw fewer happy posts for a week: how much did their own positive words drop? (in %)' with min 0, max 50, step 1, unit '%', answer 0.1 (or reframe as a reveal with choices ['A lot, around 20%', 'Some, around 5%', 'Tiny, about 0.1%'], answer 2). Rewrite the hook: 'A week of sadder posts. How much sadder did people write?' Add to try_team: 'Managers: your mood in the first 2 minutes of a meeting is the weather. Check it before you open the call.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Most scenarios are about teens or family: homework, knitting, a mum reading messages, phones in schools, a messy room, a lift to an appointment, 'class or family' in try_team. I am 44 and I manage 9 people, so many cards feel like they are not for me even when the model is perfect for work. Example: attention-residue opens with 'homework, a tax form, a tricky knitting pattern'.",
+     "fix": "Add one work line to each scenario's example list and to every try_team. attention-residue step 1: 'You're halfway through something that needs thought: a code review, a tax form, a hard email.' three-conversations-swipe: add the item {\"text\": \"My PR has been waiting for review for four days.\", \"side\": \"left\", \"why\": \"Sounds like logistics, but 'four days' carries frustration. Acknowledge it, then unblock.\"}. In try_team fields, replace 'class or family' with 'team, class or family'."
+    },
+    {
+     "card_id": "attention-residue-clean-switch",
+     "severity": "medium",
+     "problem": "The result after 0 of 2 says 'You found the trap most people fall into.' That is confusing (did I win or lose?) and a bit ironic. When I am tired it sounds like 'you fell in the trap'. It is also not clear that 'best call' means the recommended option.",
+     "fix": "For 0 of N in choice cards use: 'Those were the common picks. Here's the move that leaves less residue.' and change the counter label from '0 of 2 best calls' to '0 of 2 matched the research pick'."
+    },
+    {
+     "card_id": "identity-habits-voter",
+     "severity": "low",
+     "problem": "Choosing 'be a voter' shows 'Spot on.' But the reveal says the bigger study found no effect, so praising the 'right' answer teaches a finding the card itself does not trust.",
+     "fix": "Change the reveal headline for this card to 'Matches the first study. The bigger one disagreed.' (no 'Spot on'). Change the prompt to 'In the original 2011 study, which version got more people to vote?'"
+    },
+    {
+     "card_id": "responsibility-meaning-pick-your-load",
+     "severity": "low",
+     "problem": "Feedback reads 'Not quite — Caring is good.' The capital letter after the dash looks like two strings glued together, and the em dash is hard to read for a non-native reader. Also 'Making everyone at school, work or online like you' is a bit long for a swipe card.",
+     "fix": "In app.js swipe feedback, join with '. ' instead of ' — ' ('Not quite. Caring is good...'). Shorten the item text to 'Making everyone like you'."
+    }
+   ],
+   "best_cards": [
+    "wso-triad-venn",
+    "looping-swipe",
+    "expected-value-resulting"
+   ],
+   "verdict": "The content is solid and honest. I like that the cards admit weak evidence (grit, the voter study, maximizing), and try_today is almost always something I can actually do in 5 minutes. WSO, looping and the 'resulting' card I will use with my team next week. But the polish breaks trust: clipped venn labels, '100%' when the answer is 99.98, a radar that says 'low on all' and then 'clear goal lowest', and a Facebook headcount quiz that wastes a great model. Most examples are for teenagers or parents, not for someone running a team, so I keep translating in my head, which costs energy I don't have at 10pm. I would keep scrolling, but I would not share it with my team yet. Fix the rendering bugs and add work scenarios and this goes from 6 to 8."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher. Reads Seneca, Aristotle and Peterson. Values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification.",
+   "scores": {
+    "hook": 7,
+    "clarity": 8,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "responsibility-meaning-pick-your-load",
+     "severity": "high",
+     "problem": "The card cites Peterson and Frankl but turns their argument upside down. Peterson's claim is that meaning comes from voluntarily taking on the heaviest responsibility you can bear. The card says meaning means putting loads down and picking up only small, controllable ones (the messy room as a 'quick win'). That is the Stoic dichotomy of control in Peterson's clothes, and it trivialises both men. The Carter quotation is also misworded: Carter's 1758 Enchiridion reads 'in our power', not 'in our control'.",
+     "fix": "Rewrite the insight: 'Peterson argues meaning is found in the responsibility you choose to shoulder: pick up the heaviest load you can actually carry. Epictetus adds the filter: carry what is in your power, not what isn't. Sort first, then lift as much of your own as you can.' Change the model to: 'Put down what isn't yours, then pick up as much of what is yours as you can bear.' Change the 'mess in your room' why to: 'Peterson's famous starting point: put your own house in order before you try to fix the world. Start small, then take on more.' Change the from_source quote to Carter's wording, 'Some things are in our power, and others are not.', or cite the Higginson translation and keep a wording that matches it."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Choice-game result headlines contradict the result. With 0 of 2 best calls, the steelmanning reveal says 'You found the trap most people fall into.', which reads like praise for getting everything wrong. Estimate reveals always say 'Most people miss this one' when the guess is off by 30% or more. No data supports that claim on any card, and it is unearned flattery, the very pop-psych habit I distrust.",
+     "fix": "In app.js line 431, change the best===0 headline to 'Not this time. Read the feedback above: that's where the lesson is.' In app.js line 487, change the far-miss headline to `Far off. The real number: ${fmt(g.answer)}.` Use 'Most people miss this one' only when a card has a field such as game.commonMiss:true backed by a cited source (e.g. opportunity-cost-free-ticket, where 78% of economists missed)."
+    },
+    {
+     "card_id": "shared-fictions-swipe",
+     "severity": "medium",
+     "problem": "The card puts an example in Harari's mouth that he did not use. 'Harari's example: a company exists in law...' is attached to Google. Harari's worked example in Sapiens is Peugeot. A reader who knows the book will stop trusting the card.",
+     "fix": "Change the item text to 'A company like Peugeot (or Google)' and its why to: 'Harari's own example is Peugeot: the factories could burn down and the company would still exist, in law and in shared belief.'"
+    },
+    {
+     "card_id": "emotional-contagion-estimate",
+     "severity": "medium",
+     "problem": "The game asks for trivia (the number of participants), and guessing 689,003 teaches nothing about contagion. The real lesson, how small the effect was, is buried in the explain text. The hook 'Can a news feed change your mood?' promises something the slider never tests.",
+     "fix": "Change the question to: 'Facebook hid some positive posts from 689,003 users for a week. By how much did their own positive words drop?' Use min 0, max 10, step 0.1, unit '%', answer 0.1, and explain: 'About 0.1 percentage points: real but tiny, measured in words not felt mood, and done without consent (Kramer et al., 2014). Small nudges, repeated all day, are the point.'"
+    },
+    {
+     "card_id": "reversible-doors-spectrum",
+     "severity": "medium",
+     "problem": "Every question has two options, and one is obviously the virtuous answer ('Shrug, adjust, move on' vs 'Replay it for days'). A thoughtful adult can see the 'right' answer, so the mirror shows what they know they should say, not what they do. Q2 also mixes two things: jumping in on a gut feeling is scored as over-deliberating (negative), when it is really the opposite failure.",
+     "fix": "Add a middle option to each question, e.g. Q1 'Narrow to two, then pick' (value 1). For Q2, change 'Jump in on a gut feeling' to value 0 and add 'Worry for months and never decide' (value -2). Rename the left pole to 'Speed doesn't match stakes' so both errors fit."
+    },
+    {
+     "card_id": "expected-value-coin",
+     "severity": "low",
+     "problem": "The from_source uses Pascal's wager as 'the first famous expected-value argument' with no word about its context. Offering a theological argument as a betting tip is shallow, and the Pascal–Fermat letters were about dividing stakes (problem of points), not expected value in the modern sense.",
+     "fix": "Change next_read to: 'Pensées §233, where Pascal applies the arithmetic of stakes to the question of God (read it as philosophy, not betting advice); then the 1654 Pascal–Fermat letters on fairly dividing an interrupted game.'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "The first question re-asks for the goal ('Pick one goal you keep postponing. For THAT goal:...') right after the prompt has already asked for it. It is redundant and makes question 1 twice as long as the others. The insight's 'researchers named this triad in 1982' is vague.",
+     "fix": "Change question 1 to 'I genuinely want this, even when nobody is watching.' Change the insight's first sentence to: 'Action needs a want, an ability and an open door; Blumberg and Pringle argued in 1982 that research kept forgetting the third.'"
+    },
+    {
+     "card_id": "environment-design-defaults-estimate",
+     "severity": "low",
+     "problem": "With step 1, the slider cannot reach the answer 99.98, so even a perfect guess of 100 is scored by distance rather than recognised. The explain's 'almost nobody changed it' is a fair reading of sign-ups, but the card never asks the reader to weigh the ethics of defaults set by others.",
+     "fix": "Set answer to 100 and change explain to 'About 99.98%, effectively everyone (Johnson & Goldstein, 2003)...'. Append to insight: 'Defaults can be used on you as well as by you: ask who set this one, and for whose benefit.'"
+    }
+   ],
+   "best_cards": [
+    "steelmanning-choice",
+    "identity-habits-voter",
+    "regret-minimization-hacked"
+   ],
+   "verdict": "This is a respectful, carefully hedged sample. Most cards cite real studies, admit when a finding failed to replicate (the 'voter' card is a model of intellectual honesty), and avoid shaming. The Mill and Bastiat quotations send a reader to real books, which I value. The depth falls short where the app borrows great names. The Peterson/Epictetus card inverts Peterson's central claim into self-care minimalism. The Harari card misattributes an example. The interface hands out unearned verdicts ('You found the trap most people fall into' on 0 of 2; 'Most people miss this one' with no data behind it). Several games test trivia or have an obvious right answer rather than making me think. I would keep scrolling for the steelmanning, regret and decision-vs-luck cards. I would not yet recommend the app to a serious reader until the philosophical cards are as precise as the psychological ones."
+  },
+  {
+   "persona": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. I flinch at anything that grades me, labels me or makes me feel behind; I stay if it feels safe and leaves me with one small, doable thing.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Every estimate card I under-guessed ends with the same banner: 'Most people miss this one. The real number: X.' I saw it on emotional-contagion-estimate (my guess: 0 people), environment-design-defaults-estimate (0%) and the Life in Weeks feed card. To me it reads as 'you failed, like everyone'. Because the slider starts at the minimum, I can 'miss' without ever moving it, so I get judged on a guess I never made.",
+     "fix": "In app.js, show the result only after the slider has been touched (disable 'Reveal' until the first input event, with the label 'Drag to make your guess'). Replace the miss banner with closeness-based, non-judgemental lines: within 10% → 'Close call. The real number: X.'; otherwise → 'Surprising, right? The real number: X.' Delete the 'Most people miss this one' string."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "On choice cards the result headline is 'Part there. The rest is the lesson.' plus '1 of 3 best calls' (courage-kindness-choice, impulse-pause-choice, expected-value-resulting). It feels like a mark out of 3, and the scenarios are about my own anxious habits (apologising, panicking at 11pm), so I'm being scored on how I cope. The same pattern appears on swipe cards: responsibility-meaning-pick-your-load says 'Not quite —' and '3 of 6 sorted' about what I personally carry.",
+     "fix": "For cards with sensitive:true, hide the 'N of M best calls' / 'N of M sorted' counter and use these headlines: all best → 'You've got this one.'; some → 'You picked up a new move.'; none → 'Now you've seen the other moves. That's the point.' On sensitive swipe cards, replace the 'Not quite —' prefix with 'Another way to see it:'."
+    },
+    {
+     "card_id": "environment-design-defaults-estimate",
+     "severity": "medium",
+     "problem": "The answer is 99.98, but the headline rounds it to '100%', which contradicts the explain text ('About 99.98%') and is inaccurate. The slider step is 1, so 99.98 can't be selected at all.",
+     "fix": "Set answer to 99.9 and step to 0.1, or keep step 1, set answer to 99, and change explain to 'Over 99% (99.98%; Johnson & Goldstein, 2003)…'. Separately, in app.js, format estimate answers to the card's decimal precision instead of rounding to an integer."
+    },
+    {
+     "card_id": "flow-conditions-radar",
+     "severity": "medium",
+     "problem": "When every score is zero (a tie), the result says 'Low on all of them today. That happens after a hard stretch, and it passes. Start tiny: Clear goal scored lowest today…'. 'Clear goal' is picked arbitrarily from a four-way tie, so the 'lowest' advice is false. The text also assumes I've had a hard stretch, and the empty radar diamond looks bleak.",
+     "fix": "In app.js, for an all-equal-low tie, don't append advice[min]. Show: 'All four ingredients scored low today. That's common when energy is low. Pick the easiest one, usually a clear goal: write one line, \"Done means…\", and work for 10 minutes.' On an empty radar, draw a small minimum radius (for example 10%) so the shape is visible."
+    },
+    {
+     "card_id": "emotional-contagion-estimate",
+     "severity": "medium",
+     "problem": "The slider runs from 0 to 2,000,000 in steps of 1,000, which is hard to control on a phone, and the exact count (689,003) is trivia with little personal value. For someone already anxious about feeds, the takeaway also stays vague ('small nudges add up').",
+     "fix": "Change the question to 'About how many people were in the study?' with min 0, max 1000, step 10, unit ' thousand people' and answer 690. Add to the insight: 'If a feed leaves you heavier, that's information, not weakness. Mute or unfollow one account that reliably drags your mood.'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "medium",
+     "problem": "The hook, 'Let's find why you haven't', presumes failure. I answered mid-scale throughout and got 'Right on the fence', with text telling me to pick a goal and play again. That text isn't the card's 'mid' result ('The Half-Lit Path') in qlip.json, so the app is overriding the card copy. I came away with nothing to do except replay.",
+     "fix": "Change the hook to 'Pick one thing you keep meaning to do. Let's see what would make it easier.' In app.js, use the card's results.mid text when all axes are mid-scale, instead of the hard-coded 'Right on the fence' copy."
+    },
+    {
+     "card_id": "grit-passion-perseverance-venn",
+     "severity": "low",
+     "problem": "Statements like 'I usually lose steam after the first few weeks' and 'I finish what I start' are trait self-judgements. After a rough year these make me rate myself low and feel characterless, even with the kind Explore-mode text.",
+     "fix": "Reword the inverted items to be situational: 'Lately, my energy for projects fades after a few weeks.' and 'Lately, I've been able to finish what I start, even the boring parts.' Add sensitive:true so the helpline footer shows."
+    },
+    {
+     "card_id": "expected-value-resulting",
+     "severity": "low",
+     "problem": "The hook 'That one rule can quietly wreck you' is fear-based. The card itself is one of the most self-compassionate in the sample (don't call yourself stupid for bad luck), and the hook undersells that.",
+     "fix": "Change the hook to 'Bad outcome = bad decision? Your brain says yes. Here's why it's wrong.'"
+    }
+   ],
+   "best_cards": [
+    "impulse-pause-choice",
+    "small-wins-setback-reveal",
+    "courage-kindness-choice"
+   ],
+   "verdict": "The content is mostly kind and useful to me. impulse-pause, small-wins and courage-kindness gave me things I'll actually try, and the 'snapshot, not a verdict' line and helpline footer help me feel safe. The interface keeps grading me, though: 'Most people miss this one' on guesses I never made, 'Part there' with '1 of 3 best calls' on cards about my anxious habits, and 'Not quite —' on what I carry. Some results are also wrong or don't fit my answers: the 100% rounding, the arbitrary flow tie-break, and the 'fence' text that overrides the card's own copy. Fix the scoring language and those logic bugs and this would feel genuinely safe for someone like me."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist. I check every citation, effect size and survey item, and I look for replication-crisis myths, overclaiming and scoring that doesn't follow from the answers.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The estimate game ends with an empirical claim that has no data behind it. Any guess with error of 30% or more gets the verdict 'Most people miss this one.' Screenshots: expected-value-coin-b (guess -50) and emotional-contagion-estimate-b (guess 0). We never measured what 'most people' guess, and on the EV card the claim is probably false. The slider also starts at (min+max)/2, which is an uncontrolled anchor. On expected-value-coin it starts at 25 with the answer at 30, so one nudge earns 'Close'. On emotional-contagion it starts at 1,000,000, which skews every guess.",
+     "fix": "In app.js estimate(): change the far-miss verdict to `Off this time. The real number: ${fmt(g.answer)}.` Only say 'Most people miss this one' when the card has a new field `g.typical_miss: true` backed by a cited source (e.g. opportunity-cost-free-ticket, where 78% of economists missed). Start the slider at g.min (or at a card-level `start` value) instead of the midpoint, and set expected-value-coin `start: -50` so no pre-set position is close to the answer."
+    },
+    {
+     "card_id": "expected-value-coin",
+     "severity": "high",
+     "problem": "The premise contradicts the literature it cites. Loss-aversion estimates put lambda at about 1.5 to 2.5, and most people accept a 50/50 bet once the gain is at least twice the loss. Win 100 / lose 40 is a 2.5:1 ratio, so many or most people would take it. The hook ('Why does your gut say no?') and the insight ('many people refuse this bet') overclaim.",
+     "fix": "Change the bet to a ratio people typically refuse: question 'Heads you win 100, tails you lose 60 (any currency). On average, how much is one flip worth?', answer 20, explain 'Expected value = chance × payoff, added up. 0.5 × 100 + 0.5 × (−60) = 50 − 30 = 20. Over many flips you'd average about +20 a flip.' Hook: 'Coin flip: win 100 or lose 60. Why do so many people say no?' Insight: 'Losses tend to feel about 1.5–2× bigger than equal gains, so many people refuse bets like this one even though they pay on average. Expected value shows the math under the feeling. One flip can still lose.'"
+    },
+    {
+     "card_id": "reversible-doors-spectrum",
+     "severity": "high",
+     "problem": "Bad scale design. The poles are 'Every door feels locked' (over-deliberating) and 'Fast on small, slow on big'. Q2's low option, 'Jump in on a gut feeling' on a big change, is under-deliberation, the opposite failure, yet it scores toward 'over-deliberating'. The values are also asymmetric (-1 vs +2 on Q2 and Q4). Someone who picks every left option scores only -0.75, and the scale leans toward the flattering pole.",
+     "fix": "Make every item symmetric (-2/+2). Replace Q2 with a small-choice item that loads on the same construct: q 'Picking a birthday card for a friend, I…', options [{label:'Read most of the rack and still doubt my pick', value:-2},{label:'Grab one that feels right and write a good message', value:2}]. Put the under-deliberation case in reversible-doors-swipe ('Getting a face tattoo' already covers it), not on this scale. Q4 options: values -2 and +2."
+    },
+    {
+     "card_id": "emotional-contagion-estimate",
+     "severity": "medium",
+     "problem": "The guessing task is trivia: the number of participants teaches nothing about contagion. The insight then extrapolates from the Kramer effect (about 0.1 percentage-point change in word use, d of about 0.001 to 0.02) with 'small nudges add up over a day of scrolling'. The study doesn't show that, and it isn't measured. 'Moods spread through faces' also rests partly on facial-feedback and mimicry work with shaky replications.",
+     "fix": "Change the estimate to the effect size. question: 'In 2012, Facebook showed 689,003 users fewer positive posts for a week. By how much did the share of positive words in their own posts drop?' min 0, max 20, step 0.1, unit ' percentage points', answer 0.1, explain 'About 0.1 percentage points (Kramer, Guillory & Hancock, 2014). Real, but tiny, and measured in words, not felt mood. Users never agreed to take part.' Insight: 'Moods can spread between people, but in this famous study the effect was tiny. Big crowds make tiny effects detectable, not important. Notice the mood you bring, without blaming yourself for every room you walk into.'"
+    },
+    {
+     "card_id": "identity-habits-voter",
+     "severity": "medium",
+     "problem": "The reveal shows 'Spot on.' for choosing the 'be a voter' option, which rewards picking a finding that a larger preregistered field study (Gerber et al., 2016) failed to replicate. The text caveats it well. Still, the scoring and the title 'Be a Voter, Not Just Vote' sell it as a working technique, and try_today and try_team prescribe it.",
+     "fix": "Reword the prompt so the answer is about the history, not about the effect being true: 'In a 2011 study, which question was REPORTED to raise turnout?'. Retitle to 'The Voter Study That Didn't Hold'. Model: 'A catchy finding is a hypothesis until it replicates. Identity labels may help some people; test it on yourself.' try_today: 'Try the noun version of one goal (\"I'm a runner\") for a week and note whether it changes anything for you. Treat it as your own small experiment.'"
+    },
+    {
+     "card_id": "flow-conditions-radar",
+     "severity": "medium",
+     "problem": "Two problems. (1) Attribution: 'No interruptions' is not one of Csikszentmihalyi's preconditions (clear goals, immediate feedback, challenge-skills balance), yet the insight credits his research with all four. (2) Measurement: axis 3 has two items and the others have one, so a single item decides each axis. The hook asks about 'your last focus session' but the items ask about habits in general. When all four axes score low and tie, the result says 'Clear goal scored lowest today' by default (screenshot flow-conditions-radar-b), which is a result that doesn't follow from the answers.",
+     "fix": "Insight: 'Csikszentmihalyi found flow is more likely with a clear goal, fast feedback and a task just above your skill. Protecting focus from interruptions helps all three. Fix the weakest one first.' Rewrite the items to be about one session: 'In my last focus session, I knew exactly what done looked like' / '…I could tell within minutes if I was on track' / '…the task felt neither too easy nor too hard' / '…I went 25 minutes without checking my phone'. Drop the second axis-3 item. In app.js, when all axes are within 0.1 of each other, say 'No single ingredient stood out today. Start with a clear goal: write \"Done means…\".'"
+    },
+    {
+     "card_id": "courage-kindness-choice",
+     "severity": "medium",
+     "problem": "Overgeneralised effect size. The '34 times more yeses' (Roghanizad & Bohns, 2017) came from strangers asked to fill in a short survey, face-to-face versus email. The card applies it to asking a friend for a lift, and the option compares the medium confounded with tone ('long text full of apologies'). Darley & Latané 1968 was an emergency study, not a group chat.",
+     "fix": "Step 2 feedback for the best option: 'In one study, people asked strangers in person to fill in a short survey got about 34 times more yeses than people who asked by email (Roghanizad & Bohns, 2017). With friends the gap is surely smaller, but in-person asks are harder to overlook.' Step 1 group-chat feedback: '…everyone can assume someone else will answer. That is the diffusion of responsibility first seen in emergencies (Darley & Latané, 1968) and later in online chat rooms.'"
+    },
+    {
+     "card_id": "three-conversations-choice",
+     "severity": "low",
+     "problem": "Evidence is rated 'moderate', but Duhigg's practical/emotional/social taxonomy is a popular-book framework, not an empirically validated one. The companion three-conversations-swipe collapses the three types into two ('Hear me first' / 'Help me fix it'), then explains items as 'social' or 'identity', so the model contradicts itself. Separately, impulse-pause-choice cites Goleman for 'naming the fear shrinks it', when the relevant evidence is affect labelling (Lieberman et al., 2007).",
+     "fix": "Set evidence: 'philosophy' on both three-conversations cards. In the swipe, add to the insight: 'Here we fold emotional and social talks together as \"hear me first\".' In impulse-pause-choice, add 'Matthew Lieberman' to thinkers and 'Lieberman et al., Putting feelings into words (Psychological Science, 2007)' to work, and change the feedback to 'Naming the fear can take a little of its edge off (affect labelling).'"
+    }
+   ],
+   "best_cards": [
+    "opportunity-cost-free-ticket",
+    "expected-value-resulting",
+    "steelmanning-choice"
+   ],
+   "verdict": "I'd rate this set honest and careful. Many cards state their own caveats: the Kramer ethics note, the Gerber non-replication, the debate over grit, the shrinking opportunity-cost effect, and the gap between donor sign-ups and actual donations. Most citations check out: Blumberg & Pringle 1982, Leroy & Glomb 2018, Ferraro & Taylor's 22%, Johnson & Goldstein's 12% vs 99.98%, Amabile's 2x setback asymmetry, the Mill and Pascal quotes. The weak spots are in mechanics and design. The estimate game claims 'Most people miss this one' with no data and anchors guesses with its starting slider position. The EV coin bet contradicts the loss-aversion literature it invokes. The reversible-doors spectrum scores under-deliberation as over-deliberation. And a non-replicated finding gets a 'Spot on.' Trivia-style estimates (the Facebook participant count) teach less than estimates of the effect size would. The Grit Venn labels are also clipped on a phone ('ission (stable inte…'). Fix the app-level estimate feedback and the three survey/premise errors and I'd move clarity and safety to 8."
+  },
+  {
+   "persona": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how obvious the tap target is, reward moments, and whether people would share it.",
+   "scores": {
+    "hook": 7,
+    "clarity": 6,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The estimate reveal puts the reward in the wrong order. After 'Lock in my guess', the screen shows a 'Real: X' marker, then a long explanation that repeats the number, then 'Your guess', and only then the verdict headline ('Bullseye.' / 'Most people miss this one. The real number: 689,003 people.'). On a phone the verdict is below the fold (emotional-contagion-estimate-a/b, opportunity-cost-free-ticket-a). The number appears three times and the one moment of payoff comes last. Each estimate card has the same flat pacing.",
+     "fix": "In app.js, in the estimate lock-in handler (around line 476-487), render in this order: (1) the verdict headline straight under the slider, plus a 300ms animation of the truth marker sliding in from your guess; (2) one line, 'You: {guess} · Real: {answer}'; (3) g.explain. Remove the separate 'Your guess: …' paragraph. Change the miss headline to 'Off by {diff}. Most people are.' so the number isn't repeated a third time."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "If every pillar lands near 0.5, app.js swaps in a hard-coded 'Right on the fence' result (app.js line 332). The card's own, better 'mid' result ('The Half-Lit Path') never shows. The fallback also blames the player ('the map can't find your gap yet'), sends them to replay a 6-question quiz, and uses 'ask for a raise' as an example, which doesn't fit teens. The screenshot shows this dead end: Will 5/10, Skill 5/10, Opportunity 5/10, and no insight.",
+     "fix": "In app.js line 331, use g.results.mid when it exists: `const r = undecided ? (g.results.mid || {name:'Right on the fence', text:'…'}) : …`. Change the fallback text to: 'Every pillar sits in the middle today. Pick the one that would be cheapest to raise by one notch this week, and play again in 7 days.' Also cut the first question to 'For THAT goal: I genuinely want it, even when nobody is watching.' because the prompt already says to pick a goal."
+    },
+    {
+     "card_id": "identity-habits-voter",
+     "severity": "high",
+     "problem": "The reward feedback contradicts the lesson. Picking 'be a voter' shows 'Spot on.' as a celebratory headline (b screenshot), right under the line saying a larger study found no such effect. The player is rewarded for 'knowing' a finding the card then says may not be real. That confuses people and teaches overconfidence.",
+     "fix": "Change prompt to: 'Before an election, researchers asked people one of two questions. Which did the FIRST study say worked better?' Change reveal to: \"The first study (Bryan et al., 2011) said 'be a voter'. Then a bigger study (Gerber et al., 2016) found no effect. The real lesson: one exciting study isn't proof.\" In app.js line 507, if card.evidence === 'contested', replace 'Spot on.' with 'Right about the first study. Now the twist.'"
+    },
+    {
+     "card_id": "emotional-contagion-estimate",
+     "severity": "medium",
+     "problem": "The thing to guess (number of participants) is trivia, not the model. Guessing 689,003 on a 0 to 2,000,000 slider with step 1000 is a lottery, so almost everyone gets 'Most people miss this one' and learns nothing about moods. The hook 'Guess how many got tested' is the weakest line in the sample.",
+     "fix": "Change the hook to 'Facebook secretly tweaked 689,003 feeds to change their mood. Did it work?' Turn the card into a reveal with prompt: 'Users saw fewer happy posts for a week. What happened to their own posts?' Choices: ['Nothing changed', 'Slightly fewer happy words', 'They became clearly sadder']. answer: 1. Reveal: 'Slightly fewer happy words: a tiny but real nudge, across 689,003 people who never agreed to it (Kramer et al., 2014). Small nudges add up over a day of scrolling.'"
+    },
+    {
+     "card_id": "three-conversations-swipe",
+     "severity": "medium",
+     "problem": "The end screen shows the last item's 'why' line above the score '4 of 7 sorted'. Nothing tells me which 3 I missed, so the misses can't teach me anything. Also 'Hear me first' covers both the emotional and the social/identity items (party, retired), but the insight says there are three kinds. The binary sort quietly contradicts the model.",
+     "fix": "Card: change left label to 'Hear me / I belong?' and the prompt to 'Feelings or belonging first, or a fix first?' App: on swipe completion, list the missed items as small chips under the score ('Missed: retired, maths test') with their 'why' lines expandable, and drop the last-item feedback from the result view."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Above the fold is crowded. The track pill, the title pill and a 'Quick one' pill wrap onto two rows and push the hook down about 90px on every card. The diamond counter top-right ('◆ 1') has no label or explanation, so it's a reward with no meaning, and it reads 1 while the map says 72 of 72 ideas lit.",
+     "fix": "Merge the pills into one row: '⚡ Action · Quick one' (track + length) and drop the title pill, because the title shows again after playing. Give the diamond an accessible label and a first-tap tooltip: 'Day streak: play one a day to grow it.' If it isn't a streak, rename it to what it actually counts."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The My map view (view-map-light) is an unreadable hairball. Over 70 nodes, overlapping labels ('Will · Skill · Oppo…' on top of 'Start With Why'), and crossing edges. The 'Tap a node to play it' promise is hard to hit at phone size. This should be the shareable trophy screen, and right now nobody would screenshot it.",
+     "fix": "Group the node layout by track (12 clusters, one per track color, around a ring). Show labels only for the 5 most recently played nodes plus the tapped node. Raise the minimum tap target to 44px. Add a 'Share my map' button that exports the clustered image with the counts '72 ideas · 12 tracks'."
+    },
+    {
+     "card_id": "opportunity-cost-free-ticket",
+     "severity": "low",
+     "problem": "Prices have no units ('tickets cost 40', 'Real: 10'), and the slider starts at 0, the most common wrong answer. The puzzle's own insight admits the wording is ambiguous. That plus a 'Most economists missed it' hook risks a 'gotcha' feeling instead of an 'aha'.",
+     "fix": "Set unit to '€' and change the question to: 'You win a free ticket to Band A (can't sell it). Same night, Band B costs €40, and seeing them is worth €50 to you. You go to Band A. What did you give up?' Change the hook to 'A free ticket. What did it really cost? Only 1 in 5 economists got this.' Start the slider at 25."
+    }
+   ],
+   "best_cards": [
+    "sleep-memory-replay-reveal",
+    "regret-minimization-hacked",
+    "three-conversations-choice"
+   ],
+   "verdict": "The content is kind, well sourced and practical. The hooks are mostly scroll-stopping ('At night, their brains did something eerie', 'Do you treat a menu like a marriage?'), and the try-today steps are small and usable. Game feel lets it down. Reveals pay off late and repeat themselves (estimate cards show the answer three times before the verdict). Profile games can end in a hard-coded 'on the fence' dead end that ignores the card's own better result. One card even celebrates a finding it then says didn't replicate. Swipe results don't show what you got wrong, the diamond reward means nothing, and the map is a hairball nobody would share. Fix the reward order and the result logic and this goes from a solid 6 to a shareable 8."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Estimate cards show a big underlined 'Most people miss this one' headline even when I never touched the slider. Screens show 'Your guess: 0 people' and 'Your guess: 0'. I didn't guess, so it feels like I failed a test, and that's when I close the app.",
+   "fix": "In app.js, in the estimate renderer, keep the submit/reveal button disabled until the slider fires its first input event. Change the label to 'Drag to guess'. Change the far-off headline at app.js:487 from `Most people miss this one. The real number: ${fmt(g.answer)}.` to `Plot twist: it's ${fmt(g.answer)}.`, and keep 'Bullseye.' and 'Close.' as they are.",
+   "from": "teen: Maya, 16, Manchester. Lives on TikTok and bails on anything that feels like school. Played 24 cards and looked at 13 screenshots (feed, Tracks dark, Map light, and card tops and reveals)."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "flow-conditions-radar with all-low answers shows an empty radar and the text 'Start tiny: Clear goal scored lowest today', but nothing scored lowest because everything tied at zero, so the 'lowest' pick is fake. The WSO 'Right on the fence' fallback (app.js:332) uses 'ask for a raise' as its example and overrides the card's own 'mid' result ('The Half-Lit Path').",
+   "fix": "app.js:385: when low is true, use the text 'That happens after a hard stretch, and it passes. Start tiny: before your next task, write one line: \"Done means…\".' Do not splice in g.advice. app.js:332: if g.results.mid exists, use it instead of the hard-coded object. Otherwise change the examples to '\"run 5 km\", \"learn 3 guitar chords\"'.",
+   "from": "teen: Maya, 16, Manchester. Lives on TikTok and bails on anything that feels like school. Played 24 cards and looked at 13 screenshots (feed, Tracks dark, Map light, and card tops and reveals)."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The radar result contradicts itself. With all answers low it says 'Low on all of them today' and then 'Clear goal scored lowest today'. In the screenshot every axis is 0, so 'lowest' just means index 0 won a tie. I read this and I think the tool is not listening to me. Same family of bug in the venn: the screenshot of wso-triad-venn shows 'Right on the fence' with text that is not in the card JSON (the card has 'mid' = 'The Half-Lit Path'), so the editor's text is being overridden.",
+   "fix": "In app.js radar result: when all axis scores are equal (or all below threshold), skip the per-axis advice and show one line instead: 'All four scored low today. Start with the cheapest: put your phone in another room for one 25-minute block.' Only show advice[i] when that axis is strictly lowest. For venn: when the card has a 'mid' result, use it instead of the generic 'Right on the fence' fallback.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself, and has no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Most scenarios are about teens or family: homework, knitting, a mum reading messages, phones in schools, a messy room, a lift to an appointment, 'class or family' in try_team. I am 44 and I manage 9 people, so many cards feel like they are not for me even when the model is perfect for work. Example: attention-residue opens with 'homework, a tax form, a tricky knitting pattern'.",
+   "fix": "Add one work line to each scenario's example list and to every try_team. attention-residue step 1: 'You're halfway through something that needs thought: a code review, a tax form, a hard email.' three-conversations-swipe: add the item {\"text\": \"My PR has been waiting for review for four days.\", \"side\": \"left\", \"why\": \"Sounds like logistics, but 'four days' carries frustration. Acknowledge it, then unblock.\"}. In try_team fields, replace 'class or family' with 'team, class or family'.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. Wants tools he can use tomorrow with his team and on himself, and has no patience for fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Choice-game result headlines contradict the result. With 0 of 2 best calls, the steelmanning reveal says 'You found the trap most people fall into.', which reads like praise for getting everything wrong. Estimate reveals always say 'Most people miss this one' when the guess is off by 30% or more. No data supports that claim on any card, and it is unearned flattery, the very pop-psych habit I distrust.",
+   "fix": "In app.js line 431, change the best===0 headline to 'Not this time. Read the feedback above: that's where the lesson is.' In app.js line 487, change the far-miss headline to `Far off. The real number: ${fmt(g.answer)}.` Use 'Most people miss this one' only when a card has a field such as game.commonMiss:true backed by a cited source (e.g. opportunity-cost-free-ticket, where 78% of economists missed).",
+   "from": "Elena, 68, retired literature teacher. Reads Seneca, Aristotle and Peterson. Values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Every estimate card I under-guessed ends with the same banner: 'Most people miss this one. The real number: X.' I saw it on emotional-contagion-estimate (my guess: 0 people), environment-design-defaults-estimate (0%) and the Life in Weeks feed card. To me it reads as 'you failed, like everyone'. Because the slider starts at the minimum, I can 'miss' without ever moving it, so I get judged on a guess I never made.",
+   "fix": "In app.js, show the result only after the slider has been touched (disable 'Reveal' until the first input event, with the label 'Drag to make your guess'). Replace the miss banner with closeness-based, non-judgemental lines: within 10% → 'Close call. The real number: X.'; otherwise → 'Surprising, right? The real number: X.' Delete the 'Most people miss this one' string.",
+   "from": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. I flinch at anything that grades me, labels me or makes me feel behind; I stay if it feels safe and leaves me with one small, doable thing."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "On choice cards the result headline is 'Part there. The rest is the lesson.' plus '1 of 3 best calls' (courage-kindness-choice, impulse-pause-choice, expected-value-resulting). It feels like a mark out of 3, and the scenarios are about my own anxious habits (apologising, panicking at 11pm), so I'm being scored on how I cope. The same pattern appears on swipe cards: responsibility-meaning-pick-your-load says 'Not quite —' and '3 of 6 sorted' about what I personally carry.",
+   "fix": "For cards with sensitive:true, hide the 'N of M best calls' / 'N of M sorted' counter and use these headlines: all best → 'You've got this one.'; some → 'You picked up a new move.'; none → 'Now you've seen the other moves. That's the point.' On sensitive swipe cards, replace the 'Not quite —' prefix with 'Another way to see it:'.",
+   "from": "Sam, 24, graduate dealing with anxiety and low self-worth after a rough year. I flinch at anything that grades me, labels me or makes me feel behind; I stay if it feels safe and leaves me with one small, doable thing."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The estimate game ends with an empirical claim that has no data behind it. Any guess with error of 30% or more gets the verdict 'Most people miss this one.' Screenshots: expected-value-coin-b (guess -50) and emotional-contagion-estimate-b (guess 0). We never measured what 'most people' guess, and on the EV card the claim is probably false. The slider also starts at (min+max)/2, which is an uncontrolled anchor. On expected-value-coin it starts at 25 with the answer at 30, so one nudge earns 'Close'. On emotional-contagion it starts at 1,000,000, which skews every guess.",
+   "fix": "In app.js estimate(): change the far-miss verdict to `Off this time. The real number: ${fmt(g.answer)}.` Only say 'Most people miss this one' when the card has a new field `g.typical_miss: true` backed by a cited source (e.g. opportunity-cost-free-ticket, where 78% of economists missed). Start the slider at g.min (or at a card-level `start` value) instead of the midpoint, and set expected-value-coin `start: -50` so no pre-set position is close to the answer.",
+   "from": "Dr. Okafor, 51, research psychologist. I check every citation, effect size and survey item, and I look for replication-crisis myths, overclaiming and scoring that doesn't follow from the answers."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The estimate reveal puts the reward in the wrong order. After 'Lock in my guess', the screen shows a 'Real: X' marker, then a long explanation that repeats the number, then 'Your guess', and only then the verdict headline ('Bullseye.' / 'Most people miss this one. The real number: 689,003 people.'). On a phone the verdict is below the fold (emotional-contagion-estimate-a/b, opportunity-cost-free-ticket-a). The number appears three times and the one moment of payoff comes last. Each estimate card has the same flat pacing.",
+   "fix": "In app.js, in the estimate lock-in handler (around line 476-487), render in this order: (1) the verdict headline straight under the slider, plus a 300ms animation of the truth marker sliding in from your guess; (2) one line, 'You: {guess} · Real: {answer}'; (3) g.explain. Remove the separate 'Your guess: …' paragraph. Change the miss headline to 'Off by {diff}. Most people are.' so the number isn't repeated a third time.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how obvious the tap target is, reward moments, and whether people would share it."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Above the fold is crowded. The track pill, the title pill and a 'Quick one' pill wrap onto two rows and push the hook down about 90px on every card. The diamond counter top-right ('◆ 1') has no label or explanation, so it's a reward with no meaning, and it reads 1 while the map says 72 of 72 ideas lit.",
+   "fix": "Merge the pills into one row: '⚡ Action · Quick one' (track + length) and drop the title pill, because the title shows again after playing. Give the diamond an accessible label and a first-tap tooltip: 'Day streak: play one a day to grow it.' If it isn't a streak, rename it to what it actually counts.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how obvious the tap target is, reward moments, and whether people would share it."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The My map view (view-map-light) is an unreadable hairball. Over 70 nodes, overlapping labels ('Will · Skill · Oppo…' on top of 'Start With Why'), and crossing edges. The 'Tap a node to play it' promise is hard to hit at phone size. This should be the shareable trophy screen, and right now nobody would screenshot it.",
+   "fix": "Group the node layout by track (12 clusters, one per track color, around a ring). Show labels only for the 5 most recently played nodes plus the tapped node. Raise the minimum tap target to 44px. Add a 'Share my map' button that exports the clustered image with the counts '72 ideas · 12 tracks'.",
+   "from": "Lina, 31, product designer for mobile games and learning apps. I judge hook strength, pacing, game feel, how obvious the tap target is, reward moments, and whether people would share it."
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 3,
+   "skipped": [
+    "wso-triad-venn: app.js changes (use results.mid instead of hard-coded 'Right on the fence', fallback text) are outside action.json; card already has a results.mid entry",
+    "wso-triad-venn hook shortened to 'Pick one thing you keep meaning to do. Let's see what makes it easier.' to fit 70-char limit",
+    "All other issues concern cards not in action.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 0,
+   "skipped": [],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 10,
+   "skipped": [
+    "identity-habits-voter: app.js 'Spot on.' headline change (app code, not this file)",
+    "environment-design-defaults-estimate: step 0.01 / app.js precision formatting alternatives (chose answer 100 per fact-check)",
+    "identity-habits-voter: hook/model/try_today shortened slightly to fit validator length limits"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 7,
+   "skipped": [
+    "emotional-contagion-estimate: kept type 'estimate' (card id ends in -estimate) and used the effect-size version from the Okafor, Elena and Radu fixes (0-10, step 0.1, answer 0.1 percentage points) instead of converting it to a 'reveal' as Maya and Lina asked",
+    "emotional-contagion-estimate: did not use Sam's participant-count version (answer 690 thousand), because it conflicts with the effect-size fix that most reviewers wanted",
+    "three-conversations-choice: only the impulse-pause-choice part applies to this file (Lieberman added to thinkers and work, affect-labelling feedback); the evidence change for the three-conversations cards belongs to another file",
+    "All other card_ids are not in emotions.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 4,
+   "skipped": [
+    "responsibility-meaning-pick-your-load: app.js swipe feedback join change (' — ' to '. ') is outside this file",
+    "flow-conditions-radar: app.js all-equal-tie advice handling and minimum radar radius are outside this file",
+    "All other issues concern cards not in meaning.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 2,
+   "skipped": [
+    "grit-passion-perseverance-venn: moving the '(stable interest)/(staying power)' explanation into the score line requires an app.js change outside this file; the axis labels are shortened to 'Passion'/'Perseverance', and the card insight already explains both halves",
+    "All other issues target cards not in growth.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 7,
+   "skipped": [
+    "three-conversations-swipe (Lina): app-side missed-items chips are an app.js change, outside this file",
+    "three-conversations-swipe hook: changed 'Get 7 right in a row' to 'Can you sort all 7?' because the scoring does not track streaks",
+    "three-conversations-choice (Okafor): impulse-pause-choice Lieberman fix is not in this file",
+    "courage-kindness-choice: 'surely smaller' softened to 'likely smaller' to avoid overclaiming"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 2,
+   "skipped": [
+    "attention-residue-clean-switch (Radu): the 0-of-N result copy and the 'best calls' counter label live in app.js, not in this card file",
+    "All other issues concern cards that are not in attention.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 7,
+   "skipped": [
+    "opportunity-cost-free-ticket: unit not set to a currency symbol because app.js shows the unit after the number ('10£'). Put £ in the question and explain instead.",
+    "opportunity-cost-free-ticket: slider can't start at 25 because the schema and app have no start field.",
+    "reversible-doors-spectrum: kept the left pole 'Every door feels locked'. The under-deliberation item was replaced, so every item now measures the same thing and the rename isn't needed. Middle options use value 0 so the -2/+2 scale stays even.",
+    "opportunity-cost-unseen: app-side locale currency detection not done (app.js is outside this file's scope)."
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 0,
+   "skipped": [
+    "All issues skipped: none of the issue card_ids are in /Users/sergiuman/Desktop/Gemini/Qumni Framework/qlip/content/cards/wisdom.json, so the file was not changed. The file's cards are: dichotomy-of-control-swipe, dichotomy-of-control-delayed-flight, circle-influence-spectrum, circle-influence-library-choice, golden-mean-courage-spectrum, socratic-ignorance-drivers, socratic-ignorance-zip-reveal, amor-fati-setback-reveal, impermanence-worry-reveal, begin-with-end-eulogy-radar, begin-with-end-four-thousand-weeks. Validator: 11 cards, 0 errors."
+   ],
+   "validator_errors": 0
+  }
+ ]
+}

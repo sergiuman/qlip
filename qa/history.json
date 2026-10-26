@@ -107,11 +107,11 @@
  },
  {
   "session": 3,
-  "at": "2026-10-26T02:22:06+00:00",
+  "at": "2026-10-26T06:54:52+00:00",
   "automated": 48.8,
-  "panel": null,
-  "composite": 48.8,
-  "delta": -34.2,
+  "panel": 33.67,
+  "composite": 82.47,
+  "delta": -0.53,
   "passed": false,
   "breakdown": {
    "schema": 5,
@@ -146,7 +146,60 @@
    "hook_distinct_rate": 0.992,
    "brief_reveal_rate": 0.975
   },
-  "panel_detail": {},
+  "panel_detail": {
+   "persona_avg_10": 6.73,
+   "by_dim": {
+    "hook": 6.67,
+    "clarity": 6.5,
+    "usefulness": 6.83,
+    "safety": 7.83,
+    "fun": 5.83
+   }
+  },
   "note": "estimate relative scoring, kind choice headlines, radar labels/cases, next button shows next hook, stop card every 5, map colors+halos, 37 content fixes"
+ },
+ {
+  "session": 4,
+  "at": "2026-10-26T07:00:47+00:00",
+  "automated": 48.75,
+  "panel": null,
+  "composite": 48.75,
+  "delta": -33.72,
+  "passed": false,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 8.0,
+   "console": 4,
+   "overflow": 3,
+   "a11y": 6.0,
+   "readability": 5,
+   "actionable": 3.0,
+   "sourced": 1.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.8,
+   "domain_balance": 2.0,
+   "depth": 2.04,
+   "hook_distinct": 1.98,
+   "brief_reveal": 0.93
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 121,
+   "played_ok": 121,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 0,
+   "flesch_avg": 75.3,
+   "try_today_verb_rate": 1.0,
+   "sensitive_cards": 29,
+   "first_card_ms": 337,
+   "edges": 258,
+   "concept_depth": 0.681,
+   "hook_distinct_rate": 0.992,
+   "brief_reveal_rate": 0.926
+  },
+  "panel_detail": {},
+  "note": "estimate verdict-first + no unsupported 'most people', radar honest ties, venn mid + short labels, kinder choice headlines, one-row chips, streak label, session-3 fixers (42 fixes), 5 new lessons"
  }
 ]

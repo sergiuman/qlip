@@ -281,12 +281,12 @@
       "axes": [
         {
           "key": "P",
-          "label": "Passion (stable interest)",
+          "label": "Passion",
           "color": "#F97316"
         },
         {
           "key": "S",
-          "label": "Perseverance (staying power)",
+          "label": "Perseverance",
           "color": "#3B82F6"
         }
       ],
@@ -309,12 +309,12 @@
           "axis": "S"
         },
         {
-          "q": "I usually lose steam after the first few weeks.",
+          "q": "Lately, my energy for projects fades after a few weeks.",
           "axis": "S",
           "invert": true
         },
         {
-          "q": "I finish what I start, even the boring parts.",
+          "q": "Lately, I've been able to finish what I start, even the boring parts.",
           "axis": "S"
         }
       ],
@@ -354,7 +354,8 @@
       "aim_high",
       "small_wins"
     ],
-    "try_team": "Everyone writes one goal for this term on a card and swaps with a partner, who checks in weekly: 'Still your goal? What's the next step?'"
+    "try_team": "Everyone writes one goal for this term on a card and swaps with a partner, who checks in weekly: 'Still your goal? What's the next step?'",
+    "sensitive": true
   },
   {
     "id": "deliberate-practice-order",

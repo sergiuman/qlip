@@ -4,7 +4,7 @@
     "concept": "wso_triad",
     "domain": "action",
     "type": "venn",
-    "hook": "Pick one thing you keep saying you'll do. Let's find why you haven't.",
+    "hook": "Pick one thing you keep meaning to do. Let's see what makes it easier.",
     "title": "Will, Skill, Opportunity",
     "game": {
       "prompt": "Think of one specific thing you keep saying you'll do. Answer every line for that goal only.",
@@ -27,7 +27,7 @@
       ],
       "questions": [
         {
-          "q": "Pick one goal you keep postponing. For THAT goal: I genuinely want it, even when nobody is watching.",
+          "q": "I genuinely want this, even when nobody is watching.",
           "axis": "W"
         },
         {
@@ -94,7 +94,7 @@
         }
       }
     },
-    "insight": "Action needs a want, an ability and an open door; researchers named this triad in 1982. Most stuck goals miss one, and pushing harder on the strong ones may not fix the weak one.",
+    "insight": "Action needs a want, an ability and an open door; Blumberg and Pringle argued in 1982 that research kept forgetting the third. Most stuck goals miss one, and pushing harder on the strong ones may not fix the weak one.",
     "model": "Stuck? Don't push everywhere. Find the missing pillar: Will, Skill or Opportunity.",
     "try_today": "Write your goal at the top of a page, then one line each for W, S and O. Circle the weakest and take one step on it.",
     "source": {

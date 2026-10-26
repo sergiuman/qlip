@@ -126,9 +126,7 @@
     const play = h("button", { class: "play-btn", onclick: () => start() }, "Play", h("span", { "aria-hidden": "true" }, "→"));
     body.append(
       h("div", { class: "meta-row" },
-        h("span", { class: "chip" }, `${d.emoji} ${d.name}`),
-        h("span", { class: "chip plain" }, card.title),
-        h("span", { class: "chip plain" }, ["", "Quick one", "Bit deeper", "Deep dive"][card.level])),
+        h("span", { class: "chip" }, `${d.emoji} ${d.name} · ${["", "Quick one", "Bit deeper", "Deep dive"][card.level]}`)),
       h("h2", { class: "hook" }, card.hook),
       h("p", { class: "concept-line" }, reasons[card.id] || concept.line),
       play, h("p", { class: "teaser" }, teaser(card)), game,
@@ -308,7 +306,7 @@
         view.append(svg("circle", { cx, cy, r: geo.r, fill: a.color || "currentColor", "fill-opacity": 0.16, stroke: a.color || "currentColor", "stroke-width": 2.5 }));
         const dx = cx - geo.g[0], dy = cy - geo.g[1], len = Math.hypot(dx, dy) || 1;
         const lx = cx + (dx / len) * (geo.r * 0.62), ly = cy + (dy / len) * (geo.r * 0.62) + 5;
-        const t = svg("text", { x: lx, y: ly, "text-anchor": "middle", "font-size": 14 }); t.textContent = a.label; view.append(t);
+        const t = svg("text", { x: lx, y: ly, "text-anchor": "middle", "font-size": 14 }); t.textContent = a.label.split(" (")[0]; view.append(t);
       });
       const dot = svg("circle", { class: "dot", cx: geo.g[0], cy: geo.g[1], r: 9, fill: "var(--fg)", stroke: "var(--bg)", "stroke-width": 3, opacity: 0 });
       view.append(dot);
@@ -329,7 +327,7 @@
         const sc = scores(), reg = regionOf(sc);
         const undecided = keys.every((k) => sc[k] != null && Math.abs(sc[k] - 0.5) <= 0.13);
         const r = undecided
-          ? { name: "Right on the fence", text: "Every answer landed in the middle, so the map can't find your gap yet. Pick one specific goal (\"run 5 km\", \"ask for a raise\") and play again with that in mind." }
+          ? g.results.mid || { name: "Right on the fence", text: "Every answer landed in the middle, so the map can't find your gap yet. Pick one specific goal (\"run 5 km\", \"learn 3 guitar chords\") and play again with that in mind." }
           : g.results[reg] || { name: "", text: "" };
         if (undecided) { dot.setAttribute("cx", geo.g[0].toFixed(1)); dot.setAttribute("cy", geo.g[1].toFixed(1)); }
         const bars = keys.map((k) => `${g.axes.find((a) => a.key === k).label} ${Math.round((sc[k] ?? 0) * 10)}/10`).join(" · ");
@@ -382,8 +380,8 @@
       const qs = rated(g.questions, (q, v) => { sums[q.axis] += v; counts[q.axis]++; draw(); }, () => {
         let lo = 0, hi = 0; for (let i = 1; i < n; i++) { if (avg(i) < avg(lo)) lo = i; if (avg(i) > avg(hi)) hi = i; }
         const even = avg(hi) - avg(lo) < 0.13, low = avg(hi) < 0.3;
-        done(low ? { name: "Low on all of them today", text: `That happens after a hard stretch, and it passes. Start tiny: ${g.advice[String(lo)]}`, profile: true }
-          : even ? { name: "Even across the board", text: `No single gap stands out today. If you want one place to start: ${g.advice["0"]}`, profile: true }
+        done(low ? { name: "Low on all of them today", text: "That happens after a hard stretch, and it passes. Start with the smallest possible step today, and play this again next week to see what moved.", profile: true }
+          : even ? { name: "Even across the board", text: "No single gap stands out today. Pick the axis that matters most to you this week and give it ten minutes.", profile: true }
           : { name: `Strongest: ${g.axes[hi]}. Room to grow: ${g.axes[lo]}.`, text: g.advice[String(lo)], profile: true });
       });
       return h("div", { style: "display:flex;flex-direction:column;gap:12px" }, view, qs);
@@ -428,7 +426,7 @@
       const step = () => {
         const s = g.steps[i];
         const fb = h("p", { class: "feedback", hidden: true });
-        const next = h("button", { class: "btn next-q", hidden: true, onclick: () => { i++; if (i < g.steps.length) step(); else { next.remove(); done({ name: g.steps.length < 2 ? "" : best === g.steps.length ? "Every call landed." : best === 0 ? "You found the trap most people fall into." : "Part there. The rest is the lesson.", tally: g.steps.length > 1 ? `${best} of ${g.steps.length} best calls` : "" }); } } },
+        const next = h("button", { class: "btn next-q", hidden: true, onclick: () => { i++; if (i < g.steps.length) step(); else { next.remove(); done({ name: g.steps.length < 2 ? "" : best === g.steps.length ? "Every call landed." : best === 0 ? "Not this time. The feedback above is where the lesson is." : "You picked up a new move.", tally: g.steps.length > 1 && !card.sensitive ? `${best} of ${g.steps.length} best calls` : "" }); } } },
           i + 1 < g.steps.length ? "Next" : "See the model");
         const opts = h("div", { class: "opts" }, s.options.map((o) => h("button", { class: "opt", onclick: (e) => {
           opts.querySelectorAll("button").forEach((b, k) => { b.disabled = true; if (s.options[k].best) b.classList.add("best"); });
@@ -477,15 +475,17 @@
           const guess = Number(rng.value), span = g.max - g.min || 1;
           const pct = (v) => `${((v - g.min) / span) * 100}%`;
           rng.disabled = true; lock.remove();
-          box.append(h("div", { class: "est-track", style: "margin-bottom:22px" },
-            h("i", { class: "you", style: `left:${pct(guess)}` }), h("i", { class: "truth", style: `left:${pct(g.answer)}` }),
-            h("b", { style: `left:${pct(g.answer)};color:var(--c);transform:translateX(${(g.answer - g.min) / span < 0.2 ? "0" : (g.answer - g.min) / span > 0.8 ? "-100%" : "-50%"})` }, `Real: ${fmt(g.answer)}`)));
-          box.append(h("p", { class: "feedback" }, g.explain));
-          box.append(h("p", { class: "small muted", style: "margin:0" }, `Your guess: ${fmt(guess)}`));
           const diff = Math.abs(guess - g.answer);
           const off = span <= 10 ? diff / Math.max(1, (g.step || 1) * 4) : diff / Math.max(Math.abs(g.answer), 1e-9);
-          done({ name: off < 0.1 ? "Bullseye." : off < 0.3 ? `Close. The real number: ${fmt(g.answer)}.` : `Most people miss this one. The real number: ${fmt(g.answer)}.` });
-        } }, "Move the slider to guess");
+          const verdict = off < 0.1 ? "Bullseye." : off < 0.3 ? "Close call." : g.typical_miss ? "Most people miss this one." : guess < g.answer ? "Plot twist: it's bigger." : "Plot twist: it's smaller.";
+          const truth = h("i", { class: "truth", style: `left:${pct(guess)}` });
+          box.append(h("p", { class: "est-verdict" }, verdict),
+            h("div", { class: "est-track" }, h("i", { class: "you", style: `left:${pct(guess)}` }), truth),
+            h("p", { class: "est-line" }, h("span", {}, `You: ${fmt(guess)}`), h("b", {}, `Real: ${fmt(g.answer)}`)),
+            h("p", { class: "feedback" }, g.explain));
+          requestAnimationFrame(() => requestAnimationFrame(() => (truth.style.left = pct(g.answer))));
+          done({});
+        } }, "Drag to make your guess");
         box.append(out, rng, lock);
       };
       box.append(h("p", { class: "q-text" }, g.question));

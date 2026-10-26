@@ -55,7 +55,7 @@
       ],
       "work": "Supercommunicators (2024)"
     },
-    "evidence": "moderate",
+    "evidence": "philosophy",
     "level": 1,
     "related": [
       "looping",
@@ -69,11 +69,11 @@
     "concept": "three_conversations",
     "domain": "connection",
     "type": "swipe",
-    "hook": "Same calm sentence, two different needs. Can you hear which one?",
+    "hook": "Your mate texts you a problem. Advice or a hug? Can you sort all 7?",
     "title": "Fix It, or Hear Me?",
     "game": {
-      "prompt": "What do they need from you first?",
-      "left": "Hear me first",
+      "prompt": "Feelings or belonging first, or a fix first?",
+      "left": "Hear me / I belong?",
       "right": "Help me fix it",
       "items": [
         {
@@ -82,7 +82,7 @@
           "why": "'Again' carries the feeling. Name it before you suggest a tutor."
         },
         {
-          "text": "Which bus gets me to the hospital by 10?",
+          "text": "Which bus gets me to the Trafford Centre by 10?",
           "side": "right",
           "why": "A clear practical question. Answer it. A feelings chat here would feel odd."
         },
@@ -97,9 +97,9 @@
           "why": "Pure logistics. Hand over the cable."
         },
         {
-          "text": "I've retired and I don't know what to do with my days.",
+          "text": "I didn't get into the sixth form I wanted and now I don't know what I'm doing.",
           "side": "left",
-          "why": "Sounds practical, but it's about identity: who am I now? Ask before suggesting hobbies."
+          "why": "Sounds like a planning problem, but it's about who you are now. Ask before you suggest options."
         },
         {
           "text": "How do we split the bill fairly between five of us?",
@@ -113,7 +113,7 @@
         }
       ]
     },
-    "insight": "Many sentences sound practical but carry a feeling or a question of belonging underneath. Clues: 'again', 'everyone', 'except me', big life changes. Not sure? Ask.",
+    "insight": "Duhigg describes three kinds of talk: practical, emotional and social. Here we fold emotional and social talks together as \"hear me first\". Many sentences sound practical but carry a feeling or a question of belonging underneath. Clues: 'again', 'everyone', 'except me', big changes. Not sure? Ask.",
     "model": "Before you solve it, check the need: 'Do you want ideas, or just to vent?'",
     "try_today": "Next time someone shares a problem, ask 'Do you want ideas, or do you just need to vent?' before you answer.",
     "try_team": "Each person writes one thing they said this week. Others guess: did they want a fix, a listener, or to belong? The writer reveals.",
@@ -123,7 +123,7 @@
       ],
       "work": "Supercommunicators (2024)"
     },
-    "evidence": "moderate",
+    "evidence": "philosophy",
     "level": 1,
     "related": [
       "looping",
@@ -383,9 +383,9 @@
     "hook": "If every human vanished tonight, would your cash be worth a cent?",
     "title": "Shared Stories",
     "game": {
-      "prompt": "Would it still exist if no human believed in it?",
-      "left": "Shared story",
-      "right": "Exists anyway",
+      "prompt": "Rock or agreement?",
+      "left": "Agreement (needs believers)",
+      "right": "Rock (exists anyway)",
       "items": [
         {
           "text": "The value of a banknote",
@@ -403,9 +403,9 @@
           "why": "Rivers are real; the line on the map is an agreement people keep."
         },
         {
-          "text": "A company like Google",
+          "text": "A company like Peugeot (or Google)",
           "side": "left",
-          "why": "Harari's example: a company exists in law and shared belief, not in its buildings."
+          "why": "Harari's own example is Peugeot: the factories could burn down and the company would still exist, in law and in shared belief."
         },
         {
           "text": "Gravity",
@@ -413,9 +413,9 @@
           "why": "It pulls whether anyone believes or not."
         },
         {
-          "text": "Your birthday being 'your day'",
+          "text": "Your follower count meaning you matter",
           "side": "left",
-          "why": "The Earth's orbit is real; the meaning of the date is a story we share."
+          "why": "The number is real data. What it says about you is a story people agree to tell."
         }
       ]
     },
@@ -587,7 +587,7 @@
           "options": [
             {
               "text": "Post 'Can anyone help with phones?' in the big group chat.",
-              "feedback": "Feels safer, but in a crowd everyone can assume someone else will answer. Bystander research (Darley & Latané, 1968) points that way."
+              "feedback": "Feels safer, but in a crowd everyone can assume someone else will answer. That is the diffusion of responsibility first seen in emergencies (Darley & Latané, 1968) and later in online chat rooms."
             },
             {
               "text": "Message one person who knows phones: 'Could you look at my photo backup for 10 minutes?'",
@@ -610,7 +610,7 @@
             {
               "text": "Ask in person or by phone, simply and warmly.",
               "best": true,
-              "feedback": "In one study, asking strangers face to face got about 34 times more yeses than email (Roghanizad & Bohns, 2017)."
+              "feedback": "In one study, people asked strangers in person to fill in a short survey got about 34 times more yeses than people who asked by email (Roghanizad & Bohns, 2017). With friends the gap is likely smaller, but in-person asks are harder to overlook."
             }
           ]
         },

@@ -235,20 +235,20 @@
     "concept": "identity_habits",
     "domain": "habits",
     "type": "reveal",
-    "hook": "One word seemed to get more people voting. Can you guess which?",
-    "title": "Be a Voter, Not Just Vote",
+    "hook": "Can't vote yet? One tiny word might still change what you actually do.",
+    "title": "The Voter Study That Didn't Hold",
     "game": {
-      "prompt": "Before an election, researchers asked people one of two questions. In the original study, which version got more people to actually vote?",
+      "prompt": "Before an election, researchers asked people one of two questions. Which did the FIRST study (2011) report worked better?",
       "choices": [
         "How important is it to you to vote?",
         "How important is it to you to be a voter?"
       ],
       "answer": 1,
-      "reveal": "'Be a voter' raised turnout in Bryan and colleagues' 2011 study. If you picked the other one, fair call: a later, larger study (Gerber et al., 2016) found no such effect. Promising idea, not a law."
+      "reveal": "The first study (Bryan et al., 2011) said 'be a voter'. Then a bigger study (Gerber et al., 2016) found no effect. The real lesson: one exciting study isn't proof."
     },
     "insight": "Describing an action as part of who you are ('a voter', 'a reader') may make it feel more meaningful. But the original finding did not reliably replicate, so hold it loosely.",
-    "model": "Nouns can pull harder than verbs: 'I'm a reader' may stick better than 'I should read'. Evidence is mixed.",
-    "try_today": "Rename one goal as a noun: change 'I should run' to 'I'm a runner', then do the smallest version of it today.",
+    "model": "A catchy finding is a hypothesis until it replicates. Identity labels may help some; test it on yourself.",
+    "try_today": "Swap \"I should revise\" for \"I'm someone who revises\", then revise for 10 minutes. Your own small experiment: does it feel different?",
     "try_team": "Rewrite one group rule as a noun: 'be on time' becomes 'we're people who start on time'. Try it for a week, then ask if it felt any different.",
     "source": {
       "thinkers": [
@@ -277,7 +277,7 @@
       "question": "If you improve 1% every day for 365 days, how many times better are you at the end?",
       "min": 1,
       "max": 100,
-      "step": 1,
+      "step": 0.1,
       "unit": "x",
       "answer": 37.8,
       "explain": "1.01 to the power of 365 is about 37.8. The flip side: getting 1% worse daily (0.99^365) leaves you at about 0.03, nearly zero. Growth like this feels slow at first because we tend to think in straight lines."
@@ -498,10 +498,10 @@
       "max": 100,
       "step": 1,
       "unit": "%",
-      "answer": 99.98,
-      "explain": "About 99.98% (Johnson & Goldstein, 2003). Same kind of choice, different starting setting, and almost nobody changed it. Actual donations differed far less than sign-ups, but opt-out countries still did better."
+      "answer": 100,
+      "explain": "About 99.98%, effectively everyone (Johnson & Goldstein, 2003). Same kind of choice, different starting setting, and almost nobody changed it. Actual donations differed far less than sign-ups, but opt-out countries still did better."
     },
-    "insight": "Most of us keep whatever option is already set, because choosing takes effort. So set your own defaults on purpose: your home screen, your plate, your bedside table.",
+    "insight": "Most of us keep whatever option is already set, because choosing takes effort. So set your own defaults on purpose: your home screen, your plate, your bedside table. Defaults can be used on you as well as by you: ask who set this one, and for whose benefit.",
     "model": "Whatever is already set tends to win. Choose your defaults before they choose for you.",
     "try_today": "Change one default now: move one app off your home screen, or leave a book where your phone usually sits.",
     "try_team": "List your group's defaults (meeting length, who speaks first, what's in the fridge). Change one this week and see what shifts.",

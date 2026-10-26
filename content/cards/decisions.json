@@ -80,20 +80,28 @@
               "value": -2
             },
             {
+              "label": "Narrow it to two, then pick",
+              "value": 0
+            },
+            {
               "label": "Pick one in a couple of minutes; I can switch",
               "value": 2
             }
           ]
         },
         {
-          "q": "Before a big change (new school, moving home, a new job), I…",
+          "q": "Picking a birthday card for a friend, I…",
           "options": [
             {
-              "label": "Jump in on a gut feeling",
-              "value": -1
+              "label": "Read most of the rack and still doubt my pick",
+              "value": -2
             },
             {
-              "label": "Take time, talk to people who've done it",
+              "label": "Check a few, then go with one",
+              "value": 0
+            },
+            {
+              "label": "Grab one that feels right and write a good message",
               "value": 2
             }
           ]
@@ -106,6 +114,10 @@
               "value": -2
             },
             {
+              "label": "Feel annoyed for a day, then let it go",
+              "value": 0
+            },
+            {
               "label": "Shrug, adjust, move on",
               "value": 2
             }
@@ -116,7 +128,11 @@
           "options": [
             {
               "label": "Compare every review anyway",
-              "value": -1
+              "value": -2
+            },
+            {
+              "label": "Read a few reviews, then buy",
+              "value": 0
             },
             {
               "label": "Buy the good-enough one and test it",
@@ -340,19 +356,19 @@
     "concept": "expected_value",
     "domain": "decisions",
     "type": "estimate",
-    "hook": "Coin flip: win 100 or lose 40. Why does your gut say no?",
+    "hook": "Coin flip: win 100 or lose 60. Why do so many people say no?",
     "title": "Expected Value",
     "game": {
-      "question": "Heads you win 100, tails you lose 40 (any currency). On average, how much is one flip worth?",
+      "question": "Heads you win 100, tails you lose 60 (any currency). On average, how much is one flip worth?",
       "min": -50,
       "max": 100,
       "step": 5,
       "unit": "",
-      "answer": 30,
+      "answer": 20,
       "anchor": null,
-      "explain": "Expected value = chance × payoff, added up. 0.5 × 100 + 0.5 × (−40) = 50 − 20 = 30. Over many flips, you'd average about +30 a flip."
+      "explain": "Expected value = chance × payoff, added up. 0.5 × 100 + 0.5 × (−60) = 50 − 30 = 20. Over many flips you'd average about +20 a flip."
     },
-    "insight": "Losses tend to feel bigger than equal gains (loss aversion), so many people refuse this bet. Expected value shows the math under the feeling. One flip can still lose.",
+    "insight": "Losses tend to feel about 1.5–2× bigger than equal gains, so many people refuse bets like this one even though they pay on average. Expected value shows the math under the feeling. One flip can still lose.",
     "model": "Odds × payoff, added up. Take bets with positive value that you can afford to lose.",
     "try_today": "Write two outcomes for one choice today, each with a rough chance and payoff. Multiply each pair and compare.",
     "source": {
@@ -374,7 +390,7 @@
     "from_source": {
       "quote": "Let us weigh the gain and the loss in wagering that God is. Let us estimate these two chances.",
       "cite": "Blaise Pascal, Pensées, §233 (trans. W. F. Trotter, 1910)",
-      "next_read": "Pensées §233 (the wager), the first famous expected-value argument; then the Pascal–Fermat letters of 1654 on the 'problem of points'"
+      "next_read": "Pensées §233, where Pascal applies the arithmetic of stakes to the question of God (read it as philosophy, not betting advice); then the 1654 Pascal–Fermat letters on fairly dividing an interrupted game."
     }
   },
   {
@@ -382,7 +398,7 @@
     "concept": "expected_value",
     "domain": "decisions",
     "type": "choice",
-    "hook": "Bad outcome = bad decision? That one rule can quietly wreck you.",
+    "hook": "Bad outcome = bad decision? Your brain says yes. Here's why not.",
     "title": "Judge the Decision, Not the Dice",
     "game": {
       "steps": [
@@ -447,10 +463,10 @@
     "hook": "Every yes has a hidden price. Quick: would you buy these?",
     "title": "What Is Not Seen",
     "game": {
-      "prompt": "New trainers you love cost €60. Option A: buy them. Option B: keep the €60 for other things you want (tickets, food with friends, saving). Which do you pick?",
+      "prompt": "New trainers you love cost £60. Option A: buy them. Option B: keep the £60 for other things you want (tickets, food with friends, saving). Which do you pick?",
       "choices": [
         "Buy them",
-        "Keep the €60 for other stuff"
+        "Keep the £60 for other stuff"
       ],
       "reveal": "No wrong answer. But in one study, just naming option B cut buyers from 75% to 55% (Frederick et al., 2009); later replications found a smaller effect. Bastiat's point, 1850: the cost you see is the price; the cost you don't see is everything else that money could have been."
     },
@@ -484,17 +500,17 @@
     "concept": "opportunity_cost",
     "domain": "decisions",
     "type": "estimate",
-    "hook": "A free ticket. What does it really cost? Most economists missed it.",
+    "hook": "A free ticket. What did it really cost? 1 in 5 economists got it.",
     "title": "The Free Ticket Puzzle",
     "game": {
-      "question": "You win a free ticket to see Band A (you can't sell it). Same night, Band B plays: tickets cost 40, and you'd happily pay up to 50 to see them. What does going to Band A really cost you?",
+      "question": "You win a free ticket to Band A (you can't sell it). Same night, Band B costs £40, and seeing them is worth £50 to you. You go to Band A. What did you give up?",
       "min": 0,
       "max": 50,
       "step": 5,
       "unit": "",
       "answer": 10,
       "anchor": null,
-      "explain": "10. Going to A means giving up B. Seeing B was worth 50 to you but would have cost 40, so you give up 50 − 40 = 10 of value. When 199 economists got this puzzle (with 0, 10, 40 or 50 as options), only about 22% picked 10 (Ferraro & Taylor, 2005)."
+      "explain": "£10. Going to A means giving up B. Seeing B was worth £50 to you but would have cost £40, so you give up £50 − £40 = £10 of value. When 199 economists got this puzzle (with 0, 10, 40 or 50 as options), only about 22% picked 10 (Ferraro & Taylor, 2005)."
     },
     "insight": "Opportunity cost is the value of the best thing you give up, minus what it would have cost you. Even experts skip it. Some argue the puzzle's wording is unclear, so hold it lightly.",
     "model": "'Free' isn't free: the cost is the best option you give up, minus its own price.",
