@@ -22,7 +22,7 @@
           "why": "Your choice, fully. This is where the energy should go."
         },
         {
-          "text": "What your teacher, boss or family thinks of your idea",
+          "text": "What other people think of your idea",
           "side": "left",
           "why": "You can shape it, but their mind is theirs. Aim at the pitch, not the verdict."
         },
@@ -68,7 +68,7 @@
     ],
     "try_team": "Each person names one worry. Together sort it into 'up to us' and 'not up to us', then pick one 'up to us' action to do this week.",
     "from_source": {
-      "quote": "Of things, some are in our power, and others not.",
+      "quote": "Of things, some are in our power and others not.",
       "cite": "Epictetus, Enchiridion, ch. 1 (trans. Elizabeth Carter, 1758)",
       "next_read": "Enchiridion, chapters 1-5 (about two pages)"
     },
@@ -121,7 +121,7 @@
         }
       ]
     },
-    "insight": "You didn't stop caring about getting home. Even the rebooking might fail; what stays yours is how you judge it and what you choose next. That's Epictetus's dichotomy of control.",
+    "insight": "Epictetus opens the Enchiridion with it: some things are up to us (judgment, choice, next action), others not (the plane, the seat). Still care about getting home; put effort where it's yours.",
     "model": "When things go wrong, separate what's yours (judgment, choice, next action) from what isn't (the outcome).",
     "try_today": "Next time something annoys you, say out loud \"What's mine here?\" and do that one thing first.",
     "source": {
@@ -141,7 +141,7 @@
     "from_source": {
       "quote": "Men are disturbed not by things, but by the principles and notions which they form concerning things.",
       "cite": "Epictetus, Enchiridion, ch. 5 (trans. Elizabeth Carter, 1758)",
-      "next_read": "Enchiridion, chapters 5 and 8"
+      "next_read": "Enchiridion, chapters 1, 5 and 8 (short, free online)"
     },
     "audience": "all"
   },
@@ -389,7 +389,7 @@
           ]
         },
         {
-          "q": "Someone in your class or team is cheating (a test, a report) in a way that hurts others. You…",
+          "q": "Someone you study or work with is cheating in a way that hurts others. You…",
           "options": [
             {
               "label": "Drop a vague hint that people might notice",
@@ -404,7 +404,7 @@
               "value": -2
             },
             {
-              "label": "Tell the teacher or manager privately",
+              "label": "Tell the person in charge privately",
               "value": 0
             }
           ]
@@ -413,7 +413,7 @@
           "q": "You want to start something of your own (a channel, a club, a small business). You…",
           "options": [
             {
-              "label": "Put your savings and every free hour in from day one",
+              "label": "Put all your money and every free hour in from day one",
               "value": 2
             },
             {
@@ -757,12 +757,12 @@
       "step": 2,
       "unit": " weeks",
       "answer": 4174,
-      "explain": "80 years × about 52.18 weeks ≈ 4,174. Seneca: a life is measured by how it is used, not how many weeks it holds. Burkeman's point isn't to rush or count losses, but to choose a few things that matter. For most adults many of these are work weeks, so one well-guarded week counts. Whatever your age, don't count backwards; pick one good week.",
+      "explain": "80 years × about 52.18 weeks ≈ 4,174. Seneca: a life is measured by how it is used, not how many weeks it holds. Burkeman's point isn't to rush or count losses, but to choose a few things that matter. A summer is about 13 of them, so one well-used week really counts. Whatever your age, don't count backwards; pick one good week.",
       "anchor": null
     },
     "insight": "About 4,000 weeks feels short, and if that feels heavy, that's normal. The point isn't to scare you but to sharpen you. Seneca said life is long enough if used well.",
     "model": "Time is finite and countable. Spend weeks the way you'd spend something precious.",
-    "try_today": "Open your calendar or plans for next week. Block 2 hours for the one thing you'd be proud of, before other stuff fills it.",
+    "try_today": "In your notes app, write the one thing you'd be proud of doing next week and the day you'll do it. Screenshot it as your lock screen.",
     "source": {
       "thinkers": [
         "Oliver Burkeman",

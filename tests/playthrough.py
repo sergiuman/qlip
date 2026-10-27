@@ -65,8 +65,17 @@ def main():
             report["first_card"] = first
             if shots:
                 page.screenshot(path=str(shots / "00-feed.png"))
+            world_of = {}
+            if shoot:
+                for w in ("young", "work", "life"):
+                    f = ROOT / "qa" / "sessions" / f"sample-{sys.argv[sys.argv.index('--shots') + 1].rstrip('/').split('/s')[-1]}-{w}.txt"
+                    if f.exists():
+                        for cid in f.read_text().split(","):
+                            world_of.setdefault(cid, w)
             for i, c in enumerate(cards):
                 page.goto(f"http://localhost:{PORT}/#{c['id']}")
+                w = world_of.get(c["id"])
+                page.evaluate("w => { try { localStorage.setItem('qlip.v1', JSON.stringify(w ? {world: w} : {})); } catch (e) {} }", w)
                 page.reload()
                 page.wait_for_selector(f'section.qlip[data-id="{c["id"]}"] .hook')
                 ok = False
@@ -83,6 +92,11 @@ def main():
                     sec.screenshot(path=str(shots / f"{c['id']}-a.png"))
                     sec.locator(".qlip-body").evaluate("el => el.scrollTop = el.scrollHeight")
                     sec.screenshot(path=str(shots / f"{c['id']}-b.png"))
+            # views as an "Everyday life" player sees them (the first-visit picker is covered by the play-through above)
+            page.goto(f"http://localhost:{PORT}/")
+            page.evaluate("() => { try { const s = JSON.parse(localStorage.getItem('qlip.v1') || '{}'); s.world = 'life'; localStorage.setItem('qlip.v1', JSON.stringify(s)); } catch (e) {} }")
+            page.reload()
+            page.wait_for_selector("section.qlip .hook")
             # accessibility: axe-core on the played feed card, tracks and map, in both colour schemes
             axe = (ROOT / "tests" / "node_modules" / "axe-core" / "axe.min.js").read_text()
             report["a11y"] = []

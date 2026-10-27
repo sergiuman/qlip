@@ -81,6 +81,7 @@
         if (inQueue.has(c.id) || picks.includes(c.id) || !inWorld(c)) continue;
         if (prev && (sameStory(prev, c) || prev.concept === c.concept)) continue;
         if (c.sensitive && queue.concat(picks).slice(-3).some((id) => CARD[id].sensitive)) continue;
+        if (c.type === "reveal" && queue.concat(picks).slice(-4).filter((id) => CARD[id].type === "reveal").length >= 2) continue;
         let s = 0;
         if (S.done[c.id]) s -= 6;
         s -= (S.seen[c.id] || 0) * 1.5;
@@ -213,8 +214,7 @@
     if (result.text) wrap.append(h("p", { style: "margin:0" }, result.text));
     if (result.profile) wrap.append(h("p", { class: "small muted", style: "margin:0" }, "A snapshot of today's answers, not a verdict on you. People move."));
     wrap.append(h("p", { class: "model-line" }, h("small", {}, "The model"), card.model));
-    const firstLine = (card.insight.match(/^.*?[.!?](\s|$)/) || [card.insight])[0].trim();
-    wrap.append(h("p", { class: "first-why" }, firstLine));
+    wrap.append(h("p", { class: "first-why" }, card.insight));
     if (card.from_source) wrap.append(h("blockquote", { class: "primary" }, h("p", {}, `“${card.from_source.quote}”`),
       h("footer", {}, card.from_source.cite, card.from_source.next_read ? h("span", {}, ` · Read next: ${card.from_source.next_read}`) : null)));
     const cbId = `try-${card.id}`;
@@ -228,7 +228,7 @@
     const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).filter((id) => inWorld(CARD[id]) && !sameStory(card, CARD[id])).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || []).find((id) => inWorld(CARD[id]) && !sameStory(card, CARD[id]))]).filter(([cid, t]) => t && CONCEPT[cid]);
     const ev = { strong: "Strong evidence", moderate: "Moderate evidence", contested: "Contested — read critically", philosophy: "Philosophical lens" }[card.evidence];
     const more = h("details", { class: "why", open: S.world === "work" || S.world === "life" }, h("summary", {}, "Why? · 15-second read"),
-      h("p", {}, card.insight),
+
 
       h("div", { class: "meta-row" }, h("span", { class: `chip plain ev-${card.evidence}` }, ev),
         h("span", { class: "src" }, `${card.source.thinkers.join(", ")} · ${card.source.work}`)));
@@ -564,7 +564,7 @@
       const opts = h("div", { class: "opts" }, g.choices.map((c, k) => h("button", { class: "opt", onclick: (e) => {
         opts.querySelectorAll("button").forEach((b, j) => { b.disabled = true; if (has && j === g.answer) b.classList.add("best"); });
         e.currentTarget.classList.add(has ? "picked" : "chosen");
-        done({ name: !has ? "Your call." : k === g.answer ? "Spot on." : card.evidence === "philosophy" ? "Here's another way to see it." : "Here's what the research found.", text: g.reveal });
+        done({ name: !has ? "Your call." : k === g.answer ? ["Spot on.", "Called it.", "Nailed it."][Math.floor(hash(card.id) * 3)] : card.evidence === "philosophy" ? "Here's another way to see it." : ["The answer:", "Plot twist:", "Here's what happened:"][Math.floor(hash(card.id + "r") * 3)], text: g.reveal });
       } }, c)));
       return h("div", { style: "display:flex;flex-direction:column;gap:12px" }, h("p", { class: "q-text" }, g.prompt), opts);
     },

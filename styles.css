@@ -275,4 +275,4 @@ a { color: inherit; }
 @keyframes glow { 50% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--good) 35%, transparent); } }
 .opt.picked:not(.best) { border-color: var(--muted); border-width: 2px; }
 .opt.picked:not(.best)::after { content: "  · your pick"; color: var(--muted); font-size: var(--step--1); }
-.first-why { margin: 0; color: var(--muted); font-size: var(--step--1); }
+.first-why { margin: 0; color: var(--fg); font-size: var(--step-0); }

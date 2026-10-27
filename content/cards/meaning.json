@@ -111,18 +111,18 @@
     "hook": "A happy week and a meaningful week: are they the same week?",
     "title": "Meaning Lives in the Load",
     "game": {
-      "prompt": "Week A: lie-ins, good food, a film with friends. Week B: tiring, but you helped a friend move house and finished something others were counting on. Which feels happier, and which more meaningful?",
+      "prompt": "Week A: lie-ins, good food, a film with friends. Week B: tiring, but you helped a friend move house and finished something others counted on. In a survey of ~400 adults, which pattern showed up most?",
       "choices": [
         "A happier, B more meaningful",
-        "Same week for both",
-        "B for both",
-        "A for both"
+        "B wins on both",
+        "A wins on both"
       ],
-      "reveal": "No wrong answer here. In Baumeister's 2013 survey of ~400 US adults, happiness and meaning overlapped a lot. Where they split, happiness went with getting what you need, meaning with giving and caring. A correlation, not a rule, and both count."
+      "reveal": "A happier, B more meaningful. In Baumeister's 2013 survey of ~400 US adults, happiness and meaning overlapped a lot. Where they split, happiness went with getting what you need, meaning with giving and caring. A correlation, not a rule, and both count.",
+      "answer": 0
     },
-    "insight": "Frankl found meaning in what we carry for others. Peterson: pursue what is meaningful, not what is expedient (Rule 7). A heavy week only means something if you can recover from it.",
-    "model": "Happiness is often about receiving; meaning is often about carrying something worth it.",
-    "try_today": "Pick one small thing someone relies on you for and do it with care today. Afterwards, notice how it felt.",
+    "insight": "Frankl named three roads to meaning: what we create or give, whom we love, and how we bear what we can't change. Peterson: choose meaning over ease. Meaning can be heavy, so rest counts too.",
+    "model": "Happiness often comes from receiving; meaning often comes from giving, loving, or bearing something well.",
+    "try_today": "Do one small, caring thing today (a message, a favour, holding a door) or one thing future-you will thank you for. Notice how it felt.",
     "source": {
       "thinkers": [
         "Viktor Frankl",
@@ -139,7 +139,7 @@
       "amor_fati"
     ],
     "sensitive": true,
-    "try_team": "Go round the table: each person names one thing others rely on them for that felt heavy but worth it. Notice how often effort and meaning show up together.",
+    "try_team": "Go round the table: each person names one effort that felt heavy but worth it. Notice how often effort and meaning show up together.",
     "audience": "all"
   },
   {
@@ -206,7 +206,7 @@
     "sensitive": true,
     "try_team": "Everyone writes three worries on sticky notes. Sort them together: 'ours to act on' vs 'not ours'. Pick one 'ours' and agree a first step.",
     "from_source": {
-      "quote": "Of things, some are in our power, and others not.",
+      "quote": "Of things, some are in our power and others not.",
       "cite": "Epictetus, Enchiridion, ch. 1 (trans. Elizabeth Carter, 1758)",
       "next_read": "Enchiridion, chapters 1-5 (short; about 10 minutes)"
     },
@@ -500,22 +500,12 @@
           "axis": "C"
         },
         {
-          "q": "I could do it half-asleep.",
-          "axis": "C",
-          "invert": true
-        },
-        {
           "q": "It asks more of me than my usual tasks.",
           "axis": "C"
         },
         {
           "q": "I know how to do most of it well.",
           "axis": "S"
-        },
-        {
-          "q": "I've had little practice at this kind of task.",
-          "axis": "S",
-          "invert": true
         },
         {
           "q": "I've done tasks like this well before.",
@@ -571,7 +561,7 @@
     "concept": "flow",
     "domain": "meaning",
     "type": "radar",
-    "hook": "Your last focus session flopped. Which flow ingredient was missing?",
+    "hook": "Think of your last focus session. Which flow ingredient was weakest?",
     "title": "The Four Flow Ingredients",
     "game": {
       "axes": [
@@ -582,7 +572,7 @@
       ],
       "questions": [
         {
-          "q": "In my last focus session, I knew exactly what 'done' looked like.",
+          "q": "In my last focus session, I knew what 'done' looked like.",
           "axis": 0
         },
         {
@@ -594,7 +584,7 @@
           "axis": 2
         },
         {
-          "q": "In my last focus session, I went 25 minutes without checking my phone.",
+          "q": "In my last focus session, I stayed on the task without checking my phone or messages.",
           "axis": 3
         }
       ],
@@ -605,7 +595,7 @@
         "3": "Interruptions scored lowest today. Put your phone in another room for one 25-minute block. Switching leaves part of your mind elsewhere."
       }
     },
-    "insight": "Csikszentmihalyi found flow is more likely with a clear goal, fast feedback and a task just above your skill. Protecting focus from interruptions helps all three. Fix the weakest one first.",
+    "insight": "Csikszentmihalyi linked flow to clear goals, quick feedback and a challenge that stretches your skill a little. Fewer interruptions give those a chance to work. Fix the weakest one first.",
     "model": "Don't chase flow. Set up its conditions and let it arrive.",
     "try_today": "Fix your weakest ingredient, then work for 10 focused minutes and notice how it felt.",
     "source": {

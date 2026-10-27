@@ -295,18 +295,18 @@
    "right": "Redesigner",
    "questions": [
     {
-     "q": "Your team keeps getting pulled into unplanned support work. Your first move is…",
+     "q": "Your evenings keep getting eaten by small requests from other people. Your first move is…",
      "options": [
       {
-       "label": "Ask people to say no more often",
+       "label": "Try harder to say no",
        "value": -2
       },
       {
-       "label": "Log every interruption for two weeks",
+       "label": "Log every interruption for a week",
        "value": 0
       },
       {
-       "label": "Set up a rotating on-call person who shields the rest",
+       "label": "Pick set times you're free to help, and share them",
        "value": 2
       }
      ]
@@ -403,7 +403,7 @@
    "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
    "next_read": "The Fifth Discipline, ch. 4; then Meadows, Thinking in Systems (2008), ch. 6"
   },
-  "audience": "work"
+  "audience": "all"
  },
  {
   "id": "fixes-that-fail-rats",
@@ -610,22 +610,21 @@
    "choices": [
     "Pooled the clues and picked the best",
     "Talked about what they all already knew",
-    "Asked the quietest member first"
+    "Voted straight away without discussing"
    ],
    "answer": 1,
    "reveal": "They mostly talked about what they all already knew. In Stasser and Titus's 1985 study, shared facts got far more airtime than facts only one person held, so few groups picked the best candidate. When everyone got all the facts up front, most did. If you guessed 'pooled the clues', you're in good company: that's what most people expect groups to do."
   },
-  "insight": "Groups drift to facts everyone already holds, so the clue only one person has can go unsaid. Being quiet isn't the fix on its own; asking for unshared facts is.",
+  "insight": "Groups drift to the facts everyone already holds, so a clue only one person has can go unsaid. Unshared facts surface when someone explicitly asks: what does only one of us know?",
   "model": "Before a group decides, ask: what does only one of us know?",
   "try_today": "In your next family, class or work chat about a decision, ask: 'Has anyone noticed something the rest of us haven't?' Then wait.",
   "try_team": "Before deciding, each person writes one fact they think only they know. Read them all aloud first, then discuss. Five minutes.",
   "source": {
    "thinkers": [
     "Garold Stasser",
-    "William Titus",
-    "Susan Cain"
+    "William Titus"
    ],
-   "work": "Stasser & Titus, 'Pooling of Unshared Information in Group Decision Making', Journal of Personality and Social Psychology (1985); Cain, Quiet (2012)"
+   "work": "Stasser & Titus, 'Pooling of Unshared Information in Group Decision Making', Journal of Personality and Social Psychology (1985)"
   },
   "evidence": "strong",
   "level": 1,

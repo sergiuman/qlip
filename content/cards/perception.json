@@ -4,7 +4,7 @@
     "concept": "map_territory",
     "domain": "perception",
     "type": "reveal",
-    "hook": "Crossing London by tube. Satellite photo or the famous tube map?",
+    "hook": "A perfect map can get you lost. A wonky one can get you home.",
     "title": "The Map Is Not the Territory",
     "game": {
       "prompt": "You need to cross London by Underground, fast. You can take one: a perfect satellite photo of every street, or the famous tube map that bends rivers and squashes distances. Which gets you there?",
@@ -199,7 +199,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "11pm. Your best mate (or your partner, or your boss) texts: 'We need to talk. Tomorrow?' No context. Your heart speeds up. What do you tell yourself?",
+          "scenario": "11pm. Your best mate (or your partner, or a family member) texts: 'We need to talk. Tomorrow?' No context. Your heart speeds up. What do you tell yourself?",
           "options": [
             {
               "text": "'I've done something wrong. I should prepare for the worst.'",
@@ -251,7 +251,7 @@
       "stress_mindset"
     ],
     "sensitive": true,
-    "try_team": "If you lead a team or class: before sending 'Can we talk?', add one line of context ('Nothing bad, want to plan next week'). Agree this as a group rule.",
+    "try_team": "Agree a group rule: before sending 'Can we talk?', add one line of context ('Nothing bad, just want to plan next week'). Try it for a week.",
     "from_source": {
       "quote": "There are more things, Lucilius, likely to frighten us than there are to crush us; we suffer more often in imagination than in reality.",
       "cite": "Seneca, Moral Letters to Lucilius, Letter 13 'On Groundless Fears', trans. R. M. Gummere (1917)",
@@ -457,28 +457,29 @@
     "concept": "useful_truth",
     "domain": "perception",
     "type": "reveal",
-    "hook": "'I'm just not a people person.' How would you test that?",
+    "hook": "'I'm just not a people person.' What if that's a guess, not a fact?",
     "title": "Pragmatic Truth",
     "game": {
       "prompt": "You reckon you're 'not a people person'. What's the best way to actually find out?",
       "choices": [
         "Think back over every awkward chat you've had",
         "Ask three friends whether they agree",
-        "For one week, try one tiny chat a day (even 'thanks, have a good one') and note one fact: did they chat back?"
+        "For one week, try one tiny chat a day (even 'thanks, have a good one'). Before each, guess how it'll feel (1-5); after, rate how it actually felt."
       ],
-      "reveal": "Memory is selective, and the belief keeps you out of the moments that would test it. Friends help, but a small experiment with a clear check beats both. Peirce said an idea's meaning lies in its practical effects; James went further: its truth is worked out in experience. So act as if it might be false, and watch.",
+      "reveal": "Memory is selective, and the belief keeps you out of the moments that would test it. Friends help, but a small experiment that compares your prediction with how it actually felt beats both. People often expect small talk to go worse than it does (Epley & Schroeder, 2014). Peirce said an idea's meaning lies in its practical effects; James added that truth is worked out in experience. So act as if it might be false, and watch.",
       "answer": 2
     },
     "insight": "Pragmatism asks: what happens when you act on this idea? A lens, not a lab finding, and facts still matter. James's view of truth was hotly disputed (Russell among others); use it as a method.",
     "model": "Judge a belief by its consequences: run the experiment, then decide.",
-    "try_today": "Pick one limiting belief. Try the smallest action that only makes sense if it's false. Note what happened, no grading.",
+    "try_today": "Pick a belief like 'I'm bad at small talk'. Do one tiny thing it says you can't (thank a cashier). Note your prediction, then what happened.",
     "source": {
       "thinkers": [
         "William James",
         "Charles S. Peirce",
-        "John Dewey"
+        "John Dewey",
+        "Nicholas Epley"
       ],
-      "work": "James, Pragmatism (1907); Peirce, How to Make Our Ideas Clear (1878)"
+      "work": "James, Pragmatism (1907); Peirce, How to Make Our Ideas Clear (1878); Epley & Schroeder, Mistakenly seeking solitude, JEP: General (2014)"
     },
     "evidence": "philosophy",
     "level": 2,
@@ -807,17 +808,18 @@
     "concept": "hedonic_adaptation",
     "domain": "perception",
     "type": "reveal",
-    "hook": "You win the lottery. Does breakfast taste better a year later?",
+    "hook": "You win the lottery. Do everyday pleasures get better?",
     "title": "The Thrill Wears Off",
     "game": {
-      "prompt": "Lottery winners rated how much they enjoyed everyday moments (a chat, a joke, breakfast). Compared with their neighbours, the winners enjoyed them…",
+      "prompt": "Lottery winners (who'd won 1 to 18 months earlier) rated how much they enjoyed everyday moments (a chat, a joke, breakfast). Compared with their neighbours, the winners enjoyed them…",
       "choices": [
         "More",
-        "About the same or a bit less",
+        "A bit less",
+        "About the same",
         "Much less"
       ],
       "answer": 1,
-      "reveal": "A bit less. In a small 1978 study of 22 winners (Brickman et al.), winners got slightly less pleasure from everyday moments than their neighbours, and weren't happier overall. The twist: a large Swedish study found big winners stayed more satisfied with life for years, though not happier moment to moment (Lindqvist et al., 2020)."
+      "reveal": "A bit less, in one small 1978 study of 22 winners (Brickman et al.): a hint, not a law. They also weren't happier overall. The twist: a large Swedish study found big winners stayed more satisfied with life for years, though not happier moment to moment (Lindqvist et al., 2020)."
     },
     "insight": "New things quickly become your normal, so the daily glow fades even when the gain is real. How satisfied you feel with life can shift; the day-to-day buzz mostly settles back.",
     "model": "Gains turn into the new normal. Expect the glow to fade and plan for it.",

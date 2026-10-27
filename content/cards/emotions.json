@@ -27,9 +27,9 @@
      "why": "'Everything' is too big to touch. Shrink it to one feeling, one cause."
     },
     {
-     "text": "\"I'm anxious because I haven't opened the email with my results yet.\"",
+     "text": "\"I'm frustrated because the deadline moved again and nobody asked me.\"",
      "side": "right",
-     "why": "Now the next step is obvious: open it, ideally with someone nearby."
+     "why": "Clear feeling plus cause. Next step: ask who decides deadlines and how you get a say."
     },
     {
      "text": "\"I'm stressed.\"",
@@ -37,9 +37,9 @@
      "why": "Stressed could be overloaded, unsure, or lonely. Dig one layer down."
     },
     {
-     "text": "\"I feel left out because nobody replied in the group chat.\"",
+     "text": "\"I feel left out because the plan was decided without me.\"",
      "side": "right",
-     "why": "Specific feeling plus cause. You can check the story or reach out."
+     "why": "Specific feeling plus cause. You can check what happened, or ask to be included next time."
     }
    ]
   },
@@ -420,7 +420,7 @@
     {
      "text": "\"I'll skip practice for the rest of the month. I deserve it.\"",
      "side": "left",
-     "why": "Depends on the reason. If you're burnt out, a planned break is real care. If it's to avoid the sting, a short rest plus a restart date is kinder."
+     "why": "A month off to dodge the sting isn't rest. A short break with a restart date is kinder."
     },
     {
      "text": "\"I'm worn out. A short rest, then I'll try again.\"",
@@ -511,7 +511,7 @@
   "game": {
    "steps": [
     {
-     "scenario": "You finally open the thing you've been dodging: an essay, a tax form, a tricky message. 'Ugh, where do I even start?' Your thumb drifts to your phone. Best move?",
+     "scenario": "You finally open the thing you've been dodging: a report or essay, a budget sheet, a tricky message. 'Ugh, where do I even start?' Your thumb drifts to your phone. Best move?",
      "options": [
       {
        "text": "Wait until you're in the mood for it.",
@@ -533,7 +533,7 @@
      ]
     },
     {
-     "scenario": "Real study: people chose how much of a disgusting drink (ketchup mixed with soy sauce) to drink 'for science'. Who did they sign up for the biggest dose?",
+     "scenario": "Why do we push it to 'tomorrow'? Real study: people chose how much of a disgusting drink (ketchup mixed with soy sauce) to drink 'for science'. Who did they sign up for the biggest dose?",
      "options": [
       {
        "text": "Themselves, right now",

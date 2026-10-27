@@ -245,16 +245,16 @@
           ]
         },
         {
-          "scenario": "A mate says: 'Put all your savings into this new crypto coin. At 80 you'll regret missing out!' Does the test say yes?",
+          "scenario": "A mate says: 'Put all your money into this new crypto coin. At 80 you'll regret missing out!' Does the test say yes?",
           "options": [
             {
               "text": "No. That's fear of missing out using the test's name",
               "best": true,
-              "feedback": "Right. The test tips close calls toward trying. It can't turn a bet you can't afford to lose into a good one. All your savings is a one-way door."
+              "feedback": "Right. The test tips close calls toward trying. It can't turn a bet you can't afford to lose into a good one. All your money is a one-way door."
             },
             {
               "text": "Yes. Regrets about not acting last longest",
-              "feedback": "Tempting logic, but that research is about chances people wished they'd tried, not bets that wiped them out. Losing your savings is a regret too."
+              "feedback": "Tempting logic, but that research is about chances people wished they'd tried, not bets that wiped them out. Losing it all is a regret too."
             },
             {
               "text": "Never take risks, then there's nothing to regret",
@@ -290,7 +290,7 @@
     "concept": "premortem",
     "domain": "decisions",
     "type": "choice",
-    "hook": "Your plan already failed. It's a year from now. Why did it?",
+    "hook": "Your festival trip already flopped. Before it even happened. Why?",
     "title": "The Pre-Mortem",
     "game": {
       "steps": [
@@ -313,12 +313,12 @@
           ]
         },
         {
-          "scenario": "Your list: money ran out, someone couldn't get the days free, tickets sold out, the tent broke. Which can you fix TODAY?",
+          "scenario": "Your list: money ran out, someone's parents or boss said no, tickets sold out, the tent broke. Which can you fix TODAY?",
           "options": [
             {
-              "text": "Someone couldn't get the days free",
+              "text": "Someone's parents or boss said no",
               "best": true,
-              "feedback": "One message tonight settles it. Fix the cheap, fast risks first."
+              "feedback": "One message tonight (ask them to ask now) settles it. Fix the cheap, fast risks first."
             },
             {
               "text": "Money ran out",
@@ -428,7 +428,7 @@
           "scenario": "Your friend doesn't study at all for their driving theory test, guesses most answers, and passes. Good decision?",
           "options": [
             {
-              "text": "No. A good grade doesn't fix a bad bet.",
+              "text": "No. A pass doesn't fix a bad bet.",
               "best": true,
               "feedback": "Right. They got lucky on the questions. Try it again on the next test and the dice might not be so kind."
             },
@@ -526,10 +526,10 @@
     "hook": "A free ticket. What did it really cost? 1 in 5 economists got it.",
     "title": "The Free Ticket Puzzle",
     "game": {
-      "question": "You win a free ticket to Band A (you can't sell it). Same night, Band B costs £40, and seeing them is worth £50 to you. You go to Band A. What did you give up?",
+      "question": "You win a free ticket to Band A (you can't sell it). Same night, Band B costs £40, and seeing them is worth £50 to you. You go to Band A. What did you give up, in £?",
       "min": 0,
       "max": 50,
-      "step": 5,
+      "step": 10,
       "unit": "",
       "answer": 10,
       "anchor": null,
@@ -585,21 +585,12 @@
           "axis": "K"
         },
         {
-          "q": "I've checked my advice on this against someone more experienced and it held up.",
-          "axis": "K"
-        },
-        {
           "q": "I feel sure when I talk about it.",
           "axis": "C"
         },
         {
           "q": "If someone challenged me on it, I'd expect to be right.",
           "axis": "C"
-        },
-        {
-          "q": "I often say 'I'm not sure' on this topic.",
-          "axis": "C",
-          "invert": true
         }
       ],
       "threshold": 0.55,
@@ -908,7 +899,7 @@
     "concept": "regret_minimization",
     "domain": "decisions",
     "type": "estimate",
-    "hook": "What do adults regret most? Guess how big a share is about school.",
+    "hook": "Adults named their biggest life regrets. Guess what topped the list.",
     "title": "Regret Lives Where Doors Were Open",
     "game": {
       "question": "Of all the life regrets adults named, what share were about school and education?",

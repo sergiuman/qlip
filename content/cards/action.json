@@ -4,10 +4,10 @@
   "concept": "wso_triad",
   "domain": "action",
   "type": "venn",
-  "hook": "Pick one thing you keep meaning to do. Let's see what makes it easier.",
+  "hook": "Stuck on something? Find which of three things is missing.",
   "title": "Will, Skill, Open door",
   "game": {
-   "prompt": "Pick one goal (a subject or course, learning an instrument, getting fitter, a hard conversation). Answer every line for that one goal.",
+   "prompt": "Pick one goal you keep putting off (a skill to learn, a stuck project, a hard conversation). Answer every line for that one goal.",
    "axes": [
     {
      "key": "W",
@@ -31,22 +31,8 @@
      "axis": "W"
     },
     {
-     "q": "I'd still want this if it took twice as long.",
-     "axis": "W"
-    },
-    {
      "q": "I know the first three steps I'd take.",
      "axis": "S"
-    },
-    {
-     "q": "If I had a free hour, I wouldn't know where to begin.",
-     "axis": "S",
-     "invert": true
-    },
-    {
-     "q": "Something outside my control (money, rules, someone's permission) is blocking this.",
-     "axis": "O",
-     "invert": true
     },
     {
      "q": "I can get the time, tools or permission I need for this within a week.",
@@ -61,7 +47,7 @@
     },
     "S": {
      "name": "Skilled, Looking for a Why",
-     "text": "Skill scores high today. Start with the cheapest move: ask one person for the chance this week. If the door's already open, write one sentence on why this matters to you."
+     "text": "Skill scores high today; want and door are lower. First write one sentence on why this matters to you. If the why is there, ask one person for the time or chance this week."
     },
     "O": {
      "name": "The Open Door",
@@ -81,11 +67,11 @@
     },
     "OSW": {
      "name": "All Lights On (for this goal)",
-     "text": "All three pillars score high today, so put the first 10 minutes in your calendar."
+     "text": "All three pillars score high today, so pick a day and time for the first 10 minutes and write it down."
     },
     "": {
      "name": "The Starting Line",
-     "text": "Nothing's fully lit yet, which is normal and not a verdict on you. Start with your lowest pillar: low Will, write one sentence on why this matters; low Skill, do one 5-minute practice rep; low Open door, ask one person for the time or chance. Replay in 7 days."
+     "text": "Nothing's fully lit yet. Normal, not a verdict. Do one 5-minute move on your lowest pillar tonight: Will, write why it matters. Skill, practise once. Door, ask one person."
     },
     "mid": {
      "name": "The Half-Lit Path",

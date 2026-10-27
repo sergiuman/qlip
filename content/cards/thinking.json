@@ -65,7 +65,7 @@
      ]
     },
     {
-     "q": "Someone proposes a big change in a group chat (team, class, family). You…",
+     "q": "Someone proposes a big change in a group chat (friends, family, a club). You…",
      "options": [
       {
        "label": "React within a minute",
@@ -172,7 +172,7 @@
   },
   "insight": "An irrelevant number still drags your guess toward it. Price tags like 'was 199, now 99' use this. Knowing about it helps a little; bringing your own number helps more.",
   "model": "The first number sets the field. Bring your own number before you hear theirs.",
-  "try_today": "Next time you sell something online, haggle at a market or talk pay, write your price and one reason it's fair before you see their offer.",
+  "try_today": "Next time you haggle or sell something, write your price and one reason it's fair before you hear their offer.",
   "source": {
    "thinkers": [
     "Amos Tversky",
@@ -647,7 +647,7 @@
   },
   "insight": "First-order asks 'what now?' Second-order asks 'and then what?' Historian Michael Vann documented Hanoi's 1902 rat-tail bounty; the famous Delhi cobra version has thin records.",
   "model": "Every fix creates new incentives. Ask 'and then what?' at least twice.",
-  "try_today": "Before you set yourself a rule or reward (screen time, streaks, savings goals), write 'and then what?' and answer it twice.",
+  "try_today": "Before you set yourself a rule or reward (screen time, streaks, spending limits), write 'and then what?' and answer it twice.",
   "source": {
    "thinkers": [
     "Howard Marks",
@@ -770,7 +770,7 @@
   },
   "insight": "We see the person, not the setup that made them look good or bad. Even knowing the roles were random didn't stop the bias.",
   "model": "Before judging the player, look at the role they were handed.",
-  "try_today": "Next time someone looks clueless (a new classmate, colleague or relative), ask: 'Whose home turf is this?' before you judge them.",
+  "try_today": "Next time someone looks clueless (a newcomer, a guest, a relative), ask: 'Whose home turf is this?' before you judge them.",
   "try_team": "Swap roles for 5 minutes: the newest person explains their own speciality and the expert asks questions. Notice who suddenly looks 'smart'.",
   "source": {
    "thinkers": [

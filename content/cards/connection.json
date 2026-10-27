@@ -893,6 +893,10 @@
        "text": "\"Thanks for flagging it fast. Is the customer affected right now? Let's look together.\"",
        "best": true,
        "feedback": "Yes. Thank the flag, check the impact, fix together. Review the process once the customer is safe."
+      },
+      {
+       "text": "\"OK, leave it with me, I'll handle the customer.\"",
+       "feedback": "Kind and fast, but they lose the chance to learn and may feel sidelined. Fix it together, and let them own the follow-up with your support."
       }
      ]
     },
@@ -1006,7 +1010,7 @@
   "hook": "Why does one bad moment feel louder than twenty good ones?",
   "title": "Trust Builds Slow, Breaks Fast",
   "game": {
-   "prompt": "People read 45 bits of news about a local power plant, good and bad, and rated how each would change their trust in it. Which moved trust more?",
+   "prompt": "Your mate's been solid for months, then leaves you on read when you really needed them. Scientists tested how trust moves like this (with news about a power plant, weirdly). People rated 45 bits of good and bad news. Which moved trust more?",
    "choices": [
     "The good news",
     "Both about equally",
@@ -1015,7 +1019,7 @@
    "answer": 2,
    "reveal": "The bad news, by a wide margin. Paul Slovic (1993) found negative events cut trust far more than matching positive events raised it. His study was about a power plant, not friends, but it fits a wider pattern: bad tends to weigh more than good."
   },
-  "insight": "Trust climbs in small steps and can fall in one big one. Kept promises are the savings that cushion a slip. One slip rarely erases a track record; owning it quickly wins much of it back.",
+  "insight": "One slip from a mate feels huge because bad weighs more than good. But one slip rarely wipes out months of being there, and owning it fast wins much of it back.",
   "model": "Trust is slow to build and quick to lose. Promise small, keep it, repeat.",
   "try_today": "Make one promise today small enough to keep for sure, then keep it on time.",
   "try_team": "Each person lists one promise they made the group this month: kept, late or dropped. No blame; renegotiate the dropped ones out loud.",

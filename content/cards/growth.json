@@ -285,19 +285,19 @@
     "concept": "grit",
     "domain": "growth",
     "type": "reveal",
-    "hook": "Talent or not giving up: who survived the army's hardest summer?",
+    "hook": "Who survives the army's hardest summer? Guess what predicted it.",
     "title": "Grit vs Talent",
     "game": {
       "prompt": "New cadets at West Point, the US army academy, face 'Beast Barracks', a brutal first summer. Which better predicted who stayed?",
       "choices": [
-        "The academy's own admissions score",
+        "The academy's own admissions score (grades, fitness, leadership)",
         "A 12-question grit survey",
-        "Their high-school grades"
+        "Neither predicted it well"
       ],
-      "reveal": "The grit survey, in that one 2007 study, beat the academy's own score at predicting who finished. But dropouts were rare, and later reviews found the effect smaller than the hype: it's mostly the 'keep going' part that matters.",
+      "reveal": "The grit survey. In a 2007 study of about 1,200 cadets, it beat the academy's admissions score, which didn't predict who quit Beast at all. The catch: only about 1 in 20 quit, a 2017 review of 88 samples found grit's links to success modest (mostly the 'keep going' part), and in a larger 2019 West Point study other measures mattered more for graduating.",
       "answer": 1
     },
-    "insight": "Sticking with a goal through boredom matters, but grit is contested: a 2017 review of 88 samples found modest links to success, mostly from the perseverance part. One ingredient, not the recipe.",
+    "insight": "Grit helped here, but it's contested: across studies its links to success are modest and come mostly from perseverance. One ingredient, not the recipe.",
     "model": "Keep going on the boring bits. That part of grit holds up; the rest is oversold.",
     "try_today": "Name one long-term goal and write the single smallest action that keeps it alive this week.",
     "source": {
@@ -308,7 +308,7 @@
         "Dennis Kelly",
         "Marcus Credé"
       ],
-      "work": "Grit: Perseverance and passion for long-term goals (2007); Much ado about grit (2017)"
+      "work": "Grit: Perseverance and passion for long-term goals (2007); Much ado about grit (2017); Duckworth et al., Cognitive and noncognitive predictors of success, PNAS (2019)"
     },
     "evidence": "contested",
     "level": 2,
@@ -346,22 +346,12 @@
           "axis": "P"
         },
         {
-          "q": "New ideas often pull me away from old projects.",
-          "axis": "P",
-          "invert": true
-        },
-        {
           "q": "I know what I'm working toward in the next few years.",
           "axis": "P"
         },
         {
           "q": "Setbacks don't knock me off course for long.",
           "axis": "S"
-        },
-        {
-          "q": "Lately, my energy for projects fades after a few weeks.",
-          "axis": "S",
-          "invert": true
         },
         {
           "q": "Lately, I've been able to finish what I start, even the boring parts.",
@@ -372,7 +362,7 @@
       "results": {
         "": {
           "name": "Explore mode",
-          "text": "Today's answers show you're still sampling, and that's valid: interests are often found by trying things. Pick one thread to follow for a month. Low staying power often reflects energy and circumstances, not character."
+          "text": "Today's answers show you're still sampling. That's normal: interests are often found by trying things. Pick one thread and follow it for a month."
         },
         "P": {
           "name": "Spark mode",
@@ -600,7 +590,7 @@
     "concept": "small_wins",
     "domain": "growth",
     "type": "reveal",
-    "hook": "What makes a good day at work or study? Bosses guessed wrong.",
+    "hook": "What makes a good day at work? Bosses guessed wrong.",
     "title": "The Progress Principle",
     "game": {
       "prompt": "669 managers ranked five things that motivate people: praise, rewards, clear goals, support, and making progress. Where did 'making progress' land?",
@@ -611,9 +601,9 @@
         "Dead last (5th)"
       ],
       "answer": 3,
-      "reveal": "Dead last. Yet in nearly 12,000 diary entries from 238 workers, making progress on meaningful work was the strongest booster of their best days. Same goes for school: a tiny visible win beats a big vague goal."
+      "reveal": "Dead last. Yet in nearly 12,000 diary entries from 238 workers, making progress on meaningful work was the strongest booster of their best days. For your team the same: one visible small win this week beats a big vague goal."
     },
-    "insight": "We underrate small steps, yet in 12,000 diary entries visible progress lifted motivation most. Keeping a record of your wins gives you evidence to reach for on hard days.",
+    "insight": "Managers underrate small steps, yet in 12,000 diary entries visible progress lifted motivation most. A record of wins is evidence you can reach for on slow weeks.",
     "model": "Progress you can see is the strongest fuel. Keep evidence of it.",
     "try_today": "Start a 'wins' note: list 3 hard things you've already handled. Add one small win every evening.",
     "source": {
@@ -630,9 +620,9 @@
       "never_miss_twice",
       "one_percent"
     ],
-    "sensitive": true,
-    "try_team": "End a meeting, class or family dinner with one quick round: 'One small step forward I made this week.' 30 seconds each, no ranking.",
-    "audience": "all"
+    "sensitive": false,
+    "try_team": "End your next team meeting with one quick round: 'One small step forward I made this week.' 30 seconds each, no ranking.",
+    "audience": "work"
   },
   {
     "id": "small-wins-setback-reveal",
@@ -701,9 +691,9 @@
           "why": "Annie Duke's test: if you wouldn't choose it fresh, staying is often just inertia."
         },
         {
-          "text": "You had a terrible week and feel like giving up tonight.",
+          "text": "You had a terrible week and feel like quitting this project tonight.",
           "side": "right",
-          "why": "Your feeling is real and worth hearing. One bad night just isn't enough to decide on. Rest first."
+          "why": "That feeling is real. One rough night is too little to decide a project on. Rest first, then decide."
         },
         {
           "text": "Your goal changed and this no longer leads anywhere you want.",
@@ -914,25 +904,25 @@
     "game": {
       "steps": [
         {
-          "scenario": "Your team won 3-1, but you missed two easy passes. On the way home you…",
+          "scenario": "The release shipped on time, but two small bugs reached production. On Friday you…",
           "options": [
             {
-              "text": "Enjoy the win and forget the rest.",
+              "text": "Celebrate the release and move on.",
               "feedback": "Enjoy it, you earned it. But the misses hold the lesson, and they fade fast."
             },
             {
-              "text": "Enjoy the win, then name one thing that worked and one pass to practise.",
+              "text": "Celebrate, then name one thing that worked and one check to add next sprint.",
               "best": true,
               "feedback": "That's the loop: notice, pick one change, try it next time. Wins teach too."
             },
             {
-              "text": "Replay the two misses all evening.",
+              "text": "Spend the weekend replaying the two bugs.",
               "feedback": "Caring is good, but replaying isn't reviewing. Name the fix, then let it go."
             }
           ]
         },
         {
-          "scenario": "You gave a talk at school or work. It went OK but felt flat. The most useful question afterwards is…",
+          "scenario": "You presented to leadership. It went OK but felt flat. The most useful question afterwards is…",
           "options": [
             {
               "text": "\"Was I good or bad?\"",
@@ -953,7 +943,7 @@
     },
     "insight": "Looking back pays when it ends in one change you'll try next time. Review wins as well as misses, and judge the method, not yourself.",
     "model": "Do it, look back, pick one change, try again.",
-    "try_today": "Tonight, write two lines about today: one thing that worked, and one small thing you'll do differently tomorrow.",
+    "try_today": "Today, write two lines about your work: one thing that worked, and one small thing you'll do differently tomorrow.",
     "source": {
       "thinkers": [
         "David Kolb",
@@ -969,13 +959,13 @@
       "deliberate_practice",
       "self_efficacy"
     ],
-    "try_team": "End your next team, class or family task with 5 minutes: what worked, what didn't, one change to try next time. No blame.",
+    "try_team": "End your next sprint or project with 5 minutes: what worked, what didn't, one change to try next time. No blame.",
     "from_source": {
       "quote": "What fault have you resisted? In what respect are you better?",
       "cite": "Seneca, On Anger III.36, quoting Sextius (trans. John W. Basore, 1928)",
       "next_read": "Seneca, On Anger, Book III, ch. 36 (one page)"
     },
-    "audience": "all"
+    "audience": "work"
   },
   {
     "id": "growth-mindset-genius-culture-swipe",

@@ -49,7 +49,7 @@
     "insight": "Fighting the craving late at night is the hardest link to win. Moving the cue avoids the fight. Clear's loop has four links (Duhigg's had three): remove the cue or swap the response.",
     "model": "Cue, craving, response, reward. Change one link and the habit starts to change.",
     "try_today": "Pick one habit you want to change and write down its cue. Then move that cue out of sight or out of reach.",
-    "try_team": "Each person names one group habit (late starts, phones out in meetings or at dinner). Together, name its cue and pick one link to change for a week.",
+    "try_team": "Each person names one group habit (late starts, phones out at dinner). Together, name its cue and pick one link to change for a week.",
     "from_source": {
       "quote": "Could the young but realize how soon they will become mere walking bundles of habits, they would give more heed to their conduct...",
       "cite": "William James, The Principles of Psychology (1890), vol. 1, ch. IV 'Habit'",
@@ -238,7 +238,7 @@
     "concept": "identity_habits",
     "domain": "habits",
     "type": "reveal",
-    "hook": "One tiny word might change what you do. Or might not. Which is it?",
+    "hook": "A tiny word change was said to change behaviour. Then someone checked.",
     "title": "The Voter Study That Didn't Hold",
     "game": {
       "prompt": "Before an election, researchers asked people one of two questions. Which did the FIRST study (2011) report worked better?",
@@ -247,7 +247,7 @@
         "How important is it to you to be a voter?"
       ],
       "answer": 1,
-      "reveal": "The first study (Bryan et al., 2011) said 'be a voter'. Then a bigger study (Gerber et al., 2016) found no effect. The real lesson: one exciting study isn't proof."
+      "reveal": "The first study (Bryan et al., 2011) said 'be a voter'. Then a bigger study (Gerber et al., 2016) found no effect. The real lesson: one exciting study isn't proof. Same goes for every 'become a morning person in 3 days' video on your feed: one viral claim is a hypothesis, not proof."
     },
     "insight": "Describing an action as part of who you are ('a voter', 'a reader') may make it feel more meaningful. But the original finding did not reliably replicate, so hold it loosely.",
     "model": "A catchy finding is a hypothesis until it replicates. Identity labels may help some; test it on yourself.",
@@ -289,7 +289,7 @@
     "insight": "We expect straight-line progress, so small daily gains feel pointless. Real skills plateau and days vary, so this is an illustration, not a forecast. Small choices still add up, both ways.",
     "model": "Tiny gains compound. Judge your habits by their direction, not by today's result.",
     "try_today": "Pick one thing you do daily and make it 1% better today: one more page, one less scroll, one extra glass of water.",
-    "try_team": "Each person names one 1% fix for how you live or work together (a tidier shared shelf, a shorter meeting). Pick one and do it daily this week.",
+    "try_team": "Each person names one 1% fix for how you live together (a tidier shared shelf, a quicker clear-up after meals). Pick one and do it daily this week.",
     "from_source": {
       "quote": "Every smallest stroke of virtue or of vice leaves its never so little scar.",
       "cite": "William James, The Principles of Psychology (1890), vol. 1, ch. IV 'Habit'",
@@ -328,9 +328,9 @@
       "reveal": "Pile B, by a mile: over 1 billion coins vs 30,000. If you picked A, you're in good company: A is ahead for the first 13 days. Doubling looks like nothing, then like everything."
     },
     "insight": "People reliably underestimate doubling (Stango & Zinman, 2009). Habits don't double: they grow fast, then level off, after 18 to 254 days (median 66; Lally et al., 2010).",
-    "model": "Growth that doubles looks like nothing for a long time, then like everything. Don't judge it by week one.",
-    "try_today": "Draw 30 boxes on paper. Tick one each day you do your tiny habit. Judge it at box 30, not box 3; some habits take longer.",
-    "try_team": "Everyone secretly picks Pile A or B, then reveal together. Then choose one small daily habit for the group and review it in 30 days.",
+    "model": "Some growth hides for a long time before it shows. Habits don't double, but need weeks before you judge them.",
+    "try_today": "Draw 66 boxes (the study's median). Tick one each day you do your tiny habit. Missed one? Tick the next. Don't judge it before 66.",
+    "try_team": "Everyone secretly picks Pile A or B, then reveal together. Then choose one small daily habit for the group and review it in 66 days.",
     "source": {
       "thinkers": [
         "Victor Stango",
@@ -512,7 +512,7 @@
     "insight": "Most of us keep whatever is already set, because choosing takes effort. So set your own defaults on purpose, and ask who set the others, and for whose benefit.",
     "model": "Whatever is already set tends to win. Choose your defaults before they choose for you.",
     "try_today": "Change one default now: move one app off your home screen, or leave a book where your phone usually sits.",
-    "try_team": "List your group's defaults (meeting length, who speaks first, what's in the fridge). Change one this week and see what shifts.",
+    "try_team": "List your group's defaults (where phones go at dinner, who speaks first, what's in the fridge). Change one this week and see what shifts.",
     "source": {
       "thinkers": [
         "Eric Johnson",
@@ -611,7 +611,7 @@
     "domain": "habits",
     "type": "choice",
     "sensitive": true,
-    "hook": "You left school or work hours ago. Has your head left yet?",
+    "hook": "The day ended hours ago. Has your head left it yet?",
     "title": "Close the Day on Purpose",
     "game": {
       "steps": [
@@ -703,7 +703,7 @@
         {
           "text": "A warm shower or bath an hour or two before bed",
           "side": "right",
-          "why": "A 2019 review found a warm (about 40 C) bath or shower 1-2 hours before bed helped people fall asleep about 10 minutes sooner."
+          "why": "A 2019 review: a warm bath or shower (about 40–42 °C) 1–2 hours before bed helped people fall asleep ~10 min sooner."
         },
         {
           "text": "Binge-watching a gripping finale until late",
