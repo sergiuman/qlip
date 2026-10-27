@@ -29,10 +29,12 @@ WORK = r"\b(manager|managers|boss|colleagues?|salary|pay ?rise|raise|day's pay|m
 def audience(card):
     """Which life-world a card's scenarios live in. An explicit "audience" in the card wins; otherwise
     count school and work markers across everything the player reads."""
-    if card.get("audience") in ("all", "young", "work"):
-        return card["audience"]
-    text = " ".join([json.dumps(card["game"], ensure_ascii=False), card["hook"], card["insight"], card["try_today"]]).lower()
+    text = " ".join([json.dumps(card["game"], ensure_ascii=False), card["hook"], card["insight"], card["try_today"], card.get("try_team", "")]).lower()
     y, w = len(re.findall(YOUNG, text)), len(re.findall(WORK, text))
+    if card.get("audience") in ("young", "work"):
+        return card["audience"]
+    if card.get("audience") == "all" and not ((y >= 2 and w == 0) or (w >= 2 and y == 0)):
+        return "all"  # an explicit "all" stands unless the text clearly lives in one world
     if y >= 2 and y > w * 2:
         return "young"
     if w >= 2 and w > y * 2:

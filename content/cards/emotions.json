@@ -264,7 +264,7 @@
      "q": "You make a silly mistake (a wrong answer, a missed bus, a typo everyone saw). Your first inner words are…",
      "options": [
       {
-       "label": "'Ugh, annoying. Moving on.'",
+       "label": "'Ugh, that stings. OK, what's next?'",
        "value": 1
       },
       {
@@ -327,7 +327,7 @@
      "q": "Being kind to yourself after failing feels like…",
      "options": [
       {
-       "label": "Fine, in small doses",
+       "label": "Useful, most of the time",
        "value": 1
       },
       {
@@ -579,16 +579,16 @@
   "concept": "emotional_contagion",
   "domain": "emotions",
   "type": "estimate",
-  "hook": "A week of sadder posts. How much sadder did people write?",
+  "hook": "Your feed hides the happy posts for a week. Does it change you?",
   "title": "Moods Are Contagious",
   "game": {
-   "question": "In 2012, Facebook ran a one-week experiment on 689,003 users. For one group, it hid some of the positive posts in their feeds. By how much did the share of positive words in that group's own posts drop?",
+   "question": "In 2012 Facebook secretly hid some happy posts from about 690,000 people's feeds for a week. Out of every 1,000 words they then wrote, how many fewer were happy words?",
    "min": 0,
-   "max": 10,
-   "step": 0.1,
-   "unit": " percentage points",
-   "answer": 0.1,
-   "explain": "About 0.1 percentage points (Kramer, Guillory & Hancock, 2014). Real, but tiny, and measured in words, not felt mood. Users never agreed to take part.",
+   "max": 50,
+   "step": 1,
+   "unit": " words",
+   "answer": 1,
+   "explain": "About 1 in 1,000, basically nothing (Kramer, Guillory & Hancock, 2014). Big headlines, tiny effect, measured in words, not felt mood. And nobody agreed to be in it.",
    "anchor": null
   },
   "insight": "Moods can spread, but in this famous study the effect was tiny: big samples make tiny effects detectable, not important. If a feed leaves you heavier, that's information, not weakness.",
@@ -609,7 +609,7 @@
    "doomscroll_loop",
    "environment_design"
   ],
-  "try_team": "Before a meeting or class, everyone names their mood in one word. Leaders: your mood in the first 2 minutes is the weather. Check it first.",
+  "try_team": "Before a meeting, class or family meal, everyone names their mood in one word. Whoever leads: your mood in the first 2 minutes sets the weather.",
   "sensitive": true,
   "audience": "all"
  },
@@ -896,7 +896,7 @@
   "insight": "Being kind to yourself after a miss isn't going soft. Self-kind students feared failure less and kept wanting to learn. Harshness feels motivating, but fear of failing feeds dodging.",
   "model": "After a miss, talk to yourself like your best mate would: honest, not brutal.",
   "try_today": "Next time you mess up, say in your head: 'That stings. Everyone gets this wrong sometimes. What's my next small try?'",
-  "try_team": "Team or class huddle: each person names one miss this week; a partner answers like a good friend would. Then everyone names one next try.",
+  "try_team": "Team, class or family huddle: each person names one miss this week; a partner answers like a good friend would. Then everyone names one next try.",
   "source": {
    "thinkers": [
     "Kristin Neff",

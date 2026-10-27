@@ -39,7 +39,7 @@
         {
           "text": "How hard you train this week",
           "side": "right",
-          "why": "Your decision to train is yours. Epictetus said even the body is only lent to us."
+          "why": "Training is your choice. How your body responds isn't: Epictetus put the body in 'not up to us'."
         },
         {
           "text": "Your first emotional jolt when insulted",
@@ -665,7 +665,7 @@
     "concept": "begin_with_end",
     "domain": "wisdom",
     "type": "radar",
-    "hook": "Would your weekly calendar match the speech at your 80th birthday?",
+    "hook": "What do you want your mates to say on your 18th? Does this week match?",
     "title": "Begin With the End in Mind",
     "game": {
       "axes": [
@@ -685,15 +685,15 @@
           "axis": 0
         },
         {
-          "q": "This week I moved, slept and ate like someone I'd want to be at 80.",
+          "q": "This week I moved, slept and ate like someone I'd want to be in a few years.",
           "axis": 1
         },
         {
-          "q": "I spent time on work, study or a hobby I'm proud of, not just busy with.",
+          "q": "I spent time on schoolwork, a sport or a hobby I'm actually proud of.",
           "axis": 2
         },
         {
-          "q": "People rely on the quality of what I make.",
+          "q": "Someone has asked me for help with something I'm good at.",
           "axis": 2
         },
         {
@@ -701,7 +701,7 @@
           "axis": 3
         },
         {
-          "q": "This month I taught or unblocked someone without being asked.",
+          "q": "This month I helped someone without being asked.",
           "axis": 3
         },
         {
@@ -716,15 +716,15 @@
       "advice": {
         "0": "Want a small next step for Relationships? Book 20 phone-free minutes with one person this week.",
         "1": "Want a small next step for Health? Pick one: a 15-minute walk, or lights out 30 minutes earlier tonight.",
-        "2": "Want a small next step for Craft? Block one focused hour on the work you'd want to be remembered for.",
+        "2": "Want a small next step for Craft? Block one focused hour on the thing you'd want to be known for.",
         "3": "Want a small next step for Contribution? Do one small useful thing for someone who can't repay you.",
         "4": "Want a small next step for Growth? Choose one skill and practise it for 10 minutes today."
       },
-      "advice_even": "Even shape. No single gap stands out. Ask which of the five you'd most regret neglecting at 80, and give it one 20-minute block this week."
+      "advice_even": "Even shape. No single gap stands out. Ask which of the five you'd most regret neglecting by your 18th, and give it one 20-minute block this week."
     },
-    "insight": "Covey pictured the speeches at your funeral; here it's your 80th birthday. Your shape shows one week, not your life: where to put attention next, not what you've failed at.",
+    "insight": "Covey pictured the speeches at your funeral; here it's a big birthday. Your shape shows one week, not your life: where to put attention next, not what you've failed at.",
     "model": "Decide what you want said about you at the end, then plan this week backwards from it.",
-    "try_today": "Write three words you'd want people to use about you at 80. Put one action for each in this week's calendar.",
+    "try_today": "Write three words you'd want your mates to use about you at your 18th. Plan one action for each this week.",
     "source": {
       "thinkers": [
         "Stephen Covey",
@@ -740,15 +740,15 @@
       "responsibility_meaning"
     ],
     "sensitive": true,
-    "try_team": "Each person writes three words they'd want said about the group in a year. Agree on the most neglected one and plan one step for it.",
-    "audience": "all"
+    "try_team": "Each person writes three words they'd want said about the group (class, team or club) in a year. Pick the most neglected one and plan one step.",
+    "audience": "young"
   },
   {
     "id": "begin-with-end-four-thousand-weeks",
     "concept": "begin_with_end",
     "domain": "wisdom",
     "type": "estimate",
-    "hook": "Your whole life, counted in weeks. Bigger or smaller than you think?",
+    "hook": "A long life, counted in weeks. More or fewer than you'd guess?",
     "title": "Your Life in Weeks",
     "game": {
       "question": "How many weeks are there in an 80-year life?",
@@ -757,12 +757,12 @@
       "step": 2,
       "unit": " weeks",
       "answer": 4174,
-      "explain": "80 years × about 52.18 weeks ≈ 4,174. Seneca's point holds at any age: a life is measured by how it is used, not how many weeks it holds. Burkeman's point isn't to rush or count losses, but to choose a few things that matter in the weeks you have.",
+      "explain": "80 years × about 52.18 weeks ≈ 4,174. Seneca: a life is measured by how it is used, not how many weeks it holds. Burkeman's point isn't to rush or count losses, but to choose a few things that matter. For most adults many of these are work weeks, so one well-guarded week counts. Whatever your age, don't count backwards; pick one good week.",
       "anchor": null
     },
     "insight": "About 4,000 weeks feels short, and if that feels heavy, that's normal. The point isn't to scare you but to sharpen you. Seneca said life is long enough if used well.",
     "model": "Time is finite and countable. Spend weeks the way you'd spend something precious.",
-    "try_today": "Pick one thing this week you'd be glad you made time for, even 20 minutes, and put it in your calendar first.",
+    "try_today": "Open your calendar or plans for next week. Block 2 hours for the one thing you'd be proud of, before other stuff fills it.",
     "source": {
       "thinkers": [
         "Oliver Burkeman",

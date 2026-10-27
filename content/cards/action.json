@@ -7,7 +7,7 @@
   "hook": "Pick one thing you keep meaning to do. Let's see what makes it easier.",
   "title": "Will, Skill, Open door",
   "game": {
-   "prompt": "Pick one goal (an exam, an instrument, a work project, a hard conversation, getting fitter). Answer every line for that one goal.",
+   "prompt": "Pick one goal (a subject or course, learning an instrument, getting fitter, a hard conversation). Answer every line for that one goal.",
    "axes": [
     {
      "key": "W",
@@ -21,7 +21,7 @@
     },
     {
      "key": "O",
-     "label": "Open door",
+     "label": "Open door (chance)",
      "color": "#10B981"
     }
    ],
@@ -35,7 +35,7 @@
      "axis": "W"
     },
     {
-     "q": "I've done something a bit like this before.",
+     "q": "I know the first three steps I'd take.",
      "axis": "S"
     },
     {
@@ -85,7 +85,7 @@
     },
     "": {
      "name": "The Starting Line",
-     "text": "Nothing's lit yet, which is normal and not a verdict: do one 5-minute rep this week and replay in 7 days."
+     "text": "Nothing's fully lit yet, which is normal and not a verdict on you. Start with your lowest pillar: low Will, write one sentence on why this matters; low Skill, do one 5-minute practice rep; low Open door, ask one person for the time or chance. Replay in 7 days."
     },
     "mid": {
      "name": "The Half-Lit Path",
@@ -178,17 +178,17 @@
       {
        "text": "Asking the fair organiser you know if she can share a table",
        "best": true,
-       "feedback": "Yes. Will and Skill are lit; the Open door is missing. One door does more than ten pep talks."
+       "feedback": "Yes. Will and Skill are lit; the Open door is missing. Here, one door likely does more than any pep talk."
       }
      ]
     },
     {
-     "scenario": "Leo has free time, a phone and a language app already set up. He keeps saying he 'should' learn Spanish but never opens it. You…",
+     "scenario": "Leo did three years of Spanish at school and still gets by on holiday. He has free time and a language app already set up. He keeps saying he 'should' brush it up but never opens it. You…",
      "options": [
       {
        "text": "Ask what he'd actually do with Spanish, and why it matters to him",
        "best": true,
-       "feedback": "Yes. Skill can be learned and the door is open; the gap is Will. A real reason does more than a schedule."
+       "feedback": "Yes. Skill is there and the door is open; the gap is Will. A real reason does more than a schedule."
       },
       {
        "text": "Make him a strict study timetable",
@@ -211,7 +211,7 @@
    ],
    "work": "The 2-of-3 rule: an untested rule of thumb inspired by Blumberg & Pringle (Academy of Management Review, 1982), whose own model says all three pillars interact"
   },
-  "evidence": "contested",
+  "evidence": "philosophy",
   "level": 1,
   "related": [
    "wso_triad",
@@ -269,7 +269,7 @@
    ],
    "work": "The 2-of-3 rule: an untested rule of thumb inspired by Blumberg & Pringle (Academy of Management Review, 1982), whose own model says all three pillars interact"
   },
-  "evidence": "contested",
+  "evidence": "philosophy",
   "level": 1,
   "related": [
    "wso_triad",
@@ -1077,7 +1077,7 @@
    "answer": 2,
    "reveal": "Fewer than the unpaid group, on average. Across 128 experiments, expected rewards for an already-fun task lowered free-choice play after rewards ended, compared with people never rewarded. Surprise rewards didn't, and praise raised later play in college students but not in children. The average drop was modest (roughly a third of a standard deviation), and plenty of individuals kept going."
   },
-  "insight": "Pay can quietly swap 'I want to' for 'I'm paid to', and the want may not fully return. Most studies were short lab sessions; long-run effects at work are less clear.",
+  "insight": "Pay can quietly swap 'I want to' for 'I'm paid to', at least for a while. Most studies measured minutes after short lab sessions; whether it lasts, or holds at work, is much less clear.",
   "model": "A reason that's yours outlasts any reward. Guard the stuff you do for love.",
   "try_today": "Pick one thing you do just for fun. Do it for 10 minutes today: no posting, no streak, no score. Notice how it feels.",
   "source": {

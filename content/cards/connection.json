@@ -66,6 +66,72 @@
   "audience": "all"
  },
  {
+  "id": "three-conversations-choice-work",
+  "concept": "three_conversations",
+  "domain": "connection",
+  "type": "choice",
+  "hook": "A teammate vents after a rough meeting. Advice now, or later?",
+  "title": "Three Kinds of Talk at Work",
+  "game": {
+   "steps": [
+    {
+     "scenario": "After the sprint review, a developer says: \"The PM tore my demo apart in front of the client.\" You reply…",
+     "options": [
+      {
+       "text": "Next time send the demo to the PM first.",
+       "feedback": "Could work in a practical talk. But this one sounds like feelings first. Solutions land better after they feel heard."
+      },
+      {
+       "text": "In front of the client? That sounds rough.",
+       "best": true,
+       "feedback": "Yes. This is an emotional conversation. Naming the feeling tells them you're on the same channel."
+      },
+      {
+       "text": "The PM does that to me too.",
+       "feedback": "Friendly instinct, but it moves the spotlight to you. Stay on their story a bit longer."
+      }
+     ]
+    },
+    {
+     "scenario": "Later they say: 'OK, I'm calmer. How do I raise it with the PM?' Now you…",
+     "options": [
+      {
+       "text": "Keep validating: 'That must have felt awful.'",
+       "feedback": "Kind, but they just switched channels. They're asking for a plan now."
+      },
+      {
+       "text": "Offer two concrete options and ask which fits.",
+       "best": true,
+       "feedback": "Right. The talk turned practical, so you turned with it. Matching is a moving target."
+      },
+      {
+       "text": "Ask what this says about their standing on the team.",
+       "feedback": "That's a social, who-are-we question. It may matter later, but right now they asked for a next step."
+      }
+     ]
+    }
+   ]
+  },
+  "insight": "Most talks are practical (what do we do?), emotional (how do we feel?) or social (who are we?). Advice in an emotional talk often misses. Notice the kind, and when it switches.",
+  "model": "Ask: is this about solving, feeling, or identity? Then answer in that same channel.",
+  "try_today": "In your next 1:1, silently label the talk practical, emotional or social before you reply.",
+  "source": {
+   "thinkers": [
+    "Charles Duhigg"
+   ],
+   "work": "Supercommunicators (2024)"
+  },
+  "evidence": "philosophy",
+  "level": 1,
+  "related": [
+   "looping",
+   "emotion_naming",
+   "emotional_contagion"
+  ],
+  "try_team": "Read out 3 real work messages. Everyone votes: practical, emotional or social? Talk through the splits.",
+  "audience": "work"
+ },
+ {
   "id": "three-conversations-swipe",
   "concept": "three_conversations",
   "domain": "connection",
@@ -142,7 +208,7 @@
   "game": {
    "steps": [
     {
-     "scenario": "Your mum (or dad, or sibling) snaps: 'You never help with the dishes!' You did them twice this week. You say…",
+     "scenario": "Someone you live with snaps: 'You never help with the dishes!' You did them twice this week. You say…",
      "options": [
       {
        "text": "That's not true, I did them Tuesday and Thursday.",
@@ -391,7 +457,7 @@
   "hook": "If every human vanished tonight, would your cash be worth a cent?",
   "title": "Shared Stories",
   "game": {
-   "prompt": "Rock or agreement?",
+   "prompt": "Agreement or rock?",
    "left": "Agreement (needs believers)",
    "right": "Rock (exists anyway)",
    "items": [
@@ -411,9 +477,9 @@
      "why": "Rivers are real; the line on the map is an agreement people keep."
     },
     {
-     "text": "School uniform rules",
+     "text": "Dress-code rules",
      "side": "left",
-     "why": "The blazer is real fabric. The rule that it must be worn exists because people agree to keep it, and it can be changed."
+     "why": "The clothes are real fabric. The rule that you must wear them exists because people agree to keep it, and it can be changed."
     },
     {
      "text": "Gravity",
@@ -421,25 +487,26 @@
      "why": "It pulls whether anyone believes or not."
     },
     {
-     "text": "Your follower count meaning you matter",
+     "text": "A red light meaning 'stop'",
      "side": "left",
-     "why": "The number is real data. What it says about you is a story people agree to tell."
+     "why": "The light is real photons. 'Stop' is a rule drivers agree to keep, and it works only because almost everyone does."
     },
     {
-     "text": "A TikTok trend",
+     "text": "A wedding ring meaning 'married'",
      "side": "left",
-     "why": "Only exists while people keep doing it."
+     "why": "Gold is a rock. What it says about you is an agreement people share."
     }
    ]
   },
-  "insight": "Harari argues humans cooperate in huge numbers because we believe the same stories: money, laws, nations. 'Fiction' doesn't mean fake or bad. These stories are tools, and they can be rewritten.",
+  "insight": "Harari argues we cooperate in huge numbers by sharing stories: money, laws, nations. Philosopher John Searle calls these 'social facts': real, but only because we keep agreeing.",
   "model": "Some things are rocks, some are agreements. Agreements can be questioned — and changed.",
   "try_today": "Name one 'rule' you follow today and ask: is this a rock or an agreement? Who could change it?",
   "source": {
    "thinkers": [
-    "Yuval Noah Harari"
+    "Yuval Noah Harari",
+    "John Searle"
    ],
-   "work": "Sapiens: A Brief History of Humankind (2011)"
+   "work": "Sapiens: A Brief History of Humankind (2011); Searle, The Construction of Social Reality (1995)"
   },
   "evidence": "philosophy",
   "level": 2,
@@ -488,6 +555,10 @@
       {
        "text": "Say 'Great, but you're wrong because…'",
        "feedback": "You earned the floor, so don't spend it on 'you're wrong.' Start with what you share."
+      },
+      {
+       "text": "Immediately propose a compromise: migrate one service as a pilot.",
+       "feedback": "Reasonable, but you skipped saying where you agree and what your actual concern is. They can't weigh a compromise they don't understand."
       }
      ]
     }
@@ -709,7 +780,7 @@
   "concept": "psychological_safety",
   "domain": "connection",
   "type": "choice",
-  "hook": "Your next sentence decides whether they ever tell you again.",
+  "hook": "Someone admits a mistake. Your first words shape what they say next.",
   "title": "Make It Safe to Speak Up",
   "game": {
    "steps": [
@@ -718,7 +789,7 @@
      "options": [
       {
        "text": "\"Seriously? That was your one job.\"",
-       "feedback": "Fair to be frustrated. But what they learn is 'next time, hide it', and you find out later, when it's worse."
+       "feedback": "Fair to be frustrated, and one slip won't ruin things. But if it's the usual reply, people learn 'next time, hide it'."
       },
       {
        "text": "\"Thanks for telling us now. What do we rebuild first?\"",
@@ -732,7 +803,7 @@
      ]
     },
     {
-     "scenario": "Your little brother (or your flatmate, or your teen) admits they cracked the TV screen. You say…",
+     "scenario": "Your little brother admits he cracked the TV screen while you were babysitting. You say…",
      "options": [
       {
        "text": "\"How many times have I told you to be careful?\"",
@@ -741,12 +812,12 @@
       {
        "text": "\"I'm glad you told me. Are you OK? Let's look at it together.\"",
        "best": true,
-       "feedback": "Yes. Safety isn't zero standards: you can still agree how they help put it right. You're rewarding honesty, not the crack."
+       "feedback": "Yes. Safety isn't zero standards: you can still agree how he helps put it right. You're rewarding honesty, not the crack."
       }
      ]
     },
     {
-     "scenario": "You're running a club, a group project or a meeting, and want honest input on your plan. You close with…",
+     "scenario": "You're leading a group project and want honest input on your plan. You close with…",
      "options": [
       {
        "text": "\"Any questions? No? Great.\"",
@@ -768,7 +839,7 @@
   "insight": "Psychological safety isn't niceness or low standards. It's knowing you won't be punished for speaking up. Thank the telling, ask real questions, fix together.",
   "model": "Thank the telling, then fix the problem. People repeat what gets rewarded.",
   "try_today": "Next time someone brings you bad news, make your first words 'Thanks for telling me.' Then ask what they need.",
-  "try_team": "End your next meeting or class by asking 'What are we missing?' and wait a full 10 seconds of silence before anyone answers.",
+  "try_team": "End your next group-project chat by asking 'What are we missing?' and wait 10 full seconds before anyone answers.",
   "source": {
    "thinkers": [
     "Amy Edmondson"
@@ -782,7 +853,87 @@
    "three_conversations",
    "mistake_alchemy"
   ],
-  "audience": "all"
+  "audience": "young"
+ },
+ {
+  "id": "psychological-safety-choice-work",
+  "concept": "psychological_safety",
+  "domain": "connection",
+  "type": "choice",
+  "hook": "A teammate owns up to a mistake. Your reply shapes what comes next.",
+  "title": "Make It Safe to Flag Problems",
+  "game": {
+   "steps": [
+    {
+     "scenario": "Two days before release, a developer tells standup they merged a change that broke the staging database last night. You say…",
+     "options": [
+      {
+       "text": "\"Seriously? That was your one job.\"",
+       "feedback": "Fair to be frustrated, and one slip won't ruin things. But if it's the usual reply, people learn 'next time, hide it'."
+      },
+      {
+       "text": "\"Thanks for telling us now. What do we fix first?\"",
+       "best": true,
+       "feedback": "Yes. Thank the telling, then turn to the fix. That's how you get warned early next time."
+      },
+      {
+       "text": "Say nothing and quietly fix it yourself tonight.",
+       "feedback": "Generous, but nobody learns what went wrong, and you carry it alone. Fixing it together works better."
+      }
+     ]
+    },
+    {
+     "scenario": "A junior engineer messages you: \"I think I gave a customer the wrong config yesterday.\" You reply…",
+     "options": [
+      {
+       "text": "\"How did this pass review?\"",
+       "feedback": "A fair question for later. As a first reply it says 'telling me costs you', and the next slip may stay hidden longer."
+      },
+      {
+       "text": "\"Thanks for flagging it fast. Is the customer affected right now? Let's look together.\"",
+       "best": true,
+       "feedback": "Yes. Thank the flag, check the impact, fix together. Review the process once the customer is safe."
+      }
+     ]
+    },
+    {
+     "scenario": "You're presenting a plan to your team and want honest input. You close with…",
+     "options": [
+      {
+       "text": "\"Any questions? No? Great.\"",
+       "feedback": "A quick yes/no question invites silence. Silence isn't agreement."
+      },
+      {
+       "text": "\"What am I missing? I'm sure there's something.\"",
+       "best": true,
+       "feedback": "Yes. Edmondson's advice for leaders: admit you can be wrong and ask real questions. It makes speaking up the normal thing to do."
+      },
+      {
+       "text": "\"My door is always open if you disagree.\"",
+       "feedback": "Well meant, but it leaves the risk with them: they must come to you, alone. A specific question in the room works better."
+      }
+     ]
+    }
+   ]
+  },
+  "insight": "Psychological safety isn't niceness or low standards. It's knowing you won't be punished for speaking up. Thank the telling, ask real questions, fix together.",
+  "model": "Thank the telling, then fix the problem. People repeat what gets rewarded.",
+  "try_today": "In your next 1:1 or standup, when someone brings bad news, make your first words 'Thanks for telling me.' Then ask what they need.",
+  "try_team": "End your next team meeting by asking 'What are we missing?' and wait a full 10 seconds before anyone answers.",
+  "source": {
+   "thinkers": [
+    "Amy Edmondson"
+   ],
+   "work": "Edmondson, 'Psychological Safety and Learning Behavior in Work Teams' (ASQ, 1999); The Fearless Organization (2018)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "courage_kindness",
+   "three_conversations",
+   "mistake_alchemy"
+  ],
+  "audience": "work"
  },
  {
   "id": "trust-ledger-swipe",

@@ -449,7 +449,7 @@
   "concept": "loss_aversion",
   "domain": "thinking",
   "type": "reveal",
-  "hook": "Heads you win £15. Tails you lose £10. Flip?",
+  "hook": "On average this bet pays you. Your gut may still say no.",
   "title": "Loss Aversion",
   "game": {
    "prompt": "One fair coin flip, real money. Heads: you win £15. Tails: you lose £10. On average you come out £2.50 up. Do you take it?",
@@ -590,7 +590,7 @@
    "premortem",
    "second_order"
   ],
-  "try_team": "Ask the group: 'How could we make this trip, project or term a total disaster?' List ideas for 5 minutes, then pick one to prevent.",
+  "try_team": "Ask the group: 'How could we make this trip, project or year a total disaster?' List ideas for 5 minutes, then pick one to prevent.",
   "from_source": {
    "quote": "Invert, always invert.",
    "cite": "Carl Jacobi, as quoted by Charlie Munger, Harvard School commencement speech (1986)",
@@ -1043,7 +1043,7 @@
   },
   "insight": "You saw every hour of your own work; theirs happened out of sight. What's easy to recall feels bigger. The gap is in memory, not in the people.",
   "model": "You remember your work in full and theirs in clips. Count theirs before you claim yours.",
-  "try_today": "Before you complain about who did what, list three things a groupmate or sibling did that you didn't see happen.",
+  "try_today": "Before you complain about who did what, list three things a teammate, flatmate or sibling did that you didn't see happen.",
   "try_team": "Everyone privately writes their % share of a shared task (a project, the chores). Add them up out loud, then each name one thing someone else did.",
   "source": {
    "thinkers": [

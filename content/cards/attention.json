@@ -717,7 +717,7 @@
     "hook": "Some apps let you finish. Others are built so you never hit bottom.",
     "title": "Find the Missing Stop",
     "game": {
-      "prompt": "Does it stop on its own?",
+      "prompt": "Endless by design?",
       "left": "Stops by itself",
       "right": "Never stops",
       "items": [
@@ -737,9 +737,9 @@
           "why": "Plot twist: the episode ends, but autoplay deletes the ending. Switch it off and it stops."
         },
         {
-          "text": "Refreshing the group chat, waiting for one reply",
+          "text": "Pulling to refresh your social feed for something new",
           "side": "right",
-          "why": "Each refresh might be the one. Random payoffs are among the hardest habits to quit."
+          "why": "Each pull might bring something good. Random payoffs are among the hardest habits to quit, and the feed never runs out."
         },
         {
           "text": "Checking the match score at full time",

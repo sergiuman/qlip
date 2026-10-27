@@ -3,7 +3,7 @@
  "edges": 369,
  "components": 1,
  "isolated": [],
- "cards": 191,
+ "cards": 193,
  "cards_by_domain": {
   "action": 17,
   "perception": 18,
@@ -13,19 +13,19 @@
   "emotions": 14,
   "meaning": 14,
   "growth": 18,
-  "connection": 17,
+  "connection": 19,
   "attention": 14,
   "decisions": 15,
   "wisdom": 17
  },
  "cards_by_type": {
   "venn": 5,
-  "reveal": 45,
-  "choice": 59,
+  "reveal": 44,
+  "choice": 61,
   "swipe": 34,
   "spectrum": 15,
   "order": 5,
-  "estimate": 24,
+  "estimate": 25,
   "radar": 4
  },
  "concepts_without_cards": [],

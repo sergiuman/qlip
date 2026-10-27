@@ -48,6 +48,10 @@
             },
             {
               "label": "Some of it is talent, some is practice.",
+              "value": 1
+            },
+            {
+              "label": "I'll just stop trying that thing around them.",
               "value": -1
             }
           ]
@@ -81,7 +85,7 @@
           "q": "Easy task or stretch task: which do you usually pick?",
           "options": [
             {
-              "label": "Depends on who's watching.",
+              "label": "Whichever one won't make me look bad.",
               "value": -1
             },
             {
@@ -151,7 +155,7 @@
           "options": [
             {
               "text": "\"Wow, you're so smart!\"",
-              "feedback": "Totally natural and kind. The catch: if 'smart' is the reason, a future hard problem can feel like proof they aren't."
+              "feedback": "Natural and kind. Dweck's team argued 'smart' praise makes later failure feel like proof they aren't; a large 2019 replication didn't find that. Naming what they did still gives them something to repeat."
             },
             {
               "text": "\"Nice! What did you do to crack the hard ones?\"",
@@ -178,7 +182,7 @@
             {
               "text": "\"This topic isn't clicking yet. What did you try? What could you try next?\"",
               "best": true,
-              "feedback": "Accepts the feeling, adds 'yet', and turns it into a plan. That's the growth move."
+              "feedback": "Accepts the feeling, adds 'yet', and gives a next step instead of a label. Research on mindset talk is mixed, but a concrete next step helps either way."
             }
           ]
         }
@@ -203,7 +207,7 @@
       "mistake_alchemy",
       "emotional_contagion"
     ],
-    "try_team": "At dinner, in class or at work (say, in a code review), go round once: each person names one specific thing someone else did well this week, and how.",
+    "try_team": "Next time you're all together, go round once: each person names one specific thing someone else did well this week, and how.",
     "audience": "all"
   },
   {
@@ -465,7 +469,7 @@
           "why": "One weak spot, just past your level, with instant feedback from your own ears. Textbook."
         },
         {
-          "text": "Driving to work every day for 20 years.",
+          "text": "Driving the same route every day for 20 years.",
           "side": "left",
           "why": "Keeps you fluent, but rarely sharpens skills like skid control. That needs targeted practice."
         },
@@ -847,7 +851,7 @@
     "insight": "A risk is a danger you can see and judge; a hazard is one you can't. Fix hazards, keep risks. A 2015 review tied risky outdoor play to more activity and social health; most studies were weak.",
     "model": "Remove the hidden hazards, keep the visible risks. That's where skill and courage grow.",
     "try_today": "Swap one 'Be careful!' for a question: 'What's your plan?' or 'Do you feel steady?' Try it on a kid, a colleague or yourself.",
-    "try_team": "At work, class or home, list 3 things you shield people from (a first client call, a solo trip). Sort each: hidden hazard (fix it) or visible risk (allow it).",
+    "try_team": "List 3 things you shield someone from (a solo bus trip, cooking dinner, a first big speech). Sort each: hidden hazard (fix it) or visible risk (allow it).",
     "source": {
       "thinkers": [
         "Mariana Brussoni"

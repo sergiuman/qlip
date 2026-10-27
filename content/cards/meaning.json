@@ -12,13 +12,13 @@
           "scenario": "You want your friends to start a regular Friday kickabout (or a walking group, or a study group). In the group chat, your first message is…",
           "options": [
             {
-              "text": "\"Pitch at 6, bring £3.\"",
+              "text": "\"Park at 6, bring a ball.\"",
               "feedback": "Useful details, but they answer a question nobody has asked yet. Logistics land better once people care."
             },
             {
               "text": "\"I miss us actually hanging out. Fancy a kickabout on Fridays?\"",
               "best": true,
-              "feedback": "You gave a reason they can feel: wanting time together. Now the time and the £3 sound like a way in, not a chore."
+              "feedback": "You gave a reason they can feel: wanting time together. Now the time and place sound like a way in, not a chore."
             },
             {
               "text": "\"It'll be the best thing anyone's doing this month.\"",
@@ -62,7 +62,7 @@
       "responsibility_meaning",
       "three_conversations"
     ],
-    "try_team": "Open your next meeting, class project or family plan with one line each: 'This matters to me because…'. Only then talk times and tasks.",
+    "try_team": "Open your next group plan (a trip, a project, a family day) with one line each: 'This matters to me because…'. Only then talk times and tasks.",
     "audience": "all"
   },
   {
@@ -111,7 +111,7 @@
     "hook": "A happy week and a meaningful week: are they the same week?",
     "title": "Meaning Lives in the Load",
     "game": {
-      "prompt": "Week A: lie-ins, good food, a film with friends. Week B: tiring, but you helped a friend get ready for a big interview and finished the group project everyone was counting on. Which feels happier, and which more meaningful?",
+      "prompt": "Week A: lie-ins, good food, a film with friends. Week B: tiring, but you helped a friend move house and finished something others were counting on. Which feels happier, and which more meaningful?",
       "choices": [
         "A happier, B more meaningful",
         "Same week for both",

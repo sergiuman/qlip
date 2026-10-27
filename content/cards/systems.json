@@ -109,7 +109,7 @@
   "insight": "Spirals can feel like bad luck or a flaw in you, but often they're just a loop. Draw the circle and you see each link. You don't fix it all, just one arrow.",
   "model": "If it keeps getting worse (or better) on its own, look for the circle, then cut or feed one link.",
   "try_today": "Sketch one loop in your life as 4 boxes and arrows. Circle the easiest link and change just that one today.",
-  "try_team": "Draw a loop your group keeps falling into (late starts, messy kitchen, missed homework). Everyone marks the easiest link. Change that one for a week.",
+  "try_team": "Draw a loop your group keeps falling into (late starts, messy kitchen, missed deadlines). Everyone marks the easiest link. Change that one for a week.",
   "source": {
    "thinkers": [
     "Peter Senge"
@@ -295,18 +295,18 @@
    "right": "Redesigner",
    "questions": [
     {
-     "q": "You keep spending too much. Your first move is…",
+     "q": "Your team keeps getting pulled into unplanned support work. Your first move is…",
      "options": [
       {
-       "label": "Promise to be stricter with myself",
+       "label": "Ask people to say no more often",
        "value": -2
       },
       {
-       "label": "Track every purchase for a month",
-       "value": 1
+       "label": "Log every interruption for two weeks",
+       "value": 0
       },
       {
-       "label": "Move money to savings automatically whenever it comes in",
+       "label": "Set up a rotating on-call person who shields the rest",
        "value": 2
       }
      ]
@@ -332,16 +332,16 @@
      "q": "You want to read more. You…",
      "options": [
       {
+       "label": "Just try to remember to read",
+       "value": -2
+      },
+      {
        "label": "Set a bigger reading goal",
        "value": -1
       },
       {
        "label": "Put a book where your phone usually sits",
        "value": 2
-      },
-      {
-       "label": "Just try to remember to read",
-       "value": -2
       }
      ]
     },
@@ -354,7 +354,7 @@
       },
       {
        "label": "Agree a pause rule when it starts",
-       "value": 0
+       "value": 1
       },
       {
        "label": "Ask what each of you is actually trying to protect",
@@ -397,13 +397,13 @@
    "begin_with_end",
    "circle_influence"
   ],
-  "try_team": "Next time your team or class is stuck, ban 'try harder' for 5 minutes. List changes to what people see, what's rewarded, or the goal.",
+  "try_team": "Next time your team is stuck, ban 'try harder' for 5 minutes. List changes to what people see, what's rewarded, or the goal.",
   "from_source": {
-   "quote": "Small changes can produce big results",
+   "quote": "Small changes can produce big results—but the areas of highest leverage are often the least obvious.",
    "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
    "next_read": "The Fifth Discipline, ch. 4; then Meadows, Thinking in Systems (2008), ch. 6"
   },
-  "audience": "all"
+  "audience": "work"
  },
  {
   "id": "fixes-that-fail-rats",
@@ -553,7 +553,7 @@
      "why": "If short sleep is behind the slump, this goes after the cause, not the feeling."
     },
     {
-     "text": "Always getting a parent or friend to make your awkward phone calls",
+     "text": "Always getting someone else to make your awkward phone calls",
      "side": "left",
      "why": "Relief now, but your own skill and confidence never get the reps."
     },
@@ -646,25 +646,25 @@
   "game": {
    "steps": [
     {
-     "scenario": "A teacher asks the class a hard question. Three hands shoot up within a second. What gets more thoughtful answers from more students?",
+     "scenario": "In a planning meeting you ask: \"What's the biggest risk in this plan?\" Two seniors answer in one second. What gets input from more of the team?",
      "options": [
       {
-       "text": "Call on the first hand to keep things moving",
+       "text": "Take the first answer and move on",
        "feedback": "Quick and natural. But then the fastest few do the thinking, and the rest learn they needn't."
       },
       {
-       "text": "Wait about three silent seconds before calling on anyone",
+       "text": "Wait three silent seconds, then ask someone who hasn't spoken",
        "best": true,
-       "feedback": "Yes. In Mary Budd Rowe's classroom studies, waiting about 3 seconds led to longer answers and more students joining in."
+       "feedback": "Yes. In Mary Budd Rowe's classroom studies, waiting about 3 seconds led to longer answers and more people joining in."
       },
       {
-       "text": "Give the answer so nobody feels stuck",
-       "feedback": "Kind, but it skips the thinking. A few seconds of quiet is often all people need."
+       "text": "Give your own answer to save time",
+       "feedback": "Efficient, but it skips their thinking, and once the boss has answered, few will disagree."
       }
      ]
     },
     {
-     "scenario": "Your team or club needs ideas to stop wasting time. The usual way is everyone talking at once. What tends to give more ideas?",
+     "scenario": "Your team needs ideas to stop wasting time. The usual way is everyone talking at once. What tends to give more ideas?",
      "options": [
       {
        "text": "An open brainstorm, loudest ideas first",
@@ -682,20 +682,20 @@
      ]
     },
     {
-     "scenario": "Your group chat (friends, team or family) keeps flaring up into fall-outs. Everyone has a quick theory why. What finds the real pattern?",
+     "scenario": "Production incidents keep repeating and everyone has a theory. What finds the real pattern?",
      "options": [
       {
        "text": "Go with whoever's loudest",
        "feedback": "Loud isn't proof. A pattern that repeats needs the record more than a debate."
       },
       {
-       "text": "Scroll back and look at when each fall-out actually started",
+       "text": "Line up the last 10 incident timelines and check when each actually started",
        "best": true,
-       "feedback": "Yes. A pattern hides in any one argument and shows up when you line them up."
+       "feedback": "Yes. A pattern hides in any one incident and shows up when you line them up."
       },
       {
-       "text": "Mute the chat and start a new one",
-       "feedback": "Tempting, but the same pattern usually moves to the new chat with you."
+       "text": "Add another alert and move on",
+       "feedback": "Tempting, but more noise rarely shows the pattern. The next incident just arrives louder."
       }
      ]
     }
@@ -704,7 +704,7 @@
   "insight": "Loud, fast rooms reward the first idea. A short pause, silent writing or a look back at the record lets slower clues surface. That helps everyone think, not just quiet people.",
   "model": "Pause before the talk: silence, paper or a look back lets slow patterns show.",
   "try_today": "Next time you ask someone a question, count three seconds in your head before you fill the silence.",
-  "try_team": "Open your next meeting, class or family plan with 3 minutes of silent writing. Go round, one idea each, before open talk.",
+  "try_team": "Open your next meeting with 3 minutes of silent writing. Go round, one idea each, before open talk.",
   "source": {
    "thinkers": [
     "Mary Budd Rowe",
@@ -721,7 +721,7 @@
    "leverage_points",
    "introvert_energy"
   ],
-  "audience": "all"
+  "audience": "work"
  },
  {
   "id": "feedback-loops-set-up-to-fail",

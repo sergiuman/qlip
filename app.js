@@ -80,12 +80,17 @@
       for (const c of DB.cards) {
         if (inQueue.has(c.id) || picks.includes(c.id) || !inWorld(c)) continue;
         if (prev && (sameStory(prev, c) || prev.concept === c.concept)) continue;
+        if (c.sensitive && queue.concat(picks).slice(-3).some((id) => CARD[id].sensitive)) continue;
         let s = 0;
         if (S.done[c.id]) s -= 6;
         s -= (S.seen[c.id] || 0) * 1.5;
         const nb = near.get(c.concept);
         if (nb) s += 2.5 * nb.w;
         s -= 2.2 * lastDomains.filter((d) => d === c.domain).length;
+        const recentConcepts = queue.concat(picks).slice(-12).map((id) => CARD[id].concept);
+        const family = new Set([c.concept, ...(NEIGH[c.concept] || []).filter((nb) => nb.type === "PART_OF").map((nb) => nb.id)]);
+        s -= 1.5 * recentConcepts.filter((k) => family.has(k)).length;
+        if (S.world === "life" && c.domain === "wisdom") s += 1;
         s -= Math.max(0, c.level - (1 + played / 6)) * 1.5;
         s += (CONCEPT[c.concept]?.rank || 0) * 25;
         s += hash(c.id + SESSION) * 1.6;
@@ -208,6 +213,8 @@
     if (result.text) wrap.append(h("p", { style: "margin:0" }, result.text));
     if (result.profile) wrap.append(h("p", { class: "small muted", style: "margin:0" }, "A snapshot of today's answers, not a verdict on you. People move."));
     wrap.append(h("p", { class: "model-line" }, h("small", {}, "The model"), card.model));
+    const firstLine = (card.insight.match(/^.*?[.!?](\s|$)/) || [card.insight])[0].trim();
+    wrap.append(h("p", { class: "first-why" }, firstLine));
     if (card.from_source) wrap.append(h("blockquote", { class: "primary" }, h("p", {}, `“${card.from_source.quote}”`),
       h("footer", {}, card.from_source.cite, card.from_source.next_read ? h("span", {}, ` · Read next: ${card.from_source.next_read}`) : null)));
     const cbId = `try-${card.id}`;
@@ -231,7 +238,7 @@
     wrap.append(more);
     if (targets.length) {
       const [cid, t] = targets[0];
-      const hook = card.sensitive || CARD[t].sensitive ? CONCEPT[cid].line : CARD[t].hook.length > 52 ? CARD[t].hook.slice(0, 50).replace(/\s+\S*$/, "") + "…" : CARD[t].hook;
+      const hook = card.sensitive || CARD[t].sensitive ? CONCEPT[cid].line : CARD[t].hook;
       wrap.append(h("button", { class: "btn next-up", onclick: () => jumpTo(t) }, h("small", {}, `Next · ${CONCEPT[cid].name}`), `${hook}\u00a0→`));
     }
     if (card.sensitive) wrap.append(h("p", { class: "sens" }, "This is for reflection, not diagnosis. If things feel heavy, talk to someone you trust or find free support at ",
@@ -363,7 +370,9 @@
           : g.results[reg] || { name: "", text: "" };
         if (undecided) { dot.setAttribute("cx", geo.g[0].toFixed(1)); dot.setAttribute("cy", geo.g[1].toFixed(1)); }
         const bars = keys.map((k) => `${g.axes.find((a) => a.key === k).label} ${Math.round((sc[k] ?? 0) * 10)}/10`).join(" · ");
-        live.textContent = bars;
+        const lowK = keys.reduce((a, k) => ((sc[k] ?? 0) < (sc[a] ?? 0) ? k : a), keys[0]);
+        const tie = keys.every((k) => Math.abs((sc[k] ?? 0) - (sc[lowK] ?? 0)) < 0.01);
+        live.textContent = tie ? bars : `${bars} · Lowest today: ${g.axes.find((a) => a.key === lowK).label}`;
         done({ name: r.name, text: r.text, profile: !undecided });
       }, "", SCALE4);
       return h("div", {}, view, live, qs);
@@ -474,7 +483,7 @@
             done(total < 2 ? { name: "" }
               : best === total ? { name: "You'd coach this one.", tally: `${best}/${total} best calls` }
               : best === 0 ? { name: "Here's another way to play it." }
-              : { name: "Good instincts. One more trick below.", tally: `${best}/${total} best calls` });
+              : { name: "Good instincts. One more trick below." });
           } } },
           i + 1 < g.steps.length ? "Next" : "See the model");
         const opts = h("div", { class: "opts" }, s.options.map((o) => h("button", { class: "opt", onclick: (e) => {
@@ -527,7 +536,7 @@
           rng.disabled = true; lock.remove();
           const diff = Math.abs(guess - g.answer);
           const off = span <= 10 ? diff / Math.max(1, (g.step || 1) * 4) : diff / Math.max(Math.abs(g.answer), 1e-9);
-          const verdict = off < 0.1 ? "Bullseye." : off < 0.3 ? "Close call." : g.typical_miss ? "Most people miss this one." : guess < g.answer ? "Plot twist: it's bigger." : "Plot twist: it's smaller.";
+          const verdict = off < 0.1 ? "Bullseye." : off < 0.3 ? "Close call." : g.typical_miss ? "Most people miss this one." : (guess < g.answer ? ["Plot twist: it's bigger.", "Higher than you'd think.", "Bigger than it looks."] : ["Plot twist: it's smaller.", "Lower than you'd think.", "Smaller than it looks."])[Math.floor(hash(card.id) * 3)];
           const truth = h("i", { class: "truth", style: `left:${pct(guess)}` });
           box.append(h("p", { class: "est-verdict" }, verdict),
             h("div", { class: "est-track" }, h("i", { class: "you", style: `left:${pct(guess)}` }), truth),
@@ -663,11 +672,8 @@
     const placed = [];
     for (const d of DB.domains) {
       const ns = sim.hit.filter((n) => CONCEPT[n.id].domain === d.id); if (!ns.length) continue;
-      const mx = ns.reduce((a, n) => a + n.x, 0) / ns.length, my = ns.reduce((a, n) => a + n.y, 0) / ns.length;
-      const ox = mx - W / 2, oy = my - H / 2, len = Math.hypot(ox, oy) || 1;
-      const reach = Math.max(...ns.map((n) => Math.hypot(n.x - mx, n.y - my))) + 18;
-      const cx = Math.min(W - 50, Math.max(50, mx + (ox / len) * reach));
-      let cy = Math.min(H - 10, Math.max(10, my + (oy / len) * reach));
+      const cx = Math.min(W - 50, Math.max(50, ns.reduce((a, n) => a + n.x, 0) / ns.length));
+      let cy = Math.max(10, Math.min(...ns.map((n) => n.y - n.r)) - 10);
       const w = ctx.measureText(d.name).width / 2 + 4;
       for (let tries = 0; tries < 6 && placed.some((b) => Math.abs(b[0] - cx) < b[2] + w && Math.abs(b[1] - cy) < 16); tries++) cy += 16;
       placed.push([cx, cy, w]);

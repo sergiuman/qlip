@@ -4,7 +4,7 @@
     "concept": "reversible_doors",
     "domain": "decisions",
     "type": "swipe",
-    "hook": "You spent 40 minutes picking a lunch spot. Was that door locked?",
+    "hook": "Two meetings on a choice you could undo. Which doors really lock?",
     "title": "One-Way vs Two-Way Doors",
     "game": {
       "prompt": "If this goes wrong, can you walk back through the door?",
@@ -17,14 +17,14 @@
           "why": "Hate it? Don't go next week. Cheap to undo, so decide fast."
         },
         {
-          "text": "Getting a face tattoo",
+          "text": "Signing a 3-year contract with a new cloud vendor",
           "side": "left",
-          "why": "Hard and painful to reverse. This one deserves slow thinking."
+          "why": "Exit costs and migrations make this hard to undo. Think slowly."
         },
         {
-          "text": "Picking a paint color for your room",
+          "text": "Trying a new standup format for two sprints",
           "side": "right",
-          "why": "Paint is cheap. A weekend fixes a bad call."
+          "why": "Two sprints, then a retro. Easy to roll back."
         },
         {
           "text": "Lending all your savings to a friend's 'sure thing'",
@@ -59,8 +59,8 @@
       "premortem",
       "impulse_pause"
     ],
-    "try_team": "List 5 choices your team, class or family keeps putting off. Vote: one-way or two-way door? Decide every two-way door before you leave the room.",
-    "audience": "all"
+    "try_team": "List 5 choices your team keeps putting off. Vote: one-way or two-way door? Decide every two-way door before you leave the room.",
+    "audience": "work"
   },
   {
     "id": "reversible-doors-spectrum",
@@ -188,20 +188,19 @@
     "hook": "You're 80, in a rocking chair. Which choice still stings?",
     "title": "The 80-Year-Old Test",
     "game": {
-      "prompt": "Imagine looking back from age 80. In studies of regret, which do most people say hurts longer: the risks they took that failed, or the chances they never took?",
+      "prompt": "Imagine looking back from age 80. In studies of regret, which do people say hurts longer: the risks they took that failed, or the chances they never took?",
       "choices": [
         "The risks that failed",
         "The chances I never took"
       ],
-      "reveal": "Over a lifetime, most people regret the chances they never took. Picked failed risks? That's true in the short run: fresh mistakes sting most. But they fade, while 'what if' stays open (Gilovich & Medvec, 1995).",
+      "reveal": "Looking back over decades, people in these studies named untaken chances more often than failed tries. Picked failed risks? That's true in the short run: fresh mistakes sting most. But they fade, while 'what if' stays open (Gilovich & Medvec, 1995). Missed some already? That's human, and many doors reopen later.",
       "answer": 1
     },
-    "insight": "Failed tries hurt, then fade: you learn and move on. Untaken chances stay open as 'what if'. It's a lens for close calls, not a license for reckless bets.",
-    "model": "From age 80, inaction usually hurts longer than a failed try. Let that tip close calls toward action.",
+    "insight": "Failed tries hurt, then fade. Untaken chances stay open as 'what if'. Popularised as a decision tool by Jeff Bezos: a lens for close calls, not a license for reckless bets.",
+    "model": "From 80, untried chances tend to linger longer than failed tries. A nudge on close calls, not a rule.",
     "try_today": "Write down one thing you'd regret never trying. Then write the smallest first step you could take this week.",
     "source": {
       "thinkers": [
-        "Jeff Bezos",
         "Thomas Gilovich",
         "Victoria Husted Medvec",
         "Daniel Pink"
@@ -273,8 +272,7 @@
       "thinkers": [
         "Thomas Gilovich",
         "Victoria Husted Medvec",
-        "Daniel Pink",
-        "Jeff Bezos"
+        "Daniel Pink"
       ],
       "work": "The experience of regret (Psychological Review, 1995); The Power of Regret (2022)"
     },
@@ -427,7 +425,7 @@
           ]
         },
         {
-          "scenario": "Your mate doesn't revise at all for a big test, guesses most answers, and passes with a good grade. Good decision?",
+          "scenario": "Your friend doesn't study at all for their driving theory test, guesses most answers, and passes. Good decision?",
           "options": [
             {
               "text": "No. A good grade doesn't fix a bad bet.",
@@ -441,16 +439,16 @@
           ]
         },
         {
-          "scenario": "Your new phone: repair cover costs 3 (any currency). There's about a 10% chance you'll need a 50 repair this year. On average, which is the better bet?",
+          "scenario": "Your phone: screen cover is £10 a year. Say there's a 1 in 5 chance you crack the screen this year, and a repair is £100. On average, which is the better bet?",
           "options": [
             {
-              "text": "Pay the 3: on average the risk costs 5",
+              "text": "Pay the £10: on average the risk costs £20",
               "best": true,
-              "feedback": "Right: 10% × 50 = 5 expected loss, more than the 3 fee. Weigh chance times stakes, then decide."
+              "feedback": "Right: 20% × £100 = £20 expected loss, more than the £10 fee. Weigh chance times stakes, then decide."
             },
             {
-              "text": "Skip it: the 3 is wasted if nothing breaks",
-              "feedback": "Fair feeling, and skipping can make sense if you could easily pay 50. But on average the risk (10% × 50 = 5) costs more than the fee."
+              "text": "Skip it: the £10 is wasted if nothing breaks",
+              "feedback": "Fair feeling, and skipping can make sense if you could easily pay £100. But on average the risk (20% × £100 = £20) costs more than the fee."
             }
           ]
         }
@@ -481,16 +479,18 @@
     "id": "opportunity-cost-unseen",
     "concept": "opportunity_cost",
     "domain": "decisions",
-    "type": "reveal",
-    "hook": "Every yes has a hidden price. Quick: would you buy them?",
+    "type": "estimate",
+    "hook": "Every yes has a hidden price. Does naming it change your mind?",
     "title": "What Is Not Seen",
     "game": {
-      "prompt": "New trainers you love cost £60. Option A: buy them. Option B: keep the £60 for other things you want (tickets, food with friends, saving). Which do you pick?",
-      "choices": [
-        "Buy them",
-        "Keep the £60 for other stuff"
-      ],
-      "reveal": "No wrong answer. But in one study, just naming option B cut buyers from 75% to 55% (Frederick et al., 2009); later replications found a smaller effect. Bastiat's point, 1850: the cost you see is the price; the cost you don't see is everything else that money could have been."
+      "question": "In a study, 75% chose to buy a $14.99 DVD when the other option was just 'don't buy it'. When that option read 'keep the money for other purchases', what % still bought?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 55,
+      "anchor": null,
+      "explain": "55%. Just spelling out what else the money could do cut buyers by about a quarter (Frederick et al., 2009); later replications found a smaller effect. Bastiat's point, 1850: an act's first effect is seen; its other effects, including what the money would otherwise have done, unfold later and go unseen. Economists later named that hidden alternative the opportunity cost (von Wieser)."
     },
     "insight": "Every yes is a no to something else: money, time, attention. Our minds rarely show what we give up unless someone names it. Bastiat called it 'what is not seen'.",
     "model": "The real price of a yes is the best thing it pushes out. Name it before you agree.",
@@ -711,20 +711,20 @@
           ]
         },
         {
-          "scenario": "Your group (a team at work, a club, a class project) is 18 months into a big plan. New numbers say it will likely fail even if finished. Someone says: 'We can't stop now, look how much we've put in.' You…",
+          "scenario": "Your friendship group has spent 3 months planning a trip to see a band abroad. Now tickets have doubled and half of you can't afford it. Someone says: 'We can't cancel now, think of all the planning.' You…",
           "options": [
             {
-              "text": "Compare the cost to finish with what it will likely earn",
+              "text": "Ask: if we were planning from scratch today, would we pick this?",
               "best": true,
-              "feedback": "Right. Only future costs and gains decide. The 18 months are gone; the next 6 aren't. Say it kindly: stopping isn't the same as admitting failure."
+              "feedback": "Right. The planning hours are gone either way. Only what's ahead decides."
             },
             {
-              "text": "Agree. Stopping would waste 18 months",
-              "feedback": "Understandable, and common in groups and organisations. But finishing a plan that's likely to fail adds to the loss rather than rescuing what's spent."
+              "text": "Agree, cancelling wastes all that planning",
+              "feedback": "Very normal, and harder to say out loud in a group. But going broke for a plan doesn't un-waste the planning."
             },
             {
-              "text": "Blame whoever started it",
-              "feedback": "Tempting, but blame makes people defend past choices harder. In Staw's 1976 study, people who made the first call kept funding it more."
+              "text": "Blame whoever suggested it",
+              "feedback": "Tempting, but blame makes people defend the old plan even harder."
             }
           ]
         },
@@ -751,7 +751,7 @@
     "insight": "Past costs pull us to keep going. The pull is real but modest in studies. And staying is fine when the future says so.",
     "model": "Ask 'From here, is this the best use of my next hour or next bit of money?' Ignore what's gone.",
     "try_today": "Pick one thing you're sticking with. Write one line: 'If I hadn't started yet, would I start today?' Act if the answer is a clear no.",
-    "try_team": "Before your group reviews a long project (club, class or work), ban the phrase 'we've already invested'. Discuss only what's left to spend and the payoff.",
+    "try_team": "Reviewing a long group plan (a trip, a club, a project)? Ban 'we've already put so much in'. Discuss only what's left to spend and the payoff.",
     "source": {
       "thinkers": [
         "Richard Thaler",
