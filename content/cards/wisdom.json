@@ -629,7 +629,7 @@
     "try_team": "Each person shares one past setback and one thing it led to, in a sentence each. Listeners only say thanks: no advice, no fixing.",
     "from_source": {
       "quote": "Amor fati: let that henceforth be my love!",
-      "cite": "Nietzsche, The Gay Science, §276 (trans. Thomas Common, 1910)",
+      "cite": "Nietzsche, The Joyful Wisdom (The Gay Science), §276 (trans. Thomas Common, 1910)",
       "next_read": "The Gay Science §276; Marcus Aurelius, Meditations, Book 4.1 (the fire image)"
     },
     "audience": "all"
@@ -1170,5 +1170,76 @@
       "regret_minimization"
     ],
     "audience": "young"
+  },
+  {
+    "id": "golden-mean-social",
+    "concept": "golden_mean",
+    "domain": "wisdom",
+    "type": "choice",
+    "hook": "Always agreeing is easy. Always arguing is easy. What's harder?",
+    "title": "Between Flattery and Fighting",
+    "game": {
+      "steps": [
+        {
+          "scenario": "A friend posts a strong opinion online and asks you, 'Agree?' You think they're half right. You reply…",
+          "options": [
+            {
+              "text": "'100%. Totally agree.'",
+              "feedback": "Kind, but not quite true. It keeps the peace, and Aristotle called always agreeing to please flattery: too much of a good thing."
+            },
+            {
+              "text": "'I agree with your first point. The second one I'd question. Here's why.'",
+              "best": true,
+              "feedback": "That's the mean: friendly and honest at once. They hear what works and the one thing worth a second look."
+            },
+            {
+              "text": "'No, you're wrong, and here's why.'",
+              "feedback": "Honest, but all edge. Aristotle's word for always objecting was quarrelsome: too little warmth for the truth to land."
+            }
+          ]
+        },
+        {
+          "scenario": "Others reply harshly. Your friend messages you privately: 'Was I an idiot to post that?' You…",
+          "options": [
+            {
+              "text": "'Not at all. Ignore them, they're just haters.'",
+              "feedback": "Loyal and comforting, which matters. It just skips the part they could learn from."
+            },
+            {
+              "text": "'Honestly, you kind of asked for it.'",
+              "feedback": "There may be some truth in it, but right now it lands as blame. Timing is part of the mean too."
+            },
+            {
+              "text": "'No. Your main point landed. One line came across harsher than you meant. Want to add a short follow-up?'",
+              "best": true,
+              "feedback": "Yes. Support first, then one honest, useful step. The right amount of both, at the right time."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Aristotle put friendliness between flattery (agreeing to please) and quarrelsomeness (objecting to win). The mean isn't half-agreeing: it's saying what's true in a way the person can hear.",
+    "model": "Between flattering and fighting: say what you agree with, then the one thing you'd question.",
+    "try_today": "Next time someone asks 'agree?', name one thing you agree with and one honest question before you reply.",
+    "source": {
+      "thinkers": [
+        "Aristotle"
+      ],
+      "work": "Nicomachean Ethics, Book II ch. 7 and Book IV ch. 6 (c. 340 BCE)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "courage_kindness",
+      "truthful_courage",
+      "psychological_safety"
+    ],
+    "try_team": "Take an idea the group likes. Each person names one thing that works and one honest question about it. Notice which questions make it better.",
+    "from_source": {
+      "quote": "the man who is pleasant in the right way is friendly and the mean is friendliness",
+      "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 7 (trans. W. D. Ross, 1925)",
+      "next_read": "Nicomachean Ethics, Book IV, ch. 6 (friendliness, flattery and quarrelsomeness)"
+    },
+    "audience": "all"
   }
 ]

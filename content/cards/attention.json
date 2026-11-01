@@ -773,5 +773,72 @@
       "environment_design"
     ],
     "audience": "all"
+  },
+  {
+    "id": "boredom-signal-activity",
+    "concept": "boredom_signal",
+    "domain": "attention",
+    "type": "choice",
+    "hook": "Bored stiff and itching for your phone? That itch has a message.",
+    "title": "What Boredom Is Asking",
+    "game": {
+      "steps": [
+        {
+          "scenario": "A dull job you can't skip: revision notes, a long form, a pile of admin. Half an hour in, your mind keeps drifting to your phone. You…",
+          "options": [
+            {
+              "text": "Scroll for 'just a minute'",
+              "feedback": "The most natural pull, and it does ease the itch. But the task is still waiting, and the signal goes unread: your mind wants something to grip."
+            },
+            {
+              "text": "Push through on willpower",
+              "feedback": "Sometimes that's enough. But you learn nothing about why the task drains you, so next time feels just the same."
+            },
+            {
+              "text": "Ask: is this too easy, too hard, or pointless to me?",
+              "best": true,
+              "feedback": "Yes. Danckert and Eastwood describe boredom as a mind that wants to engage but finds nothing to grip. Naming the mismatch tells you what to change."
+            }
+          ]
+        },
+        {
+          "scenario": "You check: it's too easy, the same small thing over and over. Now you…",
+          "options": [
+            {
+              "text": "Add a challenge: beat a 20-minute timer, or try a smarter way to do it",
+              "best": true,
+              "feedback": "Yes. Raising the challenge gives your mind something to grip, and the dull job often gets done faster."
+            },
+            {
+              "text": "Switch to something fun and come back later",
+              "feedback": "Fair, and sometimes right. But if it has to be done, it will still be too easy later. Change the task, not just the timing."
+            },
+            {
+              "text": "Decide you're just lazy",
+              "feedback": "Understandable, but not what the research says. Boredom is a signal about the task, not a flaw in you."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Boredom isn't laziness. Danckert and Eastwood see it as a mind wanting to engage with nothing to grip. Too easy? Add challenge. Too hard? Shrink the step. Pointless? Find the why.",
+    "model": "Boredom = mismatch. Too easy, too hard or pointless? Fix that, not your mood.",
+    "try_today": "Ask yourself next time you're bored: too easy, too hard, or pointless? Change one thing to fix it, then give it 10 more minutes.",
+    "try_team": "Each person names one task that bores them and labels it: too easy, too hard or pointless. Swap one fix idea each and try it this week.",
+    "source": {
+      "thinkers": [
+        "James Danckert",
+        "John Eastwood"
+      ],
+      "work": "Danckert & Eastwood, Out of My Skull: The Psychology of Boredom (2020)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "flow",
+      "aim_high",
+      "procrastination_emotion"
+    ],
+    "audience": "all"
   }
 ]

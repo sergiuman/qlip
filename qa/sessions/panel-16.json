@@ -1,0 +1,676 @@
+{
+ "session": 16,
+ "personas": [
+  {
+   "persona": "Maya, 16, Manchester sixth-former. Picked \"School & mates\" and wants quick, surprising stuff about her own life, not a lesson.",
+   "scores": {
+    "hook": 6,
+    "clarity": 5,
+    "usefulness": 6,
+    "safety": 6,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "self-reflection-loop-practice",
+     "severity": "high",
+     "problem": "Every answer button shows \"[object Object]\" (screenshot -a). I can't tell what I'm tapping, then the reveal talks about \"choice 0\" and \"choice 2\". That reads like broken code, and it also makes up a stat: \"Most people pick 'luck'\". inversion-avoid-failure-reveal has the same bug: both buttons say [object Object]. Its choices also carry \"best\" while answer=1 points at the Skip option, so the card calls the wrong option the right one.",
+     "fix": "Turn reveal choices into plain strings to match the schema, or make app.js render choice.text. self-reflection: choices [\"I got lucky\", \"I just put in more hours\", \"I looked back at what went wrong last time and changed it\"], answer 2. Rewrite reveal to: \"Luck and hours matter, but the part you can repeat is the review: what worked, and why. Boyatzis & McKee build coaching around that loop.\" Remove 'Most people pick' and every 'choice N'. inversion: choices [\"List 3 ways to totally bomb it\", \"Skip to the good ideas\"], answer 0, and drop the per-choice best/feedback objects."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "I picked School & mates, but the feed kept sending me adult and work stuff tagged audience \"all\": \"You're bored at work\" with spreadsheets (boredom-signal-activity), \"tired after work\" (two-minute-rule-choice), a friend's car and \"get something from their car\" (shifting-burden-choice, will-gap-capable-bystander-choice), a self-help book about being organised (useful-truth-action-choice). That's 5 of my first ~10 cards. Makes me feel the app isn't for me.",
+     "fix": "Set audience:\"work\" on boredom-signal-activity and two-minute-rule-choice, or rewrite them (see below). In the build's audience inference, treat words like 'work', 'spreadsheet', 'car', 'mechanic', 'self-help book', 'meeting' as not-young when audience is 'all'. Then audit the 'all' cards so their scenarios fit a 15-year-old as well as an adult."
+    },
+    {
+     "card_id": "shifting-burden-choice",
+     "severity": "high",
+     "problem": "This is wrong about the actual idea. Shifting the burden (systems thinking) means a quick fix that takes the pressure off and slowly weakens the real fix. The card's model says the opposite: \"Shifting the burden teaches a skill\". It's also about a car, so not my life, and it's a one-step card with an obvious answer.",
+     "fix": "Hook: \"Your mate copies your homework every week. Helping, or making it worse?\" Step 1 options: \"Send it again, it's quicker\" (feedback: the quick fix works today, but they never learn and they'll need you more next week), \"Sit with them for 10 min on the first question\" (best), \"Tell the teacher\". Model: \"A quick fix that removes the pain can weaken the real fix. Ask: does this help them need me less?\" Insight: name Senge's 'shifting the burden' archetype. Add a step 2 where the quick fix is tempting again."
+    },
+    {
+     "card_id": "will-gap-capable-bystander-choice",
+     "severity": "medium",
+     "problem": "Confusing and partly wrong. The model says \"'want to' (skill)\", but want is will, not skill. The 'best' option, \"are you just testing your strength?\", sounds sarcastic. Step 2's best answer is to keep chatting after they've already said they're fine, which ignores their no. Evidence 'strong' isn't justified, and it doesn't teach will vs skill at all.",
+     "fix": "Rewrite around a teen will-gap: \"You KNOW how to start your coursework. You just… don't.\" Options test whether the gap is will or skill. Model: \"If you can do it but don't, the gap is will, not skill. Find your why before more tutorials.\" Set evidence:\"philosophy\". If the box scenario stays, make 'Leave them to it, and say \"shout if you change your mind\"' the best option in step 2."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Once you've answered, the reveal header says \"Good instincts. One more trick below.\" even when I picked the wrong answer (implementation-intentions-choice step 3, I chose 'do 30 minutes tomorrow'). Feels fake, and I stop trusting the praise.",
+     "fix": "In app.js, choose the header from the result. If the last pick was best: \"Nailed it.\" If any pick wasn't best: \"Close. Here's the trick.\" If more than half missed: \"Plot twist. Here's why.\""
+    },
+    {
+     "card_id": "emotional-contagion-choice-reaction",
+     "severity": "medium",
+     "problem": "Reads like a PSHE worksheet: \"emotional landscape of our interactions\", obvious right answers. It doesn't explain emotional contagion, which is catching other people's moods. The 'best' step 2 answer is a hug, and the feedback then says ask first, so it contradicts itself. Evidence 'strong' is shaky for the claim it makes.",
+     "fix": "Hook: \"Your mate walks in stressed. 10 minutes later, so are you. Why?\" Step 1: notice whose mood you caught. Step 2: best = \"Say 'that sounds rubbish, want to talk or want distraction?'\" Model: \"Moods spread. Notice whose you've caught before you react.\" Try today: \"Next time your mood drops in a group, ask: is this mine or did I catch it?\" Set evidence to moderate and cite Hatfield, Cacioppo & Rapson (1994)."
+    },
+    {
+     "card_id": "boredom-signal-activity",
+     "severity": "medium",
+     "problem": "Office-worker scenario, only one step, and it moralises (\"Don't react impulsively\"). It's tagged sensitive, so I get a helpline footer on a card about being bored. That's weird and a bit much. There's no surprise in it.",
+     "fix": "Scenario: \"Double chemistry, 2:15pm. Brain fully off. You…\" Options: \"Scroll under the desk\", \"Ask yourself: is this too easy or too confusing?\" (best: boredom often means the challenge doesn't match your level), \"Doodle\". Add step 2: if too confusing, ask one question; if too easy, set yourself a harder version. Remove sensitive:true. Model: \"Boredom = mismatch. Too easy or too hard? Fix that, not your mood.\""
+    },
+    {
+     "card_id": "useful-truth-action-choice",
+     "severity": "low",
+     "problem": "The hook mentions an 'assertiveness' article, but the card is about an organising book. Step 2's 'best' question to a friend sounds like an interrogation. Try_today says to read for 15 minutes. Basically homework, and the pragmatism idea (William James) is never named.",
+     "fix": "Hook: \"Saved 40 study-tip TikToks. Used any?\" Step 1 swaps the book for saved videos; best = \"Try one tip tonight for 10 min\". Step 2: \"How do you know a tip is 'true' for you?\" best = \"It changed something I can see\". Insight: add \"William James: an idea's truth shows in what it does.\" Try today: \"Pick one saved tip and use it once before bed.\""
+    }
+   ],
+   "best_cards": [
+    "implementation-intentions-choice",
+    "sunk-cost-three-lives",
+    "self-compassion-spectrum"
+   ],
+   "verdict": "About half the feed actually felt like mine. The bag-down revision plan, sunk cost on skins and band tickets, the inner-critic card, and the phone screen-cover maths are quick, real and something I'd actually use. The rest wrecked it. Two cards literally said \"[object Object]\". Five 'School & mates' cards were about work, spreadsheets or cars. A couple of cards get their own idea wrong (shifting the burden, will vs skill) or sound like a PSHE leaflet. And it said \"Good instincts\" when I got it wrong. I'd keep scrolling for the good ones, but I'd only share sunk-cost."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. Picked \"Work\". Wants tools for tomorrow's 1:1s, retros and kickoffs, and has no patience for greeting-card advice.",
+   "scores": {
+    "hook": 6,
+    "clarity": 6,
+    "usefulness": 6,
+    "safety": 6,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "will-gap-capable-bystander-choice",
+     "severity": "high",
+     "problem": "This card is broken from start to finish. It is about a stranger carrying a box, not about will versus skill. The model says \"'want to' (skill)\", which mixes up will and skill, the exact two things the concept should separate. The best answer in step 1 contains the odd line \"are you just testing your strength?\". In step 2, the best answer says to fetch something from a stranger's car right after they said they are fine, and that overrides their 'no'. The card also claims 'strong' evidence and cites Sinek, who has nothing to do with this. It contradicts the good wso-triad cards I played in the same session, so I trust the whole app less.",
+     "fix": "Rewrite the card or remove it. Proposed rewrite, a work choice card: scenario 'Your senior dev Ioana can do the migration (she did two before) and has the time. It has sat untouched for 3 weeks. You…'; options: A 'Send her a migration guide' (feedback: 'She already knows how. A guide aims at skill that is not missing.'), B best 'Ask: what would make this worth doing for you?' (feedback: 'Skill and door are there, so the gap is the why. Her answer may also show the task really is low value.'), C 'Set a hard deadline' (feedback: 'This can get it done, but it will not create a reason, so expect the minimum.'). model: 'When skill and access are there and nothing moves, ask about the why before you train or push.' try_today: 'Pick one stalled task on your team. Ask its owner: what would make this worth doing for you?' evidence: 'philosophy'. source: Blumberg & Pringle (1982) and Deci & Ryan. Delete the Sinek citation."
+    },
+    {
+     "card_id": "premortem-reveal",
+     "severity": "high",
+     "problem": "This is the third pre-mortem card in one session. It is a vacation card served in the Work world, even though audience is 'work'. The answer is wrong: answer=2 (the third choice) is marked correct, but 'option 3 is often the most common' is invented and has no source. The card asks me to guess a 'most likely culprit' without any data, labels it 'Strong evidence', and turns the method into trip tips. premortem-choice already does this well for work.",
+     "fix": "Set audience to 'all' and evidence to 'philosophy', or delete the card. If it stays, replace the made-up statistic with something real: prompt 'In a lab study, people imagined an event had already happened. Compared with imagining it might happen, how many more reasons for the outcome did they find?' choices ['About the same', 'About 25% more', 'Twice as many']; answer 1; reveal 'About 25% more (Mitchell, Russo & Pennington, 1989). Saying it already failed, not it might fail, is what makes a pre-mortem work.' Also add a feed rule: no more than 1 card per concept per 20 cards served."
+    },
+    {
+     "card_id": "emotional-contagion-choice-reaction",
+     "severity": "high",
+     "problem": "The card does not teach emotional contagion, which is catching other people's moods without noticing. It teaches generic listening, and the insight even admits this ('more than catching feelings'). The best answer in step 2 is a hug. In a Work feed that is risky advice. The model 'Empathy is contagious too!' is a slogan, not a tool, and the evidence label is 'strong'.",
+     "fix": "Change the card to real contagion at work. Scenario: 'You walk into stand-up straight after a tense call with your director. Your jaw is tight. What happens to the team?' Options: A best 'Name it in one line: \"Rough call, not about you. Give me 2 minutes.\"' (feedback: 'Moods spread through faces and voice before words do. Naming it stops the team reading it as their fault.'), B 'Hide it and run stand-up as normal' (feedback: 'People still catch the tension, they just guess the cause wrongly.'), C 'Vent about the call to the team' (feedback: 'Now five people carry it instead of one.'). In step 2, remove the hug option, or replace the best answer with 'Ask what would help right now: listening or ideas?'. model: 'Your mood leaks into the room. Name it before it spreads.' evidence: 'moderate' (Hatfield, Barsade 2002)."
+    },
+    {
+     "card_id": "circle-competence-choice-advice",
+     "severity": "medium",
+     "problem": "The card misreads the concept. Circle of competence means knowing where your knowledge ends. Here, the 'refer to an expert' options are marked not-best, and the best answer recasts 'listening' as everyone's competence, which empties the idea. The scenarios are about a friend's phone and career, not work. The evidence is labelled 'strong' with the source 'Buffett's investment philosophy'.",
+     "fix": "Make it a work scenario. Step 1: 'A junior asks you which Kubernetes autoscaling setting to use. You last touched infra 6 years ago. You…' best 'Say \"Outside my circle. Ask Mihai, and tell me what he says so I learn too.\"'; other options 'Give your best guess confidently' (feedback 'Sounding sure outside your circle spreads errors with your authority on them.') and 'Google it together for 30 minutes'. model: 'Know where your knowledge ends. Inside: decide. Outside: say so and route.' evidence: 'philosophy'. source work: 'Berkshire Hathaway shareholder letter (1996)'."
+    },
+    {
+     "card_id": "boredom-signal-activity",
+     "severity": "medium",
+     "problem": "There are only two options and one is a strawman ('close your laptop and dive into the game'). Nobody learns from that, and an adult manager feels talked down to. The citation looks invented ('Danckert & Mann 2015 Boredom as a signal'), and the 'Bored To Death' next_read is not reliable. The card is also flagged sensitive with no reason, and it adds nothing beyond boredom-signal-estimate, which is much better.",
+     "fix": "Delete the card, or add a third plausible option and fix the source. Options: A 'Push through, it's only 2 more hours' (feedback: 'Works sometimes, but you learn nothing about why the task drains you.'), B 'Open Slack and look for something more interesting' (feedback: 'The usual move. It treats the signal but ignores the message.'), C best 'Ask: is this task too easy, too vague, or pointless to me? Fix that one thing (batch it, clarify it, or question it).' Set source to Danckert & Eastwood, Out of My Skull (2020). Remove next_read and set sensitive:false."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The 'Work' world filter lets in cards with audience 'all' that are clearly personal: a festival trip (premortem-trip), a friend's heartbreak, a friend's phone, a stranger with a box. A card marked audience 'work' (premortem-reveal) is about a vacation. So 3 pre-mortem cards and 2 boredom cards landed in 20, plus several off-topic ones. Also, the feed screenshot shows a 'Something new from Old Wisdom, to keep your map balanced' card that interrupts my chosen world.",
+     "fix": "In the Work world, rank audience:'work' cards first and serve audience:'all' cards only when they have no explicit personal setting. Add a lint check that flags audience:'work' cards containing 'trip', 'vacation', 'friend' or 'festival'. Limit the feed to one card per concept per session window and suppress same-concept variants once one has been played. Limit 'balance' injections to 1 in 10 cards, and pick them from the work-tagged cards of that domain."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "The evidence badges are not reliable. 'Strong evidence' appears on Buffett's philosophy, a Sinek book and a made-up vacation statistic, while well-sourced cards (Altmann 2014) say 'Moderate'. As a manager I would repeat these to my team, so wrong badges are a trust problem.",
+     "fix": "Change evidence to 'philosophy' on will-gap-capable-bystander-choice, circle-competence-choice-advice and premortem-reveal, and to 'moderate' on emotional-contagion-choice-reaction. Add a validator rule that 'strong' requires a peer-reviewed meta-analysis or a replicated study named in source.work."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "The result texts are long and repeat the 'scores high today' hedging. The 'mid' and empty results feel generic. For a tired person, 'find or build another door' (SW) is vague.",
+     "fix": "SW text: 'You want it and can do it; the door is shut today. That's structural, not a flaw. This week, ask one person who controls the door for one specific chance (a meeting, an hour, a ticket).' OS text: 'Everything is there except the fire. Write one line: what changes for me if this is done? If nothing, drop it without guilt.'"
+    }
+   ],
+   "best_cards": [
+    "wso-triad-one-to-one-choice",
+    "mistake-alchemy-incident-reveal",
+    "attention-residue-quick-question"
+   ],
+   "verdict": "Half of this session is exactly what I want. The Dana/Raj/Mo 1:1 card, the Ana/Ben incident sort and the 3-second interruption tax are things I can use tomorrow in a 1:1, a retro and a team agreement, with honest sources and no blame. The other half feels like filler from another app: a stranger with a box, a friend's heartbreak with a hug as the best answer, phone advice, three pre-mortems including a vacation one with a made-up statistic, and 'strong evidence' stamped on Sinek and Buffett. The bad cards make me doubt the good ones. Remove or rewrite the 4-5 weak generic cards, enforce the Work filter and one card per concept, and this goes from 6 to an 8 for me."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher; reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader; dislikes pop-psych oversimplification.",
+   "scores": {
+    "hook": 6,
+    "clarity": 5,
+    "usefulness": 5,
+    "safety": 5,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "self-reflection-loop-practice",
+     "severity": "high",
+     "problem": "Every answer button shows the literal text \"[object Object]\" (screenshot -a), so I could not read my options. Under the reveal schema, choices must be plain strings with a top-level answer index; this card uses {text, answer} objects. The reveal also invents a statistic ('Most people pick luck'), uses programmer-style 'choice 0/1/2' wording, shows raw asterisks in *before*, dates Resonant Leadership to 2014 (it was published in 2005), and labels a leadership book 'strong' evidence.",
+     "fix": "Set game.choices to [\"I just got lucky.\", \"I put in extra hours, even though I was tired.\", \"I looked back at what worked before and adjusted.\"] and add game.answer: 2. Prompt: \"Think of a recent success. What did you do before it that helped?\" Reveal: \"Luck and effort both play a part. But Boyatzis and McKee argue that lasting growth comes from a loop: notice what worked, adjust, repeat. Looking back at wins, not only losses, shows you what to do again.\" Set source.work to \"Boyatzis & McKee, Resonant Leadership (2005)\" and evidence to \"philosophy\"."
+    },
+    {
+     "card_id": "shifting-burden-choice",
+     "severity": "high",
+     "problem": "The card gets Senge's archetype backwards. In 'shifting the burden', a quick symptomatic fix is used again and again until the real solution withers and dependence grows. The card's model says 'Shifting the burden teaches a skill', which reverses the concept for anyone who goes on to read Senge. The car scenario also assumes the friend wants a mechanics lesson.",
+     "fix": "Model: \"Shifting the burden: a quick fix that works today can quietly replace the real fix, and dependence grows.\" Insight: \"Senge's archetype: each time the quick fix (you repair the car) relieves the symptom, the real fix (your friend learning basics, or budgeting for a mechanic) gets weaker. Ask what the quick fix is replacing.\" Scenario: \"Third time this month your friend's car won't start and they call you. You...\" Best option: \"Help tonight, then ask: 'Want me to show you the battery check, or help you find a mechanic you trust?'\""
+    },
+    {
+     "card_id": "will-gap-capable-bystander-choice",
+     "severity": "high",
+     "problem": "The card does not hang together. Its title is 'Skill vs. Why' and it cites Sinek, but the game is about helping a stranger with a box. The model calls 'want to' a skill. One option has the odd line 'are you just testing your strength?'. In step 2 the person has already said they are fine, yet 'Leave them to it' gets 'Good!' and is marked wrong, while chatting and offering to fetch things from their car is marked best. That overrides a stated boundary. The card is also labelled 'strong' evidence.",
+     "fix": "Retire this card or rewrite it around will_gap: Scenario: \"You know exactly how to fix the leaky tap (skill). It's been three weeks. What's missing?\" Options: \"More instructions\" / \"A reason it matters to me now\" (best: \"Skill was never the gap; the why was.\") / \"A better wrench\". Model: \"When you can but don't, look for the missing why, not more how-to.\" Set evidence to \"philosophy\". If you keep the box scene, mark \"Leave them to it, and say 'shout if you change your mind'\" as best."
+    },
+    {
+     "card_id": "boredom-signal-activity",
+     "severity": "high",
+     "problem": "The citation looks invented. I know of no 2015 Danckert & Mann paper titled 'Boredom as a signal', and no Danckert & Mann book 'Bored To Death'. Danckert's book is Out of My Skull (2020), written with John Eastwood. A made-up source in a learning app is a breach of trust. The dilemma is also a strawman: quit work for a video game, or take a reflective walk.",
+     "fix": "Set source.thinkers to [\"James Danckert\", \"John Eastwood\"], source.work to \"Danckert & Eastwood, Out of My Skull: The Psychology of Boredom (2020)\", and next_read to \"Out of My Skull, ch. 1 (what boredom is telling you)\". Add a realistic third option: \"Scroll your phone for 'just a minute'\", with feedback: \"Most common move. It soothes the itch but doesn't answer the signal, which is that you want something more engaging or meaningful.\""
+    },
+    {
+     "card_id": "emotional-contagion-choice-reaction",
+     "severity": "medium",
+     "problem": "The card mislabels the concept. Emotional contagion (Hatfield, Cacioppo & Rapson) is the automatic catching of others' feelings through mimicry. The card turns it into 'empathetic responses' and 'Empathy is contagious too!'. The citation 'Social Psychology (1986)' is wrong. Step 2 marks an unasked hug as best while its own feedback says to ask first.",
+     "fix": "Model: \"Feelings spread by mimicry: you catch a friend's distress. Notice it in yourself so you can stay steady for them.\" Step 2: add the option \"Say 'That sounds really hard. Do you want me to just listen, or help think it through?'\" and mark it best. Mark the hug option not-best, with feedback: \"Can be lovely, if you ask first.\" Source: \"Hatfield, Cacioppo & Rapson, Emotional Contagion (1994)\". Evidence: \"moderate\"."
+    },
+    {
+     "card_id": "inversion-avoid-failure-reveal",
+     "severity": "medium",
+     "problem": "game.answer is 1, which points at 'Skip this', while choice 0 is flagged best. Players can be scored against the right answer. 'Invert, always invert' comes from the mathematician Jacobi, and Munger says so himself when he quotes it. 'A roadmap with extra turns to avoid' is muddled, and the screenshots show raw asterisks.",
+     "fix": "Set game.answer to 0. Reveal: \"Charlie Munger borrowed the mathematician Jacobi's advice: 'Invert, always invert.' Ask how you'd guarantee failure (mumbling, no rehearsal, too many slides), then avoid exactly those. Problems are often easier to see backwards.\" Source.work: \"Munger, Poor Charlie's Almanack (2005), quoting Carl Jacobi\"."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "Evidence badges and citations are unreliable, which matters most to a reader who checks sources. 'Strong evidence' appears on popular books or opinion: second-order-fireworks-reveal (Howard Marks, dated 2013 but published 2011), two-minute-rule-choice (Clear/Allen), will-gap, emotional-contagion and self-reflection. useful-truth-action-choice lists 'The Meaning of Truth (Peirce)', a book William James wrote in 1909.",
+     "fix": "Add a lint rule: evidence 'strong' needs a peer-reviewed meta-analysis or replicated experiment in source.work. Otherwise default to 'philosophy' or 'moderate'. Set second-order-fireworks-reveal to evidence \"philosophy\" and work \"The Most Important Thing (2011)\". Set two-minute-rule-choice to \"philosophy\". Set useful-truth-action-choice next_read to \"William James, Pragmatism (1907), Lecture VI 'Pragmatism's Conception of Truth'\"."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "Markdown asterisks show as literal characters in boredom-signal-activity (*by*), self-reflection-loop-practice (*before*) and second-order-fireworks-reveal (*after*, *next*). It looks careless and undercuts the polished design.",
+     "fix": "In app.js text rendering, after HTML-escaping, convert /\\*([^*]+)\\*/g to <em>$1</em>. Also add a data lint that fails on any card string containing '*'."
+    }
+   ],
+   "best_cards": [
+    "small-wins-setback-reveal",
+    "start-with-why-because-estimate",
+    "never-miss-twice-choice"
+   ],
+   "verdict": "This feed has two levels of quality. The best cards (Langer's 'because' copier study, Amabile's setbacks and progress, Never Miss Twice set against William James, Map or Territory, Stress Mindset) are honest about their limits. They cite real work with real numbers and treat me as an adult: Peterson Academy in thirty seconds, done well. Alongside them sat a run of thin cards: a broken '[object Object]' screen, a misattributed Munger quote, a boredom citation that appears to be invented, Senge's archetype stated backwards, 'empathy is contagious!', and pop-business books badged 'strong evidence'. A retired teacher forgives simplicity but not inaccuracy, and these cards cost the app the trust its good ones earn. I would come back for the James and Langer cards. I would not share the feed until the weaker generated cards are fixed or retired and the evidence badges mean something."
+  },
+  {
+   "persona": "Sam, 24, graduate with anxiety and low self-worth after a rough year. Picked \"Everyday life\". Wants to feel safe, not judged, and come away with something small and real I can actually do.",
+   "scores": {
+    "hook": 6,
+    "clarity": 4,
+    "usefulness": 6,
+    "safety": 6,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "inversion-avoid-failure-reveal",
+     "severity": "high",
+     "problem": "Both answer buttons show \"[object Object]\" (screenshot -a), so I can't tell what I'm picking. On top of that, game.answer is 1, so the app marks \"Skip this and jump straight to good ideas\" as correct, which is the opposite of what the card teaches. I picked the first option and felt like I'd got it wrong without knowing why. That's the worst thing that can happen to me in a 'learning' app. The prompt also assumes my 'biggest goal' is acing a presentation.",
+     "fix": "Make game.choices plain strings, as the schema requires: [\"List 3 ways I could bomb it\", \"Skip that, jump to good ideas\"]. Delete game.answer, because this is an opinion prompt. Change the prompt to: \"Think of something coming up this week (a talk, a call, a hard conversation). Before planning how it goes well, which would you do first?\" Change the reveal to: \"Munger's habit: 'invert'. Listing the ways it could go wrong (rambling, no practice run, starting late) gives you a short checklist of things to avoid. That's often easier than guessing what 'perfect' looks like.\" Also add a validator in the build step that rejects non-string items in reveal choices."
+    },
+    {
+     "card_id": "second-order-fireworks-reveal",
+     "severity": "high",
+     "problem": "Same bug: both choices render as \"[object Object]\" (screenshot -a), so the card can't be played at all. The choices also carry their own 'answer' keys, which the reveal type doesn't use. 'You just landed your dream job!' is also a painful line for a graduate who hasn't, and the prompt asks two questions at once.",
+     "fix": "Change game.choices to [\"Praise and confidence\", \"New demands I'll need to grow into\"] with no game.answer. Change the prompt to: \"Picture a good thing happening, like a new job, a new flat or a new relationship. First effect: excitement. What tends to show up a few weeks later?\" Change the reveal to: \"Both are real. First-order thinking stops at the joy. Second-order thinking asks what the win sets in motion (new demands, new habits) so you can plan for it gently, not dread it.\" Remove the asterisks from the hook and prompt, because they render as literal *after* in the headline."
+    },
+    {
+     "card_id": "self-reflection-loop-practice",
+     "severity": "high",
+     "problem": "The choices are objects, so they will render as [object Object] like the other reveal cards. The reveal says \"Most people pick 'luck'\" with no source, which looks made up. It also treats 'I just got lucky' as the wrong mindset. For someone with low self-worth, explaining away my successes as luck is exactly my pattern, and being told it's wrong feels like a telling-off, not help. Calling it 'strong' evidence for a leadership book is overclaiming.",
+     "fix": "Change the choices to strings: [\"Luck, mostly\", \"Extra hours\", \"I'd changed how I did something\"], with no answer. Change the reveal to: \"If 'luck' came to mind first, that's common, especially after a hard year. Try one more look: luck rarely does all the work. Name one thing you did that helped, even something small like turning up or asking a question. Spotting your part is how you repeat it.\" Change the hook to \"Something went OK recently. What was your part in it?\" Change evidence to \"philosophy\" and the source to Boyatzis & McKee, Resonant Leadership (2005)."
+    },
+    {
+     "card_id": "will-gap-capable-bystander-choice",
+     "severity": "medium",
+     "problem": "The card is labelled 'Skill vs. Why' but it's about helping a stranger with a box. The model text is wrong (\"'want to' (skill)\"; 'want to' is will, not skill). The 'best' first option includes \"Or are you just testing your strength?\", which sounds sarcastic. In step 2 the best answer offers help again after they've said no, and 'Leave them to it, respecting their wishes' gets a 'Good!' but is still marked as not best. That leaves me confused about whether respecting a boundary is right. The Sinek source doesn't fit, and 'strong' evidence isn't earned.",
+     "fix": "Rewrite it, or retire it and point the concept to wso-triad-venn. A minimal fix: change option 1c to \"Stop and ask: 'Want a hand with that?'\" Mark step-2 option \"Leave them to it, and say 'shout if you change your mind'\" as best, with feedback \"Yes. You offered, they chose. Leaving the door open respects them.\" Change the model to \"Before you help, ask. Good intentions land best when the other person gets a say.\" Change the title to \"Ask Before You Help\", evidence to \"philosophy\", and remove the Start With Why source."
+    },
+    {
+     "card_id": "boredom-signal-activity",
+     "severity": "medium",
+     "problem": "The scenario is office-only ('staring at spreadsheets'), and the 'wrong' option is followed by a stress threat ('tomorrow you'll likely feel more stressed'). The try_today 'What am I avoiding?' assumes avoidance and makes me feel caught out. The source line 'Boredom as a signal: The search for meaning in everyday life (2015)' doesn't match the real book (Danckert & Eastwood, Out of My Skull, 2020), and Sandi Mann wasn't a co-author.",
+     "fix": "Change the scenario to \"You're on a dull task (revision, forms, chores) and your mind keeps drifting to your phone. You…\". Change the option 1 feedback to \"Totally normal pull. It eases the itch, but the task is still waiting. Boredom is asking for something; worth asking what.\" Change try_today to \"Next time you're bored, ask: is this too easy, too hard, or not meaningful to me? Change one thing to match.\" Change the source to {thinkers:[\"James Danckert\",\"John Eastwood\"], work:\"Out of My Skull: The Psychology of Boredom (2020)\"} and evidence to \"moderate\"."
+    },
+    {
+     "card_id": "emotional-contagion-choice-reaction",
+     "severity": "medium",
+     "problem": "The card doesn't teach emotional contagion (catching other people's moods). It's a generic listening card, and the model 'Empathy is contagious too!' isn't the concept. The step-2 'best' answer is a hug, which reads as pressure to touch and isn't universally safe. The feedback says 'ask first', but the option itself doesn't.",
+     "fix": "Change the step-2 best option to \"Say 'That sounds really hard. Do you want me to just listen, or help think it through?'\" with feedback \"Yes. Asking what they need is the kindest next move.\" Make the hug option non-best, with feedback \"Some people want a hug, some don't. Asking first keeps it safe.\" Change the model to \"Moods spread between people. Stay steady and present, and you help them settle instead of both spiralling.\" Change the insight to \"We automatically mirror the faces, voices and moods around us (Hatfield et al., 1994). Staying calm and listening lets your steadiness spread, not just their distress.\" Change the source work to \"Emotional Contagion (1994)\"."
+    },
+    {
+     "card_id": "shifting-burden-choice",
+     "severity": "medium",
+     "problem": "The model is backwards: in Senge, 'shifting the burden' is the trap (a quick fix that weakens the real solution), but this card says 'Shifting the burden teaches a skill'. It also assumes I can fix cars, which I can't, so every option feels out of reach. 'Taking care of it... leaves them reliant on others' sounds slightly judgemental of anyone who asks for help.",
+     "fix": "Change the scenario to \"Your flatmate asks you, for the fifth time, to sort their phone/laptop settings. You…\". Options: \"Do it again, quickly\" (feedback: \"Kind, and it fixes today. But each quick fix makes the next request more likely: that's the burden shifting to you.\"); \"Sit with them and show the two steps once\" (best; feedback: \"Yes. A bit slower today, and the real fix sticks.\"); \"Tell them to Google it\" (feedback: \"Saves your time, but it can sting. Showing once is warmer.\"). Change the model to \"Quick fixes can quietly replace the real fix. Ask: is this help building their skill, or replacing it?\""
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The 'Everyday life' feed mixes a few polished cards (spotlight, never-miss-twice, small-wins, map-territory, stress-mindset) with several that read as unedited drafts: exclamation-heavy 'Yes!' feedback, office scenarios, inflated evidence labels, and wrong models. The feed headline also served 'Are you a better driver than most?' from Old Wisdom while I'd chosen Everyday life. The swing in quality makes me trust the whole app less. Separately, the reassuring footer ('reflection, not diagnosis…findahelpline.com') appears only on sensitive cards, but low-self-worth triggers also show up on unflagged ones (success attribution, 'dream job').",
+     "fix": "Add a build-time lint that fails when: reveal choices are not strings; a reveal's answer index points at an option the card frames as the mistake; a card has evidence:'strong' but its source is a popular book (Start With Why, Resonant Leadership, Atomic Habits); feedback starts with 'Yes!' more than once per card. Hold the cards listed above out of the feed until they're rewritten. Mark self-reflection-loop-practice and second-order-fireworks-reveal sensitive:true. Make the 'Something new from Old Wisdom, to keep your map balanced' injection respect the chosen world (or say plainly 'One from outside Everyday life')."
+    }
+   ],
+   "best_cards": [
+    "spotlight-effect-slip-choice",
+    "never-miss-twice-choice",
+    "small-wins-setback-reveal"
+   ],
+   "verdict": "The best cards here genuinely helped me. Spotlight Effect, Never Miss Twice and Small Wins are kind and specific, and each one hands me a tiny thing I can do tonight. Never Miss Twice even names the voice that says 'I'm just not that kind of person' and answers it gently. WSO triad and stress mindset also handle 'today's answers, not you' well. But this session also served two cards whose buttons literally say \"[object Object]\". Inversion marks the option it teaches against as the right answer. Self-reflection tells me that putting a success down to luck is the wrong mindset, which is exactly my sore spot. And several drafts carry wrong models (shifting burden, will gap) or overclaimed evidence. As an anxious user, one broken or quietly shaming card is enough to make me doubt the kind ones. Fix the reveal-choice rendering and retire or rewrite the weak drafts, and this feed could score 7s across the board."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist. Checks every claim, attribution and effect size; hunts replication-crisis myths, overclaiming, and bad survey/game design (leading items, answer keys that contradict the lesson, results that do not follow from answers).",
+   "scores": {
+    "hook": 6,
+    "clarity": 4,
+    "usefulness": 5,
+    "safety": 4,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "inversion-avoid-failure-reveal",
+     "severity": "high",
+     "problem": "Two bugs together. (1) game.choices are objects ({text,best,feedback}), but the reveal schema wants plain strings, so the phone shows two buttons labelled \"[object Object]\" (screenshot -a). (2) game.answer is 1, so the app marks \"Skip this and jump straight to good ideas\" green as the right answer (seen in the screenshot). That teaches the opposite of inversion. The reveal also claims inversion shows \"the gaps between where you are and where you want to be\", which is goal-gap language, not Munger's idea. The Munger quote is really his paraphrase of Jacobi.",
+     "fix": "Set game.choices to [\"List the ways I'd bomb it first\", \"Skip that and go straight to good ideas\"] and game.answer to 0. Replace reveal with: \"Listing ways to fail first works because failure modes are easier to spot than the recipe for success. Munger borrowed 'Invert, always invert' from the mathematician Jacobi. Then turn each failure into a 'don't'.\" Change source.work to \"Munger, Poor Charlie's Almanack (2005); after Carl Jacobi\"."
+    },
+    {
+     "card_id": "self-reflection-loop-practice",
+     "severity": "high",
+     "problem": "The choices are objects, so the screen shows \"[object Object]\" three times. The reveal says \"Most people pick 'luck'\" with no data behind it, and it tells off people who picked that choice. The three options are leading: one is plainly framed as the virtuous answer. Attribution is wrong: Resonant Leadership is 2005 (not 2014) and is about renewal through mindfulness, hope and compassion, not a \"learn, adjust, grow\" loop. That idea is Boyatzis's Intentional Change Theory. Evidence 'strong' overclaims for a management-book framework.",
+     "fix": "Set game.choices to [\"Luck, mostly\", \"Extra effort\", \"Something I learned from an earlier try\"] and remove game.answer, since this is an opinion prompt. Replace reveal with: \"Any of these can be true. The useful move is to name one specific thing you did, because that is the part you can repeat. Reviewing wins, not just failures, is how you find it.\" Set source.work to \"Boyatzis, Intentional Change Theory (Journal of Management Development, 2006)\". Set evidence to \"philosophy\"."
+    },
+    {
+     "card_id": "shifting-burden-choice",
+     "severity": "high",
+     "problem": "The card gets Senge's archetype backwards. In The Fifth Discipline, 'shifting the burden' is the trap: a quick symptomatic fix (fixing the car for them) weakens the fundamental solution (their own skill). The model line says \"Shifting the burden teaches a skill\", so players learn the reverse of the concept. Also, guiding someone by phone when they did not ask may not be what a struggling friend wants.",
+     "fix": "Replace model with \"Shifting the burden: a quick fix you keep supplying can quietly stop the real fix from growing.\" Replace insight with \"Senge called it shifting the burden: each time you fix it for them, the need for you grows and their own skill shrinks. Ask first whether they want to learn or just need a hand today.\" Change option 2 to \"Ask: 'Want me to walk you through it, or just sort it this time?'\" (best: true)."
+    },
+    {
+     "card_id": "boredom-signal-activity",
+     "severity": "high",
+     "problem": "The citation looks fabricated. I can find no 2015 Danckert & Mann paper called \"Boredom as a signal: The search for meaning in everyday life\", and no Danckert/Mann book called 'Bored to Death' with a Chapter 6. Danckert's book is with Eastwood. The game has only two options, one a strawman (close the laptop and game). The best option, a 5-minute walk, is only loosely tied to the signal account.",
+     "fix": "Set source to {\"thinkers\":[\"James Danckert\",\"John Eastwood\"],\"work\":\"Out of My Skull: The Psychology of Boredom (2020)\",\"next_read\":\"Out of My Skull, ch. 1\"}. Set evidence to \"moderate\". Add a third option: \"Switch to an easier, more engaging task for 10 minutes, then come back\" with feedback \"Reasonable: boredom often signals the task isn't using your mind. Changing the challenge level is one valid answer.\" Replace insight with \"Danckert and Eastwood describe boredom as a signal that what you're doing isn't engaging your mind. Asking 'what would engage me here?' beats both numbing out and pushing through.\""
+    },
+    {
+     "card_id": "will-gap-capable-bystander-choice",
+     "severity": "medium",
+     "problem": "The model line, \"Willful action stems from both 'want to' (skill) and 'why'\", equates wanting with skill, which makes no sense and contradicts the WSO card earlier in the same feed (will is not skill). The card cites Sinek's Start With Why, a popular book with no empirical base, and labels it evidence 'strong'. Step 1's best option, \"Or are you just testing your strength?\", is snide. In step 2 the 'best' answer pushes past a stated 'I'm fine', which goes against the boundary respect the other options teach.",
+     "fix": "Replace model with \"Before helping, ask what would actually help. Willing and able isn't enough; the help has to be wanted.\" Change step 1 best option to \"Stop and ask: 'Want a hand with that?'\". In step 2, make \"Leave them to it, and add: 'Shout if you change your mind'\" best: true, and remove best from the car option. Set source to {\"thinkers\":[\"Bibb Latané\",\"John Darley\"],\"work\":\"The Unresponsive Bystander (1970)\"} and evidence to \"moderate\"."
+    },
+    {
+     "card_id": "emotional-contagion-choice-reaction",
+     "severity": "medium",
+     "problem": "The card never teaches emotional contagion: automatic mimicry that makes us catch others' feelings (Hatfield, Cacioppo & Rapson). It teaches generic active listening, and its insight redefines contagion as 'empathetic responses'. The citation \"Social Psychology (1986)\" is wrong. The best answer in step 2 is a hug, which is not a safe default for a game shown to anyone. 'Strong' evidence overclaims.",
+     "fix": "Set source.work to \"Hatfield, Cacioppo & Rapson, Emotional Contagion (1994)\" and drop Goleman. Set evidence to \"moderate\". Replace insight with \"We automatically mirror faces and voices, so we catch each other's moods. When a friend is upset, staying calm (not matching their panic) helps them settle.\" Make step 2's best option \"Reflect back what you heard: 'That sounds really hard.'\" and make the hug option non-best with feedback \"Some people want that; ask first.\""
+    },
+    {
+     "card_id": "two-minute-rule-choice",
+     "severity": "medium",
+     "problem": "Evidence 'strong' for a tip from popular books. Nobody has tested the two-minute rule in trials, and the GTD 'two-minute rule' (if a task takes under 2 minutes, do it now) is a different idea, so citing Allen conflates them. Worse, the card marks 'Plan your session for tomorrow morning' as wrong ('relying on future you often doesn't work'). Planning when and where is an implementation intention, among the best-replicated habit tools (Gollwitzer & Sheeran 2006, d about 0.65).",
+     "fix": "Set evidence to \"moderate\". Set source to {\"thinkers\":[\"James Clear\",\"BJ Fogg\"],\"work\":\"Atomic Habits (2018); Tiny Habits (2019)\"}. Change option 3 feedback to \"Also a good move, if you set a specific time and place ('7:30, on the sofa'). That's an implementation intention, which has solid evidence. Two minutes now plus a plan for tomorrow is best of both.\""
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The reveal renderer prints raw objects as \"[object Object]\" (3 of 20 cards this session: self-reflection-loop-practice, second-order-fireworks-reveal, inversion-avoid-failure-reveal). It also shows markdown asterisks literally (\"*after*\" in the second-order hook and prompt, \"*before*\" in self-reflection, \"*next*\" in try_today). Second-order-fireworks also claims 'Strong evidence' for an investor heuristic and gives Marks's book the wrong year (2011, not 2013).",
+     "fix": "In the reveal renderer in app.js, use typeof c === 'string' ? c : c.text for choice labels. Add a content lint that fails the build when reveal choices are not strings or when any text field contains '*'. Strip the asterisks from those three cards. For second-order-fireworks-reveal, set choices to [\"Praise and confidence\", \"New demands I'll need to grow into\"], remove answer, set evidence to \"philosophy\", and set source.work to \"Marks, The Most Important Thing (2011)\"."
+    }
+   ],
+   "best_cards": [
+    "start-with-why-because-estimate",
+    "small-wins-setback-reveal",
+    "never-miss-twice-choice"
+   ],
+   "verdict": "This session's feed was split in two. The polished cards were careful: start-with-why-because, small-wins-setback, never-miss-twice, spotlight-effect, stress-mindset, flow and one-percent. Their numbers check out (Langer 93/94/60 and 24/24/42; Lally 2010), they give honest caveats ('one classic, small study', 'later studies find the link weaker', 'effects are modest'), and their results describe today's answers rather than the person. About a third of the feed reads like unreviewed drafts, and those cards fail the app's own schema in ways I would not let a student publish. Three reveal cards render '[object Object]'. One answer key (inversion) marks the anti-lesson as correct. One card (shifting-burden) inverts Senge's concept. One citation looks fabricated (boredom). Several cards label pop books 'strong evidence' (two-minute rule, second-order, will-gap, emotional-contagion). The self-reflection card invents a 'most people pick luck' statistic. Smaller slips: useful-truth credits 'The Meaning of Truth' to Peirce (it is William James, 1909), and its 'best' follow-up question to a friend is leading. A shipped card that misstates a finding does more harm than a missing card. Until the draft batch passes an evidence and attribution gate, I would not trust the 'Strong evidence' badge."
+  },
+  {
+   "persona": "Lina, 31, product designer (mobile games and learning apps). I played 20 cards from the \"Everyday life\" feed in QA session 16 and looked at 12 screenshots: inversion a/b, self-reflection a/b, second-order a, will-gap a, small-wins b, one-percent a, shifting-burden b, spotlight a, and view-feed-dark.",
+   "scores": {
+    "hook": 6,
+    "clarity": 4,
+    "usefulness": 5,
+    "safety": 6,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "self-reflection-loop-practice",
+     "severity": "high",
+     "problem": "The tap buttons show '[object Object]' (screenshot -a). game.choices holds objects like {text, answer} where the reveal type expects plain strings, and there is no game.answer. So the player gets three blank buttons, and the reveal then says 'choice 0 / choice 2', which means nothing to them. The line 'Most people pick luck' also has no source and quietly shames the player.",
+     "fix": "Set game.choices to [\"I just got lucky\", \"I pushed through extra hours\", \"I looked back at what worked last time\"] and add \"answer\": 2. Rewrite reveal: \"Luck and effort both count. But the part you can repeat is the review: Boyatzis and McKee call it a learn-adjust-grow loop. Naming what worked turns one win into a recipe.\" Change evidence from 'strong' to 'philosophy'."
+    },
+    {
+     "card_id": "second-order-fireworks-reveal",
+     "severity": "high",
+     "problem": "Same render bug: both buttons show '[object Object]' (screenshot -a), because choices are {text, answer} objects and there is no game.answer. The hook promises fireworks, but the card is about a dream job. Evidence 'strong' is inflated for a Howard Marks heuristic.",
+     "fix": "Set game.choices to [\"I'll be praised and feel confident\", \"New demands show up, and I'll need to learn fast\"] and add \"answer\": 1. Change hook to \"You landed the dream job. What happens after the party?\" Set evidence to 'philosophy'."
+    },
+    {
+     "card_id": "inversion-avoid-failure-reveal",
+     "severity": "high",
+     "problem": "Choices are objects, so they render as '[object Object]' (screenshot -a). game.answer is 1, which marks 'Skip this and jump straight to good ideas' as correct: the opposite of the lesson. The reveal's 'roadmap with extra turns to avoid!' is muddled, and the Munger quote is really Jacobi's line, passed on by Munger.",
+     "fix": "Set game.choices to [\"List the ways I could bomb it\", \"Skip that, brainstorm good ideas\"] and game.answer to 0. Rewrite reveal: \"Munger borrowed the mathematician Jacobi's advice: 'Invert, always invert.' Listing how you'd bomb (reading slides, running long, no rehearsal) hands you a checklist of what to avoid.\" Change source.work to \"Carl Jacobi, via Charlie Munger's 1986 Harvard School speech\". Also add a validator in the build that rejects non-string reveal choices."
+    },
+    {
+     "card_id": "shifting-burden-choice",
+     "severity": "high",
+     "problem": "It teaches the concept backwards. In Senge, 'shifting the burden' is the trap: a quick symptomatic fix weakens the real solution. The model line 'Shifting the burden teaches a skill' gets this wrong. With one step and generic car-fixing feedback, the game also feels thin.",
+     "fix": "Rewrite model: \"Quick fixes can steal the burden from the real fix. Each rescue makes the next one more needed.\" Change scenario to \"Third time this month your friend's car won't start and they call you. You…\". Mark best = \"Help tonight, then sit with them to book a proper service\" and give feedback: \"Helping now and fixing the root cause together breaks the loop.\" Retitle to 'The Rescue Trap'."
+    },
+    {
+     "card_id": "will-gap-capable-bystander-choice",
+     "severity": "high",
+     "problem": "The concept is will_gap, but the card is generic helping etiquette credited to Sinek with 'strong' evidence. The model line 'want to (skill)' contradicts itself. The best option, 'Or are you just testing your strength?', reads as sarcastic. Step 2 marks 'take a moment to chat' as best after the person said they're fine, which overrides their stated boundary.",
+     "fix": "Replace with a real will-gap scenario: \"You know exactly how to start your CV (skill). It's been open for 3 weeks. What's missing?\" Options: \"A better template\" / \"A reason it matters this month\" (best) / \"More free time\". Model: \"When you can but don't, the gap is usually the why, not the how.\" Set evidence to 'philosophy'. If the box scenario stays, make the best options 'Can I grab one end?' and 'Okay, shout if you change your mind'."
+    },
+    {
+     "card_id": "emotional-contagion-choice-reaction",
+     "severity": "medium",
+     "problem": "The card never teaches emotional contagion (catching others' moods). It's a generic empathy quiz with obvious 'best' answers, so there's no tension and nothing to share. Step 2 makes 'offer a hug' best while the feedback says to ask first. 'Strong' evidence for this framing is overstated.",
+     "fix": "Rebuild around contagion: \"Your flatmate comes home furious about work. Ten minutes later you're snapping at your phone. What happened?\" Best = \"I caught their mood\". Model: \"Moods spread face to face. Name whose feeling it is before you act on it.\" Step 2 best text: \"Ask: 'Want a hug, or just someone to listen?'\""
+    },
+    {
+     "card_id": "boredom-signal-activity",
+     "severity": "medium",
+     "problem": "It's a one-step choice with an obvious right answer, so there's no game. The cited works look made up: 'Boredom as a signal' (2015) and 'Bored To Death' by Danckert and Mann. Danckert's book with Eastwood is 'Out of My Skull' (2020). It's flagged sensitive, yet the try_today line 'What am I avoiding?' leans toward blame.",
+     "fix": "Set source.work to \"Danckert & Eastwood, Out of My Skull (2020)\" and change next_read to that book's chapter on boredom as a signal. Add a second step: \"The walk didn't help, and the task is genuinely dull. Now?\" with best \"Add a challenge: beat a 25-min timer\". Change try_today to: \"Next time you're bored, finish the sentence 'I'd rather be…' and look for one small way to bring that into the task.\""
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The end-of-card headline praises without checking the answer. In spotlight-effect (screenshot -a) I picked the wrong option ('Avoid them'), and the card still shouted 'Good instincts. One more trick below.' Unearned praise kills the reward moment. Also, 'Bullseye.' for a guess of 40.6 against 37.8 on one-percent feels generous, but that's fine.",
+     "fix": "In app.js, pick the headline from the score: all best → 'Good instincts. One more trick below.'; some best → 'Nearly there. Here's the trick.'; none → 'Here's another way to see it.'. When the last pick was wrong, show the result after that pick's feedback, not straight above it."
+    }
+   ],
+   "best_cards": [
+    "start-with-why-because-estimate",
+    "map-territory-swipe",
+    "small-wins-setback-reveal"
+   ],
+   "verdict": "The best cards are strong. Langer's 'because' copier study, map-or-territory, setbacks-shout and never-miss-twice all have a real twist, concrete numbers and a try_today I'd actually do. I'd share the 'because' one. But this feed was uneven. Three of the 20 cards were broken on screen ('[object Object]' buttons), and one of those marked the anti-lesson as the right answer. Two cards taught their concept wrong or not at all (shifting-burden, will-gap), and several are generic self-help quizzes with obvious answers and inflated 'strong' evidence badges. As a player, I'd hit two broken cards in my first ten swipes and stop trusting the app. Fix the reveal-choice rendering and validator first, then rewrite or pull the five weak cards."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "I picked School & mates, but the feed kept sending me adult and work stuff tagged audience \"all\": \"You're bored at work\" with spreadsheets (boredom-signal-activity), \"tired after work\" (two-minute-rule-choice), a friend's car and \"get something from their car\" (shifting-burden-choice, will-gap-capable-bystander-choice), a self-help book about being organised (useful-truth-action-choice). That's 5 of my first ~10 cards. Makes me feel the app isn't for me.",
+   "fix": "Set audience:\"work\" on boredom-signal-activity and two-minute-rule-choice, or rewrite them (see below). In the build's audience inference, treat words like 'work', 'spreadsheet', 'car', 'mechanic', 'self-help book', 'meeting' as not-young when audience is 'all'. Then audit the 'all' cards so their scenarios fit a 15-year-old as well as an adult.",
+   "from": "Maya, 16, Manchester sixth-former. Picked \"School & mates\" and wants quick, surprising stuff about her own life, not a lesson."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Once you've answered, the reveal header says \"Good instincts. One more trick below.\" even when I picked the wrong answer (implementation-intentions-choice step 3, I chose 'do 30 minutes tomorrow'). Feels fake, and I stop trusting the praise.",
+   "fix": "In app.js, choose the header from the result. If the last pick was best: \"Nailed it.\" If any pick wasn't best: \"Close. Here's the trick.\" If more than half missed: \"Plot twist. Here's why.\"",
+   "from": "Maya, 16, Manchester sixth-former. Picked \"School & mates\" and wants quick, surprising stuff about her own life, not a lesson."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The 'Work' world filter lets in cards with audience 'all' that are clearly personal: a festival trip (premortem-trip), a friend's heartbreak, a friend's phone, a stranger with a box. A card marked audience 'work' (premortem-reveal) is about a vacation. So 3 pre-mortem cards and 2 boredom cards landed in 20, plus several off-topic ones. Also, the feed screenshot shows a 'Something new from Old Wisdom, to keep your map balanced' card that interrupts my chosen world.",
+   "fix": "In the Work world, rank audience:'work' cards first and serve audience:'all' cards only when they have no explicit personal setting. Add a lint check that flags audience:'work' cards containing 'trip', 'vacation', 'friend' or 'festival'. Limit the feed to one card per concept per session window and suppress same-concept variants once one has been played. Limit 'balance' injections to 1 in 10 cards, and pick them from the work-tagged cards of that domain.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. Picked \"Work\". Wants tools for tomorrow's 1:1s, retros and kickoffs, and has no patience for greeting-card advice."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "The evidence badges are not reliable. 'Strong evidence' appears on Buffett's philosophy, a Sinek book and a made-up vacation statistic, while well-sourced cards (Altmann 2014) say 'Moderate'. As a manager I would repeat these to my team, so wrong badges are a trust problem.",
+   "fix": "Change evidence to 'philosophy' on will-gap-capable-bystander-choice, circle-competence-choice-advice and premortem-reveal, and to 'moderate' on emotional-contagion-choice-reaction. Add a validator rule that 'strong' requires a peer-reviewed meta-analysis or a replicated study named in source.work.",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. Picked \"Work\". Wants tools for tomorrow's 1:1s, retros and kickoffs, and has no patience for greeting-card advice."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "Evidence badges and citations are unreliable, which matters most to a reader who checks sources. 'Strong evidence' appears on popular books or opinion: second-order-fireworks-reveal (Howard Marks, dated 2013 but published 2011), two-minute-rule-choice (Clear/Allen), will-gap, emotional-contagion and self-reflection. useful-truth-action-choice lists 'The Meaning of Truth (Peirce)', a book William James wrote in 1909.",
+   "fix": "Add a lint rule: evidence 'strong' needs a peer-reviewed meta-analysis or replicated experiment in source.work. Otherwise default to 'philosophy' or 'moderate'. Set second-order-fireworks-reveal to evidence \"philosophy\" and work \"The Most Important Thing (2011)\". Set two-minute-rule-choice to \"philosophy\". Set useful-truth-action-choice next_read to \"William James, Pragmatism (1907), Lecture VI 'Pragmatism's Conception of Truth'\".",
+   "from": "Elena, 68, retired literature teacher; reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader; dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "Markdown asterisks show as literal characters in boredom-signal-activity (*by*), self-reflection-loop-practice (*before*) and second-order-fireworks-reveal (*after*, *next*). It looks careless and undercuts the polished design.",
+   "fix": "In app.js text rendering, after HTML-escaping, convert /\\*([^*]+)\\*/g to <em>$1</em>. Also add a data lint that fails on any card string containing '*'.",
+   "from": "Elena, 68, retired literature teacher; reads Seneca, Aristotle and Peterson; values depth, accuracy and respect for the reader; dislikes pop-psych oversimplification."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The 'Everyday life' feed mixes a few polished cards (spotlight, never-miss-twice, small-wins, map-territory, stress-mindset) with several that read as unedited drafts: exclamation-heavy 'Yes!' feedback, office scenarios, inflated evidence labels, and wrong models. The feed headline also served 'Are you a better driver than most?' from Old Wisdom while I'd chosen Everyday life. The swing in quality makes me trust the whole app less. Separately, the reassuring footer ('reflection, not diagnosis…findahelpline.com') appears only on sensitive cards, but low-self-worth triggers also show up on unflagged ones (success attribution, 'dream job').",
+   "fix": "Add a build-time lint that fails when: reveal choices are not strings; a reveal's answer index points at an option the card frames as the mistake; a card has evidence:'strong' but its source is a popular book (Start With Why, Resonant Leadership, Atomic Habits); feedback starts with 'Yes!' more than once per card. Hold the cards listed above out of the feed until they're rewritten. Mark self-reflection-loop-practice and second-order-fireworks-reveal sensitive:true. Make the 'Something new from Old Wisdom, to keep your map balanced' injection respect the chosen world (or say plainly 'One from outside Everyday life').",
+   "from": "Sam, 24, graduate with anxiety and low self-worth after a rough year. Picked \"Everyday life\". Wants to feel safe, not judged, and come away with something small and real I can actually do."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The reveal renderer prints raw objects as \"[object Object]\" (3 of 20 cards this session: self-reflection-loop-practice, second-order-fireworks-reveal, inversion-avoid-failure-reveal). It also shows markdown asterisks literally (\"*after*\" in the second-order hook and prompt, \"*before*\" in self-reflection, \"*next*\" in try_today). Second-order-fireworks also claims 'Strong evidence' for an investor heuristic and gives Marks's book the wrong year (2011, not 2013).",
+   "fix": "In the reveal renderer in app.js, use typeof c === 'string' ? c : c.text for choice labels. Add a content lint that fails the build when reveal choices are not strings or when any text field contains '*'. Strip the asterisks from those three cards. For second-order-fireworks-reveal, set choices to [\"Praise and confidence\", \"New demands I'll need to grow into\"], remove answer, set evidence to \"philosophy\", and set source.work to \"Marks, The Most Important Thing (2011)\".",
+   "from": "Dr. Okafor, 51, research psychologist. Checks every claim, attribution and effect size; hunts replication-crisis myths, overclaiming, and bad survey/game design (leading items, answer keys that contradict the lesson, results that do not follow from answers)."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The end-of-card headline praises without checking the answer. In spotlight-effect (screenshot -a) I picked the wrong option ('Avoid them'), and the card still shouted 'Good instincts. One more trick below.' Unearned praise kills the reward moment. Also, 'Bullseye.' for a guess of 40.6 against 37.8 on one-percent feels generous, but that's fine.",
+   "fix": "In app.js, pick the headline from the score: all best → 'Good instincts. One more trick below.'; some best → 'Nearly there. Here's the trick.'; none → 'Here's another way to see it.'. When the last pick was wrong, show the result after that pick's feedback, not straight above it.",
+   "from": "Lina, 31, product designer (mobile games and learning apps). I played 20 cards from the \"Everyday life\" feed in QA session 16 and looked at 12 screenshots: inversion a/b, self-reflection a/b, second-order a, will-gap a, small-wins b, one-percent a, shifting-burden b, spotlight a, and view-feed-dark."
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 14,
+   "skipped": [
+    "self-reflection-loop-practice (not in action.json)",
+    "inversion-avoid-failure-reveal (not in action.json)",
+    "shifting-burden-choice (not in action.json)",
+    "emotional-contagion-choice-reaction (not in action.json)",
+    "boredom-signal-activity (not in action.json)",
+    "useful-truth-action-choice (not in action.json)",
+    "premortem-reveal (not in action.json)",
+    "circle-competence-choice-advice (not in action.json)",
+    "second-order-fireworks-reveal (not in action.json)",
+    "two-minute-rule-choice (not in action.json)",
+    "power-of-yet-reveal (not in action.json)",
+    "golden-mean-social (not in action.json)",
+    "amor-fati-setback-reveal (not in action.json)",
+    "will-gap-capable-bystander-choice: box/bystander scenario and Latane & Darley source not kept, because the card was rewritten as a true will-gap card (Blumberg & Pringle; Deci & Ryan) per the primary fixes",
+    "feed rule (max 1 card per concept per 20) and validator for reveal choices: outside this file"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 10,
+   "skipped": [
+    "self-reflection-loop-practice (not in perception.json)",
+    "shifting-burden-choice (not in file)",
+    "will-gap-capable-bystander-choice (not in file)",
+    "emotional-contagion-choice-reaction (not in file)",
+    "boredom-signal-activity (not in file)",
+    "premortem-reveal (not in file)",
+    "circle-competence-choice-advice (not in file)",
+    "wso-triad-venn (not in file)",
+    "inversion-avoid-failure-reveal (not in file)",
+    "second-order-fireworks-reveal (not in file)",
+    "two-minute-rule-choice (not in file)",
+    "power-of-yet-reveal (not in file)",
+    "golden-mean-social (not in file)",
+    "amor-fati-setback-reveal (not in file)",
+    "insight shortening: no perception insight exceeded 200 chars",
+    "audience: other 18 cards already explicitly set and audited as correct (16 all, 2 work); no changes needed"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 14,
+   "skipped": [
+    "Build-validator rule rejecting non-string reveal choices (Sam, Lina): pipeline/validate.py is outside this file, so not edited",
+    "inversion-avoid-failure-reveal: Sam's 'delete game.answer' conflicts with Elena/Okafor/Lina/Maya. Set answer 0 instead and reworded the prompt to 'which first step usually gives a clearer plan', so the answer is a fair one",
+    "second-order-fireworks-reveal: Sam's 'no answer' conflicts with Lina's answer 1. Set answer 1 and kept 'Both are real' in the verdict-first reveal. Lina's dream-job-only hook was generalised (team place, job, home) so the card fits teens and adults, per Sam",
+    "All other issue card_ids (self-reflection, shifting-burden, will-gap, emotional-contagion, boredom, useful-truth, premortem, circle-competence, wso-triad, two-minute-rule, power-of-yet, golden-mean, amor-fati) are not in thinking.json"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 10,
+   "skipped": [
+    "will-gap-capable-bystander-choice: not in systems.json",
+    "premortem-reveal: not in systems.json",
+    "emotional-contagion-choice-reaction: not in systems.json",
+    "boredom-signal-activity: not in systems.json",
+    "useful-truth-action-choice: not in systems.json",
+    "self-reflection-loop-practice: not in systems.json",
+    "inversion-avoid-failure-reveal: not in systems.json",
+    "second-order-fireworks-reveal: not in systems.json",
+    "circle-competence-choice-advice: not in systems.json",
+    "wso-triad-venn: not in systems.json",
+    "two-minute-rule-choice: not in systems.json",
+    "power-of-yet-reveal: not in systems.json",
+    "golden-mean-social: not in systems.json",
+    "amor-fati-setback-reveal: not in systems.json",
+    "shifting-burden-choice: Maya's homework-copying scenario not used (teen-only); used the all-ages phone-settings scenario from Sam's fix instead",
+    "shifting-burden-choice: Okafor's phone-guidance option was folded into the step-1 best option ('Sort it, then ask...') instead of being used word for word",
+    "insight length: every insight was already 200 characters or fewer, so nothing to shorten",
+    "audience: the 14 other cards already had an audience value that matches their text, so none changed"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 7,
+   "skipped": [
+    "All other issue card_ids (self-reflection-loop-practice, shifting-burden-choice, will-gap-capable-bystander-choice, emotional-contagion-choice-reaction, boredom-signal-activity, useful-truth-action-choice, premortem-reveal, circle-competence-choice-advice, wso-triad-venn, inversion-avoid-failure-reveal, second-order-fireworks-reveal, power-of-yet-reveal, golden-mean-social, amor-fati-setback-reveal) are not in habits.json",
+    "Feed rule (max 1 card per concept per 20) and build validator for reveal choices: outside this file's scope",
+    "No insights over 200 chars; all other 16 cards already had explicit, correct audience"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 12,
+   "skipped": [
+    "self-reflection-loop-practice (not in emotions.json)",
+    "shifting-burden-choice (not in emotions.json)",
+    "will-gap-capable-bystander-choice (not in emotions.json)",
+    "boredom-signal-activity (not in emotions.json)",
+    "useful-truth-action-choice (not in emotions.json)",
+    "premortem-reveal (not in emotions.json)",
+    "circle-competence-choice-advice (not in emotions.json)",
+    "wso-triad-venn (not in emotions.json)",
+    "inversion-avoid-failure-reveal (not in emotions.json)",
+    "second-order-fireworks-reveal (not in emotions.json)",
+    "two-minute-rule-choice (not in emotions.json)",
+    "power-of-yet-reveal (not in emotions.json)",
+    "golden-mean-social (not in emotions.json)",
+    "amor-fati-setback-reveal (not in emotions.json)",
+    "emotional-contagion-choice-reaction: work-only stand-up scenario (Radu) not used; card rebuilt as an everyday 'all' card (someone you live with vents) per the Maya/Lina/Sam/Elena/Okafor fixes",
+    "Feed rule (1 card per concept per 20) and build validator for reveal choices: outside this file"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 10,
+   "skipped": [
+    "None of the 46 panel/fact-check issues target cards in meaning.json (self-reflection-loop-practice, shifting-burden-choice, will-gap-capable-bystander-choice, emotional-contagion-choice-reaction, boredom-signal-activity, useful-truth-action-choice, premortem-reveal, circle-competence-choice-advice, wso-triad-venn, inversion-avoid-failure-reveal, second-order-fireworks-reveal, two-minute-rule-choice, power-of-yet-reveal, golden-mean-social, amor-fati-setback-reveal live in other files)",
+    "Insight shortening: no-op, all 15 insights already <=200 chars",
+    "Audience: the 14 existing cards already had explicit, correct audience labels (checked every game/try/try_team line); only order-chaos-balance lacked one"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 10,
+   "skipped": [
+    "Issues for cards not in growth.json skipped (will-gap, shifting-burden, emotional-contagion, boredom-signal, useful-truth, premortem, circle-competence, wso-triad-venn, inversion, second-order, two-minute-rule, golden-mean, amor-fati)",
+    "self-reflection-loop-practice: no game.answer added (Maya/Lina wanted answer=2), because Sam/Okafor rightly noted it is an opinion prompt and marking 'luck' wrong shames low self-worth players",
+    "self-reflection-loop-practice: evidence set to 'moderate' per fact-check 'apply exactly', not 'philosophy' as some personas proposed",
+    "power-of-yet-reveal: no game.answer set, since evidence is contested and the prompt is opinion-based",
+    "Validator rule rejecting non-string reveal choices and feed rule for concept repetition not added: outside the single file I may edit",
+    "Insight length: no card in growth.json exceeded 200 chars; nothing to shorten"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 0,
+   "skipped": [
+    "None of the issue card_ids (self-reflection-loop-practice, shifting-burden-choice, will-gap-capable-bystander-choice, emotional-contagion-choice-reaction, boredom-signal-activity, useful-truth-action-choice, premortem-reveal, circle-competence-choice-advice, wso-triad-venn, inversion-avoid-failure-reveal, second-order-fireworks-reveal, two-minute-rule-choice, power-of-yet-reveal, golden-mean-social, amor-fati-setback-reveal) exist in connection.json; all skipped as out of scope",
+    "No card in connection.json is listed in data/needs_review.json; nothing to bring up to standard",
+    "All 19 insights are already <=200 chars (max 194); no shortening needed",
+    "All 19 cards already have explicit audience set and checked against game/insight/try lines (young: three-conversations-swipe, psychological-safety-choice, courage-kindness-swipe-advice; work: three-conversations-choice-work, steelmanning-choice, psychological-safety-choice-work, psychological-safety-swipe-standup, trust-ledger-choice-deadline; rest all); no mislabels found",
+    "Pattern checks (object-valued reveal choices, unsourced 'most people pick' claims, raw asterisks, 'strong' evidence overclaims) found no instances in this file"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 13,
+   "skipped": [
+    "self-reflection-loop-practice (not in attention.json)",
+    "shifting-burden-choice (not in attention.json)",
+    "will-gap-capable-bystander-choice (not in attention.json)",
+    "emotional-contagion-choice-reaction (not in attention.json)",
+    "useful-truth-action-choice (not in attention.json)",
+    "premortem-reveal (not in attention.json)",
+    "circle-competence-choice-advice (not in attention.json)",
+    "wso-triad-venn (not in attention.json)",
+    "inversion-avoid-failure-reveal (not in attention.json)",
+    "second-order-fireworks-reveal (not in attention.json)",
+    "two-minute-rule-choice (not in attention.json)",
+    "power-of-yet-reveal (not in attention.json)",
+    "golden-mean-social (not in attention.json)",
+    "amor-fati-setback-reveal (not in attention.json)",
+    "boredom-signal-activity: panel's 'Delete the card' option not taken; rewrote to house standard instead",
+    "boredom-signal-activity: school-only (double chemistry) and office-only scenarios not used; neutral all-audience scenario chosen per audience rule",
+    "insight shortening: no insight in file exceeded 200 chars",
+    "audience: other 14 cards already had correct explicit audience; no change needed"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 24,
+   "skipped": [
+    "Issues for cards not in decisions.json (self-reflection-loop-practice, inversion-avoid-failure-reveal, shifting-burden-choice, will-gap-capable-bystander-choice, emotional-contagion-choice-reaction, boredom-signal-activity, useful-truth-action-choice, wso-triad-venn, second-order-fireworks-reveal, two-minute-rule-choice, power-of-yet-reveal, golden-mean-social, amor-fati-setback-reveal)",
+    "premortem-reveal: feed rule 'max 1 card per concept per 20 served' is app/feed logic, not card content; not editable in this file",
+    "premortem-reveal: used Mitchell et al. figure of ~30% (fact-check, verified) instead of Radu's 25%; evidence set to moderate per fact-check rather than philosophy",
+    "circle-competence-choice-advice: Radu's Kubernetes work scenario not used because needs_review requires a scenario fitting teens and adults; rewrote with an everyday friend-advice scenario (laptop outside circle, cooking inside circle) carrying the same verdicts and feedback lines, audience all",
+    "Build validator for non-string reveal choices: outside this file"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 4,
+   "skipped": [
+    "self-reflection-loop-practice (not in wisdom.json)",
+    "inversion-avoid-failure-reveal (not in wisdom.json)",
+    "shifting-burden-choice (not in wisdom.json)",
+    "will-gap-capable-bystander-choice (not in wisdom.json)",
+    "emotional-contagion-choice-reaction (not in wisdom.json)",
+    "boredom-signal-activity (not in wisdom.json)",
+    "useful-truth-action-choice (not in wisdom.json)",
+    "premortem-reveal (not in wisdom.json)",
+    "circle-competence-choice-advice (not in wisdom.json)",
+    "wso-triad-venn (not in wisdom.json)",
+    "second-order-fireworks-reveal (not in wisdom.json)",
+    "two-minute-rule-choice (not in wisdom.json)",
+    "power-of-yet-reveal (not in wisdom.json)",
+    "insight shortening: no wisdom.json insight exceeded 200 chars",
+    "audience: the other 17 cards already had an explicit audience that matched their scenarios, so they were left unchanged"
+   ],
+   "validator_errors": 0
+  }
+ ]
+}

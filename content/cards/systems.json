@@ -866,44 +866,64 @@
     "concept": "shifting_burden",
     "domain": "systems",
     "type": "choice",
-    "hook": "Your friend struggles with their car again. You…",
-    "title": "Helping Hands or Habits?",
+    "hook": "Fifth time you've fixed it for them. Helping, or making it worse?",
+    "title": "The Rescue Trap",
     "game": {
       "steps": [
         {
-          "scenario": "Your friend struggles with their car again. You…",
+          "scenario": "A friend or relative asks you, for the fifth time this month, to sort the same settings on their phone. You…",
           "options": [
             {
-              "text": "Offer to fix it for them, you're good at mechanics.",
-              "feedback": "Kind, but they might learn more from doing it themselves, even if it takes longer."
+              "text": "Do it again, quickly",
+              "feedback": "Kind, and it fixes today. But each quick fix makes the next request more likely: the burden shifts to you."
             },
             {
-              "text": "Guide them through troubleshooting steps over the phone.",
+              "text": "Sort it, then ask: 'Want me to show you the two steps for next time?'",
               "best": true,
-              "feedback": "Yes. You're empowering them to solve their own problem, building their skills for next time."
+              "feedback": "Yes. Help today, and offer the real fix. Asking first respects that they may just want a hand this time."
             },
             {
-              "text": "Tell them not to worry, you'll just call a mechanic again.",
-              "feedback": "Taking care of it removes the learning opportunity and leaves them reliant on others."
+              "text": "Tell them to look it up online",
+              "feedback": "Saves your time, but it can sting, and they may still get stuck. Showing once is warmer."
+            }
+          ]
+        },
+        {
+          "scenario": "Two weeks later they ask again. You showed them once, but it would be quicker to just do it. You…",
+          "options": [
+            {
+              "text": "Do it yourself, you're busy",
+              "feedback": "Tempting, and fine now and then. But if it becomes the default, their skill fades and the requests keep coming."
+            },
+            {
+              "text": "Hand the phone back and talk them through it",
+              "best": true,
+              "feedback": "Yes. Slower today, but a second go with you nearby is often what makes it stick."
+            },
+            {
+              "text": "Write the steps on a note for them",
+              "feedback": "A good backup. Doing it once with you beside them usually sticks better than a note alone."
             }
           ]
         }
       ]
     },
-    "insight": "Helping someone learn to fix their own problem is more valuable than doing it for them. They build skills, confidence, and independence.",
-    "model": "Shifting the burden teaches a skill; removing it only postpones the learning.",
-    "try_today": "Think of a small task someone often asks you to do. Instead of doing it, guide them through figuring it out themselves.",
+    "insight": "Senge called it 'shifting the burden': each quick fix eases the symptom, so the real fix (their own skill) weakens and they need you more. Help isn't the problem; help that replaces learning is.",
+    "model": "Quick fixes can quietly replace the real fix. Ask: does this help them need me less?",
+    "try_today": "Think of one thing someone keeps asking you to do. Next time, offer: 'Want me to show you how?'",
     "source": {
       "thinkers": [
         "Peter Senge"
       ],
       "work": "The Fifth Discipline (1990)"
     },
-    "evidence": "moderate",
+    "evidence": "philosophy",
     "level": 1,
     "related": [
       "fixes_that_fail",
       "deliberate_practice"
-    ]
+    ],
+    "try_team": "List tasks your group always hands to the same person. Pick one: that person coaches someone else through it once this week.",
+    "audience": "all"
   }
 ]

@@ -1278,64 +1278,133 @@
     "concept": "quitting_wisely",
     "domain": "growth",
     "type": "choice",
-    "hook": "Passion project stalled? Walk away or reignite?",
-    "title": "Quitting with Purpose",
+    "hook": "Two years in, and it feels like a chore. Is quitting losing?",
+    "title": "Quit the Part, Keep the Point",
     "game": {
       "steps": [
         {
-          "scenario": "Your side hustle used to energize you, but now it feels like a chore. What do you do?",
+          "scenario": "You've played guitar for two years. Lately, practice feels like a chore you dread. You…",
           "options": [
             {
-              "text": "Keep pushing through. You invested so much time already.",
-              "feedback": "It's common to feel pressure from sunk costs. But true grit means knowing when to redirect your energy, not just clinging on."
+              "text": "Keep going. You've already put in two years.",
+              "feedback": "Understandable, but those hours are spent either way. The useful question is whether the next hour is worth it."
             },
             {
-              "text": "Take a break. Step back and see if the spark returns after some distance.",
+              "text": "Take two weeks off on purpose, then notice whether you miss it.",
               "best": true,
-              "feedback": "This gives you space to reflect. Maybe it's a matter of adjusting your approach or finding new inspiration."
+              "feedback": "Yes. Missing it (or not) is data. A planned break tests the spark without burning the bridge."
             },
             {
-              "text": "Quit without looking back.  The passion is gone, so there's no point in wasting time.",
-              "feedback": "While quitting can be right, jumping ship without considering alternatives might lead to regret later on."
+              "text": "Sell the guitar tonight.",
+              "feedback": "Could be the right call, but deciding on a low night lets your mood vote. Give it a few days first."
             }
           ]
         },
         {
-          "scenario": "After taking a break, you realize your passion project isn't bringing joy anymore. What's your next move?",
+          "scenario": "Two weeks later: you don't miss the practice drills, but you do miss playing songs with friends. Next move?",
           "options": [
             {
-              "text": "Try to force yourself back in. You can't give up on something you started.",
-              "feedback": "Forcing it rarely works. It might be time to honor your changed interests and explore new avenues."
+              "text": "Force yourself back into daily drills.",
+              "feedback": "Discipline helps, but here it's aimed at the part you don't miss. Fix the part that's broken."
             },
             {
-              "text": "Reframe the project. Can you shift its focus or goals to better align with your current passions?",
+              "text": "Drop the drills, keep a weekly jam with friends.",
               "best": true,
-              "feedback": "Sometimes a fresh perspective can revitalize something old. Reframing allows you to make use of past efforts while moving forward."
+              "feedback": "Yes. Quitting one part is still quitting wisely: keep what you value, drop what you don't."
             },
             {
-              "text": "Share it with others and let them decide if it's worth continuing.",
-              "feedback": "While feedback is valuable, ultimately the decision should be yours. Trust your own judgment and instincts."
+              "text": "Ask your friends whether you should carry on.",
+              "feedback": "Their view is useful input, but only you know what you miss. Hear them, then decide."
             }
           ]
         }
       ]
     },
-    "insight": "Quitting wisely isn't about never giving up. It's about choosing when to walk away with purpose, either by taking a break, reframing the project, or exploring new passions.",
-    "model": "True grit means knowing when to redirect your energy, not just clinging on.",
-    "try_today": "Dreading your projects?  A break, new perspective, or quitting might be healthier than pushing through.",
+    "insight": "Quitting wisely means asking what the next hour is worth, not what past hours cost. Often you can quit one part and keep the part you love. Annie Duke argues most of us quit too late.",
+    "model": "Judge the next hour, not the hours you've spent. Quit the part, keep the point.",
+    "try_today": "Pick one commitment that feels like a chore. Write one part you'd miss and one part you wouldn't.",
     "source": {
       "thinkers": [
         "Annie Duke",
         "Seth Godin"
       ],
-      "work": "Thinking in Bets (2018); The Dip (2009)"
+      "work": "Duke, Quit: The Power of Knowing When to Walk Away (2022); Godin, The Dip (2007)"
     },
     "evidence": "moderate",
     "level": 1,
     "related": [
-      "opportunity_cost",
-      "sunk_cost"
+      "sunk_cost",
+      "opportunity_cost"
     ],
-    "try_team": "Team brainstorm: What are some projects or activities we're currently doing that might benefit from a break, reframing, or even quitting?"
+    "try_team": "Pick one shared routine (a club, a weekly meeting, a family ritual). Each person names one part to keep and one to drop. Try the trimmed version once.",
+    "audience": "all"
+  },
+  {
+    "id": "power-of-yet-reveal",
+    "concept": "power_of_yet",
+    "domain": "growth",
+    "type": "reveal",
+    "hook": "Two people fail the same move. Only one comes back tomorrow.",
+    "title": "Not Yet, Not Never",
+    "game": {
+      "prompt": "You keep messing up a new dance move (or a chord, or a recipe). Which thought gets you to try again tomorrow?",
+      "choices": [
+        "\"I can't do this. I'm just not a dancer.\"",
+        "\"I can't do this yet. Next: slow it to half speed.\""
+      ],
+      "reveal": "'Not yet' keeps the door open: it treats the skill as something you build, not something you lack. Carol Dweck calls this a growth mindset. Big studies find mindset lessons help only a little on average, more for students who are struggling, so pair the 'yet' with an actual next practice step."
+    },
+    "insight": "'Yet' turns a verdict into a stage. But mindset lessons help only a little on average (Sisk et al., 2018), so the next practice step does the real work, not the word.",
+    "model": "Add 'yet', then a next step: the word opens the door, the step walks through it.",
+    "try_today": "Next time you're stuck, say 'I can't do this yet' out loud, then name one smaller step and do it right away.",
+    "source": {
+      "thinkers": [
+        "Carol Dweck"
+      ],
+      "work": "Dweck, Mindset: The New Psychology of Success (2006); Sisk et al., Psychological Science (2018)"
+    },
+    "evidence": "contested",
+    "level": 1,
+    "related": [
+      "growth_mindset",
+      "reframing"
+    ],
+    "try_team": "When someone in your family, class or team says 'I can't', ask together: 'What's the next small step?' and help them try it once.",
+    "audience": "all"
+  },
+  {
+    "id": "self-reflection-loop-practice",
+    "concept": "self_reflection_loop",
+    "domain": "growth",
+    "type": "reveal",
+    "hook": "It went well. Was that luck, or something you can do again?",
+    "title": "Study Your Wins",
+    "game": {
+      "prompt": "Think of something that went OK recently, big or small. What helped most?",
+      "choices": [
+        "Luck, mostly",
+        "Extra effort",
+        "Something I changed after an earlier try"
+      ],
+      "reveal": "Any of these can be true. It's tempting to credit luck, especially after a hard stretch, but luck rarely does all the work. Boyatzis & McKee argue lasting growth comes from a loop: notice what worked, adjust, repeat. Name one thing you did, even something small like turning up or asking a question. That's the part you can repeat."
+    },
+    "insight": "We study our misses and skip our wins. Spotting your own part in a success, however small, turns one good day into something you can do again.",
+    "model": "After a win, name your part: that's the bit you can repeat.",
+    "try_today": "Pick one thing that went OK this week and write down one thing you did that helped, however small.",
+    "source": {
+      "thinkers": [
+        "Richard Boyatzis",
+        "Annie McKee"
+      ],
+      "work": "Boyatzis & McKee, Resonant Leadership: Renewing Yourself and Connecting with Others Through Mindfulness, Hope, and Compassion (2005)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deliberate_practice",
+      "growth_mindset"
+    ],
+    "try_team": "End a week together: each person names one win and one thing they did that helped it happen. Write the 'helped' list down.",
+    "audience": "all"
   }
 ]

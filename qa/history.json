@@ -795,6 +795,59 @@
   "note": "full (short) insight visible with caveats, rotating reveal headers, max 2 reveals in 5, play-through now plays each card in its sampled world (screens match what that player sees), session-14 content fixes (100)"
  },
  {
+  "session": 16,
+  "at": "2026-11-01T08:52:07+00:00",
+  "automated": 49.44,
+  "panel": 26.67,
+  "composite": 76.11,
+  "delta": -7.72,
+  "passed": false,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 8.0,
+   "console": 4,
+   "overflow": 3,
+   "a11y": 6.0,
+   "readability": 5,
+   "actionable": 2.97,
+   "sourced": 1.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.63,
+   "domain_balance": 1.99,
+   "depth": 2.86,
+   "hook_distinct": 1.99,
+   "brief_reveal": 1.0
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 213,
+   "played_ok": 213,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 0,
+   "flesch_avg": 73.0,
+   "try_today_verb_rate": 0.991,
+   "sensitive_cards": 53,
+   "first_card_ms": 320,
+   "edges": 379,
+   "concept_depth": 0.955,
+   "hook_distinct_rate": 0.995,
+   "brief_reveal_rate": 1.0
+  },
+  "panel_detail": {
+   "persona_avg_10": 5.33,
+   "by_dim": {
+    "hook": 6.0,
+    "clarity": 4.67,
+    "usefulness": 5.5,
+    "safety": 5.5,
+    "fun": 5.0
+   }
+  },
+  "note": "folded 17 Ollama cards (days 2-7) into review queue; session-15 fixes; daily loops that can't collide"
+ },
+ {
   "session": 1001,
   "at": "2026-10-26T12:13:51+00:00",
   "automated": 48.77,

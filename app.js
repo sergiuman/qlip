@@ -480,7 +480,7 @@
 
     choice(card, done) {
       const g = card.game, box = h("div", { style: "display:flex;flex-direction:column;gap:12px" });
-      let i = 0, best = 0; const bestMoves = [];
+      let i = 0, best = 0, lastBest = false; const bestMoves = [];
       const step = () => {
         const s = g.steps[i];
         const fb = h("p", { class: "feedback", hidden: true });
@@ -488,12 +488,13 @@
             done(total < 2 ? { name: "" }
               : best === total ? { name: "You'd coach this one.", tally: `${best}/${total} best calls` }
               : best === 0 ? { name: "Here's another way to play it." }
-              : { name: "Good instincts. One more trick below." });
+              : best >= total / 2 && lastBest ? { name: "Good instincts. One more trick below." }
+              : { name: "Close. Here's the trick." });
           } } },
           i + 1 < g.steps.length ? "Next" : "See the model");
         const opts = h("div", { class: "opts" }, s.options.map((o) => h("button", { class: "opt", onclick: (e) => {
           opts.querySelectorAll("button").forEach((b, k) => { b.disabled = true; if (s.options[k].best) b.classList.add("best"); });
-          e.currentTarget.classList.add("picked"); if (o.best) best++;
+          e.currentTarget.classList.add("picked"); if (o.best) best++; lastBest = !!o.best;
           fb.hidden = false; fb.classList.toggle("miss", !o.best); fb.textContent = o.feedback; next.hidden = false; next.focus();
           if (!o.best) bestMoves.push(s.options.find((x) => x.best).text);
         } }, o.text)));
@@ -570,7 +571,7 @@
         opts.querySelectorAll("button").forEach((b, j) => { b.disabled = true; if (has && j === g.answer) b.classList.add("best"); });
         e.currentTarget.classList.add(has ? "picked" : "chosen");
         done({ name: !has ? "Your call." : k === g.answer ? ["Spot on.", "Called it.", "Nailed it."][Math.floor(hash(card.id) * 3)] : card.evidence === "philosophy" ? "Here's another way to see it." : ["The answer:", "Plot twist:", "Here's what happened:"][Math.floor(hash(card.id + "r") * 3)], text: g.reveal });
-      } }, c)));
+      } }, typeof c === "string" ? c : c.text)));
       return h("div", { style: "display:flex;flex-direction:column;gap:12px" }, h("p", { class: "q-text" }, g.prompt), opts);
     },
   };

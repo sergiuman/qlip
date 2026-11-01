@@ -957,5 +957,70 @@
     ],
     "try_team": "Revision pairs: each writes a 5-minute recall quiz on a topic for the other, then swap and mark. Make the next quiz harder if someone scored full marks.",
     "audience": "young"
+  },
+  {
+    "id": "order-chaos-balance",
+    "concept": "order_chaos",
+    "domain": "meaning",
+    "type": "choice",
+    "hook": "Same five dinners on repeat. Comfort, or a quiet cage?",
+    "title": "One Foot in the Unknown",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You've cooked the same five meals for months. Dinner runs on autopilot and nobody, you included, looks forward to it. This week you…",
+          "options": [
+            {
+              "text": "Keep the five. They work and nobody complains.",
+              "feedback": "Safe, and sometimes steady is exactly what you need. The trade-off: with nothing new, the routine slowly goes flat."
+            },
+            {
+              "text": "Keep four, and swap one night for a dish you've never made.",
+              "best": true,
+              "feedback": "Best mix. Four nights you can do half-asleep, one small unknown to learn from. If it flops, dinner still happened six days out of seven."
+            },
+            {
+              "text": "Bin the list and cook something brand new every night.",
+              "feedback": "Exciting! But seven unknowns at once means new shopping, new mistakes and probably a takeaway by Thursday. Too much new at once swamps you."
+            }
+          ]
+        },
+        {
+          "scenario": "Next month life tips the other way: you're moving house, family are visiting and you've caught a cold. Everything feels up in the air. What helps most?",
+          "options": [
+            {
+              "text": "Wait until things calm down before planning anything.",
+              "feedback": "Understandable when you're stretched. The catch: waiting for calm can leave you with no firm ground at all while you wait."
+            },
+            {
+              "text": "Start a big new project to take your mind off it.",
+              "feedback": "A fair instinct to grab something you control. But it adds another unknown to a week that's already full of them."
+            },
+            {
+              "text": "Keep two small fixed points: a morning walk and one meal you know by heart.",
+              "best": true,
+              "feedback": "Yes. When life is flooding, you don't need more new. You need a couple of anchors you can stand on."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Peterson's image: keep one foot in what you know and one in what you don't. Too much routine goes stale; too much new swamps you. When life is calm, add something new. When it's wild, add anchors.",
+    "model": "Calm life? Add one unknown. Chaotic life? Add one anchor. Live on the border between them.",
+    "try_today": "Change one small part of one autopilot routine today: cook one new dish, or take a different way home.",
+    "source": {
+      "thinkers": [
+        "Jordan Peterson"
+      ],
+      "work": "Peterson, 12 Rules for Life (2018), Rule 2"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "golden_mean",
+      "flow"
+    ],
+    "try_team": "Plan one shared meal or outing: half is a group favourite, half is something nobody has tried. Afterwards, ask which half people talk about.",
+    "audience": "all"
   }
 ]

@@ -121,6 +121,8 @@ def validate_game(t, g, errs):
         _req(g, "reveal", str, errs, w)
         if _req(g, "choices", list, errs, w) and not 2 <= len(g["choices"]) <= 4:
             errs.append("reveal: 2-4 choices")
+        if any(not isinstance(c, str) for c in g.get("choices", [])):
+            errs.append("reveal: choices must be plain strings")
         if "answer" in g and not (isinstance(g["answer"], int) and 0 <= g["answer"] < len(g.get("choices", []))):
             errs.append("reveal: answer must be a valid choice index")
 
@@ -181,6 +183,8 @@ def validate_card(card, concepts):
         errs.append(f"related must be 1-3 known concept ids: {rel}")
     if card["type"] in TYPES and isinstance(card["game"], dict):
         validate_game(card["type"], card["game"], errs)
+    if re.search(r"\*[^*\s][^*]*\*", " ".join(all_text(card))):
+        errs.append("markdown asterisks show literally; write plain text")
     text = " ".join(all_text(card)).lower()
     for p in HARM_PATTERNS:
         if re.search(p, text):

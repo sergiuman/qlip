@@ -954,45 +954,66 @@
     "concept": "two_minute_rule",
     "domain": "habits",
     "type": "choice",
-    "hook": "Want daily meditation?  Start small! What's the first step?",
-    "title": "Two Minutes to Zen",
+    "hook": "You promised 20 minutes. It's late and you're wiped. Now what?",
+    "title": "Two Minutes Counts",
     "game": {
       "steps": [
         {
-          "scenario": "You're tired after work, phone buzzing, and you REALLY want to relax. But you also promised yourself a 20-minute meditation session.",
+          "scenario": "Long day, phone buzzing, sofa calling. You promised yourself 20 minutes of a new habit (meditating, stretching, practising). You...",
           "options": [
             {
-              "text": "Push through! Just get those 20 minutes in, then you deserve that screen time.",
-              "feedback": "It feels good to be disciplined, but starting big when you're tired often leads to skipping it altogether. You might even feel resentful about the whole thing."
+              "text": "Push through the full 20 minutes, then reward yourself with your phone.",
+              "feedback": "Disciplined, and some nights it works. But a big start on a tired night is easy to dodge, and dodging it can make the habit feel like a chore."
             },
             {
-              "text": "Close your eyes for just two minutes. That's all. If you feel like stopping after two, that's fine too.",
+              "text": "Do just two minutes. If you want to stop after that, you stop.",
               "best": true,
-              "feedback": "Yes! Tiny steps make starting easier. Two minutes is doable, even when you're exhausted. You might find yourself continuing longer once you're in the flow."
+              "feedback": "Yes. Two minutes is small enough to start even when you're drained, and often you keep going once you've begun."
             },
             {
-              "text": "Plan your 20-minute session for tomorrow morning. More energy then!",
-              "feedback": "Great planning! But relying on 'future you' often doesn't work. The current you is the one who needs a gentle nudge towards the habit now."
+              "text": "Plan the full session for tomorrow at 7:30, on the sofa, before breakfast.",
+              "feedback": "Also a good move, if the plan is that specific. A set time and place is an implementation intention, which has solid evidence. Two minutes now plus a plan for tomorrow is best of both."
+            }
+          ]
+        },
+        {
+          "scenario": "A week in, the two-minute version happens most days, but you keep forgetting on busy ones. What helps most?",
+          "options": [
+            {
+              "text": "Tie it to something you already do: 'After I brush my teeth, I sit for two minutes.'",
+              "best": true,
+              "feedback": "Yes. An if-then plan linked to a daily cue is one of the best-tested habit tools. The cue does the remembering for you."
+            },
+            {
+              "text": "Set a goal of 30 minutes so the habit feels worth it.",
+              "feedback": "Tempting once it's going, but a bigger start brings the old resistance back. Grow it slowly, once the start is automatic."
+            },
+            {
+              "text": "Wait until life is less busy.",
+              "feedback": "Understandable, but busy weeks rarely end. A tiny version tied to a cue fits into busy ones too."
             }
           ]
         }
       ]
     },
-    "insight": "When starting a new habit, make it so small that saying no feels impossible. Two minutes of meditation beats zero, and that tiny win builds momentum.",
-    "model": "The Two-Minute Rule: Make the start of any habit so easy you can't refuse it.",
-    "try_today": "Pick one habit you want to build. What's the smallest possible action to take for just two minutes? Do it right now.",
+    "insight": "A tiny start lowers the bar on hard days. The two-minute rule is a rule of thumb from popular books, not a tested finding; pairing it with a set time and place does have good evidence.",
+    "model": "Make the start so small you can't say no, and give it a set time and place.",
+    "try_today": "Pick one habit and finish this line: 'After I ___, I will do two minutes of ___.' Then do the two minutes today.",
     "source": {
       "thinkers": [
         "James Clear",
-        "David Allen"
+        "BJ Fogg"
       ],
-      "work": "Atomic Habits (2018), Getting Things Done (2001)"
+      "work": "Atomic Habits (2018); Tiny Habits (2019)"
     },
-    "evidence": "strong",
+    "evidence": "moderate",
     "level": 1,
     "related": [
       "small_wins",
+      "implementation_intentions",
       "procrastination_emotion"
-    ]
+    ],
+    "try_team": "Each person writes one 'After I ___, I will ___ for two minutes' plan for a shared habit. Swap plans and check in next week.",
+    "audience": "all"
   }
 ]

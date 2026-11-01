@@ -55,7 +55,7 @@
         },
         "SW": {
           "name": "Ready, Door Closed (for now)",
-          "text": "You want it and can do it, but the door scores shut today: that's structural, not a flaw, so find or build another door."
+          "text": "You want it and can do it; the door is shut today. That's structural, not a flaw. This week, ask one person who controls the door for one specific chance (a meeting, an hour, a ticket)."
         },
         "OW": {
           "name": "Eager, Door Open",
@@ -63,7 +63,7 @@
         },
         "OS": {
           "name": "Ready, Waiting for a Why",
-          "text": "Everything scores high today except the fire, and no trick fixes a missing why, so look for your reason."
+          "text": "Everything is there except the fire. Write one line: what changes for me if this is done? If nothing, drop it without guilt."
         },
         "OSW": {
           "name": "All Lights On (for this goal)",
@@ -1106,63 +1106,85 @@
     "concept": "will_gap",
     "domain": "action",
     "type": "choice",
-    "hook": "You see someone struggling with a heavy box. Do you…?",
-    "title": "Skill vs. Why",
+    "hook": "You know how. You have the time. So why hasn't it happened?",
+    "title": "Can, but don't",
     "game": {
       "steps": [
         {
-          "scenario": "You see someone struggling with a heavy box, clearly trying to move it alone. They're grimacing and sweating. You…",
+          "scenario": "There's a thing you keep putting off: a form, a message, a small project. You know exactly how to start it, and you have the time. It's been sitting there for three weeks. What's most likely missing?",
           "options": [
             {
-              "text": "Offer your help immediately. 'Let me give you a hand!'",
-              "feedback": "Kindness is great! But they might not want help or have a reason for doing this themselves."
+              "text": "A better guide or template",
+              "feedback": "Not quite. You already know how, so more how-to aims at a skill that isn't missing."
             },
             {
-              "text": "Walk past, thinking they're probably fine on their own. It's none of your business.",
-              "feedback": "Not helpful. Sometimes we need to step up and see if there's a real need, even if it seems awkward."
-            },
-            {
-              "text": "Stop and ask: 'Is there anything I can do? Or are you just testing your strength?'",
+              "text": "A reason it matters to me right now",
               "best": true,
-              "feedback": "Yes! Showing genuine interest and offering help without assuming their intentions is the most helpful approach. Sometimes people just want to be heard or need a clear offer of support."
+              "feedback": "Yes. Skill and time are there, so the gap is the why. Without a reason that's yours, it keeps sliding."
+            },
+            {
+              "text": "More free time",
+              "feedback": "Fair guess, but you said the time is there. When it's free and still empty, time isn't the blocker."
             }
           ]
         },
         {
-          "scenario": "They say they're fine, but seem exhausted. What do you do next?",
+          "scenario": "A friend draws really well, has a sketchbook and free evenings, and keeps saying they 'should' draw more. They never do. They ask you for tips. You…",
           "options": [
             {
-              "text": "Leave them to it, respecting their wishes.",
-              "feedback": "Good! They said no, so respect that boundary. But remember, sometimes a simple 'Let me know if you change your mind' keeps the door open for future help."
+              "text": "Send them a 30-day drawing challenge",
+              "feedback": "Kind, and structure helps once they want it. Right now it's a plan for something they don't feel pulled to do."
             },
             {
-              "text": "Offer to get something from their car for them, or take a moment to chat and see what they're up to.",
+              "text": "Ask: 'What would you love to draw, and who for?'",
               "best": true,
-              "feedback": "Yes! This shows continued care without being overbearing. A small act of kindness can go a long way. Maybe they just need a distraction or someone to talk to."
+              "feedback": "Yes. Their skill and access are fine, so look for the why. Their answer may also show the goal isn't really theirs."
             },
             {
-              "text": "Start giving them advice on how to move the box more efficiently.",
-              "feedback": "Not helpful! Unless they explicitly ask for advice, offering unsolicited solutions might feel patronizing. Focus on support and listening instead."
+              "text": "Tell them to just push through",
+              "feedback": "Willpower can get a few pages done. Without a reason, expect the habit to fade again."
+            }
+          ]
+        },
+        {
+          "scenario": "You ask yourself why that put-off task matters, and honestly, nothing comes. Now what?",
+          "options": [
+            {
+              "text": "Force it with a daily streak",
+              "feedback": "It can work for a short while. But a streak is a borrowed reason, and it usually breaks on a bad day."
+            },
+            {
+              "text": "Change it, tie it to something you care about, or drop it",
+              "best": true,
+              "feedback": "Yes. No hack fixes a missing why. Finding a real reason, or letting the goal go, both end the stall."
+            },
+            {
+              "text": "Decide you're just lazy",
+              "feedback": "Understandable, but it isn't the full picture. You do things you care about; this goal just lacks a reason yet."
             }
           ]
         }
       ]
     },
-    "insight": "Helping others isn't just about skills or strength; it's about understanding their needs and intentions. Sometimes a simple question or offer of support is more valuable than immediate action.",
-    "model": "Willful action stems from both 'want to' (skill) and 'why'. Ask before you act, even with good intentions.",
-    "try_today": "This week, when someone seems stuck, try asking: 'Is there anything I can do that would be helpful?'",
+    "insight": "When skill and access are there and nothing moves, more how-to rarely helps. A reason that's yours does. This is a teaching lens, not a tested diagnostic.",
+    "model": "If you can do it but don't, the gap is usually the why, not the how. Find your reason first.",
+    "try_today": "Pick one thing you can do but keep putting off. Write: 'This matters to me because…' If nothing comes, change it or drop it.",
+    "try_team": "Each person names one task they can do but keep putting off. The others may only ask: 'What would make this worth doing for you?'",
     "source": {
       "thinkers": [
-        "Simon Sinek"
+        "Melvin Blumberg & Charles Pringle",
+        "Edward Deci",
+        "Richard Ryan"
       ],
-      "work": "Start With Why (2009)"
+      "work": "Blumberg & Pringle, The missing opportunity in organizational research (Academy of Management Review, 1982); Deci & Ryan, Self-Determination Theory (1985)"
     },
-    "evidence": "strong",
+    "evidence": "philosophy",
     "level": 1,
     "related": [
       "start_with_why",
-      "skill_gap",
-      "courage_kindness"
-    ]
+      "wso_triad",
+      "skill_gap"
+    ],
+    "audience": "all"
   }
 ]

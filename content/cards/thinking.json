@@ -1068,124 +1068,127 @@
     "concept": "inversion",
     "domain": "thinking",
     "type": "reveal",
-    "hook": "Want to ace your presentation? What's the WORST way to give it?",
-    "title": "Flipping Your Way to Success",
+    "hook": "Planning how it goes well? Start with how you'd ruin it.",
+    "title": "Start With How It Fails",
     "game": {
-      "prompt": "Think of your biggest goal: acing that presentation. First, list 3 ways you could totally BOMB it. Then, think: how do I avoid each one? ",
+      "prompt": "Think of something coming up this week (a talk, a call, a hard conversation). Before planning how it goes well, which first step usually gives you a clearer plan?",
       "choices": [
-        {
-          "text": "List the worst ways to bomb it",
-          "best": true
-        },
-        {
-          "text": "Skip this and jump straight to good ideas",
-          "feedback": "Jumping ahead can miss crucial pitfalls. The best way to succeed is knowing what NOT to do."
-        }
+        "List 3 ways I could bomb it",
+        "Skip that and go straight to good ideas"
       ],
-      "reveal": "Charlie Munger says, 'Invert, always invert'. Thinking about failure first helps you see the gaps between where you are and where you want to be. It's like a roadmap with extra turns to avoid!",
-      "answer": 1
+      "answer": 0,
+      "reveal": "Listing the ways to fail usually wins: failure is easier to picture than the recipe for success. Rambling, no practice run, starting late: each becomes a 'don't'. Munger borrowed 'Invert, always invert' from the mathematician Carl Jacobi."
     },
-    "insight": "Thinking about potential failures first can highlight unexpected solutions you wouldn't have found by focusing solely on success.",
-    "model": "Invert your thinking: Identify potential paths to failure, then take steps to avoid them.",
-    "try_today": "Pick a small goal (making dinner, finishing a project). List 3 ways it could go wrong. Then brainstorm how to prevent each one.",
+    "insight": "Picturing a perfect result gives vague goals. Picturing a disaster gives a short, concrete list of things to avoid. Inversion is a thinking habit, not a tested law, but it is quick to try.",
+    "model": "Before planning success, list how you'd guarantee failure. Then avoid exactly those.",
+    "try_today": "Write 3 ways to ruin your next talk, call or tricky chat. Pick one and plan its opposite.",
+    "try_team": "Before a group event (a trip, a match, a launch), spend 3 minutes listing how to ruin it. Turn the top two into 'don'ts' everyone agrees on.",
     "source": {
       "thinkers": [
+        "Carl Jacobi",
         "Charlie Munger"
       ],
-      "work": "Munger, 'Invert, always invert' (investor and philanthropist)"
+      "work": "Munger, Poor Charlie's Almanack (2005), quoting Carl Jacobi"
     },
     "evidence": "philosophy",
     "level": 1,
     "related": [
       "premortem",
       "begin_with_end"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "second-order-fireworks-reveal",
     "concept": "second_order",
     "domain": "thinking",
     "type": "reveal",
-    "hook": "A fireworks show is dazzling. What happens *after* the boom?",
-    "title": "Second-Order Thinking: Beyond the Spark",
+    "hook": "Your big win is the first domino. What falls a few weeks later?",
+    "title": "After the Win",
     "game": {
-      "prompt": "You just landed your dream job! You're excited. What happens next? Now, what happens *after* that excitement fades?",
+      "prompt": "You get something you really wanted: a place on a team, a new job, a new home. First effect: excitement. What tends to show up a few weeks later?",
       "choices": [
-        {
-          "text": "I'll be praised at work and feel confident.",
-          "answer": 0
-        },
-        {
-          "text": "The new challenges might reveal I need to learn more, leading me to invest in my growth.",
-          "answer": 1
-        }
+        "Praise and confidence",
+        "New demands I'll need to grow into"
       ],
-      "reveal": "First-order thinking focuses on the immediate joy. Second-order thinking recognizes that even wins bring new demands. It's about anticipating those changes and planning for them too."
+      "answer": 1,
+      "reveal": "New demands, usually. Both are real, but the praise comes first and fades, while the win quietly brings new habits, costs and skills to learn. First-order thinking stops at the joy. Second-order thinking asks 'and then what?', so you can plan for it calmly instead of being caught out."
     },
-    "insight": "Success often triggers new challenges. Second-order thinking prepares you for the 'aftermath' of your victories.",
-    "model": "Think beyond the initial outcome: what follows will shape the next chapter.",
-    "try_today": "Pick a recent win (a project, a sale). What was the immediate effect? Now, think about what might come *next* as a result.",
+    "insight": "Good news has ripples too. Asking what a win sets in motion lets you get ready early, without spoiling the joy of it. It's a thinking habit from investing, not a lab finding.",
+    "model": "Every outcome, good or bad, starts a chain. Ask 'and then what?' twice.",
+    "try_today": "Pick one good thing coming up. Write its first effect, then ask 'and then what?' twice. Plan one small step for the second.",
+    "try_team": "After a group win (a match, a show, a launch), ask together: what does this win ask of us next month? Name one thing to prepare.",
     "source": {
       "thinkers": [
         "Howard Marks"
       ],
-      "work": "Marks, The Most Important Thing (2013)"
+      "work": "Marks, The Most Important Thing (2011)"
     },
-    "evidence": "strong",
+    "evidence": "philosophy",
     "level": 1,
     "related": [
       "fixes_that_fail",
       "feedback_loops"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "anchoring-price-choice",
     "concept": "anchoring",
     "domain": "thinking",
     "type": "choice",
-    "hook": "One headphone pair.  What price feels like a steal?",
-    "title": "Anchoring: That First Number Sets You Up",
+    "hook": "Half price feels like a win. Half of what, though?",
+    "title": "The First Price Sets the Bar",
     "game": {
       "steps": [
         {
-          "scenario": "You see these headphones, and the price tag reads $150. Then you notice another pair nearby for $300. What's your first thought about how much those $150 ones are worth?",
+          "scenario": "You're buying headphones. The first pair you see costs 300. The next pair costs 150, and your gut says 'bargain'. Your best move?",
           "options": [
             {
-              "text": "They seem like a steal!",
-              "best": true,
-              "feedback": "Exactly! The higher price makes the $150 pair look more reasonable. That's anchoring: your brain uses that first number to judge everything else."
+              "text": "Buy the 150 pair. It's half price!",
+              "feedback": "Very natural: the 300 tag set the bar, so 150 looks cheap. But half of someone else's number isn't proof of a good deal yet."
             },
             {
-              "text": "I don't know, they still seem a bit expensive.",
-              "feedback": "Fair enough. But remember, even if you think they are pricey, the $300 pair has already influenced your perception."
+              "text": "Ask: what would I pay if I'd never seen the 300 pair?",
+              "best": true,
+              "feedback": "Yes. That question swaps the shop's anchor for your own. If 150 still feels right, buy it with a clear head."
+            },
+            {
+              "text": "Walk out. Every price is a trick.",
+              "feedback": "Careful is fine, but you still need headphones. The fix isn't avoiding prices, it's choosing your own reference point."
             }
           ]
         },
         {
-          "scenario": "Now imagine the headphones were originally priced at $75, and a sale sticker says 'Reduced to $150!'.  Does that change how you feel about them?",
+          "scenario": "Online, a different pair shows 'Was 200, now 120'. Which question helps you most?",
           "options": [
             {
-              "text": "Definitely! The sale feels more convincing.",
-              "best": true,
-              "feedback": "You're seeing the power of anchoring again. Even though the price is still high, the 'original price' makes it seem like a better deal."
+              "text": "How much am I saving?",
+              "feedback": "Tempting, but the 'saving' is measured from their number, the 200. That's the anchor doing the work."
             },
             {
-              "text": "Not really. I'd still need to compare them to other options.",
-              "feedback": "That's wise! While anchoring can influence your thinking, don't let it be your only guide. Research and compare before making a decision."
+              "text": "What do similar pairs usually sell for?",
+              "best": true,
+              "feedback": "Exactly. A typical price is a fair reference; a 'was' price is one the seller picked."
+            },
+            {
+              "text": "How long is the sale on?",
+              "feedback": "Worth knowing, but a countdown adds rush on top of the anchor. Check the typical price first."
             }
           ]
         }
       ]
     },
-    "insight": "The first number you see (the 'anchor') strongly influences how you perceive subsequent prices. This is called anchoring bias. Be aware of this effect, especially when shopping!",
-    "model": "Anchoring: Our brains use the first piece of information they receive to judge everything else.",
-    "try_today": "When shopping, ditch the sticker shock! Focus on value by comparing products to find the best deal.",
+    "insight": "The first number you see becomes a reference point, even when someone else chose it. Anchoring is one of the best-replicated biases. Your defence: pick your own reference first.",
+    "model": "The first number sets the bar. Choose your own bar before you compare.",
+    "try_today": "Write what you'd happily pay for the next thing you buy, before you look at a single price tag.",
+    "try_team": "Before haggling or budgeting together (a trip, a gift, a purchase), agree your top price in private first, then compare it to any 'was' price.",
     "source": {
       "thinkers": [
         "Amos Tversky",
         "Daniel Kahneman"
       ],
-      "work": "Judgment under Uncertainty: Heuristics and Biases (1982)"
+      "work": "Tversky & Kahneman, Judgment under Uncertainty: Heuristics and Biases, Science (1974)"
     },
     "evidence": "strong",
     "level": 1,
@@ -1193,52 +1196,73 @@
       "system1_system2",
       "availability",
       "base_rates"
-    ]
+    ],
+    "audience": "all"
   },
   {
     "id": "availability-vivid-choice",
     "concept": "availability",
     "domain": "thinking",
     "type": "choice",
-    "hook": "You're writing an essay on 'Dangerous Animals'. Which do you focus on?",
+    "hook": "Your fear list was written by films, not by numbers.",
     "title": "The Vivid Threat",
     "game": {
       "steps": [
         {
-          "scenario": "You're writing an essay on 'Dangerous Animals' for school. You want to make it compelling.  Which animal gets the most attention?",
+          "scenario": "Quick gut check: which animal kills the most people worldwide each year?",
           "options": [
             {
-              "text": "A rare, highly venomous snake found in a remote jungle.",
-              "feedback": "It's easy to picture: the vibrant colors, the deadly bite. Our brains love vivid stories! But how common are these snakes really? Research suggests we overestimate their threat level."
+              "text": "Snakes",
+              "feedback": "Good guess, and a real danger: the WHO estimates 81,000 to 138,000 snakebite deaths a year. But one animal kills several times more."
             },
             {
-              "text": "The most common mosquito species found in your backyard.",
+              "text": "Mosquitoes",
               "best": true,
-              "feedback": "Yes. While less dramatic, mosquitoes cause more deaths worldwide than any other animal. Availability bias makes us focus on the sensational, not the statistically significant."
+              "feedback": "Yes. Malaria alone, spread by mosquitoes, kills around 600,000 people a year (WHO). A tiny bite is hard to picture as deadly, so it rarely comes to mind first."
             },
             {
-              "text": "A large shark seen occasionally off the coast of a popular beach.",
-              "feedback": "Sharks are scary in movies! We hear about them often, making their danger feel bigger. But statistically, you're more likely to be struck by lightning than attacked by a shark."
+              "text": "Lions and tigers",
+              "feedback": "Vivid and scary, which is why they come to mind. They kill far fewer people than snakes or mosquitoes."
+            }
+          ]
+        },
+        {
+          "scenario": "You're packing for a hiking trip somewhere warm. You have room for one extra thing. Which helps most?",
+          "options": [
+            {
+              "text": "A snakebite kit, just in case",
+              "feedback": "Understandable: snakes are the vivid risk. Worth it in some places, but check what's actually common where you're going first."
+            },
+            {
+              "text": "Check if the area has malaria, and pack repellent",
+              "best": true,
+              "feedback": "Yes. You prepared for the common risk, not the one that's easiest to picture. That's availability bias, beaten."
+            },
+            {
+              "text": "Read survival stories from the area",
+              "feedback": "Fun, but stories are exactly what make rare dangers feel common. A quick health-advice check tells you more."
             }
           ]
         }
       ]
     },
-    "insight": "Our brains prioritize vivid details over statistical reality. This 'availability bias' makes us overestimate the likelihood of events we can easily recall.",
-    "model": "Easy-to-remember events feel more common, but statistics often tell a different story.",
-    "try_today": "When making decisions, ask yourself: 'Am I basing this on vivid examples or reliable data?'",
+    "insight": "Dangers that are easy to picture feel common, while quiet everyday risks slip past. Tversky and Kahneman called it the availability heuristic: we judge likelihood by how easily examples come to mind.",
+    "model": "Easy to picture isn't the same as likely. Prepare for the common risk, not the vivid one.",
+    "try_today": "Pick one precaution you take (a lock, an app, a habit) and ask: is this for the vivid risk or the common one?",
+    "try_team": "Each person names the risk they prepare for most (on trips, online, at home). Vote: vivid or common? Swap one vivid precaution for a common one.",
     "source": {
       "thinkers": [
         "Amos Tversky",
         "Daniel Kahneman"
       ],
-      "work": "Judgment Under Uncertainty: Heuristics and Biases (1982)"
+      "work": "Tversky & Kahneman, Availability: A heuristic for judging frequency and probability, Cognitive Psychology (1973)"
     },
-    "evidence": "strong",
+    "evidence": "moderate",
     "level": 1,
     "related": [
       "base_rates",
       "system1_system2"
-    ]
+    ],
+    "audience": "all"
   }
 ]

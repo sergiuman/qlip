@@ -919,63 +919,67 @@
     "concept": "emotional_contagion",
     "domain": "emotions",
     "type": "choice",
-    "hook": "Your friend just shared a heartbreaking story. How do you react?",
-    "title": "Feeling Their Feelings",
+    "hook": "Someone walks in stressed. Ten minutes later, so are you. Why?",
+    "title": "Caught Moods",
     "game": {
       "steps": [
         {
-          "scenario": "Your best friend is sharing a really tough story about something they're going through. What's your first instinct?",
+          "scenario": "Someone you live with gets home furious about their day and vents for ten minutes. You felt fine before. Now you're snapping at your phone. What most likely happened?",
           "options": [
             {
-              "text": "You immediately offer advice on what they should do.",
-              "feedback": "While you want to help, jumping in with solutions can sometimes make them feel unheard. Try listening first and validating their feelings."
-            },
-            {
-              "text": "You try to lighten the mood with a joke or funny story about something unrelated.",
-              "feedback": "Humor can be helpful, but in this case, it might feel insensitive. Focus on being present and supportive of their emotions right now."
-            },
-            {
-              "text": "You listen attentively, offer words of comfort, and acknowledge how difficult this must be for them.",
+              "text": "You caught their mood.",
               "best": true,
-              "feedback": "This is the best response! Showing empathy and understanding helps your friend feel supported and validated in their experience."
+              "feedback": "Most likely. We copy the faces, voices and posture around us without noticing, and the feeling tends to follow. That's emotional contagion."
+            },
+            {
+              "text": "Your own day was worse than you thought.",
+              "feedback": "Possible, and worth checking. But look at the timing: you were fine until they walked in. That's a clue the mood came in with them."
+            },
+            {
+              "text": "Your phone is just annoying today.",
+              "feedback": "It's the easy target. But the phone didn't change in those ten minutes; your mood did, right after the vent."
             }
           ]
         },
         {
-          "scenario": "After listening, what do you say next?",
+          "scenario": "You've noticed the mood is partly theirs. They're still upset. Your next move?",
           "options": [
             {
-              "text": "You ask probing questions to help them figure out solutions.",
-              "feedback": "It's good to be helpful, but right now they need space to process their emotions. Avoid pushing for answers prematurely."
-            },
-            {
-              "text": "You offer a hug or physical touch if it feels appropriate and welcomed.",
+              "text": "Take one slow breath, then say: 'That sounds really hard. Want me to just listen, or help think it through?'",
               "best": true,
-              "feedback": "Sometimes a simple gesture of comfort can speak volumes. Always respect personal boundaries and ask if it's okay before initiating physical contact."
+              "feedback": "Yes. You steadied yourself first, then let them choose. Now your calm has a chance to spread, not just their stress."
             },
             {
-              "text": "You tell them you've been through something similar and share your own story for comparison.",
-              "feedback": "Sharing your experiences can be helpful sometimes, but make sure the focus remains on their feelings and needs. Avoid making it about you."
+              "text": "Match their anger: 'They're awful, I'd be livid too!'",
+              "feedback": "It feels loyal, and it shows you care. But now two people are wound up, and the stress grows instead of settling."
+            },
+            {
+              "text": "Give them a hug.",
+              "feedback": "Some people want a hug, some don't. Asking first keeps it safe, and it can be lovely when it's welcome."
             }
           ]
         }
       ]
     },
-    "insight": "Emotional contagion is more than catching feelings; it's about empathetic responses. Understanding this connection lets us build stronger bonds and offer real support.",
-    "model": "Empathy is contagious too! Our responses shape the emotional landscape of our interactions.",
-    "try_today": "Listen to someone's feelings today.  Validate them instead of offering solutions. Active listening goes a long way.",
+    "insight": "Moods spread: we mirror faces and voices without noticing, and the feeling follows (Hatfield et al., 1994). Effects are often modest, but spotting a caught mood lets your calm spread instead.",
+    "model": "Moods spread. Notice whose you've caught before you react.",
+    "try_today": "Next time your mood drops around others, ask: is this mine, or did I catch it? Take one slow breath before you reply.",
+    "try_team": "After a tense moment in a meeting, class or family chat, pause for 30 seconds. Each person silently asks: is this feeling mine or caught? Then carry on.",
     "source": {
       "thinkers": [
         "Elaine Hatfield",
-        "Daniel Goleman"
+        "John Cacioppo",
+        "Richard Rapson",
+        "Sigal Barsade"
       ],
-      "work": "Social Psychology (1986); Emotional Intelligence (1995)"
+      "work": "Hatfield, Cacioppo & Rapson, Emotional Contagion (1994); Barsade, The Ripple Effect, Administrative Science Quarterly (2002)"
     },
-    "evidence": "strong",
+    "evidence": "moderate",
     "level": 1,
     "related": [
       "three_conversations",
       "emotion_naming"
-    ]
+    ],
+    "audience": "all"
   }
 ]

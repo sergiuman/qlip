@@ -23,7 +23,7 @@ DATA = ROOT / "data"
 
 
 YOUNG = r"\b(school|teachers?|class(mate)?s?|revis\w*|exams?|mocks?|homework|mates?|best friend|parents?|mum|dad|group chat|snap\w*|tiktok|gcses?|sixth form|college|uni|coursework|football|trainers|saturday job|bedroom|captain|coach|tryouts?|trials|in your year|biology|chemistry|maths|essay|detention|youtuber|playground|age 1[3-8]|you're 1[3-8])\b"
-WORK = r"\b(manager|managers|boss|colleagues?|salary|pay ?rise|raise|day's pay|meetings?|clients?|team ?lead|your team|direct reports?|stand-?ups?|1:1s?|one-to-ones?|projects?|deadlines?|career|hiring|hire|interview\w*|candidates?|office|mortgage|retire\w*|grandkid\w*|commute|pull requests?|code review|engineers?|directors?|sprints?|dashboards?|kpis?|performance review|promotion|quarterly|stakeholders?|workplace|employees?|startup|on-call|email after)\b"
+WORK = r"\b(manager|managers|boss|colleagues?|salary|pay ?rise|raise|day's pay|meetings?|clients?|team ?lead|your team|direct reports?|stand-?ups?|1:1s?|one-to-ones?|projects?|deadlines?|career|hiring|hire|interview\w*|candidates?|office|mortgage|retire\w*|grandkid\w*|commute|pull requests?|code review|engineers?|directors?|sprints?|dashboards?|kpis?|performance review|promotion|quarterly|stakeholders?|workplace|employees?|startup|on-call|email after|spreadsheets?|at work|after work|workday|coworkers?)\b"
 
 
 def audience(card):
