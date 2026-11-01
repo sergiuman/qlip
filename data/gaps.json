@@ -2,7 +2,7 @@
  "tasks": [
   {
    "kind": "depth",
-   "concept": "mistake_alchemy",
+   "concept": "power_of_yet",
    "domain": "growth",
    "type": "radar",
    "has": [
@@ -11,8 +11,8 @@
   },
   {
    "kind": "depth",
-   "concept": "premortem",
-   "domain": "decisions",
+   "concept": "self_reflection_loop",
+   "domain": "growth",
    "type": "venn",
    "has": [
     "choice"
@@ -20,8 +20,8 @@
   },
   {
    "kind": "depth",
-   "concept": "stress_mindset",
-   "domain": "perception",
+   "concept": "order_chaos",
+   "domain": "meaning",
    "type": "radar",
    "has": [
     "spectrum"
@@ -29,41 +29,41 @@
   },
   {
    "kind": "depth",
-   "concept": "never_miss_twice",
-   "domain": "habits",
+   "concept": "shared_fictions",
+   "domain": "connection",
    "type": "order",
    "has": [
-    "choice"
+    "swipe"
    ]
   },
   {
-   "kind": "expand",
-   "seed": {
-    "from": "value",
-    "label": "Creative & Truthful Courage",
-    "text": "Standing with tall posture, telling the plain truth instead of protective fibs, and measuring progress against yesterday's you rather than someone else's trophy.",
-    "novelty": 17
-   }
+   "kind": "depth",
+   "concept": "boredom_signal",
+   "domain": "attention",
+   "type": "venn",
+   "has": [
+    "estimate"
+   ]
   },
   {
-   "kind": "expand",
-   "seed": {
-    "from": "value",
-    "label": "Deliberate Pacing",
-    "text": "Breaking steep cliffs into reachable ledges and taking smart shelter during wind gusts so your muscles don't cramp halfway up.",
-    "novelty": 16
-   }
+   "kind": "depth",
+   "concept": "golden_mean",
+   "domain": "wisdom",
+   "type": "radar",
+   "has": [
+    "spectrum"
+   ]
   }
  ],
- "concepts_single_card": 23,
+ "concepts_single_card": 9,
  "type_use": {
-  "venn": 6,
-  "reveal": 36,
-  "choice": 42,
-  "swipe": 23,
-  "spectrum": 14,
+  "venn": 7,
+  "reveal": 48,
+  "choice": 71,
+  "swipe": 35,
+  "spectrum": 15,
   "order": 6,
-  "estimate": 20,
-  "radar": 6
+  "estimate": 25,
+  "radar": 7
  }
 }
