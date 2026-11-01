@@ -48,7 +48,7 @@
         }
       ]
     },
-    "insight": "Epictetus taught that suffering grows when we pour effort into the 'not up to me' pile. The trick: almost every outcome you can't control has an action next to it that you can.",
+    "insight": "Epictetus: events aren't up to us, but our judgments about them are, and those are what disturb us. Almost every outcome you can't control has a choice next to it that you can.",
     "model": "Care about outcomes, but aim your effort at your own choices, judgments and actions.",
     "try_today": "Write your biggest worry. Under it, list two actions that are fully up to you. Do one before tonight.",
     "source": {
@@ -68,8 +68,8 @@
     ],
     "try_team": "Each person names one worry. Together sort it into 'up to us' and 'not up to us', then pick one 'up to us' action to do this week.",
     "from_source": {
-      "quote": "Of things, some are in our power and others not.",
-      "cite": "Epictetus, Enchiridion, ch. 1 (trans. Elizabeth Carter, 1758)",
+      "quote": "Of things some are in our power, and others are not.",
+      "cite": "Epictetus, Enchiridion, ch. 1 (trans. George Long, 1877)",
       "next_read": "Enchiridion, chapters 1-5 (about two pages)"
     },
     "audience": "all"
@@ -102,6 +102,24 @@
           ]
         },
         {
+          "scenario": "In your head a sentence forms: \"This trip is ruined.\" Which thought is yours to change?",
+          "options": [
+            {
+              "text": "Nothing. The airline ruined it.",
+              "feedback": "The cancellation was theirs. \"Ruined\" is your verdict on it, and verdicts are up to you."
+            },
+            {
+              "text": "Swap \"ruined\" for \"delayed, and annoying\".",
+              "best": true,
+              "feedback": "Epictetus, ch. 5: the event is the delay, the disturbance is the judgment. A fairer word lowers the heat without pretending it is fine."
+            },
+            {
+              "text": "Pretend you don't mind.",
+              "feedback": "Suppressing isn't Stoic. Re-judging is."
+            }
+          ]
+        },
+        {
           "scenario": "The agent says the next flight is tomorrow. You feel heat in your chest. You…",
           "options": [
             {
@@ -121,8 +139,8 @@
         }
       ]
     },
-    "insight": "Epictetus opens the Enchiridion with it: some things are up to us (judgment, choice, next action), others not (the plane, the seat). Still care about getting home; put effort where it's yours.",
-    "model": "When things go wrong, separate what's yours (judgment, choice, next action) from what isn't (the outcome).",
+    "insight": "Epictetus: up to us are our opinions, impulses, desires and aversions; not events. Wanting to get home is fine (a 'preferred' thing). Just don't stake your peace on the plane.",
+    "model": "When things go wrong, separate the event (not yours) from your verdict on it and your next move (yours).",
     "try_today": "Next time something annoys you, say out loud \"What's mine here?\" and do that one thing first.",
     "source": {
       "thinkers": [
@@ -588,11 +606,11 @@
         "No, keep it",
         "I'm not sure"
       ],
-      "reveal": "There's no wrong answer, and some pain is never 'worth it'. But many people find a setback also taught them a skill, a friend, or a direction. Nietzsche called embracing your whole story, hard parts included, amor fati. If you chose erase, that is honest too: some losses teach nothing worth their price."
+      "reveal": "There's no wrong answer, and some pain is never 'worth it'. But many people find a setback also taught them a skill, a friend, or a direction. Nietzsche called loving what is necessary in your life, hard parts included, amor fati. If you chose erase, that is honest too: some losses teach nothing worth their price. Marcus Aurelius (Meditations 4.1) offers a gentler cousin: fire turns whatever falls on it into flame."
     },
-    "insight": "Amor fati isn't pretending bad things were good. In Ecce Homo Nietzsche wanted nothing different; you can start smaller: ask what a hard chapter gave you, or simply that you survived it.",
+    "insight": "Amor fati isn't pretending bad things were good. Nietzsche aimed to want nothing different, ever (Ecce Homo); you don't have to. Ask what a hard chapter gave you, or honour that you came through.",
     "model": "You can't change what happened. You can choose what it becomes part of.",
-    "try_today": "Write one setback and finish this line: \"Because of it, I can now…\". Keep it to one sentence.",
+    "try_today": "Write one setback and finish one of these lines: 'Because of it, I can now…' or 'I got through it, and that counts.' Either is enough.",
     "source": {
       "thinkers": [
         "Friedrich Nietzsche",

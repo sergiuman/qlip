@@ -1,1087 +1,1168 @@
 [
- {
-  "id": "wso-triad-venn",
-  "concept": "wso_triad",
-  "domain": "action",
-  "type": "venn",
-  "hook": "Stuck on something? Find which of three things is missing.",
-  "title": "Will, Skill, Open door",
-  "game": {
-   "prompt": "Pick one goal you keep putting off (a skill to learn, a stuck project, a hard conversation). Answer every line for that one goal.",
-   "axes": [
-    {
-     "key": "W",
-     "label": "Will",
-     "color": "#F97316"
-    },
-    {
-     "key": "S",
-     "label": "Skill",
-     "color": "#0EA5E9"
-    },
-    {
-     "key": "O",
-     "label": "Open door (chance)",
-     "color": "#10B981"
-    }
-   ],
-   "questions": [
-    {
-     "q": "I'd do this even if no one saw.",
-     "axis": "W"
-    },
-    {
-     "q": "I know the first three steps I'd take.",
-     "axis": "S"
-    },
-    {
-     "q": "I can get the time, tools or permission I need for this within a week.",
-     "axis": "O"
-    }
-   ],
-   "threshold": 0.6,
-   "results": {
-    "W": {
-     "name": "Fired Up, Building Up",
-     "text": "The want is strong today. Start with the cheapest move: ask one person for the time or the chance this week. If the door's already open, do one 5-minute practice rep."
-    },
-    "S": {
-     "name": "Skilled, Looking for a Why",
-     "text": "Skill scores high today; want and door are lower. First write one sentence on why this matters to you. If the why is there, ask one person for the time or chance this week."
-    },
-    "O": {
-     "name": "The Open Door",
-     "text": "The door looks open today. Start with one 5-minute practice rep. If the want feels flat, write one sentence on why this matters to you."
-    },
-    "SW": {
-     "name": "Ready, Door Closed (for now)",
-     "text": "You want it and can do it, but the door scores shut today: that's structural, not a flaw, so find or build another door."
-    },
-    "OW": {
-     "name": "Eager, Door Open",
-     "text": "Want plus an open door today is a great place to learn: practise in small, honest reps with feedback."
-    },
-    "OS": {
-     "name": "Ready, Waiting for a Why",
-     "text": "Everything scores high today except the fire, and no trick fixes a missing why, so look for your reason."
-    },
-    "OSW": {
-     "name": "All Lights On (for this goal)",
-     "text": "All three pillars score high today, so pick a day and time for the first 10 minutes and write it down."
-    },
-    "": {
-     "name": "The Starting Line",
-     "text": "Nothing's fully lit yet. Normal, not a verdict. Do one 5-minute move on your lowest pillar tonight: Will, write why it matters. Skill, practise once. Door, ask one person."
-    },
-    "mid": {
-     "name": "The Half-Lit Path",
-     "text": "All three are half-lit today: do one 5-minute practice rep or ask for one free hour, then replay in a week."
-    }
-   }
-  },
-  "insight": "Action needs a want, an ability and an open door; Blumberg and Pringle (1982) said research kept forgetting the door. Pushing harder on strong pillars rarely fixes the weak one.",
-  "model": "Stuck? Don't push everywhere. Find the missing pillar: Will, Skill or Open door.",
-  "try_today": "In your notes app, type your goal and rate Will, Skill and Open door out of 10. Do one 5-minute move on the lowest one tonight.",
-  "source": {
-   "thinkers": [
-    "Melvin Blumberg & Charles Pringle",
-    "Deci & Ryan",
-    "Albert Bandura"
-   ],
-   "work": "Blumberg & Pringle, The missing opportunity in organizational research (Academy of Management Review, 1982). Qlip's short version is a simplified teaching tool, not a validated scale."
-  },
-  "evidence": "philosophy",
-  "level": 1,
-  "related": [
-   "self_efficacy",
-   "goal_directed_perception",
-   "start_with_why"
-  ],
-  "try_team": "Each person scores one stuck goal on Will, Skill and Open door out of 10. Ask someone else in the group which pillar they'd help with first.",
-  "audience": "all"
- },
- {
-  "id": "wso-triad-reveal",
-  "concept": "wso_triad",
-  "domain": "action",
-  "type": "reveal",
-  "hook": "A gifted kid grows up with no instruments. What happens to the gift?",
-  "title": "Talent needs a door",
-  "game": {
-   "prompt": "Picture a child with a gift for music and a hunger to play, born in a place with no instruments, no teachers and no time off work. Does her talent show up anyway?",
-   "choices": [
-    "Yes, real talent always finds a way",
-    "Probably not, or only in pieces"
-   ],
-   "reveal": "Usually not, or only in pieces. If you said yes, that's the story we're all told: we hear about those who made it, not the many with grit and no door. Gifts are spread widely; open doors are not.",
-   "answer": 1
-  },
-  "insight": "Stories where grit beats everything hide the many who had grit and no door. Seeing the missing pillar is kinder, and more accurate, than blaming people for not trying.",
-  "model": "Talent and drive are necessary, not sufficient. Someone has to open, or build, the door.",
-  "try_today": "Think of one person whose skill you admire but who lacks a door. Send them one lead, intro or resource today.",
-  "source": {
-   "thinkers": [
-    "Thomas Gray",
-    "Anthony Giddens"
-   ],
-   "work": "Gray, Elegy Written in a Country Churchyard (1751); Giddens, The Constitution of Society (1984); QUMNI WSO Framework"
-  },
-  "evidence": "philosophy",
-  "level": 1,
-  "related": [
-   "opportunity_gap",
-   "circle_influence",
-   "self_efficacy"
-  ],
-  "try_team": "Each person names one door someone once opened for them (a teacher, a lift, a loan, an intro). Then list doors your group could open for someone else.",
-  "from_source": {
-   "quote": "Full many a flower is born to blush unseen, / And waste its sweetness on the desert air.",
-   "cite": "Thomas Gray, Elegy Written in a Country Churchyard (1751), stanza 14",
-   "next_read": "Stanzas 12-15, from 'Perhaps in this neglected spot is laid' to 'Some mute inglorious Milton'"
-  },
-  "audience": "all"
- },
- {
-  "id": "two-thirds-rule-choice",
-  "concept": "two_thirds_rule",
-  "domain": "action",
-  "type": "choice",
-  "hook": "You have one hour to help a stuck friend. Where do you spend it?",
-  "title": "Push the missing pillar",
-  "game": {
-   "steps": [
-    {
-     "scenario": "Ana loves baking and is great at it. She wants to sell cakes at the local summer fair, but she has no stall. You help by…",
-     "options": [
-      {
-       "text": "Sending her an advanced baking class",
-       "feedback": "Kind, but her skill is already strong. More of what she has won't get her a stall."
-      },
-      {
-       "text": "Giving her a pep talk about following her dream",
-       "feedback": "Her will is already on fire. Encouragement is nice, but it isn't what's missing."
-      },
-      {
-       "text": "Asking the fair organiser you know if she can share a table",
-       "best": true,
-       "feedback": "Yes. Will and Skill are lit; the Open door is missing. Here, one door likely does more than any pep talk."
+  {
+    "id": "wso-triad-venn",
+    "concept": "wso_triad",
+    "domain": "action",
+    "type": "venn",
+    "hook": "Stuck on something? Find which of three things is missing.",
+    "title": "Will, Skill, Open door",
+    "game": {
+      "prompt": "Think of one thing you keep meaning to start. 3 quick taps.",
+      "axes": [
+        {
+          "key": "W",
+          "label": "Will",
+          "color": "#F97316"
+        },
+        {
+          "key": "S",
+          "label": "Skill",
+          "color": "#0EA5E9"
+        },
+        {
+          "key": "O",
+          "label": "Open door",
+          "color": "#10B981"
+        }
+      ],
+      "questions": [
+        {
+          "q": "I'd do this even if no one saw.",
+          "axis": "W"
+        },
+        {
+          "q": "I know the first three steps I'd take.",
+          "axis": "S"
+        },
+        {
+          "q": "I can get the time, tools or permission I need for this within a week.",
+          "axis": "O"
+        }
+      ],
+      "threshold": 0.6,
+      "results": {
+        "W": {
+          "name": "Willing, Not Yet Able",
+          "text": "The want is strong today. Start with the cheapest move: ask one person for the time or the chance this week. If the door's already open, do one 5-minute practice rep."
+        },
+        "S": {
+          "name": "Able, Not Yet Willing",
+          "text": "Skill scores high today; want and door are lower. First write one sentence on why this matters to you. If the why is there, ask one person for the time or chance this week."
+        },
+        "O": {
+          "name": "Door Open, Not Yet Moving",
+          "text": "The door looks open today. Start with one 5-minute practice rep. If the want feels flat, write one sentence on why this matters to you."
+        },
+        "SW": {
+          "name": "Ready, Door Closed (for now)",
+          "text": "You want it and can do it, but the door scores shut today: that's structural, not a flaw, so find or build another door."
+        },
+        "OW": {
+          "name": "Eager, Door Open",
+          "text": "Want plus an open door today is a great place to learn: practise in small, honest reps with feedback."
+        },
+        "OS": {
+          "name": "Ready, Waiting for a Why",
+          "text": "Everything scores high today except the fire, and no trick fixes a missing why, so look for your reason."
+        },
+        "OSW": {
+          "name": "All Lights On (for this goal)",
+          "text": "All three pillars score high today, so pick a day and time for the first 10 minutes and write it down."
+        },
+        "": {
+          "name": "Your Starting Point",
+          "text": "Nothing's fully lit yet. That's normal, not a verdict. Tonight, pick your lowest pillar and do one 5-minute move. Will: write one line on why this goal matters to you. Skill: practise one small piece once. Door: ask one person for time or help."
+        },
+        "mid": {
+          "name": "The Half-Lit Path",
+          "text": "All three are half-lit today: do one 5-minute practice rep or ask for one free hour, then replay in a week."
+        }
       }
-     ]
     },
-    {
-     "scenario": "Leo did three years of Spanish at school and still gets by on holiday. He has free time and a language app already set up. He keeps saying he 'should' brush it up but never opens it. You…",
-     "options": [
-      {
-       "text": "Ask what he'd actually do with Spanish, and why it matters to him",
-       "best": true,
-       "feedback": "Yes. Skill is there and the door is open; the gap is Will. A real reason does more than a schedule."
+    "insight": "Blumberg and Pringle (1982) argued psychology explained performance by will and skill alone and kept forgetting opportunity: the open door. A framework, not a tested scale.",
+    "model": "Stuck? Don't push everywhere. Find the missing pillar: Will, Skill or Open door.",
+    "try_today": "In your notes app, type your goal and mark Will, Skill and Open door as low, mid or high. Do one 5-minute move on the lowest tonight.",
+    "source": {
+      "thinkers": [
+        "Melvin Blumberg & Charles Pringle",
+        "Deci & Ryan",
+        "Albert Bandura"
+      ],
+      "work": "Blumberg & Pringle, The missing opportunity in organizational research (Academy of Management Review, 1982). Qlip's short version is a simplified teaching tool, not a validated scale."
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "self_efficacy",
+      "goal_directed_perception",
+      "start_with_why"
+    ],
+    "try_team": "Each person marks one stuck goal low, mid or high on Will, Skill and Open door. Ask someone else in the group which pillar they'd help with first.",
+    "audience": "all"
+  },
+  {
+    "id": "wso-triad-reveal",
+    "concept": "wso_triad",
+    "domain": "action",
+    "type": "reveal",
+    "hook": "A gifted kid grows up with no instruments. What happens to the gift?",
+    "title": "Talent needs a door",
+    "game": {
+      "prompt": "Picture a child with a gift for music and a hunger to play, born in a place with no instruments, no teachers and no time off work. Does her talent show up anyway?",
+      "choices": [
+        "Yes, real talent always finds a way",
+        "Probably not, or only in pieces"
+      ],
+      "reveal": "Usually not, or only in pieces. If you said yes, that's the story we're all told: we hear about those who made it, not the many with grit and no door. Gifts are spread widely; open doors are not.",
+      "answer": 1
+    },
+    "insight": "Stories where grit beats everything hide the many who had grit and no door. Seeing the missing pillar is kinder, and more accurate, than blaming people for not trying.",
+    "model": "Talent and drive are necessary, not sufficient. Someone has to open, or build, the door.",
+    "try_today": "Think of one person whose skill you admire but who lacks a door. Send them one lead, intro or resource today.",
+    "source": {
+      "thinkers": [
+        "Thomas Gray",
+        "Anthony Giddens"
+      ],
+      "work": "Gray, Elegy Written in a Country Churchyard (1751); Giddens, The Constitution of Society (1984); QUMNI WSO Framework"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "opportunity_gap",
+      "circle_influence",
+      "self_efficacy"
+    ],
+    "try_team": "Each person names one door someone once opened for them (a teacher, a lift, a loan, an intro). Then list doors your group could open for someone else.",
+    "from_source": {
+      "quote": "Full many a flower is born to blush unseen, / And waste its sweetness on the desert air.",
+      "cite": "Thomas Gray, Elegy Written in a Country Churchyard (1751), stanza 14",
+      "next_read": "Stanzas 12-15, from 'Perhaps in this neglected spot is laid' to 'Some mute inglorious Milton'"
+    },
+    "audience": "all"
+  },
+  {
+    "id": "two-thirds-rule-choice",
+    "concept": "two_thirds_rule",
+    "domain": "action",
+    "type": "choice",
+    "hook": "You have one hour to help a stuck friend. Where do you spend it?",
+    "title": "Push the missing pillar",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Ana loves baking and is great at it. She wants to sell cakes at the local summer fair, but she has no stall. You help by…",
+          "options": [
+            {
+              "text": "Sending her an advanced baking class",
+              "feedback": "Kind, but her skill is already strong. More of what she has won't get her a stall."
+            },
+            {
+              "text": "Giving her a pep talk about following her dream",
+              "feedback": "Her will is already on fire. Encouragement is nice, but it isn't what's missing."
+            },
+            {
+              "text": "Asking the fair organiser you know if she can share a table",
+              "best": true,
+              "feedback": "Yes. Will and Skill are lit; the Open door is missing. Here, one door likely does more than any pep talk."
+            }
+          ]
+        },
+        {
+          "scenario": "Leo did three years of Spanish at school and still gets by on holiday. He has free time and a language app already set up. He keeps saying he 'should' brush it up but never opens it. You…",
+          "options": [
+            {
+              "text": "Ask what he'd actually do with Spanish, and why it matters to him",
+              "best": true,
+              "feedback": "Yes. Skill is there and the door is open; the gap is Will. A real reason does more than a schedule."
+            },
+            {
+              "text": "Make him a strict study timetable",
+              "feedback": "Structure helps once he wants it. Right now it would be a plan for something he doesn't care about yet."
+            },
+            {
+              "text": "Pay for the premium version of the app",
+              "feedback": "He already has the door. A bigger door won't make him walk through it."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Our rule of thumb, not a research finding: two pillars are often enough for a first step, and help on the third pays off most. People tend to push the pillar that's already strong.",
+    "model": "Push the one weak pillar, not all three. Small help in the right spot beats big help elsewhere.",
+    "try_today": "Ask someone stuck: 'Is it wanting, knowing how, or access?' Then offer help only on the answer they give.",
+    "source": {
+      "thinkers": [
+        "Melvin Blumberg & Charles Pringle"
+      ],
+      "work": "The 2-of-3 rule: an untested rule of thumb inspired by Blumberg & Pringle (Academy of Management Review, 1982), whose own model says all three pillars interact"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "wso_triad",
+      "leverage_points",
+      "will_gap"
+    ],
+    "try_team": "Each person shares one stuck goal. The group may only ask: 'Is it wanting, knowing how, or access?' Then offer one help aimed at that answer.",
+    "audience": "all"
+  },
+  {
+    "id": "two-thirds-rule-swipe",
+    "concept": "two_thirds_rule",
+    "domain": "action",
+    "type": "swipe",
+    "hook": "Two of three pillars lit often gets people moving. Can you count them?",
+    "title": "Spot the 2 out of 3",
+    "game": {
+      "prompt": "Does this person have at least two pillars lit?",
+      "left": "Not yet",
+      "right": "Two or more",
+      "items": [
+        {
+          "text": "Mia wants to run a 5K, has never run, and there's a park next door.",
+          "side": "right",
+          "why": "Will + Open door. Skill can be built on the way: start with walk-run intervals."
+        },
+        {
+          "text": "Theo plays piano well and has one at home, but stopped enjoying it after his exams.",
+          "side": "right",
+          "why": "Skill + Open door lit. Will is resting, normal after a hard stretch. Try one just-for-fun session."
+        },
+        {
+          "text": "Jo dreams of acting, has never tried, and no theatre is nearby.",
+          "side": "left",
+          "why": "Only Will. Build one more pillar first, like an online class or a local reading group."
+        },
+        {
+          "text": "Raj can fix bikes, loves it, and a neighbour just asked for help.",
+          "side": "right",
+          "why": "All three. Full agency: he only needs to say yes."
+        },
+        {
+          "text": "Lee has a free gym pass but no interest and no idea how to train.",
+          "side": "left",
+          "why": "Only the Open door. An open door alone doesn't move anyone."
+        }
+      ]
+    },
+    "insight": "Our rule of thumb, not a research finding: with two pillars lit, a first step is often possible. Will is the exception: without a reason that's yours, the others rarely carry you.",
+    "model": "Two pillars often make motion possible; if the missing one is Will, start there.",
+    "try_today": "List three goals. Count the lit pillars for each. Start the one with the most lit today.",
+    "source": {
+      "thinkers": [
+        "Melvin Blumberg & Charles Pringle"
+      ],
+      "work": "The 2-of-3 rule: an untested rule of thumb inspired by Blumberg & Pringle (Academy of Management Review, 1982), whose own model says all three pillars interact"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "wso_triad",
+      "skill_gap",
+      "small_wins"
+    ],
+    "try_team": "Write five goals from the group on slips of paper. Sort them together by how many pillars are lit, then plan the first step of one 'two-lit' goal.",
+    "audience": "all"
+  },
+  {
+    "id": "will-gap-spectrum",
+    "concept": "will_gap",
+    "domain": "action",
+    "type": "spectrum",
+    "hook": "Say your goal out loud. Did it start with \"I have to\" or \"I get to\"?",
+    "title": "The Capable Bystander",
+    "game": {
+      "left": "Running on 'should'",
+      "right": "Running on 'want'",
+      "questions": [
+        {
+          "q": "When I picture finishing this goal, I feel…",
+          "options": [
+            {
+              "label": "Like I've finally pleased someone else",
+              "value": -2
+            },
+            {
+              "label": "Some of both: it matters to me and to others",
+              "value": 0
+            },
+            {
+              "label": "Like I did something that matters to me",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "If nobody would ever know I quit, I would…",
+          "options": [
+            {
+              "label": "Quit right away",
+              "value": -2
+            },
+            {
+              "label": "Keep going, but with less effort",
+              "value": 0
+            },
+            {
+              "label": "Keep going anyway",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "The reason for this goal mostly came from…",
+          "options": [
+            {
+              "label": "Others' expectations",
+              "value": -2
+            },
+            {
+              "label": "A mix",
+              "value": 0
+            },
+            {
+              "label": "Something I care about",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When I describe it to a friend, I say…",
+          "options": [
+            {
+              "label": "'I have to…'",
+              "value": -2
+            },
+            {
+              "label": "'I need to…' (partly mine, partly expected)",
+              "value": 0
+            },
+            {
+              "label": "'I get to…'",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "If someone I respect told me to drop this goal, I would…",
+          "options": [
+            {
+              "label": "Push back: it's mine",
+              "value": 2
+            },
+            {
+              "label": "Feel torn",
+              "value": 0
+            },
+            {
+              "label": "Feel relieved",
+              "value": -2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Borrowed goal",
+          "text": "Today this goal sounds borrowed. That isn't a character flaw. Find your own reason inside it, or consider letting it go."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Flickering fire",
+          "text": "Today your reasons look part yours, part borrowed. If you mostly felt nothing, that is a separate signal: rest, or ask whether this goal still fits."
+        },
+        {
+          "upTo": 1,
+          "label": "Real fire",
+          "text": "Today you rate your want high. If you're still stuck, look at Skill or the Open door instead of blaming motivation."
+        }
+      ]
+    },
+    "insight": "With skill and access in place, the missing piece is often a reason that's yours. Goals that fit your values tend to last longer. If nothing has felt worth wanting for weeks, talk to someone.",
+    "model": "No productivity hack fixes a missing why. Find your reason, or free yourself from the goal.",
+    "try_today": "Write: 'This matters to me because…' If nothing comes, that's information, not failure. Can it be dropped, changed or tied to what you love?",
+    "source": {
+      "thinkers": [
+        "Edward Deci",
+        "Richard Ryan"
+      ],
+      "work": "Deci & Ryan, Self-Determination Theory (1985); Ryan & Deci, American Psychologist (2000); applied in the Will-Skill-Opportunity framework"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "sensitive": true,
+    "related": [
+      "start_with_why",
+      "wso_triad",
+      "procrastination_emotion"
+    ],
+    "try_team": "Each person says one goal as 'I have to…', then tries 'I get to… because…'. Goals nobody can rephrase may need a new reason, or a rethink.",
+    "audience": "all"
+  },
+  {
+    "id": "skill-gap-order",
+    "concept": "skill_gap",
+    "domain": "action",
+    "type": "order",
+    "hook": "Practised for hours. Why aren't you better? Order a real session.",
+    "title": "Practice That Actually Works",
+    "game": {
+      "prompt": "Put a good practice session in order",
+      "items": [
+        "Pick one small sub-skill",
+        "Practice just beyond your comfort zone",
+        "Get fast, honest feedback",
+        "Adjust and try again"
+      ],
+      "explain": "This is the core loop of deliberate practice: narrow focus, a stretch, feedback, then correction. Repeating what you can already do feels good but teaches little."
+    },
+    "insight": "Hours alone don't build skill; focused practice with feedback does more. The '10,000-hour rule' is a myth Ericsson himself rejected, and practice explains only part of skill differences.",
+    "model": "Skill grows at the edge: one sub-skill, a stretch, feedback, adjust, repeat.",
+    "try_today": "Choose one tiny part of a skill you want. Do 5 focused minutes on only that, then ask someone for one piece of feedback.",
+    "source": {
+      "thinkers": [
+        "K. Anders Ericsson",
+        "Brooke Macnamara",
+        "Aristotle"
+      ],
+      "work": "Ericsson & Pool, Peak (2016); Macnamara et al., Psychological Science (2014); applied in the Will-Skill-Opportunity framework"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deliberate_practice",
+      "growth_mindset",
+      "wso_triad"
+    ],
+    "try_team": "Everyone picks one tiny sub-skill (a chord, a serve, five new words). Practise 3 minutes, then swap and give each other one piece of feedback.",
+    "from_source": {
+      "quote": "…it is from playing the lyre that both good and bad lyre-players are produced.",
+      "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (trans. W. D. Ross, 1925)",
+      "next_read": "Nicomachean Ethics, Book II, chapters 1-2: how skills and virtues are built by practice"
+    },
+    "audience": "all"
+  },
+  {
+    "id": "skill-gap-test-yourself-choice",
+    "concept": "skill_gap",
+    "domain": "action",
+    "type": "choice",
+    "hook": "Reading your notes again feels like learning. Is it lying to you?",
+    "title": "Pull it out, don't pour it in",
+    "game": {
+      "steps": [
+        {
+          "scenario": "In a week you need to know new material: words in a language, a certification topic, or how a new system works. You've got one hour. Which plan sticks best?",
+          "options": [
+            {
+              "text": "Read the notes four times, slowly and carefully",
+              "feedback": "It feels great because it gets familiar. But in tests a week later, rereading lost to self-quizzing by a lot."
+            },
+            {
+              "text": "Read once, then close the notes and write what you remember, three times",
+              "best": true,
+              "feedback": "Yes. Pulling it out of memory is what makes it stick. It feels harder, and that's the point."
+            },
+            {
+              "text": "Highlight the key parts, then reread the highlights",
+              "feedback": "Very popular, but big reviews found highlighting adds little on its own. Turn highlights into questions instead."
+            }
+          ]
+        },
+        {
+          "scenario": "Your friend tries self-quizzing and says: 'This feels awful, I keep forgetting. Rereading felt better.' You say…",
+          "options": [
+            {
+              "text": "'Then go back to rereading, it's less stressful'",
+              "feedback": "Kind, but the smooth feeling is the trap: easy now, forgotten later."
+            },
+            {
+              "text": "'Struggling to remember is the workout. That's how it sticks.'",
+              "best": true,
+              "feedback": "Yes. Effortful recall feels like failing while it's building memory. Gaps you find are gifts."
+            },
+            {
+              "text": "'Maybe you're just not good at memorising'",
+              "feedback": "Meant gently, but forgetting during practice is normal for everyone, not a sign of low talent."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "In a classic study, students who reread a text recalled about 40% a week later; those who tested themselves recalled about 61%. Yet the rereaders felt more sure they'd remember.",
+    "model": "Easy-feeling study often isn't learning. Pull it out of your head; don't just pour it back in.",
+    "try_today": "Pick something you're learning. Close the book and write or say all you remember for 3 minutes. Then check the gaps.",
+    "try_team": "End a meeting, lesson or onboarding session with a 2-minute brain dump: everyone writes the 3 things they remember, no notes, then compares.",
+    "source": {
+      "thinkers": [
+        "Henry L. Roediger III",
+        "Jeffrey D. Karpicke",
+        "John Dunlosky"
+      ],
+      "work": "Roediger & Karpicke, Test-enhanced learning (Psychological Science, 2006); Dunlosky et al., Improving students' learning (Psychological Science in the Public Interest, 2013)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "deliberate_practice",
+      "self_efficacy",
+      "growth_mindset"
+    ],
+    "audience": "all"
+  },
+  {
+    "id": "opportunity-gap-swipe",
+    "concept": "opportunity_gap",
+    "domain": "action",
+    "type": "swipe",
+    "hook": "You're trying harder and harder. What if the wall isn't you?",
+    "title": "Ready, Door Closed",
+    "game": {
+      "prompt": "Where's the blocker: something you can grow, or something in the way?",
+      "left": "Something I can build",
+      "right": "Something in the setup",
+      "items": [
+        {
+          "text": "The art GCSE you want to take clashes with Triple Science on the timetable.",
+          "side": "right",
+          "why": "A timetable rule, not a flaw. Ask your head of year about other options or a different block."
+        },
+        {
+          "text": "You keep skipping guitar practice since you stopped caring about the songs.",
+          "side": "left",
+          "why": "That's Will, and it's allowed to change. Pick songs you love, or take a guilt-free break."
+        },
+        {
+          "text": "You can only revise after 10pm because you look after your little brother every evening.",
+          "side": "right",
+          "why": "Time is part of the Open door. Shrink the task or find a better slot, not more willpower."
+        },
+        {
+          "text": "You don't know how to edit videos for the channel you want to start.",
+          "side": "left",
+          "why": "That's Skill, and it's learnable fast with free tutorials and feedback."
+        },
+        {
+          "text": "The football team only trains at a ground two buses away and you've no lift.",
+          "side": "right",
+          "why": "That's access. Ask about lift shares or a closer team, not more willpower."
+        }
+      ]
+    },
+    "insight": "When will and skill are full, more effort on yourself can turn into self-blame. Some walls are rules, money, time or gatekeepers. That's not an excuse; it says change the setup.",
+    "model": "If you want it and can do it but still can't, the fight is structural. Change the setup, not yourself.",
+    "try_today": "Name one outside blocker on a goal. Write two other doors around it: another route, person, or place.",
+    "source": {
+      "thinkers": [
+        "Anthony Giddens",
+        "Pierre Bourdieu"
+      ],
+      "work": "Giddens, The Constitution of Society (1984); Bourdieu, The Forms of Capital (1986); applied in the Will-Skill-Opportunity framework"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "environment_design",
+      "circle_influence",
+      "wso_triad"
+    ],
+    "sensitive": true,
+    "try_team": "List the walls your class, team or family keeps hitting. Mark each 'something we can build' or 'in the setup'. Pick one setup wall and name who could move it.",
+    "audience": "young"
+  },
+  {
+    "id": "opportunity-gap-lost-einsteins-estimate",
+    "concept": "opportunity_gap",
+    "domain": "action",
+    "type": "estimate",
+    "hook": "Rich kids vs poorer kids: how much likelier to become inventors?",
+    "title": "The lost Einsteins",
+    "game": {
+      "question": "In the US, kids from the richest 1% of families vs kids from the poorer half: how many times more likely are they to become inventors?",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "unit": "×",
+      "answer": 10,
+      "explain": "About 10 times. Differences in maths scores at age 8 explained less than a third of that gap: even among kids with top maths scores, the richer ones were still far more likely to invent. Exposure mattered: kids who grew up around inventors were more likely to invent, often in the very same field.",
+      "anchor": null
+    },
+    "insight": "Talent is spread widely; doors are not. In this US data, growing up near people doing the work was one of the strongest doors. The study is observational, but the pattern is large.",
+    "model": "Ability is often not the bottleneck; access is. Seeing someone up close do the work is a door.",
+    "try_today": "Find one person who does something you'd love to do. Ask them one question: 'How did you get started?'",
+    "try_team": "Invite someone with an unusual job or hobby to talk for 5 minutes to your class, team or family. Ask: 'Who first showed you this?'",
+    "source": {
+      "thinkers": [
+        "Alex Bell",
+        "Raj Chetty",
+        "Xavier Jaravel",
+        "Neviana Petkova",
+        "John Van Reenen"
+      ],
+      "work": "Bell, Chetty, Jaravel, Petkova & Van Reenen, Who Becomes an Inventor in America? The Importance of Exposure to Innovation (Quarterly Journal of Economics, 2019)"
+    },
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "wso_triad",
+      "circle_influence",
+      "environment_design"
+    ],
+    "audience": "all"
+  },
+  {
+    "id": "self-efficacy-choice",
+    "concept": "self_efficacy",
+    "domain": "action",
+    "type": "choice",
+    "hook": "Your junior says \"I'm just not a presenter.\" What actually helps?",
+    "title": "Belief built by doing",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Mihai dreads the sprint demo and says \"I'm just not that kind of person.\" You…",
+          "options": [
+            {
+              "text": "Tell him he's great and will be fine",
+              "feedback": "Warm, and encouragement does help a bit. But words fade fast when the moment comes."
+            },
+            {
+              "text": "Ask him to present one slide, one minute, at the next demo, and do a dry run with you first",
+              "best": true,
+              "feedback": "Yes. A small success he earns himself is the strongest source of 'I can'. Then make the next step a bit bigger."
+            },
+            {
+              "text": "Send him a TED talk",
+              "feedback": "Watching others helps most when the model is similar to him. A star can feel out of reach."
+            },
+            {
+              "text": "Say some people just aren't presenters",
+              "feedback": "Meant kindly, but it locks the belief in place. Belief in what you can do changes with experience."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Bandura found that whether you even try depends on believing you can, not only on real skill. The strongest builder of that belief is a small success of your own.",
+    "model": "Believed skill decides if you try. Build belief with small wins you earn, not with pep talks alone.",
+    "try_today": "Pick something you think you're 'bad at'. Do the smallest possible version of it once today and notice that you did it.",
+    "source": {
+      "thinkers": [
+        "Albert Bandura"
+      ],
+      "work": "Self-efficacy: Toward a unifying theory of behavioral change (1977)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "small_wins",
+      "growth_mindset",
+      "wso_triad"
+    ],
+    "try_team": "Each person names one thing they're 'not a ___ person' about and commits to its tiniest version this week. Next time, everyone reports back.",
+    "from_source": {
+      "quote": "…we become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.",
+      "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (trans. W. D. Ross, 1925)",
+      "next_read": "Nicomachean Ethics, Book II, chapter 1. Aristotle means character, not confidence, but the mechanism rhymes: we become by doing."
+    },
+    "audience": "work"
+  },
+  {
+    "id": "self-efficacy-radar",
+    "concept": "self_efficacy",
+    "domain": "action",
+    "type": "radar",
+    "hook": "Where does your 'I can do this' actually come from?",
+    "title": "Your four sources of belief",
+    "game": {
+      "axes": [
+        "Wins",
+        "Models",
+        "Support",
+        "Body"
+      ],
+      "questions": [
+        {
+          "q": "I can remember recent times I did something hard and it worked.",
+          "axis": 0
+        },
+        {
+          "q": "I know someone like me who has done what I want to do.",
+          "axis": 1
+        },
+        {
+          "q": "People I trust tell me they think I can do it.",
+          "axis": 2
+        },
+        {
+          "q": "Butterflies before a challenge usually help me more than they hurt.",
+          "axis": 3
+        }
+      ],
+      "advice": {
+        "0": "Your own wins scored lowest today? Set a goal so small you can't fail, finish it, and write it down. Stack a few this week.",
+        "1": "Role models scored lowest today? Find one person a step or two ahead of you, not a superstar, and learn how they started.",
+        "2": "Support scored lowest today? Tell one supportive person your goal and ask them to check in with you in a week.",
+        "3": "Reading your body scored lowest today? Before a hard task, notice the racing heart and tell yourself: 'This is my body getting ready, not a sign I'll fail.'"
       },
-      {
-       "text": "Make him a strict study timetable",
-       "feedback": "Structure helps once he wants it. Right now it would be a plan for something he doesn't care about yet."
-      },
-      {
-       "text": "Pay for the premium version of the app",
-       "feedback": "He already has the door. A bigger door won't make him walk through it."
-      }
-     ]
-    }
-   ]
-  },
-  "insight": "Our rule of thumb, not a research finding: two pillars are often enough for a first step, and help on the third pays off most. People tend to push the pillar that's already strong.",
-  "model": "Push the one weak pillar, not all three. Small help in the right spot beats big help elsewhere.",
-  "try_today": "Ask someone stuck: 'Is it wanting, knowing how, or access?' Then offer help only on the answer they give.",
-  "source": {
-   "thinkers": [
-    "Melvin Blumberg & Charles Pringle"
-   ],
-   "work": "The 2-of-3 rule: an untested rule of thumb inspired by Blumberg & Pringle (Academy of Management Review, 1982), whose own model says all three pillars interact"
-  },
-  "evidence": "philosophy",
-  "level": 1,
-  "related": [
-   "wso_triad",
-   "leverage_points",
-   "will_gap"
-  ],
-  "try_team": "Each person shares one stuck goal. The group may only ask: 'Is it wanting, knowing how, or access?' Then offer one help aimed at that answer.",
-  "audience": "all"
- },
- {
-  "id": "two-thirds-rule-swipe",
-  "concept": "two_thirds_rule",
-  "domain": "action",
-  "type": "swipe",
-  "hook": "Two of three pillars lit often gets people moving. Can you count them?",
-  "title": "Spot the 2 out of 3",
-  "game": {
-   "prompt": "Does this person have at least two pillars lit?",
-   "left": "Not yet",
-   "right": "Two or more",
-   "items": [
-    {
-     "text": "Mia wants to run a 5K, has never run, and there's a park next door.",
-     "side": "right",
-     "why": "Will + Open door. Skill can be built on the way: start with walk-run intervals."
+      "prompt": "Think of one thing you want to get better at. 4 quick taps."
     },
-    {
-     "text": "Theo plays piano well and has one at home, but stopped enjoying it after his exams.",
-     "side": "right",
-     "why": "Skill + Open door lit. Will is resting, normal after a hard stretch. Try one just-for-fun session."
+    "insight": "Bandura named four sources of 'I can': your own wins, people like you succeeding, encouragement, and how you read your body. Own wins count most (Usher & Pajares, 2008).",
+    "model": "Belief in yourself is built from four sources. Find the one that feels lowest for you and feed it.",
+    "try_today": "Write three things you got through this month, however small (a hard message, a meal cooked). Read them before your next hard task.",
+    "source": {
+      "thinkers": [
+        "Albert Bandura",
+        "Jeremy Jamieson",
+        "Ellen Usher & Frank Pajares"
+      ],
+      "work": "Bandura, Self-Efficacy: The Exercise of Control (1997); Jamieson et al., arousal reappraisal studies (2010); Usher & Pajares, review of sources of self-efficacy (Review of Educational Research, 2008)"
     },
-    {
-     "text": "Jo dreams of acting, has never tried, and no theatre is nearby.",
-     "side": "left",
-     "why": "Only Will. Build one more pillar first, like an online class or a local reading group."
+    "evidence": "strong",
+    "level": 2,
+    "sensitive": true,
+    "related": [
+      "small_wins",
+      "stress_mindset",
+      "growth_mindset"
+    ],
+    "try_team": "Go round the group: each person names one recent small win they saw someone else in the room achieve. Everyone leaves with wins they didn't notice.",
+    "audience": "all"
+  },
+  {
+    "id": "implementation-intentions-estimate",
+    "concept": "implementation_intentions",
+    "domain": "action",
+    "type": "estimate",
+    "hook": "Same leaflet. One extra sentence. Guess how many exercised.",
+    "title": "The one-sentence plan",
+    "game": {
+      "question": "Students read a motivating leaflet and then wrote one line: 'During the next week, I will exercise on [day] at [time] at [place].' What % said they exercised that week?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 91,
+      "explain": "91% said they exercised at least once. Leaflet only: 35%. No leaflet: 38%. Self-reports from one UK student study (Milne, Orbell & Sheeran, 2002), so treat 91% as a best case, not a promise.",
+      "anchor": null
     },
-    {
-     "text": "Raj can fix bikes, loves it, and a neighbour just asked for help.",
-     "side": "right",
-     "why": "All three. Full agency: he only needs to say yes."
+    "insight": "Wanting wasn't the gap: the leaflet alone changed nothing. Deciding when and where did. Across 94 tests the effect is medium to large; big real-world trials find smaller gains.",
+    "model": "Motivation says 'I should'. A plan with a time and place says 'Tuesday, 7pm, the park'.",
+    "try_today": "Write: 'On [day] at [time] in [place], I will [first step].' If it slips, that's normal: pick a new time and try again.",
+    "source": {
+      "thinkers": [
+        "Sarah Milne",
+        "Sheina Orbell",
+        "Paschal Sheeran",
+        "Peter Gollwitzer"
+      ],
+      "work": "Milne, Orbell & Sheeran, Combining motivational and volitional interventions (British Journal of Health Psychology, 2002); Gollwitzer & Sheeran (2006) meta-analysis"
     },
-    {
-     "text": "Lee has a free gym pass but no interest and no idea how to train.",
-     "side": "left",
-     "why": "Only the Open door. An open door alone doesn't move anyone."
-    }
-   ]
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "will_gap",
+      "habit_loop",
+      "procrastination_emotion"
+    ],
+    "try_team": "Everyone writes one goal as 'On [day] at [time] in [place], I will…'. Swap with a partner, who checks: could a stranger tell exactly when it happens?",
+    "audience": "all"
   },
-  "insight": "Our rule of thumb, not a research finding: with two pillars lit, a first step is often possible. Will is the exception: without a reason that's yours, the others rarely carry you.",
-  "model": "Two pillars often make motion possible; if the missing one is Will, start there.",
-  "try_today": "List three goals. Count the lit pillars for each. Start the one with the most lit today.",
-  "source": {
-   "thinkers": [
-    "Melvin Blumberg & Charles Pringle"
-   ],
-   "work": "The 2-of-3 rule: an untested rule of thumb inspired by Blumberg & Pringle (Academy of Management Review, 1982), whose own model says all three pillars interact"
-  },
-  "evidence": "philosophy",
-  "level": 1,
-  "related": [
-   "wso_triad",
-   "skill_gap",
-   "small_wins"
-  ],
-  "try_team": "Write five goals from the group on slips of paper. Sort them together by how many pillars are lit, then plan the first step of one 'two-lit' goal.",
-  "audience": "all"
- },
- {
-  "id": "will-gap-spectrum",
-  "concept": "will_gap",
-  "domain": "action",
-  "type": "spectrum",
-  "hook": "Stuck on a goal? Maybe the reason isn't yours yet.",
-  "title": "The Capable Bystander",
-  "game": {
-   "left": "Running on 'should'",
-   "right": "Running on 'want'",
-   "questions": [
-    {
-     "q": "When I picture finishing this goal, I feel…",
-     "options": [
-      {
-       "label": "Like I've finally pleased someone else",
-       "value": -2
-      },
-      {
-       "label": "Not much either way",
-       "value": 0
-      },
-      {
-       "label": "Like I did something that matters to me",
-       "value": 2
-      }
-     ]
+  {
+    "id": "implementation-intentions-choice",
+    "concept": "implementation_intentions",
+    "domain": "action",
+    "type": "choice",
+    "hook": "Your plan sounds great. Will it survive a rainy Tuesday?",
+    "title": "Write a plan that fires",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Maya, 16, means to revise after school but ends up scrolling. Which plan is most likely to work?",
+          "options": [
+            {
+              "text": "\"This week I'll take revision more seriously.\"",
+              "feedback": "Not quite. A sincere goal, but it never says when, so the moment passes and the phone wins."
+            },
+            {
+              "text": "\"When I put my school bag down at home, I'll open my notes for 10 minutes before my phone.\"",
+              "best": true,
+              "feedback": "Yes. A clear cue (bag down) plus a small, specific action. The decision is already made when the moment arrives."
+            },
+            {
+              "text": "\"I'll revise for three hours every night.\"",
+              "feedback": "Not quite. Big and brave, but there's no trigger, and the size makes it easy to put off."
+            }
+          ]
+        },
+        {
+          "scenario": "Jay keeps meaning to reply to his mate's voice notes but forgets till midnight. Pick the plan.",
+          "options": [
+            {
+              "text": "\"I'll be a better mate.\"",
+              "feedback": "Not quite. Good intent, but no moment to hook onto. Busy days swallow vague plans."
+            },
+            {
+              "text": "\"When I get on the bus home, then I'll reply to one voice note before opening TikTok.\"",
+              "best": true,
+              "feedback": "Yes. The bus ride happens anyway, so the cue is built in, and 'one voice note' is small enough to do."
+            }
+          ]
+        },
+        {
+          "scenario": "Your plan: revise 10 min when you put your bag down. What should you add to protect it?",
+          "options": [
+            {
+              "text": "\"If I'm at my mate's after school, then I'll do the 10 minutes on the bus with flashcards.\"",
+              "best": true,
+              "feedback": "Yes. Planning for the obstacle in advance is the second half of the trick: the backup is ready before the excuse."
+            },
+            {
+              "text": "\"If I miss a day, I'll do 30 minutes tomorrow.\"",
+              "feedback": "Not quite. Doubling up turns one missed day into a bigger hurdle. A backup for the same day works better."
+            },
+            {
+              "text": "\"Nothing will stop me.\"",
+              "feedback": "Not quite. Lovely spirit, but plans change. Plans that expect obstacles tend to beat plans that deny them."
+            }
+          ]
+        }
+      ]
     },
-    {
-     "q": "If nobody would ever know I quit, I would…",
-     "options": [
-      {
-       "label": "Quit right away",
-       "value": -2
-      },
-      {
-       "label": "Think about it",
-       "value": 0
-      },
-      {
-       "label": "Keep going anyway",
-       "value": 2
-      }
-     ]
+    "insight": "The best plans name a cue you can't miss and a step small enough to do. Plan for the likely obstacle too. Then the moment makes the decision, not your mood.",
+    "model": "If [moment], then [small action]. Then add: if [obstacle], then [backup].",
+    "try_today": "Write one 'If [moment], then [action]' for a goal, plus one 'If [obstacle], then [backup]'. Read both aloud once.",
+    "source": {
+      "thinkers": [
+        "Peter Gollwitzer",
+        "Paschal Sheeran"
+      ],
+      "work": "Gollwitzer, Implementation intentions (American Psychologist, 1999); Gollwitzer & Sheeran, meta-analysis (Advances in Experimental Social Psychology, 2006)"
     },
-    {
-     "q": "The reason for this goal mostly came from…",
-     "options": [
-      {
-       "label": "Others' expectations",
-       "value": -2
-      },
-      {
-       "label": "A mix",
-       "value": 0
-      },
-      {
-       "label": "Something I care about",
-       "value": 2
-      }
-     ]
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "will_gap",
+      "habit_loop",
+      "procrastination_emotion"
+    ],
+    "try_team": "Each person shares one goal and its likeliest obstacle. The class or group helps write one 'If [obstacle], then [backup]' plan for each person in 5 minutes.",
+    "audience": "young"
+  },
+  {
+    "id": "wso-triad-one-to-one-choice",
+    "concept": "wso_triad",
+    "domain": "action",
+    "type": "choice",
+    "hook": "Three people on your team are stuck. Same pep talk for all three?",
+    "title": "Diagnose the stall",
+    "game": {
+      "steps": [
+        {
+          "scenario": "1:1 with Dana, your best analyst. She's trained on the new reporting tool and has a login, but still sends everything from her old spreadsheet. You say…",
+          "options": [
+            {
+              "text": "\"What would make the new tool worth it for you?\"",
+              "best": true,
+              "feedback": "Right. Skill and access are there, so the gap is the want. Her answer may also show you the tool really is slower for her job."
+            },
+            {
+              "text": "\"Let's book you a refresher course.\"",
+              "feedback": "Kind, but she already knows how. Extra training aims at a skill that isn't missing."
+            },
+            {
+              "text": "\"The switch is mandatory from Friday.\"",
+              "feedback": "A deadline can get the switch done, which is sometimes enough. It won't give her a reason to like it, so expect workarounds."
+            }
+          ]
+        },
+        {
+          "scenario": "Raj keeps saying he wants to lead client calls, and he's great in front of people. But another lead books every call and never adds him. You…",
+          "options": [
+            {
+              "text": "Send him a presentation-skills course",
+              "feedback": "His skill isn't the problem. A course can feel like a hint that he isn't good enough."
+            },
+            {
+              "text": "Tell him to show more initiative",
+              "feedback": "His will is already loud. Pushing harder at a door someone else holds shut wears people out."
+            },
+            {
+              "text": "Ask the other lead to put Raj on next week's call",
+              "best": true,
+              "feedback": "Yes. Want and skill are lit; the door is closed. Opening it is your job, not his."
+            }
+          ]
+        },
+        {
+          "scenario": "Mo is keen and has every tool he needs, but freezes when asked for a timeline estimate. He's never done one. With a deadline next week, you…",
+          "options": [
+            {
+              "text": "Do his next estimate together, then let him do one alone",
+              "best": true,
+              "feedback": "Yes. Will and access are there; skill is the gap. One guided rep, then a solo rep, builds it fast."
+            },
+            {
+              "text": "Take estimates off his plate for now",
+              "feedback": "A fair call under deadline pressure. Just plan a practice rep later, or the gap stays put."
+            },
+            {
+              "text": "Tell him you believe in him",
+              "feedback": "Nice to hear, but he already wants to. Without a first rep, the freeze comes back."
+            }
+          ]
+        }
+      ]
     },
-    {
-     "q": "When I describe it to a friend, I say…",
-     "options": [
-      {
-       "label": "'I have to…'",
-       "value": -2
-      },
-      {
-       "label": "'I'm trying to…'",
-       "value": 0
-      },
-      {
-       "label": "'I get to…'",
-       "value": 2
-      }
-     ]
-    }
-   ],
-   "zones": [
-    {
-     "upTo": -0.34,
-     "label": "Borrowed goal",
-     "text": "Today this goal sounds borrowed. That isn't a character flaw. Find your own reason inside it, or consider letting it go."
+    "insight": "Three stalls, three different missing pieces. One fix for everyone misses two of them. Blumberg and Pringle (1982) argued work needs ability, willingness and opportunity.",
+    "model": "Before you fix a stall, name the missing pillar: the want, the know-how or the open door.",
+    "try_today": "In your next 1:1, ask: 'What's hardest here: wanting it, knowing how, or getting the chance?' Fix only that one.",
+    "source": {
+      "thinkers": [
+        "Melvin Blumberg & Charles Pringle"
+      ],
+      "work": "Blumberg & Pringle, The missing opportunity in organizational research (Academy of Management Review, 1982). A conceptual model, not a tested diagnostic."
     },
-    {
-     "upTo": 0.34,
-     "label": "Flickering fire",
-     "text": "Today your answers mix 'want' and 'should'. Link the goal to one person or value you truly care about and see if the want grows."
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "will_gap",
+      "skill_gap",
+      "opportunity_gap"
+    ],
+    "try_team": "Each person writes one stuck task on a sticky note and tags it Want, Know-how or Door. Pair up and agree one fix aimed only at that tag.",
+    "audience": "work"
+  },
+  {
+    "id": "self-efficacy-new-lead-swipe",
+    "concept": "self_efficacy",
+    "domain": "action",
+    "type": "swipe",
+    "hook": "New to leading a team? Some confidence boosts last. Some evaporate.",
+    "title": "Where real 'I can' comes from",
+    "game": {
+      "prompt": "You've just been made team lead. How much 'I can do this' does each one build? Hint: watching someone like you succeed counts.",
+      "left": "Weaker on its own",
+      "right": "Builds real belief",
+      "items": [
+        {
+          "text": "You run Monday's stand-up yourself and it goes fine",
+          "side": "right",
+          "why": "Your own success is the strongest source of belief. You have proof, not just hope."
+        },
+        {
+          "text": "Your boss says 'You're a natural leader'",
+          "side": "left",
+          "why": "Praise helps, but words alone fade at the first hard moment. Pair it with a win."
+        },
+        {
+          "text": "Another new lead, as nervous as you, handles a tough client well",
+          "side": "right",
+          "why": "Builds belief, second only to your own win. Watch how they prepared, not just how it went."
+        },
+        {
+          "text": "You watch a famous CEO's flawless keynote",
+          "side": "left",
+          "why": "Models work best when they feel similar. A star can make the gap look bigger."
+        },
+        {
+          "text": "Before the meeting, you read your racing heart as 'I'm ready', not 'I'm failing'",
+          "side": "left",
+          "why": "How you read your body helps a bit, but alone it rarely holds up the way a real win does."
+        },
+        {
+          "text": "You cut a dreaded 1:1 down to one question and ask it",
+          "side": "right",
+          "why": "A shrunk task you actually finish still counts as mastery. Small wins are designable."
+        }
+      ]
     },
-    {
-     "upTo": 1,
-     "label": "Real fire",
-     "text": "Today you rate your want high. If you're still stuck, look at Skill or the Open door instead of blaming motivation."
-    }
-   ]
-  },
-  "insight": "With skill and access in place, the missing piece is often a reason that's yours. Goals that fit your values tend to last longer. If nothing has felt worth wanting for weeks, talk to someone.",
-  "model": "No productivity hack fixes a missing why. Find your reason, or free yourself from the goal.",
-  "try_today": "Write: 'This matters to me because…' If nothing comes, that's information, not failure. Can it be dropped, changed or tied to what you love?",
-  "source": {
-   "thinkers": [
-    "Edward Deci",
-    "Richard Ryan"
-   ],
-   "work": "Deci & Ryan, Self-Determination Theory (1985); Ryan & Deci, American Psychologist (2000); applied in the Will-Skill-Opportunity framework"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "sensitive": true,
-  "related": [
-   "start_with_why",
-   "wso_triad",
-   "procrastination_emotion"
-  ],
-  "try_team": "Each person says one goal as 'I have to…', then tries 'I get to… because…'. Goals nobody can rephrase may need a new reason, or a rethink.",
-  "audience": "all"
- },
- {
-  "id": "skill-gap-order",
-  "concept": "skill_gap",
-  "domain": "action",
-  "type": "order",
-  "hook": "Practised for hours. Why aren't you better? Order a real session.",
-  "title": "Practice That Actually Works",
-  "game": {
-   "prompt": "Put a good practice session in order",
-   "items": [
-    "Pick one small sub-skill",
-    "Practice just beyond your comfort zone",
-    "Get fast, honest feedback",
-    "Adjust and try again"
-   ],
-   "explain": "This is the core loop of deliberate practice: narrow focus, a stretch, feedback, then correction. Repeating what you can already do feels good but teaches little."
-  },
-  "insight": "Hours alone don't build skill; focused practice with feedback does more. The '10,000-hour rule' is a myth Ericsson himself rejected, and practice explains only part of skill differences.",
-  "model": "Skill grows at the edge: one sub-skill, a stretch, feedback, adjust, repeat.",
-  "try_today": "Choose one tiny part of a skill you want. Do 5 focused minutes on only that, then ask someone for one piece of feedback.",
-  "source": {
-   "thinkers": [
-    "K. Anders Ericsson",
-    "Brooke Macnamara",
-    "Aristotle"
-   ],
-   "work": "Ericsson & Pool, Peak (2016); Macnamara et al., Psychological Science (2014); applied in the Will-Skill-Opportunity framework"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "related": [
-   "deliberate_practice",
-   "growth_mindset",
-   "wso_triad"
-  ],
-  "try_team": "Everyone picks one tiny sub-skill (a chord, a serve, five new words). Practise 3 minutes, then swap and give each other one piece of feedback.",
-  "from_source": {
-   "quote": "…it is from playing the lyre that both good and bad lyre-players are produced.",
-   "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (trans. W. D. Ross, 1925)",
-   "next_read": "Nicomachean Ethics, Book II, chapters 1-2: how skills and virtues are built by practice"
-  },
-  "audience": "all"
- },
- {
-  "id": "skill-gap-test-yourself-choice",
-  "concept": "skill_gap",
-  "domain": "action",
-  "type": "choice",
-  "hook": "Reading your notes again feels like learning. Is it lying to you?",
-  "title": "Pull it out, don't pour it in",
-  "game": {
-   "steps": [
-    {
-     "scenario": "In a week you need to know new material: words in a language, a certification topic, or how a new system works. You've got one hour. Which plan sticks best?",
-     "options": [
-      {
-       "text": "Read the notes four times, slowly and carefully",
-       "feedback": "It feels great because it gets familiar. But in tests a week later, rereading lost to self-quizzing by a lot."
-      },
-      {
-       "text": "Read once, then close the notes and write what you remember, three times",
-       "best": true,
-       "feedback": "Yes. Pulling it out of memory is what makes it stick. It feels harder, and that's the point."
-      },
-      {
-       "text": "Highlight the key parts, then reread the highlights",
-       "feedback": "Very popular, but big reviews found highlighting adds little on its own. Turn highlights into questions instead."
-      }
-     ]
+    "insight": "Bandura ranked your own wins first, then seeing someone like you succeed. Praise and how you read your body help less on their own. Reviews mostly agree, though the order varies.",
+    "model": "Belief follows wins you can point to. Design small ones on purpose.",
+    "try_today": "Pick one task you've been putting off (not the biggest). Do a 10-minute slice before lunch and tick it off where you'll see it.",
+    "source": {
+      "thinkers": [
+        "Albert Bandura"
+      ],
+      "work": "Bandura, Self-Efficacy: The Exercise of Control (1997)"
     },
-    {
-     "scenario": "Your friend tries self-quizzing and says: 'This feels awful, I keep forgetting. Rereading felt better.' You say…",
-     "options": [
-      {
-       "text": "'Then go back to rereading, it's less stressful'",
-       "feedback": "Kind, but the smooth feeling is the trap: easy now, forgotten later."
-      },
-      {
-       "text": "'Struggling to remember is the workout. That's how it sticks.'",
-       "best": true,
-       "feedback": "Yes. Effortful recall feels like failing while it's building memory. Gaps you find are gifts."
-      },
-      {
-       "text": "'Maybe you're just not good at memorising'",
-       "feedback": "Meant gently, but forgetting during practice is normal for everyone, not a sign of low talent."
-      }
-     ]
-    }
-   ]
+    "evidence": "moderate",
+    "level": 1,
+    "sensitive": true,
+    "related": [
+      "small_wins",
+      "growth_mindset",
+      "wso_triad"
+    ],
+    "try_team": "Go round: each person names one work win from this week, however small, plus one tiny next rep. One minute each, no critique, just thanks.",
+    "audience": "work"
   },
-  "insight": "In a classic study, students who reread a text recalled about 40% a week later; those who tested themselves recalled about 61%. Yet the rereaders felt more sure they'd remember.",
-  "model": "Easy-feeling study often isn't learning. Pull it out of your head; don't just pour it back in.",
-  "try_today": "Pick something you're learning. Close the book and write or say all you remember for 3 minutes. Then check the gaps.",
-  "try_team": "End a meeting, lesson or onboarding session with a 2-minute brain dump: everyone writes the 3 things they remember, no notes, then compares.",
-  "source": {
-   "thinkers": [
-    "Henry L. Roediger III",
-    "Jeffrey D. Karpicke",
-    "John Dunlosky"
-   ],
-   "work": "Roediger & Karpicke, Test-enhanced learning (Psychological Science, 2006); Dunlosky et al., Improving students' learning (Psychological Science in the Public Interest, 2013)"
-  },
-  "evidence": "strong",
-  "level": 1,
-  "related": [
-   "deliberate_practice",
-   "self_efficacy",
-   "growth_mindset"
-  ],
-  "audience": "all"
- },
- {
-  "id": "opportunity-gap-swipe",
-  "concept": "opportunity_gap",
-  "domain": "action",
-  "type": "swipe",
-  "hook": "You're trying harder and harder. What if the wall isn't you?",
-  "title": "Ready, Door Closed",
-  "game": {
-   "prompt": "Where's the blocker: something you can grow, or something in the way?",
-   "left": "Something I can build",
-   "right": "Something in the setup",
-   "items": [
-    {
-     "text": "The art GCSE you want to take clashes with Triple Science on the timetable.",
-     "side": "right",
-     "why": "A timetable rule, not a flaw. Ask your head of year about other options or a different block."
+  {
+    "id": "self-efficacy-captain-swipe",
+    "concept": "self_efficacy",
+    "domain": "action",
+    "type": "swipe",
+    "hook": "Some confidence boosts last. Some vanish by Monday.",
+    "title": "Where real 'I can' comes from",
+    "game": {
+      "prompt": "You've just been put in charge of something new (a team, a project, a club). How much 'I can do this' does each one build? Hint: watching someone like you succeed counts.",
+      "left": "Weaker on its own",
+      "right": "Builds real belief",
+      "items": [
+        {
+          "text": "Someone just like you, just as nervous, nails their first presentation",
+          "side": "right",
+          "why": "Builds belief, second only to your own win. Watch how they prepared, not just how it went."
+        },
+        {
+          "text": "Someone you look up to says 'You're a natural'",
+          "side": "left",
+          "why": "Praise helps, but words alone fade at the first hard moment. Pair it with a win."
+        },
+        {
+          "text": "You run the first meeting yourself and it goes fine",
+          "side": "right",
+          "why": "Your own success is the strongest source of belief. You have proof, not just hope."
+        },
+        {
+          "text": "You watch a famous YouTuber's perfect speech",
+          "side": "left",
+          "why": "Models work best when they feel similar. A star can make the gap look bigger."
+        },
+        {
+          "text": "You watch three videos on leadership",
+          "side": "left",
+          "why": "Useful tips, but knowing isn't the same as having done it. Belief needs a rep."
+        },
+        {
+          "text": "You cut a scary task down to one message and send it",
+          "side": "right",
+          "why": "A shrunk task you actually finish still counts as a win. Small wins are designable."
+        }
+      ]
     },
-    {
-     "text": "You keep skipping guitar practice since you stopped caring about the songs.",
-     "side": "left",
-     "why": "That's Will, and it's allowed to change. Pick songs you love, or take a guilt-free break."
+    "insight": "Bandura ranked your own wins first, then seeing someone like you succeed. Praise and watching stars help less on their own. Reviews mostly agree, though the order varies.",
+    "model": "Belief follows wins you can point to. Design small ones on purpose.",
+    "try_today": "Pick one task you've been putting off (not the biggest). Do a 10-minute slice today and tick it off somewhere you'll see it.",
+    "source": {
+      "thinkers": [
+        "Albert Bandura"
+      ],
+      "work": "Bandura, Self-Efficacy: The Exercise of Control (1997)"
     },
-    {
-     "text": "You can only revise after 10pm because you look after your little brother every evening.",
-     "side": "right",
-     "why": "Time is part of the Open door. Shrink the task or find a better slot, not more willpower."
+    "evidence": "moderate",
+    "level": 1,
+    "sensitive": true,
+    "related": [
+      "small_wins",
+      "growth_mindset",
+      "wso_triad"
+    ],
+    "try_team": "Go round: each person names one small win from this week plus one tiny next step. One minute each, no critique, just thanks.",
+    "audience": "all"
+  },
+  {
+    "id": "will-gap-paid-to-play-reveal",
+    "concept": "will_gap",
+    "domain": "action",
+    "type": "reveal",
+    "hook": "Someone starts paying you for the thing you'd do for free. Any catch?",
+    "title": "When pay steals the fun",
+    "game": {
+      "prompt": "You make video edits for fun. In a lab-style setup, you're paid per edit for a session, then the pay stops and you're left alone with free time. Compared with people never paid, people like you go on to make…",
+      "choices": [
+        "More edits in their free time",
+        "About as many",
+        "Fewer"
+      ],
+      "answer": 2,
+      "reveal": "Fewer than the unpaid group, on average. Across 128 experiments, expected rewards for an already-fun task lowered free-choice play after rewards ended, compared with people never rewarded. Surprise rewards didn't, and praise raised later play in college students but not in children. The average drop was modest (roughly a third of a standard deviation), and plenty of individuals kept going."
     },
-    {
-     "text": "You don't know how to edit videos for the channel you want to start.",
-     "side": "left",
-     "why": "That's Skill, and it's learnable fast with free tutorials and feedback."
+    "insight": "Pay can quietly swap 'I want to' for 'I'm paid to', at least for a while. Most studies measured minutes after short lab sessions; whether it lasts, or holds at work, is much less clear.",
+    "model": "A reason that's yours outlasts any reward. Guard the stuff you do for love.",
+    "try_today": "Pick one thing you do just for fun. Do it for 10 minutes today: no posting, no streak, no score. Notice how it feels.",
+    "source": {
+      "thinkers": [
+        "Edward Deci",
+        "Richard Koestner",
+        "Richard Ryan"
+      ],
+      "work": "Deci, Koestner & Ryan, A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation (Psychological Bulletin, 1999); critique: Cameron & Pierce (Review of Educational Research, 1994)"
     },
-    {
-     "text": "The football team only trains at a ground two buses away and you've no lift.",
-     "side": "right",
-     "why": "That's access. Ask about lift shares or a closer team, not more willpower."
-    }
-   ]
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "start_with_why",
+      "wso_triad",
+      "self_efficacy"
+    ],
+    "try_team": "Each person lists one thing they'd do unpaid and unseen, and one they only do for a reward. Compare lists: which would you want to grow?",
+    "audience": "all"
   },
-  "insight": "When will and skill are full, more effort on yourself can turn into self-blame. Some walls are rules, money, time or gatekeepers. That's not an excuse; it says change the setup.",
-  "model": "If you want it and can do it but still can't, the fight is structural. Change the setup, not yourself.",
-  "try_today": "Name one outside blocker on a goal. Write two other doors around it: another route, person, or place.",
-  "source": {
-   "thinkers": [
-    "Anthony Giddens",
-    "Pierre Bourdieu"
-   ],
-   "work": "Giddens, The Constitution of Society (1984); Bourdieu, The Forms of Capital (1986); applied in the Will-Skill-Opportunity framework"
-  },
-  "evidence": "philosophy",
-  "level": 1,
-  "related": [
-   "environment_design",
-   "circle_influence",
-   "wso_triad"
-  ],
-  "sensitive": true,
-  "try_team": "List the walls your class, team or family keeps hitting. Mark each 'something we can build' or 'in the setup'. Pick one setup wall and name who could move it.",
-  "audience": "young"
- },
- {
-  "id": "opportunity-gap-lost-einsteins-estimate",
-  "concept": "opportunity_gap",
-  "domain": "action",
-  "type": "estimate",
-  "hook": "Rich kids vs poorer kids: how much likelier to become inventors?",
-  "title": "The lost Einsteins",
-  "game": {
-   "question": "In the US, kids from the richest 1% of families vs kids from the poorer half: how many times more likely are they to become inventors?",
-   "min": 1,
-   "max": 30,
-   "step": 1,
-   "unit": "×",
-   "answer": 10,
-   "explain": "About 10 times. Differences in maths scores at age 8 explained less than a third of that gap: even among kids with top maths scores, the richer ones were still far more likely to invent. Exposure mattered: kids who grew up around inventors were more likely to invent, often in the very same field.",
-   "anchor": null
-  },
-  "insight": "Talent is spread widely; doors are not. In this US data, growing up near people doing the work was one of the strongest doors. The study is observational, but the pattern is large.",
-  "model": "Ability is often not the bottleneck; access is. Seeing someone up close do the work is a door.",
-  "try_today": "Find one person who does something you'd love to do. Ask them one question: 'How did you get started?'",
-  "try_team": "Invite someone with an unusual job or hobby to talk for 5 minutes to your class, team or family. Ask: 'Who first showed you this?'",
-  "source": {
-   "thinkers": [
-    "Alex Bell",
-    "Raj Chetty",
-    "Xavier Jaravel",
-    "Neviana Petkova",
-    "John Van Reenen"
-   ],
-   "work": "Bell, Chetty, Jaravel, Petkova & Van Reenen, Who Becomes an Inventor in America? The Importance of Exposure to Innovation (Quarterly Journal of Economics, 2019)"
-  },
-  "evidence": "moderate",
-  "level": 2,
-  "related": [
-   "wso_triad",
-   "circle_influence",
-   "environment_design"
-  ],
-  "audience": "all"
- },
- {
-  "id": "self-efficacy-choice",
-  "concept": "self_efficacy",
-  "domain": "action",
-  "type": "choice",
-  "hook": "A friend says 'I'm just not a speaker.' What actually helps?",
-  "title": "Belief built by doing",
-  "game": {
-   "steps": [
-    {
-     "scenario": "Your friend dreads speaking up in groups, even at family dinners, and says 'I'm just not that kind of person.' You…",
-     "options": [
-      {
-       "text": "Tell them they're amazing and will be fine",
-       "feedback": "Warm, and encouragement does help a bit. But words fade fast when the moment comes."
-      },
-      {
-       "text": "Suggest they say one prepared sentence the next time the group meets",
-       "best": true,
-       "feedback": "Yes. A small success they create themselves is the strongest source of 'I can'. Then make the next step a bit bigger."
-      },
-      {
-       "text": "Send them a video of a famous speaker",
-       "feedback": "Watching others helps most when the model is similar to them. A star can feel out of reach."
-      },
-      {
-       "text": "Say some people just aren't speakers",
-       "feedback": "Meant kindly, but it locks the belief in place. Belief in what you can do changes with experience."
-      }
-     ]
-    }
-   ]
-  },
-  "insight": "Bandura found that whether you even try depends on believing you can, not only on real skill. The strongest builder of that belief is a small success of your own.",
-  "model": "Believed skill decides if you try. Build belief with small wins you earn, not with pep talks alone.",
-  "try_today": "Pick something you think you're 'bad at'. Do the smallest possible version of it once today and notice that you did it.",
-  "source": {
-   "thinkers": [
-    "Albert Bandura"
-   ],
-   "work": "Self-efficacy: Toward a unifying theory of behavioral change (1977)"
-  },
-  "evidence": "strong",
-  "level": 1,
-  "related": [
-   "small_wins",
-   "growth_mindset",
-   "wso_triad"
-  ],
-  "try_team": "Each person names one thing they're 'not a ___ person' about and commits to its tiniest version this week. Next time, everyone reports back.",
-  "from_source": {
-   "quote": "…we become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.",
-   "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 1 (trans. W. D. Ross, 1925)",
-   "next_read": "Nicomachean Ethics, Book II, chapter 1. Aristotle means character, not confidence, but the mechanism rhymes: we become by doing."
-  },
-  "audience": "all"
- },
- {
-  "id": "self-efficacy-radar",
-  "concept": "self_efficacy",
-  "domain": "action",
-  "type": "radar",
-  "hook": "Where does your 'I can do this' actually come from?",
-  "title": "Your four sources of belief",
-  "game": {
-   "axes": [
-    "Wins",
-    "Models",
-    "Support",
-    "Body"
-   ],
-   "questions": [
-    {
-     "q": "I can remember recent times I did something hard and it worked.",
-     "axis": 0
+  {
+    "id": "will-gap-capable-bystander-choice",
+    "concept": "will_gap",
+    "domain": "action",
+    "type": "choice",
+    "hook": "You see someone struggling with a heavy box. Do you…?",
+    "title": "Skill vs. Why",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You see someone struggling with a heavy box, clearly trying to move it alone. They're grimacing and sweating. You…",
+          "options": [
+            {
+              "text": "Offer your help immediately. 'Let me give you a hand!'",
+              "feedback": "Kindness is great! But they might not want help or have a reason for doing this themselves."
+            },
+            {
+              "text": "Walk past, thinking they're probably fine on their own. It's none of your business.",
+              "feedback": "Not helpful. Sometimes we need to step up and see if there's a real need, even if it seems awkward."
+            },
+            {
+              "text": "Stop and ask: 'Is there anything I can do? Or are you just testing your strength?'",
+              "best": true,
+              "feedback": "Yes! Showing genuine interest and offering help without assuming their intentions is the most helpful approach. Sometimes people just want to be heard or need a clear offer of support."
+            }
+          ]
+        },
+        {
+          "scenario": "They say they're fine, but seem exhausted. What do you do next?",
+          "options": [
+            {
+              "text": "Leave them to it, respecting their wishes.",
+              "feedback": "Good! They said no, so respect that boundary. But remember, sometimes a simple 'Let me know if you change your mind' keeps the door open for future help."
+            },
+            {
+              "text": "Offer to get something from their car for them, or take a moment to chat and see what they're up to.",
+              "best": true,
+              "feedback": "Yes! This shows continued care without being overbearing. A small act of kindness can go a long way. Maybe they just need a distraction or someone to talk to."
+            },
+            {
+              "text": "Start giving them advice on how to move the box more efficiently.",
+              "feedback": "Not helpful! Unless they explicitly ask for advice, offering unsolicited solutions might feel patronizing. Focus on support and listening instead."
+            }
+          ]
+        }
+      ]
     },
-    {
-     "q": "I know someone like me who has done what I want to do.",
-     "axis": 1
+    "insight": "Helping others isn't just about skills or strength; it's about understanding their needs and intentions. Sometimes a simple question or offer of support is more valuable than immediate action.",
+    "model": "Willful action stems from both 'want to' (skill) and 'why'. Ask before you act, even with good intentions.",
+    "try_today": "This week, when someone seems stuck, try asking: 'Is there anything I can do that would be helpful?'",
+    "source": {
+      "thinkers": [
+        "Simon Sinek"
+      ],
+      "work": "Start With Why (2009)"
     },
-    {
-     "q": "People I trust tell me they think I can do it.",
-     "axis": 2
-    },
-    {
-     "q": "Butterflies before a challenge usually help me more than they hurt.",
-     "axis": 3
-    }
-   ],
-   "advice": {
-    "0": "Your own wins scored lowest today? Set a goal so small you can't fail, finish it, and write it down. Stack a few this week.",
-    "1": "Role models scored lowest today? Find one person a step or two ahead of you, not a superstar, and learn how they started.",
-    "2": "Support scored lowest today? Tell one supportive person your goal and ask them to check in with you in a week.",
-    "3": "Reading your body scored lowest today? Before a hard task, notice the racing heart and tell yourself: 'This is my body getting ready, not a sign I'll fail.'"
-   },
-   "prompt": "Pick one specific thing you want to get better at (a subject, a sport, speaking up in meetings). Answer every line for that one thing."
-  },
-  "insight": "Bandura named four sources of 'I can': your own wins, people like you succeeding, encouragement, and how you read your body. Own wins count most (Usher & Pajares, 2008).",
-  "model": "Belief in yourself is built from four sources. Find the one that feels lowest for you and feed it.",
-  "try_today": "Write three things you got through this month, however small (a hard message, a meal cooked). Read them before your next hard task.",
-  "source": {
-   "thinkers": [
-    "Albert Bandura",
-    "Jeremy Jamieson",
-    "Ellen Usher & Frank Pajares"
-   ],
-   "work": "Bandura, Self-Efficacy: The Exercise of Control (1997); Jamieson et al., arousal reappraisal studies (2010); Usher & Pajares, review of sources of self-efficacy (Review of Educational Research, 2008)"
-  },
-  "evidence": "strong",
-  "level": 2,
-  "sensitive": true,
-  "related": [
-   "small_wins",
-   "stress_mindset",
-   "growth_mindset"
-  ],
-  "try_team": "Go round the group: each person names one recent small win they saw someone else in the room achieve. Everyone leaves with wins they didn't notice.",
-  "audience": "all"
- },
- {
-  "id": "implementation-intentions-estimate",
-  "concept": "implementation_intentions",
-  "domain": "action",
-  "type": "estimate",
-  "hook": "Same students, same leaflet. One extra sentence. Guess the gap.",
-  "title": "The one-sentence plan",
-  "game": {
-   "question": "Students read a motivating leaflet and then wrote one line: 'During the next week, I will exercise on [day] at [time] at [place].' What % of them exercised that week?",
-   "min": 0,
-   "max": 100,
-   "step": 1,
-   "unit": "%",
-   "answer": 91,
-   "explain": "91%. Students who only read a motivating leaflet: 35%. Those who did nothing: 38%. One small UK study (Milne, Orbell & Sheeran, 2002), so treat 91% as a best case, not a promise.",
-   "anchor": null
-  },
-  "insight": "Wanting wasn't the gap: the leaflet alone changed nothing. Deciding when and where did. Across 94 tests the effect is medium to large; big real-world trials find smaller gains.",
-  "model": "Motivation says 'I should'. A plan with a time and place says 'Tuesday, 7pm, the park'.",
-  "try_today": "Pick one thing you keep putting off. Write: 'On [day] at [time] in [place], I will [first step].' Put it where you'll see it.",
-  "source": {
-   "thinkers": [
-    "Sarah Milne",
-    "Sheina Orbell",
-    "Paschal Sheeran",
-    "Peter Gollwitzer"
-   ],
-   "work": "Milne, Orbell & Sheeran, Combining motivational and volitional interventions (British Journal of Health Psychology, 2002); Gollwitzer & Sheeran (2006) meta-analysis"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "related": [
-   "will_gap",
-   "habit_loop",
-   "procrastination_emotion"
-  ],
-  "try_team": "Everyone writes one goal as 'On [day] at [time] in [place], I will…'. Swap with a partner, who checks: could a stranger tell exactly when it happens?",
-  "audience": "all"
- },
- {
-  "id": "implementation-intentions-choice",
-  "concept": "implementation_intentions",
-  "domain": "action",
-  "type": "choice",
-  "hook": "Your plan sounds great. Will it survive a rainy Tuesday?",
-  "title": "Write a plan that fires",
-  "game": {
-   "steps": [
-    {
-     "scenario": "Maya, 16, means to revise after school but ends up scrolling. Which plan is most likely to work?",
-     "options": [
-      {
-       "text": "\"This week I'll take revision more seriously.\"",
-       "feedback": "Not quite. A sincere goal, but it never says when, so the moment passes and the phone wins."
-      },
-      {
-       "text": "\"When I put my school bag down at home, I'll open my notes for 10 minutes before my phone.\"",
-       "best": true,
-       "feedback": "Yes. A clear cue (bag down) plus a small, specific action. The decision is already made when the moment arrives."
-      },
-      {
-       "text": "\"I'll revise for three hours every night.\"",
-       "feedback": "Not quite. Big and brave, but there's no trigger, and the size makes it easy to put off."
-      }
-     ]
-    },
-    {
-     "scenario": "Jay keeps meaning to reply to his mate's voice notes but forgets till midnight. Pick the plan.",
-     "options": [
-      {
-       "text": "\"I'll be a better mate.\"",
-       "feedback": "Not quite. Good intent, but no moment to hook onto. Busy days swallow vague plans."
-      },
-      {
-       "text": "\"When I get on the bus home, then I'll reply to one voice note before opening TikTok.\"",
-       "best": true,
-       "feedback": "Yes. The bus ride happens anyway, so the cue is built in, and 'one voice note' is small enough to do."
-      }
-     ]
-    },
-    {
-     "scenario": "Your plan: revise 10 min when you put your bag down. What should you add to protect it?",
-     "options": [
-      {
-       "text": "\"If I'm at my mate's after school, then I'll do the 10 minutes on the bus with flashcards.\"",
-       "best": true,
-       "feedback": "Yes. Planning for the obstacle in advance is the second half of the trick: the backup is ready before the excuse."
-      },
-      {
-       "text": "\"If I miss a day, I'll do 30 minutes tomorrow.\"",
-       "feedback": "Not quite. Doubling up turns one missed day into a bigger hurdle. A backup for the same day works better."
-      },
-      {
-       "text": "\"Nothing will stop me.\"",
-       "feedback": "Not quite. Lovely spirit, but plans change. Plans that expect obstacles tend to beat plans that deny them."
-      }
-     ]
-    }
-   ]
-  },
-  "insight": "The best plans name a cue you can't miss and a step small enough to do. Plan for the likely obstacle too. Then the moment makes the decision, not your mood.",
-  "model": "If [moment], then [small action]. Then add: if [obstacle], then [backup].",
-  "try_today": "Write one 'If [moment], then [action]' for a goal, plus one 'If [obstacle], then [backup]'. Read both aloud once.",
-  "source": {
-   "thinkers": [
-    "Peter Gollwitzer",
-    "Paschal Sheeran"
-   ],
-   "work": "Gollwitzer, Implementation intentions (American Psychologist, 1999); Gollwitzer & Sheeran, meta-analysis (Advances in Experimental Social Psychology, 2006)"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "related": [
-   "will_gap",
-   "habit_loop",
-   "procrastination_emotion"
-  ],
-  "try_team": "Each person shares one goal and its likeliest obstacle. The class or group helps write one 'If [obstacle], then [backup]' plan for each person in 5 minutes.",
-  "audience": "young"
- },
- {
-  "id": "wso-triad-one-to-one-choice",
-  "concept": "wso_triad",
-  "domain": "action",
-  "type": "choice",
-  "hook": "Three people on your team are stuck. Same pep talk for all three?",
-  "title": "Diagnose the stall",
-  "game": {
-   "steps": [
-    {
-     "scenario": "1:1 with Dana, your best analyst. She's trained on the new reporting tool and has a login, but still sends everything from her old spreadsheet. You say…",
-     "options": [
-      {
-       "text": "\"What would make the new tool worth it for you?\"",
-       "best": true,
-       "feedback": "Right. Skill and access are there, so the gap is the want. Her answer may also show you the tool really is slower for her job."
-      },
-      {
-       "text": "\"Let's book you a refresher course.\"",
-       "feedback": "Kind, but she already knows how. Extra training aims at a skill that isn't missing."
-      },
-      {
-       "text": "\"The switch is mandatory from Friday.\"",
-       "feedback": "A deadline can get the switch done, which is sometimes enough. It won't give her a reason to like it, so expect workarounds."
-      }
-     ]
-    },
-    {
-     "scenario": "Raj keeps saying he wants to lead client calls, and he's great in front of people. But another lead books every call and never adds him. You…",
-     "options": [
-      {
-       "text": "Send him a presentation-skills course",
-       "feedback": "His skill isn't the problem. A course can feel like a hint that he isn't good enough."
-      },
-      {
-       "text": "Tell him to show more initiative",
-       "feedback": "His will is already loud. Pushing harder at a door someone else holds shut wears people out."
-      },
-      {
-       "text": "Ask the other lead to put Raj on next week's call",
-       "best": true,
-       "feedback": "Yes. Want and skill are lit; the door is closed. Opening it is your job, not his."
-      }
-     ]
-    },
-    {
-     "scenario": "Mo is keen and has every tool he needs, but freezes when asked for a timeline estimate. He's never done one. With a deadline next week, you…",
-     "options": [
-      {
-       "text": "Do his next estimate together, then let him do one alone",
-       "best": true,
-       "feedback": "Yes. Will and access are there; skill is the gap. One guided rep, then a solo rep, builds it fast."
-      },
-      {
-       "text": "Take estimates off his plate for now",
-       "feedback": "A fair call under deadline pressure. Just plan a practice rep later, or the gap stays put."
-      },
-      {
-       "text": "Tell him you believe in him",
-       "feedback": "Nice to hear, but he already wants to. Without a first rep, the freeze comes back."
-      }
-     ]
-    }
-   ]
-  },
-  "insight": "Three stalls, three different missing pieces. One fix for everyone misses two of them. Blumberg and Pringle (1982) argued work needs ability, willingness and opportunity.",
-  "model": "Before you fix a stall, name the missing pillar: the want, the know-how or the open door.",
-  "try_today": "In your next 1:1, ask: 'What's hardest here: wanting it, knowing how, or getting the chance?' Fix only that one.",
-  "source": {
-   "thinkers": [
-    "Melvin Blumberg & Charles Pringle"
-   ],
-   "work": "Blumberg & Pringle, The missing opportunity in organizational research (Academy of Management Review, 1982). A conceptual model, not a tested diagnostic."
-  },
-  "evidence": "philosophy",
-  "level": 1,
-  "related": [
-   "will_gap",
-   "skill_gap",
-   "opportunity_gap"
-  ],
-  "try_team": "Each person writes one stuck task on a sticky note and tags it Want, Know-how or Door. Pair up and agree one fix aimed only at that tag.",
-  "audience": "work"
- },
- {
-  "id": "self-efficacy-new-lead-swipe",
-  "concept": "self_efficacy",
-  "domain": "action",
-  "type": "swipe",
-  "hook": "New to leading a team? Some confidence boosts last. Some evaporate.",
-  "title": "Where real 'I can' comes from",
-  "game": {
-   "prompt": "You've just been made team lead. How much 'I can do this' does each one build? Hint: watching someone like you succeed counts.",
-   "left": "Weaker on its own",
-   "right": "Builds real belief",
-   "items": [
-    {
-     "text": "You run Monday's stand-up yourself and it goes fine",
-     "side": "right",
-     "why": "Your own success is the strongest source of belief. You have proof, not just hope."
-    },
-    {
-     "text": "Your boss says 'You're a natural leader'",
-     "side": "left",
-     "why": "Praise helps, but words alone fade at the first hard moment. Pair it with a win."
-    },
-    {
-     "text": "Another new lead, as nervous as you, handles a tough client well",
-     "side": "right",
-     "why": "Builds belief, second only to your own win. Watch how they prepared, not just how it went."
-    },
-    {
-     "text": "You watch a famous CEO's flawless keynote",
-     "side": "left",
-     "why": "Models work best when they feel similar. A star can make the gap look bigger."
-    },
-    {
-     "text": "Before the meeting, you read your racing heart as 'I'm ready', not 'I'm failing'",
-     "side": "left",
-     "why": "How you read your body helps a bit, but alone it rarely holds up the way a real win does."
-    },
-    {
-     "text": "You cut a dreaded 1:1 down to one question and ask it",
-     "side": "right",
-     "why": "A shrunk task you actually finish still counts as mastery. Small wins are designable."
-    }
-   ]
-  },
-  "insight": "Bandura ranked your own wins first, then seeing someone like you succeed. Praise and how you read your body help less on their own. Reviews mostly agree, though the order varies.",
-  "model": "Belief follows wins you can point to. Design small ones on purpose.",
-  "try_today": "Pick one task you've been putting off (not the biggest). Do a 10-minute slice before lunch and tick it off where you'll see it.",
-  "source": {
-   "thinkers": [
-    "Albert Bandura"
-   ],
-   "work": "Bandura, Self-Efficacy: The Exercise of Control (1997)"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "sensitive": true,
-  "related": [
-   "small_wins",
-   "growth_mindset",
-   "wso_triad"
-  ],
-  "try_team": "Go round: each person names one work win from this week, however small, plus one tiny next rep. One minute each, no critique, just thanks.",
-  "audience": "work"
- },
- {
-  "id": "self-efficacy-captain-swipe",
-  "concept": "self_efficacy",
-  "domain": "action",
-  "type": "swipe",
-  "hook": "Some confidence boosts last. Some vanish by Monday.",
-  "title": "Where real 'I can' comes from",
-  "game": {
-   "prompt": "You've just been put in charge of something new (a team, a project, a club). How much 'I can do this' does each one build? Hint: watching someone like you succeed counts.",
-   "left": "Weaker on its own",
-   "right": "Builds real belief",
-   "items": [
-    {
-     "text": "Someone just like you, just as nervous, nails their first presentation",
-     "side": "right",
-     "why": "Builds belief, second only to your own win. Watch how they prepared, not just how it went."
-    },
-    {
-     "text": "Someone you look up to says 'You're a natural'",
-     "side": "left",
-     "why": "Praise helps, but words alone fade at the first hard moment. Pair it with a win."
-    },
-    {
-     "text": "You run the first meeting yourself and it goes fine",
-     "side": "right",
-     "why": "Your own success is the strongest source of belief. You have proof, not just hope."
-    },
-    {
-     "text": "You watch a famous YouTuber's perfect speech",
-     "side": "left",
-     "why": "Models work best when they feel similar. A star can make the gap look bigger."
-    },
-    {
-     "text": "You watch three videos on leadership",
-     "side": "left",
-     "why": "Useful tips, but knowing isn't the same as having done it. Belief needs a rep."
-    },
-    {
-     "text": "You cut a scary task down to one message and send it",
-     "side": "right",
-     "why": "A shrunk task you actually finish still counts as a win. Small wins are designable."
-    }
-   ]
-  },
-  "insight": "Bandura ranked your own wins first, then seeing someone like you succeed. Praise and watching stars help less on their own. Reviews mostly agree, though the order varies.",
-  "model": "Belief follows wins you can point to. Design small ones on purpose.",
-  "try_today": "Pick one task you've been putting off (not the biggest). Do a 10-minute slice today and tick it off somewhere you'll see it.",
-  "source": {
-   "thinkers": [
-    "Albert Bandura"
-   ],
-   "work": "Bandura, Self-Efficacy: The Exercise of Control (1997)"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "sensitive": true,
-  "related": [
-   "small_wins",
-   "growth_mindset",
-   "wso_triad"
-  ],
-  "try_team": "Go round: each person names one small win from this week plus one tiny next step. One minute each, no critique, just thanks.",
-  "audience": "all"
- },
- {
-  "id": "will-gap-paid-to-play-reveal",
-  "concept": "will_gap",
-  "domain": "action",
-  "type": "reveal",
-  "hook": "Someone starts paying you for the thing you'd do for free. Any catch?",
-  "title": "When pay steals the fun",
-  "game": {
-   "prompt": "You make video edits for fun. In a lab-style setup, you're paid per edit for a session, then the pay stops and you're left alone with free time. Compared with people never paid, people like you go on to make…",
-   "choices": [
-    "More edits in their free time",
-    "About as many",
-    "Fewer"
-   ],
-   "answer": 2,
-   "reveal": "Fewer than the unpaid group, on average. Across 128 experiments, expected rewards for an already-fun task lowered free-choice play after rewards ended, compared with people never rewarded. Surprise rewards didn't, and praise raised later play in college students but not in children. The average drop was modest (roughly a third of a standard deviation), and plenty of individuals kept going."
-  },
-  "insight": "Pay can quietly swap 'I want to' for 'I'm paid to', at least for a while. Most studies measured minutes after short lab sessions; whether it lasts, or holds at work, is much less clear.",
-  "model": "A reason that's yours outlasts any reward. Guard the stuff you do for love.",
-  "try_today": "Pick one thing you do just for fun. Do it for 10 minutes today: no posting, no streak, no score. Notice how it feels.",
-  "source": {
-   "thinkers": [
-    "Edward Deci",
-    "Richard Koestner",
-    "Richard Ryan"
-   ],
-   "work": "Deci, Koestner & Ryan, A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation (Psychological Bulletin, 1999); critique: Cameron & Pierce (Review of Educational Research, 1994)"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "related": [
-   "start_with_why",
-   "wso_triad",
-   "self_efficacy"
-  ],
-  "try_team": "Each person lists one thing they'd do unpaid and unseen, and one they only do for a reward. Compare lists: which would you want to grow?",
-  "audience": "all"
- }
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "start_with_why",
+      "skill_gap",
+      "courage_kindness"
+    ]
+  }
 ]

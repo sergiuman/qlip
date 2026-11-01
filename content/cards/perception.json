@@ -33,7 +33,7 @@
       "confirmation_bias",
       "mpc_loop"
     ],
-    "try_team": "Each person names one rule your group runs on ('homework before screens', 'we always reply fast'). Ask together: useful for which trip? Where does it mislead?",
+    "try_team": "Each person names one rule your group runs on ('no phones at dinner', 'we always reply fast'). Ask together: useful for which trip? Where does it mislead?",
     "from_source": {
       "quote": "All models are wrong but some are useful.",
       "cite": "George E. P. Box, 'Robustness in the Strategy of Scientific Model Building' (1979)",
@@ -292,7 +292,7 @@
           "why": "Denial. Marks leave things out, but this one still has information for you."
         },
         {
-          "text": "Bus cancelled, 25-minute wait: 'Good time to call Grandma.'",
+          "text": "Bus cancelled, 25-minute wait: 'Good time to call someone I've been meaning to ring.'",
           "side": "right",
           "why": "Same facts, better use of them. Nothing here is pretend."
         },
@@ -462,16 +462,16 @@
     "game": {
       "prompt": "You reckon you're 'not a people person'. What's the best way to actually find out?",
       "choices": [
-        "Think back over every awkward chat you've had",
-        "Ask three friends whether they agree",
-        "For one week, try one tiny chat a day (even 'thanks, have a good one'). Before each, guess how it'll feel (1-5); after, rate how it actually felt."
+        "Think back over past awkward chats",
+        "Ask three friends if they agree",
+        "Try one tiny chat a day for a week"
       ],
-      "reveal": "Memory is selective, and the belief keeps you out of the moments that would test it. Friends help, but a small experiment that compares your prediction with how it actually felt beats both. People often expect small talk to go worse than it does (Epley & Schroeder, 2014). Peirce said an idea's meaning lies in its practical effects; James added that truth is worked out in experience. So act as if it might be false, and watch.",
+      "reveal": "The week of tiny chats. Memory is selective, and the belief keeps you out of the moments that would test it. Friends help, but guessing how each chat will feel (1-5) and then rating how it went tests the belief more directly than either. In commuter studies, people expected talking to a stranger to go worse than it did (Epley & Schroeder, 2014). For James, an idea becomes true by working out in lived experience: the test isn't a lab result, it's whether the belief still guides you well after a week of acting.",
       "answer": 2
     },
-    "insight": "Pragmatism asks: what happens when you act on this idea? A lens, not a lab finding, and facts still matter. James's view of truth was hotly disputed (Russell among others); use it as a method.",
+    "insight": "Pragmatism judges an idea by what happens when you act on it. For James, truth is worked out in lived experience. A lens, not a lab finding, and his view was hotly disputed (Russell).",
     "model": "Judge a belief by its consequences: run the experiment, then decide.",
-    "try_today": "Pick a belief like 'I'm bad at small talk'. Do one tiny thing it says you can't (thank a cashier). Note your prediction, then what happened.",
+    "try_today": "Pick a belief like 'I'm bad at small talk'. Before one tiny chat, rate 1-5 how it'll feel. After, rate how it actually went.",
     "source": {
       "thinkers": [
         "William James",
@@ -814,12 +814,11 @@
       "prompt": "Lottery winners (who'd won 1 to 18 months earlier) rated how much they enjoyed everyday moments (a chat, a joke, breakfast). Compared with their neighbours, the winners enjoyed them…",
       "choices": [
         "More",
-        "A bit less",
         "About the same",
-        "Much less"
+        "Less"
       ],
-      "answer": 1,
-      "reveal": "A bit less, in one small 1978 study of 22 winners (Brickman et al.): a hint, not a law. They also weren't happier overall. The twist: a large Swedish study found big winners stayed more satisfied with life for years, though not happier moment to moment (Lindqvist et al., 2020)."
+      "answer": 2,
+      "reveal": "Less, slightly: winners rated everyday pleasures around 3.3 out of 5, neighbours around 3.8. The win seemed to raise the bar for small joys. They also weren't happier overall. The twist: a large Swedish study found big winners stayed more satisfied with life for years, though not happier moment to moment (Lindqvist et al., 2020). The first finding comes from one small 1978 study of 22 winners (Brickman et al.): a hint, not a law."
     },
     "insight": "New things quickly become your normal, so the daily glow fades even when the gain is real. How satisfied you feel with life can shift; the day-to-day buzz mostly settles back.",
     "model": "Gains turn into the new normal. Expect the glow to fade and plan for it.",
@@ -1148,5 +1147,72 @@
     ],
     "try_team": "Study group or team, 5 min: everyone reads the same page in a different role (examiner, sceptic, newcomer). Share what each role noticed.",
     "audience": "all"
+  },
+  {
+    "id": "useful-truth-action-choice",
+    "concept": "useful_truth",
+    "domain": "perception",
+    "type": "choice",
+    "hook": "Did that 'assertiveness' article actually help?",
+    "title": "Truth is in the Doing",
+    "game": {
+      "steps": [
+        {
+          "scenario": "After reading a self-help book on 'becoming more organized', you…",
+          "options": [
+            {
+              "text": "Feel inspired and confident about getting things done, even though your desk is still messy.",
+              "feedback": "It's great to feel motivated! But true organization comes from applying the techniques, not just reading about them."
+            },
+            {
+              "text": "Start by implementing one small tip from the book: sorting your emails or filing some papers. ",
+              "best": true,
+              "feedback": "Yes! Putting knowledge into action is what truly makes a difference.  That's how you learn and grow."
+            },
+            {
+              "text": "Put the book aside and wait for the right time to start organizing. You're already stressed enough.",
+              "feedback": "It's easy to get overwhelmed, but even small steps can lead to big changes over time. Don't let perfection be the enemy of progress."
+            }
+          ]
+        },
+        {
+          "scenario": "A friend says they read a book about 'how to be less anxious'. They seem relaxed now. What do you ask them?",
+          "options": [
+            {
+              "text": "'Did reading it actually change anything in your day-to-day life?'",
+              "best": true,
+              "feedback": "Yes!  This question gets to the heart of whether the book was truly useful by focusing on real-world application."
+            },
+            {
+              "text": "'That's awesome! What were some tips that really helped?'",
+              "feedback": "It's good to be interested, but a deeper inquiry into their experience would reveal more about the book's effectiveness."
+            },
+            {
+              "text": "'I've been thinking about getting that book. Can you lend it to me?'",
+              "feedback": "This focuses on getting the book rather than understanding its impact, which might not be as helpful."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Books and articles can offer insights, but true value comes from applying what we learn in our lives.  Don't just read; do.",
+    "model": "The most useful truth is one that changes your actions and outcomes.",
+    "try_today": "Pick a small habit you want to improve. Read about it for 15 minutes, then try implementing one tip immediately.",
+    "source": {
+      "thinkers": [
+        "William James",
+        "Charles Sanders Peirce",
+        "John Dewey"
+      ],
+      "work": "Pragmatism (various works)",
+      "next_read": "The Meaning of Truth (Peirce)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "deliberate_practice",
+      "mpc_loop",
+      "map_territory"
+    ]
   }
 ]

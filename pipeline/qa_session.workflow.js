@@ -34,10 +34,12 @@ const FIX = { type: 'object', properties: { domain: { type: 'string' }, applied:
 
 const FACT = { type: 'object', properties: { issues: SCORE.properties.issues, checked: { type: 'number' } }, required: ['issues','checked'] }
 const factPrompt = `You are the fact-checker for Qlip QA session ${N}. In ${ROOT}/data/qlip.json, check EVERY card that has "from_source" (quote, cite, next_read), plus every estimate card's "answer" and "explain" numbers, and every card marked evidence "strong". Use WebSearch/WebFetch to verify exact quote wording against a public-domain translation, the attribution, the chapter, and the numbers/studies. Report ONLY real problems (misquote, wrong chapter, wrong number, misattribution, overclaim) as issues with card_id and an exact replacement in "fix" (or "remove from_source" if it can't be verified). Do not edit files.`
+// lean mode (routine daily runs): three personas covering the extremes, no fact-check; full mode for scored QA sessions
+const ACTIVE = args.lean ? PERSONAS.filter(p => ['teen', 'manager', 'psychologist'].includes(p.key)) : PERSONAS
 phase('Panel')
 const [panelRaw, fact] = await Promise.all([
-  parallel(PERSONAS.map(p => () => agent(panelPrompt(p), { label: `persona:${p.key}`, phase: 'Panel', schema: SCORE }))),
-  agent(factPrompt, { label: 'fact-check', phase: 'Panel', schema: FACT }),
+  parallel(ACTIVE.map(p => () => agent(panelPrompt(p), { label: `persona:${p.key}`, phase: 'Panel', schema: SCORE }))),
+  args.lean ? Promise.resolve(null) : agent(factPrompt, { label: 'fact-check', phase: 'Panel', schema: FACT }),
 ])
 const panel = panelRaw.filter(Boolean)
 

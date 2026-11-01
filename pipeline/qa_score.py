@@ -131,8 +131,12 @@ def main():
     ap.add_argument("--session", type=int, required=True)
     ap.add_argument("--panel")
     ap.add_argument("--note", default="")
+    ap.add_argument("--hist", help="history file (default qa/history.json); the local loop keeps its own")
     ap.add_argument("--keep-auto", action="store_true", help="reuse this session's earlier automated snapshot (taken before fixes)")
     a = ap.parse_args()
+    global HIST
+    if a.hist:
+        HIST = ROOT / a.hist
     hist = json.loads(HIST.read_text()) if HIST.exists() else []
     old = next((h for h in hist if h["session"] == a.session), None)
     if a.keep_auto and old:

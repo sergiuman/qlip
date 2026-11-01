@@ -319,7 +319,7 @@
     "hook": "1,000 coins a day for a month, or 1 coin doubling daily? Pick fast.",
     "title": "The Doubling Pile",
     "game": {
-      "prompt": "Pick a pile. Pile A: you get 1,000 coins every day for 30 days. Pile B: you get 1 coin on day 1, 2 on day 2, 4 on day 3, doubling each day until day 30. Which ends bigger?",
+      "prompt": "Pile A: 1,000 coins a day for 30 days. Pile B: 1 coin on day 1, doubled every day. Which pile is bigger after day 30?",
       "choices": [
         "Pile A: 1,000 coins a day",
         "Pile B: 1 coin, doubling daily"
@@ -327,18 +327,17 @@
       "answer": 1,
       "reveal": "Pile B, by a mile: over 1 billion coins vs 30,000. If you picked A, you're in good company: A is ahead for the first 13 days. Doubling looks like nothing, then like everything."
     },
-    "insight": "People reliably underestimate doubling (Stango & Zinman, 2009). Habits don't double: they grow fast, then level off, after 18 to 254 days (median 66; Lally et al., 2010).",
-    "model": "Some growth hides for a long time before it shows. Habits don't double, but need weeks before you judge them.",
+    "insight": "We underestimate doubling (Stango & Zinman, 2009). Habits don't double: in Lally (2010) automaticity rose fast, then flattened over 18-254 days (median 66). Judge the curve, not the first fortnight.",
+    "model": "Our gut draws straight lines. Before judging slow early progress, ask what shape the curve really has.",
     "try_today": "Draw 66 boxes (the study's median). Tick one each day you do your tiny habit. Missed one? Tick the next. Don't judge it before 66.",
     "try_team": "Everyone secretly picks Pile A or B, then reveal together. Then choose one small daily habit for the group and review it in 66 days.",
     "source": {
       "thinkers": [
         "Victor Stango",
         "Jonathan Zinman",
-        "Phillippa Lally",
-        "James Clear"
+        "Phillippa Lally"
       ],
-      "work": "Exponential growth bias and household finance (Journal of Finance, 2009); How are habits formed (European Journal of Social Psychology, 2010); Atomic Habits (2018)"
+      "work": "Exponential growth bias and household finance (Journal of Finance, 2009); How are habits formed (European Journal of Social Psychology, 2010)"
     },
     "evidence": "moderate",
     "level": 1,
@@ -949,5 +948,51 @@
       "small_wins"
     ],
     "audience": "all"
+  },
+  {
+    "id": "two-minute-rule-choice",
+    "concept": "two_minute_rule",
+    "domain": "habits",
+    "type": "choice",
+    "hook": "Want daily meditation?  Start small! What's the first step?",
+    "title": "Two Minutes to Zen",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You're tired after work, phone buzzing, and you REALLY want to relax. But you also promised yourself a 20-minute meditation session.",
+          "options": [
+            {
+              "text": "Push through! Just get those 20 minutes in, then you deserve that screen time.",
+              "feedback": "It feels good to be disciplined, but starting big when you're tired often leads to skipping it altogether. You might even feel resentful about the whole thing."
+            },
+            {
+              "text": "Close your eyes for just two minutes. That's all. If you feel like stopping after two, that's fine too.",
+              "best": true,
+              "feedback": "Yes! Tiny steps make starting easier. Two minutes is doable, even when you're exhausted. You might find yourself continuing longer once you're in the flow."
+            },
+            {
+              "text": "Plan your 20-minute session for tomorrow morning. More energy then!",
+              "feedback": "Great planning! But relying on 'future you' often doesn't work. The current you is the one who needs a gentle nudge towards the habit now."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "When starting a new habit, make it so small that saying no feels impossible. Two minutes of meditation beats zero, and that tiny win builds momentum.",
+    "model": "The Two-Minute Rule: Make the start of any habit so easy you can't refuse it.",
+    "try_today": "Pick one habit you want to build. What's the smallest possible action to take for just two minutes? Do it right now.",
+    "source": {
+      "thinkers": [
+        "James Clear",
+        "David Allen"
+      ],
+      "work": "Atomic Habits (2018), Getting Things Done (2001)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "small_wins",
+      "procrastination_emotion"
+    ]
   }
 ]

@@ -139,9 +139,9 @@
   "hook": "Your mate texts you a problem. Advice or a hug? Can you sort all 7?",
   "title": "Fix It, or Hear Me?",
   "game": {
-   "prompt": "Feelings or belonging first, or a fix first?",
-   "left": "Hear me / I belong?",
-   "right": "Help me fix it",
+   "prompt": "Do they want a fix, or just someone to listen?",
+   "left": "Just listen",
+   "right": "Help fix it",
    "items": [
     {
      "text": "I got 4 out of 10 on the maths test. Again.",
@@ -180,7 +180,7 @@
     }
    ]
   },
-  "insight": "Duhigg names three kinds of talk: practical, emotional, social. Here the last two are \"hear me first\". Practical-sounding lines often hide a feeling. Clues: 'again', 'everyone', 'except me'.",
+  "insight": "Duhigg names three kinds of talk: practical, emotional, social. The last two need listening before fixing. Practical-sounding lines often hide a feeling. Clues: 'again', 'everyone', 'except me'.",
   "model": "Before you solve it, check the need: 'Do you want ideas, or just to vent?'",
   "try_today": "Next time someone shares a problem, ask 'Do you want ideas, or do you just need to vent?' before you answer.",
   "try_team": "Each person writes one thing they said this week. Others guess: did they want a fix, a listener, or to belong? The writer reveals.",
@@ -597,13 +597,13 @@
   "hook": "Fair criticism has steps. Most of us jump straight to the last one.",
   "title": "Rapoport's Rules",
   "game": {
-   "prompt": "Order the steps for criticizing someone's view fairly",
+   "prompt": "Your mate says TikTok should be banned for under-16s. You disagree. Tap what you'd say, in order:",
    "items": [
-    "Restate their view so clearly they wish they'd said it that way",
-    "Name where you agree and what you learned from them",
-    "Only then, offer your criticism"
+    "'So you're saying it messes with sleep and focus, yeah?'",
+    "'Fair, the 2am scrolling thing is real for me too.'",
+    "'But a ban just pushes people onto worse apps.'"
    ],
-   "explain": "Daniel Dennett popularized these as 'Rapoport's Rules,' crediting the game theorist Anatol Rapoport. He lists agreeing and learning as two steps; here they're one. Dennett's bet: by the last step, the other person is far more ready to listen."
+   "explain": "Restate their view, say where you agree, then criticise. Dennett calls these 'Rapoport's Rules', after game theorist Anatol Rapoport: by step 3, they're ready to listen."
   },
   "insight": "Criticism lands better once the other person feels understood and respected. These rules slow you down just enough to check you're arguing with their real view, not one you invented.",
   "model": "Restate → agree and learn → then critique. Earn the right to disagree.",

@@ -1,1066 +1,1244 @@
 [
- {
-  "id": "system1-system2-bat-ball",
-  "concept": "system1_system2",
-  "domain": "thinking",
-  "type": "estimate",
-  "hook": "A bat and ball cost 1.10. Your gut already has an answer. Check it.",
-  "title": "Fast & Slow Thinking",
-  "game": {
-   "question": "A bat and a ball cost 1.10 together. The bat costs 1.00 more than the ball. How much is the ball, in cents?",
-   "min": 0,
-   "max": 20,
-   "step": 1,
-   "unit": " cents",
-   "answer": 5,
-   "explain": "If the ball were 10, the bat would be 1.10 and the total 1.20. Ball 0.05 + bat 1.05 = 1.10. Most people's first answer is 10, including many students at top universities.",
-   "anchor": null
-  },
-  "insight": "The 10-cent answer arrives instantly and feels right. That's your fast mind. The slow mind only checks when you ask it to. Clever people miss this too; a pause is what helps.",
-  "model": "Fast thinking proposes, slow thinking checks. When it feels obvious and matters, check once.",
-  "try_today": "Say your gut answer out loud before your next decision that matters, then ask: 'How would I check this?'",
-  "source": {
-   "thinkers": [
-    "Shane Frederick",
-    "Daniel Kahneman"
-   ],
-   "work": "Cognitive Reflection and Decision Making (2005); Thinking, Fast and Slow (2011)"
-  },
-  "evidence": "strong",
-  "level": 1,
-  "related": [
-   "impulse_pause",
-   "anchoring",
-   "base_rates"
-  ],
-  "try_team": "Give everyone the bat-and-ball puzzle on paper, answers written silently. Reveal, then ask: which of our choices feel this obvious but never get checked?",
-  "audience": "all"
- },
- {
-  "id": "system1-system2-who-drives",
-  "concept": "system1_system2",
-  "domain": "thinking",
-  "type": "spectrum",
-  "hook": "Hare or owl: who's actually making your decisions this week?",
-  "title": "Who's Driving: Hare or Owl?",
-  "game": {
-   "left": "Hare (fast)",
-   "right": "Owl (slow)",
-   "questions": [
-    {
-     "q": "A message annoys you. You usually…",
-     "options": [
-      {
-       "label": "Reply right away",
-       "value": -2
-      },
-      {
-       "label": "Reply after a quick reread",
-       "value": 0
-      },
-      {
-       "label": "Wait until I've cooled down",
-       "value": 2
-      }
-     ]
+  {
+    "id": "system1-system2-bat-ball",
+    "concept": "system1_system2",
+    "domain": "thinking",
+    "type": "estimate",
+    "hook": "A bat and ball cost 1.10. Your gut already has an answer. Check it.",
+    "title": "Fast & Slow Thinking",
+    "game": {
+      "question": "A bat and a ball cost 1.10 together. The bat costs 1.00 more than the ball. How much is the ball, in cents?",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": " cents",
+      "answer": 5,
+      "explain": "If the ball were 10, the bat would be 1.10 and the total 1.20. Ball 0.05 + bat 1.05 = 1.10. Most people's first answer is 10, including many students at top universities.",
+      "anchor": null
     },
-    {
-     "q": "Someone proposes a big change in a group chat (friends, family, a club). You…",
-     "options": [
-      {
-       "label": "React within a minute",
-       "value": -2
-      },
-      {
-       "label": "Reply after rereading it",
-       "value": 0
-      },
-      {
-       "label": "Ask for a quick call before deciding",
-       "value": 2
-      }
-     ]
+    "insight": "The 10-cent answer arrives instantly and feels right. That's your fast mind. The slow mind only checks when you ask it to. Clever people miss this too; a pause is what helps.",
+    "model": "Fast thinking proposes, slow thinking checks. When it feels obvious and matters, check once.",
+    "try_today": "Say your gut answer out loud before your next decision that matters, then ask: 'How would I check this?'",
+    "source": {
+      "thinkers": [
+        "Shane Frederick",
+        "Daniel Kahneman"
+      ],
+      "work": "Cognitive Reflection and Decision Making (2005); Thinking, Fast and Slow (2011)"
     },
-    {
-     "q": "When a headline makes you angry, you…",
-     "options": [
-      {
-       "label": "Share it",
-       "value": -2
-      },
-      {
-       "label": "Read past the headline first",
-       "value": 0
-      },
-      {
-       "label": "Check who else reports it before sharing",
-       "value": 2
-      }
-     ]
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "impulse_pause",
+      "anchoring",
+      "base_rates"
+    ],
+    "try_team": "Give everyone the bat-and-ball puzzle on paper, answers written silently. Reveal, then ask: which of our choices feel this obvious but never get checked?",
+    "audience": "all"
+  },
+  {
+    "id": "system1-system2-who-drives",
+    "concept": "system1_system2",
+    "domain": "thinking",
+    "type": "spectrum",
+    "hook": "Hare or owl: who's actually making your decisions this week?",
+    "title": "Who's Driving: Hare or Owl?",
+    "game": {
+      "left": "Hare (fast)",
+      "right": "Owl (slow)",
+      "questions": [
+        {
+          "q": "A message annoys you. You usually…",
+          "options": [
+            {
+              "label": "Reply right away",
+              "value": -2
+            },
+            {
+              "label": "Reply after a quick reread",
+              "value": 0
+            },
+            {
+              "label": "Wait until I've cooled down",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Someone proposes a big change in a group chat (friends, family, a club). You…",
+          "options": [
+            {
+              "label": "React within a minute",
+              "value": -2
+            },
+            {
+              "label": "Reply after rereading it",
+              "value": 0
+            },
+            {
+              "label": "Ask for a quick call before deciding",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "When a headline makes you angry, you…",
+          "options": [
+            {
+              "label": "Share it",
+              "value": -2
+            },
+            {
+              "label": "Read past the headline first",
+              "value": 0
+            },
+            {
+              "label": "Check who else reports it before sharing",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Someone asks how long a job will take you (a repair, a project, a favour). You…",
+          "options": [
+            {
+              "label": "Say a number straight away",
+              "value": -2
+            },
+            {
+              "label": "Ask one clarifying question first",
+              "value": 0
+            },
+            {
+              "label": "Say you'll reply after breaking it down",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Hare-led",
+          "text": "Today your answers lean fast. That's efficient for routine stuff. For the few choices that matter, add one deliberate pause."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Shared driving",
+          "text": "Today your answers switch between speeds. The skill now is noticing which moments deserve the owl."
+        },
+        {
+          "upTo": 1,
+          "label": "Owl-led",
+          "text": "Today your answers lean slow. Useful for big calls, costly for small ones. Watch for overthinking small, reversible choices; the hare handles those well."
+        }
+      ]
     },
-    {
-     "q": "Someone asks how long a job will take you (a repair, a project, a favour). You…",
-     "options": [
-      {
-       "label": "Say a number straight away",
-       "value": -2
-      },
-      {
-       "label": "Ask one clarifying question first",
-       "value": 0
-      },
-      {
-       "label": "Say you'll reply after breaking it down",
-       "value": 2
-      }
-     ]
-    }
-   ],
-   "zones": [
-    {
-     "upTo": -0.34,
-     "label": "Hare-led",
-     "text": "Today your answers lean fast. That's efficient for routine stuff. For the few choices that matter, add one deliberate pause."
+    "insight": "Neither speed is better. The fast mind slips on numbers, anger and new things. 'System 1 and 2' (Stanovich & West, 2000) is a metaphor, not two brain parts.",
+    "model": "Let the hare handle the routine; call the owl for anything costly, emotional, or new.",
+    "try_today": "Pick one trigger (an annoying message, a snap estimate) and make it your rule to wait 10 minutes first.",
+    "source": {
+      "thinkers": [
+        "Daniel Kahneman",
+        "Keith Stanovich"
+      ],
+      "work": "Thinking, Fast and Slow (2011)"
     },
-    {
-     "upTo": 0.34,
-     "label": "Shared driving",
-     "text": "Today your answers switch between speeds. The skill now is noticing which moments deserve the owl."
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "impulse_pause",
+      "reversible_doors"
+    ],
+    "try_team": "In your next planning or group chat, agree one 'owl rule': no estimate or reply to a heated message without one question first. Review in a week.",
+    "audience": "all"
+  },
+  {
+    "id": "anchoring-africa-un",
+    "concept": "anchoring",
+    "domain": "thinking",
+    "type": "estimate",
+    "hook": "First, a number unrelated to the answer. Watch it bend your guess.",
+    "title": "Anchoring",
+    "game": {
+      "question": "What percentage of UN member countries are in Africa?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 28,
+      "explain": "54 of the 193 UN members are African: about 28%. Before you guessed, you saw 65. We can't know if it moved your guess, but on average it moves people: in the 1974 study, people who saw a wheel land on 65 guessed a median of 45%, and those who saw 10 guessed 25%.",
+      "anchor": 65
     },
-    {
-     "upTo": 1,
-     "label": "Owl-led",
-     "text": "Today your answers lean slow. Useful for big calls, costly for small ones. Watch for overthinking small, reversible choices; the hare handles those well."
-    }
-   ]
-  },
-  "insight": "Neither speed is better. The fast mind slips on numbers, anger and new things. 'System 1 and 2' (Stanovich & West, 2000) is a metaphor, not two brain parts.",
-  "model": "Let the hare handle the routine; call the owl for anything costly, emotional, or new.",
-  "try_today": "Pick one trigger (an annoying message, a snap estimate) and make it your rule to wait 10 minutes first.",
-  "source": {
-   "thinkers": [
-    "Daniel Kahneman",
-    "Keith Stanovich"
-   ],
-   "work": "Thinking, Fast and Slow (2011)"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "related": [
-   "impulse_pause",
-   "reversible_doors"
-  ],
-  "try_team": "In your next planning or group chat, agree one 'owl rule': no estimate or reply to a heated message without one question first. Review in a week.",
-  "audience": "all"
- },
- {
-  "id": "anchoring-africa-un",
-  "concept": "anchoring",
-  "domain": "thinking",
-  "type": "estimate",
-  "hook": "First, a number unrelated to the answer. Watch it bend your guess.",
-  "title": "Anchoring",
-  "game": {
-   "question": "What percentage of UN member countries are in Africa?",
-   "min": 0,
-   "max": 100,
-   "step": 1,
-   "unit": "%",
-   "answer": 28,
-   "explain": "54 of the 193 UN members are African: about 28%. Before you guessed, you saw 65. We can't know if it moved your guess, but on average it moves people: in the 1974 study, people who saw a wheel land on 65 guessed a median of 45%, and those who saw 10 guessed 25%.",
-   "anchor": 65
-  },
-  "insight": "An irrelevant number still drags your guess toward it. Price tags like 'was 199, now 99' use this. Knowing about it helps a little; bringing your own number helps more.",
-  "model": "The first number sets the field. Bring your own number before you hear theirs.",
-  "try_today": "Next time you haggle or sell something, write your price and one reason it's fair before you hear their offer.",
-  "source": {
-   "thinkers": [
-    "Amos Tversky",
-    "Daniel Kahneman"
-   ],
-   "work": "Judgment under Uncertainty: Heuristics and Biases (1974)"
-  },
-  "evidence": "strong",
-  "level": 1,
-  "related": [
-   "system1_system2",
-   "base_rates"
-  ],
-  "try_team": "Before your friends or team guess a number together (trip cost, queue time, a deadline), everyone types their guess in the chat at the same time.",
-  "audience": "all"
- },
- {
-  "id": "availability-feels-common",
-  "concept": "availability",
-  "domain": "thinking",
-  "type": "swipe",
-  "hook": "Your brain ranks dangers by how easily they come to mind. Test it.",
-  "title": "Availability Bias",
-  "game": {
-   "prompt": "Most people's gut sense of how often this happens is…",
-   "left": "Too high (it's rarer)",
-   "right": "Too low (it's more common)",
-   "items": [
-    {
-     "text": "Dying in a plane crash",
-     "side": "left",
-     "why": "Crashes get huge coverage. Per mile, commercial flying is far safer than driving."
+    "insight": "An irrelevant number still drags your guess toward it. Price tags like 'was 199, now 99' use this. Knowing about it helps a little; bringing your own number helps more.",
+    "model": "The first number sets the field. Bring your own number before you hear theirs.",
+    "try_today": "Next time you haggle or sell something, write your price and one reason it's fair before you hear their offer.",
+    "source": {
+      "thinkers": [
+        "Amos Tversky",
+        "Daniel Kahneman"
+      ],
+      "work": "Judgment under Uncertainty: Heuristics and Biases (1974)"
     },
-    {
-     "text": "Being killed by a shark",
-     "side": "left",
-     "why": "About 5 to 10 unprovoked shark deaths a year worldwide."
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "system1_system2",
+      "base_rates"
+    ],
+    "try_team": "Before your friends or team guess a number together (trip cost, queue time, a deadline), everyone types their guess in the chat at the same time.",
+    "audience": "all"
+  },
+  {
+    "id": "availability-feels-common",
+    "concept": "availability",
+    "domain": "thinking",
+    "type": "swipe",
+    "hook": "Your brain ranks dangers by how easily they come to mind. Test it.",
+    "title": "Availability Bias",
+    "game": {
+      "prompt": "Most people's gut sense of how often this happens is…",
+      "left": "Too high (it's rarer)",
+      "right": "Too low (it's more common)",
+      "items": [
+        {
+          "text": "Dying in a plane crash",
+          "side": "left",
+          "why": "Crashes get huge coverage. Per mile, commercial flying is far safer than driving."
+        },
+        {
+          "text": "Being killed by a shark",
+          "side": "left",
+          "why": "About 5 to 10 unprovoked shark deaths a year worldwide."
+        },
+        {
+          "text": "Getting hurt cycling or walking near traffic",
+          "side": "right",
+          "why": "Road injuries are the top killer of 5 to 29-year-olds worldwide (WHO). So routine they're rarely news."
+        },
+        {
+          "text": "A child taken by a total stranger",
+          "side": "left",
+          "why": "Stranger abductions are very rare; most missing children are runaways or family cases."
+        },
+        {
+          "text": "Heart disease as a cause of death",
+          "side": "right",
+          "why": "It's the top cause of death worldwide (WHO), yet rarely makes headlines."
+        },
+        {
+          "text": "Diabetes as a cause of death",
+          "side": "right",
+          "why": "It kills over a million people a year worldwide (WHO), quietly and with little coverage."
+        }
+      ]
     },
-    {
-     "text": "Getting hurt cycling or walking near traffic",
-     "side": "right",
-     "why": "Road injuries are the top killer of 5 to 29-year-olds worldwide (WHO). So routine they're rarely news."
+    "insight": "Vivid, dramatic events are easy to recall, so they feel common; slow, ordinary risks hide. Guesses also drift toward the middle. Your feed is a highlight reel, not a map of risk.",
+    "model": "Easy to imagine is not the same as likely. Ask for the count, not the story.",
+    "try_today": "Look up one number the next time a scary story grabs you: how many times a year does this actually happen?",
+    "source": {
+      "thinkers": [
+        "Amos Tversky",
+        "Daniel Kahneman"
+      ],
+      "work": "Availability: A Heuristic for Judging Frequency and Probability (1973)"
     },
-    {
-     "text": "A child taken by a total stranger",
-     "side": "left",
-     "why": "Stranger abductions are very rare; most missing children are runaways or family cases."
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "base_rates",
+      "doomscroll_loop",
+      "system1_system2"
+    ],
+    "try_team": "Everyone names the danger they worry about most. Look up one real yearly number for each together. Which fears shrink, and which grow?",
+    "audience": "all"
+  },
+  {
+    "id": "confirmation-bias-2-4-6",
+    "concept": "confirmation_bias",
+    "domain": "thinking",
+    "type": "choice",
+    "hook": "2, 4, 6 follows a secret rule. Most people's first guess is wrong.",
+    "title": "Confirmation Bias",
+    "game": {
+      "steps": [
+        {
+          "scenario": "The numbers 2-4-6 follow a hidden rule. You can test any three numbers and learn if they fit. Your hunch: 'even numbers going up by 2.' Which test teaches you the most?",
+          "options": [
+            {
+              "text": "8-10-12",
+              "feedback": "It fits, but it would fit your hunch either way. You'd learn nothing new. This is what most people try."
+            },
+            {
+              "text": "20-22-24",
+              "feedback": "Another yes, but again only a test your hunch already predicts. Confirming feels productive; it rarely is."
+            },
+            {
+              "text": "1-2-3",
+              "best": true,
+              "feedback": "Yes! Your hunch says 'no'. If it fits, your hunch is wrong. That's a real test."
+            },
+            {
+              "text": "Just guess the rule now",
+              "feedback": "Bold! But without a test that could prove you wrong, you'd be guessing blind."
+            }
+          ]
+        },
+        {
+          "scenario": "1-2-3 fits. 6-4-2 does not. 2-4-7 fits. What's the rule?",
+          "options": [
+            {
+              "text": "Any three numbers going up",
+              "best": true,
+              "feedback": "Correct. In Wason's 1960 study, only about 1 in 5 people named it on their first try, mostly because they only tested examples they expected to fit."
+            },
+            {
+              "text": "Each number bigger by 2",
+              "feedback": "Close to the hunch, but 2-4-7 jumps by 3 and still fits. Simpler: they just go up."
+            },
+            {
+              "text": "Even numbers only",
+              "feedback": "1-2-3 and 2-4-7 fit, so odd numbers are allowed. The rule is broader: any rising sequence."
+            }
+          ]
+        }
+      ]
     },
-    {
-     "text": "Heart disease as a cause of death",
-     "side": "right",
-     "why": "It's the top cause of death worldwide (WHO), yet rarely makes headlines."
+    "insight": "We often test ideas in ways that can only say 'yes'. It feels like proof but isn't. Researchers debate how irrational this is; the fix is clear: seek what could prove you wrong.",
+    "model": "Don't ask 'what fits my idea?' Ask 'what would I see if I were wrong?'",
+    "try_today": "Pick one belief you hold firmly. Write down one thing that, if you saw it, would change your mind. Go look for it.",
+    "source": {
+      "thinkers": [
+        "Peter Wason"
+      ],
+      "work": "On the failure to eliminate hypotheses in a conceptual task (1960)"
     },
-    {
-     "text": "Diabetes as a cause of death",
-     "side": "right",
-     "why": "It kills over a million people a year worldwide (WHO), quietly and with little coverage."
-    }
-   ]
-  },
-  "insight": "Vivid, dramatic events are easy to recall, so they feel common; slow, ordinary risks hide. Guesses also drift toward the middle. Your feed is a highlight reel, not a map of risk.",
-  "model": "Easy to imagine is not the same as likely. Ask for the count, not the story.",
-  "try_today": "Look up one number the next time a scary story grabs you: how many times a year does this actually happen?",
-  "source": {
-   "thinkers": [
-    "Amos Tversky",
-    "Daniel Kahneman"
-   ],
-   "work": "Availability: A Heuristic for Judging Frequency and Probability (1973)"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "related": [
-   "base_rates",
-   "doomscroll_loop",
-   "system1_system2"
-  ],
-  "try_team": "Everyone names the danger they worry about most. Look up one real yearly number for each together. Which fears shrink, and which grow?",
-  "audience": "all"
- },
- {
-  "id": "confirmation-bias-2-4-6",
-  "concept": "confirmation_bias",
-  "domain": "thinking",
-  "type": "choice",
-  "hook": "2, 4, 6 follows a secret rule. Most people's first guess is wrong.",
-  "title": "Confirmation Bias",
-  "game": {
-   "steps": [
-    {
-     "scenario": "The numbers 2-4-6 follow a hidden rule. You can test any three numbers and learn if they fit. Your hunch: 'even numbers going up by 2.' Which test teaches you the most?",
-     "options": [
-      {
-       "text": "8-10-12",
-       "feedback": "It fits, but it would fit your hunch either way. You'd learn nothing new. This is what most people try."
-      },
-      {
-       "text": "20-22-24",
-       "feedback": "Another yes, but again only a test your hunch already predicts. Confirming feels productive; it rarely is."
-      },
-      {
-       "text": "1-2-3",
-       "best": true,
-       "feedback": "Yes! Your hunch says 'no'. If it fits, your hunch is wrong. That's a real test. Spoiler: it fits."
-      },
-      {
-       "text": "Just guess the rule now",
-       "feedback": "Bold! But without a test that could prove you wrong, you'd be guessing blind."
-      }
-     ]
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "steelmanning",
+      "socratic_ignorance",
+      "map_territory"
+    ],
+    "try_team": "Play 2-4-6: one person holds a secret rule, others test triples aloud. Afterwards count how many tests could have gotten a 'no'.",
+    "from_source": {
+      "quote": "The human understanding when it has once adopted an opinion ... draws all things else to support and agree with it.",
+      "cite": "Francis Bacon, Novum Organum (1620), Book I, Aphorism 46 (trans. Spedding, Ellis & Heath)",
+      "next_read": "Novum Organum, Book I, Aphorisms 45–52 (the 'Idols of the Tribe')"
     },
-    {
-     "scenario": "1-2-3 fits. So does 3-17-90. 6-4-2 does not. What's the rule?",
-     "options": [
-      {
-       "text": "Any three numbers going up",
-       "best": true,
-       "feedback": "Correct. In Wason's 1960 study, only about 1 in 5 people named it on their first try, mostly because they only tested examples they expected to fit."
-      },
-      {
-       "text": "Numbers with a pattern",
-       "feedback": "Close in spirit, but 3-17-90 has no neat pattern. Simpler: they just go up."
-      },
-      {
-       "text": "Even numbers only",
-       "feedback": "1-2-3 fit, so odd numbers are allowed. The rule is broader: any rising sequence."
-      }
-     ]
-    }
-   ]
+    "audience": "all"
   },
-  "insight": "We often test ideas in ways that can only say 'yes'. It feels like proof but isn't. Researchers debate how irrational this is; the fix is clear: seek what could prove you wrong.",
-  "model": "Don't ask 'what fits my idea?' Ask 'what would I see if I were wrong?'",
-  "try_today": "Pick one belief you hold firmly. Write down one thing that, if you saw it, would change your mind. Go look for it.",
-  "source": {
-   "thinkers": [
-    "Peter Wason"
-   ],
-   "work": "On the failure to eliminate hypotheses in a conceptual task (1960)"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "related": [
-   "steelmanning",
-   "socratic_ignorance",
-   "map_territory"
-  ],
-  "try_team": "Play 2-4-6: one person holds a secret rule, others test triples aloud. Afterwards count how many tests could have gotten a 'no'.",
-  "from_source": {
-   "quote": "The human understanding when it has once adopted an opinion ... draws all things else to support and agree with it.",
-   "cite": "Francis Bacon, Novum Organum (1620), Book I, Aphorism 46 (trans. Spedding, Ellis & Heath)",
-   "next_read": "Novum Organum, Book I, Aphorisms 45–52 (the 'Idols of the Tribe')"
-  },
-  "audience": "all"
- },
- {
-  "id": "confirmation-bias-scout-soldier",
-  "concept": "confirmation_bias",
-  "domain": "thinking",
-  "type": "spectrum",
-  "hook": "In an argument, are you defending a fort or drawing a map?",
-  "title": "Soldier or Scout?",
-  "game": {
-   "left": "Soldier (defend)",
-   "right": "Scout (explore)",
-   "questions": [
-    {
-     "q": "Someone shares a study that disagrees with you. First thought:",
-     "options": [
-      {
-       "label": "Look for what's wrong with it, but not what's right",
-       "value": -2
-      },
-      {
-       "label": "Check its methods, the same way I'd check one I agreed with",
-       "value": 2
-      },
-      {
-       "label": "Read what they found before judging",
-       "value": 1
-      }
-     ]
+  {
+    "id": "confirmation-bias-scout-soldier",
+    "concept": "confirmation_bias",
+    "domain": "thinking",
+    "type": "spectrum",
+    "hook": "In an argument, are you defending a fort or drawing a map?",
+    "title": "Soldier or Scout?",
+    "game": {
+      "left": "Soldier (defend)",
+      "right": "Scout (explore)",
+      "questions": [
+        {
+          "q": "Someone shares a study that disagrees with you. First thought:",
+          "options": [
+            {
+              "label": "Look for what's wrong with it, but not what's right",
+              "value": -2
+            },
+            {
+              "label": "Check its methods, the same way I'd check one I agreed with",
+              "value": 2
+            },
+            {
+              "label": "Read what they found before judging",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "q": "When did you last change your mind on something you cared about?",
+          "options": [
+            {
+              "label": "Can't remember",
+              "value": -2
+            },
+            {
+              "label": "Within the last few years",
+              "value": 0
+            },
+            {
+              "label": "This year",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "q": "Your feed mostly shows people who…",
+          "options": [
+            {
+              "label": "Agree with me",
+              "value": -2
+            },
+            {
+              "label": "Mix of views",
+              "value": 0
+            },
+            {
+              "label": "I follow some smart critics on purpose",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "q": "Being proven wrong feels like…",
+          "options": [
+            {
+              "label": "Losing",
+              "value": -2
+            },
+            {
+              "label": "Annoying, but useful",
+              "value": 0
+            },
+            {
+              "label": "An upgrade",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "upTo": -0.34,
+          "label": "Soldier mode",
+          "text": "Today's answers lean toward defending, which is very human. Try treating one belief as a draft, not a fort."
+        },
+        {
+          "upTo": 0.34,
+          "label": "Switching",
+          "text": "Today's answers mix scouting and defending. Notice which topics made you defensive; that's where your map is least checked."
+        },
+        {
+          "upTo": 1,
+          "label": "Scout mode",
+          "text": "Today's answers lean curious about being wrong. Keep it kind: scouts share maps, they don't sneer at others' wrong turns."
+        }
+      ]
     },
-    {
-     "q": "When did you last change your mind on something you cared about?",
-     "options": [
-      {
-       "label": "Can't remember",
-       "value": -2
-      },
-      {
-       "label": "Within the last few years",
-       "value": 0
-      },
-      {
-       "label": "This year",
-       "value": 1
-      }
-     ]
+    "insight": "Everyone slips into defending. Scouting isn't caring less; it's wanting an accurate map more than wanting to be right. Your answers are a snapshot, not a verdict.",
+    "model": "A soldier asks 'Can I believe this?' or 'Must I believe this?' A scout asks 'Is it true?'",
+    "try_today": "In your next disagreement, ask one honest question: 'What would change your mind?' Then answer it yourself too.",
+    "source": {
+      "thinkers": [
+        "Julia Galef"
+      ],
+      "work": "The Scout Mindset (2021)"
     },
-    {
-     "q": "Your feed mostly shows people who…",
-     "options": [
-      {
-       "label": "Agree with me",
-       "value": -2
-      },
-      {
-       "label": "Mix of views",
-       "value": 0
-      },
-      {
-       "label": "I follow some smart critics on purpose",
-       "value": 2
-      }
-     ]
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "steelmanning",
+      "socratic_ignorance"
+    ],
+    "try_team": "In your next group debate, each side must state the other side's best argument first, until the other side says 'yes, that's it'.",
+    "audience": "all"
+  },
+  {
+    "id": "loss-aversion-coin-flip",
+    "concept": "loss_aversion",
+    "domain": "thinking",
+    "type": "reveal",
+    "hook": "On average this bet pays you. Your gut may still say no.",
+    "title": "Loss Aversion",
+    "game": {
+      "prompt": "One fair coin flip, real money. Heads: you win 15. Tails: you lose 10. On average you come out 2.50 up. Do you take it?",
+      "choices": [
+        "Flip it",
+        "No thanks"
+      ],
+      "reveal": "Most people say no. There's no wrong answer: it's your money. But notice the pull. In Kahneman's studies people wanted a win about twice the loss before they'd flip. Losses tend to feel roughly 1.5–2.5× as strong as equal gains."
     },
-    {
-     "q": "Being proven wrong feels like…",
-     "options": [
-      {
-       "label": "Losing",
-       "value": -2
-      },
-      {
-       "label": "Annoying, but useful",
-       "value": 0
-      },
-      {
-       "label": "An upgrade",
-       "value": 2
-      }
-     ]
-    }
-   ],
-   "zones": [
-    {
-     "upTo": -0.34,
-     "label": "Soldier mode",
-     "text": "Today's answers lean toward defending, which is very human. Try treating one belief as a draft, not a fort."
+    "insight": "Saying no is fine when the loss would really hurt. But we often skip small, smart risks just because losing stings. Some research finds the effect smaller than claimed for small amounts.",
+    "model": "Losses shout, gains whisper. For small, repeatable bets, judge the average, not the sting.",
+    "try_today": "Name one small, reversible bet you've avoided (a new routine, asking for help, a new class). Write the worst case and your plan B.",
+    "source": {
+      "thinkers": [
+        "Daniel Kahneman",
+        "Amos Tversky",
+        "Adam Smith"
+      ],
+      "work": "Prospect Theory: An Analysis of Decision under Risk (1979)"
     },
-    {
-     "upTo": 0.34,
-     "label": "Switching",
-     "text": "Today's answers mix scouting and defending. Notice which topics made you defensive; that's where your map is least checked."
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "expected_value",
+      "regret_minimization",
+      "reversible_doors"
+    ],
+    "try_team": "Each person writes one small risk they've avoided. Swap papers, estimate the realistic worst case for each other, then ask: what would help if it happened?",
+    "from_source": {
+      "quote": "We suffer more ... when we fall from a better to a worse situation, than we ever enjoy when we rise ...",
+      "cite": "Adam Smith, The Theory of Moral Sentiments (6th ed., 1790), Part VI, Section I",
+      "next_read": "The Theory of Moral Sentiments, Part VI, Section I, 'Of the Character of the Individual, so far as it affects his own Happiness'"
     },
-    {
-     "upTo": 1,
-     "label": "Scout mode",
-     "text": "Today's answers lean curious about being wrong. Keep it kind: scouts share maps, they don't sneer at others' wrong turns."
-    }
-   ]
+    "audience": "all"
   },
-  "insight": "Everyone slips into defending. Scouting isn't caring less; it's wanting an accurate map more than wanting to be right. Your answers are a snapshot, not a verdict.",
-  "model": "A soldier asks 'Can I believe this?' or 'Must I believe this?' A scout asks 'Is it true?'",
-  "try_today": "In your next disagreement, ask one honest question: 'What would change your mind?' Then answer it yourself too.",
-  "source": {
-   "thinkers": [
-    "Julia Galef"
-   ],
-   "work": "The Scout Mindset (2021)"
-  },
-  "evidence": "philosophy",
-  "level": 1,
-  "related": [
-   "steelmanning",
-   "socratic_ignorance"
-  ],
-  "try_team": "In your next group debate, each side must state the other side's best argument first, until the other side says 'yes, that's it'.",
-  "audience": "all"
- },
- {
-  "id": "loss-aversion-coin-flip",
-  "concept": "loss_aversion",
-  "domain": "thinking",
-  "type": "reveal",
-  "hook": "On average this bet pays you. Your gut may still say no.",
-  "title": "Loss Aversion",
-  "game": {
-   "prompt": "One fair coin flip, real money. Heads: you win £15. Tails: you lose £10. On average you come out £2.50 up. Do you take it?",
-   "choices": [
-    "Flip it",
-    "No thanks"
-   ],
-   "reveal": "Most people say no. There's no wrong answer: it's your money. But notice the pull. In Kahneman's studies people wanted a win about twice the loss before they'd flip. Losses tend to feel roughly 1.5–2.5× as strong as equal gains."
-  },
-  "insight": "Saying no is fine when the loss would really hurt. But we often skip small, smart risks just because losing stings. Some research finds the effect smaller than claimed for small amounts.",
-  "model": "Losses shout, gains whisper. For small, repeatable bets, judge the average, not the sting.",
-  "try_today": "Name one small, reversible bet you've avoided (a new routine, asking for help, a new class). Write the worst case and your plan B.",
-  "source": {
-   "thinkers": [
-    "Daniel Kahneman",
-    "Amos Tversky",
-    "Adam Smith"
-   ],
-   "work": "Prospect Theory: An Analysis of Decision under Risk (1979)"
-  },
-  "evidence": "moderate",
-  "level": 2,
-  "related": [
-   "expected_value",
-   "regret_minimization",
-   "reversible_doors"
-  ],
-  "try_team": "Each person writes one small risk they've avoided. Swap papers, estimate the realistic worst case for each other, then ask: what would help if it happened?",
-  "from_source": {
-   "quote": "We suffer more ... when we fall from a better to a worse situation, than we ever enjoy when we rise ...",
-   "cite": "Adam Smith, The Theory of Moral Sentiments (6th ed., 1790), Part VI, Section I",
-   "next_read": "The Theory of Moral Sentiments, Part VI, Section I, 'Of the Character of the Individual, so far as it affects his own Happiness'"
-  },
-  "audience": "all"
- },
- {
-  "id": "loss-aversion-mug-price",
-  "concept": "loss_aversion",
-  "domain": "thinking",
-  "type": "estimate",
-  "hook": "Same mug, same room. Just being handed it changes its price.",
-  "title": "The Endowment Effect",
-  "game": {
-   "question": "Students got a free mug. Those who got one named a selling price; those who didn't named a buying price. How many times more did owners want?",
-   "min": 0.5,
-   "max": 10,
-   "step": 0.5,
-   "unit": "×",
-   "answer": 2.5,
-   "explain": "About 2.5×. In Kahneman, Knetsch & Thaler's 1990 study, owners asked a median of about $7.12 and buyers offered about $2.87. Same mug. Just being handed it made giving it up feel like a loss.",
-   "anchor": null
-  },
-  "insight": "Owning something makes letting go feel like losing, so we overprice our stuff. The effect is real but its size depends on the setup; some studies find it much smaller.",
-  "model": "Ask 'Would I buy this today, at this price?' not 'How much would losing it hurt?'",
-  "try_today": "Look at one thing you're selling online or keeping in your wardrobe or garage: would you buy it today at that price?",
-  "try_team": "Ask everyone: name one thing we keep only because we already have it (a tool, a habit, a club, a routine). Would we choose it again today?",
-  "source": {
-   "thinkers": [
-    "Daniel Kahneman",
-    "Jack Knetsch",
-    "Richard Thaler"
-   ],
-   "work": "Experimental Tests of the Endowment Effect and the Coase Theorem (1990); Plott & Zeiler (2005)"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "related": [
-   "expected_value",
-   "opportunity_cost",
-   "regret_minimization"
-  ],
-  "audience": "all"
- },
- {
-  "id": "inversion-guarantee-failure",
-  "concept": "inversion",
-  "domain": "thinking",
-  "type": "choice",
-  "hook": "Stuck on how to succeed? Ask how you'd fail instead.",
-  "title": "Inversion",
-  "game": {
-   "steps": [
-    {
-     "scenario": "Your goal: be a better friend this year. Which question gets you a useful answer fastest?",
-     "options": [
-      {
-       "text": "How could I be the perfect friend?",
-       "feedback": "Nice aim, but 'perfect' gives vague answers like 'be there more'. Hard to act on."
-      },
-      {
-       "text": "What would make sure I lose my friends?",
-       "best": true,
-       "feedback": "Yes. Failure is easy to picture: cancel last minute, only talk about me, forget birthdays. Concrete and fixable."
-      },
-      {
-       "text": "What do the experts say friendship is?",
-       "feedback": "Useful later, but it's about friendship in general, not your habits. Inversion goes straight to yours."
-      }
-     ]
+  {
+    "id": "loss-aversion-mug-price",
+    "concept": "loss_aversion",
+    "domain": "thinking",
+    "type": "estimate",
+    "hook": "Same mug, same room. Just being handed it changes its price.",
+    "title": "The Endowment Effect",
+    "game": {
+      "question": "Students got a free mug. Those who got one named a selling price; those who didn't named a buying price. How many times more did owners want?",
+      "min": 0.5,
+      "max": 10,
+      "step": 0.5,
+      "unit": "×",
+      "answer": 2.5,
+      "explain": "About 2.5×. In Kahneman, Knetsch & Thaler's 1990 study, owners asked a median of about $7.12 and buyers offered about $2.87. Same mug. Just being handed it made giving it up feel like a loss.",
+      "anchor": null
     },
-    {
-     "scenario": "Your list: cancel last minute, only talk about yourself, never ask questions, forget birthdays. Best next move?",
-     "options": [
-      {
-       "text": "Fix all four starting tomorrow",
-       "feedback": "Big energy! But four changes at once rarely stick. Start with one."
-      },
-      {
-       "text": "Circle the one you already do a little, and stop it this week",
-       "best": true,
-       "feedback": "Exactly. Small, honest, doable. Removing one quiet mistake often beats adding a big new effort."
-      },
-      {
-       "text": "Feel bad about the list",
-       "feedback": "Very human, but guilt doesn't change much. The list is a map, not a verdict. Pick one item."
-      }
-     ]
-    }
-   ]
-  },
-  "insight": "Picturing failure gives a checklist; success stays vague. Imagining an outcome had already happened helped people find more reasons for it (Mitchell et al., 1989). Klein's premortem builds on it.",
-  "model": "Ask what would guarantee failure, then don't do that.",
-  "try_today": "Pick one goal. Write 3 ways it could go wrong. Circle the easiest to avoid and skip it today. It's a checklist, not a verdict on you.",
-  "source": {
-   "thinkers": [
-    "Carl Jacobi",
-    "Charlie Munger",
-    "Deborah Mitchell",
-    "J. Edward Russo",
-    "Nancy Pennington",
-    "Gary Klein"
-   ],
-   "work": "Poor Charlie's Almanack (2005); Mitchell, Russo & Pennington, Back to the Future: Temporal Perspective in the Explanation of Events (1989)"
-  },
-  "evidence": "moderate",
-  "level": 1,
-  "related": [
-   "premortem",
-   "second_order"
-  ],
-  "try_team": "Ask the group: 'How could we make this trip, project or year a total disaster?' List ideas for 5 minutes, then pick one to prevent.",
-  "from_source": {
-   "quote": "Invert, always invert.",
-   "cite": "Carl Jacobi, as quoted by Charlie Munger, Harvard School commencement speech (1986)",
-   "next_read": "Charlie Munger's 1986 Harvard School commencement speech on prescriptions for misery, reprinted in Poor Charlie's Almanack"
-  },
-  "audience": "all"
- },
- {
-  "id": "second-order-hanoi-rats",
-  "concept": "second_order",
-  "domain": "thinking",
-  "type": "choice",
-  "hook": "A city paid for every rat tail. Guess what it got more of.",
-  "title": "Second-Order Thinking",
-  "game": {
-   "steps": [
-    {
-     "scenario": "Hanoi, 1902. Rats are spreading through the new sewers, so French officials pay a bounty for every rat tail handed in. What happens next?",
-     "options": [
-      {
-       "text": "The rat problem shrinks",
-       "feedback": "That's the first-order guess, and it's what officials expected. The records show a twist."
-      },
-      {
-       "text": "People cut off tails, let the rats go, and some breed them",
-       "best": true,
-       "feedback": "Yes. Tailless rats were soon seen in the streets, and officials later found rat farms. The bounty paid for tails, not for fewer rats."
-      },
-      {
-       "text": "Nobody bothers to catch rats",
-       "feedback": "The opposite. Tails poured in by the thousand, just not in a way that helped."
-      }
-     ]
+    "insight": "Owning something makes letting go feel like losing, so we overprice our stuff. The effect is real but its size depends on the setup; some studies find it much smaller.",
+    "model": "Ask 'Would I buy this today, at this price?' not 'How much would losing it hurt?'",
+    "try_today": "Look at one thing you're selling online or keeping in your wardrobe or garage: would you buy it today at that price?",
+    "try_team": "Ask everyone: name one thing we keep only because we already have it (a tool, a habit, a club, a routine). Would we choose it again today?",
+    "source": {
+      "thinkers": [
+        "Daniel Kahneman",
+        "Jack Knetsch",
+        "Richard Thaler"
+      ],
+      "work": "Experimental Tests of the Endowment Effect and the Coase Theorem (1990); Plott & Zeiler (2005)"
     },
-    {
-     "scenario": "A reading app gives a badge for every book you finish. Ask 'and then what?' twice. What's the sneaky side effect?",
-     "options": [
-      {
-       "text": "Everyone reads more",
-       "feedback": "That's the first-order hope. Ask 'and then what?' once more: what does the badge actually reward?"
-      },
-      {
-       "text": "People pick short, easy books just to collect badges",
-       "best": true,
-       "feedback": "Yes. The badge counts 'finished', not 'enjoyed' or 'learned', so some people race through thin books. Counting time spent reading would keep it honest."
-      },
-      {
-       "text": "Nobody reads anything",
-       "feedback": "Unlikely. Rewards usually do change behaviour, just not always the way the rule-maker hoped."
-      }
-     ]
-    }
-   ]
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "expected_value",
+      "opportunity_cost",
+      "regret_minimization"
+    ],
+    "audience": "all"
   },
-  "insight": "First-order asks 'what now?' Second-order asks 'and then what?' Historian Michael Vann documented Hanoi's 1902 rat-tail bounty; the famous Delhi cobra version has thin records.",
-  "model": "Every fix creates new incentives. Ask 'and then what?' at least twice.",
-  "try_today": "Before you set yourself a rule or reward (screen time, streaks, spending limits), write 'and then what?' and answer it twice.",
-  "source": {
-   "thinkers": [
-    "Howard Marks",
-    "Garrett Hardin",
-    "Horst Siebert",
-    "Michael Vann"
-   ],
-   "work": "The Most Important Thing (2011); Der Kobra-Effekt (2001); Vann, Of Rats, Rice, and Race (French Colonial History, 2003)"
-  },
-  "evidence": "moderate",
-  "level": 2,
-  "related": [
-   "feedback_loops",
-   "inversion",
-   "fixes_that_fail"
-  ],
-  "try_team": "Before your group sets a target (streaks, pages read, steps walked), ask: 'How could someone hit this number without actually doing the thing?'",
-  "from_source": {
-   "quote": "We can never do merely one thing.",
-   "cite": "Garrett Hardin, 'The Cybernetics of Competition', Perspectives in Biology and Medicine (1963)",
-   "next_read": "Frédéric Bastiat, That Which Is Seen, and That Which Is Not Seen (1850), Chapter 1, 'The Broken Window' (public domain)"
-  },
-  "audience": "all"
- },
- {
-  "id": "base-rates-positive-test",
-  "concept": "base_rates",
-  "domain": "thinking",
-  "type": "estimate",
-  "hook": "A test says you have a rare condition. How worried should you be?",
-  "title": "Base Rates",
-  "game": {
-   "question": "A condition affects 1 in 1,000 people. A test catches every real case but gives a false positive to 5% of healthy people. You test positive. Chance you have it?",
-   "min": 0,
-   "max": 100,
-   "step": 1,
-   "unit": "%",
-   "answer": 2,
-   "explain": "Of 1,000 people: 1 truly has it. About 50 healthy people also test positive. So 1 of ~51 positives is real: about 2%. In a 1978 Harvard study, 27 of 60 doctors and students answered 95%; only 11 got about 2%.",
-   "anchor": null
-  },
-  "insight": "When something is rare, most positives are false alarms. That's why doctors confirm with a second test. This is just the math; real results need a real doctor.",
-  "model": "Start with how common it is, then adjust for the new evidence. Rare things stay fairly rare.",
-  "try_today": "Ask 'Out of 1,000 similar cases, how many usually turn out this way?' the next time a story or alarm surprises you.",
-  "source": {
-   "thinkers": [
-    "Ward Casscells",
-    "Thomas Bayes",
-    "Daniel Kahneman"
-   ],
-   "work": "Interpretation by Physicians of Clinical Laboratory Results (1978)"
-  },
-  "evidence": "strong",
-  "level": 2,
-  "related": [
-   "availability",
-   "expected_value",
-   "system1_system2"
-  ],
-  "try_team": "Turn one scary claim into counts together: 'Out of 1,000 people like this, how many…?' Sketch the 1,000 as dots if it helps.",
-  "from_source": {
-   "quote": "A wise man, therefore, proportions his belief to the evidence.",
-   "cite": "David Hume, An Enquiry Concerning Human Understanding (1748), Section X, Part I",
-   "next_read": "An Enquiry Concerning Human Understanding, Section X, 'Of Miracles', Part I"
-  },
-  "audience": "all"
- },
- {
-  "id": "base-rates-librarian-farmer",
-  "concept": "base_rates",
-  "domain": "thinking",
-  "type": "reveal",
-  "hook": "One sentence about a stranger. Your gut picks a job in a second.",
-  "title": "The Count Beats the Story",
-  "game": {
-   "prompt": "Steve is a man in the USA. He's shy, tidy, loves order and small details, and is happiest with a quiet book. Is Steve more likely a librarian or a farmer?",
-   "choices": [
-    "Librarian",
-    "Farmer"
-   ],
-   "answer": 1,
-   "reveal": "Librarian is the natural pick: the story fits. But Kahneman notes the US had over 20 male farmers for every male librarian. Unless that description is more than 20 times likelier for a librarian, which few descriptions are, farmer is the better bet."
-  },
-  "insight": "A vivid description makes us forget how common each option is. Kahneman and Tversky showed this in 1973. Thinking in counts ('out of 100 men like Steve…') makes the error shrink.",
-  "model": "The story says who fits. The count says who's common. Start from the count, then let the story adjust it.",
-  "try_today": "Next time you judge someone or something from one detail, ask: 'How common is each option in general?' before you decide.",
-  "try_team": "Before judging a new idea, person or rumour from one story, ask the group: 'How often does this usually happen?' Find one real number together.",
-  "source": {
-   "thinkers": [
-    "Daniel Kahneman",
-    "Amos Tversky",
-    "Gerd Gigerenzer"
-   ],
-   "work": "On the Psychology of Prediction (1973); Judgment under Uncertainty (1974); Thinking, Fast and Slow (2011), Introduction; Gigerenzer & Hoffrage (1995)"
-  },
-  "evidence": "strong",
-  "level": 1,
-  "related": [
-   "availability",
-   "system1_system2",
-   "expected_value"
-  ],
-  "audience": "all"
- },
- {
-  "id": "fae-quizmaster",
-  "concept": "fundamental_attribution_error",
-  "domain": "thinking",
-  "type": "reveal",
-  "hook": "You watched for one minute. You're already sure who's smarter.",
-  "title": "The Quizmaster Illusion",
-  "game": {
-   "prompt": "A coin toss splits two people. One writes 10 hard trivia questions from their own odd knowledge. The other must answer them and gets about 4 right. Based on this, who is actually more knowledgeable?",
-   "choices": [
-    "The one asking",
-    "Can't tell from this"
-   ],
-   "answer": 1,
-   "reveal": "You can't tell: the coin set the roles. Asking your own questions is easy; answering someone else's is hard. Yet in Ross's 1977 study, watchers rated the questioner more knowledgeable, and so did the people answering."
-  },
-  "insight": "We see the person, not the setup that made them look good or bad. Even knowing the roles were random didn't stop the bias.",
-  "model": "Before judging the player, look at the role they were handed.",
-  "try_today": "Next time someone looks clueless (a newcomer, a guest, a relative), ask: 'Whose home turf is this?' before you judge them.",
-  "try_team": "Swap roles for 5 minutes: the newest person explains their own speciality and the expert asks questions. Notice who suddenly looks 'smart'.",
-  "source": {
-   "thinkers": [
-    "Lee Ross",
-    "Teresa Amabile",
-    "Julia Steinmetz"
-   ],
-   "work": "Social Roles, Social Control, and Biases in Social-Perception Processes (1977)"
-  },
-  "evidence": "strong",
-  "level": 1,
-  "related": [
-   "confirmation_bias",
-   "system1_system2"
-  ],
-  "audience": "all"
- },
- {
-  "id": "fae-why-late",
-  "concept": "fundamental_attribution_error",
-  "domain": "thinking",
-  "type": "choice",
-  "hook": "Someone lets you down. Your brain writes their whole biography.",
-  "title": "Blaming People, Not Situations",
-  "game": {
-   "steps": [
-    {
-     "scenario": "A colleague hasn't answered your Slack message since morning, but you see them active in another channel. Before you ping again, you tell yourself…",
-     "options": [
-      {
-       "text": "'They're ignoring me. I must have annoyed them.'",
-       "feedback": "A painful leap, and a very common one, especially when you're already stretched. Notice it's a story about you made from one dot on a screen. A quick reply elsewhere takes five seconds; a real answer takes time they might not have right now."
-      },
-      {
-       "text": "'They're probably buried. I'll ask again after lunch with a clear deadline.'",
-       "best": true,
-       "feedback": "You check the situation before judging the person, and you still get your answer: a clear ask with a time on it."
-      },
-      {
-       "text": "'Fine. I'll stop including them.'",
-       "feedback": "Feels fair, but now you're both guessing and the gap grows. One clear follow-up answers it faster."
-      }
-     ]
+  {
+    "id": "inversion-guarantee-failure",
+    "concept": "inversion",
+    "domain": "thinking",
+    "type": "choice",
+    "hook": "Stuck on how to succeed? Ask how you'd fail instead.",
+    "title": "Inversion",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your goal: be a better friend this year. Which question gets you a useful answer fastest?",
+          "options": [
+            {
+              "text": "How could I be the perfect friend?",
+              "feedback": "Nice aim, but 'perfect' gives vague answers like 'be there more'. Hard to act on."
+            },
+            {
+              "text": "What would make sure I lose my friends?",
+              "best": true,
+              "feedback": "Yes. Failure is easy to picture: cancel last minute, only talk about me, forget birthdays. Concrete and fixable."
+            },
+            {
+              "text": "What do the experts say friendship is?",
+              "feedback": "Useful later, but it's about friendship in general, not your habits. Inversion goes straight to yours."
+            }
+          ]
+        },
+        {
+          "scenario": "Your list: cancel last minute, only talk about yourself, never ask questions, forget birthdays. Best next move?",
+          "options": [
+            {
+              "text": "Fix all four starting tomorrow",
+              "feedback": "Big energy! But four changes at once rarely stick. Start with one."
+            },
+            {
+              "text": "Circle the one you already do a little, and stop it this week",
+              "best": true,
+              "feedback": "Exactly. Small, honest, doable. Removing one quiet mistake often beats adding a big new effort."
+            },
+            {
+              "text": "Feel bad about the list",
+              "feedback": "Very human, but guilt doesn't change much. The list is a map, not a verdict. Pick one item."
+            }
+          ]
+        }
+      ]
     },
-    {
-     "scenario": "A colleague hasn't sent their section of the client report, and it's due tomorrow. Which thought helps most?",
-     "options": [
-      {
-       "text": "'They're lazy. Typical.'",
-       "feedback": "Understandable when you're stressed, but it's a guess about character from one moment. You don't yet know what's going on for them."
-      },
-      {
-       "text": "'Something's probably in the way. I'll ask what's up and what they still need.'",
-       "best": true,
-       "feedback": "You stay open to the situation (sick kid, an urgent incident, unclear brief) and you still chase the deadline."
-      },
-      {
-       "text": "'Not my problem. I'll just do it all myself.'",
-       "feedback": "It fixes tonight but skips finding out why. If the cause is fixable, it'll happen again."
-      }
-     ]
+    "insight": "Picturing failure gives a checklist; success stays vague. Imagining an outcome had already happened helped people find more reasons for it (Mitchell et al., 1989). Klein's premortem builds on it.",
+    "model": "Ask what would guarantee failure, then don't do that.",
+    "try_today": "Pick one goal. Write 3 ways it could go wrong. Circle the easiest to avoid and skip it today. It's a checklist, not a verdict on you.",
+    "source": {
+      "thinkers": [
+        "Carl Jacobi",
+        "Charlie Munger",
+        "Deborah Mitchell",
+        "J. Edward Russo",
+        "Nancy Pennington",
+        "Gary Klein"
+      ],
+      "work": "Poor Charlie's Almanack (2005); Mitchell, Russo & Pennington, Back to the Future: Temporal Perspective in the Explanation of Events (1989)"
     },
-    {
-     "scenario": "A teammate has missed the last three deadlines. You talk tomorrow. You open with…",
-     "options": [
-      {
-       "text": "'You're unreliable, this has to stop.'",
-       "feedback": "A verdict on character. They'll defend themselves, not fix it."
-      },
-      {
-       "text": "Nothing. Maybe it sorts itself out.",
-       "feedback": "Kind for a week, costly for months. Patterns need a talk."
-      },
-      {
-       "text": "'Three misses in a row. What's getting in the way, and what do we change?'",
-       "best": true,
-       "feedback": "Situation first, but you name the pattern. That's not blame, it's the job."
-      }
-     ]
-    }
-   ]
-  },
-  "insight": "Situations explain more than we think: in a 1973 study, hurried trainee ministers rarely stopped for a man slumped in a doorway. The flip side (excusing ourselves) is weaker than once claimed.",
-  "model": "Others' slips: ask 'what's in their way?' before 'what's wrong with them?'",
-  "try_today": "The next time someone annoys you, name two situations that could explain it before you decide what they're like.",
-  "try_team": "Take one recent slip, like a teammate missing two deadlines. Everyone lists three situation causes (time, info, tools) before naming a person.",
-  "source": {
-   "thinkers": [
-    "Lee Ross",
-    "John Darley",
-    "C. Daniel Batson",
-    "Bertram Malle"
-   ],
-   "work": "The Intuitive Psychologist and His Shortcomings (Ross, 1977); From Jerusalem to Jericho (Darley & Batson, 1973); The Actor-Observer Asymmetry in Attribution: A (Surprising) Meta-Analysis (Malle, 2006)"
-  },
-  "evidence": "moderate",
-  "level": 2,
-  "related": [
-   "confirmation_bias",
-   "feedback_loops",
-   "system1_system2"
-  ],
-  "audience": "work"
- },
- {
-  "id": "system1-system2-trust-gut-work",
-  "concept": "system1_system2",
-  "domain": "thinking",
-  "type": "choice",
-  "hook": "Your gut has been right for years. On which calls is it guessing?",
-  "title": "When to Trust Your Gut at Work",
-  "game": {
-   "steps": [
-    {
-     "scenario": "You've interviewed a candidate for 30 minutes. Great chat, shared jokes, and your gut says hire. Before the debrief, you…",
-     "options": [
-      {
-       "text": "Go with it. You've hired plenty of people.",
-       "feedback": "Understandable: a warm chat feels like data. But unstructured interviews predict job performance far more weakly than structured ones (Sackett et al., 2022). Rapport mostly measures the chat."
-      },
-      {
-       "text": "Score them 1–5 on the 3–4 skills the job needs, then write your gut call last.",
-       "best": true,
-       "feedback": "Right call. It's the method Kahneman built for army interviews: rate set traits first, intuition last. Your gut still gets a vote, just after the evidence."
-      },
-      {
-       "text": "Ask two colleagues what they made of the vibe.",
-       "feedback": "More voices help, but asking about vibe repeats the same shortcut three times. Ask them to score the same skills on their own first."
-      }
-     ]
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "premortem",
+      "second_order"
+    ],
+    "try_team": "Ask the group: 'How could we make this trip, project or year a total disaster?' List ideas for 5 minutes, then pick one to prevent.",
+    "from_source": {
+      "quote": "Invert, always invert.",
+      "cite": "Carl Jacobi, as quoted by Charlie Munger, Harvard School commencement speech (1986)",
+      "next_read": "Charlie Munger's 1986 Harvard School commencement speech on prescriptions for misery, reprinted in Poor Charlie's Almanack"
     },
-    {
-     "scenario": "Your support lead, 12 years in the role, glances at a ticket: 'This smells like a bigger outage.' The dashboard looks fine. You…",
-     "options": [
-      {
-       "text": "Take it seriously and check now.",
-       "best": true,
-       "feedback": "Yes. Her gut was trained in a regular world with fast feedback: thousands of tickets, quick proof of whether she was right. That's when intuition earns trust."
-      },
-      {
-       "text": "Wait for the dashboard to confirm it.",
-       "feedback": "Careful, and dashboards matter. The trade-off: you give up the head start her years of pattern-spotting offer. A quick check costs little."
-      },
-      {
-       "text": "Ask her for a written case before acting.",
-       "feedback": "Thorough, but expert hunches are often hard to put into words quickly. Check first, write it up after."
-      }
-     ]
-    },
-    {
-     "scenario": "In planning, a senior peer says: 'My gut says the new product hits target in year one.' You reply…",
-     "options": [
-      {
-       "text": "'You know this market. Let's go with that.'",
-       "feedback": "Respectful, but first-year forecasts for new things get slow, rare feedback. Nobody's gut has been trained on that, however senior."
-      },
-      {
-       "text": "'Before we commit: how did similar launches here actually do?'",
-       "best": true,
-       "feedback": "Exactly. Where the gut never got feedback, start from the track record of similar cases, then adjust."
-      },
-      {
-       "text": "'Gut feelings have no place in planning.'",
-       "feedback": "Too far the other way. Some guts are well trained. The useful question is whether this one ever got feedback."
-      }
-     ]
-    }
-   ]
+    "audience": "all"
   },
-  "insight": "Gut calls earn trust where the world is regular and feedback fast, like reading tickets. In hiring and forecasts feedback is slow, so confidence outruns accuracy.",
-  "model": "Trust a gut trained by fast, honest feedback. Everywhere else, score first, feel second.",
-  "try_today": "Before your next hire or big call, write 3 criteria and score them before you let yourself decide.",
-  "try_team": "Take one decision your team makes often. In 5 minutes, ask: do we get fast, clear feedback on it? If not, agree 3 criteria to score first.",
-  "source": {
-   "thinkers": [
-    "Daniel Kahneman",
-    "Gary Klein",
-    "Paul Sackett"
-   ],
-   "work": "Conditions for Intuitive Expertise: A Failure to Disagree (Kahneman & Klein, 2009); Thinking, Fast and Slow (2011), ch. 21; Revisiting Meta-Analytic Estimates of Validity in Personnel Selection (Sackett et al., 2022)"
-  },
-  "evidence": "moderate",
-  "level": 2,
-  "related": [
-   "base_rates",
-   "confirmation_bias"
-  ],
-  "audience": "work"
- },
- {
-  "id": "confirmation-bias-test-questions",
-  "concept": "confirmation_bias",
-  "domain": "thinking",
-  "type": "swipe",
-  "hook": "Your questions in a 1:1 can quietly rig the answer you get.",
-  "title": "Questions That Test, Not Confirm",
-  "game": {
-   "prompt": "You have a hunch at work. What does this question do?",
-   "left": "Fishes for a yes",
-   "right": "Could prove you wrong",
-   "items": [
-    {
-     "text": "Hunch: the launch is on track. You ask: 'We're good for Friday, right?'",
-     "side": "left",
-     "why": "A yes-shaped question. Few people contradict their manager in one word."
+  {
+    "id": "second-order-hanoi-rats",
+    "concept": "second_order",
+    "domain": "thinking",
+    "type": "choice",
+    "hook": "A city paid for every rat tail. Guess what it got more of.",
+    "title": "Second-Order Thinking",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Hanoi, 1902. Rats are spreading through the new sewers, so French officials pay a bounty for every rat tail handed in. What happens next?",
+          "options": [
+            {
+              "text": "The rat problem shrinks",
+              "feedback": "That's the first-order guess, and it's what officials expected. The records show a twist."
+            },
+            {
+              "text": "People cut off tails, let the rats go, and some breed them",
+              "best": true,
+              "feedback": "Yes. Tailless rats were soon seen in the streets, and officials later found rat farms. The bounty paid for tails, not for fewer rats."
+            },
+            {
+              "text": "Nobody bothers to catch rats",
+              "feedback": "The opposite. Tails poured in by the thousand, just not in a way that helped."
+            }
+          ]
+        },
+        {
+          "scenario": "A reading app gives a badge for every book you finish. Ask 'and then what?' twice. What's the sneaky side effect?",
+          "options": [
+            {
+              "text": "Everyone reads more",
+              "feedback": "That's the first-order hope. Ask 'and then what?' once more: what does the badge actually reward?"
+            },
+            {
+              "text": "People pick short, easy books just to collect badges",
+              "best": true,
+              "feedback": "Yes. The badge counts 'finished', not 'enjoyed' or 'learned', so some people race through thin books. Swap in time spent reading and people can leave the app open. No single number is game-proof; pair it with a real check, like telling a friend one thing you learned."
+            },
+            {
+              "text": "Nobody reads anything",
+              "feedback": "Unlikely. Rewards usually do change behaviour, just not always the way the rule-maker hoped."
+            }
+          ]
+        }
+      ]
     },
-    {
-     "text": "Hunch: the launch is on track. You ask: 'What would make us miss Friday?'",
-     "side": "right",
-     "why": "It invites exactly the bad news that would show your hunch is wrong."
+    "insight": "First-order asks 'what now?' Second-order asks 'and then what?' Historian Michael Vann documented Hanoi's 1902 rat-tail bounty; the famous Delhi cobra version has thin records.",
+    "model": "Every fix creates new incentives. Ask 'and then what?' at least twice.",
+    "try_today": "Before you set yourself a rule or reward (screen time, streaks, spending limits), write 'and then what?' and answer it twice.",
+    "source": {
+      "thinkers": [
+        "Howard Marks",
+        "Garrett Hardin",
+        "Horst Siebert",
+        "Michael Vann"
+      ],
+      "work": "The Most Important Thing (2011); Der Kobra-Effekt (2001); Vann, Of Rats, Rice, and Race (French Colonial History, 2003)"
     },
-    {
-     "text": "Hunch: the client loves your proposal. You ask: 'Which parts work best for you?'",
-     "side": "left",
-     "why": "Even a lukewarm client can name a favourite part. You learn little."
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "feedback_loops",
+      "inversion",
+      "fixes_that_fail"
+    ],
+    "try_team": "Before your group sets a target (streaks, pages read, steps walked), ask: 'How could someone hit this number without actually doing the thing?'",
+    "from_source": {
+      "quote": "We can never do merely one thing.",
+      "cite": "Garrett Hardin, 'The Cybernetics of Competition', Perspectives in Biology and Medicine (1963)",
+      "next_read": "Frédéric Bastiat, That Which Is Seen, and That Which Is Not Seen (1850), Chapter 1, 'The Broken Window' (public domain)"
     },
-    {
-     "text": "Hunch: the client loves it. You ask: 'If budget forced one cut, what goes first?'",
-     "side": "right",
-     "why": "Now they must rank. A weak spot shows up fast."
+    "audience": "all"
+  },
+  {
+    "id": "base-rates-positive-test",
+    "concept": "base_rates",
+    "domain": "thinking",
+    "type": "estimate",
+    "hook": "A test says you have a rare condition. How worried should you be?",
+    "title": "Base Rates",
+    "game": {
+      "question": "A condition affects 1 in 1,000 people. A test catches every real case but gives a false positive to 5% of healthy people. You test positive. Chance you have it?",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "answer": 2,
+      "explain": "Of 1,000 people: 1 truly has it. About 50 healthy people also test positive. So 1 of ~51 positives is real: about 2%. In a 1978 Harvard study, 27 of 60 doctors and students answered 95%; only 11 got about 2%.",
+      "anchor": null
     },
-    {
-     "text": "Hunch: a quiet team member is checked out. You ask: 'Is the workload getting you down?'",
-     "side": "left",
-     "why": "It assumes the problem. They can only agree or push back."
+    "insight": "When something is rare, most positives are false alarms. That's why doctors confirm with a second test. This is just the math; real results need a real doctor.",
+    "model": "Start with how common it is, then adjust for the new evidence. Rare things stay fairly rare.",
+    "try_today": "Ask 'Out of 1,000 similar cases, how many usually turn out this way?' the next time a story or alarm surprises you.",
+    "source": {
+      "thinkers": [
+        "Ward Casscells",
+        "Thomas Bayes",
+        "Daniel Kahneman"
+      ],
+      "work": "Interpretation by Physicians of Clinical Laboratory Results (1978)"
     },
-    {
-     "text": "Hunch: they're checked out. You ask: 'Which part of your week would you keep if you could?'",
-     "side": "right",
-     "why": "Open question. An eager answer would count against your hunch."
-    }
-   ]
+    "evidence": "strong",
+    "level": 2,
+    "related": [
+      "availability",
+      "expected_value",
+      "system1_system2"
+    ],
+    "try_team": "Turn one scary claim into counts together: 'Out of 1,000 people like this, how many…?' Sketch the 1,000 as dots if it helps.",
+    "from_source": {
+      "quote": "A wise man, therefore, proportions his belief to the evidence.",
+      "cite": "David Hume, An Enquiry Concerning Human Understanding (1748), Section X, Part I",
+      "next_read": "An Enquiry Concerning Human Understanding, Section X, 'Of Miracles', Part I"
+    },
+    "audience": "all"
   },
-  "insight": "Asked to check if someone was outgoing, people chose questions that make anyone sound outgoing (Snyder & Swann, 1978). Given better questions, people do pick them.",
-  "model": "To test a hunch, ask the question whose answer could prove you wrong.",
-  "try_today": "Before your next 1:1, rewrite one 'right?' question as 'What would make this go wrong?'",
-  "try_team": "At stand-up, each person names one hunch about the project and one question that could disprove it. Pick one to answer by Friday.",
-  "source": {
-   "thinkers": [
-    "Mark Snyder",
-    "William Swann",
-    "Yaacov Trope"
-   ],
-   "work": "Hypothesis-Testing Processes in Social Interaction (Snyder & Swann, 1978); Confirmatory and Diagnosing Strategies in Social Information Gathering (Trope & Bassok, 1982)"
+  {
+    "id": "base-rates-librarian-farmer",
+    "concept": "base_rates",
+    "domain": "thinking",
+    "type": "reveal",
+    "hook": "One sentence about a stranger. Your gut picks a job in a second.",
+    "title": "The Count Beats the Story",
+    "game": {
+      "prompt": "Steve is a man in the USA. He's shy, tidy, loves order and small details, and is happiest with a quiet book. Is Steve more likely a librarian or a farmer?",
+      "choices": [
+        "Librarian",
+        "Farmer"
+      ],
+      "answer": 1,
+      "reveal": "Librarian is the natural pick: the story fits. But Kahneman notes the US had over 20 male farmers for every male librarian. Unless that description is more than 20 times likelier for a librarian, which few descriptions are, farmer is the better bet."
+    },
+    "insight": "A vivid description makes us forget how common each option is. Kahneman and Tversky showed this in 1973. Thinking in counts ('out of 100 men like Steve…') makes the error shrink.",
+    "model": "The story says who fits. The count says who's common. Start from the count, then let the story adjust it.",
+    "try_today": "Next time you judge someone or something from one detail, ask: 'How common is each option in general?' before you decide.",
+    "try_team": "Before judging a new idea, person or rumour from one story, ask the group: 'How often does this usually happen?' Find one real number together.",
+    "source": {
+      "thinkers": [
+        "Daniel Kahneman",
+        "Amos Tversky",
+        "Gerd Gigerenzer"
+      ],
+      "work": "On the Psychology of Prediction (1973); Judgment under Uncertainty (1974); Thinking, Fast and Slow (2011), Introduction; Gigerenzer & Hoffrage (1995)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "availability",
+      "system1_system2",
+      "expected_value"
+    ],
+    "audience": "all"
   },
-  "evidence": "moderate",
-  "level": 1,
-  "related": [
-   "fundamental_attribution_error",
-   "system1_system2"
-  ],
-  "audience": "work"
- },
- {
-  "id": "availability-group-project-shares",
-  "concept": "availability",
-  "domain": "thinking",
-  "type": "reveal",
-  "hook": "Everyone in your group thinks they carried it. Can they all be right?",
-  "title": "Why You Feel You Did the Most",
-  "game": {
-   "prompt": "Your group of four finishes a project. Each of you secretly writes what % of the work you did. Add up the four numbers. You get…",
-   "choices": [
-    "About 100%",
-    "Well over 100%",
-    "Under 100%"
-   ],
-   "answer": 1,
-   "reveal": "Well over 100%. Couples' claimed shares of chores often summed past 100% (Ross & Sicoly, 1979), and overclaiming grew with group size (Schroeder, Caruso & Epley, 2016). Nobody had to be lying."
+  {
+    "id": "fae-quizmaster",
+    "concept": "fundamental_attribution_error",
+    "domain": "thinking",
+    "type": "reveal",
+    "hook": "You watched for one minute. You're already sure who's smarter.",
+    "title": "The Quizmaster Illusion",
+    "game": {
+      "prompt": "A coin toss splits two people. One writes 10 hard trivia questions from their own odd knowledge. The other must answer them and gets about 4 right. Based on this, who is actually more knowledgeable?",
+      "choices": [
+        "The one asking",
+        "Can't tell from this"
+      ],
+      "answer": 1,
+      "reveal": "You can't tell: the coin set the roles. Asking your own questions is easy; answering someone else's is hard. Yet in Ross's 1977 study, watchers rated the questioner more knowledgeable, and so did the people answering."
+    },
+    "insight": "We see the person, not the setup that made them look good or bad. Even knowing the roles were random didn't stop the bias.",
+    "model": "Before judging the player, look at the role they were handed.",
+    "try_today": "Next time someone looks clueless (a newcomer, a guest, a relative), ask: 'Whose home turf is this?' before you judge them.",
+    "try_team": "Swap roles for 5 minutes: the newest person explains their own speciality and the expert asks questions. Notice who suddenly looks 'smart'.",
+    "source": {
+      "thinkers": [
+        "Lee Ross",
+        "Teresa Amabile",
+        "Julia Steinmetz"
+      ],
+      "work": "Social Roles, Social Control, and Biases in Social-Perception Processes (1977)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "confirmation_bias",
+      "system1_system2"
+    ],
+    "audience": "all"
   },
-  "insight": "You saw every hour of your own work; theirs happened out of sight. What's easy to recall feels bigger. The gap is in memory, not in the people.",
-  "model": "You remember your work in full and theirs in clips. Count theirs before you claim yours.",
-  "try_today": "Before you complain about who did what, list three things a teammate, flatmate or sibling did that you didn't see happen.",
-  "try_team": "Everyone privately writes their % share of a shared task (a project, the chores). Add them up out loud, then each name one thing someone else did.",
-  "source": {
-   "thinkers": [
-    "Michael Ross",
-    "Fiore Sicoly",
-    "Juliana Schroeder",
-    "Eugene Caruso",
-    "Nicholas Epley"
-   ],
-   "work": "Egocentric Biases in Availability and Attribution (Ross & Sicoly, 1979); Many Hands Make Overlooked Work: Over-Claiming of Responsibility Increases with Group Size (Schroeder, Caruso & Epley, 2016)"
+  {
+    "id": "fae-why-late",
+    "concept": "fundamental_attribution_error",
+    "domain": "thinking",
+    "type": "choice",
+    "hook": "Someone lets you down. Your brain writes their whole biography.",
+    "title": "Blaming People, Not Situations",
+    "game": {
+      "steps": [
+        {
+          "scenario": "A colleague hasn't answered your Slack message since morning, but you see them active in another channel. Before you ping again, you tell yourself…",
+          "options": [
+            {
+              "text": "'They're ignoring me. I must have annoyed them.'",
+              "feedback": "A painful leap, and a very common one, especially when you're already stretched. Notice it's a story about you made from one dot on a screen. A quick reply elsewhere takes five seconds; a real answer takes time they might not have right now."
+            },
+            {
+              "text": "'They're probably buried. I'll ask again after lunch with a clear deadline.'",
+              "best": true,
+              "feedback": "You check the situation before judging the person, and you still get your answer: a clear ask with a time on it."
+            },
+            {
+              "text": "'Fine. I'll stop including them.'",
+              "feedback": "Feels fair, but now you're both guessing and the gap grows. One clear follow-up answers it faster."
+            }
+          ]
+        },
+        {
+          "scenario": "A colleague hasn't sent their section of the client report, and it's due tomorrow. Which thought helps most?",
+          "options": [
+            {
+              "text": "'They're lazy. Typical.'",
+              "feedback": "Understandable when you're stressed, but it's a guess about character from one moment. You don't yet know what's going on for them."
+            },
+            {
+              "text": "'Something's probably in the way. I'll ask what's up and what they still need.'",
+              "best": true,
+              "feedback": "You stay open to the situation (sick kid, an urgent incident, unclear brief) and you still chase the deadline."
+            },
+            {
+              "text": "'Not my problem. I'll just do it all myself.'",
+              "feedback": "It fixes tonight but skips finding out why. If the cause is fixable, it'll happen again."
+            }
+          ]
+        },
+        {
+          "scenario": "A teammate has missed the last three deadlines. You talk tomorrow. You open with…",
+          "options": [
+            {
+              "text": "'You're unreliable, this has to stop.'",
+              "feedback": "A verdict on character. They'll defend themselves, not fix it."
+            },
+            {
+              "text": "Nothing. Maybe it sorts itself out.",
+              "feedback": "Kind for a week, costly for months. Patterns need a talk."
+            },
+            {
+              "text": "'Three misses in a row. What's getting in the way, and what do we change?'",
+              "best": true,
+              "feedback": "Situation first, but you name the pattern. That's not blame, it's the job."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Situations explain more than we think: in a 1973 study, hurried trainee ministers rarely stopped for a man slumped in a doorway. The flip side (excusing ourselves) is weaker than once claimed.",
+    "model": "Others' slips: ask 'what's in their way?' before 'what's wrong with them?'",
+    "try_today": "The next time someone annoys you, name two situations that could explain it before you decide what they're like.",
+    "try_team": "Take one recent slip, like a teammate missing two deadlines. Everyone lists three situation causes (time, info, tools) before naming a person.",
+    "source": {
+      "thinkers": [
+        "Lee Ross",
+        "John Darley",
+        "C. Daniel Batson",
+        "Bertram Malle"
+      ],
+      "work": "The Intuitive Psychologist and His Shortcomings (Ross, 1977); From Jerusalem to Jericho (Darley & Batson, 1973); The Actor-Observer Asymmetry in Attribution: A (Surprising) Meta-Analysis (Malle, 2006)"
+    },
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "confirmation_bias",
+      "feedback_loops",
+      "system1_system2"
+    ],
+    "audience": "work"
   },
-  "evidence": "moderate",
-  "level": 1,
-  "related": [
-   "fundamental_attribution_error",
-   "confirmation_bias"
-  ],
-  "audience": "all"
- }
+  {
+    "id": "system1-system2-trust-gut-work",
+    "concept": "system1_system2",
+    "domain": "thinking",
+    "type": "choice",
+    "hook": "Your gut has been right for years. On which calls is it guessing?",
+    "title": "When to Trust Your Gut at Work",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You've interviewed a candidate for 30 minutes. Great chat, shared jokes, and your gut says hire. Before the debrief, you…",
+          "options": [
+            {
+              "text": "Go with it. You've hired plenty of people.",
+              "feedback": "Understandable: a warm chat feels like data. But unstructured interviews predict job performance far more weakly than structured ones (Sackett et al., 2022). Rapport mostly measures the chat."
+            },
+            {
+              "text": "Score them 1–5 on the 3–4 skills the job needs, then write your gut call last.",
+              "best": true,
+              "feedback": "Right call. It's the method Kahneman built for army interviews: rate set traits first, intuition last. Your gut still gets a vote, just after the evidence."
+            },
+            {
+              "text": "Ask two colleagues what they made of the vibe.",
+              "feedback": "More voices help, but asking about vibe repeats the same shortcut three times. Ask them to score the same skills on their own first."
+            }
+          ]
+        },
+        {
+          "scenario": "Your support lead, 12 years in the role, glances at a ticket: 'This smells like a bigger outage.' The dashboard looks fine. You…",
+          "options": [
+            {
+              "text": "Take it seriously and check now.",
+              "best": true,
+              "feedback": "Yes. Her gut was trained in a regular world with fast feedback: thousands of tickets, quick proof of whether she was right. That's when intuition earns trust."
+            },
+            {
+              "text": "Wait for the dashboard to confirm it.",
+              "feedback": "Careful, and dashboards matter. The trade-off: you give up the head start her years of pattern-spotting offer. A quick check costs little."
+            },
+            {
+              "text": "Ask her for a written case before acting.",
+              "feedback": "Thorough, but expert hunches are often hard to put into words quickly. Check first, write it up after."
+            }
+          ]
+        },
+        {
+          "scenario": "In planning, a senior peer says: 'My gut says the new product hits target in year one.' You reply…",
+          "options": [
+            {
+              "text": "'You know this market. Let's go with that.'",
+              "feedback": "Respectful, but first-year forecasts for new things get slow, rare feedback. Nobody's gut has been trained on that, however senior."
+            },
+            {
+              "text": "'Before we commit: how did similar launches here actually do?'",
+              "best": true,
+              "feedback": "Exactly. Where the gut never got feedback, start from the track record of similar cases, then adjust."
+            },
+            {
+              "text": "'Gut feelings have no place in planning.'",
+              "feedback": "Too far the other way. Some guts are well trained. The useful question is whether this one ever got feedback."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Gut calls earn trust where the world is regular and feedback fast, like reading tickets. In hiring and forecasts feedback is slow, so confidence outruns accuracy.",
+    "model": "Trust a gut trained by fast, honest feedback. Everywhere else, score first, feel second.",
+    "try_today": "Before your next hire or big call, write 3 criteria and score them before you let yourself decide.",
+    "try_team": "Take one decision your team makes often. In 5 minutes, ask: do we get fast, clear feedback on it? If not, agree 3 criteria to score first.",
+    "source": {
+      "thinkers": [
+        "Daniel Kahneman",
+        "Gary Klein",
+        "Paul Sackett"
+      ],
+      "work": "Conditions for Intuitive Expertise: A Failure to Disagree (Kahneman & Klein, 2009); Thinking, Fast and Slow (2011), ch. 21; Revisiting Meta-Analytic Estimates of Validity in Personnel Selection (Sackett et al., 2022)"
+    },
+    "evidence": "moderate",
+    "level": 2,
+    "related": [
+      "base_rates",
+      "confirmation_bias"
+    ],
+    "audience": "work"
+  },
+  {
+    "id": "confirmation-bias-test-questions",
+    "concept": "confirmation_bias",
+    "domain": "thinking",
+    "type": "swipe",
+    "hook": "Your questions in a 1:1 can quietly rig the answer you get.",
+    "title": "Questions That Test, Not Confirm",
+    "game": {
+      "prompt": "You have a hunch at work. What does this question do?",
+      "left": "Fishes for a yes",
+      "right": "Could prove you wrong",
+      "items": [
+        {
+          "text": "Hunch: the launch is on track. You ask: 'We're good for Friday, right?'",
+          "side": "left",
+          "why": "A yes-shaped question. Few people contradict their manager in one word."
+        },
+        {
+          "text": "Hunch: the launch is on track. You ask: 'What would make us miss Friday?'",
+          "side": "right",
+          "why": "It invites exactly the bad news that would show your hunch is wrong."
+        },
+        {
+          "text": "Hunch: the client loves your proposal. You ask: 'Which parts work best for you?'",
+          "side": "left",
+          "why": "Even a lukewarm client can name a favourite part. You learn little."
+        },
+        {
+          "text": "Hunch: the client loves it. You ask: 'If budget forced one cut, what goes first?'",
+          "side": "right",
+          "why": "Now they must rank. A weak spot shows up fast."
+        },
+        {
+          "text": "Hunch: a quiet team member is checked out. You ask: 'Is the workload getting you down?'",
+          "side": "left",
+          "why": "It assumes the problem. They can only agree or push back."
+        },
+        {
+          "text": "Hunch: they're checked out. You ask: 'Which part of your week would you keep if you could?'",
+          "side": "right",
+          "why": "Open question. An eager answer would count against your hunch."
+        }
+      ]
+    },
+    "insight": "Asked to check if someone was outgoing, people chose questions that make anyone sound outgoing (Snyder & Swann, 1978). Given better questions, people do pick them.",
+    "model": "To test a hunch, ask the question whose answer could prove you wrong.",
+    "try_today": "Before your next 1:1, rewrite one 'right?' question as 'What would make this go wrong?'",
+    "try_team": "At stand-up, each person names one hunch about the project and one question that could disprove it. Pick one to answer by Friday.",
+    "source": {
+      "thinkers": [
+        "Mark Snyder",
+        "William Swann",
+        "Yaacov Trope"
+      ],
+      "work": "Hypothesis-Testing Processes in Social Interaction (Snyder & Swann, 1978); Confirmatory and Diagnosing Strategies in Social Information Gathering (Trope & Bassok, 1982)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "fundamental_attribution_error",
+      "system1_system2"
+    ],
+    "audience": "work"
+  },
+  {
+    "id": "availability-group-project-shares",
+    "concept": "availability",
+    "domain": "thinking",
+    "type": "reveal",
+    "hook": "Everyone in your group thinks they carried it. Can they all be right?",
+    "title": "Why You Feel You Did the Most",
+    "game": {
+      "prompt": "Your group of four finishes a project. Each of you secretly writes what % of the work you did. Add up the four numbers. You get…",
+      "choices": [
+        "About 100%",
+        "Well over 100%",
+        "Under 100%"
+      ],
+      "answer": 1,
+      "reveal": "Well over 100%. Couples' claimed shares of chores often summed past 100% (Ross & Sicoly, 1979), and overclaiming grew with group size (Schroeder, Caruso & Epley, 2016). Nobody had to be lying."
+    },
+    "insight": "You saw every hour of your own work; theirs happened out of sight. What's easy to recall feels bigger. The gap is in memory, not in the people.",
+    "model": "You remember your work in full and theirs in clips. Count theirs before you claim yours.",
+    "try_today": "Before you complain about who did what, list three things a teammate, flatmate or sibling did that you didn't see happen.",
+    "try_team": "Everyone privately writes their % share of a shared task (a project, the chores). Add them up out loud, then each name one thing someone else did.",
+    "source": {
+      "thinkers": [
+        "Michael Ross",
+        "Fiore Sicoly",
+        "Juliana Schroeder",
+        "Eugene Caruso",
+        "Nicholas Epley"
+      ],
+      "work": "Egocentric Biases in Availability and Attribution (Ross & Sicoly, 1979); Many Hands Make Overlooked Work: Over-Claiming of Responsibility Increases with Group Size (Schroeder, Caruso & Epley, 2016)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "fundamental_attribution_error",
+      "confirmation_bias"
+    ],
+    "audience": "all"
+  },
+  {
+    "id": "inversion-avoid-failure-reveal",
+    "concept": "inversion",
+    "domain": "thinking",
+    "type": "reveal",
+    "hook": "Want to ace your presentation? What's the WORST way to give it?",
+    "title": "Flipping Your Way to Success",
+    "game": {
+      "prompt": "Think of your biggest goal: acing that presentation. First, list 3 ways you could totally BOMB it. Then, think: how do I avoid each one? ",
+      "choices": [
+        {
+          "text": "List the worst ways to bomb it",
+          "best": true
+        },
+        {
+          "text": "Skip this and jump straight to good ideas",
+          "feedback": "Jumping ahead can miss crucial pitfalls. The best way to succeed is knowing what NOT to do."
+        }
+      ],
+      "reveal": "Charlie Munger says, 'Invert, always invert'. Thinking about failure first helps you see the gaps between where you are and where you want to be. It's like a roadmap with extra turns to avoid!",
+      "answer": 1
+    },
+    "insight": "Thinking about potential failures first can highlight unexpected solutions you wouldn't have found by focusing solely on success.",
+    "model": "Invert your thinking: Identify potential paths to failure, then take steps to avoid them.",
+    "try_today": "Pick a small goal (making dinner, finishing a project). List 3 ways it could go wrong. Then brainstorm how to prevent each one.",
+    "source": {
+      "thinkers": [
+        "Charlie Munger"
+      ],
+      "work": "Munger, 'Invert, always invert' (investor and philanthropist)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "premortem",
+      "begin_with_end"
+    ]
+  },
+  {
+    "id": "second-order-fireworks-reveal",
+    "concept": "second_order",
+    "domain": "thinking",
+    "type": "reveal",
+    "hook": "A fireworks show is dazzling. What happens *after* the boom?",
+    "title": "Second-Order Thinking: Beyond the Spark",
+    "game": {
+      "prompt": "You just landed your dream job! You're excited. What happens next? Now, what happens *after* that excitement fades?",
+      "choices": [
+        {
+          "text": "I'll be praised at work and feel confident.",
+          "answer": 0
+        },
+        {
+          "text": "The new challenges might reveal I need to learn more, leading me to invest in my growth.",
+          "answer": 1
+        }
+      ],
+      "reveal": "First-order thinking focuses on the immediate joy. Second-order thinking recognizes that even wins bring new demands. It's about anticipating those changes and planning for them too."
+    },
+    "insight": "Success often triggers new challenges. Second-order thinking prepares you for the 'aftermath' of your victories.",
+    "model": "Think beyond the initial outcome: what follows will shape the next chapter.",
+    "try_today": "Pick a recent win (a project, a sale). What was the immediate effect? Now, think about what might come *next* as a result.",
+    "source": {
+      "thinkers": [
+        "Howard Marks"
+      ],
+      "work": "Marks, The Most Important Thing (2013)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "fixes_that_fail",
+      "feedback_loops"
+    ]
+  },
+  {
+    "id": "anchoring-price-choice",
+    "concept": "anchoring",
+    "domain": "thinking",
+    "type": "choice",
+    "hook": "One headphone pair.  What price feels like a steal?",
+    "title": "Anchoring: That First Number Sets You Up",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You see these headphones, and the price tag reads $150. Then you notice another pair nearby for $300. What's your first thought about how much those $150 ones are worth?",
+          "options": [
+            {
+              "text": "They seem like a steal!",
+              "best": true,
+              "feedback": "Exactly! The higher price makes the $150 pair look more reasonable. That's anchoring: your brain uses that first number to judge everything else."
+            },
+            {
+              "text": "I don't know, they still seem a bit expensive.",
+              "feedback": "Fair enough. But remember, even if you think they are pricey, the $300 pair has already influenced your perception."
+            }
+          ]
+        },
+        {
+          "scenario": "Now imagine the headphones were originally priced at $75, and a sale sticker says 'Reduced to $150!'.  Does that change how you feel about them?",
+          "options": [
+            {
+              "text": "Definitely! The sale feels more convincing.",
+              "best": true,
+              "feedback": "You're seeing the power of anchoring again. Even though the price is still high, the 'original price' makes it seem like a better deal."
+            },
+            {
+              "text": "Not really. I'd still need to compare them to other options.",
+              "feedback": "That's wise! While anchoring can influence your thinking, don't let it be your only guide. Research and compare before making a decision."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "The first number you see (the 'anchor') strongly influences how you perceive subsequent prices. This is called anchoring bias. Be aware of this effect, especially when shopping!",
+    "model": "Anchoring: Our brains use the first piece of information they receive to judge everything else.",
+    "try_today": "When shopping, ditch the sticker shock! Focus on value by comparing products to find the best deal.",
+    "source": {
+      "thinkers": [
+        "Amos Tversky",
+        "Daniel Kahneman"
+      ],
+      "work": "Judgment under Uncertainty: Heuristics and Biases (1982)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "system1_system2",
+      "availability",
+      "base_rates"
+    ]
+  },
+  {
+    "id": "availability-vivid-choice",
+    "concept": "availability",
+    "domain": "thinking",
+    "type": "choice",
+    "hook": "You're writing an essay on 'Dangerous Animals'. Which do you focus on?",
+    "title": "The Vivid Threat",
+    "game": {
+      "steps": [
+        {
+          "scenario": "You're writing an essay on 'Dangerous Animals' for school. You want to make it compelling.  Which animal gets the most attention?",
+          "options": [
+            {
+              "text": "A rare, highly venomous snake found in a remote jungle.",
+              "feedback": "It's easy to picture: the vibrant colors, the deadly bite. Our brains love vivid stories! But how common are these snakes really? Research suggests we overestimate their threat level."
+            },
+            {
+              "text": "The most common mosquito species found in your backyard.",
+              "best": true,
+              "feedback": "Yes. While less dramatic, mosquitoes cause more deaths worldwide than any other animal. Availability bias makes us focus on the sensational, not the statistically significant."
+            },
+            {
+              "text": "A large shark seen occasionally off the coast of a popular beach.",
+              "feedback": "Sharks are scary in movies! We hear about them often, making their danger feel bigger. But statistically, you're more likely to be struck by lightning than attacked by a shark."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Our brains prioritize vivid details over statistical reality. This 'availability bias' makes us overestimate the likelihood of events we can easily recall.",
+    "model": "Easy-to-remember events feel more common, but statistics often tell a different story.",
+    "try_today": "When making decisions, ask yourself: 'Am I basing this on vivid examples or reliable data?'",
+    "source": {
+      "thinkers": [
+        "Amos Tversky",
+        "Daniel Kahneman"
+      ],
+      "work": "Judgment Under Uncertainty: Heuristics and Biases (1982)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "base_rates",
+      "system1_system2"
+    ]
+  }
 ]

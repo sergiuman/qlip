@@ -286,7 +286,7 @@
     "audience": "all"
   },
   {
-    "id": "premortem-order",
+    "id": "premortem-trip",
     "concept": "premortem",
     "domain": "decisions",
     "type": "choice",
@@ -303,7 +303,7 @@
               "feedback": "Yes. That's a pre-mortem: 1) say the plan, 2) assume it already failed, 3) write reasons alone, 4) share, 5) fix the top risks. Step 2 is the key move."
             },
             {
-              "text": "Hype everyone up so nobody drops out",
+              "text": "Hype everyone up so nobody worries",
               "feedback": "Energy helps, but it hides problems. Imagining the failure first brings them out while you can still fix them."
             },
             {
@@ -313,12 +313,12 @@
           ]
         },
         {
-          "scenario": "Your list: money ran out, someone's parents or boss said no, tickets sold out, the tent broke. Which can you fix TODAY?",
+          "scenario": "Your list: money ran out, someone couldn't get the days free, tickets sold out, the tent broke. Which can you fix TODAY?",
           "options": [
             {
-              "text": "Someone's parents or boss said no",
+              "text": "Someone couldn't get the days free",
               "best": true,
-              "feedback": "One message tonight (ask them to ask now) settles it. Fix the cheap, fast risks first."
+              "feedback": "One message tonight (ask everyone to check their dates now) settles it. Fix the cheap, fast risks first."
             },
             {
               "text": "Money ran out",
@@ -353,6 +353,75 @@
     ],
     "try_team": "Before your next big plan (a trip, an event, a project): 5 minutes, everyone silently writes 'It failed because…', then reads out. Fix the top two risks.",
     "audience": "all"
+  },
+  {
+    "id": "premortem-choice",
+    "concept": "premortem",
+    "domain": "decisions",
+    "type": "choice",
+    "hook": "Your release already failed. It hasn't shipped yet. Why?",
+    "title": "The Pre-Mortem at Work",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your team ships a big release in 6 weeks. Before the kickoff, what's the smartest first move?",
+          "options": [
+            {
+              "text": "Picture it's after launch and it was a disaster. List why.",
+              "best": true,
+              "feedback": "Yes. That's a pre-mortem: 1) say the plan, 2) assume it already failed, 3) write reasons alone, 4) share, 5) fix the top risks. Step 2 is the key move."
+            },
+            {
+              "text": "Hype the team so nobody worries",
+              "feedback": "Energy helps, but it hides problems. Imagining the failure first brings them out while you can still fix them."
+            },
+            {
+              "text": "Wait and sort problems as they come",
+              "feedback": "Common, but by then the easy fixes are gone. Naming risks now is cheaper."
+            }
+          ]
+        },
+        {
+          "scenario": "Your list: key dev on holiday in week 5, the other team's API isn't ready, scope grew, load test never ran. Which can you fix TODAY?",
+          "options": [
+            {
+              "text": "Key dev on holiday in week 5",
+              "best": true,
+              "feedback": "One calendar check and one message today settles it. Fix the cheap, fast risks first."
+            },
+            {
+              "text": "Scope grew",
+              "feedback": "Real, but it needs a negotiation with stakeholders, not one message."
+            },
+            {
+              "text": "Load test never ran",
+              "feedback": "Important, but it's a check for week 4, not today."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Assuming it already failed frees people to name risks they'd keep quiet about. Imagining an event as done helps people find more reasons for it (Mitchell et al., 1989).",
+    "model": "Pretend it already failed, then ask why. Fix those reasons before you start.",
+    "try_today": "Take one project due this month. Write 'It failed because…' three times. Fix the cheapest reason today.",
+    "source": {
+      "thinkers": [
+        "Gary Klein",
+        "Deborah Mitchell",
+        "J. Edward Russo",
+        "Nancy Pennington"
+      ],
+      "work": "Back to the Future: Temporal Perspective in the Explanation of Events (1989); Performing a Project Premortem (Harvard Business Review, 2007)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "inversion",
+      "second_order",
+      "reversible_doors"
+    ],
+    "try_team": "At your next kickoff: 5 minutes, everyone silently writes 'It failed because…', then reads out. Assign owners for the top two risks.",
+    "audience": "work"
   },
   {
     "id": "expected-value-coin",
@@ -526,14 +595,14 @@
     "hook": "A free ticket. What did it really cost? 1 in 5 economists got it.",
     "title": "The Free Ticket Puzzle",
     "game": {
-      "question": "You win a free ticket to Band A (you can't sell it). Same night, Band B costs £40, and seeing them is worth £50 to you. You go to Band A. What did you give up, in £?",
+      "question": "You win a free ticket to Band A (can't resell it). Same night, Band B is on: tickets cost £40, but you'd happily pay up to £50 to see them. You pick Band A. How much did you really give up?",
       "min": 0,
       "max": 50,
       "step": 10,
-      "unit": "",
+      "unit": "£",
       "answer": 10,
       "anchor": null,
-      "explain": "£10. Going to A means giving up B. Seeing B was worth £50 to you but would have cost £40, so you give up £50 − £40 = £10 of value. When 199 economists got this puzzle (with 0, 10, 40 or 50 as options), only about 22% picked 10 (Ferraro & Taylor, 2005)."
+      "explain": "£10: the £50 of fun minus the £40 you'd have paid. Going to A means giving up B, and B's net value to you was £10. When 199 economists got this puzzle (with 0, 10, 40 or 50 as options), only about 22% picked 10 (Ferraro & Taylor, 2005)."
     },
     "insight": "Opportunity cost is the value of the best thing you give up, minus what it would have cost you. Even experts skip it. Some argue the puzzle's wording is unclear, so hold it lightly.",
     "model": "'Free' isn't free: the cost is the best option you give up, minus its own price.",
@@ -933,5 +1002,111 @@
     ],
     "sensitive": true,
     "audience": "all"
+  },
+  {
+    "id": "premortem-reveal",
+    "concept": "premortem",
+    "domain": "decisions",
+    "type": "reveal",
+    "hook": "Dream vacation next year, but it's a disaster. How?",
+    "title": "Beat Travel Woes Before You Go",
+    "game": {
+      "prompt": "It's one year from now. You're on your dream vacation, but things are going disastrously wrong. Choose the most likely culprit:",
+      "choices": [
+        {
+          "text": "We got sick right before departure and had to cancel.",
+          "value": 1
+        },
+        {
+          "text": "The weather was terrible the whole time.",
+          "value": 2
+        },
+        {
+          "text": "Our carefully planned itinerary fell apart because of unforeseen delays and miscommunications.",
+          "value": 3
+        }
+      ],
+      "reveal": "Option 3 is often the most common. Unexpected events happen, but strong planning and communication can minimize their impact. That's what a pre-mortem helps you do before your vacation, or any important project!",
+      "answer": 2
+    },
+    "insight": "A pre-mortem turns failure into a learning opportunity. By anticipating problems, we can build resilience and enjoy smoother journeys.",
+    "model": "Reverse engineer travel woes: Identify potential pitfalls in advance to avoid disappointment later.",
+    "try_today": "Planning a trip? List 3 potential problems & their solutions now. Easier than fixing them on the fly!",
+    "source": {
+      "thinkers": [
+        "Gary Klein"
+      ],
+      "work": "Sources of Power: How People Make Decisions (1998)"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "inversion",
+      "begin_with_end"
+    ],
+    "try_team": "As a team, plan your next project and hold a mini pre-mortem session. Identify potential roadblocks and discuss ways to mitigate them before they happen."
+  },
+  {
+    "id": "circle-competence-choice-advice",
+    "concept": "circle_competence",
+    "domain": "decisions",
+    "type": "choice",
+    "hook": "Friend struggling?  How do you advise them?",
+    "title": "Stay in Your Lane",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your friend is having trouble choosing a new phone, overwhelmed by all the specs and options. You…",
+          "options": [
+            {
+              "text": "Dive deep into tech reviews and compare models with them, finding the 'best' one.",
+              "feedback": "Helpful, but you might be exceeding your circle of competence if phones are not your area. Your expertise is better elsewhere."
+            },
+            {
+              "text": "Ask about their needs: What do they use their phone for most? What matters to them (camera, battery, price)? Then guide them based on that.",
+              "best": true,
+              "feedback": "Yes! This focuses on what you know best: listening and understanding. You help them find the right phone for *them*, not just a 'best' one."
+            },
+            {
+              "text": "Suggest they go to an expert (phone store employee) for unbiased advice.",
+              "feedback": "Good option if you truly lack knowledge. Don't oversell your abilities if it's beyond your circle."
+            }
+          ]
+        },
+        {
+          "scenario": "Your friend is considering a new career path, unsure where to start. You…",
+          "options": [
+            {
+              "text": "Offer detailed advice on specific job titles and companies based on current market trends.",
+              "feedback": "Perhaps risky! Job markets shift fast. Your knowledge might be outdated or incomplete."
+            },
+            {
+              "text": "Ask about their passions, skills, and what they find fulfilling in work. Help them brainstorm paths aligned with those.",
+              "best": true,
+              "feedback": "Yes! This taps into your strengths: understanding people and helping them connect to their values. Career advice is best personalized."
+            },
+            {
+              "text": "Recommend a career counselor, pointing out that this is a complex decision.",
+              "feedback": "Smart move if you're not comfortable delving into career paths. A professional can provide tailored guidance."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Giving advice outside your circle of competence can be harmful. Focus on what you know best: listening, understanding, and guiding others within your expertise.",
+    "model": "Stay in your lane. Offer advice where you have genuine knowledge and experience.",
+    "try_today": "Think about one area where you feel confident giving advice. What are the boundaries of your circle of competence?",
+    "source": {
+      "thinkers": [
+        "Warren Buffett"
+      ],
+      "work": "Buffett's investment philosophy"
+    },
+    "evidence": "strong",
+    "level": 1,
+    "related": [
+      "socratic_ignorance",
+      "circle_influence"
+    ]
   }
 ]

@@ -211,7 +211,7 @@
     "audience": "all"
   },
   {
-    "id": "power-of-yet-reveal",
+    "id": "power-of-yet-choice",
     "concept": "power_of_yet",
     "domain": "growth",
     "type": "choice",
@@ -513,6 +513,77 @@
     "audience": "all"
   },
   {
+    "id": "deliberate-practice-experience-swipe",
+    "concept": "deliberate_practice",
+    "domain": "growth",
+    "type": "swipe",
+    "hook": "20 years of experience, or 1 year repeated 20 times?",
+    "title": "Experience or Just Repetition?",
+    "game": {
+      "prompt": "Does this grow the skill, or just keep it where it is?",
+      "left": "Just repetition",
+      "right": "Real practice",
+      "items": [
+        {
+          "text": "Running the same 1:1 format for 5 years, never asking how it lands.",
+          "side": "left",
+          "why": "Keeps it going, never grows it. One question at the end gives you feedback."
+        },
+        {
+          "text": "After a tough meeting, writing down the exact moment it went wrong and what you'd say instead.",
+          "side": "right",
+          "why": "Finding the exact error and a better move is the heart of deliberate practice."
+        },
+        {
+          "text": "Driving the same route every day for 20 years.",
+          "side": "left",
+          "why": "Keeps you fluent, but rarely sharpens skills like skid control. That needs targeted practice."
+        },
+        {
+          "text": "Asking a peer to watch one of your presentations and name one thing to change.",
+          "side": "right",
+          "why": "A stretch plus honest feedback. Asking for just one thing keeps it usable."
+        },
+        {
+          "text": "A 400-day streak on a language app, always on the easy setting.",
+          "side": "left",
+          "why": "Streaks build habit, which matters. But if it never stretches you, it's mostly upkeep."
+        },
+        {
+          "text": "Rewriting a great article from your notes, then comparing it to the original.",
+          "side": "right",
+          "why": "Ben Franklin's own trick: the original shows exactly where your version falls short."
+        }
+      ]
+    },
+    "insight": "Ericsson argued extra hours add little once a skill feels automatic; growth needs narrow, slightly-too-hard work with feedback. Practice matters, but less than he claimed (Macnamara, 2014).",
+    "model": "Hours keep a skill. Feedback on your weakest part grows it.",
+    "try_today": "Pick one thing you run every week (a 1:1, a review, a meeting). Ask one person for one thing to change, and try it next time.",
+    "try_team": "In your next retro, name one routine the team runs on autopilot (stand-up, reviews, demos). Pick its weakest part and try one change.",
+    "source": {
+      "thinkers": [
+        "K. Anders Ericsson",
+        "Robert Pool",
+        "Benjamin Franklin",
+        "Brooke Macnamara"
+      ],
+      "work": "Peak (2016); The Autobiography of Benjamin Franklin (1791); Macnamara, Hambrick & Oswald, Psychological Science (2014)"
+    },
+    "from_source": {
+      "quote": "without looking at the book, try'd to compleat the papers again",
+      "cite": "Benjamin Franklin, Autobiography, Part One (written 1771), on rewriting Spectator essays",
+      "next_read": "Franklin's Autobiography, Part One: the passage where he teaches himself to write from The Spectator"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "skill_gap",
+      "flow",
+      "grit"
+    ],
+    "audience": "work"
+  },
+  {
     "id": "mistake-alchemy-choice",
     "concept": "mistake_alchemy",
     "domain": "growth",
@@ -586,7 +657,7 @@
     "audience": "all"
   },
   {
-    "id": "small-wins-estimate",
+    "id": "small-wins-progress-reveal",
     "concept": "small_wins",
     "domain": "growth",
     "type": "reveal",
@@ -895,6 +966,42 @@
     "audience": "all"
   },
   {
+    "id": "mistake-alchemy-incident-reveal",
+    "concept": "mistake_alchemy",
+    "domain": "growth",
+    "type": "reveal",
+    "hook": "Two incidents this sprint. Which one should the retro learn from?",
+    "title": "Intelligent vs Basic Failure",
+    "game": {
+      "prompt": "Two incidents this sprint. Ana tried a new caching approach behind a feature flag on 5% of traffic, and it failed; she wrote down what she learned. Ben forgot to run the migration on deploy, which the team has done 100 times. Whose mistake teaches more?",
+      "choices": [
+        "Ana's",
+        "Ben's",
+        "Both the same"
+      ],
+      "answer": 0,
+      "reveal": "Ana's. Edmondson calls it an intelligent failure: new ground, small stakes, a real question answered. Ben's is a basic failure: no new lesson, so add a check (a deploy checklist step), not blame."
+    },
+    "insight": "Failures on new ground show what nobody knew yet, so share the lesson. Failures on known ground need a check, not blame. Sorting them keeps a postmortem blameless and useful.",
+    "model": "New ground: make small, smart mistakes. Known ground: add a check.",
+    "try_today": "Take your team's last incident. New ground or known ground? Write one lesson to share, or one check to add.",
+    "source": {
+      "thinkers": [
+        "Amy Edmondson"
+      ],
+      "work": "Right Kind of Wrong: The Science of Failing Well (2023)"
+    },
+    "evidence": "philosophy",
+    "level": 1,
+    "related": [
+      "growth_mindset",
+      "deliberate_practice",
+      "premortem"
+    ],
+    "try_team": "In your next retro, sort each incident: new ground (share the lesson) or known ground (add a check). No names.",
+    "audience": "work"
+  },
+  {
     "id": "self-reflection-loop-example",
     "concept": "self_reflection_loop",
     "domain": "growth",
@@ -1165,5 +1272,70 @@
     ],
     "try_team": "Class, team or family, 5 min: everyone writes their one weak spot on a card, does 3 focused minutes on just that, then shares one thing they noticed.",
     "audience": "all"
+  },
+  {
+    "id": "quitting-wisely-choice-purpose",
+    "concept": "quitting_wisely",
+    "domain": "growth",
+    "type": "choice",
+    "hook": "Passion project stalled? Walk away or reignite?",
+    "title": "Quitting with Purpose",
+    "game": {
+      "steps": [
+        {
+          "scenario": "Your side hustle used to energize you, but now it feels like a chore. What do you do?",
+          "options": [
+            {
+              "text": "Keep pushing through. You invested so much time already.",
+              "feedback": "It's common to feel pressure from sunk costs. But true grit means knowing when to redirect your energy, not just clinging on."
+            },
+            {
+              "text": "Take a break. Step back and see if the spark returns after some distance.",
+              "best": true,
+              "feedback": "This gives you space to reflect. Maybe it's a matter of adjusting your approach or finding new inspiration."
+            },
+            {
+              "text": "Quit without looking back.  The passion is gone, so there's no point in wasting time.",
+              "feedback": "While quitting can be right, jumping ship without considering alternatives might lead to regret later on."
+            }
+          ]
+        },
+        {
+          "scenario": "After taking a break, you realize your passion project isn't bringing joy anymore. What's your next move?",
+          "options": [
+            {
+              "text": "Try to force yourself back in. You can't give up on something you started.",
+              "feedback": "Forcing it rarely works. It might be time to honor your changed interests and explore new avenues."
+            },
+            {
+              "text": "Reframe the project. Can you shift its focus or goals to better align with your current passions?",
+              "best": true,
+              "feedback": "Sometimes a fresh perspective can revitalize something old. Reframing allows you to make use of past efforts while moving forward."
+            },
+            {
+              "text": "Share it with others and let them decide if it's worth continuing.",
+              "feedback": "While feedback is valuable, ultimately the decision should be yours. Trust your own judgment and instincts."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Quitting wisely isn't about never giving up. It's about choosing when to walk away with purpose, either by taking a break, reframing the project, or exploring new passions.",
+    "model": "True grit means knowing when to redirect your energy, not just clinging on.",
+    "try_today": "Dreading your projects?  A break, new perspective, or quitting might be healthier than pushing through.",
+    "source": {
+      "thinkers": [
+        "Annie Duke",
+        "Seth Godin"
+      ],
+      "work": "Thinking in Bets (2018); The Dip (2009)"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "opportunity_cost",
+      "sunk_cost"
+    ],
+    "try_team": "Team brainstorm: What are some projects or activities we're currently doing that might benefit from a break, reframing, or even quitting?"
   }
 ]

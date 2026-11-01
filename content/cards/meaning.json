@@ -4,51 +4,51 @@
     "concept": "start_with_why",
     "domain": "meaning",
     "type": "choice",
-    "hook": "Your group chat is dead on Fridays. What's your first message?",
+    "hook": "You need the team to adopt a new process. What's your first sentence?",
     "title": "Lead With the Why",
     "game": {
       "steps": [
         {
-          "scenario": "You want your friends to start a regular Friday kickabout (or a walking group, or a study group). In the group chat, your first message is…",
+          "scenario": "You want the team to start writing short design docs before coding. In the team channel, your first message is…",
           "options": [
             {
-              "text": "\"Park at 6, bring a ball.\"",
-              "feedback": "Useful details, but they answer a question nobody has asked yet. Logistics land better once people care."
+              "text": "\"From Monday, every feature needs a design doc. Template attached.\"",
+              "feedback": "Clear logistics, but they answer a question nobody has asked yet. Rules without a reason read as extra admin."
             },
             {
-              "text": "\"I miss us actually hanging out. Fancy a kickabout on Fridays?\"",
+              "text": "\"We lost two weeks last sprint redoing work nobody agreed on. A one-page doc first could save that. Try it for one feature?\"",
               "best": true,
-              "feedback": "You gave a reason they can feel: wanting time together. Now the time and place sound like a way in, not a chore."
+              "feedback": "You opened with a reason they lived through. Now the doc sounds like a fix for their pain, not a chore."
             },
             {
-              "text": "\"It'll be the best thing anyone's doing this month.\"",
+              "text": "\"This will make us the best team in the company.\"",
               "feedback": "Hype can grab attention, but it doesn't say why it matters to them. A real reason travels further."
             }
           ]
         },
         {
-          "scenario": "A friend replies: \"Sounds good but I'm busy.\" You reply…",
+          "scenario": "A developer replies: \"Sounds good but we're already behind.\" You reply…",
           "options": [
             {
-              "text": "\"Even one week, come for the first half.\"",
+              "text": "\"Fair. Just one feature this sprint, half a page max.\"",
               "best": true,
-              "feedback": "You kept the why alive and made the ask smaller. Easy yes, no pressure."
+              "feedback": "You heard the worry, kept the why, and made the ask smaller. Easy yes, no pressure."
             },
             {
-              "text": "\"Everyone's busy. It's only an hour.\"",
+              "text": "\"Everyone's behind. It only takes an hour.\"",
               "feedback": "Understandable, but it brushes off their reason. People dig in when they feel unheard."
             },
             {
-              "text": "\"No worries.\" and leave it there.",
-              "feedback": "Kind and respectful. You could also leave a door open with a smaller, clear option."
+              "text": "\"OK, let's park it.\" and leave it there.",
+              "feedback": "Respectful of the load. You could also leave a door open with a smaller, time-boxed trial."
             }
           ]
         }
       ]
     },
-    "insight": "Opening with the reason made the details sound like an invitation. Sinek calls it the Golden Circle: why, then how, then what. A handy habit, but his brain-science story isn't backed by research.",
+    "insight": "Opening with a reason they'd felt made the rule sound like a fix. Sinek calls it the Golden Circle: why, then how, then what. Handy, but his brain-science story isn't backed by research.",
     "model": "Say why it matters before what it is. Purpose first, logistics second.",
-    "try_today": "Before your next request or pitch, write one sentence that starts with \"This matters because…\" and say that first.",
+    "try_today": "Before your next request or proposal, write one sentence that starts with \"This matters because…\" and say that first.",
     "source": {
       "thinkers": [
         "Simon Sinek"
@@ -62,8 +62,8 @@
       "responsibility_meaning",
       "three_conversations"
     ],
-    "try_team": "Open your next group plan (a trip, a project, a family day) with one line each: 'This matters to me because…'. Only then talk times and tasks.",
-    "audience": "all"
+    "try_team": "Before the next process change, each person writes one line: 'This would help us because…'. Share those first; only then talk templates and dates.",
+    "audience": "work"
   },
   {
     "id": "start-with-why-because-estimate",
@@ -111,16 +111,16 @@
     "hook": "A happy week and a meaningful week: are they the same week?",
     "title": "Meaning Lives in the Load",
     "game": {
-      "prompt": "Week A: lie-ins, good food, a film with friends. Week B: tiring, but you helped a friend move house and finished something others counted on. In a survey of ~400 adults, which pattern showed up most?",
+      "prompt": "Week A: lie-ins, good food, a film with friends. Week B: tiring, but you helped a friend move house and finished something others counted on. A 2013 survey of ~400 US adults asked what goes with feeling happy and what goes with feeling life is meaningful. Which week fits that pattern?",
       "choices": [
-        "A happier, B more meaningful",
-        "B wins on both",
-        "A wins on both"
+        "A sounds happier, B more meaningful",
+        "B sounds better on both",
+        "A sounds better on both"
       ],
-      "reveal": "A happier, B more meaningful. In Baumeister's 2013 survey of ~400 US adults, happiness and meaning overlapped a lot. Where they split, happiness went with getting what you need, meaning with giving and caring. A correlation, not a rule, and both count.",
+      "reveal": "A happier, B more meaningful. Partly a trick: happiness and meaning overlapped a lot. But where they split, happiness went with getting what you need, meaning with giving and caring (Baumeister et al., 2013). A correlation, not a rule; both count.",
       "answer": 0
     },
-    "insight": "Frankl named three roads to meaning: what we create or give, whom we love, and how we bear what we can't change. Peterson: choose meaning over ease. Meaning can be heavy, so rest counts too.",
+    "insight": "Frankl's roads to meaning: what we create or give, what and whom we love, how we bear what we can't change. Peterson, Rule 7: \"Pursue what is meaningful (not what is expedient).\" Rest counts too.",
     "model": "Happiness often comes from receiving; meaning often comes from giving, loving, or bearing something well.",
     "try_today": "Do one small, caring thing today (a message, a favour, holding a door) or one thing future-you will thank you for. Notice how it felt.",
     "source": {
@@ -138,7 +138,6 @@
       "start_with_why",
       "amor_fati"
     ],
-    "sensitive": true,
     "try_team": "Go round the table: each person names one effort that felt heavy but worth it. Notice how often effort and meaning show up together.",
     "audience": "all"
   },
@@ -167,7 +166,7 @@
         {
           "text": "The mess in your room that's been bugging you",
           "side": "right",
-          "why": "A small, visible win that's fully yours. Peterson's Rule 6: set your own house in order before you criticize the world. Start in reach, then build."
+          "why": "A small win that's fully yours. Peterson, Rule 6: \"Set your house in perfect order before you criticize the world.\""
         },
         {
           "text": "Fixing a friend's life for them",
@@ -206,8 +205,8 @@
     "sensitive": true,
     "try_team": "Everyone writes three worries on sticky notes. Sort them together: 'ours to act on' vs 'not ours'. Pick one 'ours' and agree a first step.",
     "from_source": {
-      "quote": "Of things, some are in our power and others not.",
-      "cite": "Epictetus, Enchiridion, ch. 1 (trans. Elizabeth Carter, 1758)",
+      "quote": "Of things some are in our power, and others are not.",
+      "cite": "Epictetus, Enchiridion, ch. 1 (trans. George Long, 1877)",
       "next_read": "Enchiridion, chapters 1-5 (short; about 10 minutes)"
     },
     "audience": "all"
@@ -592,7 +591,8 @@
         "0": "Clear goal scored lowest today. Before you start, write one line: 'Done means…'. Vague goals are a top flow-killer.",
         "1": "Quick feedback scored lowest today. Build a check: a practice test, a word count, a friend's quick look. Flow needs to see progress.",
         "2": "Right difficulty scored lowest today. Adjust the task: add a challenge if it's dull, split it if it's overwhelming.",
-        "3": "Interruptions scored lowest today. Put your phone in another room for one 25-minute block. Switching leaves part of your mind elsewhere."
+        "3": "Interruptions scored lowest today. Put your phone in another room for one 25-minute block. Switching leaves part of your mind elsewhere.",
+        "low": "All four were low last time. Start with the cheapest fix: write one line, \"Done means…\", put your phone in another room, and work for 10 minutes."
       }
     },
     "insight": "Csikszentmihalyi linked flow to clear goals, quick feedback and a challenge that stretches your skill a little. Fewer interruptions give those a chance to work. Fix the weakest one first.",

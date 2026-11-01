@@ -743,11 +743,11 @@
  },
  {
   "session": 15,
-  "at": "2026-10-27T03:18:18+00:00",
+  "at": "2026-10-27T07:53:46+00:00",
   "automated": 49.0,
-  "panel": null,
-  "composite": 49.0,
-  "delta": -35.0,
+  "panel": 34.83,
+  "composite": 83.83,
+  "delta": -0.17,
   "passed": false,
   "breakdown": {
    "schema": 5,
@@ -782,7 +782,16 @@
    "hook_distinct_rate": 1.0,
    "brief_reveal_rate": 1.0
   },
-  "panel_detail": {},
+  "panel_detail": {
+   "persona_avg_10": 6.97,
+   "by_dim": {
+    "hook": 6.67,
+    "clarity": 7.0,
+    "usefulness": 6.83,
+    "safety": 8.5,
+    "fun": 5.83
+   }
+  },
   "note": "full (short) insight visible with caveats, rotating reveal headers, max 2 reveals in 5, play-through now plays each card in its sampled world (screens match what that player sees), session-14 content fixes (100)"
  },
  {

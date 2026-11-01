@@ -82,6 +82,8 @@
         if (prev && (sameStory(prev, c) || prev.concept === c.concept)) continue;
         if (c.sensitive && queue.concat(picks).slice(-3).some((id) => CARD[id].sensitive)) continue;
         if (c.type === "reveal" && queue.concat(picks).slice(-4).filter((id) => CARD[id].type === "reveal").length >= 2) continue;
+        if ((c.type === "venn" || c.type === "radar") && queue.length + picks.length < 2) continue;
+        if (queue.concat(picks).slice(-6).some((id) => CARD[id].concept === c.concept)) continue;
         let s = 0;
         if (S.done[c.id]) s -= 6;
         s -= (S.seen[c.id] || 0) * 1.5;
@@ -96,7 +98,7 @@
         s += (CONCEPT[c.concept]?.rank || 0) * 25;
         s += hash(c.id + SESSION) * 1.6;
         if (c.audience !== "all") s += Math.max(-2, Math.min(2, (S.aud?.[c.audience] || 0) * 0.5));
-        if (S.world && c.audience !== "all" && inWorld(c)) s += 1.5;
+        if (S.world && c.audience !== "all" && inWorld(c)) s += 3;
         if (s > bestScore) { bestScore = s; best = c; }
       }
       if (!best) break;
@@ -347,15 +349,18 @@
       });
       const dot = svg("circle", { class: "dot", cx: geo.g[0], cy: geo.g[1], r: 9, fill: "var(--fg)", stroke: "var(--bg)", "stroke-width": 3, opacity: 0 });
       view.append(dot);
+      const youLbl = svg("text", { x: geo.g[0], y: geo.g[1] + 24, "text-anchor": "middle", "font-size": 11, class: "lbl-muted", opacity: 0, style: "transition: x .7s, y .7s" });
+      youLbl.textContent = "you, today"; view.append(youLbl);
       const live = h("p", { class: "small muted", style: "margin:0;text-align:center", "aria-live": "polite" }, "Answer to place yourself on the map.");
       const scores = () => Object.fromEntries(keys.map((k) => [k, counts[k] ? sums[k] / counts[k] : null]));
       const regionOf = (sc) => keys.filter((k) => sc[k] != null && sc[k] >= th).sort().join("");
       const move = () => {
         const sc = scores(), reg = regionOf(sc);
         keys.forEach((k) => { if (sc[k] == null) return; circles[k].setAttribute("fill-opacity", (0.05 + 0.4 * sc[k]).toFixed(2)); circles[k].setAttribute("stroke-opacity", (0.35 + 0.65 * sc[k]).toFixed(2)); });
-        let [x, y] = geo.anchors[reg] || geo.anchors[""];
+        let [x, y] = reg ? geo.anchors[reg] || geo.g : geo.g;
         keys.forEach((k) => { if (sc[k] == null) return; const [cx, cy] = geo.centers[k]; x += (cx - geo.g[0]) * (sc[k] - 0.5) * 0.18; y += (cy - geo.g[1]) * (sc[k] - 0.5) * 0.18; });
-        if (geo.regionAt(x, y) !== reg) [x, y] = geo.anchors[reg] || geo.anchors[""];
+        if (reg && geo.regionAt(x, y) !== reg) [x, y] = geo.anchors[reg] || geo.g;
+        youLbl.setAttribute("x", x.toFixed(1)); youLbl.setAttribute("y", (y + 24).toFixed(1)); youLbl.setAttribute("opacity", 1);
         dot.setAttribute("cx", x.toFixed(1)); dot.setAttribute("cy", y.toFixed(1)); dot.setAttribute("opacity", 1);
         const r = g.results[reg]; if (r) live.textContent = `Right now: ${r.name}`;
       };
@@ -368,7 +373,7 @@
         const r = undecided
           ? g.results.mid || { name: "Right on the fence", text: "Every answer landed in the middle, so the map can't find your gap yet. Pick one specific goal (\"run 5 km\", \"learn 3 guitar chords\") and play again with that in mind." }
           : g.results[reg] || { name: "", text: "" };
-        if (undecided) { dot.setAttribute("cx", geo.g[0].toFixed(1)); dot.setAttribute("cy", geo.g[1].toFixed(1)); }
+        if (undecided) { dot.setAttribute("cx", geo.g[0].toFixed(1)); dot.setAttribute("cy", geo.g[1].toFixed(1)); youLbl.setAttribute("x", geo.g[0]); youLbl.setAttribute("y", geo.g[1] + 24); }
         const bars = keys.map((k) => `${g.axes.find((a) => a.key === k).label} ${Math.round((sc[k] ?? 0) * 10)}/10`).join(" · ");
         const lowK = keys.reduce((a, k) => ((sc[k] ?? 0) < (sc[a] ?? 0) ? k : a), keys[0]);
         const tie = keys.every((k) => Math.abs((sc[k] ?? 0) - (sc[lowK] ?? 0)) < 0.01);
@@ -461,7 +466,7 @@
             const n = g.items.length, misses = log.filter((x) => !x.ok);
             const recap = h("ul", { class: "recap" }, log.slice().sort((a, b) => a.ok - b.ok).map((x) =>
               h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, card.sensitive ? "•" : x.ok ? "✓" : "✗"),
-                h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.ok ? "" : `Belongs in: ${x.label}. `}${x.it.why}`)))));
+                h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.ok ? "" : `Belongs in: ${x.label.replace(/[?.!]+$/, "")}. `}${x.it.why}`)))));
             score.replaceWith(recap);
             done({ name: right === n ? "Clean sweep." : right >= n * 0.75 ? `${right} of ${n}. Sharp sorting.` : `${right} of ${n}. Here's the pattern.`,
               tally: "" });
@@ -604,7 +609,7 @@
     return h("section", { class: "qlip world-card", style: "--c:var(--accent)", "aria-label": "Pick your world" },
       h("div", { class: "qlip-body" },
         h("h2", { class: "hook" }, "Same ideas, your life."),
-        h("p", { class: "concept-line" }, "Where should the examples come from? One tap, and you can change it later."),
+        h("p", { class: "concept-line" }, "Where should the examples come from? You get your world's cards first, plus ideas that fit anyone. Change it any time."),
         worldButtons(setWorld),
         h("p", { class: "small muted" }, "Or just swipe up to start with a mix.")));
   }
@@ -703,7 +708,7 @@
     const top = Object.entries(domPlays).sort((a, b) => b[1] - a[1])[0];
     $("#map-summary").textContent = (S.streak.n > 1 ? `${S.streak.n}-day streak. ` : "") + (lit
       ? lit >= DB.concepts.length ? `You've explored all ${lit} ideas. New ones grow into the graph every day.`
-      : `You've lit up ${lit} of ${DB.concepts.length} ideas.${top ? ` Most explored: ${DOMAIN[top[0]].name}.` : ""}`
+      : `You've lit up ${lit} of ${DB.concepts.length} ideas.${top && lit >= 3 ? ` Most explored: ${DOMAIN[top[0]].name}.` : ""}`
       : `${DB.concepts.length} ideas are waiting. Play any game to light up your first one.`);
     $("#map-legend").replaceChildren(...DB.domains.map((d) => h("span", {}, h("i", { style: `background:${d.color}` }), d.name)));
     const prof = Object.entries(S.profile).sort((a, b) => b[1].at - a[1].at);
@@ -767,7 +772,7 @@
   }
   function firstQueue() {
     // New players open on the flagship "where are you" game; returning players get the graph's next steps.
-    const start = Object.keys(S.done).length ? [] : ["boredom-signal-estimate", "wso-triad-venn"].filter((id) => CARD[id] && inWorld(CARD[id]));
+    const start = Object.keys(S.done).length ? [] : ["boredom-signal-estimate", "one-percent-doubling-reveal"].filter((id) => CARD[id] && inWorld(CARD[id]));
     return start.concat(recommend(start, 5 - start.length));
   }
   boot().catch((err) => {
