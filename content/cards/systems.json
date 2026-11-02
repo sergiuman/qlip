@@ -98,6 +98,10 @@
               "feedback": "Understandable, but loops don't reset to zero. Calling it ruined is what restarts the downward lap."
             },
             {
+              "text": "\"Restart properly on Monday with a fresh plan.\"",
+              "feedback": "Tempting, and it feels tidy. But waiting for Monday gives the downward loop a few more laps. A short walk today keeps it turning your way."
+            },
+            {
               "text": "\"Two days off. Short walk today and the loop keeps turning.\"",
               "best": true,
               "feedback": "Right. A loop is about direction, not a perfect streak. Nudge it back the good way."
@@ -464,6 +468,10 @@
               "feedback": "You do get rest. But your body clock also shifts later, and that bill arrives on Sunday night."
             },
             {
+              "text": "A bit groggy at lunch, but that's all",
+              "feedback": "Fair, grogginess is real. The bigger cost comes later, though: a later body clock makes Sunday night's sleep harder."
+            },
+            {
               "text": "Sunday night you can't fall asleep, so Monday hurts",
               "best": true,
               "feedback": "Right. The lie-in eases today's tiredness and pushes your clock later. Researchers call the mismatch 'social jet lag'."
@@ -476,6 +484,10 @@
             {
               "text": "Nothing, it's handed in",
               "feedback": "Real relief tonight. But the gap in what you understand keeps growing underneath."
+            },
+            {
+              "text": "The risk of getting caught, mainly",
+              "feedback": "A real worry, but even if no one notices, the gap in what you understand is still there next time."
             },
             {
               "text": "The bit you don't understand, which shows up next time you need it",

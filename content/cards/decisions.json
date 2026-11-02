@@ -67,48 +67,48 @@
   "concept": "reversible_doors",
   "domain": "decisions",
   "type": "spectrum",
-  "hook": "Do you treat a menu like a marriage? Let's see where you land.",
+  "hook": "Do you treat a branch name like a hire? Let's see where you land.",
   "title": "How You Weigh Small Choices",
   "game": {
    "left": "Every door feels locked",
    "right": "Quick on undoable choices",
    "questions": [
     {
-     "q": "Choosing a show to watch tonight, I usually…",
+     "q": "Picking a library for a throwaway prototype, I…",
      "options": [
       {
-       "label": "Scroll for 20+ minutes and feel unsure",
+       "label": "Compare 6 options for a day",
        "value": -2
       },
       {
-       "label": "Narrow it to two, then pick",
+       "label": "Shortlist two, pick one",
        "value": 0
       },
       {
-       "label": "Pick one in a couple of minutes; I can switch",
+       "label": "Pick one in 15 minutes; we can swap it",
        "value": 2
       }
      ]
     },
     {
-     "q": "Picking what to wear to a mate's party, I…",
+     "q": "Choosing the time for a recurring team meeting, I…",
      "options": [
       {
-       "label": "Try on everything twice and still hate it",
+       "label": "Poll everyone twice and still worry",
        "value": -2
       },
       {
-       "label": "Try two, pick one",
+       "label": "Propose two slots",
        "value": 0
       },
       {
-       "label": "Grab something and go",
+       "label": "Pick one, say we'll revisit in a month",
        "value": 2
       }
      ]
     },
     {
-     "q": "When a small choice turns out wrong, I…",
+     "q": "When a small process change doesn't work, I…",
      "options": [
       {
        "label": "Replay it for days",
@@ -125,18 +125,18 @@
      ]
     },
     {
-     "q": "Choosing a pic to post, I…",
+     "q": "Naming a feature flag or branch, I…",
      "options": [
       {
-       "label": "Edit 30 versions and still doubt it",
+       "label": "Debate it in the PR thread",
        "value": -2
       },
       {
-       "label": "Pick from my top 3",
+       "label": "Ask one person",
        "value": 0
       },
       {
-       "label": "Post one I like; I can delete it",
+       "label": "Name it and move on; renaming is cheap",
        "value": 2
       }
      ]
@@ -156,13 +156,13 @@
     {
      "upTo": 1,
      "label": "Today: sorting doors",
-     "text": "Today you move fast on choices you can undo. Nice. Before a big one-way choice (what to study, a job move, quitting a team), slow down on purpose."
+     "text": "Today you move fast on choices you can undo. Nice. Before a big one-way choice (a hire, a re-org, a data migration), slow down on purpose."
     }
    ]
   },
   "insight": "Good deciders match speed to stakes. Barry Schwartz linked always hunting for the best option ('maximizing') to lower satisfaction, but later studies are mixed.",
   "model": "Match your decision speed to how reversible the choice is, not how anxious it makes you.",
-  "try_today": "Set a 2-minute timer for your next small choice (food, show, outfit). When it rings, pick and don't look back.",
+  "try_today": "Set a 2-minute timer for your next small, undoable work choice (a name, a slot, a tool). When it rings, pick and move on.",
   "source": {
    "thinkers": [
     "Jeff Bezos",
@@ -177,18 +177,18 @@
    "regret_minimization",
    "opportunity_cost"
   ],
-  "try_team": "Before your next group choice (a film, a trip, a project name), ask: can we undo it? If yes, set a 3-minute limit, pick, and move on.",
-  "audience": "all"
+  "try_team": "Before your next team choice (a tool, a meeting slot, a project name), ask: can we undo it? If yes, set a 3-minute limit, pick, and move on.",
+  "audience": "work"
  },
  {
   "id": "regret-minimization-80",
   "concept": "regret_minimization",
   "domain": "decisions",
   "type": "reveal",
-  "hook": "You're 80, in a rocking chair. Which choice still stings?",
+  "hook": "Future you, scrolling old memories: cringe at fails, or never-tried?",
   "title": "The 80-Year-Old Test",
   "game": {
-   "prompt": "Imagine looking back from age 80. In studies of regret, which do people say hurts longer: the risks they took that failed, or the chances they never took?",
+   "prompt": "Picture yourself way older, looking back. In regret studies, which hurts longer: risks that failed, or chances never taken?",
    "choices": [
     "The risks that failed",
     "The chances I never took"
@@ -552,18 +552,18 @@
   "hook": "Every yes has a hidden price. Does naming it change your mind?",
   "title": "What Is Not Seen",
   "game": {
-   "question": "In a study, 75% chose to buy a $14.99 DVD when the other option was just 'don't buy it'. When that option read 'keep the money for other purchases', what % still bought?",
+   "question": "In a 2009 study, 75% bought a $14.99 film when the other choice was just \"don't buy it\". When that choice said \"keep the $14.99 for something else\", what % still bought?",
    "min": 0,
    "max": 100,
    "step": 1,
    "unit": "%",
    "answer": 55,
    "anchor": null,
-   "explain": "55%. Just spelling out what else the money could do cut buyers by about a quarter (Frederick et al., 2009); later replications found a smaller effect. Bastiat's point, 1850: an act's first effect is seen; its other effects, including what the money would otherwise have done, unfold later and go unseen. Economists later named that hidden alternative the opportunity cost (von Wieser)."
+   "explain": "55%. Just naming what else the money could buy put about a quarter of buyers off (Frederick et al., 2009; later repeats found a smaller effect). Bastiat said it in 1850: you see the price, you don't see what that money could have done."
   },
   "insight": "Every yes is a no to something else: money, time, attention. Our minds rarely show what we give up unless someone names it. Bastiat called it 'what is not seen'.",
   "model": "The real price of a yes is the best thing it pushes out. Name it before you agree.",
-  "try_today": "Before your next yes (a purchase, a plan, an hour online), name what it pushes out. Then decide.",
+  "try_today": "Before your next buy (an in-game item, an online order, a takeaway), finish: \"That money could also get me…\". Then decide.",
   "source": {
    "thinkers": [
     "Frédéric Bastiat",

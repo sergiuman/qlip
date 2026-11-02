@@ -195,7 +195,7 @@
   "domain": "perception",
   "type": "choice",
   "hook": "11pm. A text: 'We need to talk.' What does your gut say?",
-  "title": "Reframing",
+  "title": "Don't Write the Ending Yet",
   "game": {
    "steps": [
     {
@@ -225,8 +225,12 @@
        "feedback": "Turns a vague threat into a concrete plan. Often you'll get the context you were missing."
       },
       {
-       "text": "Replay worst cases until you meet",
-       "feedback": "Understandable, but going round in circles rarely adds information. One small action usually helps more."
+       "text": "Text back tonight: 'Is everything OK?'",
+       "feedback": "Fair, and fine to ask if you're close. If they say 'all good, tell you tomorrow', let that answer be enough for tonight."
+      },
+      {
+       "text": "Go over every recent chat to work out what you did wrong.",
+       "feedback": "Understandable, but it's the worst-case story again in a new form. It adds stress, not information."
       }
      ]
     }
@@ -616,24 +620,24 @@
   "domain": "perception",
   "type": "choice",
   "hook": "A thermostat is smarter than most New Year's resolutions. Why?",
-  "title": "Perceive, Adjust, Repeat",
+  "title": "Notice, Adjust, Repeat",
   "game": {
    "steps": [
     {
-     "scenario": "You promised yourself 20 minutes of guitar (or running, or a language app) a day. Two weeks in, you've done it 3 times. What would a thermostat do?",
+     "scenario": "You planned 20 minutes of guitar (or running, or a language app) a day. Two weeks in, it's happened 3 times. What would a thermostat do?",
      "options": [
       {
        "text": "Try harder tomorrow. More willpower.",
        "feedback": "Very common, and it rarely changes the result. A thermostat doesn't try harder; it checks the reading and adjusts."
       },
       {
-       "text": "Admit it's just not for me and stop.",
-       "feedback": "Maybe, one day. But you'd be quitting on 3 data points without asking why. Check first, then decide."
+       "text": "Decide it's not for me and stop.",
+       "feedback": "Could be the right call one day. But 3 tries is too little data: check what got in the way first, then decide."
       },
       {
        "text": "Look at what actually happened on the missed days, change one thing, try again.",
        "best": true,
-       "feedback": "That's the loop: perceive, appraise, recalibrate, act, check. Small corrections beat big resolutions."
+       "feedback": "That's the loop: notice, compare, adjust, act, check. Small corrections beat big resolutions."
       },
       {
        "text": "Write a bigger, more perfect plan.",
@@ -645,9 +649,13 @@
      "scenario": "You check: the missed days were all when you got home after 8pm. Best adjustment?",
      "options": [
       {
-       "text": "Move practice to before dinner, and make it 10 minutes on late days.",
+       "text": "On late days, do 10 minutes the moment you walk in; keep 20 on early days.",
        "best": true,
        "feedback": "Adjust to the real signal, keep it small, then check again next week."
+      },
+      {
+       "text": "Practise at lunch instead, every day.",
+       "feedback": "Could work, but it changes every day to fix only the late ones. Adjust where the signal is."
       },
       {
        "text": "Promise to do 40 minutes on the good days to make up.",
@@ -659,13 +667,13 @@
   },
   "insight": "Good controllers don't need a perfect plan. They need a fast loop: notice, compare, adjust, act, check. Habits and goals improve the same way: small corrections, often.",
   "model": "Don't aim for a perfect plan. Aim for a fast, honest feedback loop.",
-  "try_today": "Pick one goal. Set a 2-minute check-in tonight: what happened, what does it mean, what will I adjust tomorrow?",
-  "try_team": "End a practice, lesson or week with 3 questions, one minute each: What happened? What does it mean for our goal? What one thing do we change next time?",
+  "try_today": "Pick one goal. Tonight, take 2 minutes: what did I notice, how does it compare with what I wanted, what one thing will I adjust tomorrow?",
+  "try_team": "End a practice, lesson or week with 3 questions, one minute each: What did we notice? How does it compare with our goal? What one thing do we adjust?",
   "source": {
    "thinkers": [
     "William T. Powers"
    ],
-   "work": "Powers, Behavior: The Control of Perception (1973); adapted as Qlip's notice-interpret-adjust loop (house model)"
+   "work": "Powers, Behavior: The Control of Perception (1973), a control-theory model of behaviour; the everyday habit version is Qlip's simplification."
   },
   "evidence": "philosophy",
   "level": 1,
@@ -925,7 +933,7 @@
       {
        "text": "'I'm excited.'",
        "best": true,
-       "feedback": "Yes. Nerves and excitement feel alike in the body. Calling it excitement is a smaller jump, and in small studies it helped people perform."
+       "feedback": "Yes. Nerves and excitement are both high-arousal states. Calling it excitement is a smaller jump, and in one small set of studies it helped people perform."
       },
       {
        "text": "'Don't think about it.'",
@@ -937,30 +945,37 @@
      "scenario": "A deadline is tomorrow (homework, a form, a work report) and you've hit a snag. Your chest is tight. What's the useful next move?",
      "options": [
       {
-       "text": "Name it ('this is pressure, it means I care'), then pick one step you can do in 20 minutes.",
+       "text": "Name it ('this is pressure; my body is gearing up'), then pick one step you can do in 20 minutes.",
        "best": true,
        "feedback": "Yes. The feeling stays, but now it's pointed at a task, not at you."
       },
       {
-       "text": "Tell yourself you're useless under pressure.",
-       "feedback": "A harsh story on top of a hard moment. It's one reading, not a fact, and it drains energy you need."
+       "text": "Decide you just fall apart under pressure.",
+       "feedback": "A harsh story on a hard moment. It's one reading, not a fact, and it spends energy you need for the snag."
       },
       {
        "text": "Push through all night with no break.",
        "feedback": "Sometimes needed, but even fuel needs rest. Running on empty tends to make snags bigger."
+      },
+      {
+       "text": "Message someone: 'I've hit a snag, can I get a hand or an extra day?'",
+       "feedback": "Also a strong move. Asking early is a skill, not a weakness."
       }
      ]
     }
    ]
   },
-  "insight": "Nervous and excited feel alike in the body. In Alison Wood Brooks's small studies, saying 'I'm excited' helped singing and speaking more than 'calm down'. Effects were modest.",
+  "insight": "Nerves and excitement are both high arousal. In one small 2014 paper, 'I'm excited' beat 'calm down' for singing and speaking. A cheap experiment, not a fix; if nerves weigh heavy, talk to someone.",
   "model": "Don't fight the buzz. Rename it: 'I'm excited' points the energy at the task.",
   "try_today": "Before your next nervous moment, say 'I'm excited' out loud, then name the first small thing you'll do.",
   "source": {
    "thinkers": [
-    "Alison Wood Brooks"
+    "Alison Wood Brooks",
+    "Alia Crum",
+    "Peter Salovey",
+    "Shawn Achor"
    ],
-   "work": "Brooks, Get excited: Reappraising pre-performance anxiety as excitement, Journal of Experimental Psychology: General (2014)"
+   "work": "Brooks, Get excited: Reappraising pre-performance anxiety as excitement, Journal of Experimental Psychology: General (2014); Crum, Salovey & Achor, Rethinking stress, JPSP (2013)"
   },
   "evidence": "moderate",
   "level": 1,
@@ -1207,7 +1222,7 @@
    "next_read": "Pragmatism, Lecture VI: Pragmatism's Conception of Truth"
   },
   "from_source": {
-   "quote": "The true is only the expedient in the way of our thinking.",
+   "quote": "The true, to put it very briefly, is only the expedient in the way of our thinking.",
    "cite": "William James, Pragmatism (1907), Lecture VI",
    "next_read": "Pragmatism, Lecture VI"
   },

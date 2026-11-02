@@ -582,7 +582,7 @@
     "hook": "Your feed hides the happy posts for a week. Does it change you?",
     "title": "Moods Are Contagious",
     "game": {
-      "question": "In 2012 Facebook secretly hid some happy posts from about 690,000 people's feeds for a week. Out of every 1,000 words they then wrote, how many fewer were happy words?",
+      "question": "In 2012 Facebook ran a secret week-long test on about 690,000 people's feeds. For one group it hid some happy posts. Out of every 1,000 words that group then wrote, how many fewer were happy words?",
       "min": 0,
       "max": 50,
       "step": 1,

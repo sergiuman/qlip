@@ -7,7 +7,7 @@
     "hook": "Stuck on something? Find which of three things is missing.",
     "title": "Will, Skill, Open door",
     "game": {
-      "prompt": "Think of one thing you keep meaning to start. 3 quick taps.",
+      "prompt": "Pick one thing you keep meaning to start (a course, a gym habit, learning to drive, a side project). 3 quick taps.",
       "axes": [
         {
           "key": "W",
@@ -71,7 +71,7 @@
         },
         "": {
           "name": "Your Starting Point",
-          "text": "Nothing's fully lit yet. That's normal, not a verdict. Tonight, pick your lowest pillar and do one 5-minute move. Will: write one line on why this goal matters to you. Skill: practise one small piece once. Door: ask one person for time or help."
+          "text": "Nothing's fully lit yet. Normal, not a verdict. Pick your lowest one and do one 5-minute move tonight."
         },
         "mid": {
           "name": "The Half-Lit Path",
@@ -79,7 +79,7 @@
         }
       }
     },
-    "insight": "Blumberg and Pringle (1982) argued psychology explained performance by will and skill alone and kept forgetting opportunity: the open door. A framework, not a tested scale.",
+    "insight": "Being stuck isn't always about wanting it more. Sometimes the skill's missing, and sometimes the door just isn't open yet (Blumberg & Pringle, 1982). A framework, not a test.",
     "model": "Stuck? Don't push everywhere. Find the missing pillar: Will, Skill or Open door.",
     "try_today": "In your notes app, type your goal and mark Will, Skill and Open door as low, mid or high. Do one 5-minute move on the lowest tonight.",
     "source": {
@@ -943,7 +943,7 @@
     "hook": "New to leading a team? Some confidence boosts last. Some evaporate.",
     "title": "Where real 'I can' comes from",
     "game": {
-      "prompt": "You've just been made team lead. How much 'I can do this' does each one build? Hint: watching someone like you succeed counts.",
+      "prompt": "You've just been made team lead. How much 'I can do this' does each one build?",
       "left": "Weaker on its own",
       "right": "Builds real belief",
       "items": [
@@ -1007,7 +1007,7 @@
     "hook": "Some confidence boosts last. Some vanish by Monday.",
     "title": "Where real 'I can' comes from",
     "game": {
-      "prompt": "You've just been put in charge of something new (a team, a project, a club). How much 'I can do this' does each one build? Hint: watching someone like you succeed counts.",
+      "prompt": "You've just been put in charge of something new (a team, a project, a club). How much 'I can do this' does each one build?",
       "left": "Weaker on its own",
       "right": "Builds real belief",
       "items": [

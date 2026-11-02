@@ -285,19 +285,19 @@
     "concept": "grit",
     "domain": "growth",
     "type": "reveal",
-    "hook": "Who survives the army's hardest summer? Guess what predicted it.",
+    "hook": "A tough first summer at West Point. Guess what predicted who stayed.",
     "title": "Grit vs Talent",
     "game": {
-      "prompt": "New cadets at West Point, the US army academy, face 'Beast Barracks', a brutal first summer. Which better predicted who stayed?",
+      "prompt": "New cadets at West Point, the US army academy, face 'Beast Barracks', a famously hard first summer. Which better predicted who stayed?",
       "choices": [
         "The academy's own admissions score (grades, fitness, leadership)",
         "A 12-question grit survey",
         "Neither predicted it well"
       ],
-      "reveal": "The grit survey. In a 2007 study of about 1,200 cadets, it beat the academy's admissions score, which didn't predict who quit Beast at all. The catch: only about 1 in 20 quit, a 2017 review of 88 samples found grit's links to success modest (mostly the 'keep going' part), and in a larger 2019 West Point study other measures mattered more for graduating.",
+      "reveal": "The grit survey. In a 2007 study of about 1,200 cadets it beat the academy's own admissions score, which didn't predict quitting at all. Catch: only 1 in 20 quit, and later, bigger studies found grit's effect modest.",
       "answer": 1
     },
-    "insight": "Grit helped here, but it's contested: across studies its links to success are modest and come mostly from perseverance. One ingredient, not the recipe.",
+    "insight": "Contested: a 2017 review of 88 samples found grit's links to success modest, mostly from perseverance, and a 2019 West Point study found other measures mattered more for graduating.",
     "model": "Keep going on the boring bits. That part of grit holds up; the rest is oversold.",
     "try_today": "Name one long-term goal and write the single smallest action that keeps it alive this week.",
     "source": {
@@ -403,16 +403,16 @@
     "concept": "deliberate_practice",
     "domain": "growth",
     "type": "order",
-    "hook": "Played guitar for 10 years? Why might year 10 feel like year 2?",
+    "hook": "Learned 50 TikTok dances. Why is dance 50 no cleaner than dance 5?",
     "title": "Deliberate Practice",
     "game": {
-      "prompt": "You've got 10 minutes with your guitar. What order levels you up?",
+      "prompt": "You've got 10 minutes to nail a new dance. What order levels you up?",
       "items": [
-        "Pick the bit you always mess up",
-        "Do just that bit, slightly too hard",
-        "Check what went wrong, then go again"
+        "Find the 4 counts you always mess up",
+        "Loop just those 4 counts, a bit faster than comfy",
+        "Film it, spot what went wrong, go again"
       ],
-      "explain": "Pick the bit you always mess up → do just that bit, slightly too hard → check what went wrong, then go again. Songs you know keep your skill and your joy, but mostly hold you where you are."
+      "explain": "Find the bit you mess up → loop just that bit, slightly too hard → film, check, go again. Running the whole dance feels good, but mostly keeps you where you are."
     },
     "insight": "Hours alone don't make experts; focused work on weak spots helps far more. The '10,000-hour rule' oversimplifies Ericsson, and a 2014 meta-analysis found practice explains only part of skill gaps.",
     "model": "For growth, not more practice: narrower, slightly too hard, with feedback. Keep playing for joy too.",
@@ -433,8 +433,8 @@
       "flow",
       "deep_work"
     ],
-    "try_team": "Pick one thing your team, class or family does often (a pitch, a dish, a match). Name its weakest part and run 3 quick rounds on just that, with feedback.",
-    "audience": "all"
+    "try_team": "Pick one thing your class, team or club does often (a routine, a set piece, a talk). Name its weakest part and run 3 quick rounds on it, with feedback.",
+    "audience": "young"
   },
   {
     "id": "deliberate-practice-repetition-swipe",
@@ -857,9 +857,9 @@
           "scenario": "Your friends are jumping off a pier into water nobody has checked. Your move?",
           "options": [
             {
-              "text": "Check the depth first, then decide.",
+              "text": "Check the water first (depth, rocks, cold), then decide.",
               "best": true,
-              "feedback": "Best pick. Unknown depth is a hazard: a danger you can't see. Make it visible, then the choice is really yours."
+              "feedback": "Best pick. Unknown depth is a hazard you can't see. Check the depth at this tide, look for rocks and think about how cold the water is. If you can't check, don't jump. Then the choice is really yours."
             },
             {
               "text": "Jump. Hesitating is for cowards.",
@@ -909,7 +909,7 @@
         }
       ]
     },
-    "insight": "A risk is a danger you can see and judge; a hazard is one you can't. Fix hazards, keep risks. A 2015 review tied risky outdoor play to more activity and social health; most studies were weak.",
+    "insight": "A risk is a danger you can see and judge; a hazard is one you can't. Fix hazards, keep risks. A 2015 review of children's play linked it to better health; for adults it's an analogy.",
     "model": "Remove the hidden hazards, keep the visible risks. That's where skill and courage grow.",
     "try_today": "Swap one 'Be careful!' for a question: 'What's your plan?' or 'Do you feel steady?' Try it on a kid, a colleague or yourself.",
     "try_team": "List 3 things you shield someone from (a solo bus trip, cooking dinner, a first big speech). Sort each: hidden hazard (fix it) or visible risk (allow it).",
@@ -1386,17 +1386,18 @@
         "Extra effort",
         "Something I changed after an earlier try"
       ],
-      "reveal": "Any of these can be true. It's tempting to credit luck, especially after a hard stretch, but luck rarely does all the work. Boyatzis & McKee argue lasting growth comes from a loop: notice what worked, adjust, repeat. Name one thing you did, even something small like turning up or asking a question. That's the part you can repeat."
+      "reveal": "Any of these can be true. It's tempting to credit luck, especially after a hard stretch, but luck rarely does all the work. Studies of after-event reviews find people learn from successes too, when they ask what they did that helped. It's a loop: notice what worked, adjust, repeat. Name one thing you did, even something small like turning up or asking a question. That's the part you can repeat."
     },
-    "insight": "We study our misses and skip our wins. Spotting your own part in a success, however small, turns one good day into something you can do again.",
+    "insight": "We tend to debrief failures and skip successes. In a study of soldiers in training, reviewing what went right as well as wrong improved later performance more than reviewing mistakes alone.",
     "model": "After a win, name your part: that's the bit you can repeat.",
     "try_today": "Pick one thing that went OK this week and write down one thing you did that helped, however small.",
     "source": {
       "thinkers": [
-        "Richard Boyatzis",
-        "Annie McKee"
+        "Shmuel Ellis",
+        "Inbar Davidi",
+        "Frederik Anseel"
       ],
-      "work": "Boyatzis & McKee, Resonant Leadership: Renewing Yourself and Connecting with Others Through Mindfulness, Hope, and Compassion (2005)"
+      "work": "Ellis & Davidi, After-event reviews: drawing lessons from successful and failed experience, Journal of Applied Psychology (2005); Ellis, Carette, Anseel & Lievens, Systematic reflection, Current Directions in Psychological Science (2014)"
     },
     "evidence": "moderate",
     "level": 1,

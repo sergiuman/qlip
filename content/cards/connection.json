@@ -176,7 +176,7 @@
     {
      "text": "My mum keeps reading my messages.",
      "side": "left",
-     "why": "Trust and privacy: feelings first. Plans can come after they feel heard."
+     "why": "Could be either. Feelings first, then ask: 'Want help working out what to say to her?'"
     }
    ]
   },
@@ -962,14 +962,14 @@
      "why": "Naming who did the work is a deposit for them, and makes you safe to work with."
     },
     {
-     "text": "Turning up to your mate's match exactly when you said",
+     "text": "Starting your weekly 1:1 on time, every week, even in busy weeks",
      "side": "right",
-     "why": "Boring reliability is the main deposit. It shows your word means something."
+     "why": "Boring reliability is the main deposit. Cancelled 1:1s say \"you come last\"."
     },
     {
-     "text": "Claiming a group idea as yours when a friend came up with it",
+     "text": "Saying \"I'll have it by Friday\" to end the meeting, knowing it's really next week",
      "side": "left",
-     "why": "Taking credit is a big withdrawal, and people remember it for a long time."
+     "why": "Feels kind in the moment. On Friday it costs more trust than the honest date would have."
     },
     {
      "text": "Saying 'I'll try, but I can't promise' when you're unsure",
@@ -986,7 +986,7 @@
   "insight": "Trust grows from small, plain things: words that match deeds, and credit given where it's due. Covey's 'emotional bank account' is a metaphor, not a measurement, but a handy one.",
   "model": "Every kept word is a deposit. Every overpromise is a withdrawal you made before you had the funds.",
   "try_today": "Check your last three 'I'll…' messages. Keep one you forgot, or send an honest update about it.",
-  "try_team": "At your next meeting or family meal, each person thanks someone else by name for one specific thing they did this week.",
+  "try_team": "At your next team meeting, each person thanks someone else by name for one specific thing they did this week.",
   "source": {
    "thinkers": [
     "Stephen Covey"
@@ -1000,7 +1000,7 @@
    "one_percent",
    "shared_fictions"
   ],
-  "audience": "all"
+  "audience": "work"
  },
  {
   "id": "trust-ledger-reveal",
@@ -1228,5 +1228,74 @@
    "psychological_safety"
   ],
   "audience": "young"
+ },
+ {
+  "id": "introvert-energy-recharge",
+  "concept": "introvert_energy",
+  "domain": "connection",
+  "type": "choice",
+  "hook": "She talked all night. Then left early. Rude?",
+  "title": "Left Early. Not Rude.",
+  "game": {
+   "steps": [
+    {
+     "scenario": "Your friend Maya laughs and chats all night at a party. Then, at 10pm, she says bye and heads home. Why?",
+     "options": [
+      {
+       "text": "She must be shy deep down.",
+       "feedback": "Shy means social contact feels risky. Maya clearly enjoyed it. Leaving early is a different thing."
+      },
+      {
+       "text": "She probably wasn't having fun.",
+       "feedback": "Maybe, but she was laughing all night. A tired battery can look like boredom from the outside."
+      },
+      {
+       "text": "Could be anything: an early start, a long week, or her social battery ran low.",
+       "best": true,
+       "feedback": "Likely one of those. Leaving early after a fun night isn't rude. Most people, introverts and extraverts alike, feel tired a few hours after lots of socialising."
+      }
+     ]
+    },
+    {
+     "scenario": "Next day, you feel flat after a fun but packed day of people. Your evening plan?",
+     "options": [
+      {
+       "text": "Push through and say yes to another hangout.",
+       "feedback": "Fine if people refill you. If you're flat, more of the same may drain you further."
+      },
+      {
+       "text": "Check what actually refilled you last time, and do that.",
+       "best": true,
+       "feedback": "Yes. What refills you varies by person and by day. The skill is knowing your own pattern."
+      },
+      {
+       "text": "Decide you're just antisocial now.",
+       "feedback": "One flat evening doesn't make a label. It's a signal about energy, not character."
+      }
+     ]
+    }
+   ]
+  },
+  "insight": "In trait research, introversion means less pull toward social buzz, not shyness. 'Recharging alone' is a popular simplification: most people feel tired hours after lots of socialising.",
+  "model": "After a social stretch, ask: did that fill me up or drain me? Plan the next hour from the answer.",
+  "try_today": "Tonight, rate your energy 1-5 after each social moment. Notice which ones refill you.",
+  "source": {
+   "thinkers": [
+    "Susan Cain",
+    "Carl Jung",
+    "Sointu Leikas",
+    "Ville-Juhani Ilmarinen"
+   ],
+   "work": "Quiet (2012), by Susan Cain; Psychological Types (1921), by Carl Jung; Leikas & Ilmarinen, Happy now, tired later? Journal of Personality (2017)"
+  },
+  "evidence": "moderate",
+  "level": 1,
+  "related": [
+   "deep_work",
+   "still_water_vision"
+  ],
+  "try_team": "Before a busy group day (team, class or family), ask each person what helps them recover, and leave a few quiet gaps.",
+  "audience": "all",
+  "sensitive": false
  }
 ]

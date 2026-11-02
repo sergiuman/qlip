@@ -263,18 +263,18 @@
     "game": {
       "steps": [
         {
-          "scenario": "The numbers 2-4-6 follow a hidden rule. You can test any three numbers and learn if they fit. Your hunch: 'even numbers going up by 2.' Which test teaches you the most?",
+          "scenario": "The numbers 2, 4, 6 follow a hidden rule. You can test any three numbers and learn if they fit. Your hunch: 'even numbers going up by 2.' Which test teaches you the most?",
           "options": [
             {
-              "text": "8-10-12",
+              "text": "8, 10, 12",
               "feedback": "It fits, but it would fit your hunch either way. You'd learn nothing new. This is what most people try."
             },
             {
-              "text": "20-22-24",
+              "text": "20, 22, 24",
               "feedback": "Another yes, but again only a test your hunch already predicts. Confirming feels productive; it rarely is."
             },
             {
-              "text": "1-2-3",
+              "text": "1, 2, 3",
               "best": true,
               "feedback": "Yes! Your hunch says 'no'. If it fits, your hunch is wrong. That's a real test."
             },
@@ -285,20 +285,20 @@
           ]
         },
         {
-          "scenario": "1-2-3 fits. 6-4-2 does not. 2-4-7 fits. What's the rule?",
+          "scenario": "1, 2, 3 fits. 6, 4, 2 does not. Best guess at the rule?",
           "options": [
             {
               "text": "Any three numbers going up",
               "best": true,
-              "feedback": "Correct. In Wason's 1960 study, only about 1 in 5 people named it on their first try, mostly because they only tested examples they expected to fit."
+              "feedback": "Correct, and 2, 4, 7 fits too. In Wason's 1960 study, only about 1 in 5 people named it first try, mostly because they only tested examples they expected to fit."
             },
             {
               "text": "Each number bigger by 2",
-              "feedback": "Close to the hunch, but 2-4-7 jumps by 3 and still fits. Simpler: they just go up."
+              "feedback": "Close to the hunch, but 1, 2, 3 goes up by 1 and still fits. So does 2, 4, 7. Simpler: they just go up."
             },
             {
               "text": "Even numbers only",
-              "feedback": "1-2-3 and 2-4-7 fit, so odd numbers are allowed. The rule is broader: any rising sequence."
+              "feedback": "1, 2, 3 fits, so odd numbers are allowed. So does 2, 4, 7. The rule is broader: any rising sequence."
             }
           ]
         }
@@ -320,7 +320,7 @@
       "socratic_ignorance",
       "map_territory"
     ],
-    "try_team": "Play 2-4-6: one person holds a secret rule, others test triples aloud. Afterwards count how many tests could have gotten a 'no'.",
+    "try_team": "Play 2, 4, 6: one person holds a secret rule, others test triples aloud. Afterwards count how many tests could have gotten a 'no'.",
     "from_source": {
       "quote": "The human understanding when it has once adopted an opinion ... draws all things else to support and agree with it.",
       "cite": "Francis Bacon, Novum Organum (1620), Book I, Aphorism 46 (trans. Spedding, Ellis & Heath)",
@@ -1160,20 +1160,20 @@
           ]
         },
         {
-          "scenario": "Online, a different pair shows 'Was 200, now 120'. Which question helps you most?",
+          "scenario": "Sprint planning. Before anyone estimates, the PM says: \"This is about 2 days, right?\" What helps the team most?",
           "options": [
             {
-              "text": "How much am I saving?",
-              "feedback": "Tempting, but the 'saving' is measured from their number, the 200. That's the anchor doing the work."
+              "text": "Agree, 2 days sounds fine",
+              "feedback": "Fast, but now every estimate starts from 2. The PM's number did the estimating."
             },
             {
-              "text": "What do similar pairs usually sell for?",
+              "text": "Everyone writes an estimate privately, then reveal together",
               "best": true,
-              "feedback": "Exactly. A typical price is a fair reference; a 'was' price is one the seller picked."
+              "feedback": "Yes. Private first, then compare: that is why planning poker hides the cards."
             },
             {
-              "text": "How long is the sale on?",
-              "feedback": "Worth knowing, but a countdown adds rush on top of the anchor. Check the typical price first."
+              "text": "Double it to be safe",
+              "feedback": "Still anchored on 2, just with padding."
             }
           ]
         }
@@ -1182,7 +1182,7 @@
     "insight": "The first number you see becomes a reference point, even when someone else chose it. Anchoring is one of the best-replicated biases. Your defence: pick your own reference first.",
     "model": "The first number sets the bar. Choose your own bar before you compare.",
     "try_today": "Write what you'd happily pay for the next thing you buy, before you look at a single price tag.",
-    "try_team": "Before haggling or budgeting together (a trip, a gift, a purchase), agree your top price in private first, then compare it to any 'was' price.",
+    "try_team": "Next estimation or budget talk: everyone writes a number privately before anyone says one aloud.",
     "source": {
       "thinkers": [
         "Amos Tversky",
@@ -1197,7 +1197,7 @@
       "availability",
       "base_rates"
     ],
-    "audience": "all"
+    "audience": "work"
   },
   {
     "id": "availability-vivid-choice",
@@ -1227,20 +1227,20 @@
           ]
         },
         {
-          "scenario": "You're packing for a hiking trip somewhere warm. You have room for one extra thing. Which helps most?",
+          "scenario": "Last month one dramatic outage made everyone panic. The team now wants a 3-month failover project. Your incident log says most incidents this year were config typos.",
           "options": [
             {
-              "text": "A snakebite kit, just in case",
-              "feedback": "Understandable: snakes are the vivid risk. Worth it in some places, but check what's actually common where you're going first."
+              "text": "Start the failover project, it was scary",
+              "feedback": "Understandable: the vivid one is easiest to picture. Check the log first."
             },
             {
-              "text": "Check if the area has malaria, and pack repellent",
+              "text": "Fix the common cause first: add config validation, then size the failover risk",
               "best": true,
-              "feedback": "Yes. You prepared for the common risk, not the one that's easiest to picture. That's availability bias, beaten."
+              "feedback": "Yes. You prepared for the frequent risk, not the memorable one."
             },
             {
-              "text": "Read survival stories from the area",
-              "feedback": "Fun, but stories are exactly what make rare dangers feel common. A quick health-advice check tells you more."
+              "text": "Write a long post-mortem about the outage",
+              "feedback": "Useful, but more story makes the rare event feel even more common."
             }
           ]
         }
@@ -1263,6 +1263,6 @@
       "base_rates",
       "system1_system2"
     ],
-    "audience": "all"
+    "audience": "work"
   }
 ]

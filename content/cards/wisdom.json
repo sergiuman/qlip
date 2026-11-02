@@ -1185,7 +1185,7 @@
           "options": [
             {
               "text": "'100%. Totally agree.'",
-              "feedback": "Kind, but not quite true. It keeps the peace, and Aristotle called always agreeing to please flattery: too much of a good thing."
+              "feedback": "Kind, but not quite true. Aristotle called always agreeing to please obsequiousness, and flattery when done for gain: too much of a good thing."
             },
             {
               "text": "'I agree with your first point. The second one I'd question. Here's why.'",
@@ -1218,7 +1218,7 @@
         }
       ]
     },
-    "insight": "Aristotle put friendliness between flattery (agreeing to please) and quarrelsomeness (objecting to win). The mean isn't half-agreeing: it's saying what's true in a way the person can hear.",
+    "insight": "Aristotle put friendliness between the obsequious (agreeing to please; flattery if for gain) and the quarrelsome (objecting to win). The mean: say what's true in a way the person can hear.",
     "model": "Between flattering and fighting: say what you agree with, then the one thing you'd question.",
     "try_today": "Next time someone asks 'agree?', name one thing you agree with and one honest question before you reply.",
     "source": {
@@ -1238,7 +1238,7 @@
     "from_source": {
       "quote": "the man who is pleasant in the right way is friendly and the mean is friendliness",
       "cite": "Aristotle, Nicomachean Ethics, Book II, ch. 7 (trans. W. D. Ross, 1925)",
-      "next_read": "Nicomachean Ethics, Book IV, ch. 6 (friendliness, flattery and quarrelsomeness)"
+      "next_read": "Nicomachean Ethics, Book IV, ch. 6 (friendliness, obsequiousness, flattery and quarrelsomeness)"
     },
     "audience": "all"
   }

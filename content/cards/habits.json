@@ -561,7 +561,7 @@
           "scenario": "A friend says: 'I missed my practice, so the week is ruined.' You reply...",
           "options": [
             {
-              "text": "Missing once barely matters. What's the smallest bit you could do today?",
+              "text": "One miss doesn't ruin a week. What's the smallest bit you could do today?",
               "best": true,
               "feedback": "Kind and practical. You lowered the shame and the bar at the same time."
             },
@@ -578,7 +578,7 @@
       ]
     },
     "insight": "William James warned: 'Never suffer an exception to occur' till a habit is rooted. Lally's 2010 data was gentler: one missed day barely slowed habit forming. A miss is an accident.",
-    "model": "Missing once is an accident. Clear's rule of thumb: come back soon and small, even after two misses or ten.",
+    "model": "Missing once is an accident. Clear's rule: never miss twice. Missed more? Come back soon and small.",
     "try_today": "Missed something this week? Do its tiniest version today (one page, five push-ups, one minute) and tick it off. That counts.",
     "try_team": "Agree on a 'come back small' version of your shared habit (a one-line update instead of the full check-in) for days that fall apart.",
     "from_source": {
@@ -971,7 +971,7 @@
               "feedback": "Yes. Two minutes is small enough to start even when you're drained, and often you keep going once you've begun."
             },
             {
-              "text": "Plan the full session for tomorrow at 7:30, on the sofa, before breakfast.",
+              "text": "Plan the full session for tomorrow at 7:30, right after breakfast.",
               "feedback": "Also a good move, if the plan is that specific. A set time and place is an implementation intention, which has solid evidence. Two minutes now plus a plan for tomorrow is best of both."
             }
           ]
@@ -996,15 +996,17 @@
         }
       ]
     },
-    "insight": "A tiny start lowers the bar on hard days. The two-minute rule is a rule of thumb from popular books, not a tested finding; pairing it with a set time and place does have good evidence.",
+    "insight": "A tiny start lowers the bar on hard days. The two-minute rule is a rule of thumb, not a tested finding; a set time and place has good evidence (about 94 studies, a medium-to-large effect).",
     "model": "Make the start so small you can't say no, and give it a set time and place.",
     "try_today": "Pick one habit and finish this line: 'After I ___, I will do two minutes of ___.' Then do the two minutes today.",
     "source": {
       "thinkers": [
         "James Clear",
-        "BJ Fogg"
+        "BJ Fogg",
+        "Peter Gollwitzer",
+        "Paschal Sheeran"
       ],
-      "work": "Atomic Habits (2018); Tiny Habits (2019)"
+      "work": "Atomic Habits (2018); Tiny Habits (2019); Gollwitzer & Sheeran, Implementation intentions and goal achievement: a meta-analysis, Advances in Experimental Social Psychology (2006)"
     },
     "evidence": "moderate",
     "level": 1,

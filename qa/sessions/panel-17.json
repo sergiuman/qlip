@@ -1,0 +1,634 @@
+{
+ "session": 17,
+ "personas": [
+  {
+   "persona": "Maya, 16, Manchester. Year 11, lives on TikTok, skips anything that sounds like a teacher. Picked \"School & mates\" in the world picker and swiped through 20 cards.",
+   "scores": {
+    "hook": 6,
+    "clarity": 7,
+    "usefulness": 6,
+    "safety": 8,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "I tapped 'School & mates', but only 2 of my 20 cards (three-conversations-swipe, growth-mindset-spectrum) are made for my world. The rest are 'all' cards with grown-up setups: cooking the same five dinners for months and moving house (order-chaos-balance), a $14.99 DVD (opportunity-cost-unseen), a hiking trip (availability-vivid-choice), being 80 in a rocking chair (regret-minimization-80), and guitar twice. The picker says 'your world's cards first', but it doesn't feel like that. After about 5 cards it stopped feeling like it was about me.",
+     "fix": "In the feed builder in app.js, when a world is picked, put cards whose audience matches that world in the first 8 slots before any 'all' card, and use 'all' cards only to fill the gaps. Content: add 'young' variants for order_chaos, opportunity_cost, regret_minimization and deliberate_practice. The rewrites below are ready to use."
+    },
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Same concept twice in one short session: regret-minimization-80 at position 13, then regret-minimization-open-doors at position 15, with another 'hidden cost of a choice' card (opportunity-cost-unseen) in between. Guitar also turns up twice (quitting-wisely-choice-purpose, deliberate-practice-order). It felt like the app was stuck.",
+     "fix": "Dedupe by concept: don't serve two cards with the same 'concept' value within 12 cards of each other. Also add a soft rule that no two neighbouring cards share the same domain ('decisions' here)."
+    },
+    {
+     "card_id": "order-chaos-balance",
+     "severity": "medium",
+     "problem": "Both steps are about a parent's life: cooking dinner for months, then moving house while family visit. I don't cook, and I'm not moving house. The idea (one foot in the known, one in the unknown) is actually good, but the scenarios hide it from me.",
+     "fix": "Step 1 scenario: 'Every day's the same: same bus seat, same lunch, same three apps, same chat after school. It's gone flat. This week you…' Options: 'Keep it all. It works and nobody's complaining.' / 'Keep most of it, but try one new thing: a club taster, a new lunch spot, sitting with someone different.' (best) / 'Change everything: new hobbies, new hair, new friendship group, all this week.' Step 2 scenario: 'Mocks start Monday, the group chat has kicked off and you're coming down with a cold. Everything feels up in the air. What helps most?' Best option: 'Keep two small fixed points: the same walk to school and your usual Sunday tea.' Hook: 'Same day on repeat. Comfy, or a quiet cage?'"
+    },
+    {
+     "card_id": "opportunity-cost-unseen",
+     "severity": "medium",
+     "problem": "A $14.99 DVD means nothing to me: wrong currency, and who buys DVDs? Once I'd guessed, the explanation was a long paragraph with Bastiat, von Wieser and replications. It read like a textbook page, and I swiped away halfway through.",
+     "fix": "Question: 'In a 2009 study, 75% bought a $14.99 film when the other choice was just \"don't buy it\". When that choice said \"keep the $14.99 for something else\", what % still bought?' Explain: '55%. Just naming what else the money could buy put about a quarter of buyers off (Frederick et al., 2009; later repeats found a smaller effect). Bastiat said it in 1850: you see the price, you don't see what that money could have done.' try_today: 'Before your next in-game buy, Depop order or Greggs run, finish the sentence \"That money could also get me…\". Then decide.'"
+    },
+    {
+     "card_id": "deliberate-practice-order",
+     "severity": "medium",
+     "problem": "Second guitar card in a row, and I don't play guitar. Deliberate practice is something I'd actually use, for dance, football or revision, but 'guitar for 10 years' sounds like my uncle.",
+     "fix": "Hook: 'Learned 50 TikTok dances. Why is dance 50 no cleaner than dance 5?' Prompt: 'You've got 10 minutes to nail a new dance. What order levels you up?' Items: 'Find the 4 counts you always mess up' / 'Loop just those 4 counts, a bit faster than comfy' / 'Film it, spot what went wrong, go again'. Explain: 'Find the bit you mess up → loop just that bit, slightly too hard → film, check, go again. Running the whole dance feels good, but mostly keeps you where you are.'"
+    },
+    {
+     "card_id": "three-conversations-swipe",
+     "severity": "medium",
+     "problem": "This one is about me, and I loved it. But the screenshot shows the review list as a column of orange X's: 'I got 4 out of 10 on the maths test. Again.', the party one, sixth form, mum reading messages, all marked wrong. Four X's in a row reads like a marked test, and that's the exact school vibe I'm here to escape. Also, 'My mum keeps reading my messages' honestly might be a request for help, so marking 'Help fix it' as wrong feels unfair.",
+     "fix": "In app.js swipe review: show a neutral marker (e.g. a grey dot or '↔') instead of an orange ✕, and change the label from 'Belongs in:' to 'Usually:'. For the mum item, change 'why' to: 'Could be either. Feelings first, then ask: \"Want help working out what to say to her?\"' and accept both sides as fine (or mark it 'either' if the schema allows)."
+    },
+    {
+     "card_id": "regret-minimization-80",
+     "severity": "low",
+     "problem": "'You're 80, in a rocking chair' is the least TikTok sentence I've ever read; I can't picture being 80. The finding is actually interesting (you regret what you never tried), but the hook loses me before I find out.",
+     "fix": "Hook: 'Future you is scrolling old memories. What makes them cringe more: the fails, or the never-tried?' Prompt: 'Picture yourself way older, looking back. In regret studies, which hurts longer: risks that failed, or chances never taken?' Leave the reveal text as it is."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "low",
+     "problem": "The prompt 'Think of one thing you keep meaning to start' is too vague. I went blank and tapped low on everything, so I got 3/10 on all three and a big paragraph of instructions. The insight then opens with 'Blumberg and Pringle (1982) argued psychology…', which is pure lecture.",
+     "fix": "Prompt: 'Pick one thing you keep meaning to start (revising for mocks, a gym habit, learning to drive, a side hustle). 3 quick taps.' Shorten the '' result text to: 'Nothing's fully lit yet. Normal, not a verdict. Pick your lowest one and do one 5-minute move tonight.' Insight: 'Being stuck isn't always about wanting it more. Sometimes the skill's missing, and sometimes the door just isn't open yet (Blumberg & Pringle, 1982). A framework, not a test.'"
+    }
+   ],
+   "best_cards": [
+    "three-conversations-swipe",
+    "steelmanning-order",
+    "impulse-pause-choice"
+   ],
+   "verdict": "Honestly, about half of it got me. The 11pm 'we need to talk' text, the TikTok-ban argument, sorting my mate's texts into 'just listen' or 'help fix it', and the scroll loop all felt like they knew my life. I'd send the texting one to my group chat. The rest felt like a feed made for my mum: dinners, moving house, DVDs, guitar twice, being 80, two regret cards close together. Once I see 'Blumberg and Pringle (1982)' or 'Bastiat, 1850', it's school again and I'm gone. It's kind and never made me feel stupid. The helpline footer and the 'not a verdict' lines are nice, though the row of orange X's on the swipe game did feel like getting a test back. Fix the world filter so 'School & mates' actually comes first, and stop serving the same idea twice. Then I'd keep playing."
+  },
+  {
+   "persona": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. I picked \"Work\" in the world picker and want things I can use with my team tomorrow, no fluff.",
+   "scores": {
+    "hook": 6,
+    "clarity": 7,
+    "usefulness": 6,
+    "safety": 8,
+    "fun": 5
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "I picked 'Work', but only 3 of 20 cards were written for work (self-efficacy-choice, steelmanning-choice, emotion-naming-stressed-choice). The rest were guitar practice, home dinners, headphone shopping, mosquitoes on a hiking trip, a party, a 1 a.m. exam, outfits and posting photos. In app.js line 57 inWorld() lets every audience:'all' card through, and line 101 adds only +3 for a matching world card. After 5 cards I felt this was not for me.",
+     "fix": "In app.js line 101, raise the boost for a matching world card from +3 to +6. Add a rule: when S.world==='work', at least 1 card in every 3 served must have audience 'work'. Add an optional 'work_variant' field to CARD_SCHEMA.md: a replacement game.steps[0] with a workplace scenario, used when S.world==='work'. Write it first for anchoring-price-choice, availability-vivid-choice, reversible-doors-spectrum, sunk-cost-two-trips, sleep-memory-choice and quitting-wisely-choice-purpose (examples are in the issues below)."
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "All three scores were 3/10 and the text says 'Nothing's fully lit yet', but the 'you, today' dot sits in the middle of the triple overlap. That spot visually means 'all three high', so the picture says the opposite of the text. I trusted the picture first and was confused. Also, 3 yes/no taps giving '3/10' looks like fake precision.",
+     "fix": "In app.js venn move(): when reg === '' use geo.anchors[''] (the spot outside the circles, [36,262]) instead of geo.g. Keep the centroid only for the 'mid' result, and change the label there to 'you, today: half-lit'. Replace the score line 'Will 3/10 · Skill 3/10 · Open door 3/10' with words: 'Will: low · Skill: low · Open door: low' (low <0.4, mid 0.4–0.6, high >0.6)."
+    },
+    {
+     "card_id": "reversible-doors-spectrum",
+     "severity": "medium",
+     "problem": "A great idea for managers (one-way vs two-way doors comes from the Bezos letter), but all four questions are about Netflix, party outfits and Instagram photos. This is exactly where I over-deliberate at work, and the card does not touch it.",
+     "fix": "Replace the questions. Q1: 'Picking a library for a throwaway prototype, I…' (-2 'Compare 6 options for a day'; 0 'Shortlist two, pick one'; 2 'Pick one in 15 minutes; we can swap it'). Q2: 'Choosing the time for a recurring team meeting, I…' (-2 'Poll everyone twice and still worry'; 0 'Propose two slots'; 2 'Pick one, say we'll revisit in a month'). Q3: 'When a small process change doesn't work, I…' (keep the current options). Q4: 'Naming a feature flag or branch, I…' (-2 'Debate it in the PR thread'; 0 'Ask one person'; 2 'Name it and move on; renaming is cheap'). Zone 3 text: change '(what to study, a job move, quitting a team)' to '(a hire, a re-org, a data migration)'."
+    },
+    {
+     "card_id": "anchoring-price-choice",
+     "severity": "medium",
+     "problem": "Anchoring is the bias I meet every week in estimation, salary talks and vendor quotes. The card teaches it with headphones in a shop, so I learn the idea but get no tool for tomorrow.",
+     "fix": "Replace step 2 with: scenario 'Sprint planning. Before anyone estimates, the PM says: \"This is about 2 days, right?\" What helps the team most?' Options: 'Agree, 2 days sounds fine' (feedback: 'Fast, but now every estimate starts from 2. The PM's number did the estimating.'); 'Everyone writes an estimate privately, then reveal together' best (feedback: 'Yes. Private first, then compare: that is why planning poker hides the cards.'); 'Double it to be safe' (feedback: 'Still anchored on 2, just with padding.'). try_team: 'Next estimation or budget talk: everyone writes a number privately before anyone says one aloud.'"
+    },
+    {
+     "card_id": "trust-ledger-swipe",
+     "severity": "medium",
+     "problem": "Two items are mirror copies ('Telling everyone the winning idea was your teammate's' / 'Claiming a group idea as yours when a friend came up with it'), so one swipe is wasted. 'Turning up to your mate's match' is not work. The most common trust drain for managers, overpromising to end a meeting, is missing, even though the model line is about overpromising.",
+     "fix": "Replace the item 'Claiming a group idea as yours when a friend came up with it' with {text:'Saying \"I'll have it by Friday\" to end the meeting, knowing it's really next week', side:'left', why:'Feels kind in the moment. On Friday it costs more trust than the honest date would have.'}. Replace 'Turning up to your mate's match exactly when you said' with {text:'Starting your weekly 1:1 on time, every week, even in busy weeks', side:'right', why:'Boring reliability is the main deposit. Cancelled 1:1s say \"you come last\".'}."
+    },
+    {
+     "card_id": "availability-vivid-choice",
+     "severity": "medium",
+     "problem": "The mosquito quiz is nice trivia, but packing for a hiking trip gives me nothing to use at work. On teams, availability bias shows up after one dramatic incident, which then drives the whole roadmap.",
+     "fix": "Replace step 2 with: scenario 'Last month one dramatic outage made everyone panic. The team now wants a 3-month failover project. Your incident log says most incidents this year were config typos.' Options: 'Start the failover project, it was scary' (feedback: 'Understandable: the vivid one is easiest to picture. Check the log first.'); 'Fix the common cause first: add config validation, then size the failover risk' best (feedback: 'Yes. You prepared for the frequent risk, not the memorable one.'); 'Write a long post-mortem about the outage' (feedback: 'Useful, but more story makes the rare event feel even more common.')."
+    },
+    {
+     "card_id": "self-efficacy-captain-swipe",
+     "severity": "low",
+     "problem": "The prompt gives the answer away: 'Hint: watching someone like you succeed counts.' After that the first item is a free swipe and there is no thinking left. The card also repeats self-efficacy-choice, which I saw just before it, and teaches it better.",
+     "fix": "Delete the sentence 'Hint: watching someone like you succeed counts.' from game.prompt. In the feed, don't serve two cards with the same concept within 5 cards of each other (self_efficacy appeared twice in a row here)."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "The feed subtitle 'Because you played \"The Golden Mean\": Order & Chaos amplifies The Golden Mean.' is unclear to me as a non-native speaker. What does 'amplifies' mean between two ideas? It sounds like generated text, not a reason.",
+     "fix": "Change the relation template for 'amplifies' to plain words: 'Because you played \"{prev}\": this one goes a step further with the same idea.' For Order & Chaos specifically: 'Because you played \"The Golden Mean\": same balance idea, now for routine vs. new.'"
+    }
+   ],
+   "best_cards": [
+    "emotion-naming-stressed-choice",
+    "self-efficacy-choice",
+    "steelmanning-choice"
+   ],
+   "verdict": "The three work cards are really good. I would use the stand-up opener from emotion-naming ('one exact word, anyone blocked gets 5 minutes') and the Mihai one-slide dry run tomorrow. Steelmanning with the microservices example felt like my real life. The pre-mortem card is also useful. The tone is kind everywhere, with nothing shaming, and the evidence labels are honest, which I respect. But the 'Work' world mostly served me guitar, dinners, headphones, mosquitoes and Instagram, so 2 out of 3 swipes were not for me. When I'm tired, that is when I close the app. The Venn result also showed me in the 'all three' centre while the text said 'nothing is lit', which made me trust it less. Fix the work filter and add work versions of anchoring, availability, reversible doors and trust, and I would open this every morning with coffee. Today it's a 6."
+  },
+  {
+   "persona": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification. She chose \"Everyday life\" in the world picker.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 8,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The feed repeats itself. Of my 20 cards, about 9 are really one lesson about starting or keeping a goal: wso-triad-venn, quitting-wisely, never-miss-twice, two-minute-rule, aim-high, mpc-loop, self-reflection-loop, one-percent and grit. The details repeat too. Guitar appears in quitting-wisely and mpc-loop, and the next-up teaser after grit is guitar again ('Played guitar for 10 years?'). Both two-minute-rule and mpc-loop open with 'You promised yourself 20 minutes'. By the middle of the session I felt I was being coached, not taught, and the more philosophical worlds (Old Wisdom, Meaning) barely appeared.",
+     "fix": "Add a feed rule: in any run of 10 cards, allow at most 2 cards that share the goal and habit cluster (concepts one_percent, never_miss_twice, two_minute_rule, aim_high, mpc_loop, wso_triad, quitting_wisely, grit, self_reflection_loop, deliberate_practice), and serve at least 1 Old Wisdom or Meaning card. Change the mpc-loop step 1 scenario to: 'You promised yourself you'd ring your sister every Sunday. Six weeks in, you've rung twice. What would a thermostat do?' Change the deliberate-practice teaser hook to: 'Cooked for 30 years? Why might year 30 taste like year 5?'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "The result screen contradicts itself. My scores were Will 3/10, Skill 3/10 and Open door 3/10, and the result was 'Nothing's fully lit yet', but the 'you, today' dot sits in the very centre where all three circles overlap. Anyone glancing at it reads 'all lights on'. A teaching diagram that shows the opposite of the verdict is worse than having no diagram.",
+     "fix": "Place the dot by the scores: each axis pulls the dot into its circle only when its score is at or above the 0.6 threshold. When all scores are below the threshold, draw the dot outside the circles, beneath the Venn, labelled 'you, today: outside all three (for now)'. For the 'mid' result, put it on the edge of the centre region with the label 'half-lit'."
+    },
+    {
+     "card_id": "introvert-energy-recharge",
+     "severity": "medium",
+     "problem": "In step 1 the best feedback diagnoses Maya ('That's introversion, not shyness') from a single evening, and step 2 then warns the player against exactly that kind of labelling. The insight also states as fact that 'Introversion is about where you recharge'. That is Susan Cain's popular framing. Trait research describes extraversion through sociability, assertiveness and positive emotion, and Jung meant something different again: the orientation of psychic energy toward the inner or outer world. The from_source text is shown in quotation marks although it is a paraphrase, which a careful reader finds misleading.",
+     "fix": "Step 1 best feedback: 'Likely. Many people enjoy company but refill their energy alone. That may be introversion, which is not the same as shyness. One evening can't tell you which.' Insight: 'Shyness is fear of social judgement; introversion is a lower appetite for social stimulation. Many introverts enjoy people but need quiet afterwards. The battery picture is Cain's popular simplification of a well-studied trait.' In from_source, remove the quotation marks and show the text as 'In Cain's words, roughly: introverts tend to recharge alone, extroverts by socialising.' Or replace it with a verbatim line from Quiet."
+    },
+    {
+     "card_id": "never-miss-twice-choice",
+     "severity": "medium",
+     "problem": "The model line misattributes. 'Clear's rule of thumb: come back soon and small, even after two misses or ten' is not Clear's rule; his rule is literally 'never miss twice', which is also this card's concept. The kind softening is welcome, but it should be presented as Qlip's own addition, not as Clear's words.",
+     "fix": "Model: 'Missing once is an accident. Clear's rule: never miss twice. And if you already have, the answer is the same: come back today, and small.'"
+    },
+    {
+     "card_id": "golden-mean-social",
+     "severity": "medium",
+     "problem": "This is the best card in the session, but the Aristotle is slightly flattened. In Nicomachean Ethics Book IV ch. 6, the person who agrees with everything simply to please is 'obsequious' (areskos). Aristotle uses 'flatterer' (kolax) only for someone who pleases in order to gain something. A card that sends me to Book IV should name the distinction correctly.",
+     "fix": "Insight: 'Aristotle put friendliness between the obsequious (agreeing to please; flattery when it's done for gain) and the quarrelsome (objecting to win). The mean isn't half-agreeing: it's saying what's true in a way the person can hear.' Step 1, option 1 feedback: 'Kind, but not quite true. Aristotle called always agreeing to please obsequiousness, and flattery when done for gain: too much of a good thing.'"
+    },
+    {
+     "card_id": "reframing-late-text",
+     "severity": "medium",
+     "problem": "Step 2 has only two options, and the wrong one ('Replay worst cases until you meet') is a strawman that nobody would choose deliberately. There is no realistic temptation, so there is nothing to learn from choosing. The title 'Reframing' is also bare jargon next to the evocative titles of the other cards.",
+     "fix": "Add a third option to step 2: text 'Message tonight: Is everything OK? Just so I can sleep.', feedback 'Fair if you're close, and sometimes it gives you peace. It can also add pressure on them late at night. A calm reply with a time often does the same job.' Rename the title to 'Don't Write the Ending Yet'."
+    },
+    {
+     "card_id": "mpc-loop-thermostat-choice",
+     "severity": "low",
+     "problem": "The card names the same loop three different ways. The best feedback says 'perceive, appraise, recalibrate, act, check', the insight says 'notice, compare, adjust, act, check', and try_today says 'what happened, what does it mean, what will I adjust'. A model meant to be remembered needs a single wording. The evidence label 'philosophy' also undersells Powers: Perceptual Control Theory is an empirical control-systems model, and only the habit application is Qlip's own.",
+     "fix": "Use 'notice, compare, adjust, act, check' everywhere. Step 1 best feedback: 'That's the loop: notice, compare, adjust, act, check. Small corrections beat big resolutions.' Try today: 'Pick one goal. Tonight, take 2 minutes: what did I notice, how does it compare with what I wanted, what one thing will I adjust tomorrow?' Change source.work to 'Powers, Behavior: The Control of Perception (1973), a control-theory model of behaviour; the everyday habit version is Qlip's simplification.'"
+    },
+    {
+     "card_id": "self-reflection-loop-practice",
+     "severity": "low",
+     "problem": "The sourcing is weak for the claim being made. Resonant Leadership (2005) is a leadership-renewal book, not the evidence for 'study your wins'. The research that actually supports learning from successes is Ellis and colleagues' work on systematic reflection, so the citation makes a sound idea look thinner than it is.",
+     "fix": "Change source to thinkers ['Shmuel Ellis', 'Frederik Anseel', 'Richard Boyatzis'], work 'Ellis, Carette, Anseel & Lievens, Systematic reflection: implications for learning from failures and successes, Current Directions in Psychological Science (2014); Boyatzis, Intentional Change Theory (2006)'. Reveal: replace 'Boyatzis & McKee argue lasting growth comes from a loop' with 'Studies of after-event reviews find people learn from successes too, when they ask what they did that helped'."
+    }
+   ],
+   "best_cards": [
+    "golden-mean-social",
+    "confirmation-bias-2-4-6",
+    "grit-west-point-reveal"
+   ],
+   "verdict": "Better than I expected. Each card ends with something you can actually do, the tone never shames, and the evidence labels are honest. The grit card says 'contested' and 'read critically' and means it, and it is a pleasure to be sent to Bacon's Idols of the Tribe or to Seneca Letter 13 with proper citations. The Aristotle and Wason cards respect the reader. The session is let down by repetition: almost half the feed was the same 'start small, adjust, don't quit' sermon about guitars and 20-minute promises, which wore down my curiosity and the fun. A few details also slip where a careful reader will notice: the Venn dot shows the opposite of the verdict, a paraphrase sits in quotation marks, a rule is misattributed to Clear, and Aristotle's obsequious and flatterer are blurred into one. Fix the feed's variety and these few accuracy points and I would recommend it to my old students."
+  },
+  {
+   "persona": "Sam, 24, graduate with anxiety and low self-worth after a rough year. Picked \"Everyday life\". Played 20 cards and looked at 15 screenshots: card tops and reveals, plus the Feed (dark) and Map (light) views.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "I tapped low on all three and got 'Will 3/10 · Skill 3/10 · Open door 3/10'. The 'you, today' dot sits right in the middle where all three circles overlap, which is the 'All Lights On' spot. The text below says 'Nothing's fully lit yet', so the picture and the words disagree. Then the kicker 'RIGHT NOW YOU LEAN' sits on top of 'Your Starting Point', which leans nowhere. On top of that, '3/10' x3 reads like a school mark. To me it looked like a row of fails.",
+     "fix": "In the venn renderer, when the result key is '' (none above threshold), draw the dot outside all three circles, below the 'Open door' circle, and label it 'starting here'. When the result key is '' or 'mid', change the kicker from 'RIGHT NOW YOU LEAN' to 'TODAY'S SNAPSHOT'. Replace the numeric score line with words: 'Will: low · Skill: low · Open door: low' (0–3 low, 4–6 mid, 7–10 high)."
+    },
+    {
+     "card_id": "stress-mindset-choice-fuel",
+     "severity": "high",
+     "problem": "Step 2 puts 'Tell yourself you're useless under pressure.' in large tappable text, and for someone like me it reads as an option to agree with. The card's message ('call it excitement', 'it means I care') also never says that renaming may not be enough when anxiety is frequent. If it doesn't work for me, it can feel like my failure.",
+     "fix": "Change option 2 text to 'Decide you just fall apart under pressure.' with feedback: 'A harsh story on a hard moment. It's one reading, not a fact, and it spends energy you need for the snag.' Add a fourth option: {text: 'Message someone: \"I've hit a snag, can I get a hand or an extra day?\"', feedback: 'Also a strong move. Asking early is a skill, not a weakness.'}. Append to insight: 'If nerves are frequent or overwhelming, renaming helps but isn't the whole fix: talk to someone you trust.'"
+    },
+    {
+     "card_id": "mpc-loop-thermostat-choice",
+     "severity": "medium",
+     "problem": "Option 2 says 'Admit it's just not for me and stop.' The word 'Admit' makes stopping sound like a shameful confession. It also clashes with the quitting-wisely card I played earlier, which said quitting a part can be wise. The scenario ('Two weeks in, you've done it 3 times') reads like an audit of my own failures.",
+     "fix": "Change option text to 'Decide it's not for me and stop.' and its feedback to 'Could be the right call one day. But 3 tries is too little data: check what got in the way first, then decide.' Change scenario to: 'You planned 20 minutes of guitar (or running, or a language app) a day. Two weeks in, it's happened 3 times. What would a thermostat do?'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The feed's 'Because you played' line reads 'Order & Chaos amplifies The Golden Mean.' 'Amplifies' is jargon and I don't know what it means. The next hook, 'Is your life a cage or a flood right now?', is heavy for an anxious person scrolling at night. Both options sound bad.",
+     "fix": "Change the recommendation template from '<A> amplifies <B>' to 'Same balance idea as <B>, applied to your routines.' (or generic: 'Builds on <B>.'). Rewrite the order-chaos spectrum hook to 'Too much routine or too much change lately? Find your balance point.'"
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "After a 20-card session, My map says 'You've lit up 1 of 88 ideas.' It feels like my session didn't count, and '1 of 88' feels like being far behind. The map is also hard to read: labels like 'Systems', 'Old Wisdom', 'Perception' and 'Emotions' sit on top of nodes and lines.",
+     "fix": "Check that every completed card's concept lights up its node (the count should reflect all concepts played this session). Change the copy to '<n> ideas lit so far. Each game adds a light.' and only show 'of 88' once n >= 10. Move domain labels to the outer edge of each cluster, give them a semi-opaque background pill (background: var(--bg) at 80%), and add 8px padding so they don't overlap nodes."
+    },
+    {
+     "card_id": "reframing-late-text",
+     "severity": "medium",
+     "problem": "Step 2 only has two options, and the worse one ('Replay worst cases until you meet') has no full stop. It's also the obvious wrong answer. What I would actually do at 11pm is text back 'Is everything OK?', and the card never lets me try that.",
+     "fix": "Add a full stop: 'Replay worst cases until you meet.' Add a third option at index 1: {text: \"Text back tonight: 'Is everything OK?'\", feedback: \"Fair, and fine to ask. If they say 'all good, tell you tomorrow', let that answer be enough for tonight.\"}."
+    },
+    {
+     "card_id": "never-miss-twice-choice",
+     "severity": "low",
+     "problem": "The best reply to a friend who says 'the week is ruined' starts 'Missing once barely matters.' When I feel that way myself, 'barely matters' sounds a bit dismissive of the feeling. The feedback praises 'lowering the shame', but the line doesn't acknowledge the feeling first.",
+     "fix": "Rewrite the best option to: \"One miss doesn't ruin a week. What's the smallest bit you could do today?\" Keep the feedback as is."
+    },
+    {
+     "card_id": "grit-west-point-reveal",
+     "severity": "low",
+     "problem": "The hook 'Who survives the army's hardest summer?' and the 'brutal' Beast Barracks framing have a tough-it-out tone. That makes me feel I'm being measured against cadets. The reveal itself is careful and honest, but the framing feels pressuring for an everyday-life feed.",
+     "fix": "Change hook to 'A tough first summer at West Point. Guess what predicted who stayed.' and in game.prompt replace 'a brutal first summer' with 'a famously hard first summer'."
+    }
+   ],
+   "best_cards": [
+    "self-reflection-loop-practice",
+    "reframing-late-text",
+    "introvert-energy-recharge"
+   ],
+   "verdict": "Mostly I came away feeling safer and more capable than before. Wrong picks get gentle feedback ('Understandable…', 'Here's another way to play it'), and labels like 'antisocial' or 'not a walking person' are pushed back on. The helpline footer on reframing and the 'snapshot, not a verdict' line on the venn result made me feel looked after. self-reflection-loop and reframing hit me personally, and their try-today tasks are small enough to actually do. What lets it down: the venn result shows my 'all low' answers sitting in the 'all lights on' centre with 3/10 marks; a few self-attacking lines appear as bold tappable options; the map says 1 of 88 after 20 games; and the feed uses the jargon 'amplifies' next to a heavy 'cage or flood' hook. Fix those and this goes from good to something I'd recommend to a friend who's struggling."
+  },
+  {
+   "persona": "Dr. Okafor, 51, research psychologist. Checks every claim, citation and effect size, and looks hard at item wording and whether the results follow from the answers.",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 7,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "The Venn result does not follow from the answers. In wso-triad-venn-a.png all three pillars score 3/10 and the result reads 'Nothing's fully lit yet'. The 'you, today' dot still sits in the middle where all three circles overlap, which on the diagram is the 'All Lights On' region. In app.js venn move(), an empty region (reg === \"\") falls back to geo.g, the shared centre of all three circles, and the 0.18 nudge barely moves it. A player who reads the picture gets the opposite message from the text.",
+     "fix": "In app.js venn move(), change `let [x, y] = reg ? geo.anchors[reg] || geo.g : geo.g;` to `let [x, y] = reg ? geo.anchors[reg] || geo.g : geo.anchors[\"\"];`. Skip the per-axis nudge when reg === \"\" so the dot stays outside every circle. Keep geo.g only for the 'undecided'/mid case. Add a QA check: when every axis is below threshold, regionAt(dot) must equal \"\"."
+    },
+    {
+     "card_id": "availability-vivid-choice",
+     "severity": "high",
+     "problem": "This is an accuracy and safety problem. The snakebite kit feedback says it is 'Worth it in some places'. Wilderness-medicine and WHO guidance advise against suction and cut kits: they remove almost no venom and can cause harm. A card about preparing for real risks should not endorse a harmful kit.",
+     "fix": "Change the feedback for option 'A snakebite kit, just in case' to: \"Understandable: snakes are the vivid risk. But experts advise against snakebite kits: suction doesn't remove venom and cutting does harm. The real snake plan is knowing the nearest hospital. First check what's actually common where you're going.\""
+    },
+    {
+     "card_id": "introvert-energy-recharge",
+     "severity": "high",
+     "problem": "Step 1 teaches a trait diagnosis from one behaviour, which is the fundamental attribution error. Leaving at 10pm gets labelled 'introversion' when an early start is the simpler explanation. The insight also says introversion 'is about where you recharge'. That is Cain's popular framing, not how trait research defines extraversion (reward sensitivity, sociability, positive affect). Experience-sampling work (Leikas & Ilmarinen, 2017) found that people at every trait level feel fatigued a few hours after a lot of socialising. Calling it 'Moderate evidence' and saying 'The trait research is solid' gives the battery picture borrowed credibility.",
+     "fix": "Step 1 best option text: \"Could be anything: an early start, a long week, or her social battery ran low.\" Feedback: \"Likely one of those. Leaving early after a fun night isn't rude. Most people, introverts and extraverts alike, feel tired a few hours after lots of socialising.\" Insight: \"In trait research, introversion means a lower pull toward social buzz and excitement, not shyness. 'Recharging alone' is a popular simplification. Studies find most people feel drained a few hours after lots of socialising, whatever their trait.\" Add to source.work: \"Leikas & Ilmarinen, Happy now, tired later? Journal of Personality (2017)\"."
+    },
+    {
+     "card_id": "never-miss-twice-choice",
+     "severity": "medium",
+     "problem": "Misattribution. The model line credits Clear with 'come back soon and small, even after two misses or ten'. Clear's actual rule is 'never miss twice'. The softened version is Qlip's own and is better supported by Lally (2010), but it should not appear under his name.",
+     "fix": "Model: \"Missing once is an accident. Clear's rule: never miss twice. Already missed more? Same fix: come back soon and small.\" Optionally add to the insight: \"(Lally's data: one missed day barely changed how fast the habit formed.)\""
+    },
+    {
+     "card_id": "self-reflection-loop-practice",
+     "severity": "medium",
+     "problem": "The card's evidence is mis-graded. 'Moderate evidence' rests on a popular leadership book (Resonant Leadership), and 'We study our misses and skip our wins' has no citation. Ellis & Davidi's field experiment with soldiers is a stronger basis: reviewing successes improved later performance about as much as reviewing failures.",
+     "fix": "Add to source.thinkers \"Shmuel Ellis\" and \"Inbar Davidi\". Add to source.work: \"Ellis & Davidi, After-event reviews: drawing lessons from successful and failed experience, Journal of Applied Psychology (2005)\". Insight: \"We tend to debrief failures and skip successes. In a study of soldiers in training, reviewing what went right improved later performance about as much as reviewing what went wrong.\" In the reveal, replace 'Boyatzis & McKee argue lasting growth comes from a loop' with 'Field studies suggest reviewing wins helps you repeat them'."
+    },
+    {
+     "card_id": "stress-mindset-choice-fuel",
+     "severity": "medium",
+     "problem": "The concept is labelled stress_mindset (Crum, Salovey & Achor 2013), but the card teaches Brooks's anxiety reappraisal. 'Moderate evidence' is generous for one 2014 paper with small samples. Step 2's 'this is pressure, it means I care' is presented as fact without a source. 'Nerves and excitement feel alike in the body' is stated more firmly than the evidence allows.",
+     "fix": "Insight: \"Nerves and excitement are both high-arousal states. In one 2014 paper with small samples, saying 'I'm excited' helped singing and speaking more than 'calm down'. Treat it as a cheap experiment, not a proven fix.\" Step 2 best option: \"Name it ('this is pressure; my body is gearing up'), then pick one step you can do in 20 minutes.\" Either add Crum et al., Rethinking stress (JPSP 2013) to the source or move the card to concept 'anxiety_reappraisal'."
+    },
+    {
+     "card_id": "two-minute-rule-choice",
+     "severity": "low",
+     "problem": "The card says implementation intentions have 'solid evidence' and are 'one of the best-tested habit tools', but cites only two popular books. The claim is true, but a reader cannot check it. Option 3 ('on the sofa, before breakfast') is an odd cue to recommend for a 'set time and place' plan.",
+     "fix": "Add to source.thinkers \"Peter Gollwitzer\" and \"Paschal Sheeran\". Add to source.work: \"Gollwitzer & Sheeran, Implementation intentions and goal achievement: a meta-analysis, Advances in Experimental Social Psychology (2006)\". Optionally add to the insight: \"(about 94 studies, a medium-to-large effect)\". Change option 3 to: \"Plan the full session for tomorrow at 7:30, right after your first coffee.\""
+    },
+    {
+     "card_id": "risky-play-risk-hazard-choice",
+     "severity": "low",
+     "problem": "'Check the depth first, then decide' suggests that a quick look makes jumping off a pier safe. Pier jumping causes spinal injuries and cold-water-shock drownings, and tides change the depth within hours. The card's own risk/hazard distinction means the feedback should name these hidden hazards. Also, the evidence for risky play comes from studies of children (Brussoni 2015), so the adult and workplace step goes beyond the source.",
+     "fix": "Step 1 best feedback: \"Best pick. Unknown depth is a hazard you can't see. Check the depth at this tide, look for rocks and think about how cold the water is. If you can't check, don't jump. Then the choice is really yours.\" Insight: append \"(evidence is from children's play; the adult version is an analogy).\""
+    }
+   ],
+   "best_cards": [
+    "grit-west-point-reveal",
+    "anchoring-price-choice",
+    "delays-beer-game"
+   ],
+   "verdict": "This is a careful feed by pop-psych standards. The grit card handles a contested finding the way a contested finding should be handled: the 2007 result, the Credé review and the 2019 PNAS caveat, all in a few lines. The anchoring, Beer Game and 1% cards are accurate, and each gives the player a move they can use. The 2-4-6 figures match Wason. The evidence labels and 'not a verdict' disclaimers show real respect for the reader. Four things keep this from a higher score. First, a Venn display bug makes the result contradict the picture: all-low answers put the dot in the 'all lights on' zone. Second, one piece of advice could do harm: the snakebite kit. Third, the introversion card commits the attribution error that the confirmation-bias card warns against. Fourth, some citations are misattributed or graded too generously (Clear's 'never miss twice', Boyatzis & McKee rated moderate, Brooks's single study). The WSO triad also uses one item per pillar on a 4-point scale, and its Will item ('I'd do this even if no one saw') measures intrinsic motivation rather than wanting the goal. The card is honest that it is not a validated scale, but its result names read more precise than the items allow. Most of the fixes are small text edits and one line of code."
+  },
+  {
+   "persona": "Lina, 31, product designer for mobile games and learning apps (QA session 17, world: Everyday life)",
+   "scores": {
+    "hook": 7,
+    "clarity": 7,
+    "usefulness": 7,
+    "safety": 9,
+    "fun": 6
+   },
+   "issues": [
+    {
+     "card_id": "app",
+     "severity": "high",
+     "problem": "Choice cards have no tension. Across the session the 'best' option is almost always the longest, most balanced-sounding answer, and the wrong ones are obvious strawmen. Examples: golden-mean-social (both best answers are 2-3x longer than the others), reframing-late-text step 2, mpc-loop-thermostat-choice step 2, never-miss-twice-choice ('Decide you're just not a walking person'), introvert-energy-recharge ('Decide you're just antisocial now'). After 4-5 cards I could pick the right answer without reading the scenario, which kills game feel and the reward moment.",
+     "fix": "Add an authoring rule to CARD_SCHEMA.md and enforce it in the validator: within a step, option text lengths may differ by at most 40%, and at least one non-best option has to be something a reasonable person would really pick. Apply it to the cards named here: cut the best options to under 70 characters and turn each 'Decide you're just X' strawman into a plausible tempting move. For example, introvert step 2 becomes 'Cancel everything and stay in all weekend.' and never-miss-twice step 1 becomes 'Do the full walk tonight to make up for yesterday.'"
+    },
+    {
+     "card_id": "wso-triad-venn",
+     "severity": "high",
+     "problem": "The visual contradicts the result. When all three pillars score low (3/10 each), the 'you, today' dot sits in the exact centre where all three circles overlap. That spot visually means 'all three lit' while the headline says 'Nothing's fully lit yet'. The '3/10' readout from three single-tap questions is also false precision.",
+     "fix": "In the venn renderer, when no axis reaches the threshold, draw the dot below and outside the circles and lower the opacity of all three fills. Place the dot inside a circle or overlap only for the axes that pass. Replace the 'Will 3/10 · Skill 3/10 · Open door 3/10' line with low/mid/high words ('Will: low · Skill: low · Open door: low'), which also matches the card's own try_today wording."
+    },
+    {
+     "card_id": "reframing-late-text",
+     "severity": "medium",
+     "problem": "Step 2 has only two options, and one is 'Replay worst cases until you meet', which nobody would choose as a 'useful move'. It is a free tap with no decision. The end banner 'Good instincts. One more trick below.' then praises a choice that cost nothing.",
+     "fix": "Add a third, tempting option and tighten the weak one. Options: (1) \"Reply: 'Sure. Anything I should prepare? What time works?'\" (best); (2) \"Reply straight away: 'Is everything OK?? Did I do something?'\" with feedback 'Natural, and you may get an answer, but it hands them your worry before you know anything. A calm, practical reply gets the same info.'; (3) 'Go over every recent chat to work out what you did wrong' with feedback 'Understandable, but it is the worst-case story again in a new form. It adds stress, not information.'"
+    },
+    {
+     "card_id": "mpc-loop-thermostat-choice",
+     "severity": "medium",
+     "problem": "Step 2's best answer contradicts the scenario. You miss the days you get home after 8pm, but the fix is 'Move practice to before dinner', which you can't do if you aren't home before dinner. Step 2 also has only two options, and the jargon in step 1's feedback ('perceive, appraise, recalibrate, act, check') reads like a textbook.",
+     "fix": "Step 2 best option: 'On late days, do 10 minutes the moment you walk in; keep 20 on early days.' Add a third option: 'Practise at lunch instead, every day.' with feedback 'Could work, but it changes every day to fix only the late ones. Adjust where the signal is.' Change step 1's best feedback to 'That's the loop: notice, adjust, check again. Small corrections beat big resolutions.'"
+    },
+    {
+     "card_id": "confirmation-bias-2-4-6",
+     "severity": "medium",
+     "problem": "On the phone screen, step 2's title breaks a number sequence across lines ('2-4-' / '7 fits'), which is hard to parse. The step also answers itself: '1-2-3 fits, 6-4-2 does not, 2-4-7 fits' gives the rule away, so the payoff ('only 1 in 5 got it') doesn't feel earned.",
+     "fix": "Write the sequences with spaces and non-breaking separators, e.g. '1, 2, 3 fits. 6, 4, 2 does not. 2, 4, 7 fits.', or have the renderer wrap sequences in white-space:nowrap. Make the step harder by showing only two results: '1, 2, 3 fits. 6, 4, 2 does not. Best guess at the rule?' Then reveal 2, 4, 7 in the feedback."
+    },
+    {
+     "card_id": "grit-west-point-reveal",
+     "severity": "medium",
+     "problem": "The reveal is a wall of caveats (three studies, the 1-in-20 base rate, a 2017 review and a 2019 study) in one paragraph. The 'aha' gets buried, and on the phone it pushes the reward below the fold. The honesty is right, but the pacing is wrong for a 30-second game.",
+     "fix": "Reveal text: 'The grit survey. In a 2007 study of ~1,200 cadets it beat the academy's own admissions score, which didn't predict quitting at all. Catch: only 1 in 20 quit, and later, bigger studies found grit's effect modest.' Move the 2017 meta-analysis and 2019 PNAS details into the insight / Why? section."
+    },
+    {
+     "card_id": "app",
+     "severity": "medium",
+     "problem": "The feed's recommendation line is system jargon: 'Because you played \"The Golden Mean\": Order & Chaos amplifies The Golden Mean.' 'Amplifies' is a graph-edge label, not a reason a person cares about. Below the Play button, about 50% of the first screen is empty dark space, so the card looks unfinished and the hook doesn't fill the moment.",
+     "fix": "Write the reason as a human sentence from the related pair, e.g. 'You liked finding the middle in The Golden Mean. This one finds the middle between routine and the unknown.' Fall back to 'Because you played \"X\"' with no relation verb when no custom line exists. Fill the empty area with a preview of the game (the first scenario line or a blurred thumbnail of the slider/options), so the first screen shows what you will tap."
+    },
+    {
+     "card_id": "app",
+     "severity": "low",
+     "problem": "My map is a dense hairball: 88 nodes with domain labels overlapping nodes and each other (Meaning/Connection, Action/Thinking). Lighting up '1 of 88' feels like a chore rather than a reward, and the map shows no shareable moment.",
+     "fix": "At low progress, show only the lit nodes plus their direct neighbours, and dim and unlabel the rest. Place domain labels at each cluster's centre with a background pill so they don't sit on nodes. Change the header to a reachable goal, e.g. 'You've lit 1 idea. Light 5 to unlock your first constellation.'"
+    }
+   ],
+   "best_cards": [
+    "delays-beer-game",
+    "availability-vivid-choice",
+    "anchoring-price-choice"
+   ],
+   "verdict": "The writing is warm and honest, and it never shames (it rates 'contested' evidence and says 'not a verdict'), and the everyday scenarios are relatable. As a game, though, it is too easy. Most choice cards telegraph the best answer by its length and reasonableness, so the reward moment feels hollow and I wouldn't share many of these. The stand-outs are the cards with a real surprise: the Beer Game ('??' texts), mosquitoes vs snakes and the half-price anchor. Two concrete bugs also need fixing: the Venn dot sits in the all-three overlap when the result says nothing is lit, and the thermostat card's 'before dinner' fix contradicts its own scenario. Fix the tension in the distractors and these go from a 6 to an 8 on fun."
+  }
+ ],
+ "app_issues": [
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "I tapped 'School & mates', but only 2 of my 20 cards (three-conversations-swipe, growth-mindset-spectrum) are made for my world. The rest are 'all' cards with grown-up setups: cooking the same five dinners for months and moving house (order-chaos-balance), a $14.99 DVD (opportunity-cost-unseen), a hiking trip (availability-vivid-choice), being 80 in a rocking chair (regret-minimization-80), and guitar twice. The picker says 'your world's cards first', but it doesn't feel like that. After about 5 cards it stopped feeling like it was about me.",
+   "fix": "In the feed builder in app.js, when a world is picked, put cards whose audience matches that world in the first 8 slots before any 'all' card, and use 'all' cards only to fill the gaps. Content: add 'young' variants for order_chaos, opportunity_cost, regret_minimization and deliberate_practice. The rewrites below are ready to use.",
+   "from": "Maya, 16, Manchester. Year 11, lives on TikTok, skips anything that sounds like a teacher. Picked \"School & mates\" in the world picker and swiped through 20 cards."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Same concept twice in one short session: regret-minimization-80 at position 13, then regret-minimization-open-doors at position 15, with another 'hidden cost of a choice' card (opportunity-cost-unseen) in between. Guitar also turns up twice (quitting-wisely-choice-purpose, deliberate-practice-order). It felt like the app was stuck.",
+   "fix": "Dedupe by concept: don't serve two cards with the same 'concept' value within 12 cards of each other. Also add a soft rule that no two neighbouring cards share the same domain ('decisions' here).",
+   "from": "Maya, 16, Manchester. Year 11, lives on TikTok, skips anything that sounds like a teacher. Picked \"School & mates\" in the world picker and swiped through 20 cards."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "I picked 'Work', but only 3 of 20 cards were written for work (self-efficacy-choice, steelmanning-choice, emotion-naming-stressed-choice). The rest were guitar practice, home dinners, headphone shopping, mosquitoes on a hiking trip, a party, a 1 a.m. exam, outfits and posting photos. In app.js line 57 inWorld() lets every audience:'all' card through, and line 101 adds only +3 for a matching world card. After 5 cards I felt this was not for me.",
+   "fix": "In app.js line 101, raise the boost for a matching world card from +3 to +6. Add a rule: when S.world==='work', at least 1 card in every 3 served must have audience 'work'. Add an optional 'work_variant' field to CARD_SCHEMA.md: a replacement game.steps[0] with a workplace scenario, used when S.world==='work'. Write it first for anchoring-price-choice, availability-vivid-choice, reversible-doors-spectrum, sunk-cost-two-trips, sleep-memory-choice and quitting-wisely-choice-purpose (examples are in the issues below).",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. I picked \"Work\" in the world picker and want things I can use with my team tomorrow, no fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "The feed subtitle 'Because you played \"The Golden Mean\": Order & Chaos amplifies The Golden Mean.' is unclear to me as a non-native speaker. What does 'amplifies' mean between two ideas? It sounds like generated text, not a reason.",
+   "fix": "Change the relation template for 'amplifies' to plain words: 'Because you played \"{prev}\": this one goes a step further with the same idea.' For Order & Chaos specifically: 'Because you played \"The Golden Mean\": same balance idea, now for routine vs. new.'",
+   "from": "Radu, 44, engineering manager in Cluj, non-native English, tired and a bit burned out. I picked \"Work\" in the world picker and want things I can use with my team tomorrow, no fluff."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The feed repeats itself. Of my 20 cards, about 9 are really one lesson about starting or keeping a goal: wso-triad-venn, quitting-wisely, never-miss-twice, two-minute-rule, aim-high, mpc-loop, self-reflection-loop, one-percent and grit. The details repeat too. Guitar appears in quitting-wisely and mpc-loop, and the next-up teaser after grit is guitar again ('Played guitar for 10 years?'). Both two-minute-rule and mpc-loop open with 'You promised yourself 20 minutes'. By the middle of the session I felt I was being coached, not taught, and the more philosophical worlds (Old Wisdom, Meaning) barely appeared.",
+   "fix": "Add a feed rule: in any run of 10 cards, allow at most 2 cards that share the goal and habit cluster (concepts one_percent, never_miss_twice, two_minute_rule, aim_high, mpc_loop, wso_triad, quitting_wisely, grit, self_reflection_loop, deliberate_practice), and serve at least 1 Old Wisdom or Meaning card. Change the mpc-loop step 1 scenario to: 'You promised yourself you'd ring your sister every Sunday. Six weeks in, you've rung twice. What would a thermostat do?' Change the deliberate-practice teaser hook to: 'Cooked for 30 years? Why might year 30 taste like year 5?'",
+   "from": "Elena, 68, retired literature teacher who reads Seneca, Aristotle and Peterson. She values depth, accuracy and respect for the reader, and dislikes pop-psych oversimplification. She chose \"Everyday life\" in the world picker."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The feed's 'Because you played' line reads 'Order & Chaos amplifies The Golden Mean.' 'Amplifies' is jargon and I don't know what it means. The next hook, 'Is your life a cage or a flood right now?', is heavy for an anxious person scrolling at night. Both options sound bad.",
+   "fix": "Change the recommendation template from '<A> amplifies <B>' to 'Same balance idea as <B>, applied to your routines.' (or generic: 'Builds on <B>.'). Rewrite the order-chaos spectrum hook to 'Too much routine or too much change lately? Find your balance point.'",
+   "from": "Sam, 24, graduate with anxiety and low self-worth after a rough year. Picked \"Everyday life\". Played 20 cards and looked at 15 screenshots: card tops and reveals, plus the Feed (dark) and Map (light) views."
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "After a 20-card session, My map says 'You've lit up 1 of 88 ideas.' It feels like my session didn't count, and '1 of 88' feels like being far behind. The map is also hard to read: labels like 'Systems', 'Old Wisdom', 'Perception' and 'Emotions' sit on top of nodes and lines.",
+   "fix": "Check that every completed card's concept lights up its node (the count should reflect all concepts played this session). Change the copy to '<n> ideas lit so far. Each game adds a light.' and only show 'of 88' once n >= 10. Move domain labels to the outer edge of each cluster, give them a semi-opaque background pill (background: var(--bg) at 80%), and add 8px padding so they don't overlap nodes.",
+   "from": "Sam, 24, graduate with anxiety and low self-worth after a rough year. Picked \"Everyday life\". Played 20 cards and looked at 15 screenshots: card tops and reveals, plus the Feed (dark) and Map (light) views."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "The Venn result does not follow from the answers. In wso-triad-venn-a.png all three pillars score 3/10 and the result reads 'Nothing's fully lit yet'. The 'you, today' dot still sits in the middle where all three circles overlap, which on the diagram is the 'All Lights On' region. In app.js venn move(), an empty region (reg === \"\") falls back to geo.g, the shared centre of all three circles, and the 0.18 nudge barely moves it. A player who reads the picture gets the opposite message from the text.",
+   "fix": "In app.js venn move(), change `let [x, y] = reg ? geo.anchors[reg] || geo.g : geo.g;` to `let [x, y] = reg ? geo.anchors[reg] || geo.g : geo.anchors[\"\"];`. Skip the per-axis nudge when reg === \"\" so the dot stays outside every circle. Keep geo.g only for the 'undecided'/mid case. Add a QA check: when every axis is below threshold, regionAt(dot) must equal \"\".",
+   "from": "Dr. Okafor, 51, research psychologist. Checks every claim, citation and effect size, and looks hard at item wording and whether the results follow from the answers."
+  },
+  {
+   "card_id": "app",
+   "severity": "high",
+   "problem": "Choice cards have no tension. Across the session the 'best' option is almost always the longest, most balanced-sounding answer, and the wrong ones are obvious strawmen. Examples: golden-mean-social (both best answers are 2-3x longer than the others), reframing-late-text step 2, mpc-loop-thermostat-choice step 2, never-miss-twice-choice ('Decide you're just not a walking person'), introvert-energy-recharge ('Decide you're just antisocial now'). After 4-5 cards I could pick the right answer without reading the scenario, which kills game feel and the reward moment.",
+   "fix": "Add an authoring rule to CARD_SCHEMA.md and enforce it in the validator: within a step, option text lengths may differ by at most 40%, and at least one non-best option has to be something a reasonable person would really pick. Apply it to the cards named here: cut the best options to under 70 characters and turn each 'Decide you're just X' strawman into a plausible tempting move. For example, introvert step 2 becomes 'Cancel everything and stay in all weekend.' and never-miss-twice step 1 becomes 'Do the full walk tonight to make up for yesterday.'",
+   "from": "Lina, 31, product designer for mobile games and learning apps (QA session 17, world: Everyday life)"
+  },
+  {
+   "card_id": "app",
+   "severity": "medium",
+   "problem": "The feed's recommendation line is system jargon: 'Because you played \"The Golden Mean\": Order & Chaos amplifies The Golden Mean.' 'Amplifies' is a graph-edge label, not a reason a person cares about. Below the Play button, about 50% of the first screen is empty dark space, so the card looks unfinished and the hook doesn't fill the moment.",
+   "fix": "Write the reason as a human sentence from the related pair, e.g. 'You liked finding the middle in The Golden Mean. This one finds the middle between routine and the unknown.' Fall back to 'Because you played \"X\"' with no relation verb when no custom line exists. Fill the empty area with a preview of the game (the first scenario line or a blurred thumbnail of the slider/options), so the first screen shows what you will tap.",
+   "from": "Lina, 31, product designer for mobile games and learning apps (QA session 17, world: Everyday life)"
+  },
+  {
+   "card_id": "app",
+   "severity": "low",
+   "problem": "My map is a dense hairball: 88 nodes with domain labels overlapping nodes and each other (Meaning/Connection, Action/Thinking). Lighting up '1 of 88' feels like a chore rather than a reward, and the map shows no shareable moment.",
+   "fix": "At low progress, show only the lit nodes plus their direct neighbours, and dim and unlabel the rest. Place domain labels at each cluster's centre with a background pill so they don't sit on nodes. Change the header to a reachable goal, e.g. 'You've lit 1 idea. Light 5 to unlock your first constellation.'",
+   "from": "Lina, 31, product designer for mobile games and learning apps (QA session 17, world: Everyday life)"
+  }
+ ],
+ "fixes": [
+  {
+   "domain": "action",
+   "applied": 5,
+   "skipped": [
+    "wso-triad-venn: app.js venn renderer changes (dot placement outside circles when no axis passes, 'half-lit' label, 'TODAY'S SNAPSHOT' kicker, low/mid/high words instead of N/10 scores) are outside action.json; needs an app.js edit",
+    "self-efficacy-captain-swipe: feed rule (no two same-concept cards within 5) is app/feed logic, not card content",
+    "All other issues target cards not in action.json (order-chaos-balance, opportunity-cost-unseen, introvert-energy-recharge, etc.)",
+    "Insight length pass: no insight in action.json exceeded 200 chars",
+    "needs_review pass: only listed card (introvert-energy-recharge) is not in action.json",
+    "Audience pass: all 18 cards already had explicit audience values consistent with their content; no relabel needed"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "perception",
+   "applied": 20,
+   "skipped": [
+    "All issues for cards not in perception.json (order-chaos-balance, opportunity-cost-unseen, deliberate-practice-order, three-conversations-swipe, regret-minimization-80, wso-triad-venn, reversible-doors-spectrum, anchoring-price-choice, trust-ledger-swipe, availability-vivid-choice, self-efficacy-captain-swipe, introvert-energy-recharge, never-miss-twice-choice, golden-mean-social, self-reflection-loop-practice, grit-west-point-reveal, two-minute-rule-choice, risky-play-risk-hazard-choice, confirmation-bias-2-4-6, emotional-contagion-estimate)",
+    "needs_review card introvert-energy-recharge is not in perception.json",
+    "stress-mindset-choice-fuel: concept left as stress_mindset (no anxiety_reappraisal node in concepts.json); added Crum, Salovey & Achor 2013 to source instead",
+    "No insight in the file was over 200 chars apart from the newly rewritten stress-mindset-choice-fuel one, which was kept at 197 chars; audience was already set explicitly and correctly on all 19 cards, so no change was needed"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "thinking",
+   "applied": 6,
+   "skipped": [
+    "availability-vivid-choice (Dr. Okafor snakebite-kit feedback): resolved by Radu's replacement of step 2, which removes the snakebite option entirely",
+    "needs_review card introvert-energy-recharge is not in thinking.json",
+    "All other card_ids in the issue list belong to other domain files",
+    "No insight in this file exceeded 200 chars; all cards already had explicit audience (only anchoring-price-choice and availability-vivid-choice changed to 'work' after their new office steps)"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "systems",
+   "applied": 3,
+   "skipped": [
+    "All 39 persona/fact-check issues: none of their card_ids are in systems.json (order-chaos-balance, opportunity-cost-unseen, wso-triad-venn, reframing-late-text, etc. live in other files)",
+    "Insight shortening: all 15 insights already <=200 chars",
+    "needs_review: introvert-energy-recharge is not in systems.json",
+    "Audience: all 15 cards already had explicit audience values that match their content (11 all, 3 work, 1 young); no change needed"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "habits",
+   "applied": 6,
+   "skipped": [
+    "All other issue card_ids are not in habits.json (order-chaos-balance, opportunity-cost-unseen, deliberate-practice-order, three-conversations-swipe, regret-minimization-80, wso-triad-venn, reversible-doors-spectrum, anchoring-price-choice, trust-ledger-swipe, availability-vivid-choice, self-efficacy-captain-swipe, introvert-energy-recharge, golden-mean-social, reframing-late-text, mpc-loop-thermostat-choice, self-reflection-loop-practice, stress-mindset-choice-fuel, risky-play-risk-hazard-choice, grit-west-point-reveal, confirmation-bias-2-4-6, emotional-contagion-estimate, useful-truth-action-choice)",
+    "never-miss-twice-choice: model shortened from the suggested wording to fit the 110-char limit ('Missed more? Come back soon and small.'); optional Lally insight addition already present",
+    "two-minute-rule-choice option 3: used 'right after breakfast' instead of 'after your first coffee' so the line fits audience 'all' (teens)",
+    "needs_review.json lists only introvert-energy-recharge, not in this file",
+    "No insight exceeded 200 chars; audience already explicitly set on all 17 cards and verified correct (15 all, 2 work)"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "emotions",
+   "applied": 1,
+   "skipped": [
+    "All other card_ids in the issue list are not in emotions.json (only emotional-contagion-estimate is)",
+    "introvert-energy-recharge (needs_review) is not in emotions.json",
+    "No insight exceeded 200 chars; all 15 cards already had explicit, correct audience values; from_source quotes checked against public-domain translations and found accurate"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "meaning",
+   "applied": 6,
+   "skipped": [
+    "All other issue card_ids (opportunity-cost-unseen, deliberate-practice-order, three-conversations-swipe, regret-minimization-80, wso-triad-venn, reversible-doors-spectrum, anchoring-price-choice, trust-ledger-swipe, availability-vivid-choice, self-efficacy-captain-swipe, introvert-energy-recharge, never-miss-twice-choice, golden-mean-social, reframing-late-text, mpc-loop-thermostat-choice, self-reflection-loop-practice, stress-mindset-choice-fuel, grit-west-point-reveal, two-minute-rule-choice, risky-play-risk-hazard-choice, confirmation-bias-2-4-6, emotional-contagion-estimate, useful-truth-action-choice): not in meaning.json",
+    "Insight shortening: all 15 insights already <=200 chars",
+    "needs_review.json lists only introvert-energy-recharge, not in this file",
+    "Audience: other 14 cards already explicit and checked correct; no rewrites needed"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "growth",
+   "applied": 17,
+   "skipped": [
+    "order-chaos-balance (not in growth.json)",
+    "opportunity-cost-unseen (not in growth.json)",
+    "three-conversations-swipe (not in growth.json; app.js change out of scope)",
+    "regret-minimization-80 (not in growth.json)",
+    "wso-triad-venn x4 (not in growth.json; app.js renderer out of scope)",
+    "reversible-doors-spectrum (not in growth.json)",
+    "anchoring-price-choice (not in growth.json)",
+    "trust-ledger-swipe (not in growth.json)",
+    "availability-vivid-choice x2 (not in growth.json)",
+    "self-efficacy-captain-swipe (not in growth.json; feed spacing is app-level)",
+    "introvert-energy-recharge x3 + needs_review entry (not in growth.json)",
+    "never-miss-twice-choice x3 (not in growth.json)",
+    "golden-mean-social (not in growth.json)",
+    "reframing-late-text x3 (not in growth.json)",
+    "mpc-loop-thermostat-choice x3 (not in growth.json)",
+    "stress-mindset-choice-fuel x2 (not in growth.json)",
+    "two-minute-rule-choice (not in growth.json)",
+    "confirmation-bias-2-4-6 (not in growth.json)",
+    "emotional-contagion-estimate (not in growth.json)",
+    "useful-truth-action-choice (not in growth.json)",
+    "self-reflection-loop-practice: Ellis & Davidi insight softened to 'reviewing successes as well as failures beat failures-only' rather than 'about as much', to avoid overstating the study; Boyatzis dropped from source since reveal no longer cites him",
+    "insight >200 shortening: none needed, all growth insights already <=200 after edits",
+    "audience: all 23 cards already had explicit audience; only deliberate-practice-order changed (to young)"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "connection",
+   "applied": 12,
+   "skipped": [
+    "three-conversations-swipe: neutral review marker and 'Usually:' label are app.js changes outside this file; the schema has no 'either' side, so the mum item stays 'left' and only its why was rewritten",
+    "introvert-energy-recharge: Elena's fix not applied as written (her best feedback still ties leaving early to introversion, and from_source was removed per fact-check); Dr. Okafor's stricter version was used instead",
+    "Issues for cards not in connection.json (order-chaos-balance, opportunity-cost-unseen, deliberate-practice-order, regret-minimization-80, wso-triad-venn, reversible-doors-spectrum, anchoring-price-choice, availability-vivid-choice, self-efficacy-captain-swipe, never-miss-twice-choice, golden-mean-social, reframing-late-text, mpc-loop-thermostat-choice, self-reflection-loop-practice, stress-mindset-choice-fuel, grit-west-point-reveal, two-minute-rule-choice, risky-play-risk-hazard-choice, confirmation-bias-2-4-6, emotional-contagion-estimate, useful-truth-action-choice)",
+    "No insight exceeded 200 chars; all other cards already had a correct explicit audience"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "attention",
+   "applied": 1,
+   "skipped": [
+    "All 39 panel issues: no listed card_id is in attention.json",
+    "needs_review card introvert-energy-recharge is not in attention.json",
+    "Insight shortening: all 15 insights already <=200 chars (max 199)",
+    "Audience: already explicitly set on all 15 cards and verified correct (young: deep-work-sort; work: attention-residue-estimate, deep-work-quiet-mornings, attention-residue-quick-question; all: the rest)"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "decisions",
+   "applied": 11,
+   "skipped": [
+    "opportunity-cost-unseen try_today: kept the 'That money could also get me…' sentence but replaced 'Depop order or Greggs run' with neutral examples (in-game item, online order, takeaway), so the card stays audience 'all' and avoids UK/teen-only brands",
+    "regret-minimization-80 hook: shortened the suggested hook to 69 chars ('Future you, scrolling old memories: cringe at fails, or never-tried?') to fit the 70-char limit",
+    "All other issue card_ids are not in decisions.json; no insight exceeded 200 chars; no needs_review card (introvert-energy-recharge) is in this file; audience was already explicit on every card, and only reversible-doors-spectrum changed (all -> work, after its questions became work-based; hook, try_today and try_team were rewritten to match)"
+   ],
+   "validator_errors": 0
+  },
+  {
+   "domain": "wisdom",
+   "applied": 3,
+   "skipped": [
+    "golden-mean-social insight: used a shortened version of the suggested wording (188 chars) to stay within the 200-char insight limit",
+    "All other card_ids in the issue list are not in wisdom.json (order-chaos-balance, opportunity-cost-unseen, deliberate-practice-order, three-conversations-swipe, regret-minimization-80, wso-triad-venn, reversible-doors-spectrum, anchoring-price-choice, trust-ledger-swipe, availability-vivid-choice, self-efficacy-captain-swipe, introvert-energy-recharge, never-miss-twice-choice, reframing-late-text, mpc-loop-thermostat-choice, self-reflection-loop-practice, stress-mindset-choice-fuel, grit-west-point-reveal, two-minute-rule-choice, risky-play-risk-hazard-choice, confirmation-bias-2-4-6, emotional-contagion-estimate, useful-truth-action-choice)",
+    "needs_review.json lists only introvert-energy-recharge, which is not in wisdom.json",
+    "No insight was over 200 chars; all 18 cards already had an explicit audience that I checked as correct (young: eulogy-radar, school-days; work: grudge, pitch-goal, new-job-glow; all: the rest), so nothing needed changing"
+   ],
+   "validator_errors": 0
+  }
+ ]
+}

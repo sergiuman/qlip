@@ -51,7 +51,7 @@
   };
 
   // ---------- recommender (graph walk + novelty + balance) ----------
-  const EDGE_WORD = { BUILDS_ON: "builds on", AMPLIFIES: "amplifies", CONTRASTS: "pulls against", REMEDIES: "is a fix for", PART_OF: "is part of", RELATED: "connects to" };
+  const EDGE_WORD = { BUILDS_ON: "this one goes a step further", AMPLIFIES: "same idea, pushed further", CONTRASTS: "this one pulls the other way", REMEDIES: "these two help fix each other", PART_OF: "one piece of the same bigger idea", RELATED: "a close cousin of that idea" };
   const reasons = {};
   // A player's chosen world hides cards written for the other one; "everyday" shows only cards for anyone.
   const inWorld = (c) => !S.world || c.audience === "all" || c.audience === (S.world === "young" ? "young" : S.world === "work" ? "work" : "none");
@@ -83,7 +83,7 @@
         if (c.sensitive && queue.concat(picks).slice(-3).some((id) => CARD[id].sensitive)) continue;
         if (c.type === "reveal" && queue.concat(picks).slice(-4).filter((id) => CARD[id].type === "reveal").length >= 2) continue;
         if ((c.type === "venn" || c.type === "radar") && queue.length + picks.length < 2) continue;
-        if (queue.concat(picks).slice(-6).some((id) => CARD[id].concept === c.concept)) continue;
+        if (queue.concat(picks).slice(-12).some((id) => CARD[id].concept === c.concept)) continue;
         let s = 0;
         if (S.done[c.id]) s -= 6;
         s -= (S.seen[c.id] || 0) * 1.5;
@@ -98,15 +98,15 @@
         s += (CONCEPT[c.concept]?.rank || 0) * 25;
         s += hash(c.id + SESSION) * 1.6;
         if (c.audience !== "all") s += Math.max(-2, Math.min(2, (S.aud?.[c.audience] || 0) * 0.5));
-        if (S.world && c.audience !== "all" && inWorld(c)) s += 3;
+        // A picked world should feel like yours: its own cards lead, and at least one in three comes from it.
+        if (S.world && c.audience !== "all" && inWorld(c)) s += 6 + (queue.concat(picks).slice(-2).some((id) => CARD[id].audience === c.audience) ? 0 : 4);
         if (s > bestScore) { bestScore = s; best = c; }
       }
       if (!best) break;
       picks.push(best.id);
       const nb = near.get(best.concept);
       if (nb && nb.type !== "SAME" && CONCEPT[nb.from]) {
-        const [a, b] = nb.dir === "out" ? [CONCEPT[nb.from].name, CONCEPT[best.concept].name] : [CONCEPT[best.concept].name, CONCEPT[nb.from].name];
-        reasons[best.id] = `Because you played “${CONCEPT[nb.from].name}”: ${a} ${EDGE_WORD[nb.type] || "connects to"} ${b}.`;
+        reasons[best.id] = `Because you played “${CONCEPT[nb.from].name}”: ${EDGE_WORD[nb.type] || EDGE_WORD.RELATED}.`;
       } else if (nb) {
         reasons[best.id] = "Another angle on an idea you just played.";
       } else {
@@ -357,8 +357,10 @@
       const move = () => {
         const sc = scores(), reg = regionOf(sc);
         keys.forEach((k) => { if (sc[k] == null) return; circles[k].setAttribute("fill-opacity", (0.05 + 0.4 * sc[k]).toFixed(2)); circles[k].setAttribute("stroke-opacity", (0.35 + 0.65 * sc[k]).toFixed(2)); });
-        let [x, y] = reg ? geo.anchors[reg] || geo.g : geo.g;
-        keys.forEach((k) => { if (sc[k] == null) return; const [cx, cy] = geo.centers[k]; x += (cx - geo.g[0]) * (sc[k] - 0.5) * 0.18; y += (cy - geo.g[1]) * (sc[k] - 0.5) * 0.18; });
+        // No pillar lit: sit outside every circle, never in the all-three overlap.
+        const lit = keys.some((k) => sc[k] != null);
+        let [x, y] = reg ? geo.anchors[reg] || geo.g : lit ? geo.anchors[""] : geo.g;
+        if (reg || !lit) keys.forEach((k) => { if (sc[k] == null) return; const [cx, cy] = geo.centers[k]; x += (cx - geo.g[0]) * (sc[k] - 0.5) * 0.18; y += (cy - geo.g[1]) * (sc[k] - 0.5) * 0.18; });
         if (reg && geo.regionAt(x, y) !== reg) [x, y] = geo.anchors[reg] || geo.g;
         youLbl.setAttribute("x", x.toFixed(1)); youLbl.setAttribute("y", (y + 24).toFixed(1)); youLbl.setAttribute("opacity", 1);
         dot.setAttribute("cx", x.toFixed(1)); dot.setAttribute("cy", y.toFixed(1)); dot.setAttribute("opacity", 1);
@@ -465,8 +467,8 @@
             btns.remove(); stage.remove(); fb.remove();
             const n = g.items.length, misses = log.filter((x) => !x.ok);
             const recap = h("ul", { class: "recap" }, log.slice().sort((a, b) => a.ok - b.ok).map((x) =>
-              h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, card.sensitive ? "•" : x.ok ? "✓" : "✗"),
-                h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.ok ? "" : `Belongs in: ${x.label.replace(/[?.!]+$/, "")}. `}${x.it.why}`)))));
+              h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, card.sensitive ? "•" : x.ok ? "✓" : "↔"),
+                h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.ok ? "" : `Usually: ${x.label.replace(/[?.!]+$/, "")}. `}${x.it.why}`)))));
             score.replaceWith(recap);
             done({ name: right === n ? "Clean sweep." : right >= n * 0.75 ? `${right} of ${n}. Sharp sorting.` : `${right} of ${n}. Here's the pattern.`,
               tally: "" });
@@ -709,7 +711,7 @@
     const top = Object.entries(domPlays).sort((a, b) => b[1] - a[1])[0];
     $("#map-summary").textContent = (S.streak.n > 1 ? `${S.streak.n}-day streak. ` : "") + (lit
       ? lit >= DB.concepts.length ? `You've explored all ${lit} ideas. New ones grow into the graph every day.`
-      : `You've lit up ${lit} of ${DB.concepts.length} ideas.${top && lit >= 3 ? ` Most explored: ${DOMAIN[top[0]].name}.` : ""}`
+      : `${lit} ${lit === 1 ? "idea" : "ideas"} lit so far${lit >= 10 ? ` of ${DB.concepts.length}` : ". Each game adds a light"}.${top && lit >= 3 ? ` Most explored: ${DOMAIN[top[0]].name}.` : ""}`
       : `${DB.concepts.length} ideas are waiting. Play any game to light up your first one.`);
     $("#map-legend").replaceChildren(...DB.domains.map((d) => h("span", {}, h("i", { style: `background:${d.color}` }), d.name)));
     const prof = Object.entries(S.profile).sort((a, b) => b[1].at - a[1].at);
