@@ -42,5 +42,49 @@
   },
   "panel_detail": {},
   "note": "local daily loop day 7"
+ },
+ {
+  "session": 1008,
+  "at": "2026-11-02T07:40:37+00:00",
+  "automated": 49.51,
+  "panel": null,
+  "composite": 49.51,
+  "delta": 0.07,
+  "passed": true,
+  "breakdown": {
+   "schema": 5,
+   "playthrough": 8.0,
+   "console": 4,
+   "overflow": 3,
+   "a11y": 6.0,
+   "readability": 5,
+   "actionable": 2.99,
+   "sourced": 1.0,
+   "graph_connected": 2,
+   "coverage": 3.0,
+   "type_diversity": 1.63,
+   "domain_balance": 1.99,
+   "depth": 2.9,
+   "hook_distinct": 2.0,
+   "brief_reveal": 1.0
+  },
+  "detail": {
+   "validator_errors": 0,
+   "cards": 214,
+   "played_ok": 214,
+   "console_errors": 0,
+   "overflow": 0,
+   "a11y_serious": 0,
+   "flesch_avg": 75.2,
+   "try_today_verb_rate": 0.995,
+   "sensitive_cards": 53,
+   "first_card_ms": 288,
+   "edges": 377,
+   "concept_depth": 0.966,
+   "hook_distinct_rate": 1.0,
+   "brief_reveal_rate": 1.0
+  },
+  "panel_detail": {},
+  "note": "local daily loop day 8"
  }
 ]

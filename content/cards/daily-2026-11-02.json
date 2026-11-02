@@ -1,0 +1,68 @@
+[
+  {
+    "id": "introvert-energy-recharge",
+    "concept": "introvert_energy",
+    "domain": "connection",
+    "type": "choice",
+    "hook": "Favorite band's concert ends. What's next?",
+    "title": "Introvert Energy Recharge",
+    "game": {
+      "steps": [
+        {
+          "scenario": "The last song ends, the crowd cheers. You…",
+          "options": [
+            {
+              "text": "Feel energized and ready to keep the party going!",
+              "feedback": "It's easy for extroverts to feel this way — their energy often feeds off social interaction. For introverts, it might be a signal your battery is running low.",
+              "best": false
+            },
+            {
+              "text": "Start feeling calmer, more content with quiet reflection.",
+              "best": true,
+              "feedback": "Introverts often recharge through solitude and quiet contemplation. The music was stimulating, but now you crave some downtime to process it all."
+            }
+          ]
+        },
+        {
+          "scenario": "What's your ideal way to spend the next hour after the concert?",
+          "options": [
+            {
+              "text": "Grab a drink with friends and chat about the show!",
+              "feedback": "Socializing is likely energizing for you. It doesn't mean introverts can't enjoy it, but it might be a little draining after a while.",
+              "best": false
+            },
+            {
+              "text": "Head home, put on some relaxing music, and journal about your experience.",
+              "best": true,
+              "feedback": "A solo activity that allows for quiet reflection is perfect for recharging. Introverts often find deep satisfaction in processing their thoughts and feelings privately."
+            }
+          ]
+        }
+      ]
+    },
+    "insight": "Introversion is recharging alone, not shyness.  Extroverts gain energy socially, introverts through solitude.  Choose what supports your well-being.",
+    "model": "Introvert = Recharge through solitude, Extrovert = Recharge through social interaction.",
+    "try_today": "Energized by some tasks? Drained by others?  Notice the patterns & plan your day for more energy!",
+    "source": {
+      "thinkers": [
+        "Susan Cain",
+        "Carl Jung"
+      ],
+      "work": "Quiet: The Power of Introverts in a World That Can't Stop Talking (2012), by Susan Cain; Psychological Types (1921), by Carl Jung"
+    },
+    "evidence": "moderate",
+    "level": 1,
+    "related": [
+      "deep_work",
+      "still_water_vision"
+    ],
+    "try_team": "Share your recharge strategies with your team. Create a 'recharge station' in the office — a quiet space for breaks and reflection.",
+    "from_source": {
+      "quote": "Introverts need solitude to recharge their batteries, while extroverts gain energy from social interaction.",
+      "cite": "Susan Cain, Quiet: The Power of Introverts in a World That Can't Stop Talking (2012)",
+      "next_read": "Quiet, Chapters 1–3 (about introversion and its misconceptions)"
+    },
+    "audience": "all",
+    "sensitive": true
+  }
+]

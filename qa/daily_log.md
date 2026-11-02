@@ -49,3 +49,21 @@ built: 213 cards (0 skipped), 88 concepts, 379 edges, 1 component(s), 0 concepts
 {"session": 1007, "automated": 49.44, "panel": null, "composite": 49.44, "delta": null, "passed": true}
 breakdown: {'schema': 5, 'playthrough': 8.0, 'console': 4, 'overflow': 3, 'a11y': 6.0, 'readability': 5, 'actionable': 2.97, 'sourced': 1.0, 'graph_connected': 2, 'coverage': 3.0, 'type_diversity': 1.63, 'domain_balance': 1.99, 'depth': 2.86, 'hook_distinct': 1.99, 'brief_reveal': 1.0}
 detail: {'validator_errors': 0, 'cards': 213, 'played_ok': 213, 'console_errors': 0, 'overflow': 0, 'a11y_serious': 0, 'flesch_avg': 73.0, 'try_today_verb_rate': 0.991, 'sensitive_cards': 53, 'first_card_ms': 368, 'edges': 379, 'concept_depth': 0.955, 'hook_distinct_rate': 0.995, 'brief_reveal_rate': 1.0} {}
+
+## Day 8 — 2026-11-02
+
+library not readable here (PermissionError); keeping existing sources/corpus.json
+built: 213 cards (0 skipped), 88 concepts, 377 edges, 1 component(s), 0 concepts without cards
+gaps: 4 depth + 0 expand tasks; 4 concepts still single-angle
+backend: ollama
+rejected depth shared_fictions ["shared_fictions-currency: missing 'insight'", "shared_fictions-currency: missing 'model'"]
+rejected depth amor_fati ["amor-fati-new-path: related must be 1-3 known concept ids: ['reframing', 'growth_mindset', 'opportunity_cost', 'deep_work']"]
+accepted depth introvert_energy introvert-energy-recharge
+rejected depth truthful_courage ['truthful_courage_reveal: id must be kebab-case', 'truthful_courage_reveal: reveal: choices must be plain strings']
+accepted 1/4
+214 cards, 0 errors
+built: 214 cards (0 skipped), 88 concepts, 377 edges, 1 component(s), 0 concepts without cards
+{"cards": 214, "played_ok": 214, "failed": [], "overflow": [], "first_card_ms": 288} console_errors=0 a11y_serious=0
+{"session": 1008, "automated": 49.51, "panel": null, "composite": 49.51, "delta": 0.07, "passed": true}
+breakdown: {'schema': 5, 'playthrough': 8.0, 'console': 4, 'overflow': 3, 'a11y': 6.0, 'readability': 5, 'actionable': 2.99, 'sourced': 1.0, 'graph_connected': 2, 'coverage': 3.0, 'type_diversity': 1.63, 'domain_balance': 1.99, 'depth': 2.9, 'hook_distinct': 2.0, 'brief_reveal': 1.0}
+detail: {'validator_errors': 0, 'cards': 214, 'played_ok': 214, 'console_errors': 0, 'overflow': 0, 'a11y_serious': 0, 'flesch_avg': 75.2, 'try_today_verb_rate': 0.995, 'sensitive_cards': 53, 'first_card_ms': 288, 'edges': 377, 'concept_depth': 0.966, 'hook_distinct_rate': 1.0, 'brief_reveal_rate': 1.0} {}

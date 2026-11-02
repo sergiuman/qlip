@@ -2,68 +2,50 @@
  "tasks": [
   {
    "kind": "depth",
-   "concept": "power_of_yet",
-   "domain": "growth",
-   "type": "radar",
-   "has": [
-    "choice"
-   ]
-  },
-  {
-   "kind": "depth",
-   "concept": "self_reflection_loop",
-   "domain": "growth",
-   "type": "venn",
-   "has": [
-    "choice"
-   ]
-  },
-  {
-   "kind": "depth",
-   "concept": "order_chaos",
-   "domain": "meaning",
-   "type": "radar",
-   "has": [
-    "spectrum"
-   ]
-  },
-  {
-   "kind": "depth",
    "concept": "shared_fictions",
    "domain": "connection",
-   "type": "order",
+   "type": "radar",
    "has": [
     "swipe"
    ]
   },
   {
    "kind": "depth",
-   "concept": "boredom_signal",
-   "domain": "attention",
+   "concept": "amor_fati",
+   "domain": "wisdom",
    "type": "venn",
    "has": [
-    "estimate"
+    "reveal"
    ]
   },
   {
    "kind": "depth",
-   "concept": "golden_mean",
-   "domain": "wisdom",
+   "concept": "introvert_energy",
+   "domain": "connection",
    "type": "radar",
    "has": [
     "spectrum"
    ]
+  },
+  {
+   "kind": "depth",
+   "concept": "truthful_courage",
+   "domain": "wisdom",
+   "type": "order",
+   "has": [
+    "choice"
+   ]
   }
  ],
- "concepts_single_card": 9,
+ "concepts_single_card": 4,
  "type_use": {
-  "venn": 7,
-  "reveal": 48,
-  "choice": 71,
+  "venn": 6,
+  "reveal": 50,
+  "choice": 74,
   "swipe": 35,
   "spectrum": 15,
   "order": 6,
   "estimate": 25,
-  "radar": 7
+  "radar": 6
  }
 }
