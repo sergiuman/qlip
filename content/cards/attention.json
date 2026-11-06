@@ -28,7 +28,7 @@
           ]
         },
         {
-          "q": "When I study or work on something hard, my notifications are…",
+          "q": "When I'm doing something hard, my notifications are…",
           "options": [
             {
               "label": "All on, I like being reachable",
@@ -193,7 +193,7 @@
     "concept": "attention_residue",
     "domain": "attention",
     "type": "estimate",
-    "hook": "How long do you stay on one screen before switching? Guess.",
+    "hook": "Your attention feels steady. A stopwatch might disagree.",
     "title": "Attention Residue",
     "game": {
       "question": "In Gloria Mark's recent workplace studies, how many seconds did people stay on one screen, on average, before switching?",
@@ -210,9 +210,10 @@
     "source": {
       "thinkers": [
         "Sophie Leroy",
+        "Theresa Glomb",
         "Gloria Mark"
       ],
-      "work": "Leroy, Why is it so hard to do my work? (2009); Mark, Attention Span (2023)"
+      "work": "Leroy, Why is it so hard to do my work? (2009); Leroy & Glomb, Organization Science (2018); Mark, Attention Span (2023)"
     },
     "evidence": "moderate",
     "level": 1,
@@ -233,7 +234,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "Big exam or presentation at 9 a.m. You've prepared all evening. It's 1 a.m. and you feel you've only half got it. You…",
+          "scenario": "Big exam, interview or talk at 9 a.m. You've prepared all evening. It's 1 a.m. and you feel you've only half got it. You…",
           "options": [
             {
               "text": "Do one quick review of the key points, then sleep",
@@ -307,7 +308,7 @@
       ],
       "explain": "Step 5 leads straight back to step 1: that's the loop. Like a slot machine, the feed pays out at random, so it's easy to keep pulling. The relief is real but brief, and the itch stays."
     },
-    "insight": "Random rewards are the hardest kind to stop chasing. You're not weak; the design is strong. Haidt links heavy phone use to harm in teens; researchers still debate how much.",
+    "insight": "Random rewards are hard to stop chasing. You're not weak; the design is strong. Haidt links heavy phone use to harm in teens; researchers still debate how much.",
     "model": "Random rewards are hard to stop chasing. Break the loop at the itch, not the thumb.",
     "try_today": "Next time you reach for your phone, pause and name the itch in one word (bored, tense, lonely). Then decide.",
     "source": {
@@ -369,7 +370,7 @@
     "concept": "boredom_signal",
     "domain": "attention",
     "type": "estimate",
-    "hook": "Alone with your thoughts for 15 minutes, or a mild shock? Guess.",
+    "hook": "Left alone for 15 minutes with a shock button. Who presses it?",
     "title": "Boredom Is a Signal",
     "game": {
       "question": "In a 2014 study, people sat alone with nothing to do for 15 minutes, with a button that gave a mild electric shock. What % of men shocked themselves at least once?",
@@ -378,9 +379,9 @@
       "step": 1,
       "unit": "%",
       "answer": 67,
-      "explain": "67%: 12 of 18 men pressed the shock button at least once rather than sit 15 minutes with their thoughts (women: 6 of 24, about 1 in 4), even though they'd said they would pay to avoid it. Small study (Wilson et al., Science, 2014), so treat it as a striking hint, not a law."
+      "explain": "67%: 12 of 18 men pressed the shock button at least once during 15 idle minutes, though some may just have been curious (women: 6 of 24, about 1 in 4). They'd said they would pay to avoid it. Small study (Wilson et al., Science, 2014), so treat it as a striking hint, not a law."
     },
-    "insight": "That urge to grab your phone the second you're bored? Same thing. Researchers see boredom as a signal that what you're doing doesn't engage you. Listened to, it can point to a better goal.",
+    "insight": "Small study, and one press might be curiosity. Your phone urge may be a cousin of this, not proof. Researchers see boredom as a signal that a task isn't engaging you. It can point to a better goal.",
     "model": "Boredom is a question, not a void: 'What would actually be worth my attention right now?'",
     "try_today": "Next time you feel bored, wait two minutes before grabbing your phone and ask: what would I like to be doing?",
     "source": {
@@ -477,7 +478,7 @@
     "concept": "sleep_memory",
     "domain": "attention",
     "type": "reveal",
-    "hook": "Rats ran a maze all day. At night, their brains did something eerie.",
+    "hook": "Rats ran a maze by day. At night, their brains did something eerie.",
     "title": "Your Brain Replays the Day",
     "game": {
       "prompt": "Scientists record 'place cells' in rats: brain cells that fire at certain spots along a maze route. The rats run the maze, then fall asleep. What do those cells do during sleep?",
@@ -739,7 +740,7 @@
         {
           "text": "Pulling to refresh your social feed for something new",
           "side": "right",
-          "why": "Each pull might bring something good. Random payoffs are among the hardest habits to quit, and the feed never runs out."
+          "why": "Each pull might bring something good. Random payoffs are hard to quit, and the feed never runs out."
         },
         {
           "text": "Checking the match score at full time",
@@ -815,7 +816,7 @@
             },
             {
               "text": "Decide you're just lazy",
-              "feedback": "A harsh story about yourself, and not what the research says. Boredom is a signal about the task, not a flaw in you."
+              "feedback": "A harsh story, and it doesn't help. Read boredom as a signal about the fit with this task."
             }
           ]
         }
@@ -828,9 +829,11 @@
     "source": {
       "thinkers": [
         "James Danckert",
-        "John Eastwood"
+        "John Eastwood",
+        "Erin Westgate",
+        "Timothy Wilson"
       ],
-      "work": "Danckert & Eastwood, Out of My Skull: The Psychology of Boredom (2020)"
+      "work": "Danckert & Eastwood, Out of My Skull: The Psychology of Boredom (2020); Westgate & Wilson, Boring thoughts and bored minds, Psychological Review (2018)"
     },
     "evidence": "moderate",
     "level": 1,

@@ -194,56 +194,60 @@
     "concept": "availability",
     "domain": "thinking",
     "type": "swipe",
-    "hook": "Your brain ranks dangers by how easily they come to mind. Test it.",
+    "hook": "Does your gut rank dangers by how easily they come to mind?",
     "title": "Availability Bias",
     "game": {
-      "prompt": "Most people's gut sense of how often this happens is…",
+      "prompt": "In a classic US survey, people's guesses at how often this kills were…",
       "left": "Too high (it's rarer)",
       "right": "Too low (it's more common)",
       "items": [
         {
-          "text": "Dying in a plane crash",
+          "text": "Tornadoes",
           "side": "left",
-          "why": "Crashes get huge coverage. Per mile, commercial flying is far safer than driving."
+          "why": "Judged deadlier than asthma, which killed about 20 times as many."
         },
         {
-          "text": "Being killed by a shark",
+          "text": "Stroke",
+          "side": "right",
+          "why": "Most guessed accidents kill more, yet stroke killed almost twice as many."
+        },
+        {
+          "text": "Botulism",
           "side": "left",
-          "why": "About 5 to 10 unprovoked shark deaths a year worldwide."
+          "why": "Judged deadlier than lightning, which killed about 50 times as many."
         },
         {
-          "text": "Getting hurt cycling or walking near traffic",
+          "text": "Diabetes",
           "side": "right",
-          "why": "Road injuries are the top killer of 5 to 29-year-olds worldwide (WHO). So routine they're rarely news."
+          "why": "Badly underrated, yet it kills over a million people a year worldwide (WHO)."
         },
         {
-          "text": "A child taken by a total stranger",
+          "text": "Floods",
           "side": "left",
-          "why": "Stranger abductions are very rare; most missing children are runaways or family cases."
+          "why": "Overrated in the survey. Disasters make vivid news."
         },
         {
-          "text": "Heart disease as a cause of death",
+          "text": "Asthma",
           "side": "right",
-          "why": "It's the top cause of death worldwide (WHO), yet rarely makes headlines."
-        },
-        {
-          "text": "Diabetes as a cause of death",
-          "side": "right",
-          "why": "It kills over a million people a year worldwide (WHO), quietly and with little coverage."
+          "why": "Underrated in the survey. A quiet killer that rarely makes the news."
         }
       ]
     },
-    "insight": "Vivid, dramatic events are easy to recall, so they feel common; slow, ordinary risks hide. Guesses also drift toward the middle. Your feed is a highlight reel, not a map of risk.",
+    "insight": "Dramatic killers were overrated, quiet ones underrated. But this survey is old and US-based, and a 2024 reanalysis didn't find the pattern in other data. So check the count.",
     "model": "Easy to imagine is not the same as likely. Ask for the count, not the story.",
     "try_today": "Look up one number the next time a scary story grabs you: how many times a year does this actually happen?",
     "source": {
       "thinkers": [
+        "Sarah Lichtenstein",
+        "Paul Slovic",
+        "Baruch Fischhoff",
+        "Barbara Combs",
         "Amos Tversky",
         "Daniel Kahneman"
       ],
-      "work": "Availability: A Heuristic for Judging Frequency and Probability (1973)"
+      "work": "Lichtenstein et al., Judged Frequency of Lethal Events (1978); Combs & Slovic (1979); Tversky & Kahneman (1973); The Perception of Dramatic Risks, Cognition (2024)"
     },
-    "evidence": "moderate",
+    "evidence": "contested",
     "level": 1,
     "related": [
       "base_rates",
@@ -340,14 +344,14 @@
       "right": "Scout (explore)",
       "questions": [
         {
-          "q": "Someone shares a study that disagrees with you. First thought:",
+          "q": "Someone shares an article that disagrees with you. First thought:",
           "options": [
             {
               "label": "Look for what's wrong with it, but not what's right",
               "value": -2
             },
             {
-              "label": "Check its methods, the same way I'd check one I agreed with",
+              "label": "Check it the same way I'd check one I agreed with",
               "value": 2
             },
             {
@@ -570,7 +574,7 @@
         }
       ]
     },
-    "insight": "Picturing failure gives a checklist; success stays vague. Imagining an outcome had already happened helped people find more reasons for it (Mitchell et al., 1989). Klein's premortem builds on it.",
+    "insight": "Failure gives you a checklist. Imagining an outcome had already happened helped people find more reasons for it (Mitchell et al., 1989), good or bad. Klein's premortem builds on it.",
     "model": "Ask what would guarantee failure, then don't do that.",
     "try_today": "Pick one goal. Write 3 ways it could go wrong. Circle the easiest to avoid and skip it today. It's a checklist, not a verdict on you.",
     "source": {
@@ -677,20 +681,20 @@
     "concept": "base_rates",
     "domain": "thinking",
     "type": "estimate",
-    "hook": "A test says you have a rare condition. How worried should you be?",
+    "hook": "A test says you've got something rare. Are you probably fine?",
     "title": "Base Rates",
     "game": {
-      "question": "A condition affects 1 in 1,000 people. A test catches every real case but gives a false positive to 5% of healthy people. You test positive. Chance you have it?",
+      "question": "1 in 1,000 people have it. The test catches every real case, but also flags 5 in 100 healthy people. You get flagged. What are the chances you have it?",
       "min": 0,
       "max": 100,
       "step": 1,
       "unit": "%",
       "answer": 2,
-      "explain": "Of 1,000 people: 1 truly has it. About 50 healthy people also test positive. So 1 of ~51 positives is real: about 2%. In a 1978 Harvard study, 27 of 60 doctors and students answered 95%; only 11 got about 2%.",
+      "explain": "Out of 1,000 people, 1 has it and about 50 get a false alarm. So only 1 of about 51 flagged people really has it: about 2%. Even many doctors guess way higher.",
       "anchor": null
     },
-    "insight": "When something is rare, most positives are false alarms. That's why doctors confirm with a second test. This is just the math; real results need a real doctor.",
-    "model": "Start with how common it is, then adjust for the new evidence. Rare things stay fairly rare.",
+    "insight": "With rare things, many flags are false alarms, so doctors confirm with a second test. This is only the maths for a made-up test. Real results always need a doctor, so never skip the follow-up.",
+    "model": "Start with how common it is, then adjust for the new evidence.",
     "try_today": "Ask 'Out of 1,000 similar cases, how many usually turn out this way?' the next time a story or alarm surprises you.",
     "source": {
       "thinkers": [
@@ -713,7 +717,8 @@
       "cite": "David Hume, An Enquiry Concerning Human Understanding (1748), Section X, Part I",
       "next_read": "An Enquiry Concerning Human Understanding, Section X, 'Of Miracles', Part I"
     },
-    "audience": "all"
+    "audience": "all",
+    "sensitive": true
   },
   {
     "id": "base-rates-librarian-farmer",
@@ -1068,35 +1073,36 @@
     "concept": "inversion",
     "domain": "thinking",
     "type": "reveal",
-    "hook": "Planning how it goes well? Start with how you'd ruin it.",
-    "title": "Start With How It Fails",
+    "hook": "Planning how it goes well? Add how it could go wrong.",
+    "title": "Add the Snags to the Plan",
     "game": {
-      "prompt": "Think of something coming up this week (a talk, a call, a hard conversation). Before planning how it goes well, which first step usually gives you a clearer plan?",
+      "prompt": "Think of something coming up this week (a talk, a call, a hard conversation). Which first step would help you more?",
       "choices": [
-        "List 3 ways I could bomb it",
-        "Skip that and go straight to good ideas"
+        "List how it could go wrong",
+        "Plan how it goes well"
       ],
-      "answer": 0,
-      "reveal": "Listing the ways to fail usually wins: failure is easier to picture than the recipe for success. Rambling, no practice run, starting late: each becomes a 'don't'. Munger borrowed 'Invert, always invert' from the mathematician Carl Jacobi."
+      "reveal": "No one has shown a winner here. Naming obstacles tends to beat pure positive fantasy (Oettingen), but that means pairing the outcome you want with what could block it. So: picture it going well, list 2 likely snags (rambling, no practice run), plan one fix for each. Then stop."
     },
-    "insight": "Picturing a perfect result gives vague goals. Picturing a disaster gives a short, concrete list of things to avoid. Inversion is a thinking habit, not a tested law, but it is quick to try.",
-    "model": "Before planning success, list how you'd guarantee failure. Then avoid exactly those.",
-    "try_today": "Write 3 ways to ruin your next talk, call or tricky chat. Pick one and plan its opposite.",
-    "try_team": "Before a group event (a trip, a match, a launch), spend 3 minutes listing how to ruin it. Turn the top two into 'don'ts' everyone agrees on.",
+    "insight": "Only daydreaming can leave you unready; only dwelling on disaster can feed worry. Pairing the goal with its snags sits between. Inversion is a lens, not a tested law; Oettingen tested the pairing.",
+    "model": "Picture the outcome you want, name the likely snags, plan one fix for each. Then stop.",
+    "try_today": "Write how your next talk or tricky chat could go well, then 2 likely snags and one fix for each. Then stop.",
+    "try_team": "Before a group event (a trip, a match, a launch), agree what good looks like, list the 2 likeliest snags and plan one fix for each.",
     "source": {
       "thinkers": [
+        "Gabriele Oettingen",
         "Carl Jacobi",
         "Charlie Munger"
       ],
-      "work": "Munger, Poor Charlie's Almanack (2005), quoting Carl Jacobi"
+      "work": "Oettingen, Rethinking Positive Thinking (2014); Munger, Poor Charlie's Almanack (2005), quoting Carl Jacobi"
     },
-    "evidence": "philosophy",
+    "evidence": "moderate",
     "level": 1,
     "related": [
       "premortem",
       "begin_with_end"
     ],
-    "audience": "all"
+    "audience": "all",
+    "sensitive": true
   },
   {
     "id": "second-order-fireworks-reveal",
@@ -1111,8 +1117,7 @@
         "Praise and confidence",
         "New demands I'll need to grow into"
       ],
-      "answer": 1,
-      "reveal": "New demands, usually. Both are real, but the praise comes first and fades, while the win quietly brings new habits, costs and skills to learn. First-order thinking stops at the joy. Second-order thinking asks 'and then what?', so you can plan for it calmly instead of being caught out."
+      "reveal": "Often both. Praise tends to arrive first and fade, while the win quietly brings new habits, costs and skills to learn. First-order thinking stops at the joy. Second-order thinking asks 'and then what?', so you can plan for it calmly instead of being caught out."
     },
     "insight": "Good news has ripples too. Asking what a win sets in motion lets you get ready early, without spoiling the joy of it. It's a thinking habit from investing, not a lab finding.",
     "model": "Every outcome, good or bad, starts a chain. Ask 'and then what?' twice.",
@@ -1236,20 +1241,20 @@
             {
               "text": "Fix the common cause first: add config validation, then size the failover risk",
               "best": true,
-              "feedback": "Yes. You prepared for the frequent risk, not the memorable one."
+              "feedback": "Yes. The cheap fix for the frequent risk goes first, then you size the rare one by its real cost."
             },
             {
               "text": "Write a long post-mortem about the outage",
-              "feedback": "Useful, but more story makes the rare event feel even more common."
+              "feedback": "A short post-mortem is useful. Alone it doesn't tell you which risk to fund first. For that, compare it with your log."
             }
           ]
         }
       ]
     },
     "insight": "Dangers that are easy to picture feel common, while quiet everyday risks slip past. Tversky and Kahneman called it the availability heuristic: we judge likelihood by how easily examples come to mind.",
-    "model": "Easy to picture isn't the same as likely. Prepare for the common risk, not the vivid one.",
-    "try_today": "Pick one precaution you take (a lock, an app, a habit) and ask: is this for the vivid risk or the common one?",
-    "try_team": "Each person names the risk they prepare for most (on trips, online, at home). Vote: vivid or common? Swap one vivid precaution for a common one.",
+    "model": "Easy to picture isn't the same as likely. Check the log, then weigh likelihood times impact.",
+    "try_today": "Pick one precaution you take (a lock, an app, a habit) and ask: is this for the vivid risk, or the likely and costly one?",
+    "try_team": "Each person names the risk they prepare for most. Vote: vivid, or likely and costly? Swap one precaution if the numbers say so.",
     "source": {
       "thinkers": [
         "Amos Tversky",

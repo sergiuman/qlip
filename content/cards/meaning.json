@@ -4,7 +4,7 @@
     "concept": "start_with_why",
     "domain": "meaning",
     "type": "choice",
-    "hook": "You need the team to adopt a new process. What's your first sentence?",
+    "hook": "You roll out a new process. Nobody uses it. What did you skip?",
     "title": "Lead With the Why",
     "game": {
       "steps": [
@@ -48,7 +48,7 @@
     },
     "insight": "Opening with a reason they'd felt made the rule sound like a fix. Sinek calls it the Golden Circle: why, then how, then what. Handy, but his brain-science story isn't backed by research.",
     "model": "Say why it matters before what it is. Purpose first, logistics second.",
-    "try_today": "Before your next request or proposal, write one sentence that starts with \"This matters because…\" and say that first.",
+    "try_today": "Write one sentence starting \"This matters because…\" before your next request or proposal, and say it first.",
     "source": {
       "thinkers": [
         "Simon Sinek"
@@ -83,7 +83,7 @@
     },
     "insight": "Langer's point was mindlessness: on small asks we react to the word 'because', not the reason. On bigger asks we weigh it. Notice when an empty 'because' works on you. One classic, small study.",
     "model": "On autopilot we hear 'because'; awake, we weigh the reason. Give a real one, and listen for real ones.",
-    "try_today": "Next time you ask someone for something, add 'because…' with your honest reason. Notice how they respond.",
+    "try_today": "Add 'because…' and your honest reason next time you ask someone for something. Notice how they respond.",
     "try_team": "Each person rewrites one request they'll make this week as 'Could we…, because…' with a real reason. Read them aloud: which ones make you want to say yes?",
     "source": {
       "thinkers": [
@@ -111,7 +111,7 @@
     "hook": "A happy week and a meaningful week: are they the same week?",
     "title": "Meaning Lives in the Load",
     "game": {
-      "prompt": "Week A: lie-ins, good food, a film with friends. Week B: tiring, but you helped a friend move house and finished something others counted on. A 2013 survey of ~400 US adults asked what goes with feeling happy and what goes with feeling life is meaningful. Which week fits that pattern?",
+      "prompt": "Week A: lie-ins, good food, a film with friends. Week B: tiring, but you helped a friend through a rough patch and finished something others counted on. A 2013 survey of ~400 US adults asked what goes with feeling happy and what goes with feeling life is meaningful. Which week fits that pattern?",
       "choices": [
         "A sounds happier, B more meaningful",
         "B sounds better on both",
@@ -164,9 +164,9 @@
           "why": "Their feelings aren't yours to control. Your fairness and effort are."
         },
         {
-          "text": "The mess in your room that's been bugging you",
+          "text": "The mess at home that's been bugging you",
           "side": "right",
-          "why": "A small win that's fully yours. Peterson, Rule 6: \"Set your house in perfect order before you criticize the world.\""
+          "why": "A small win that's fully yours. Peterson's Rule 6: \"Set your house in perfect order\" first."
         },
         {
           "text": "Fixing a friend's life for them",
@@ -257,7 +257,7 @@
           ]
         },
         {
-          "q": "In the last two weeks, how many surprises did you have to absorb?",
+          "q": "In the last two weeks, how many surprises did I have to absorb?",
           "options": [
             {
               "label": "None at all",
@@ -278,7 +278,7 @@
           ]
         },
         {
-          "q": "My daily routines (sleep, work or homework, phone time) are…",
+          "q": "My daily routines (sleep, meals, phone time) are…",
           "options": [
             {
               "label": "The same every day",
@@ -295,7 +295,7 @@
           ]
         },
         {
-          "q": "The big things in my life right now (home, work or school, people) feel…",
+          "q": "The big things in my life right now (home, people, money, plans) feel…",
           "options": [
             {
               "label": "Settled, nothing is moving",
@@ -332,7 +332,7 @@
     },
     "insight": "Peterson borrows the Taoist image: order is the explored, chaos the unexplored. Too much order goes stale; too much chaos overwhelms. Meaning is found on the border, facing the unknown by choice.",
     "model": "Stand on order, then step into the unknown at a pace you choose.",
-    "try_today": "If you lean Order, try one new thing today. If you lean Chaos, fix one anchor: same bedtime tonight.",
+    "try_today": "Go by today's lean. Order: try one new thing. Chaos: fix one anchor, like the same bedtime tonight.",
     "source": {
       "thinkers": [
         "Laozi",
@@ -353,17 +353,18 @@
       "cite": "Laozi, Tao Te Ching, ch. 42 (James Legge trans., 1891)",
       "next_read": "Peterson, 12 Rules for Life (2018), Rule 2, the section on order and chaos; then Maps of Meaning (1999), ch. 2"
     },
-    "audience": "all"
+    "audience": "all",
+    "sensitive": true
   },
   {
     "id": "aim-high-gorilla",
     "concept": "aim_high",
     "domain": "meaning",
     "type": "reveal",
-    "hook": "A clown on a unicycle rides past. How many people even notice?",
+    "hook": "A clown on a unicycle rides right past you. Could you miss it?",
     "title": "What You Focus On Is What You See",
     "game": {
-      "prompt": "You're crossing a campus square, no phone, just walking. A clown in a bright costume rides past on a unicycle. Of people like you, how many noticed?",
+      "prompt": "On a college campus, a clown in a bright costume rides a unicycle across a busy square. Of people walking through alone, phone away, how many say they saw it?",
       "choices": [
         "Almost all (90%)",
         "About half (51%)",
@@ -391,7 +392,7 @@
       "map_territory",
       "goal_directed_perception"
     ],
-    "try_team": "Everyone writes this week's one aim and swaps papers. For a day, watch out for one thing that could help your partner's aim, then share it.",
+    "try_team": "Everyone writes this week's one aim and swaps with a partner. For a day, watch out for one thing that could help their aim, then share it.",
     "from_source": {
       "quote": "Shall we not, like archers who have a mark to aim at, be more likely to hit upon what is right?",
       "cite": "Aristotle, Nicomachean Ethics, Book I, ch. 2 (trans. W. D. Ross, 1925)",
@@ -560,7 +561,7 @@
     "concept": "flow",
     "domain": "meaning",
     "type": "radar",
-    "hook": "Think of your last focus session. Which flow ingredient was weakest?",
+    "hook": "Last time you tried to focus, what quietly got in the way?",
     "title": "The Four Flow Ingredients",
     "game": {
       "axes": [
@@ -571,25 +572,25 @@
       ],
       "questions": [
         {
-          "q": "In my last focus session, I knew what 'done' looked like.",
+          "q": "Last time I tried to focus, I knew what 'done' looked like.",
           "axis": 0
         },
         {
-          "q": "In my last focus session, I could tell within minutes if I was on track.",
+          "q": "Last time I tried to focus, I could tell within minutes if I was on track.",
           "axis": 1
         },
         {
-          "q": "In my last focus session, the task felt neither too easy nor too hard.",
+          "q": "Last time I tried to focus, the task felt neither too easy nor too hard.",
           "axis": 2
         },
         {
-          "q": "In my last focus session, I stayed on the task without checking my phone or messages.",
+          "q": "Last time I tried to focus, I stayed on the task without checking my phone or messages.",
           "axis": 3
         }
       ],
       "advice": {
-        "0": "Clear goal scored lowest today. Before you start, write one line: 'Done means…'. Vague goals are a top flow-killer.",
-        "1": "Quick feedback scored lowest today. Build a check: a practice test, a word count, a friend's quick look. Flow needs to see progress.",
+        "0": "Clear goal scored lowest today. Before you start, write one line: 'Done means…'. A vague goal is hard to settle into.",
+        "1": "Quick feedback scored lowest today. Build a check: a timer, a word count, a friend's quick look. Flow needs to see progress.",
         "2": "Right difficulty scored lowest today. Adjust the task: add a challenge if it's dull, split it if it's overwhelming.",
         "3": "Interruptions scored lowest today. Put your phone in another room for one 25-minute block. Switching leaves part of your mind elsewhere.",
         "low": "All four were low last time. Start with the cheapest fix: write one line, \"Done means…\", put your phone in another room, and work for 10 minutes."
@@ -611,7 +612,7 @@
       "deep_work",
       "deliberate_practice"
     ],
-    "try_team": "For one 25-minute group work block: agree what 'done' looks like, put all phones away, and check progress together at the end.",
+    "try_team": "For one 25-minute block together: agree what 'done' looks like, put all phones away, and check progress together at the end.",
     "audience": "all"
   },
   {
@@ -629,7 +630,7 @@
         "The quiet loners"
       ],
       "answer": 1,
-      "reveal": "The optimists. In his telling, they kept picking dates: 'out by Christmas', then Easter. Each missed date hit them harder. Stockdale held two things at once: total faith he'd get home, and zero denial about how bad it was. Hope itself wasn't the problem. Hope pinned to a date he couldn't control was."
+      "reveal": "The optimists. In his telling, they kept picking dates: 'out by Christmas', then Easter. Each missed date hit them harder. Stockdale held two things at once: total faith he'd get home, and zero denial about how bad it was. Hope itself wasn't the problem. Hope pinned to a date nobody could control was."
     },
     "insight": "This is one man's account to Jim Collins, not a study. Its lesson: hope tied to a date you don't control can break you. Keep faith that you can endure; face today's facts.",
     "model": "Keep faith you can get through it. Face the facts honestly. Drop deadlines you don't control.",
@@ -699,7 +700,7 @@
         }
       ]
     },
-    "insight": "Oettingen's lab work: pairing a wish with its obstacle lifts effort when success feels possible. A related idea: Stockdale, a POW for 7+ years, kept faith yet faced facts (anecdote, via Collins).",
+    "insight": "Oettingen's lab work: pairing a wish with its obstacle lifts effort when success feels possible. A cousin of Stockdale's lesson (an anecdote, via Collins): keep faith, face facts.",
     "model": "Wish, then obstacle, then if-then plan. Hope gives the why; facts give the how.",
     "try_today": "Name one goal, the biggest inner obstacle, and write one plan: 'If [obstacle], then I will [action].'",
     "source": {
@@ -718,14 +719,15 @@
       "useful_truth"
     ],
     "try_team": "Each person writes the group's goal, the single biggest obstacle, and one 'If..., then we...' plan. Pick the most common obstacle and adopt its plan.",
-    "audience": "all"
+    "audience": "all",
+    "sensitive": true
   },
   {
     "id": "aim-high-job-or-aim-spectrum",
     "concept": "aim_high",
     "domain": "meaning",
     "type": "spectrum",
-    "hook": "Two people do your exact job. Only one goes home drained. Why?",
+    "hook": "Two people do your exact job. Only one sees a calling in it. Why?",
     "title": "Same Job, Different Aim",
     "game": {
       "left": "Just a job",
@@ -753,12 +755,12 @@
           "q": "If a new hire asked what my team is for, I'd say…",
           "options": [
             {
-              "label": "Hitting the numbers we're given",
-              "value": -2
-            },
-            {
               "label": "Making something easier for specific people",
               "value": 2
+            },
+            {
+              "label": "Hitting the numbers we're given",
+              "value": -2
             }
           ]
         },
@@ -783,12 +785,12 @@
           "q": "When a dull task lands on my desk, I…",
           "options": [
             {
-              "label": "Clear it and move on",
-              "value": -1
-            },
-            {
               "label": "Link it to something it makes possible",
               "value": 2
+            },
+            {
+              "label": "Clear it and move on",
+              "value": -1
             }
           ]
         }
@@ -854,7 +856,7 @@
     },
     "insight": "The why that moved callers wasn't a mission statement; it was one person they'd helped. Samples were small, so treat the size as rough. The direction held in Grant's follow-ups.",
     "model": "People commit to a why they can picture: a real person helped, not a slogan on a slide.",
-    "try_today": "Before your next team meeting, find one real message from a customer or user your work helped. Open the meeting with it.",
+    "try_today": "Find one real message from a customer or user your work helped, and open your next team meeting with it.",
     "source": {
       "thinkers": [
         "Adam Grant",
@@ -909,7 +911,7 @@
             },
             {
               "text": "Keep noodling, it's only practice.",
-              "feedback": "Understandable. You're just spending the session in the boredom zone, where nobody improves much."
+              "feedback": "Understandable. It's a fair way to unwind, but with nothing stretching you it's hard to stay absorbed."
             },
             {
               "text": "Skip practice next week.",
@@ -925,7 +927,7 @@
               "feedback": "Brave, but too hard with no feedback feels like stress, not flow. A smaller step gets you further."
             },
             {
-              "text": "Copy one worked example from the textbook, then try a question just like it.",
+              "text": "Follow one worked example from the textbook, then try a question just like it.",
               "best": true,
               "feedback": "Shrinking the challenge back to your skill level gets you moving again."
             },

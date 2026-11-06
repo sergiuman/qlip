@@ -99,7 +99,7 @@
             },
             {
               "text": "\"Restart properly on Monday with a fresh plan.\"",
-              "feedback": "Tempting, and it feels tidy. But waiting for Monday gives the downward loop a few more laps. A short walk today keeps it turning your way."
+              "feedback": "A fresh start can help, and Monday's fine for the plan. But waiting for it gives the downward loop a few more laps. A short walk today keeps it turning your way."
             },
             {
               "text": "\"Two days off. Short walk today and the loop keeps turning.\"",
@@ -401,7 +401,7 @@
       "begin_with_end",
       "circle_influence"
     ],
-    "try_team": "Next time your team is stuck, ban 'try harder' for 5 minutes. List changes to what people see, what's rewarded, or the goal.",
+    "try_team": "Next time your team, class or family is stuck, ban 'try harder' for 5 minutes. List changes to what people see, what's rewarded, or the goal.",
     "from_source": {
       "quote": "Small changes can produce big results—but the areas of highest leverage are often the least obvious.",
       "cite": "Peter Senge, The Fifth Discipline (1990), ch. 4 'The Laws of the Fifth Discipline'",
@@ -428,7 +428,7 @@
     },
     "insight": "A quick fix eases the symptom today, while its side effect quietly feeds the problem. The side effect is late, so the fix looks like it works, and we repeat it.",
     "model": "Ask of every fix: what does this reward, and what will it feed in three months?",
-    "try_today": "Name one quick fix you use often (snacking, cramming, avoiding). Write what it might be feeding in the long run.",
+    "try_today": "Name one quick fix you use often (a big lie-in, a last-minute rush, avoiding). Write what it might be feeding in the long run.",
     "source": {
       "thinkers": [
         "Peter Senge",
@@ -474,7 +474,7 @@
             {
               "text": "Sunday night you can't fall asleep, so Monday hurts",
               "best": true,
-              "feedback": "Right. The lie-in eases today's tiredness and pushes your clock later. Researchers call the mismatch 'social jet lag'."
+              "feedback": "Right. You needed the rest, but it shifts your body clock later. Waking a couple of hours earlier keeps most of the rest and less of the Monday pain."
             }
           ]
         },
@@ -495,30 +495,12 @@
               "feedback": "Yes. The fix ends tonight's panic and feeds next month's."
             }
           ]
-        },
-        {
-          "scenario": "Plot twist from real life: Mexico City, 1989. To cut smog, each car is banned from driving one weekday, based on its number plate. What did many families do?",
-          "options": [
-            {
-              "text": "Took the bus on their banned day",
-              "feedback": "That was the plan. But a cheaper way round it was sitting in the used-car market."
-            },
-            {
-              "text": "Bought a second car, often an older one",
-              "best": true,
-              "feedback": "Yes. Car numbers rose, many extra cars were old and dirtier, and economist Lucas Davis found no clear drop in air pollution."
-            },
-            {
-              "text": "Drove less on every day of the week",
-              "feedback": "A hopeful guess. The rule only touched one day, so it changed which car, not how much driving."
-            }
-          ]
         }
       ]
     },
-    "insight": "Every fix has a main effect and a side effect. The main effect shows up fast; the side effect arrives later and often feeds the problem you were fixing.",
+    "insight": "Fixes often have a late side effect that feeds the problem. Mexico City banned each car one weekday in 1989: many families bought a second car, and the air didn't clearly improve.",
     "model": "Before a quick fix, ask: what will this feed when no one is watching?",
-    "try_today": "Take one fix you used this week (lie-in, snack, cramming). Write its side effect and one tweak that keeps the relief.",
+    "try_today": "Take one quick fix from this week (a big lie-in, copying, a last-minute rush). Write its side effect and one tweak that keeps the relief.",
     "try_team": "Before agreeing a new rule at home, school or work, take 5 minutes: each person imagines how a clever lazy person would get round it.",
     "source": {
       "thinkers": [
@@ -555,7 +537,7 @@
       "right": "Muscle",
       "items": [
         {
-          "text": "A third coffee every afternoon to get through the slump",
+          "text": "An extra coffee or energy drink every afternoon to get through the slump",
           "side": "left",
           "why": "It works today, but it can hurt tonight's sleep, which deepens tomorrow's slump."
         },

@@ -157,19 +157,19 @@
   "concept": "goal_directed_perception",
   "domain": "perception",
   "type": "reveal",
-  "hook": "A stranger swaps into someone else mid-chat. How many notice?",
+  "hook": "A stranger swaps into someone else mid-chat. Would you notice?",
   "title": "The Person Swap",
   "game": {
-   "prompt": "A stranger with a map asks you for directions. As you explain, two workers carry a door between you. Behind it, the stranger is replaced by a different person with different clothes and voice. Would you notice?",
+   "prompt": "A stranger asks you for directions. Two workers carry a door between you, and behind it the stranger swaps with a totally different person. Would you notice?",
    "choices": [
     "Yes, instantly",
     "Probably, once they spoke again",
     "Quite possibly not"
    ],
    "answer": 2,
-   "reveal": "If you said yes, you're in good company: almost everyone does. But in Simons and Levin's 1998 street study, about half of the people kept giving directions to the new person without noticing. One likely reason: people stored a rough label ('a stranger with a map'), not the face. In a follow-up, students noticed a swap more often when the stranger looked like a fellow student."
+   "reveal": "Most people swear they would. In a 1998 street study, about half just kept giving directions to the new person. We often save a rough label ('stranger with map'), not the face."
   },
-  "insight": "We often store a rough label, not the details. A small study (15 people), but this 'change blindness' has been found many times.",
+  "insight": "We often save a rough label, not the details. Only the original door study was small (15 people); 'change blindness' has been found many times.",
   "model": "We often store a label, not the person. Aim to notice the person and you'll see more of them.",
   "try_today": "In your next chat, set a tiny aim: notice one thing about the person (their mood, their eyes, what they care about today).",
   "try_team": "Pair up for 60 seconds of chat, then turn back to back. Each changes one small thing (glasses, sleeve, hair). Turn round: who spots it? Then swap.",
@@ -178,7 +178,7 @@
     "Daniel Simons",
     "Daniel Levin"
    ],
-   "work": "Simons & Levin, Failure to detect changes to people during a real-world interaction, Psychonomic Bulletin & Review (1998)"
+   "work": "Simons & Levin, Failure to detect changes to people during a real-world interaction, Psychonomic Bulletin & Review (1998). In a follow-up, students noticed a swap more often when the stranger looked like a fellow student."
   },
   "evidence": "strong",
   "level": 1,
@@ -453,7 +453,7 @@
    "growth_mindset",
    "emotion_naming"
   ],
-  "try_team": "Before a match, exam or big deadline, everyone says one thing they care about in it. Then together: 'This buzz is energy for that.' One slow breath.",
+  "try_team": "Before a match, exam or other big day, everyone says one thing they care about in it. Then together: 'This buzz is energy for that.' One slow breath.",
   "audience": "all"
  },
  {
@@ -470,8 +470,7 @@
     "Ask three friends if they agree",
     "Try one tiny chat a day for a week"
    ],
-   "reveal": "The week of tiny chats. Memory is selective, and the belief keeps you out of the moments that would test it. Friends help, but guessing how each chat will feel (1-5) and then rating how it went tests the belief more directly than either. In commuter studies, people expected talking to a stranger to go worse than it did (Epley & Schroeder, 2014). For James, an idea becomes true by working out in lived experience: the test isn't a lab result, it's whether the belief still guides you well after a week of acting.",
-   "answer": 2
+   "reveal": "No study has crowned a winner, but the week of tiny chats is the fairest test. Memory is selective, and friends can only guess. In commuter studies, people expected talking to a stranger to go worse than it did (Epley & Schroeder, 2014). For James, a belief proves itself when you act on it."
   },
   "insight": "Pragmatism judges an idea by what happens when you act on it. For James, truth is worked out in lived experience. A lens, not a lab finding, and his view was hotly disputed (Russell).",
   "model": "Judge a belief by its consequences: run the experiment, then decide.",
@@ -506,7 +505,7 @@
   "concept": "mpc_loop",
   "domain": "perception",
   "type": "venn",
-  "hook": "Notice, interpret, adjust: which step do you use least?",
+  "hook": "A friend's gone quiet on you. What does your brain do next?",
   "title": "Your Perception Loop",
   "game": {
    "axes": [
@@ -528,29 +527,29 @@
    ],
    "questions": [
     {
-     "q": "I notice details others miss, including small signs things are changing.",
+     "q": "I notice when someone's mood changes, even a bit.",
      "axis": "P"
     },
     {
-     "q": "Changes around me often catch me by surprise when others saw them coming.",
+     "q": "Upsets with friends or family usually come out of nowhere for me.",
      "axis": "P",
      "invert": true
     },
     {
-     "q": "When something goes wrong, I can come up with more than one explanation.",
+     "q": "If someone doesn't reply, I can think of more than one reason why.",
      "axis": "A"
     },
     {
-     "q": "My first read of a situation usually feels like the only one.",
+     "q": "My first guess about why someone's being off is usually the one I stick with.",
      "axis": "A",
      "invert": true
     },
     {
-     "q": "When I'm proven wrong, I update my view fairly quickly.",
+     "q": "If I realise I got someone wrong, I change how I act pretty quickly.",
      "axis": "R"
     },
     {
-     "q": "I keep doing what I've always done, even when results disappoint.",
+     "q": "I keep handling things the same way, even when it keeps going badly.",
      "axis": "R",
      "invert": true
     }
@@ -590,19 +589,19 @@
      "text": "Today you rate all three steps as switched on. Keep it honest by checking results, not just feelings. Practise the step you scored lowest; if two tie, start with Adjust."
     },
     "mid": {
-     "name": "Evenly balanced today",
-     "text": "Every step scored near the middle. Start with Adjust: name one thing you've kept doing this month even though results disappointed, and change one detail of it this week."
+     "name": "Middle on all three today",
+     "text": "You answered near the middle on every step, so nothing stands out yet. Pick one person you've been handling the same way all month, and change one small thing this week."
     }
    }
   },
-  "insight": "Qlip's own framework, built on Powers's control theory, not a tested scale: notice, interpret, adjust, then act again. The step you use least is a good one to practise.",
-  "model": "Notice, interpret, adjust. Practise the step you use least.",
-  "try_today": "Take one frustrating situation from this week and run it through the step you use least, on paper, in five minutes.",
+  "insight": "Notice, interpret, adjust, then go again. The step you rate lowest is a good place to start. This is Qlip's own model, not a tested scale.",
+  "model": "Notice, interpret, adjust. Practise the step you rate lowest.",
+  "try_today": "Take one frustrating situation from this week and run it through the step you rated lowest, on paper, in five minutes.",
   "source": {
    "thinkers": [
     "William T. Powers"
    ],
-   "work": "Qlip's house model (a notice-interpret-adjust loop), drawing on Powers, Behavior: The Control of Perception (1973)"
+   "work": "Qlip's own model (a notice-interpret-adjust loop), loosely inspired by Powers, Behavior: The Control of Perception (1973)"
   },
   "evidence": "philosophy",
   "level": 1,
@@ -826,7 +825,7 @@
     "Less"
    ],
    "answer": 2,
-   "reveal": "Less, slightly: winners rated everyday pleasures around 3.3 out of 5, neighbours around 3.8. The win seemed to raise the bar for small joys. They also weren't happier overall. The twist: a large Swedish study found big winners stayed more satisfied with life for years, though not happier moment to moment (Lindqvist et al., 2020). The first finding comes from one small 1978 study of 22 winners (Brickman et al.): a hint, not a law."
+   "reveal": "Less, slightly: about 3.3 out of 5, against the neighbours' 3.8, and no happier overall. That's one small 1978 study of 22 winners (Brickman et al.): a hint, not a law. A large Swedish study found big winners more satisfied with life for years, though not happier moment to moment (Lindqvist et al., 2020)."
   },
   "insight": "New things quickly become your normal, so the daily glow fades even when the gain is real. How satisfied you feel with life can shift; the day-to-day buzz mostly settles back.",
   "model": "Gains turn into the new normal. Expect the glow to fade and plan for it.",
@@ -854,7 +853,7 @@
   "concept": "hedonic_adaptation",
   "domain": "perception",
   "type": "swipe",
-  "hook": "Some changes you get used to in weeks. Others never feel normal.",
+  "hook": "Some changes you soon get used to. Others keep their bite for longer.",
   "title": "What You Get Used To",
   "game": {
    "prompt": "Does the feeling fade, or does it stick around?",
@@ -864,7 +863,7 @@
     {
      "text": "The buzz of a brand-new phone",
      "side": "left",
-     "why": "Within weeks it's just your phone. Same features, far less thrill."
+     "why": "Before long it's just your phone."
     },
     {
      "text": "A pay rise (or more pocket money)",
@@ -874,35 +873,37 @@
     {
      "text": "Getting the bigger bedroom",
      "side": "left",
-     "why": "A week later it's just your room."
+     "why": "Before long it's just your room."
     },
     {
      "text": "Finally getting the trainers you saved up for",
      "side": "left",
-     "why": "A few weeks in they're just your trainers. The saving-up was half the buzz."
+     "why": "Before long they're just your trainers."
     },
     {
-     "text": "A 50-minute bus to college or work every day",
+     "text": "Living beside a noisy main road",
      "side": "right",
-     "why": "Some studies found long commuters less satisfied even years later (Stutzer & Frey, 2008), though later data are mixed."
+     "why": "Annoyance at a new road's noise hadn't faded over a year on, in one study (Weinstein, 1982)."
     },
     {
      "text": "Seeing friends in new, varied ways each week",
      "side": "right",
-     "why": "Varied, surprising joys seem to keep their effect longer than fixed ones (Lyubomirsky, 2011), though this is less directly tested."
+     "why": "Varied joys seem to last longer (Sheldon & Lyubomirsky, 2012), though direct evidence is thin."
     }
    ]
   },
-  "insight": "We adapt fast to stable gains, slowly to daily hassles and changing joys. So cutting daily friction and keeping good things varied tends to pay off longer than more stuff.",
+  "insight": "We adapt fast to stable gains, slower to some hassles and varied joys. Long commutes are a mixed case: studies disagree. So cut daily friction and vary the good stuff before buying more.",
   "model": "Expect stable gains to fade. Cutting daily hassles and keeping good things varied tends to last longer.",
   "try_today": "Name one daily hassle you've 'accepted'. Spend 10 minutes finding one way to shrink it this week.",
   "source": {
    "thinkers": [
     "Sonja Lyubomirsky",
+    "Kennon Sheldon",
+    "Neil Weinstein",
     "Alois Stutzer",
     "Bruno Frey"
    ],
-   "work": "Lyubomirsky, 'Hedonic Adaptation to Positive and Negative Experiences' (2011); Stutzer & Frey, 'Stress that Doesn't Pay: The Commuting Paradox' (2008)"
+   "work": "Lyubomirsky, 'Hedonic Adaptation to Positive and Negative Experiences' (2011); Sheldon & Lyubomirsky, 'The Challenge of Staying Happier', PSPB (2012); Weinstein, 'Community noise problems: Evidence against adaptation', Journal of Environmental Psychology (1982); Stutzer & Frey, 'Stress that Doesn't Pay: The Commuting Paradox' (2008)"
   },
   "evidence": "moderate",
   "level": 2,
@@ -984,7 +985,7 @@
    "emotion_naming",
    "growth_mindset"
   ],
-  "try_team": "Before a match, test or launch, each person names the part they're nervous about, adds 'and I'm excited about it', then you agree step one together.",
+  "try_team": "Before a match, test or other big day, each person names the part they're nervous about, adds 'and I'm excited about it', then you agree step one together.",
   "sensitive": true,
   "audience": "all"
  },
@@ -1123,7 +1124,7 @@
      ]
     },
     {
-     "scenario": "The night before something you need to be ready for (a test, a driving theory exam, a briefing at work). You've got 20 minutes and your notes. Which is the burglar move?",
+     "scenario": "The night before something you need to be ready for (a test, a big meeting, an important appointment). You've got 20 minutes and your notes. Which is the burglar move?",
      "options": [
       {
        "text": "Read the notes twice and highlight the important bits.",
@@ -1160,7 +1161,7 @@
    "confirmation_bias",
    "implementation_intentions"
   ],
-  "try_team": "Study group or team, 5 min: everyone reads the same page in a different role (examiner, sceptic, newcomer). Share what each role noticed.",
+  "try_team": "Study group, team or book club, 5 min: everyone reads the same page in a different role (examiner, sceptic, newcomer). Share what each role noticed.",
   "audience": "all"
  },
  {

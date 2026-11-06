@@ -98,8 +98,8 @@
         s += (CONCEPT[c.concept]?.rank || 0) * 25;
         s += hash(c.id + SESSION) * 1.6;
         if (c.audience !== "all") s += Math.max(-2, Math.min(2, (S.aud?.[c.audience] || 0) * 0.5));
-        // A picked world should feel like yours: its own cards lead, and at least one in three comes from it.
-        if (S.world && c.audience !== "all" && inWorld(c)) s += 6 + (queue.concat(picks).slice(-2).some((id) => CARD[id].audience === c.audience) ? 0 : 4);
+        // The picker promises "your world's cards first": the first 10 are its own, then it alternates with "all" cards until its unplayed ones run out.
+        if (c.audience !== "all" && c.audience === S.world && !S.done[c.id] && (queue.length + picks.length < 10 || (prev && prev.audience === "all"))) s += 100;
         if (s > bestScore) { bestScore = s; best = c; }
       }
       if (!best) break;
@@ -110,7 +110,7 @@
       } else if (nb) {
         reasons[best.id] = "Another angle on an idea you just played.";
       } else {
-        reasons[best.id] = `Something new from ${DOMAIN[best.domain].name}, to keep your map balanced.`;
+        reasons[best.id] = `Something new from ${DOMAIN[best.domain].name}.`;
       }
     }
     return picks;
@@ -175,6 +175,7 @@
 
     function start() {
       el.classList.add("playing");
+      el.classList.remove("revealed");
       game.hidden = false;
       game.replaceChildren(GAMES[card.type](card, (result) => finish(result)));
       game.scrollIntoView({ block: "nearest", behavior: "smooth" });
@@ -187,6 +188,9 @@
       if (result.profile) S.profile[card.id] = { label: result.name, title: card.title, concept: card.concept, at: Date.now() };
       bumpStreak(); save();
       game.append(renderReveal(card, result, start));
+      el.classList.add("revealed");
+      // Choice players already saw their feedback, so go straight to the punchline; other games keep their result (diagram, recap) in view.
+      if (card.type === "choice") body.scrollTo({ top: body.scrollTop + game.lastChild.getBoundingClientRect().top - body.getBoundingClientRect().top, behavior: "smooth" });
       playedThisVisit++;
       // refresh the not-yet-seen tail so the next cards follow the graph from here
       const idx = queue.indexOf(card.id);
@@ -216,9 +220,6 @@
     if (result.text) wrap.append(h("p", { style: "margin:0" }, result.text));
     if (result.profile) wrap.append(h("p", { class: "small muted", style: "margin:0" }, "A snapshot of today's answers, not a verdict on you. People move."));
     wrap.append(h("p", { class: "model-line" }, h("small", {}, "The model"), card.model));
-    wrap.append(h("p", { class: "first-why" }, card.insight));
-    if (card.from_source) wrap.append(h("blockquote", { class: "primary" }, h("p", {}, `“${card.from_source.quote}”`),
-      h("footer", {}, card.from_source.cite, card.from_source.next_read ? h("span", {}, ` · Read next: ${card.from_source.next_read}`) : null)));
     const cbId = `try-${card.id}`;
     const cb = h("input", { type: "checkbox", id: cbId, checked: !!S.commits[card.id], onchange: (e) => {
       if (e.target.checked) { S.commits[card.id] = { text: card.try_today, at: Date.now() }; toast("Added to your map. Small steps count."); }
@@ -229,9 +230,11 @@
     if (card.try_team && S.world !== "young") wrap.append(h("p", { class: "team-line" }, h("b", {}, "👥 With others: "), card.try_team));
     const targets = card.related.map((cid) => [cid, (BY_CONCEPT[cid] || []).filter((id) => inWorld(CARD[id]) && !sameStory(card, CARD[id])).find((id) => !S.done[id]) || (BY_CONCEPT[cid] || []).find((id) => inWorld(CARD[id]) && !sameStory(card, CARD[id]))]).filter(([cid, t]) => t && CONCEPT[cid]);
     const ev = { strong: "Strong evidence", moderate: "Moderate evidence", contested: "Contested — read critically", philosophy: "Philosophical lens" }[card.evidence];
-    const more = h("details", { class: "why", open: S.world === "work" || S.world === "life" }, h("summary", {}, "Why? · 15-second read"),
-
-
+    // Contested and sensitive cards keep their caveat in view; the rest open on a tap.
+    const more = h("details", { class: "why", open: card.evidence === "contested" || !!card.sensitive }, h("summary", {}, "Why? · The idea and its evidence"),
+      h("p", { class: "first-why" }, card.insight),
+      card.from_source ? h("blockquote", { class: "primary" }, h("p", {}, `“${card.from_source.quote}”`),
+        h("footer", {}, card.from_source.cite, card.from_source.next_read ? h("span", {}, ` · Read next: ${card.from_source.next_read}`) : null)) : null,
       h("div", { class: "meta-row" }, h("span", { class: `chip plain ev-${card.evidence}` }, ev),
         h("span", { class: "src" }, `${card.source.thinkers.join(", ")} · ${card.source.work}`)));
     if (card.try_team && S.world === "young") more.append(h("p", { class: "team-line" }, h("b", {}, "👥 With mates: "), card.try_team));
@@ -467,7 +470,7 @@
             btns.remove(); stage.remove(); fb.remove();
             const n = g.items.length, misses = log.filter((x) => !x.ok);
             const recap = h("ul", { class: "recap" }, log.slice().sort((a, b) => a.ok - b.ok).map((x) =>
-              h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, card.sensitive ? "•" : x.ok ? "✓" : "↔"),
+              h("li", { class: x.ok ? "ok" : "miss" }, h("span", { "aria-hidden": "true" }, card.sensitive || !x.ok ? "•" : "✓"),
                 h("div", {}, h("b", {}, x.it.text), h("small", {}, `${x.ok ? "" : `Usually: ${x.label.replace(/[?.!]+$/, "")}. `}${x.it.why}`)))));
             score.replaceWith(recap);
             done({ name: right === n ? "Clean sweep." : right >= n * 0.75 ? `${right} of ${n}. Sharp sorting.` : `${right} of ${n}. Here's the pattern.`,
@@ -489,8 +492,8 @@
         const next = h("button", { class: "btn next-q", hidden: true, onclick: () => { i++; if (i < g.steps.length) step(); else { next.remove(); const total = g.steps.length;
             done(total < 2 ? { name: "" }
               : best === total ? { name: "You'd coach this one.", tally: `${best}/${total} best calls` }
-              : best === 0 ? { name: "Here's another way to play it." }
-              : best >= total / 2 && lastBest ? { name: "Good instincts. One more trick below." }
+              : best === 0 ? { name: "Here's another way to see it." }
+              : best >= total / 2 && lastBest ? { name: "Good instincts." }
               : { name: "Close. Here's the trick." });
           } } },
           i + 1 < g.steps.length ? "Next" : "See the model");
@@ -775,7 +778,7 @@
   }
   function firstQueue() {
     // New players open on the flagship "where are you" game; returning players get the graph's next steps.
-    const start = Object.keys(S.done).length ? [] : ["boredom-signal-estimate", "one-percent-doubling-reveal"].filter((id) => CARD[id] && inWorld(CARD[id]));
+    const start = Object.keys(S.done).length || S.world === "young" || S.world === "work" ? [] : ["boredom-signal-estimate", "one-percent-doubling-reveal"].filter((id) => CARD[id] && inWorld(CARD[id]));
     return start.concat(recommend(start, 5 - start.length));
   }
   boot().catch((err) => {

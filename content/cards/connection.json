@@ -62,7 +62,7 @@
    "emotion_naming",
    "emotional_contagion"
   ],
-  "try_team": "Read out 3 real messages (group chat, a note from school, a work email). Everyone votes: practical, emotional or social? Talk through the splits.",
+  "try_team": "Read out 3 real messages (a family chat, a neighbour's note, a work email). Everyone votes: practical, emotional or social? Talk through the splits.",
   "audience": "all"
  },
  {
@@ -176,7 +176,7 @@
     {
      "text": "My mum keeps reading my messages.",
      "side": "left",
-     "why": "Could be either. Feelings first, then ask: 'Want help working out what to say to her?'"
+     "why": "Feelings first. Then ask: 'Want help working out what to say to her?'"
     }
    ]
   },
@@ -341,7 +341,7 @@
    "right": "Recharge with people",
    "questions": [
     {
-     "q": "After a long, busy day (school, work or family), I want…",
+     "q": "After a long, busy day, I want…",
      "options": [
       {
        "label": "A quiet room and no talking",
@@ -446,7 +446,7 @@
    "deep_work",
    "flow"
   ],
-  "try_team": "Planning a team, class or family day? Each person marks one moment they'd want quiet and one they'd want company. Build both in.",
+  "try_team": "Planning a group or family day? Each person marks one moment they'd want quiet and one they'd want company. Build both in.",
   "audience": "all"
  },
  {
@@ -479,7 +479,7 @@
     {
      "text": "Dress-code rules",
      "side": "left",
-     "why": "The clothes are real fabric. The rule that you must wear them exists because people agree to keep it, and it can be changed."
+     "why": "The fabric is real. The rule exists because people keep agreeing to it, and it can change."
     },
     {
      "text": "Gravity",
@@ -489,7 +489,7 @@
     {
      "text": "A red light meaning 'stop'",
      "side": "left",
-     "why": "The light is real photons. 'Stop' is a rule drivers agree to keep, and it works only because almost everyone does."
+     "why": "The light is real. 'Stop' is a rule that works only because almost all drivers keep it."
     },
     {
      "text": "A wedding ring meaning 'married'",
@@ -597,10 +597,10 @@
   "hook": "Fair criticism has steps. Most of us jump straight to the last one.",
   "title": "Rapoport's Rules",
   "game": {
-   "prompt": "Your mate says TikTok should be banned for under-16s. You disagree. Tap what you'd say, in order:",
+   "prompt": "A friend says social media should be banned for under-16s. You disagree. Tap what you'd say, in order:",
    "items": [
-    "'So you're saying it messes with sleep and focus, yeah?'",
-    "'Fair, the 2am scrolling thing is real for me too.'",
+    "'So you're saying it hurts sleep and focus, right?'",
+    "'Fair, late-night scrolling hurts my sleep too.'",
     "'But a ban just pushes people onto worse apps.'"
    ],
    "explain": "Restate their view, say where you agree, then criticise. Dennett calls these 'Rapoport's Rules', after game theorist Anatol Rapoport: by step 3, they're ready to listen."
@@ -666,7 +666,7 @@
   "concept": "courage_kindness",
   "domain": "connection",
   "type": "choice",
-  "hook": "Group chat or one person? One of these usually gets ignored.",
+  "hook": "Ask everyone, or ask one person? One usually gets ignored.",
   "title": "How to Ask for Help",
   "game": {
    "steps": [
@@ -674,7 +674,7 @@
      "scenario": "Your phone won't back up your photos and you're stuck. You…",
      "options": [
       {
-       "text": "Post 'Can anyone help with phones?' in the big group chat.",
+       "text": "Post 'Can anyone help with phones?' in a big chat with everyone.",
        "feedback": "Feels safer, but in a crowd everyone can assume someone else will answer. That is the diffusion of responsibility first seen in emergencies (Darley & Latané, 1968) and later in online chat rooms."
       },
       {
@@ -728,7 +728,7 @@
     "Xuan Zhao",
     "Nicholas Epley"
    ],
-   "work": "Roghanizad & Bohns, JESP (2017); Zhao & Epley, Psychological Science (2022); Bohns, You Have More Influence Than You Think (2021)"
+   "work": "Darley & Latané, JPSP (1968); Roghanizad & Bohns, JESP (2017); Zhao & Epley, Psychological Science (2022); Bohns, You Have More Influence Than You Think (2021)"
   },
   "evidence": "moderate",
   "level": 1,
@@ -1010,7 +1010,7 @@
   "hook": "Why does one bad moment feel louder than twenty good ones?",
   "title": "Trust Builds Slow, Breaks Fast",
   "game": {
-   "prompt": "Your mate's been solid for months, then leaves you on read when you really needed them. Scientists tested how trust moves like this (with news about a power plant, weirdly). People rated 45 bits of good and bad news. Which moved trust more?",
+   "prompt": "A friend's been solid for months, then goes silent when you really need them. In a study, people rated 45 bits of good and bad news about a power plant. Which moved their trust more?",
    "choices": [
     "The good news",
     "Both about equally",
@@ -1019,7 +1019,7 @@
    "answer": 2,
    "reveal": "The bad news, by a wide margin. Paul Slovic (1993) found negative events cut trust far more than matching positive events raised it. His study was about a power plant, not friends, but it fits a wider pattern: bad tends to weigh more than good."
   },
-  "insight": "One slip from a mate feels huge because bad weighs more than good. But one slip rarely wipes out months of being there, and owning it fast wins much of it back.",
+  "insight": "One slip from a friend feels huge because bad weighs more than good. But one slip rarely wipes out months of being there, and owning it fast wins much of it back.",
   "model": "Trust is slow to build and quick to lose. Promise small, keep it, repeat.",
   "try_today": "Make one promise today small enough to keep for sure, then keep it on time.",
   "try_team": "Each person lists one promise they made the group this month: kept, late or dropped. No blame; renegotiate the dropped ones out loud.",

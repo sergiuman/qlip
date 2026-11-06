@@ -24,7 +24,7 @@
         {
           "text": "What other people think of your idea",
           "side": "left",
-          "why": "You can shape it, but their mind is theirs. Aim at the pitch, not the verdict."
+          "why": "You can shape it, but their mind is theirs. Aim at how you say it, not the verdict."
         },
         {
           "text": "How clearly you explain your idea",
@@ -72,7 +72,8 @@
       "cite": "Epictetus, Enchiridion, ch. 1 (trans. George Long, 1877)",
       "next_read": "Enchiridion, chapters 1-5 (about two pages)"
     },
-    "audience": "all"
+    "audience": "all",
+    "sensitive": true
   },
   {
     "id": "dichotomy-of-control-delayed-flight",
@@ -91,7 +92,7 @@
               "feedback": "Totally human. But the anger costs you energy and changes nothing about the plane."
             },
             {
-              "text": "Open the airline app and rebook while you stand in line.",
+              "text": "Open the airline app and check other flights while you stand in line.",
               "best": true,
               "feedback": "You spotted what's yours: your next choice. Whether a seat appears isn't; the queue stays a backup."
             },
@@ -288,7 +289,8 @@
       "cite": "Epictetus, Discourses, Book I, ch. 1 (trans. George Long, 1890)",
       "next_read": "Discourses, Book I, ch. 1 'Of the things which are in our power'"
     },
-    "audience": "all"
+    "audience": "all",
+    "sensitive": true
   },
   {
     "id": "circle-influence-library-choice",
@@ -407,7 +409,7 @@
           ]
         },
         {
-          "q": "Someone you study or work with is cheating in a way that hurts others. You…",
+          "q": "Someone in a group you're part of (class, team, club) is cheating in a way that hurts others. You…",
           "options": [
             {
               "label": "Drop a vague hint that people might notice",
@@ -513,7 +515,7 @@
     "concept": "socratic_ignorance",
     "domain": "wisdom",
     "type": "estimate",
-    "hook": "Are you a better driver than most? Nearly everyone thinks so.",
+    "hook": "Think you're above average? So did nearly everyone in this study.",
     "title": "Knowing You Don't Know",
     "game": {
       "question": "In a classic study, what % of US university students who drive rated themselves more skilful than the typical driver in their group?",
@@ -522,7 +524,7 @@
       "step": 1,
       "unit": "%",
       "answer": 93,
-      "explain": "Svenson (1981) found about 93% of a small sample of about 80 US university students rated themselves more skilful than the median driver in their group. At most 50% can be. Similar above-average ratings appear for many traits people value, though the size varies by trait and culture, and people often rate themselves below average on hard skills like juggling.",
+      "explain": "About 93% of some 80 US students rated themselves more skilful than the median driver in their group (Svenson, 1981). At most 50% can be. The gap varies by trait and culture, and people often rate themselves low on hard skills like juggling.",
       "anchor": null
     },
     "insight": "Most of us rate ourselves above average, which can't all be true. Socrates thought himself wiser only in not claiming knowledge he lacked (Apology 21d). Rating yourself low is a guess too.",
@@ -568,7 +570,7 @@
     },
     "insight": "Familiar things feel understood until you try to explain them. Socrates found the same in Athens: people skilled at one craft assumed they knew far more. Explaining is the honesty test.",
     "model": "If you can't explain it step by step, you know less than it feels. Say it out loud to find out.",
-    "try_today": "Explain something you rely on (a system at work, an app, a school topic) in 5 steps. Note where you said 'and then it just…'.",
+    "try_today": "Explain something you rely on (an app, wifi, a bank card) in 5 steps. Note where you said 'and then it just…'.",
     "try_team": "In a group (friends, family, a study group or team), each person explains one thing they 'know' in 2 minutes. Others may ask 'how exactly?' once.",
     "source": {
       "thinkers": [
@@ -597,7 +599,7 @@
     "concept": "amor_fati",
     "domain": "wisdom",
     "type": "reveal",
-    "hook": "A setback you got through: would you delete it from your story?",
+    "hook": "A delete button for one old setback. What else would it erase?",
     "title": "Amor Fati: Love Your Fate",
     "game": {
       "prompt": "Pick a real setback from your past: a rejection, a failure, a loss you've recovered from. If a button could erase it, and everything it led to, would you press it?",
@@ -606,7 +608,7 @@
         "No, keep it",
         "I'm not sure"
       ],
-      "reveal": "There's no wrong answer, and some pain is never 'worth it'. But many people find a setback also taught them a skill, a friend, or a direction. Nietzsche called loving what is necessary in your life, hard parts included, amor fati. If you chose erase, that is honest too: some losses teach nothing worth their price. Marcus Aurelius (Meditations 4.1) offers a gentler cousin: fire turns whatever falls on it into flame."
+      "reveal": "There's no wrong answer, and some pain is never 'worth it'. Many people find a setback also gave them a skill, a friend or a direction. Nietzsche's name for loving what's necessary, hard parts included: amor fati. If you chose erase, that's honest too."
     },
     "insight": "Amor fati isn't pretending bad things were good. Nietzsche aimed to want nothing different, ever (Ecce Homo); you don't have to. Ask what a hard chapter gave you, or honour that you came through.",
     "model": "You can't change what happened. You can choose what it becomes part of.",
@@ -639,7 +641,7 @@
     "concept": "impermanence",
     "domain": "wisdom",
     "type": "reveal",
-    "hook": "What were you worried about on this date three years ago?",
+    "hook": "Old worries once felt permanent. How many still do?",
     "title": "This Too Shall Pass",
     "game": {
       "prompt": "Try it now: what was keeping you up at night roughly three years ago? Can you name it clearly?",
@@ -766,7 +768,7 @@
     "concept": "begin_with_end",
     "domain": "wisdom",
     "type": "estimate",
-    "hook": "A long life, counted in weeks. More or fewer than you'd guess?",
+    "hook": "Your whole life, counted in weeks. Guess how many.",
     "title": "Your Life in Weeks",
     "game": {
       "question": "How many weeks are there in an 80-year life?",
@@ -775,10 +777,10 @@
       "step": 2,
       "unit": " weeks",
       "answer": 4174,
-      "explain": "80 years × about 52.18 weeks ≈ 4,174. Seneca: a life is measured by how it is used, not how many weeks it holds. Burkeman's point isn't to rush or count losses, but to choose a few things that matter. A summer is about 13 of them, so one well-used week really counts. Whatever your age, don't count backwards; pick one good week.",
+      "explain": "80 years × about 52.18 weeks ≈ 4,174 weeks. Sounds like loads, until you count one school summer holiday: about 6 of them. So don't count backwards. Pick one good week.",
       "anchor": null
     },
-    "insight": "About 4,000 weeks feels short, and if that feels heavy, that's normal. The point isn't to scare you but to sharpen you. Seneca said life is long enough if used well.",
+    "insight": "About 4,000 feels small, and that's normal. It's not there to scare you, just to help you choose. Seneca said life is long enough if you use it well.",
     "model": "Time is finite and countable. Spend weeks the way you'd spend something precious.",
     "try_today": "In your notes app, write the one thing you'd be proud of doing next week and the day you'll do it. Screenshot it as your lock screen.",
     "source": {
@@ -821,9 +823,9 @@
               "feedback": "Fair to be hurt, but two weeks of silence usually makes the hurt grow, not shrink."
             },
             {
-              "text": "Message: 'Still a bit annoyed about that, but have a good break. Can we talk when you're back?'",
+              "text": "Message: 'Have a good break. When you're back, I'd like 15 minutes about what you raised with the boss.'",
               "best": true,
-              "feedback": "You stayed honest and kept the door open. If this were your last message to them, you'd be glad it was this one."
+              "feedback": "You stayed honest, kept it calm and gave it a time. If this were your last message to them, you could stand behind it."
             },
             {
               "text": "Complain about them in the team group chat.",
@@ -848,24 +850,6 @@
               "feedback": "Memento mori doesn't mean swallowing it. It means fixing it without letting it eat your month."
             }
           ]
-        },
-        {
-          "scenario": "Your sister rings on your birthday. You haven't really spoken since a falling-out over a family holiday last year. You…",
-          "options": [
-            {
-              "text": "Thank her warmly and suggest lunch soon.",
-              "best": true,
-              "feedback": "She reached out; you met her. The old topic can wait for a calmer day, face to face."
-            },
-            {
-              "text": "Keep it short and cool. She knows what she did.",
-              "feedback": "Understandable, but a cool reply can turn one more year into five."
-            },
-            {
-              "text": "Raise the old disagreement right away to clear the air.",
-              "feedback": "Clearing the air matters, but a birthday call is rarely the moment."
-            }
-          ]
         }
       ]
     },
@@ -886,7 +870,7 @@
       "regret_minimization"
     ],
     "sensitive": true,
-    "try_team": "Before a tense meeting or family talk, each person writes: 'In a year, what will I wish I'd said here?' Share one line each, then begin.",
+    "try_team": "Before a tense meeting, each person writes: 'In a year, what will I wish I'd said here?' Share one line each, then begin.",
     "from_source": {
       "quote": "Do not act as if thou wert going to live ten thousand years. ... While thou livest, while it is in thy power, be good.",
       "cite": "Marcus Aurelius, Meditations, Book IV.17 (trans. George Long, 1862)",
@@ -983,7 +967,7 @@
           ]
         },
         {
-          "scenario": "In a group project or team meeting, everyone loves a plan. You can see a real flaw, but speaking up feels awkward. You…",
+          "scenario": "Your group (friends, team, club) loves a plan. You can see a real flaw, but speaking up feels awkward. You…",
           "options": [
             {
               "text": "Stay quiet and hope it works out.",
@@ -1010,7 +994,7 @@
         "Brené Brown",
         "Plutarch"
       ],
-      "work": "Dare to Lead (2018); The Gifts of Imperfection (2010)"
+      "work": "Dare to Lead (2018); The Gifts of Imperfection (2010); Plutarch, How to Tell a Flatterer from a Friend (Moralia)"
     },
     "evidence": "philosophy",
     "level": 1,
@@ -1041,7 +1025,7 @@
         "No real difference"
       ],
       "answer": 1,
-      "reveal": "Ben, most likely. In a golf study, players trained on process goals ('smooth tempo') kept nerves and focus steadier than those chasing a score (Kingston & Hardy, 1997). Ana still wants a fair thing; she's just aiming at something the client controls. Evidence is from small sport studies, not boardrooms: a strong hint, not a law."
+      "reveal": "Ben, most likely. In a golf study, players trained on process goals ('smooth tempo') kept nerves and focus steadier than those chasing a score (Kingston & Hardy, 1997). Ana's wish is fair; she's just aiming at what the client controls. Small sport studies, not boardrooms: a hint, not a law."
     },
     "insight": "Wanting the win is fine. Aiming only at it is the trap: the client decides that, not you. Aim at moves you control and let the outcome be a hope.",
     "model": "Keep the outcome as a hope; make the goal something you fully control.",
@@ -1169,7 +1153,8 @@
       "begin_with_end",
       "regret_minimization"
     ],
-    "audience": "young"
+    "audience": "young",
+    "sensitive": true
   },
   {
     "id": "golden-mean-social",

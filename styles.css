@@ -236,6 +236,14 @@ a { color: inherit; }
 .toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 30; background: var(--fg); color: var(--bg); padding: 10px 16px; border-radius: 999px; font-weight: 700; font-size: var(--step--1); max-width: calc(100vw - 32px); }
 .end-card { text-align: center; place-content: center; }
 
+/* On a phone the reveal gets the full width: the rail folds into one row of icons under it. */
+@media (max-width: 899px) {
+  .qlip.revealed { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; }
+  .qlip.revealed .rail { flex-direction: row; justify-content: center; gap: 18px; padding: 8px 0 0; }
+  .qlip.revealed .rail small { display: none; }
+  .qlip.revealed .rail button { width: 44px; height: 44px; }
+  .qlip.revealed .swipe-hint { display: none; }
+}
 @media (min-width: 900px) {
   .qlip { grid-template-columns: minmax(0, 1fr) 72px; }
 }

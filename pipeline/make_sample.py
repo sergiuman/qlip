@@ -2,8 +2,8 @@
 """Pick the cards a QA session reviews.
 
 From session 11 each persona reviews the feed it would actually get after choosing a world in the app
-(young = School & mates, work = Work, life = Everyday life): flagship + never-reviewed cards first + a rotating slice,
-restricted to cards the app would show in that world. Writes qa/sessions/sample-N-<world>.txt and the union as sample-N.txt.
+(young = School & mates, work = Work, life = Everyday life): a rotating slice in the app's own mix (10 of the world's cards, then alternating with "all" cards;
+life = flagship + never-reviewed + "all" cards), restricted to cards the app would show in that world. Writes qa/sessions/sample-N-<world>.txt and the union as sample-N.txt.
 Usage: python3 pipeline/make_sample.py N"""
 import json
 import sys
@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 n = int(sys.argv[1])
 cards = json.loads((ROOT / "data" / "qlip.json").read_text())["cards"]
+by_id = {c["id"]: c for c in cards}
 seen = set()
 for p in (ROOT / "qa" / "sessions").glob("sample-*.txt"):
     if not p.name.startswith(f"sample-{n}"):
@@ -27,7 +28,11 @@ for w in ("young", "work", "life"):
     ids = [c["id"] for c in cards if in_world(c, w)]
     fresh = [i for i in ids if i not in seen]
     rot = [ids[(n * 11 + k * 5) % len(ids)] for k in range(len(ids))]
-    pick = list(dict.fromkeys(["wso-triad-venn"] + fresh[:10] + rot))[:20]
+    own = [i for i in rot if by_id[i]["audience"] != "all"]
+    if own:  # same mix as the app's feed: 10 of the world's own cards, then alternating with "all" cards
+        anyone = [i for i in rot if by_id[i]["audience"] == "all"]
+        rot = own[:10] + [x for pair in zip(anyone, own[10:]) for x in pair] + anyone + own
+    pick = list(dict.fromkeys(rot if own else ["wso-triad-venn"] + fresh[:10] + rot))[:20]
     (ROOT / "qa" / "sessions" / f"sample-{n}-{w}.txt").write_text(",".join(pick))
     union += pick
     print(f"sample-{n}-{w}: {len(pick)} cards ({min(10, len(fresh))} never reviewed)")

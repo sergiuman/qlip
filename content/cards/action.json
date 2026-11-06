@@ -27,11 +27,11 @@
       ],
       "questions": [
         {
-          "q": "I'd do this even if no one saw.",
+          "q": "I want this for myself, not because I feel I should.",
           "axis": "W"
         },
         {
-          "q": "I know the first three steps I'd take.",
+          "q": "I've done something like this before, or could learn it with what I have.",
           "axis": "S"
         },
         {
@@ -42,8 +42,8 @@
       "threshold": 0.6,
       "results": {
         "W": {
-          "name": "Willing, Not Yet Able",
-          "text": "The want is strong today. Start with the cheapest move: ask one person for the time or the chance this week. If the door's already open, do one 5-minute practice rep."
+          "name": "Willing, Two Gaps",
+          "text": "The want is strong today; know-how and door score lower. Start with the cheapest move: ask one person for the time or the chance, or do one 5-minute practice rep."
         },
         "S": {
           "name": "Able, Not Yet Willing",
@@ -55,7 +55,7 @@
         },
         "SW": {
           "name": "Ready, Door Closed (for now)",
-          "text": "You want it and can do it; the door is shut today. That's structural, not a flaw. This week, ask one person who controls the door for one specific chance (a meeting, an hour, a ticket)."
+          "text": "You want it and can do it; the door is shut today. That's structural, not a flaw. This week, ask one person who controls the door for one specific chance (an hour, a place, a try-out)."
         },
         "OW": {
           "name": "Eager, Door Open",
@@ -63,24 +63,20 @@
         },
         "OS": {
           "name": "Ready, Waiting for a Why",
-          "text": "Everything is there except the fire. Write one line: what changes for me if this is done? If nothing, drop it without guilt."
+          "text": "Everything is there except the fire. Write one line: what changes for me if this is done? If nothing, and it's optional, drop it without guilt."
         },
         "OSW": {
           "name": "All Lights On (for this goal)",
-          "text": "All three pillars score high today, so pick a day and time for the first 10 minutes and write it down."
+          "text": "All three score high today, so pick a day and time for the first 10 minutes and write it down. If all three are high and you still haven't started, check for dread: what feels bad about step one?"
         },
         "": {
           "name": "Your Starting Point",
           "text": "Nothing's fully lit yet. Normal, not a verdict. Pick your lowest one and do one 5-minute move tonight."
-        },
-        "mid": {
-          "name": "The Half-Lit Path",
-          "text": "All three are half-lit today: do one 5-minute practice rep or ask for one free hour, then replay in a week."
         }
       }
     },
     "insight": "Being stuck isn't always about wanting it more. Sometimes the skill's missing, and sometimes the door just isn't open yet (Blumberg & Pringle, 1982). A framework, not a test.",
-    "model": "Stuck? Don't push everywhere. Find the missing pillar: Will, Skill or Open door.",
+    "model": "Stuck? Don't push everywhere. Find what's missing: Will, Skill or Open door. All there? Check for dread.",
     "try_today": "In your notes app, type your goal and mark Will, Skill and Open door as low, mid or high. Do one 5-minute move on the lowest tonight.",
     "source": {
       "thinkers": [
@@ -97,7 +93,7 @@
       "goal_directed_perception",
       "start_with_why"
     ],
-    "try_team": "Each person marks one stuck goal low, mid or high on Will, Skill and Open door. Ask someone else in the group which pillar they'd help with first.",
+    "try_team": "Each person marks one stuck goal low, mid or high on Will, Skill and Open door. Ask someone else in the group which one they'd help with first.",
     "audience": "all"
   },
   {
@@ -116,9 +112,9 @@
       "reveal": "Usually not, or only in pieces. If you said yes, that's the story we're all told: we hear about those who made it, not the many with grit and no door. Gifts are spread widely; open doors are not.",
       "answer": 1
     },
-    "insight": "Stories where grit beats everything hide the many who had grit and no door. Seeing the missing pillar is kinder, and more accurate, than blaming people for not trying.",
+    "insight": "Stories where grit beats everything hide the many who had grit and no door. Seeing what's missing is kinder, and more accurate, than blaming people for not trying.",
     "model": "Talent and drive are necessary, not sufficient. Someone has to open, or build, the door.",
-    "try_today": "Think of one person whose skill you admire but who lacks a door. Send them one lead, intro or resource today.",
+    "try_today": "Think of one person whose skill you admire but who lacks a door. Send them one tip, intro or resource today.",
     "source": {
       "thinkers": [
         "Thomas Gray",
@@ -147,7 +143,7 @@
     "domain": "action",
     "type": "choice",
     "hook": "You have one hour to help a stuck friend. Where do you spend it?",
-    "title": "Push the missing pillar",
+    "title": "Push the missing bit",
     "game": {
       "steps": [
         {
@@ -159,12 +155,12 @@
             },
             {
               "text": "Giving her a pep talk about following her dream",
-              "feedback": "Her will is already on fire. Encouragement is nice, but it isn't what's missing."
+              "feedback": "She already wants it badly. Encouragement is nice, but it isn't what's missing."
             },
             {
               "text": "Asking the fair organiser you know if she can share a table",
               "best": true,
-              "feedback": "Yes. Will and Skill are lit; the Open door is missing. Here, one door likely does more than any pep talk."
+              "feedback": "Yes. She wants it and she can do it; what's missing is a way in. One intro beats any pep talk."
             }
           ]
         },
@@ -174,7 +170,7 @@
             {
               "text": "Ask what he'd actually do with Spanish, and why it matters to him",
               "best": true,
-              "feedback": "Yes. Skill is there and the door is open; the gap is Will. A real reason does more than a schedule."
+              "feedback": "Yes. He can do it and the app's right there; what's missing is a reason. That beats any schedule."
             },
             {
               "text": "Make him a strict study timetable",
@@ -182,14 +178,14 @@
             },
             {
               "text": "Pay for the premium version of the app",
-              "feedback": "He already has the door. A bigger door won't make him walk through it."
+              "feedback": "He already has the app. A fancier version won't make him open it."
             }
           ]
         }
       ]
     },
-    "insight": "Our rule of thumb, not a research finding: two pillars are often enough for a first step, and help on the third pays off most. People tend to push the pillar that's already strong.",
-    "model": "Push the one weak pillar, not all three. Small help in the right spot beats big help elsewhere.",
+    "insight": "Our rule of thumb, not a research finding: of wanting it, knowing how and access, two are often enough for a first step. Help on the third pays off most.",
+    "model": "Push the missing bit, not all three. Small help in the right spot beats big help elsewhere.",
     "try_today": "Ask someone stuck: 'Is it wanting, knowing how, or access?' Then offer help only on the answer they give.",
     "source": {
       "thinkers": [
@@ -212,43 +208,43 @@
     "concept": "two_thirds_rule",
     "domain": "action",
     "type": "swipe",
-    "hook": "Two of three pillars lit often gets people moving. Can you count them?",
+    "hook": "Want it, know how, can get access. Are two of three enough to start?",
     "title": "Spot the 2 out of 3",
     "game": {
-      "prompt": "Does this person have at least two pillars lit?",
+      "prompt": "Wanting it, knowing how, having access. Does this person have at least two?",
       "left": "Not yet",
       "right": "Two or more",
       "items": [
         {
           "text": "Mia wants to run a 5K, has never run, and there's a park next door.",
           "side": "right",
-          "why": "Will + Open door. Skill can be built on the way: start with walk-run intervals."
+          "why": "Wants it, and the park's right there. Know-how can come on the way: try walk-run intervals."
         },
         {
           "text": "Theo plays piano well and has one at home, but stopped enjoying it after his exams.",
           "side": "right",
-          "why": "Skill + Open door lit. Will is resting, normal after a hard stretch. Try one just-for-fun session."
+          "why": "Know-how and access are there. The want is resting, normal after a hard time. Try one fun session."
         },
         {
           "text": "Jo dreams of acting, has never tried, and no theatre is nearby.",
           "side": "left",
-          "why": "Only Will. Build one more pillar first, like an online class or a local reading group."
+          "why": "Only the want. Build one more first, like an online class or a local reading group."
         },
         {
           "text": "Raj can fix bikes, loves it, and a neighbour just asked for help.",
           "side": "right",
-          "why": "All three. Full agency: he only needs to say yes."
+          "why": "All three. He only needs to say yes."
         },
         {
           "text": "Lee has a free gym pass but no interest and no idea how to train.",
           "side": "left",
-          "why": "Only the Open door. An open door alone doesn't move anyone."
+          "why": "Only access. An open door alone doesn't move anyone."
         }
       ]
     },
-    "insight": "Our rule of thumb, not a research finding: with two pillars lit, a first step is often possible. Will is the exception: without a reason that's yours, the others rarely carry you.",
-    "model": "Two pillars often make motion possible; if the missing one is Will, start there.",
-    "try_today": "List three goals. Count the lit pillars for each. Start the one with the most lit today.",
+    "insight": "Our rule of thumb, not a research finding: with two of the three, a first step is often possible. Wanting it is the exception: without your own reason, the others rarely carry you.",
+    "model": "Two of three often make a start possible; if what's missing is the want, start there.",
+    "try_today": "List three goals. Count how many of want, know-how and access each one has. Start the one with the most today.",
     "source": {
       "thinkers": [
         "Melvin Blumberg & Charles Pringle"
@@ -262,7 +258,7 @@
       "skill_gap",
       "small_wins"
     ],
-    "try_team": "Write five goals from the group on slips of paper. Sort them together by how many pillars are lit, then plan the first step of one 'two-lit' goal.",
+    "try_team": "Write five group goals on slips. Sort them by how many of want, know-how and access they have, then plan the first step of one with two.",
     "audience": "all"
   },
   {
@@ -366,7 +362,7 @@
         {
           "upTo": -0.34,
           "label": "Borrowed goal",
-          "text": "Today this goal sounds borrowed. That isn't a character flaw. Find your own reason inside it, or consider letting it go."
+          "text": "Today this goal sounds borrowed. That isn't a character flaw. Find your own reason inside it or, if it's optional, consider letting it go."
         },
         {
           "upTo": 0.34,
@@ -376,13 +372,13 @@
         {
           "upTo": 1,
           "label": "Real fire",
-          "text": "Today you rate your want high. If you're still stuck, look at Skill or the Open door instead of blaming motivation."
+          "text": "Today you rate your want high. If you're still stuck, look at know-how, access or dread instead of blaming motivation."
         }
       ]
     },
     "insight": "With skill and access in place, the missing piece is often a reason that's yours. Goals that fit your values tend to last longer. If nothing has felt worth wanting for weeks, talk to someone.",
-    "model": "No productivity hack fixes a missing why. Find your reason, or free yourself from the goal.",
-    "try_today": "Write: 'This matters to me because…' If nothing comes, that's information, not failure. Can it be dropped, changed or tied to what you love?",
+    "model": "A missing why needs a reason, not a hack. Find yours or, if the goal is optional, let it go.",
+    "try_today": "Write: 'This matters to me because…' If nothing comes, that's information, not failure. If it's optional, change it or drop it.",
     "source": {
       "thinkers": [
         "Edward Deci",
@@ -454,7 +450,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "In a week you need to know new material: words in a language, a certification topic, or how a new system works. You've got one hour. Which plan sticks best?",
+          "scenario": "In a week you need to know something new: words in a language, a topic for a test, or how a new app works. You've got one hour. Which plan sticks best?",
           "options": [
             {
               "text": "Read the notes four times, slowly and carefully",
@@ -494,7 +490,7 @@
     "insight": "In a classic study, students who reread a text recalled about 40% a week later; those who tested themselves recalled about 61%. Yet the rereaders felt more sure they'd remember.",
     "model": "Easy-feeling study often isn't learning. Pull it out of your head; don't just pour it back in.",
     "try_today": "Pick something you're learning. Close the book and write or say all you remember for 3 minutes. Then check the gaps.",
-    "try_team": "End a meeting, lesson or onboarding session with a 2-minute brain dump: everyone writes the 3 things they remember, no notes, then compares.",
+    "try_team": "Next time a group learns something together (a lesson, a meeting, a recipe), end with a 2-minute brain dump: write 3 things you remember, then compare.",
     "source": {
       "thinkers": [
         "Henry L. Roediger III",
@@ -520,8 +516,8 @@
     "hook": "You're trying harder and harder. What if the wall isn't you?",
     "title": "Ready, Door Closed",
     "game": {
-      "prompt": "Where's the blocker: something you can grow, or something in the way?",
-      "left": "Something I can build",
+      "prompt": "Where's the blocker: something in you, or something in the setup?",
+      "left": "Something in me",
       "right": "Something in the setup",
       "items": [
         {
@@ -532,17 +528,17 @@
         {
           "text": "You keep skipping guitar practice since you stopped caring about the songs.",
           "side": "left",
-          "why": "That's Will, and it's allowed to change. Pick songs you love, or take a guilt-free break."
+          "why": "Caring is allowed to change. Pick songs you love, or take a guilt-free break."
         },
         {
           "text": "You can only revise after 10pm because you look after your little brother every evening.",
           "side": "right",
-          "why": "Time is part of the Open door. Shrink the task or find a better slot, not more willpower."
+          "why": "Time's part of the setup. Tell a teacher you trust: schools can help young carers."
         },
         {
           "text": "You don't know how to edit videos for the channel you want to start.",
           "side": "left",
-          "why": "That's Skill, and it's learnable fast with free tutorials and feedback."
+          "why": "A learnable skill, and fast, with free tutorials and feedback."
         },
         {
           "text": "The football team only trains at a ground two buses away and you've no lift.",
@@ -551,7 +547,7 @@
         }
       ]
     },
-    "insight": "When will and skill are full, more effort on yourself can turn into self-blame. Some walls are rules, money, time or gatekeepers. That's not an excuse; it says change the setup.",
+    "insight": "When you want it and can do it, more effort on yourself can turn into self-blame. Some walls are rules, money, time or gatekeepers. So change the setup, and ask for help.",
     "model": "If you want it and can do it but still can't, the fight is structural. Change the setup, not yourself.",
     "try_today": "Name one outside blocker on a goal. Write two other doors around it: another route, person, or place.",
     "source": {
@@ -569,7 +565,7 @@
       "wso_triad"
     ],
     "sensitive": true,
-    "try_team": "List the walls your class, team or family keeps hitting. Mark each 'something we can build' or 'in the setup'. Pick one setup wall and name who could move it.",
+    "try_team": "List the walls your class, team or family keeps hitting. Mark each 'something in us' or 'in the setup'. Pick one setup wall and name who could move it.",
     "audience": "young"
   },
   {
@@ -577,7 +573,7 @@
     "concept": "opportunity_gap",
     "domain": "action",
     "type": "estimate",
-    "hook": "Rich kids vs poorer kids: how much likelier to become inventors?",
+    "hook": "Same top maths score, different family money. Who ends up inventing?",
     "title": "The lost Einsteins",
     "game": {
       "question": "In the US, kids from the richest 1% of families vs kids from the poorer half: how many times more likely are they to become inventors?",
@@ -917,7 +913,7 @@
       ]
     },
     "insight": "Three stalls, three different missing pieces. One fix for everyone misses two of them. Blumberg and Pringle (1982) argued work needs ability, willingness and opportunity.",
-    "model": "Before you fix a stall, name the missing pillar: the want, the know-how or the open door.",
+    "model": "Before you fix a stall, name the missing piece: the want, the know-how or the open door.",
     "try_today": "In your next 1:1, ask: 'What's hardest here: wanting it, knowing how, or getting the chance?' Fix only that one.",
     "source": {
       "thinkers": [
@@ -1027,7 +1023,7 @@
           "why": "Your own success is the strongest source of belief. You have proof, not just hope."
         },
         {
-          "text": "You watch a famous YouTuber's perfect speech",
+          "text": "You watch a famous speaker's perfect talk",
           "side": "left",
           "why": "Models work best when they feel similar. A star can make the gap look bigger."
         },
@@ -1071,7 +1067,7 @@
     "hook": "Someone starts paying you for the thing you'd do for free. Any catch?",
     "title": "When pay steals the fun",
     "game": {
-      "prompt": "You make video edits for fun. In a lab-style setup, you're paid per edit for a session, then the pay stops and you're left alone with free time. Compared with people never paid, people like you go on to make…",
+      "prompt": "You do something purely for fun, like drawing or video edits. In a lab-style setup, you're paid per piece for a session, then the pay stops and you're left alone with free time. Compared with people never paid, people like you go on to make…",
       "choices": [
         "More edits in their free time",
         "About as many",
@@ -1111,16 +1107,16 @@
     "game": {
       "steps": [
         {
-          "scenario": "There's a thing you keep putting off: a form, a message, a small project. You know exactly how to start it, and you have the time. It's been sitting there for three weeks. What's most likely missing?",
+          "scenario": "There's a thing you keep putting off: a form, a message, a small project. You know exactly how to start it, and you have the time. It's been sitting there for three weeks. What's worth checking first?",
           "options": [
             {
               "text": "A better guide or template",
               "feedback": "Not quite. You already know how, so more how-to aims at a skill that isn't missing."
             },
             {
-              "text": "A reason it matters to me right now",
+              "text": "Whether I dread it, or it just doesn't matter to me",
               "best": true,
-              "feedback": "Yes. Skill and time are there, so the gap is the why. Without a reason that's yours, it keeps sliding."
+              "feedback": "Yes. You know how, so look at feelings and reasons. Dread needs a tiny first step; no reason needs a why."
             },
             {
               "text": "More free time",
@@ -1138,7 +1134,7 @@
             {
               "text": "Ask: 'What would you love to draw, and who for?'",
               "best": true,
-              "feedback": "Yes. Their skill and access are fine, so look for the why. Their answer may also show the goal isn't really theirs."
+              "feedback": "Yes. Their skill and access are fine, so look at the why. Their answer may also show some dread, or that the goal isn't really theirs."
             },
             {
               "text": "Tell them to just push through",
@@ -1154,9 +1150,9 @@
               "feedback": "It can work for a short while. But a streak is a borrowed reason, and it usually breaks on a bad day."
             },
             {
-              "text": "Change it, tie it to something you care about, or drop it",
+              "text": "If it's optional, change it or drop it. If it has consequences (a bill, a form), do 2 minutes now.",
               "best": true,
-              "feedback": "Yes. No hack fixes a missing why. Finding a real reason, or letting the goal go, both end the stall."
+              "feedback": "Yes. Letting go of what's optional and starting small on what isn't both end the stall. If nothing has felt worth doing for weeks, talk to someone you trust."
             },
             {
               "text": "Decide you're just lazy",
@@ -1166,25 +1162,28 @@
         }
       ]
     },
-    "insight": "When skill and access are there and nothing moves, more how-to rarely helps. A reason that's yours does. This is a teaching lens, not a tested diagnostic.",
-    "model": "If you can do it but don't, the gap is usually the why, not the how. Find your reason first.",
-    "try_today": "Pick one thing you can do but keep putting off. Write: 'This matters to me because…' If nothing comes, change it or drop it.",
-    "try_team": "Each person names one task they can do but keep putting off. The others may only ask: 'What would make this worth doing for you?'",
+    "insight": "You know how and have time, yet nothing moves? Often it's dread, and often a missing reason. Each needs a different fix. A teaching lens, not a tested diagnostic.",
+    "model": "If you can but don't, check for dread or a missing reason, then treat the one you find.",
+    "try_today": "Pick one thing you keep putting off. Write: This matters because... Blank and optional? Drop it. Has consequences? Do 2 minutes.",
+    "try_team": "Each person names one task they can do but keep putting off. The others may only ask: 'What feels bad about it, and what would make it worth doing?'",
     "source": {
       "thinkers": [
         "Melvin Blumberg & Charles Pringle",
         "Edward Deci",
-        "Richard Ryan"
+        "Richard Ryan",
+        "Fuschia Sirois",
+        "Timothy Pychyl"
       ],
-      "work": "Blumberg & Pringle, The missing opportunity in organizational research (Academy of Management Review, 1982); Deci & Ryan, Self-Determination Theory (1985)"
+      "work": "Blumberg & Pringle, The missing opportunity in organizational research (Academy of Management Review, 1982); Deci & Ryan, Self-Determination Theory (1985); Sirois & Pychyl, Procrastination and the priority of short-term mood regulation (Social and Personality Psychology Compass, 2013)"
     },
     "evidence": "philosophy",
     "level": 1,
     "related": [
+      "procrastination_emotion",
       "start_with_why",
-      "wso_triad",
-      "skill_gap"
+      "wso_triad"
     ],
-    "audience": "all"
+    "audience": "all",
+    "sensitive": true
   }
 ]

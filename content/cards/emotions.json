@@ -4,7 +4,7 @@
     "concept": "emotion_naming",
     "domain": "emotions",
     "type": "swipe",
-    "hook": "You say you feel 'bad'. Can you do anything with that word?",
+    "hook": "You feel 'bad'. Bad how? The answer changes what helps.",
     "title": "Name It to Tame It",
     "game": {
       "prompt": "Could you act on this feeling-word?",
@@ -27,9 +27,9 @@
           "why": "'Everything' is too big to touch. Shrink it to one feeling, one cause."
         },
         {
-          "text": "\"I'm frustrated because the deadline moved again and nobody asked me.\"",
+          "text": "\"I'm frustrated because the bus times changed again and nobody told me.\"",
           "side": "right",
-          "why": "Clear feeling plus cause. Next step: ask who decides deadlines and how you get a say."
+          "why": "Clear feeling plus cause. Next step: check the new times and plan around them."
         },
         {
           "text": "\"I'm stressed.\"",
@@ -62,14 +62,15 @@
       "system1_system2"
     ],
     "try_team": "Go round the group: each person names today's mood in two exact words (not 'fine' or 'busy'). No fixing, just listening. Three minutes.",
-    "audience": "all"
+    "audience": "all",
+    "sensitive": true
   },
   {
     "id": "emotion-naming-label-reveal",
     "concept": "emotion_naming",
     "domain": "emotions",
     "type": "reveal",
-    "hook": "Saying 'I'm angry' out loud: does it fuel the anger or cool it?",
+    "hook": "Put your anger into one word. Fuel on the fire, or water?",
     "title": "The Label Effect",
     "game": {
       "prompt": "In a brain-scan study, people looked at angry and scared faces. Some just matched the faces. Others picked a word for the emotion, like 'angry'. What happened in the alarm center of their brain?",
@@ -78,11 +79,11 @@
         "Naming it calmed the alarm",
         "No difference"
       ],
-      "reveal": "Naming it calmed it. Picking the emotion word lowered activity in the amygdala, the brain's alarm (Lieberman et al., 2007). Guessed 'louder'? Fair: venting can stoke anger. But a calm label isn't venting.",
+      "reveal": "Naming it calmed it. Picking the emotion word lowered activity in the amygdala, the brain's alarm, in a small lab study (Lieberman et al., 2007). Guessed 'louder'? Fair: venting can stoke anger. But a calm label isn't venting.",
       "answer": 1
     },
     "insight": "Naming a feeling gives your thinking brain a job. It won't erase the feeling, but it can take the edge off enough for you to choose what to do next.",
-    "model": "Words are a dimmer switch for feelings: name it and the alarm quiets down.",
+    "model": "Words are a dimmer switch for feelings: name it and the alarm can quiet down.",
     "try_today": "When something stings today, finish this sentence in your head or in a note: 'Right now I feel ___ because ___.'",
     "source": {
       "thinkers": [
@@ -103,7 +104,8 @@
       "cite": "Spinoza, Ethics (1677), Part V, Proposition 3, trans. R. H. M. Elwes (1883)",
       "next_read": "Spinoza, Ethics, Part V, Propositions 1-10 and their proofs (Elwes translation)"
     },
-    "audience": "all"
+    "audience": "all",
+    "sensitive": true
   },
   {
     "id": "impulse-pause-swipe",
@@ -178,14 +180,15 @@
       "cite": "Epictetus, Enchiridion, chapter 20, trans. Elizabeth Carter (1758)",
       "next_read": "Epictetus, Enchiridion, chapters 1, 5 and 20 (each under a page)"
     },
-    "audience": "all"
+    "audience": "all",
+    "sensitive": true
   },
   {
     "id": "impulse-pause-choice",
     "concept": "impulse_pause",
     "domain": "emotions",
     "type": "choice",
-    "hook": "Four words at 11pm, and your brain writes the worst ending.",
+    "hook": "Five words at 11pm, and your brain writes the worst ending.",
     "title": "Pause Before Send",
     "game": {
       "steps": [
@@ -258,7 +261,7 @@
     "title": "Inner Critic or Inner Coach?",
     "game": {
       "left": "Tough inner voice",
-      "right": "Kind coach",
+      "right": "Kind voice",
       "questions": [
         {
           "q": "You make a silly mistake (a wrong answer, a missed bus, a typo everyone saw). Your first inner words are…",
@@ -306,7 +309,7 @@
           "q": "When you feel low, you tend to…",
           "options": [
             {
-              "label": "Tell myself to snap out of it",
+              "label": "Tell myself to get over it",
               "value": -1
             },
             {
@@ -349,7 +352,7 @@
         {
           "upTo": -0.34,
           "label": "Your critic was loud today",
-          "text": "Today your inner voice leaned tough, often because it wants to keep you safe or improving. You can keep the high standards and drop the insults: try how a good coach would say it. That voice learned to be harsh for a reason. You can retrain it one sentence at a time."
+          "text": "Today your inner voice leaned tough, often because it wants to keep you safe or improving. You can keep the high standards and drop the insults: try how a good mentor would say it. That voice learned to be harsh for a reason. You can retrain it one sentence at a time."
         },
         {
           "upTo": 0.34,
@@ -358,7 +361,7 @@
         },
         {
           "upTo": 1,
-          "label": "Coach-leaning",
+          "label": "Kind-leaning",
           "text": "Today's answers lean kind: setbacks met with warmth and a plan. That's a skill, not softness. It's worth keeping on bad days too."
         }
       ]
@@ -382,7 +385,7 @@
       "procrastination_emotion"
     ],
     "sensitive": true,
-    "try_team": "In a class, team or family review, each person names one recent mistake and what a kind coach would say about it. The leader goes first.",
+    "try_team": "In a class, team or family review, each person names one recent mistake and what a kind friend would say about it. The leader goes first.",
     "audience": "all"
   },
   {
@@ -393,7 +396,7 @@
     "hook": "Your mistake broke something at work. Excuse, or comeback?",
     "title": "Kind, Not Soft",
     "game": {
-      "prompt": "Something at work went wrong because of you. Real self-compassion, or a look-alike?",
+      "prompt": "You say this to yourself right after. Real self-compassion, or a look-alike?",
       "left": "Look-alike",
       "right": "Self-compassion",
       "items": [
@@ -461,20 +464,20 @@
     "concept": "procrastination_emotion",
     "domain": "emotions",
     "type": "reveal",
-    "hook": "You put it off again. Guilt or forgiveness: which gets it done?",
+    "hook": "You put it off again. Does a telling-off get you moving?",
     "title": "Procrastination Is a Feeling Problem",
     "game": {
-      "prompt": "Students who procrastinated studying for a first exam were later asked how much they had forgiven themselves for it. Before the next exam, who procrastinated less?",
+      "prompt": "Students who procrastinated before one big test were later asked how much they had forgiven themselves for it. Before the next test, who procrastinated less?",
       "choices": [
         "Those who stayed hard on themselves",
         "Those who forgave themselves",
         "No difference"
       ],
-      "reveal": "The forgivers procrastinated less before the next exam (Wohl, Pychyl & Bennett, 2010). Picked 'hard on themselves'? Guilt feels like it should push us. It's one correlational study of 119 students, but it fits a wider pattern: guilt keeps the task tied to a bad feeling.",
+      "reveal": "The forgivers procrastinated less before the next test (Wohl, Pychyl & Bennett, 2010). Picked 'hard on themselves'? Guilt feels like it should push us. It's one correlational study of 119 students, but it fits a wider pattern: guilt keeps the task tied to a bad feeling.",
       "answer": 1,
       "reveal_title": "Forgiveness won."
     },
-    "insight": "We rarely avoid the task itself; we avoid the feeling it gives us. Delay is a quick mood fix that costs later. Beating yourself up adds more bad feeling, so it often backfires.",
+    "insight": "Often we're avoiding the feeling a task gives us, not the task. Delay is a quick mood fix that costs later. Beating yourself up adds more bad feeling, so it often backfires.",
     "model": "Often you're avoiding a feeling, not the task. Shrink the feeling and the task gets easier to start.",
     "try_today": "Name the feeling the task gives you, forgive yesterday's delay in one sentence, then work on it for just 5 minutes.",
     "source": {
@@ -511,7 +514,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "You finally open the thing you've been dodging: a report or essay, a budget sheet, a tricky message. 'Ugh, where do I even start?' Your thumb drifts to your phone. Best move?",
+          "scenario": "You finally open the thing you've been dodging: a form, a budget, a tricky message. 'Ugh, where do I even start?' Your thumb drifts to your phone. Best move?",
           "options": [
             {
               "text": "Wait until you're in the mood for it.",
@@ -609,7 +612,7 @@
       "doomscroll_loop",
       "environment_design"
     ],
-    "try_team": "Before a meeting, class or family meal, everyone names their mood in one word. Whoever leads: your mood in the first 2 minutes sets the weather.",
+    "try_team": "Before a meeting, class or family meal, everyone names their mood in one word. Whoever leads: your mood in the first 2 minutes can set the weather.",
     "sensitive": true,
     "audience": "all"
   },
@@ -660,7 +663,7 @@
     "game": {
       "steps": [
         {
-          "scenario": "For three weeks you've written three good things each night: a walk in the sun, a joke that landed, a call with your sister. Lately it's 'food, bed, phone' and it feels like homework. Best move?",
+          "scenario": "For three weeks you've written three good things each night: a walk in the sun, a joke that landed, a call with your sister. Lately it's 'food, bed, phone' and it feels like a chore. Best move?",
           "options": [
             {
               "text": "Push on: every night, no excuses.",
@@ -794,7 +797,7 @@
     "hook": "Not every 'later' is procrastination. Can you spot the ones that are?",
     "title": "Smart Wait or Feeling Dodge?",
     "game": {
-      "prompt": "Why is this waiting?",
+      "prompt": "What kind of waiting is this?",
       "left": "Dodging a feeling",
       "right": "Smart wait",
       "items": [
@@ -804,14 +807,14 @@
           "why": "Busy, but dread is steering. Planning feels useful and keeps the hard part away."
         },
         {
-          "text": "You wait to start the essay or report until someone answers your question about the brief, due back tomorrow.",
+          "text": "You hold off booking the trip until a friend confirms the dates tomorrow.",
           "side": "right",
           "why": "A reason and an end time. That's a plan, not avoidance."
         },
         {
-          "text": "It's due Friday. It's Wednesday and the doc is still blank; you're just 'thinking about it'.",
+          "text": "It's due Friday. It's Wednesday and the form is still blank; you're just 'thinking about it'.",
           "side": "left",
-          "why": "Thinking with no output as the deadline nears usually means the blank page feels bad."
+          "why": "Thinking with nothing on paper as Friday nears often means starting feels bad."
         },
         {
           "text": "You've put off asking a friend why they've been off with you for weeks.",
@@ -819,23 +822,23 @@
           "why": "Fear of the answer is the feeling. The delay protects you from it, for now."
         },
         {
-          "text": "You park a side project because two deadlines land tomorrow.",
+          "text": "You park a hobby project because two things are due tomorrow.",
           "side": "right",
           "why": "Choosing an order you'd still back tomorrow is prioritising, not dodging."
         }
       ]
     },
-    "insight": "Delay isn't the problem; avoidance is. Dodging is a normal way to protect yourself from a bad feeling, not laziness. Forgiving past delays cut later delay (Wohl et al., 2010).",
+    "insight": "Delay isn't the problem; avoidance is. Researchers define procrastination as delaying despite expecting to be worse off (Steel, 2007). It often dodges a bad feeling; it isn't laziness.",
     "model": "A smart wait has a reason and a date. A dodge has a feeling and a vague 'later'.",
-    "try_today": "Pick one thing you're delaying. Write its reason and a date. No reason? Name the feeling kindly and do 10 minutes when ready today.",
+    "try_today": "Pick one thing you're delaying. Write its reason and a date. No reason? Name the feeling kindly and do 10 minutes today.",
     "try_team": "Each person lists one delayed task and tags it 'reason + date' or 'feeling'. Pair up: for each 'feeling' task, agree a 10-minute first step.",
     "source": {
       "thinkers": [
         "Piers Steel",
         "Tim Pychyl",
-        "Michael Wohl"
+        "Fuschia Sirois"
       ],
-      "work": "Steel, 'The Nature of Procrastination', Psychological Bulletin (2007); Wohl, Pychyl & Bennett, Personality and Individual Differences (2010)"
+      "work": "Steel, 'The Nature of Procrastination', Psychological Bulletin (2007); Sirois & Pychyl, Social and Personality Psychology Compass (2013)"
     },
     "evidence": "moderate",
     "level": 1,
@@ -863,7 +866,7 @@
               "feedback": "That voice thinks it's helping. But 'always' turns one miss into who you are, and that makes practice feel pointless."
             },
             {
-              "text": "'That hurts. Pros blank too. What would I say to a mate?'",
+              "text": "'That hurts. Pros blank too. What would I say to a friend?'",
               "best": true,
               "feedback": "That's self-compassion in three moves: notice the sting, remember everyone misses, talk like a friend. Honest, not brutal."
             },
@@ -874,7 +877,7 @@
           ]
         },
         {
-          "scenario": "Real study: students who got a disappointing exam grade. The ones who were kinder to themselves were more likely to…",
+          "scenario": "Real study: students who got a disappointing grade. The ones who were kinder to themselves were more likely to…",
           "options": [
             {
               "text": "Stop trying. They felt fine anyway.",
@@ -886,15 +889,15 @@
               "feedback": "Right (Neff et al., 2005): self-kindness went with accepting and reframing, and less avoiding. It's a correlation, not proof of cause."
             },
             {
-              "text": "Blame the teacher instead.",
-              "feedback": "Good guess at an excuse, but no: self-kindness went with facing the result, not dodging it."
+              "text": "Blame someone else instead.",
+              "feedback": "A common way to protect yourself, but no: self-kindness went with facing the result, not dodging it."
             }
           ]
         }
       ]
     },
-    "insight": "Being kind to yourself after a miss isn't going soft. Self-kind students feared failure less and kept wanting to learn. Harshness feels motivating, but fear of failing feeds dodging.",
-    "model": "After a miss, talk to yourself like your best mate would: honest, not brutal.",
+    "insight": "Being kind to yourself after a miss isn't going soft. Self-kind students feared failure less and kept wanting to learn (a link, not proof). Harshness feels motivating, but fear feeds dodging.",
+    "model": "After a miss, talk to yourself like a good friend would: honest, not brutal.",
     "try_today": "Next time you mess up, say in your head: 'That stings. Everyone gets this wrong sometimes. What's my next small try?'",
     "try_team": "Team, class or family huddle: each person names one miss this week; a partner answers like a good friend would. Then everyone names one next try.",
     "source": {
@@ -980,6 +983,7 @@
       "three_conversations",
       "emotion_naming"
     ],
-    "audience": "all"
+    "audience": "all",
+    "sensitive": true
   }
 ]

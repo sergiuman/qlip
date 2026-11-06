@@ -285,7 +285,7 @@
     "concept": "grit",
     "domain": "growth",
     "type": "reveal",
-    "hook": "A tough first summer at West Point. Guess what predicted who stayed.",
+    "hook": "Talent or staying power: who survives West Point's hardest summer?",
     "title": "Grit vs Talent",
     "game": {
       "prompt": "New cadets at West Point, the US army academy, face 'Beast Barracks', a famously hard first summer. Which better predicted who stayed?",
@@ -739,7 +739,7 @@
     "concept": "quitting_wisely",
     "domain": "growth",
     "type": "swipe",
-    "hook": "Is this the dip you push through, or the sign to walk away?",
+    "hook": "Everyone says don't quit. Sometimes that's terrible advice.",
     "title": "Quitting Wisely",
     "game": {
       "prompt": "Is this a real quit signal, or not (yet)?",
@@ -764,12 +764,7 @@
         {
           "text": "You had a terrible week and feel like quitting this project tonight.",
           "side": "right",
-          "why": "That feeling is real. One rough night is too little to decide a project on. Rest first, then decide."
-        },
-        {
-          "text": "Your goal changed and this no longer leads anywhere you want.",
-          "side": "left",
-          "why": "Grit toward the wrong goal is just stubbornness. Redirect the effort."
+          "why": "Real feeling, but one week is too little to decide on. If weeks pile up, take it seriously."
         },
         {
           "text": "It keeps costing you sleep, health, or key relationships.",
@@ -777,9 +772,9 @@
           "why": "Real harm is a stop sign, not a toughness test. Protect the base everything else is built on."
         },
         {
-          "text": "You're stuck, but you haven't tried a new method yet.",
-          "side": "right",
-          "why": "Change the approach before the goal. Stuck is often a method problem."
+          "text": "Weeks of dread and exhaustion, and time off doesn't lift it.",
+          "side": "left",
+          "why": "Not a one-off. Talk to a doctor or someone you trust before deciding alone."
         }
       ]
     },
@@ -849,7 +844,7 @@
     "concept": "risky_play",
     "domain": "growth",
     "type": "choice",
-    "hook": "Mates jumping off a pier. Brave or daft? There's a third option.",
+    "hook": "Friends jumping off a pier. Brave or daft? There's a third option.",
     "title": "Keep the Risk, Fix the Hazard",
     "game": {
       "steps": [
@@ -872,7 +867,7 @@
           ]
         },
         {
-          "scenario": "Your 7-year-old cousin is climbing a sturdy tree, a little higher than you'd like. You call up…",
+          "scenario": "A 7-year-old girl in your family is climbing a sturdy tree, a little higher than you'd like. You call up…",
           "options": [
             {
               "text": "\"Do you feel steady? Where does your next foot go?\"",
@@ -911,7 +906,7 @@
     },
     "insight": "A risk is a danger you can see and judge; a hazard is one you can't. Fix hazards, keep risks. A 2015 review of children's play linked it to better health; for adults it's an analogy.",
     "model": "Remove the hidden hazards, keep the visible risks. That's where skill and courage grow.",
-    "try_today": "Swap one 'Be careful!' for a question: 'What's your plan?' or 'Do you feel steady?' Try it on a kid, a colleague or yourself.",
+    "try_today": "Swap one 'Be careful!' for a question: 'What's your plan?' or 'Do you feel steady?' Try it on a kid, a friend or yourself.",
     "try_team": "List 3 things you shield someone from (a solo bus trip, cooking dinner, a first big speech). Sort each: hidden hazard (fix it) or visible risk (allow it).",
     "source": {
       "thinkers": [
@@ -942,8 +937,7 @@
         "Ben's",
         "Both the same"
       ],
-      "answer": 0,
-      "reveal": "Ana's. Amy Edmondson calls it an intelligent failure: new ground, small stakes, a real question answered. Ben's is a basic failure: worth a quick fix (set a timer), but it holds no new lesson."
+      "reveal": "Ana's, in Amy Edmondson's framework. She calls it an intelligent failure: new ground, small stakes, a real question answered. Ben's is a basic failure: worth a quick fix (set a timer), but it holds no new lesson."
     },
     "insight": "Mistakes on new ground show you what nobody knew yet. Mistakes on known ground just need a better system. Sort them, and stop feeling equally bad about both.",
     "model": "New ground: make small, smart mistakes. Known ground: add a check.",
@@ -970,7 +964,7 @@
     "concept": "mistake_alchemy",
     "domain": "growth",
     "type": "reveal",
-    "hook": "Two incidents this sprint. Which one should the retro learn from?",
+    "hook": "Treat every incident the same and you waste the best lessons.",
     "title": "Intelligent vs Basic Failure",
     "game": {
       "prompt": "Two incidents this sprint. Ana tried a new caching approach behind a feature flag on 5% of traffic, and it failed; she wrote down what she learned. Ben forgot to run the migration on deploy, which the team has done 100 times. Whose mistake teaches more?",
@@ -979,8 +973,7 @@
         "Ben's",
         "Both the same"
       ],
-      "answer": 0,
-      "reveal": "Ana's. Edmondson calls it an intelligent failure: new ground, small stakes, a real question answered. Ben's is a basic failure: no new lesson, so add a check (a deploy checklist step), not blame."
+      "reveal": "Ana's, in Edmondson's framework. She calls it an intelligent failure: new ground, small stakes, a real question answered. Ben's is a basic failure: no new lesson, so add a check (a deploy checklist step), not blame."
     },
     "insight": "Failures on new ground show what nobody knew yet, so share the lesson. Failures on known ground need a check, not blame. Sorting them keeps a postmortem blameless and useful.",
     "model": "New ground: make small, smart mistakes. Known ground: add a check.",
