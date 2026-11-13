@@ -21,3 +21,6 @@
 - QA tooling: make_sample.py was reviewing a rotating slice of cards, not the feed mix, so the panel's "9 of 20 work cards" and "4 of 19 young cards" overstated the problem. It now follows the app's mix for young and work. Lean panels from tomorrow see that mix, so they aren't strictly comparable with today's
 - left undone: Play tap still before the first game; "My toolkit" list and team-exercise filter on the map; managers' track; merging the rail's Why this and About; anecdote and untested-framework evidence tiers; young pool still small (33 cards)
 - note: no commits from either loop between 2026-11-03 and 2026-11-05, and today's merge found no new local cards, so check whether the local loop is still running
+
+## 2026-11-13
+- Stop date (2026-11-10) passed. Claude daily loop finished
