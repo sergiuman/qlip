@@ -43,3 +43,6 @@ python3 pipeline/qa_score.py --session N   # 6. composite score; must beat the l
 
 Always useful, never harmful: no diagnosis, no shame, disputed science is labelled as such,
 mood topics carry a support line, and answers never leave your browser.
+
+## iPhone app
+A native iOS shell lives in `native/` (Capacitor). It works offline, picks up new cards from the site, and adds haptics, a daily nudge and the native share sheet. See [docs/IOS.md](docs/IOS.md).

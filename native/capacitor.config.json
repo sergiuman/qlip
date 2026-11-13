@@ -1,0 +1,14 @@
+{
+  "appId": "com.qumni.qlip",
+  "appName": "Qlip",
+  "webDir": "www",
+  "backgroundColor": "#0D0E18",
+  "ios": {
+    "contentInset": "never",
+    "scrollEnabled": true,
+    "limitsNavigationsToAppBoundDomains": false
+  },
+  "plugins": {
+    "LocalNotifications": { "iconColor": "#7C6CFF" }
+  }
+}

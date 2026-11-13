@@ -11,6 +11,22 @@
   })();
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch { /* private mode: progress lives in memory */ } };
 
+  // ---------- native (iPhone app via Capacitor; all no-ops on the web) ----------
+  const CAP = window.Capacitor?.isNativePlatform?.() ? window.Capacitor : null;
+  const plug = (n) => CAP?.Plugins?.[n];
+  const WEB_URL = "https://sergiuman.github.io/qlip/";
+  const buzz = (good) => { try { good ? plug("Haptics")?.notification({ type: "SUCCESS" }) : plug("Haptics")?.impact({ style: "LIGHT" }); } catch { /* no haptics */ } };
+  async function setReminder(on) {
+    const LN = plug("LocalNotifications");
+    if (!LN) return false;
+    await LN.cancel({ notifications: [{ id: 1 }] }).catch(() => {});
+    if (!on) return true;
+    const perm = await LN.requestPermissions().catch(() => ({ display: "denied" }));
+    if (perm.display !== "granted") return false;
+    await LN.schedule({ notifications: [{ id: 1, title: "Qlip", body: "One 30-second game, one idea to try today.", schedule: { on: { hour: 19, minute: 0 }, allowWhileIdle: true } }] });
+    return true;
+  }
+
   // ---------- helpers ----------
   const $ = (s, el = document) => el.querySelector(s);
   const h = (tag, attrs = {}, ...kids) => {
@@ -169,7 +185,7 @@
     } }, "♥");
     const shareBtn = h("button", { "aria-label": "Share", onclick: () => share(card) }, "↗");
     const whyBtn = h("button", { "aria-label": "Why am I seeing this?", onclick: () => toast(reasons[card.id] || `From ${d.name}: ${d.tagline}.`) }, "?");
-    const aboutBtn = h("button", { "aria-label": "About Qlip", onclick: () => $("#about").showModal() }, "i");
+    const aboutBtn = h("button", { "aria-label": "About Qlip", onclick: () => { renderReminder(); $("#about").showModal(); } }, "i");
     const cap = (btn, label) => h("div", { class: "rail-item" }, btn, h("small", { "aria-hidden": "true" }, label));
     el.append(body, h("aside", { class: "rail" }, cap(likeBtn, "Save"), cap(shareBtn, "Share"), cap(whyBtn, "Why this"), cap(aboutBtn, "About")));
 
@@ -187,6 +203,7 @@
       lastResult[card.id] = result.name;
       if (result.profile) S.profile[card.id] = { label: result.name, title: card.title, concept: card.concept, at: Date.now() };
       bumpStreak(); save();
+      buzz(/^(Spot on|Called it|Nailed it|Clean sweep|Every step|Good instincts)/.test(result.name || ""));
       game.append(renderReveal(card, result, start));
       el.classList.add("revealed");
       // Choice players already saw their feedback, so go straight to the punchline; other games keep their result (diagram, recap) in view.
@@ -282,9 +299,10 @@
 
   const lastResult = {};
   async function share(card) {
-    const url = `${location.origin}${location.pathname}#${card.id}`;
+    const url = `${CAP ? WEB_URL : location.origin + location.pathname}#${card.id}`;
     const r = lastResult[card.id];
     const text = r ? `I got “${r}” on “${card.title}”. ${card.hook}` : `${card.hook} — a 30-second game on Qlip`;
+    if (plug("Share")) { try { await plug("Share").share({ title: card.title, text, url }); } catch { /* cancelled */ } return; }
     try { if (navigator.share) { await navigator.share({ title: card.title, text, url }); return; } } catch { /* user cancelled */ }
     try { await navigator.clipboard.writeText(url); toast("Link copied"); } catch { toast(url); }
   }
@@ -740,13 +758,35 @@
     if (v === "tracks") renderTracks();
     if (v === "map") requestAnimationFrame(renderMap);
   }
+  function renderReminder() {
+    const box = $("#reminder");
+    if (!box) return;
+    box.hidden = !CAP;
+    if (!CAP) return;
+    const b = h("button", { type: "button", "aria-pressed": S.reminder ? "true" : "false", onclick: async () => {
+      const want = !S.reminder;
+      const ok = await setReminder(want);
+      if (!ok) { toast("Allow notifications for Qlip in Settings first"); return; }
+      S.reminder = want; save(); renderReminder();
+      toast(want ? "Daily nudge at 7 pm" : "Daily nudge off");
+    } }, S.reminder ? "Daily nudge: on (7 pm)" : "Remind me daily at 7 pm");
+    box.replaceChildren(h("div", { class: "world-btns" }, b));
+  }
   document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => showView(b.dataset.view)));
   $("#brand").addEventListener("click", () => { showView("feed"); feed.scrollTo({ top: 0, behavior: "smooth" }); });
   $("#streak").addEventListener("click", () => {
     $("#world-pref").replaceChildren(worldButtons((k) => { $("#about").close(); setWorld(k); }));
+    renderReminder();
     $("#about").showModal();
   });
   $("#share-map").addEventListener("click", () => {
+    if (plug("Share") && plug("Filesystem")) {
+      const data = $("#map-canvas").toDataURL("image/png").split(",")[1];
+      plug("Filesystem").writeFile({ path: "my-qlip-map.png", data, directory: "CACHE" })
+        .then(({ uri }) => plug("Share").share({ title: "My Qlip map", text: $("#map-summary").textContent, files: [uri] }))
+        .catch(() => {});
+      return;
+    }
     $("#map-canvas").toBlob(async (blob) => {
       const file = new File([blob], "my-qlip-map.png", { type: "image/png" });
       try { if (navigator.canShare?.({ files: [file] })) { await navigator.share({ files: [file], title: "My Qlip map", text: $("#map-summary").textContent }); return; } } catch { return; }
@@ -767,14 +807,25 @@
   // ---------- boot ----------
   async function boot() {
     $("#streak-n").textContent = S.streak.n;
-    const res = await fetch("data/qlip.json", { cache: "no-cache" });
-    indexData(await res.json());
+    indexData(await loadData());
     const tag = decodeURIComponent(location.hash.slice(1));
     if (tag === "map" || tag === "tracks") { resetFeed(firstQueue()); showView(tag); return; }
     if (tag.startsWith("track-") && DOMAIN[tag.slice(6)]) { startTrack(tag.slice(6)); return; }
     const first = firstQueue();
     if (CARD[tag]) { first.splice(first.indexOf(tag), first.includes(tag) ? 1 : 0); first.unshift(tag); }
     resetFeed(first);
+  }
+  async function loadData() {
+    // The iPhone app ships a copy of the games so it works offline, and picks up new cards from the site when online.
+    if (CAP) {
+      try {
+        const ctl = new AbortController(); setTimeout(() => ctl.abort(), 3000);
+        const r = await fetch(WEB_URL + "data/qlip.json", { cache: "no-cache", signal: ctl.signal });
+        if (r.ok) { const d = await r.json(); if (d.cards?.length) return d; }
+      } catch { /* offline: use the bundled copy */ }
+    }
+    const res = await fetch("data/qlip.json", { cache: "no-cache" });
+    return res.json();
   }
   function firstQueue() {
     // New players open on the flagship "where are you" game; returning players get the graph's next steps.

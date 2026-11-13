@@ -1,0 +1,21 @@
+{
+  "name": "qlip-ios",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Native iPhone shell for Qlip (Capacitor). The web app in ../ stays the single source.",
+  "scripts": {
+    "web": "sh sync-web.sh",
+    "sync": "sh sync-web.sh && npx cap sync ios",
+    "open": "npx cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/cli": "^7.6.10",
+    "@capacitor/core": "^7.6.10",
+    "@capacitor/filesystem": "^7.1.9",
+    "@capacitor/haptics": "^7.0.5",
+    "@capacitor/ios": "^7.6.10",
+    "@capacitor/local-notifications": "^7.0.7",
+    "@capacitor/share": "^7.0.4",
+    "@capacitor/status-bar": "^7.0.6"
+  }
+}
