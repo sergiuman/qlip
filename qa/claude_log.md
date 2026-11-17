@@ -27,3 +27,6 @@
 
 ## 2026-11-15
 - Stop date (2026-11-10) passed. Claude daily loop finished (already recorded 2026-11-13; the scheduled task is still firing)
+
+## 2026-11-17
+- Stop date (2026-11-10) passed. Claude daily loop finished (the scheduled task is still firing; disable qlip-daily to stop these runs)
